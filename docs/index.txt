@@ -1,0 +1,122 @@
+=============
+Documentation
+=============
+The essential documentation
+---------------------------
+
+Make sure to read the following documentation. The rest (in the "Reference" section
+below) can be read in any particular order, as you need the various functionality.
+
+Tutorial: Writing your first Django app
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `Overview`_
+* `Installation guide`_
+* Tutorial: Writing your first Django app
+
+  * `Part 1: Initialization, creating models, the database API`_
+  * `Part 2: Exploring the automatically-generated admin site`_
+  * `Part 3: Creating the public interface views`_
+  * `Part 4: Simple form processing and generic views`_
+* `Frequently asked questions (FAQ)`_
+
+.. _Overview: overview.html
+.. _Installation guide: install.html
+.. _Part 1\: Initialization, creating models, the database API: tutorial01.html
+.. _Part 2\: Exploring the automatically-generated admin site: tutorial02.html
+.. _Part 3\: Creating the public interface views: tutorial03.html
+.. _Part 4\: Simple form processing and generic views: tutorial04.html
+.. _Frequently asked questions (FAQ): faq.html
+
+Reference
+---------
+
+* `The django-admin.py and manage.py utilities`_
+* Models: `Creating models`_ | `The database API`_ | `Transactions`_
+* Templates: `Guide for HTML authors`_ | `Guide for Python programmers`_
+* `Forms and manipulators`_
+* `Sessions`_
+* `Caching`_
+* `Internationalization`_
+* `Middleware`_
+* `Settings files`_
+* `URL configuration`_
+* `Request and response objects`_
+* `Generic views`_
+* `Authentication`_
+* `Add-on applications (contrib)`_
+
+  * `Syndication feeds (RSS and Atom)`_
+  * `Flatpages`_
+  * `Redirects`_
+  * `Sites`_
+
+.. _The django-admin.py and manage.py utilities: django-admin.html
+.. _Creating models: model-api.html
+.. _The database API: db-api.html
+.. _Transactions: transactions.html
+.. _Guide for HTML authors: templates.html
+.. _Guide for Python programmers: templates_python.html
+.. _Forms and manipulators: forms.html
+.. _Sessions: sessions.html
+.. _Caching: cache.html
+.. _Internationalization: i18n.html
+.. _Middleware: middleware.html
+.. _Settings files: settings.html
+.. _URL configuration: url_dispatch.html
+.. _Request and response objects: request_response.html
+.. _Generic views: generic_views.html
+.. _Authentication: authentication.html
+.. _Add-on applications (contrib): add_ons.html
+.. _Syndication feeds (RSS and Atom): syndication_feeds.html
+.. _Flatpages: flatpages.html
+.. _Redirects: redirects.html
+.. _Sites: sites.html
+
+Deployment
+----------
+
+* `Using Django with mod_python`_
+* `Using Django with FastCGI`_
+
+.. _Using Django with mod_python: modpython.html
+.. _Using Django with FastCGI: fastcgi.html
+
+Solving specific problems
+-------------------------
+
+* `Authenticating against Django's user database from Apache`_
+* `Serving static/media files`_
+* `Sending e-mail`_
+* `Integrating with (introspecting) a legacy database`_
+* `Outputting PDFs dynamically`_
+* `Outputting CSV dynamically`_
+
+.. _Authenticating against Django's user database from Apache: apache_auth.html
+.. _Serving static/media files: static_files.html
+.. _Sending e-mail: email.html
+.. _Integrating with (introspecting) a legacy database: legacy_databases.html
+.. _Outputting PDFs dynamically: outputting_pdf.html
+.. _Outputting CSV dynamically: outputting_csv.html
+
+Et cetera
+---------
+
+* `Design philosophies`_
+* `How to contribute to Django`_
+* `Django admin CSS guide`_
+* `API stability`_
+* `Backwards-incompatible changes`_
+
+.. _Design philosophies: design_philosophies.html
+.. _How to contribute to Django: contributing.html
+.. _Django admin CSS guide: admin_css.html
+.. _API stability: api_stability.html
+.. _Backwards-incompatible changes: https://code.djangoproject.com/wiki/BackwardsIncompatibleChanges
+
+Release notes
+-------------
+
+* `Version 0.95`_
+
+.. _Version 0.95: release_notes_0.95.html
