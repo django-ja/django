@@ -4,7 +4,7 @@ Authenticating against Django's user database from Apache
 
 Since keeping multiple authentication databases in sync is a common problem when
 dealing with Apache, you can configuring Apache to authenticate against Django's
-`authentication system`_ directly.  For example, you could:
+:doc:`authentication system <authentication>` directly.  For example, you could:
 
     * Serve media files directly from Apache only to authenticated users.
 
@@ -49,7 +49,7 @@ location to users marked as staff members.  You can use a set of
                                       Defaults to ``off``.
 
     ``DjangoPermissionName``          The name of a permission to require for
-                                      access. See `custom permissions`_ for
+                                      access. See :doc:`custom permissions <authentication>` for
                                       more information.
 
                                       By default no specific permission will be
@@ -65,7 +65,5 @@ are equivalent::
     SetEnv DJANGO_SETTINGS_MODULE mysite.settings
     PythonOption DJANGO_SETTINGS_MODULE mysite.settings
 
-.. _authentication system: http://www.djangoproject.com/documentation/authentication/
 .. _Subversion: http://subversion.tigris.org/
 .. _mod_dav: http://httpd.apache.org/docs/2.0/mod/mod_dav.html
-.. _custom permissions: http://www.djangoproject.com/documentation/authentication/#custom-permissions

@@ -12,12 +12,10 @@ It'll consist of two parts:
     * A public site that lets people view polls and vote in them.
     * An admin site that lets you add, change and delete poll.
 
-We'll assume you have `Django installed`_ already. You can tell Django is
+We'll assume you have :doc:`Django installed <install>` already. You can tell Django is
 installed by running the Python interactive interpreter and typing
 ``import django``. If that command runs successfully, with no errors, Django is
 installed.
-
-.. _`Django installed`: http://www.djangoproject.com/documentation/install/
 
 Creating a project
 ==================
@@ -106,9 +104,7 @@ It worked!
 
         python manage.py runserver 8080
 
-    Full docs for the development server are at `django-admin documentation`_.
-
-.. _django-admin documentation: http://www.djangoproject.com/documentation/django_admin/
+    Full docs for the development server are at :doc:`django-admin documentation <django-admin>`.
 
 Database setup
 --------------
@@ -375,10 +371,8 @@ all the tables, initial data and indexes for any apps you have added to your
 project since the last time you ran syncdb. ``syncdb`` can be called as often
 as you like, and it will only ever create the tables that don't exist.
 
-Read the `django-admin.py documentation`_ for full information on what the
+Read the :doc:`django-admin.py documentation <django-admin>` for full information on what the
 ``manage.py`` utility can do.
-
-.. _django-admin.py documentation: http://www.djangoproject.com/documentation/django_admin/
 
 Playing with the API
 ====================
@@ -410,7 +404,9 @@ things:
     ``import mysite`` works) and set the ``DJANGO_SETTINGS_MODULE``
     environment variable to ``mysite.settings``.
 
-    For more information on all of this, see the `django-admin.py documentation`_.
+    For more information on all of this, see the :doc:`django-admin.py documentation <django-admin>`.
+    hlsearch
+
 
 Once you're in the shell, explore the database API::
 
@@ -550,10 +546,7 @@ Let's jump back into the Python interactive shell by running
     >>> c = p.choice_set.filter(choice__startswith='Just hacking')
     >>> c.delete()
 
-For full details on the database API, see our `Database API reference`_.
+For full details on the database API, see our :doc:`Database API reference <db-api>`.
 
-When you're comfortable with the API, read `part 2 of this tutorial`_ to get
+When you're comfortable with the API, read :doc:`part 2 of this tutorial <tutorial02>` to get
 Django's automatic admin working.
-
-.. _Database API reference: http://www.djangoproject.com/documentation/db_api/
-.. _part 2 of this tutorial: http://www.djangoproject.com/documentation/tutorial2/

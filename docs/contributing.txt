@@ -35,7 +35,7 @@ amount of overhead involved in working with any bug tracking system, so your
 help in keeping our ticket tracker as useful as possible is appreciated.  In
 particular:
 
-    * **Do** read the FAQ_ to see if your issue might be a well-known question.
+    * **Do** read the :doc:`FAQ <faq>` to see if your issue might be a well-known question.
 
     * **Do** `search the tracker`_ to see if your issue has already been filed.
 
@@ -134,10 +134,9 @@ translated, here's what to do:
 
     * Join the `Django i18n mailing list`_ and introduce yourself.
     * Create and submit translations using the methods described in the
-      `i18n documentation`_.
+      :doc:`i18n documentation <i18n>`.
 
 .. _Django i18n mailing list: http://groups.google.com/group/django-i18n/
-.. _i18n documentation: http://www.djangoproject.com/documentation/i18n/
 
 Coding style
 ============
@@ -154,7 +153,7 @@ Please follow these coding standards when writing code for inclusion in Django:
     * Use ``InitialCaps`` for class names (or for factory functions that
       return classes).
 
-    * Mark all strings for internationalization; see the `i18n documentation`_
+    * Mark all strings for internationalization; see the :doc:`i18n documentation <i18n>`
       for details.
 
     * In Django template code, put one (and only one) space between the curly
@@ -431,12 +430,10 @@ requests for commit access are potential flame-war starters, and will be ignored
 .. _community page: http://www.djangoproject.com/community/
 .. _ticket tracker: http://code.djangoproject.com/newticket
 .. _django-developers: http://groups.google.com/group/django-developers
-.. _FAQ: http://www.djangoproject.com/documentation/faq/
 .. _search the tracker: http://code.djangoproject.com/search
 .. _django-users: http://groups.google.com/group/django-users
 .. _`#django`: irc://irc.freenode.net/django
 .. _list of tickets with patches: http://code.djangoproject.com/report/12
 .. _PEP 8: http://www.python.org/peps/pep-0008.html
-.. _i18n documentation: http://www.djangoproject.com/documentation/i18n/
 .. _i18n branch: http://code.djangoproject.com/browser/django/branches/i18n
 .. _`tags/releases`: http://code.djangoproject.com/browser/django/tags/releases

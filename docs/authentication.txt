@@ -80,7 +80,7 @@ Methods
 
 ``User`` objects have two many-to-many fields: ``groups`` and
 ``user_permissions``. ``User`` objects can access their related
-objects in the same way as any other `Django model`_::
+objects in the same way as any other :doc:`Django model <model-api>`::
 
     myuser.objects.groups = [group_list]
     myuser.objects.groups.add(group, group,...)
@@ -133,14 +133,11 @@ custom methods:
 
     * ``email_user(subject, message, from_email=None)`` -- Sends an e-mail to
       the user. If ``from_email`` is ``None``, Django uses the
-      `DEFAULT_FROM_EMAIL`_ setting.
+      :doc:`DEFAULT_FROM_EMAIL <settings>` setting.
 
     * ``get_profile()`` -- Returns a site-specific profile for this user.
       Raises ``django.contrib.auth.models.SiteProfileNotAvailable`` if the current site
       doesn't allow profiles.
-
-.. _Django model: http://www.djangoproject.com/documentation/model_api/
-.. _DEFAULT_FROM_EMAIL: http://www.djangoproject.com/documentation/settings/#default-from-email
 
 Manager functions
 ~~~~~~~~~~~~~~~~~
@@ -249,11 +246,11 @@ Authentication in Web requests
 
 Until now, this document has dealt with the low-level APIs for manipulating
 authentication-related objects. On a higher level, Django can hook this
-authentication framework into its system of `request objects`_.
+authentication framework into its system of :doc:`request objects <request_response>`.
 
 First, install the ``SessionMiddleware`` and ``AuthenticationMiddleware``
 middlewares by adding them to your ``MIDDLEWARE_CLASSES`` setting. See the
-`session documentation`_ for more information.
+:doc:`session documentation <sessions>` for more information.
 
 Once you have those middlewares installed, you'll be able to access
 ``request.user`` in views. ``request.user`` will give you a ``User`` object
@@ -265,9 +262,6 @@ previous section). You can tell them apart with ``is_authenticated()``, like so:
         # Do something for authenticated users.
     else:
         # Do something for anonymous users.
-
-.. _request objects: http://www.djangoproject.com/documentation/request_response/#httprequest-objects
-.. _session documentation: http://www.djangoproject.com/documentation/sessions/
 
 How to log a user in
 --------------------
@@ -393,11 +387,11 @@ It's your responsibility to provide the login form in a template called
 template context variables:
 
     * ``form``: A ``FormWrapper`` object representing the login form. See the
-      `forms documentation`_ for more on ``FormWrapper`` objects.
+      :doc:`forms documentation <forms>` for more on ``FormWrapper`` objects.
     * ``next``: The URL to redirect to after successful login. This may contain
       a query string, too.
     * ``site_name``: The name of the current ``Site``, according to the
-      ``SITE_ID`` setting. See the `site framework docs`_.
+      ``SITE_ID`` setting. See the :doc:`site framework docs <sites>`.
 
 If you'd prefer not to call the template ``registration/login.html``, you can
 pass the ``template_name`` parameter via the extra arguments to the view in
@@ -429,9 +423,6 @@ block::
     </form>
 
     {% endblock %}
-
-.. _forms documentation: http://www.djangoproject.com/documentation/forms/
-.. _site framework docs: http://www.djangoproject.com/documentation/sites/
 
 Limiting access to logged-in users that pass a test
 ---------------------------------------------------
@@ -491,7 +482,7 @@ Example in Python 2.4 syntax::
 Limiting access to generic views
 --------------------------------
 
-To limit access to a `generic view`_, write a thin wrapper around the view,
+To limit access to a :doc:`generic view <generic_views>`, write a thin wrapper around the view,
 and point your URLconf to your wrapper instead of the generic view itself.
 For example::
 
@@ -500,8 +491,6 @@ For example::
     @login_required
     def limited_object_detail(*args, **kwargs):
         return object_detail(*args, **kwargs)
-
-.. _generic view: http://www.djangoproject.com/documentation/generic_views/
 
 Permissions
 ===========
@@ -547,7 +536,7 @@ Custom permissions
 ------------------
 
 To create custom permissions for a given model object, use the ``permissions``
-`model Meta attribute`_.
+:doc:`model Meta attribute <model-api>`.
 
 This example model creates three custom permissions::
 
@@ -562,8 +551,6 @@ This example model creates three custom permissions::
 
 The only thing this does is create those extra permissions when you run
 ``syncdb``.
-
-.. _model Meta attribute: http://www.djangoproject.com/documentation/model_api/#meta-options
 
 API reference
 -------------
@@ -587,22 +574,20 @@ Methods
 ~~~~~~~
 
 ``Permission`` objects have the standard data-access methods like any other
-`Django model`_.
+:doc:`Django model <model-api>`.
 
 Authentication data in templates
 ================================
 
 The currently logged-in user and his/her permissions are made available in the
-`template context`_ when you use ``RequestContext``.
+:doc:`template context <templates_python>` when you use ``RequestContext``.
 
 .. admonition:: Technicality
 
    Technically, these variables are only made available in the template context
    if you use ``RequestContext`` *and* your ``TEMPLATE_CONTEXT_PROCESSORS``
    setting contains ``"django.core.context_processors.auth"``, which is default.
-   For more, see the `RequestContext docs`_.
-
-   .. _RequestContext docs: http://www.djangoproject.com/documentation/templates_python/#subclassing-context-requestcontext
+   For more, see the :doc:`RequestContext docs <templates_python>`.
 
 Users
 -----
@@ -611,7 +596,7 @@ The currently logged-in user, either a ``User`` instance or an``AnonymousUser``
 instance, is stored in the template variable ``{{ user }}``::
 
     {% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}. Thanks for logging in.</p>    
+        <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
     {% else %}
         <p>Welcome, new user. Please log in.</p>
     {% endif %}
@@ -647,8 +632,6 @@ Thus, you can check permissions in template ``{% if %}`` statements::
     {% else %}
         <p>You don't have permission to do anything in the foo app.</p>
     {% endif %}
-
-.. _template context: http://www.djangoproject.com/documentation/templates_python/
 
 Groups
 ======
@@ -696,7 +679,7 @@ a playlist::
             context_instance=RequestContext(request))
 
 When you use ``RequestContext``, the currently logged-in user and his/her
-messages are made available in the `template context`_ as the template variable
+messages are made available in the :doc:`template context <templates_python>` as the template variable
 ``{{ messages }}``. Here's an example of template code that displays messages::
 
     {% if messages %}
@@ -711,9 +694,7 @@ Note that ``RequestContext`` calls ``get_and_delete_messages`` behind the
 scenes, so any messages will be deleted even if you don't display them.
 
 Finally, note that this messages framework only works with users in the user
-database. To send messages to anonymous users, use the `session framework`_.
-
-.. _session framework: http://www.djangoproject.com/documentation/sessions/
+database. To send messages to anonymous users, use the :doc:`session framework <sessions>`.
 
 Other authentication sources
 ============================

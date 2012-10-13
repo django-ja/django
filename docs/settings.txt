@@ -42,7 +42,7 @@ Python `import search path`_.
 The django-admin.py utility
 ---------------------------
 
-When using `django-admin.py`_, you can either set the environment variable
+When using :doc:`django-admin.py <django-admin>`, you can either set the environment variable
 once, or explicitly pass in the settings module each time you run the utility.
 
 Example (Unix Bash shell)::
@@ -59,8 +59,6 @@ Use the ``--settings`` command-line argument to specify the settings manually::
 
     django-admin.py runserver --settings=mysite.settings
 
-.. _django-admin.py: http://www.djangoproject.com/documentation/django_admin/
-
 On the server (mod_python)
 --------------------------
 
@@ -73,9 +71,7 @@ settings file to use. Do that with ``SetEnv``::
         SetEnv DJANGO_SETTINGS_MODULE mysite.settings
     </Location>
 
-Read the `Django mod_python documentation`_ for more information.
-
-.. _Django mod_python documentation: http://www.djangoproject.com/documentation/modpython/
+Read the :doc:`Django mod_python documentation <modpython>` for more information.
 
 Default settings
 ================
@@ -100,9 +96,7 @@ There's an easy way to view which of your settings deviate from the default
 settings. The command ``python manage.py diffsettings`` displays differences
 between the current settings file and Django's default settings.
 
-For more, see the `diffsettings documentation`_.
-
-.. _diffsettings documentation: http://www.djangoproject.com/documentation/django_admin/#diffsettings
+For more, see the :doc:`diffsettings documentation <django-admin>`.
 
 Using settings in Python code
 =============================
@@ -216,7 +210,7 @@ APPEND_SLASH
 Default: ``True``
 
 Whether to append trailing slashes to URLs. This is only used if
-``CommonMiddleware`` is installed (see the `middleware docs`_). See also
+``CommonMiddleware`` is installed (see the :doc:`middleware docs <middleware>`). See also
 ``PREPEND_WWW``.
 
 CACHE_BACKEND
@@ -224,14 +218,14 @@ CACHE_BACKEND
 
 Default: ``'simple://'``
 
-The cache backend to use. See the `cache docs`_.
+The cache backend to use. See the :doc:`cache docs <cache>`.
 
 CACHE_MIDDLEWARE_KEY_PREFIX
 
 Default: ``''`` (Empty string)
 
 The cache key prefix that the cache middleware should use. See the
-`cache docs`_.
+:doc:`cache docs <cache>`.
 
 DATABASE_ENGINE
 ---------------
@@ -294,11 +288,9 @@ Default: ``'N j, Y'`` (e.g. ``Feb. 4, 2003``)
 
 The default formatting to use for date fields on Django admin change-list
 pages -- and, possibly, by other parts of the system. See
-`allowed date format strings`_.
+:doc:`allowed date format strings <templates>`.
 
 See also DATETIME_FORMAT, TIME_FORMAT, YEAR_MONTH_FORMAT and MONTH_DAY_FORMAT.
-
-.. _allowed date format strings: http://www.djangoproject.com/documentation/templates/#now
 
 DATETIME_FORMAT
 ---------------
@@ -307,11 +299,9 @@ Default: ``'N j, Y, P'`` (e.g. ``Feb. 4, 2003, 4 p.m.``)
 
 The default formatting to use for datetime fields on Django admin change-list
 pages -- and, possibly, by other parts of the system. See
-`allowed date format strings`_.
+:doc:`allowed date format strings <templates>`.
 
 See also DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT, YEAR_MONTH_FORMAT and MONTH_DAY_FORMAT.
-
-.. _allowed date format strings: http://www.djangoproject.com/documentation/templates/#now
 
 DEBUG
 -----
@@ -354,7 +344,7 @@ Default: ``()`` (Empty tuple)
 List of compiled regular expression objects representing User-Agent strings
 that are not allowed to visit any page, systemwide. Use this for bad
 robots/crawlers.  This is only used if ``CommonMiddleware`` is installed (see
-the `middleware docs`_).
+the :doc:`middleware docs <middleware>`).
 
 EMAIL_HOST
 ----------
@@ -432,9 +422,7 @@ Default: ``()`` (Empty tuple)
 
 A tuple of strings designating all applications that are enabled in this Django
 installation. Each string should be a full Python path to a Python package that
-contains a Django application, as created by `django-admin.py startapp`_.
-
-.. _django-admin.py startapp: http://www.djangoproject.com/documentation/django_admin/#startapp-appname
+contains a Django application, as created by :doc:`django-admin.py startapp <django-admin>`.
 
 INTERNAL_IPS
 ------------
@@ -445,7 +433,7 @@ A tuple of IP addresses, as strings, that:
 
     * See debug comments, when ``DEBUG`` is ``True``
     * Receive X headers if the ``XViewMiddleware`` is installed (see the
-      `middleware docs`_)
+      :doc:`middleware docs <middleware>`)
 
 JING_PATH
 ---------
@@ -463,9 +451,7 @@ Default: ``'en-us'``
 
 A string representing the language code for this installation. This should be
 in standard language format. For example, U.S. English is ``"en-us"``. See the
-`internationalization docs`_.
-
-.. _internationalization docs: http://www.djangoproject.com/documentation/i18n/
+:doc:`internationalization docs <i18n>`.
 
 LANGUAGES
 ---------
@@ -496,7 +482,7 @@ Default: A tuple of all available languages. Currently, this is::
 
 A tuple of two-tuples in the format (language code, language name). This
 specifies which languages are available for language selection. See the
-`internationalization docs`_ for details.
+:doc:`internationalization docs <i18n>` for details.
 
 Generally, the default value should suffice. Only set this setting if you want
 to restrict language selection to a subset of the Django-provided languages.
@@ -557,7 +543,7 @@ Default::
      "django.middleware.common.CommonMiddleware",
      "django.middleware.doc.XViewMiddleware")
 
-A tuple of middleware classes to use. See the `middleware docs`_.
+A tuple of middleware classes to use. See the :doc:`middleware docs <middleware>`.
 
 MONTH_DAY_FORMAT
 ----------------
@@ -573,7 +559,7 @@ drilldown, the header for a given day displays the day and month. Different
 locales have different formats. For example, U.S. English would say
 "January 1," whereas Spanish might say "1 Enero."
 
-See `allowed date format strings`_. See also DATE_FORMAT, DATETIME_FORMAT,
+See :doc:`allowed date format strings <templates>`. See also DATE_FORMAT, DATETIME_FORMAT,
 TIME_FORMAT and YEAR_MONTH_FORMAT.
 
 PREPEND_WWW
@@ -582,7 +568,7 @@ PREPEND_WWW
 Default: ``False``
 
 Whether to prepend the "www." subdomain to URLs that don't have it. This is
-only used if ``CommonMiddleware`` is installed (see the `middleware docs`_).
+only used if ``CommonMiddleware`` is installed (see the :doc:`middleware docs <middleware>`).
 See also ``APPEND_SLASH``.
 
 ROOT_URLCONF
@@ -591,9 +577,7 @@ ROOT_URLCONF
 Default: Not defined
 
 A string representing the full Python import path to your root URLconf. For example:
-``"mydjangoapps.urls"``. See `How Django processes a request`_.
-
-.. _How Django processes a request: http://www.djangoproject.com/documentation/url_dispatch/#how-django-processes-a-request
+``"mydjangoapps.urls"``. See :doc:`How Django processes a request <url_dispatch>`.
 
 SECRET_KEY
 ----------
@@ -612,7 +596,7 @@ Default: ``False``
 Whether to send an e-mail to the ``MANAGERS`` each time somebody visits a
 Django-powered page that is 404ed with a non-empty referer (i.e., a broken
 link). This is only used if ``CommonMiddleware`` is installed (see the
-`middleware docs`_). See also ``IGNORABLE_404_STARTS`` and
+:doc:`middleware docs <middleware>`). See also ``IGNORABLE_404_STARTS`` and
 ``IGNORABLE_404_ENDS``.
 
 SERVER_EMAIL
@@ -628,7 +612,7 @@ SESSION_COOKIE_AGE
 
 Default: ``1209600`` (2 weeks, in seconds)
 
-The age of session cookies, in seconds. See the `session docs`_.
+The age of session cookies, in seconds. See the :doc:`session docs <sessions>`.
 
 SESSION_COOKIE_DOMAIN
 ---------------------
@@ -637,7 +621,7 @@ Default: ``None``
 
 The domain to use for session cookies. Set this to a string such as
 ``".lawrence.com"`` for cross-domain cookies, or use ``None`` for a standard
-domain cookie. See the `session docs`_.
+domain cookie. See the :doc:`session docs <sessions>`.
 
 SESSION_COOKIE_NAME
 -------------------
@@ -645,7 +629,7 @@ SESSION_COOKIE_NAME
 Default: ``'sessionid'``
 
 The name of the cookie to use for sessions. This can be whatever you want.
-See the `session docs`_.
+See the :doc:`session docs <sessions>`.
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE
 -------------------------------
@@ -653,14 +637,14 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE
 Default: ``False``
 
 Whether to expire the session when the user closes his or her browser.
-See the `session docs`_.
+See the :doc:`session docs <sessions>`.
 
 SESSION_SAVE_EVERY_REQUEST
 --------------------------
 
 Default: ``False``
 
-Whether to save the session data on every request. See the `session docs`_.
+Whether to save the session data on every request. See the :doc:`session docs <sessions>`.
 
 SITE_ID
 -------
@@ -671,9 +655,7 @@ The ID, as an integer, of the current site in the ``django_site`` database
 table. This is used so that application data can hook into specific site(s)
 and a single database can manage content for multiple sites.
 
-See the `site framework docs`_.
-
-.. _site framework docs: http://www.djangoproject.com/documentation/sites/
+See the :doc:`site framework docs <sites>`.
 
 TEMPLATE_CONTEXT_PROCESSORS
 ---------------------------
@@ -711,7 +693,7 @@ Default: ``()`` (Empty tuple)
 List of locations of the template source files, in search order. Note that
 these paths should use Unix-style forward slashes, even on Windows.
 
-See the `template documentation`_.
+See the :doc:`template documentation <templates>`.
 
 TEMPLATE_LOADERS
 ----------------
@@ -719,7 +701,7 @@ TEMPLATE_LOADERS
 Default: ``('django.template.loaders.filesystem.load_template_source',)``
 
 A tuple of callables (as strings) that know how to import templates from
-various sources. See the `template documentation`_.
+various sources. See the :doc:`template documentation <templates>`.
 
 TEMPLATE_STRING_IF_INVALID
 --------------------------
@@ -727,9 +709,7 @@ TEMPLATE_STRING_IF_INVALID
 Default: ``''`` (Empty string)
 
 Output, as a string, that the template system should use for invalid (e.g.
-misspelled) variables. See `How invalid variables are handled`_.
-
-.. _How invalid variables are handled: http://www.djangoproject.com/documentation/templates_python/#how-invalid-variables-are-handled
+misspelled) variables. See :doc:`How invalid variables are handled <templates_python>`.
 
 TIME_FORMAT
 -----------
@@ -738,12 +718,10 @@ Default: ``'P'`` (e.g. ``4 p.m.``)
 
 The default formatting to use for time fields on Django admin change-list
 pages -- and, possibly, by other parts of the system. See
-`allowed date format strings`_.
+:doc:`allowed date format strings <templates>`.
 
 See also DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT, YEAR_MONTH_FORMAT and
 MONTH_DAY_FORMAT.
-
-.. _allowed date format strings: http://www.djangoproject.com/documentation/templates/#now
 
 TIME_ZONE
 ---------
@@ -774,7 +752,7 @@ Default: ``False``
 
 A boolean that specifies whether to output the "Etag" header. This saves
 bandwidth but slows down performance. This is only used if ``CommonMiddleware``
-is installed (see the `middleware docs`_).
+is installed (see the :doc:`middleware docs <middleware>`).
 
 USE_I18N
 --------
@@ -800,14 +778,10 @@ drilldown, the header for a given month displays the month and the year.
 Different locales have different formats. For example, U.S. English would say
 "January 2006," whereas another locale might say "2006/January."
 
-See `allowed date format strings`_. See also DATE_FORMAT, DATETIME_FORMAT,
+See :doc:`allowed date format strings <templates>`. See also DATE_FORMAT, DATETIME_FORMAT,
 TIME_FORMAT and MONTH_DAY_FORMAT.
 
-.. _cache docs: http://www.djangoproject.com/documentation/cache/
-.. _middleware docs: http://www.djangoproject.com/documentation/middleware/
-.. _session docs: http://www.djangoproject.com/documentation/sessions/
 .. _See available choices: http://www.postgresql.org/docs/current/static/datetime-keywords.html#DATETIME-TIMEZONE-SET-TABLE
-.. _template documentation: http://www.djangoproject.com/documentation/templates_python/
 
 Creating your own settings
 ==========================

@@ -245,9 +245,7 @@ Additionally, ``CacheMiddleware`` automatically sets a few headers in each
 * Sets the ``Cache-Control`` header to give a max age for the page -- again,
   from the ``CACHE_MIDDLEWARE_SECONDS`` setting.
 
-See the `middleware documentation`_ for more on middleware.
-
-.. _`middleware documentation`: http://www.djangoproject.com/documentation/middleware/
+See the :doc:`middleware documentation <middleware>`_ for more on middleware.
 
 The per-view cache
 ==================

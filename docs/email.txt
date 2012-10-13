@@ -19,13 +19,11 @@ In two lines::
 
     send_mail('Subject here', 'Here is the message.', 'from@example.com',
         ['to@example.com'], fail_silently=False)
-        
+
 .. note::
 
     The character set of email sent with ``django.core.mail`` will be set to
-    the value of your `DEFAULT_CHARSET setting`_.
-    
-.. _DEFAULT_CHARSET setting: ../settings/#DEFAULT_CHARSET
+    the value of your :doc:`DEFAULT_CHARSET setting <settings>`.
 
 send_mail()
 ===========
@@ -90,31 +88,25 @@ mail_admins()
 =============
 
 ``django.core.mail.mail_admins()`` is a shortcut for sending an e-mail to the
-site admins, as defined in the `ADMINS setting`_. Here's the definition::
+site admins, as defined in the :doc:`ADMINS setting <settings>`. Here's the definition::
 
     mail_admins(subject, message, fail_silently=False)
 
 ``mail_admins()`` prefixes the subject with the value of the
-`EMAIL_SUBJECT_PREFIX setting`_, which is ``"[Django] "`` by default.
+:doc:`EMAIL_SUBJECT_PREFIX setting <settings>`, which is ``"[Django] "`` by default.
 
-The "From:" header of the e-mail will be the value of the `SERVER_EMAIL setting`_.
+The "From:" header of the e-mail will be the value of the :doc:`SERVER_EMAIL setting <settings>`.
 
 This method exists for convenience and readability.
-
-.. _ADMINS setting: http://www.djangoproject.com/documentation/settings/#admins
-.. _EMAIL_SUBJECT_PREFIX setting: http://www.djangoproject.com/documentation/settings/#email-subject-prefix
-.. _SERVER_EMAIL setting: http://www.djangoproject.com/documentation/settings/#server-email
 
 mail_managers() function
 ========================
 
 ``django.core.mail.mail_managers()`` is just like ``mail_admins()``, except it
-sends an e-mail to the site managers, as defined in the `MANAGERS setting`_.
+sends an e-mail to the site managers, as defined in the :doc:`MANAGERS setting <settings>`.
 Here's the definition::
 
     mail_managers(subject, message, fail_silently=False)
-
-.. _MANAGERS setting: http://www.djangoproject.com/documentation/settings/#managers
 
 Examples
 ========

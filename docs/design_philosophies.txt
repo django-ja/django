@@ -184,9 +184,7 @@ a common header, footer, navigation bar, etc. The Django template system should
 make it easy to store those elements in a single place, eliminating duplicate
 code.
 
-This is the philosophy behind `template inheritance`_.
-
-.. _template inheritance: http://www.djangoproject.com/documentation/templates/#template-inheritance
+This is the philosophy behind :doc:`template inheritance <templates>`.
 
 Be decoupled from HTML
 ----------------------

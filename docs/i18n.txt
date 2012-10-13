@@ -50,9 +50,7 @@ use internationalization, you should take the two seconds to set
 ``False``, then Django will make some optimizations so as not to load the
 internationalization machinery.
 
-See the `documentation for USE_I18N`_.
-
-.. _documentation for USE_I18N: http://www.djangoproject.com/documentation/settings/#use-i18n
+See the :doc:`documentation for USE_I18N <settings>`.
 
 How to specify translation strings
 ==================================
@@ -161,7 +159,7 @@ If you don't like the verbose name ``gettext_lazy``, you can just alias it as
     class MyThing(models.Model):
         name = models.CharField(help_text=_('This is the help text'))
 
-Always use lazy translations in `Django models`_. And it's a good idea to add
+Always use lazy translations in :doc:`Django models <model-api>`. And it's a good idea to add
 translations for the field names and table names, too. This means writing
 explicit ``verbose_name`` and ``verbose_name_plural`` options in the ``Meta``
 class, though::
@@ -173,8 +171,6 @@ class, though::
         class Meta:
             verbose_name = _('my thing')
             verbose_name_plural = _('mythings')
-
-.. _Django models: http://www.djangoproject.com/documentation/model_api/
 
 Pluralization
 ~~~~~~~~~~~~~
@@ -196,7 +192,7 @@ translation languages as the ``count`` variable).
 In template code
 ----------------
 
-Using translations in `Django templates`_ uses two template tags and a slightly
+Using translations in :doc:`Django templates <templates_python>` uses two template tags and a slightly
 different syntax than in Python code. To give your template access to these
 tags, put ``{% load i18n %}`` toward the top of your template.
 
@@ -272,8 +268,6 @@ translation string. Example::
 
 In this case, both the tag and the filter will see the already-translated
 string, so they don't need to be aware of translations.
-
-.. _Django templates: http://www.djangoproject.com/documentation/templates_python/
 
 How to create language files
 ============================
@@ -390,10 +384,8 @@ That's it. Your translations are ready for use.
 .. admonition:: A note to translators
 
     If you've created a translation in a language Django doesn't yet support,
-    please let us know! See `Submitting and maintaining translations`_ for
+    please let us know! See :doc:`Submitting and maintaining translations <contributing>` for
     the steps to take.
-
-    .. _Submitting and maintaining translations: http://www.djangoproject.com/documentation/contributing/
 
 How Django discovers language preference
 ========================================
@@ -406,7 +398,7 @@ Behind the scenes, Django has a very flexible model of deciding which language
 should be used -- installation-wide, for a particular user, or both.
 
 To set an installation-wide language preference, set ``LANGUAGE_CODE`` in your
-`settings file`_. Django uses this language as the default translation -- the
+:doc:`settings file <settings>`. Django uses this language as the default translation -- the
 final attempt if no other translator finds a translation.
 
 If all you want to do is run Django with your native language, and a language
@@ -434,13 +426,13 @@ For example, your ``MIDDLEWARE_CLASSES`` might look like this::
        'django.middleware.common.CommonMiddleware',
     )
 
-(For more on middleware, see the `middleware documentation`_.)
+(For more on middleware, see the :doc:`middleware documentation <middleware>`.)
 
 ``LocaleMiddleware`` tries to determine the user's language preference by
 following this algorithm:
 
     * First, it looks for a ``django_language`` key in the the current user's
-      `session`_.
+      :doc:`session <sessions>`.
     * Failing that, it looks for a cookie called ``django_language``.
     * Failing that, it looks at the ``Accept-Language`` HTTP header. This
       header is sent by your browser and tells the server which language(s) you
@@ -457,7 +449,7 @@ Notes:
       Django uses the base language. For example, if a user specifies ``de-at``
       (Austrian German) but Django only has ``de`` available, Django uses
       ``de``.
-    * Only languages listed in the `LANGUAGES setting`_ can be selected. If
+    * Only languages listed in the :doc:`LANGUAGES setting <settings>` can be selected. If
       you want to restrict the language selection to a subset of provided
       languages (because your application doesn't provide all those languages),
       set ``LANGUAGES`` to a list of languages. For example::
@@ -470,8 +462,6 @@ Notes:
       This example restricts languages that are available for automatic
       selection to German and English (and any sublanguage, like de-ch or
       en-us).
-
-      .. _LANGUAGES setting: http://www.djangoproject.com/documentation/settings/#languages
 
     * If you define a custom ``LANGUAGES`` setting, as explained in the
       previous bullet, it's OK to mark the languages as translation strings
@@ -516,7 +506,7 @@ Notes:
       is identical to the format strings used by the ``now`` template tag.
 
 Once ``LocaleMiddleware`` determines the user's preference, it makes this
-preference available as ``request.LANGUAGE_CODE`` for each `request object`_.
+preference available as ``request.LANGUAGE_CODE`` for each :doc:`request object <request_response>`.
 Feel free to read this value in your view code. Here's a simple example::
 
     def hello_world(request, count):
@@ -528,11 +518,6 @@ Feel free to read this value in your view code. Here's a simple example::
 Note that, with static (middleware-less) translation, the language is in
 ``settings.LANGUAGE_CODE``, while with dynamic (middleware) translation, it's
 in ``request.LANGUAGE_CODE``.
-
-.. _settings file: http://www.djangoproject.com/documentation/settings/
-.. _middleware documentation: http://www.djangoproject.com/documentation/middleware/
-.. _session: http://www.djangoproject.com/documentation/sessions/
-.. _request object: http://www.djangoproject.com/documentation/request_response/#httprequest-objects
 
 The ``set_language`` redirect view
 ==================================
@@ -592,13 +577,11 @@ message file. The choice is yours.
 .. note::
 
     If you're using manually configured settings, as described in the
-    `settings documentation`_, the ``locale`` directory in the project
+    :doc:`settings documentation <settings>`, the ``locale`` directory in the project
     directory will not be examined, since Django loses the ability to work out
     the location of the project directory. (Django normally uses the location
     of the settings file to determine this, and a settings file doesn't exist
     if you're manually configuring your settings.)
-
-.. _settings documentation: http://www.djangoproject.com/documentation/settings/#using-settings-without-the-django-settings-module-environment-variable
 
 All message file repositories are structured the same way. They are:
 

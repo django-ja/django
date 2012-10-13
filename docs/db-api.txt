@@ -2,11 +2,9 @@
 Database API reference
 ======================
 
-Once you've created your `data models`_, Django automatically gives you a
+Once you've created your :doc:`data models <model-api>`, Django automatically gives you a
 database-abstraction API that lets you create, retrieve, update and delete
 objects. This document explains that API.
-
-.. _`data models`: http://www.djangoproject.com/documentation/model_api/
 
 Throughout this reference, we'll refer to the following models, which comprise
 a weblog application::
@@ -83,9 +81,7 @@ There's no way to tell what the value of an ID will be before you call
 
 (For convenience, each model has an ``AutoField`` named ``id`` by default
 unless you explicitly specify ``primary_key=True`` on a field. See the
-`AutoField documentation`_.)
-
-.. _AutoField documentation: http://www.djangoproject.com/documentation/model_api/#autofield
+:doc:`AutoField documentation <model-api>`.)
 
 Explicitly specifying auto-primary-key values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -715,12 +711,12 @@ The ``DoesNotExist`` exception inherits from
 A convenience method for creating an object and saving it all in one step.  Thus::
 
     p = Person.objects.create(first_name="Bruce", last_name="Springsteen")
-    
+
 and::
 
     p = Person(first_name="Bruce", last_name="Springsteen")
     p.save()
-    
+
 are equivalent.
 
 ``get_or_create(**kwargs)``
@@ -1317,7 +1313,7 @@ precede the definition of any keyword arguments. For example::
 
 See the `OR lookups examples page`_ for more examples.
 
-.. _OR lookups examples page: http://www.djangoproject.com/documentation/models/or_lookups/
+.. _OR lookups examples page: models/or_lookups/
 
 Related objects
 ===============
@@ -1556,13 +1552,13 @@ Queries over related objects
 ----------------------------
 
 Queries involving related objects follow the same rules as queries involving
-normal value fields. When specifying the the value for a query to match, you 
-may use either an object instance itself, or the primary key value for the 
+normal value fields. When specifying the the value for a query to match, you
+may use either an object instance itself, or the primary key value for the
 object.
 
 For example, if you have a Blog object ``b`` with ``id=5``, the following
 three queries would be identical::
-     
+
     Entry.objects.filter(blog=b) # Query using object instance
     Entry.objects.filter(blog=b.id) # Query using id from instance
     Entry.objects.filter(blog=5) # Query using id directly
@@ -1638,7 +1634,7 @@ Note that in the case of identical date values, these methods will use the ID
 as a fallback check. This guarantees that no records are skipped or duplicated.
 For a full example, see the `lookup API sample model`_.
 
-.. _lookup API sample model: http://www.djangoproject.com/documentation/models/lookup/
+.. _lookup API sample model: models/lookup/
 
 get_FOO_filename()
 ------------------
@@ -1692,11 +1688,9 @@ The preferred way to do this is by giving your model custom methods or custom
 manager methods that execute queries. Although there's nothing in Django that
 *requires* database queries to live in the model layer, this approach keeps all
 your data-access logic in one place, which is smart from an code-organization
-standpoint. For instructions, see `Executing custom SQL`_.
+standpoint. For instructions, see :doc:`Executing custom SQL <model-api>`.
 
 Finally, it's important to note that the Django database layer is merely an
 interface to your database. You can access your database via other tools,
 programming languages or database frameworks; there's nothing Django-specific
 about your database.
-
-.. _Executing custom SQL: http://www.djangoproject.com/documentation/model_api/#executing-custom-sql

@@ -24,15 +24,13 @@ The high-level feed-generating framework is a view that's hooked to ``/feeds/``
 by default. Django uses the remainder of the URL (everything after ``/feeds/``)
 to determine which feed to output.
 
-To create a feed, just write a ``Feed`` class and point to it in your URLconf_.
-
-.. _URLconf: http://www.djangoproject.com/documentation/url_dispatch/
+To create a feed, just write a ``Feed`` class and point to it in your :doc:`URLconf <url_dispatch>`.
 
 Initialization
 --------------
 
 To activate syndication feeds on your Django site, add this line to your
-URLconf_::
+:doc:`URLconf <url_dispatch>`::
 
     (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
 
@@ -72,9 +70,6 @@ The above example registers two feeds:
 
 Once that's set up, you just need to define the ``Feed`` classes themselves.
 
-.. _URLconf: http://www.djangoproject.com/documentation/url_dispatch/
-.. _settings file: http://www.djangoproject.com/documentation/settings/
-
 Feed classes
 ------------
 
@@ -111,7 +106,7 @@ Note:
     * ``items()`` is, simply, a method that returns a list of objects that
       should be included in the feed as ``<item>`` elements. Although this
       example returns ``NewsItem`` objects using Django's
-      `object-relational mapper`_, ``items()`` doesn't have to return model
+      :doc:`object-relational mapper <db-api>`, ``items()`` doesn't have to return model
       instances. Although you get a few bits of functionality "for free" by
       using Django models, ``items()`` can return any type of object you want.
 
@@ -120,7 +115,7 @@ One thing's left to do. In an RSS feed, each ``<item>`` has a ``<title>``,
 put into those elements.
 
     * To specify the contents of ``<title>`` and ``<description>``, create
-      `Django templates`_ called ``feeds/sitenews_title.html`` and
+      :doc:`Django templates <templates>` called ``feeds/sitenews_title.html`` and
       ``feeds/sitenews_description.html``, where ``sitenews`` is the ``slug``
       specified in the URLconf for the given feed. Note the ``.html`` extension
       is required. The RSS system renders that template for each item, passing
@@ -146,8 +141,6 @@ put into those elements.
       URL as a normal Python string.
 
 .. _chicagocrime.org: http://www.chicagocrime.org/
-.. _object-relational mapper: http://www.djangoproject.com/documentation/db_api/
-.. _Django templates: http://www.djangoproject.com/documentation/templates/
 
 A complex example
 -----------------
@@ -265,9 +258,7 @@ Language
 
 Feeds created by the syndication framework automatically include the
 appropriate ``<language>`` tag (RSS 2.0) or ``xml:lang`` attribute (Atom). This
-comes directly from your `LANGUAGE_CODE setting`_.
-
-.. _LANGUAGE_CODE setting: http://www.djangoproject.com/documentation/settings/#language-code
+comes directly from your :doc:`LANGUAGE_CODE setting <settings>`.
 
 URLs
 ----
@@ -276,13 +267,11 @@ The ``link`` method/attribute can return either an absolute URL (e.g.
 ``"/blog/"``) or a URL with the fully-qualified domain and protocol (e.g.
 ``"http://www.example.com/blog/"``). If ``link`` doesn't return the domain,
 the syndication framework will insert the domain of the current site, according
-to your `SITE_ID setting`_.
+to your :doc:`SITE_ID setting <settings>`.
 
 Atom feeds require a ``<link rel="self">`` that defines the feed's current
 location. The syndication framework populates this automatically, using the
 domain of the current site according to the SITE_ID setting.
-
-.. _SITE_ID setting: http://www.djangoproject.com/documentation/settings/#site-id
 
 Publishing Atom and RSS feeds in tandem
 ---------------------------------------

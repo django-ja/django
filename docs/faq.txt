@@ -56,9 +56,7 @@ Django uses a "shared-nothing" architecture, which means you can add hardware
 at any level -- database servers, caching servers or Web/application servers.
 
 The framework cleanly separates components such as its database layer and
-application layer. And it ships with a simple-yet-powerful `cache framework`_.
-
-.. _`cache framework`: http://www.djangoproject.com/documentation/cache/
+application layer. And it ships with a simple-yet-powerful :doc:`cache framework <cache>`.
 
 Who's behind this?
 ------------------
@@ -184,9 +182,7 @@ philosophies 100%.
 
 Like we said: We're picky.
 
-We've documented our philosophies on the `design philosophies page`_.
-
-.. _design philosophies page: http://www.djangoproject.com/documentation/design_philosophies/
+We've documented our philosophies on the :doc:`design philosophies page <design_philosophies>`.
 
 Do you have any of those nifty "screencast" things?
 ---------------------------------------------------
@@ -268,15 +264,12 @@ How do I get started?
 ---------------------
 
     #. `Download the code`_.
-    #. Install Django (read the `installation guide`_).
-    #. Walk through the tutorial_.
-    #. Check out the rest of the documentation_, and `ask questions`_ if you
+    #. Install Django (read the :doc:`installation guide <install>`).
+    #. Walk through the :doc:`tutorial <tutorial01>`.
+    #. Check out the rest of the :doc:`documentation <index>`, and `ask questions`_ if you
        run into trouble.
 
 .. _`Download the code`: http://www.djangoproject.com/download/
-.. _`installation guide`: http://www.djangoproject.com/documentation/install/
-.. _tutorial:  http://www.djangoproject.com/documentation/tutorial1/
-.. _documentation: http://www.djangoproject.com/documentation/
 .. _ask questions: http://www.djangoproject.com/community/
 
 How do I fix the "install a later version of setuptools" error?
@@ -314,7 +307,7 @@ Do I have to use mod_python?
 Although we recommend mod_python for production use, you don't have to use it,
 thanks to the fact that Django uses an arrangement called WSGI_. Django can
 talk to any WSGI-enabled server. The most common non-mod_python deployment
-setup is FastCGI. See `How to use Django with FastCGI`_ for full information.
+setup is FastCGI. See :doc:`How to use Django with FastCGI <fastcgi>` for full information.
 
 Also, see the `server arrangements wiki page`_ for other deployment strategies.
 
@@ -322,7 +315,6 @@ If you just want to play around and develop things on your local computer, use
 the development Web server that comes with Django. Things should Just Work.
 
 .. _WSGI: http://www.python.org/peps/pep-0333.html
-.. _How to use Django with FastCGI: http://www.djangoproject.com/documentation/fastcgi/
 .. _server arrangements wiki page: http://code.djangoproject.com/wiki/ServerArrangements
 
 How do I install mod_python on Windows?
@@ -447,9 +439,7 @@ SELECTs, etc. Each time your app hits the database, the query will be recorded.
 Can I use Django with a pre-existing database?
 ----------------------------------------------
 
-Yes. See `Integrating with a legacy database`_.
-
-.. _`Integrating with a legacy database`: http://www.djangoproject.com/documentation/legacy_databases/
+Yes. See :doc:`Integrating with a legacy database <legacy_databases>`.
 
 If I make changes to a model, how do I update the database?
 -----------------------------------------------------------
@@ -484,7 +474,7 @@ How do I add database-specific options to my CREATE TABLE statements, such as sp
 
 We try to avoid adding special cases in the Django code to accomodate all the
 database-specific options such as table type, etc. If you'd like to use any of
-these options, create an `SQL initial data file`_ that contains ``ALTER TABLE``
+these options, create an :doc:`SQL initial data file <model-api>` that contains ``ALTER TABLE``
 statements that do what you want to do. The initial data files are executed in
 your database after the ``CREATE TABLE`` statements.
 
@@ -493,10 +483,8 @@ type, create an initial data file and put something like this in it::
 
     ALTER TABLE myapp_mytable ENGINE=MyISAM;
 
-As explained in the `SQL initial data file`_ documentation, this SQL file can
+As explained in the :doc:`SQL initial data file <model-api>` documentation, this SQL file can
 contain arbitrary SQL, so you can make any sorts of changes you need to make.
-
-.. _SQL initial data file: http://www.djangoproject.com/documentation/model_api/#providing-initial-sql-data
 
 Why is Django leaking memory?
 -----------------------------
@@ -549,9 +537,7 @@ How can I prevent the cache middleware from caching the admin site?
 -------------------------------------------------------------------
 
 Set the ``CACHE_MIDDLEWARE_ANONYMOUS_ONLY`` setting to ``True``. See the
-`cache documentation`_ for more information.
-
-.. _cache documentation: ../cache/#the-per-site-cache
+:doc:`cache documentation <cache>` for more information.
 
 How do I automatically set a field's value to the user who last edited the object in the admin?
 -----------------------------------------------------------------------------------------------
@@ -574,10 +560,8 @@ See the answer to the previous question.
 My admin-site CSS and images showed up fine using the development server, but they're not displaying when using mod_python.
 ---------------------------------------------------------------------------------------------------------------------------
 
-See `serving the admin files`_ in the "How to use Django with mod_python"
+See :doc:`serving the admin files <modpython>` in the "How to use Django with mod_python"
 documentation.
-
-.. _serving the admin files: http://www.djangoproject.com/documentation/modpython/#serving-the-admin-files
 
 My "list_filter" contains a ManyToManyField, but the filter doesn't display.
 ----------------------------------------------------------------------------
@@ -613,9 +597,7 @@ We like it, but if you don't agree, you can modify the admin site's
 presentation by editing the CSS stylesheet and/or associated image files. The
 site is built using semantic HTML and plenty of CSS hooks, so any changes you'd
 like to make should be possible by editing the stylesheet. We've got a
-`guide to the CSS used in the admin`_ to get you started.
-
-.. _`guide to the CSS used in the admin`: http://www.djangoproject.com/documentation/admin_css/
+:doc:`guide to the CSS used in the admin <admin_css>` to get you started.
 
 How do I create users without having to edit password hashes?
 -------------------------------------------------------------
@@ -625,10 +607,8 @@ moment it requires you to edit password hashes manually. (Passwords are hashed
 using one-way hash algorithms for security; there's currently no Web interface
 for changing passwords by entering the actual password rather than the hash.)
 
-To create a user, you'll have to use the Python API. See `creating users`_ for
+To create a user, you'll have to use the Python API. See :doc:`creating users <authentication>` for
 full info.
-
-.. _creating users: http://www.djangoproject.com/documentation/authentication/#creating-users
 
 Contributing code
 =================

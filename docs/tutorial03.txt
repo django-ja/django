@@ -2,10 +2,8 @@
 Writing your first Django app, part 3
 =====================================
 
-This tutorial begins where `Tutorial 2`_ left off. We're continuing the Web-poll
+This tutorial begins where :doc:`Tutorial 2 <tutorial02>` left off. We're continuing the Web-poll
 application and will focus on creating the public interface -- "views."
-
-.. _Tutorial 2: http://www.djangoproject.com/documentation/tutorial2/
 
 Philosophy
 ==========
@@ -57,8 +55,8 @@ When it finds a match, Django calls the Python callback function, with an
 regular expression as keyword arguments, and, optionally, arbitrary keyword
 arguments from the dictionary (an optional third item in the tuple).
 
-For more on ``HTTPRequest`` objects, see the `request and response documentation`_.
-For more details on URLconfs, see the `URLconf documentation`_.
+For more on ``HTTPRequest`` objects, see the :doc:`request and response documentation <request_response>`.
+For more details on URLconfs, see the :doc:`URLconf documentation <url_dispatch>`.
 
 When you ran ``python manage.py startproject mysite`` at the beginning of
 Tutorial 1, it created a default URLconf in ``mysite/urls.py``. It also
@@ -117,8 +115,6 @@ time the URLconf module is loaded. They're super fast.
 
 .. _Wikipedia's entry: http://en.wikipedia.org/wiki/Regular_expression
 .. _Python documentation: http://www.python.org/doc/current/lib/module-re.html
-.. _request and response documentation: http://www.djangoproject.com/documentation/request_response/
-.. _URLconf documentation: http://www.djangoproject.com/documentation/url_dispatch/
 
 Write your first view
 =====================
@@ -375,9 +371,7 @@ Method-calling happens in the ``{% for %}`` loop: ``poll.choice_set.all`` is
 interpreted as the Python code ``poll.choice_set.all()``, which returns an
 iterable of Choice objects and is suitable for use in the ``{% for %}`` tag.
 
-See the `template guide`_ for full details on how templates work.
-
-.. _template guide: http://www.djangoproject.com/documentation/templates/
+See the :doc:`template guide <templates>` for full details on how templates work.
 
 Simplifying the URLconfs
 ========================
@@ -461,7 +455,5 @@ other URL root, and the app will still work.
 
 All the poll app cares about is its relative URLs, not its absolute URLs.
 
-When you're comfortable with writing views, read `part 4 of this tutorial`_ to
+When you're comfortable with writing views, read :doc:`part 4 of this tutorial <tutorial04>` to
 learn about simple form processing and generic views.
-
-.. _part 4 of this tutorial: http://www.djangoproject.com/documentation/tutorial4/

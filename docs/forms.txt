@@ -9,7 +9,7 @@ code. It is, and this document explains how the framework works.
     .. admonition:: A note to the lazy
 
         If all you want to do is present forms for a user to create and/or
-        update a given object, you may be able to use `generic views`_.
+        update a given object, you may be able to use :doc:`generic views <generic_views>`.
 
 We'll take a top-down approach to examining Django's form validation framework,
 because much of the time you won't need to use the lower-level APIs. Throughout
@@ -350,7 +350,7 @@ identical and could in fact be collapsed into a single view. This is left as an
 exercise for said programmer.
 
 (However, the even-more-astute programmer will take heed of the note at the top
-of this document and check out the `generic views`_ documentation if all she
+of this document and check out the :doc:`generic views <generic_views>` documentation if all she
 wishes to do is this type of simple create/update.)
 
 Custom forms and manipulators
@@ -404,7 +404,7 @@ Here's a simple function that might drive the above form::
             errors = new_data = {}
         form = forms.FormWrapper(manipulator, new_data, errors)
         return render_to_response('contact_form.html', {'form': form})
-        
+
 ``FileField`` and ``ImageField`` special cases
 ==============================================
 
@@ -615,9 +615,5 @@ fails. If no message is passed in, a default message is used.
     a file path to the location of the schema and an optional root element
     (which is wrapped around the XML fragment before validation, if supplied).
     At validation time, the XML fragment is validated against the schema using
-    the executable specified in the ``JING_PATH`` setting (see the settings_
+    the executable specified in the ``JING_PATH`` setting (see the :doc:`settings <settings>`
     document for more details).
-
-.. _`generic views`: http://www.djangoproject.com/documentation/generic_views/
-.. _`models API`: http://www.djangoproject.com/documentation/model_api/
-.. _settings: http://www.djangoproject.com/documentation/settings/

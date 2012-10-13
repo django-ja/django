@@ -106,9 +106,9 @@ initial release of Django 0.95; these include:
     * A patch which disables debugging mode in the flup FastCGI
       package Django uses to launch its FastCGI server, which prevents
       tracebacks from bubbling up during production use.
-      
-    * A security fix to the i18n framework which could allow an 
-      attacker to send extremely large strings in the Accept-Language 
+
+    * A security fix to the i18n framework which could allow an
+      attacker to send extremely large strings in the Accept-Language
       header and cause a denial of service by filling available memory.
 
 Because these problems weren't discovered and fixed until after the
@@ -119,7 +119,7 @@ Problem reports and getting help
 ================================
 
 Need help resolving a problem with Django? The documentation in the
-distribution is also available online_ at the `Django website`_. The FAQ_
+distribution is also available :doc:`online <index>` at the `Django website`_. The :doc:`FAQ <faq>`
 document is especially recommended, as it contains a number of issues that
 come up time and again.
 
@@ -134,9 +134,7 @@ there's a #django channel or irc.freenode.net that is regularly populated by
 Django users and developers from around the world. Friendly people are usually
 available at any hour of the day -- to help, or just to chat.
 
-.. _online: http://www.djangoproject.com/documentation/
 .. _Django website: http://www.djangoproject.com/
-.. _FAQ: http://www.djangoproject.com/documentation/faq/
 .. _django-users: http://groups.google.com/group/django-users
 
 Thanks for using Django!

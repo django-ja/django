@@ -10,7 +10,7 @@ Cookies contain a session ID -- not the data itself.
 Enabling sessions
 =================
 
-Sessions are implemented via a piece of middleware_ and a Django model.
+Sessions are implemented via a piece of :doc:`middleware <middleware>` and a Django model.
 
 To enable session functionality, do these two things:
 
@@ -26,8 +26,6 @@ To enable session functionality, do these two things:
 If you don't want to use sessions, you might as well remove the
 ``SessionMiddleware`` line from ``MIDDLEWARE_CLASSES`` and ``'django.contrib.sessions'``
 from your ``INSTALLED_APPS``. It'll save you a small bit of overhead.
-
-.. _middleware: http://www.djangoproject.com/documentation/middleware/
 
 Using sessions in views
 =======================
@@ -220,7 +218,7 @@ a browser.
 Settings
 ========
 
-A few `Django settings`_ give you control over session behavior:
+A few :doc:`Django settings <settings>` give you control over session behavior:
 
 SESSION_COOKIE_AGE
 ------------------
@@ -261,8 +259,6 @@ Default: ``False``
 Whether to save the session data on every request. If this is ``False``
 (default), then the session data will only be saved if it has been modified --
 that is, if any of its dictionary values have been assigned or deleted.
-
-.. _Django settings: http://www.djangoproject.com/documentation/settings/
 
 Technical details
 =================

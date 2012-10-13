@@ -15,14 +15,13 @@ The basics:
     * Metadata used for Django's admin site goes into an inner class named
       ``Admin``.
     * With all of this, Django gives you an automatically-generated
-      database-access API, which is explained in the `Database API reference`_.
+      database-access API, which is explained in the :doc:`Database API reference <db-api>`.
 
 A companion to this document is the `official repository of model examples`_.
 (In the Django source distribution, these examples are in the
 ``tests/modeltests`` directory.)
 
-.. _Database API reference: http://www.djangoproject.com/documentation/db_api/
-.. _official repository of model examples: http://www.djangoproject.com/documentation/models/
+.. _official repository of model examples: ../models/
 
 Quick example
 =============
@@ -55,9 +54,7 @@ Some technical notes:
       overriden. See `Automatic primary key fields`_ below.
     * The ``CREATE TABLE`` SQL in this example is formatted using PostgreSQL
       syntax, but it's worth noting Django uses SQL tailored to the database
-      backend specified in your `settings file`_.
-
-.. _settings file: http://www.djangoproject.com/documentation/settings/
+      backend specified in your :doc:`settings file <settings>`.
 
 Fields
 ======
@@ -599,11 +596,9 @@ Like ``unique_for_date`` and ``unique_for_month``.
 A list of extra validators to apply to the field. Each should be a callable
 that takes the parameters ``field_data, all_data`` and raises
 ``django.core.validators.ValidationError`` for errors. (See the
-`validator docs`_.)
+:doc:`validator docs <forms>`.)
 
 Django comes with quite a few validators. They're in ``django.core.validators``.
-
-.. _validator docs: http://www.djangoproject.com/documentation/forms/#validators
 
 Verbose field names
 -------------------
@@ -691,7 +686,7 @@ You can, of course, call the field whatever you want. For example::
 
 See the `Many-to-one relationship model example`_ for a full example.
 
-.. _Many-to-one relationship model example: http://www.djangoproject.com/documentation/models/many_to_one/
+.. _Many-to-one relationship model example: ../models/many_to_one/
 
 ``ForeignKey`` fields take a number of extra arguments for defining how the
 relationship should work. All are optional:
@@ -708,7 +703,7 @@ relationship should work. All are optional:
                              fieldsets.
 
     ``limit_choices_to``     A dictionary of lookup arguments and values (see
-                             the `Database API reference`_) that limit the
+                             the :doc:`Database API reference <db-api>`) that limit the
                              available admin choices for this object. Use this
                              with ``models.LazyDate`` to limit choices of objects
                              by date. For example::
@@ -760,16 +755,13 @@ relationship should work. All are optional:
 
     ``related_name``         The name to use for the relation from the related
                              object back to this one. See the
-                             `related objects documentation`_ for a full
+                             :doc:`related objects documentation <db-api>` for a full
                              explanation and example.
 
     ``to_field``             The field on the related object that the relation
                              is to. By default, Django uses the primary key of
                              the related object.
     =======================  ============================================================
-
-.. _`Database API reference`: http://www.djangoproject.com/documentation/db_api/
-.. _related objects documentation: http://www.djangoproject.com/documentation/db_api/#related-objects
 
 Many-to-many relationships
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -815,7 +807,7 @@ set up above, the ``Pizza`` admin form would let users select the toppings.
 
 See the `Many-to-many relationship model example`_ for a full example.
 
-.. _Many-to-many relationship model example: http://www.djangoproject.com/documentation/models/many_to_many/
+.. _Many-to-many relationship model example: ../models/many_to_many/
 
 ``ManyToManyField`` objects take a number of extra arguments for defining how
 the relationship should work. All are optional:
@@ -888,7 +880,7 @@ as a read-only field when you edit an object in the admin interface:
 
 See the `One-to-one relationship model example`_ for a full example.
 
-.. _One-to-one relationship model example: http://www.djangoproject.com/documentation/models/one_to_one/
+.. _One-to-one relationship model example: ../models/one_to_one/
 
 Meta options
 ============
@@ -930,9 +922,7 @@ Example::
 
     get_latest_by = "order_date"
 
-See the `docs for latest()`_ for more.
-
-.. _docs for latest(): http://www.djangoproject.com/documentation/db_api/#latest-field-name-none
+See the :doc:`docs for latest() <db-api>` for more.
 
 ``order_with_respect_to``
 -------------------------
@@ -978,7 +968,7 @@ See `Specifying ordering`_ for more examples.
 Note that, regardless of how many fields are in ``ordering``, the admin
 site uses only the first field.
 
-.. _Specifying ordering: http://www.djangoproject.com/documentation/models/ordering/
+.. _Specifying ordering: ../models/ordering/
 
 ``permissions``
 ---------------
@@ -1309,9 +1299,7 @@ The value should be either ``True`` or ``False``. Default is ``False``.
 Note that Django will use ``select_related()``, regardless of this setting,
 if one of the ``list_display`` fields is a ``ForeignKey``.
 
-For more on ``select_related()``, see `the select_related() docs`_.
-
-.. _the select_related() docs: http://www.djangoproject.com/documentation/db_api/#select-related
+For more on ``select_related()``, see :doc:`the select_related() docs <db-api>`.
 
 ``ordering``
 ------------
@@ -1374,11 +1362,9 @@ A ``Manager`` is the interface through which database query operations are
 provided to Django models. At least one ``Manager`` exists for every model in
 a Django application.
 
-The way ``Manager`` classes work is documented in the `Retrieving objects`_
+The way ``Manager`` classes work is documented in the :doc:`Retrieving objects <db-api>`
 section of the database API docs, but this section specifically touches on
 model options that customize ``Manager`` behavior.
-
-.. _Retrieving objects: http://www.djangoproject.com/documentation/db_api/#retrieving-objects
 
 Manager names
 -------------
@@ -1660,15 +1646,14 @@ the sake of consistency and sanity.)
 
 A final note: If all you want to do is a custom ``WHERE`` clause, you can just
 just the ``where``, ``tables`` and ``params`` arguments to the standard lookup
-API. See `Other lookup options`_.
+API. See :doc:`Other lookup options <db-api>`.
 
 .. _Python DB-API: http://www.python.org/peps/pep-0249.html
-.. _Other lookup options: http://www.djangoproject.com/documentation/db_api/#extra-params-select-where-tables
 
 Overriding default model methods
 --------------------------------
 
-As explained in the `database API docs`_, each model gets a few methods
+As explained in the :doc:`database API docs <db-api>`, each model gets a few methods
 automatically -- most notably, ``save()`` and ``delete()``. You can override
 these methods to alter behavior.
 
@@ -1695,8 +1680,6 @@ You can also prevent saving::
                 return # Yoko shall never have her own blog!
             else:
                 super(Blog, self).save() # Call the "real" save() method.
-
-.. _database API docs: http://www.djangoproject.com/documentation/db_api/
 
 Models across files
 ===================
@@ -1754,15 +1737,13 @@ piped directly into the database after all of the models' table-creation
 statements have been executed.
 
 The SQL files are read by the ``sqlinitialdata``, ``sqlreset``, ``sqlall`` and
-``reset`` commands in ``manage.py``. Refer to the `manage.py documentation`_
+``reset`` commands in ``manage.py``. Refer to the :doc:`manage.py documentation <django-admin>`
 for more information.
 
 Note that if you have multiple SQL data files, there's no guarantee of the
 order in which they're executed. The only thing you can assume is that, by the
 time your custom data files are executed, all the database tables already will
 have been created.
-
-.. _`manage.py documentation`: http://www.djangoproject.com/documentation/django_admin/#sqlinitialdata-appname-appname
 
 Database-backend-specific SQL data
 ----------------------------------

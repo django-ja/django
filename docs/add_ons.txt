@@ -12,18 +12,14 @@ admin
 =====
 
 The automatic Django administrative interface. For more information, see
-`Tutorial 2`_.
-
-.. _Tutorial 2: http://www.djangoproject.com/documentation/tutorial2/
+:doc:`Tutorial 2 <tutorial02>`.
 
 auth
 ====
 
 Django's authentication framework.
 
-See the `authentication documentation`_.
-
-.. _authentication documentation: http://www.djangoproject.com/documentation/authentication/
+See the :doc:`authentication documentation <authentication>`.
 
 comments
 ========
@@ -41,9 +37,7 @@ csrf
 
 A middleware for preventing Cross Site Request Forgeries
 
-See the `csrf documentation`_.
-
-.. _csrf documentation: http://www.djangoproject.com/documentation/csrf/
+See the :doc:`csrf documentation <csrf>`.
 
 humanize
 ========
@@ -115,9 +109,7 @@ flatpages
 
 A framework for managing simple "flat" HTML content in a database.
 
-See the `flatpages documentation`_.
-
-.. _flatpages documentation: http://www.djangoproject.com/documentation/flatpages/
+See the :doc:`flatpages documentation <flatpages>`.
 
 markup
 ======
@@ -135,9 +127,7 @@ redirects
 
 A framework for managing redirects.
 
-See the `redirects documentation`_.
-
-.. _redirects documentation: http://www.djangoproject.com/documentation/redirects/
+See the :doc:`redirects documentation <redirects>`.
 
 sites
 =====
@@ -146,18 +136,14 @@ A light framework that lets you operate multiple Web sites off of the same
 database and Django installation. It gives you hooks for associating objects to
 one or more sites.
 
-See the `sites documentation`_.
-
-.. _sites documentation: http://www.djangoproject.com/documentation/sites/
+See the :doc:`sites documentation <sites>`.
 
 syndication
 ===========
 
 A framework for generating syndication feeds, in RSS and Atom, quite easily.
 
-See the `syndication documentation`_.
-
-.. _syndication documentation: http://www.djangoproject.com/documentation/syndication/
+See the :doc:`syndication documentation <syndication>`.
 
 Other add-ons
 =============

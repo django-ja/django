@@ -363,7 +363,7 @@ extends
 
 Signal that this template extends a parent template.
 
-This tag can be used in two ways: 
+This tag can be used in two ways:
 
    * ``{% extends "base.html" %}`` (with quotes) uses the literal value
      ``"base.html"`` as the name of the parent template to extend.
@@ -753,11 +753,9 @@ file are evaluated as template code, within the current context::
     {% ssi /home/html/ljworld.com/includes/right_generic.html parsed %}
 
 Note that if you use ``{% ssi %}``, you'll need to define
-`ALLOWED_INCLUDE_ROOTS`_ in your Django settings, as a security measure.
+:doc:`ALLOWED_INCLUDE_ROOTS <settings>` in your Django settings, as a security measure.
 
 See also: ``{% include %}``.
-
-.. _ALLOWED_INCLUDE_ROOTS: http://www.djangoproject.com/documentation/settings/#allowed-include-roots
 
 templatetag
 ~~~~~~~~~~~
@@ -961,13 +959,13 @@ any string.
 pluralize
 ~~~~~~~~~
 
-Returns a plural suffix if the value is not 1. By default, this suffix is ``'s'``. 
+Returns a plural suffix if the value is not 1. By default, this suffix is ``'s'``.
 
 Example::
 
     You have {{ num_messages }} message{{ num_messages|pluralize }}.
 
-For words that require a suffix other than ``'s'``, you can provide an alternate 
+For words that require a suffix other than ``'s'``, you can provide an alternate
 suffix as a parameter to the filter.
 
 Example::
@@ -1159,9 +1157,7 @@ django.contrib.humanize
 -----------------------
 
 A set of Django template filters useful for adding a "human touch" to data. See
-the `humanize documentation`_.
-
-.. _humanize documentation: http://www.djangoproject.com/documentation/add_ons/#humanize
+the :doc:`humanize documentation <add_ons>`.
 
 django.contrib.markup
 ---------------------

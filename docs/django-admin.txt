@@ -51,17 +51,13 @@ adminindex [appname appname ...]
 Prints the admin-index template snippet for the given appnames.
 
 Use admin-index template snippets if you want to customize the look and feel of
-your admin's index page. See `Tutorial 2`_ for more information.
-
-.. _Tutorial 2: http://www.djangoproject.com/documentation/tutorial2/
+your admin's index page. See :doc:`Tutorial 2 <tutorial02>` for more information.
 
 createcachetable [tablename]
 ----------------------------
 
 Creates a cache table named ``tablename`` for use with the database cache
-backend.  See the `cache documentation`_ for more information.
-
-.. _cache documentation: http://www.djangoproject.com/documentation/cache/
+backend.  See the :doc:`cache documentation <cache>` for more information.
 
 dbshell
 -------
@@ -187,10 +183,8 @@ Serving static files with the development server
 
 By default, the development server doesn't serve any static files for your site
 (such as CSS files, images, things under ``MEDIA_ROOT_URL`` and so forth). If
-you want to configure Django to serve static media, read the `serving static files`_
+you want to configure Django to serve static media, read the :doc:`serving static files <static_files>`
 documentation.
-
-.. _serving static files: http://www.djangoproject.com/documentation/static_files/
 
 Turning off auto-reload
 ~~~~~~~~~~~~~~~~~~~~~~~

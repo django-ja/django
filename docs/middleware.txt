@@ -45,9 +45,7 @@ django.middleware.cache.CacheMiddleware
 
 Enables site-wide cache. If this is enabled, each Django-powered page will be
 cached for as long as the ``CACHE_MIDDLEWARE_SECONDS`` setting defines. See
-the `cache documentation`_.
-
-.. _`cache documentation`: http://www.djangoproject.com/documentation/cache/#the-per-site-cache
+the :doc:`cache documentation <cache>`.
 
 django.middleware.common.CommonMiddleware
 -----------------------------------------
@@ -63,7 +61,7 @@ Adds a few conveniences for perfectionists:
   last component in the path contains a period. So ``foo.com/bar`` is
   redirected to ``foo.com/bar/``, but ``foo.com/bar/file.txt`` is passed
   through unchanged.
-  
+
   If ``PREPEND_WWW`` is ``True``, URLs that lack a leading "www." will be
   redirected to the same URL with a leading "www."
 
@@ -104,17 +102,13 @@ Also removes the content from any response to a HEAD request and sets the
 django.contrib.sessions.middleware.SessionMiddleware
 ----------------------------------------------------
 
-Enables session support. See the `session documentation`_.
-
-.. _`session documentation`: http://www.djangoproject.com/documentation/sessions/
+Enables session support. See the :doc:`session documentation <sessions>`.
 
 django.contrib.auth.middleware.AuthenticationMiddleware
 -------------------------------------------------------
 
 Adds the ``user`` attribute, representing the currently-logged-in user, to
-every incoming ``HttpRequest`` object. See `Authentication in Web requests`_.
-
-.. _Authentication in Web requests: http://www.djangoproject.com/documentation/authentication/#authentication-in-web-requests
+every incoming ``HttpRequest`` object. See :doc:`Authentication in Web requests <authentication>`.
 
 django.middleware.transaction.TransactionMiddleware
 ---------------------------------------------------
@@ -128,9 +122,7 @@ running outside of it run with commit-on-save - the default Django behavior.
 Middleware modules running inside it (coming later in the stack) will be under
 the same transaction control as the view functions.
 
-See the `transaction management documentation`_.
-
-.. _`transaction management documentation`: http://www.djangoproject.com/documentation/transactions/
+See the :doc:`transaction management documentation <transactions>`.
 
 Writing your own middleware
 ===========================
