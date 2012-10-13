@@ -40,7 +40,7 @@ source_suffix = '.txt'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'contents'
 
 # General information about the project.
 project = u'Django'
@@ -136,7 +136,7 @@ html_theme_path = ["_theme"]
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -198,7 +198,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Django.tex', u'Django Documentation',
+  ('contents', 'Django.tex', u'Django Documentation',
    u'Django Software Foundation', 'manual'),
 ]
 
@@ -228,7 +228,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'django', u'Django Documentation',
+    ('contents', 'django', u'Django Documentation',
      [u'Django Software Foundation'], 1)
 ]
 
@@ -242,7 +242,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Django', u'Django Documentation',
+  ('contents', 'Django', u'Django Documentation',
    u'Django Software Foundation', 'Django', 'One line description of project.',
    'Miscellaneous'),
 ]

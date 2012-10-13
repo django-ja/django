@@ -1,0 +1,64 @@
+.. _contents:
+
+=============================
+Django documentation contents
+=============================
+
+.. toctree::
+    :hidden:
+
+    index
+
+.. toctree::
+    :maxdepth: 2
+
+    overview
+    install
+    tutorial01
+    tutorial02
+    tutorial03
+    tutorial04
+    faq
+    django-admin
+    model-api
+    db-api
+    transactions
+    templates
+    templates_python
+    forms
+    sessions
+    cache
+    i18n
+    middleware
+    settings
+    url_dispatch
+    request_response
+    generic_views
+    authentication
+    add_ons
+    csrf
+    syndication_feeds
+    flatpages
+    redirects
+    sites
+    modpython
+    fastcgi
+    apache_auth
+    static_files
+    email
+    legacy_databases
+    outputting_pdf
+    outputting_csv
+    serialization
+    design_philosophies
+    contributing
+    admin_css
+    api_stability
+    release_notes_0.95
+
+Indices, glossary and tables
+============================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`glossary`
