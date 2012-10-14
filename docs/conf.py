@@ -19,7 +19,7 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "_ext")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '_ext')))
 
 # -- General configuration -----------------------------------------------------
 
@@ -28,7 +28,7 @@ needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ["djangodocs", "sphinx.ext.intersphinx"]
+extensions = ['djangodocs', 'sphinx.ext.intersphinx']
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
@@ -61,6 +61,8 @@ django_next_version = '0.96'
 # for a list of supported languages.
 #language = None
 
+locale_dirs = ['_locale']
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
@@ -69,7 +71,7 @@ today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '_locale']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -107,7 +109,7 @@ intersphinx_cache_limit = 90 # days
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "djangodocs"
+html_theme = 'djangodocs'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -115,10 +117,10 @@ html_theme = "djangodocs"
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["_theme"]
+html_theme_path = ['_theme']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
+# '<project> v<release> documentation'.
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
@@ -135,7 +137,7 @@ html_theme_path = ["_theme"]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+# so a file named 'default.css' will overwrite the builtin 'default.css'.
 # html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
@@ -147,7 +149,7 @@ html_last_updated_fmt = '%b %d, %Y'
 html_use_smartypants = True
 
 # HTML translator class for the builder
-html_translator_class = "djangodocs.DjangoHTMLTranslator"
+html_translator_class = 'djangodocs.DjangoHTMLTranslator'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -168,10 +170,10 @@ html_additional_pages = {}
 # If true, links to the reST sources are added to the pages.
 #html_show_sourcelink = True
 
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+# If true, 'Created using Sphinx' is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
 
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+# If true, '(C) Copyright ...' is shown in the HTML footer. Default is True.
 #html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
@@ -179,13 +181,13 @@ html_additional_pages = {}
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-# This is the file name suffix for HTML files (e.g. ".xhtml").
+# This is the file name suffix for HTML files (e.g. '.xhtml').
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Djangodoc'
 
-modindex_common_prefix = ["django."]
+modindex_common_prefix = ['django.']
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -206,7 +208,7 @@ latex_documents = [
 # the title page.
 #latex_logo = None
 
-# For "manual" documents, if this is true, then toplevel headings are parts,
+# For 'manual' documents, if this is true, then toplevel headings are parts,
 # not chapters.
 #latex_use_parts = False
 
