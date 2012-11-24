@@ -7,265 +7,261 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 0.95\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 14:05\n"
+"POT-Creation-Date: 2012-11-24 15:56\n"
 "PO-Revision-Date: 2012-11-24 14:10+0900\n"
-"Last-Translator: Kosei <>\n"
+"Last-Translator:  Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 181cf3d4135c4ae6a80f04dec7ef3333
 #: ../../index.txt:3
 msgid "Documentation"
-msgstr ""
+msgstr "日本語ドキュメント"
 
 # 4f344ee5fd5b43c3887f24bb575ed1d5
 #: ../../index.txt:5
 msgid "The essential documentation"
-msgstr ""
+msgstr "必読"
 
 # 1f8991aab3a948329169ba32a84423c7
 #: ../../index.txt:7
-msgid ""
-"Make sure to read the following documentation. The rest (in the \"Reference"
+msgid "Make sure to read the following documentation. The rest (in the \"Reference"
 "\" section below) can be read in any particular order, as you need the "
 "various functionality."
-msgstr ""
+msgstr "このドキュメントは必読です。リファレンス以降は必要に応じて読んでください。"
 
 # db28a76c5285444189e7f39e0755e9b5
 # 0c82408d2bc9427e837534ccaf941c78
 #: ../../index.txt:11 ../../index.txt:15
 msgid "Tutorial: Writing your first Django app"
-msgstr ""
+msgstr "チュートリアル: Django アプリケーションを書く"
 
 # 8a41b7f4433142309ad0727d7af53a66
 #: ../../index.txt:13
 msgid ":doc:`Overview <overview>`"
-msgstr ""
+msgstr ":doc:`概要 (Overview) <overview>`"
 
 # dcd73c19c458435c8fe553b5d82f756c
 #: ../../index.txt:14
 msgid ":doc:`Installation guide <install>`"
-msgstr ""
+msgstr ":doc:`インストール (Installation) <install>`"
 
 # 89ef80f3e7b54406a2ee6bc6ac77ff81
 #: ../../index.txt:17
-msgid ""
-":doc:`Part 1: Initialization, creating models, the database API <tutorial01>`"
-msgstr ""
+msgid ":doc:`Part 1: Initialization, creating models, the database API <tutorial01>`"
+msgstr ":doc:`その 1 初期化，モデル作成，データベース API <tutorial01>`"
 
 # e3c09e3a777a425ca12acb2a813795c2
 #: ../../index.txt:18
-msgid ""
-":doc:`Part 2: Exploring the automatically-generated admin site <tutorial02>`"
-msgstr ""
+msgid ":doc:`Part 2: Exploring the automatically-generated admin site <tutorial02>`"
+msgstr ":doc:`その 2: 自動生成の admin サイトを探究する <tutorial02>`"
 
 # 0a2b280ca15d41bc93aff20a57938e27
 #: ../../index.txt:19
 msgid ":doc:`Part 3: Creating the public interface views <tutorial03>`"
-msgstr ""
+msgstr ":doc:`その 3: 公開用のインタフェースビューを作成する <tutorial03>`"
 
 # de9dd539bb1242f0a1119bef5fb17f49
 #: ../../index.txt:20
 msgid ":doc:`Part 4: Simple form processing and generic views <tutorial04>`"
-msgstr ""
+msgstr ":doc:`その 4: 簡単なフォームデータ処理と汎用ビュー <tutorial04>`"
 
 # f33e927627fd4f9f8797423873076b6e
 #: ../../index.txt:21
 msgid ":doc:`Frequently asked questions (FAQ) <faq>`"
-msgstr ""
+msgstr ":doc:`Django についてよくある質問 (FAQ) <faq>`"
 
 # de8b0dda037b4f9ea4f648cdf7c3ad3f
 #: ../../index.txt:24
 msgid "Reference"
-msgstr ""
+msgstr "リファレンス"
 
 # cb9580ed60f94dd5a5d9b3f5825fad21
 #: ../../index.txt:26
 msgid ":doc:`The django-admin.py and manage.py utilities <django-admin>`"
-msgstr ""
+msgstr ":doc:`django-admin.py と manage.py <django-admin>`"
 
 # c049f09afa814fc88ec941c06b0c2af9
 #: ../../index.txt:27
-msgid ""
-"Models: :doc:`Creating models <model-api>` | :doc:`The database API <db-"
+msgid "Models: :doc:`Creating models <model-api>` | :doc:`The database API <db-"
 "api>` | :doc:`Transactions <transactions>`"
-msgstr ""
+msgstr "モデル: :doc:`モデルの作成 <model-api>` | :doc:`データベース API <db-api>`"
+" | :doc:`トランザクション <transactions>`"
 
 # a85c35665a4242b4b0d6fbf12180a9bf
 #: ../../index.txt:28
-msgid ""
-"Templates: :doc:`Guide for HTML authors <templates>` | :doc:`Guide for "
+msgid "Templates: :doc:`Guide for HTML authors <templates>` | :doc:`Guide for "
 "Python programmers <templates_python>`"
-msgstr ""
+msgstr "テンプレート: :doc:`テンプレート作者のためのガイド <templates>`"
+" | :doc:`Python プログラマのためのガイド <templates_python>`"
 
 # d62fa395b9674e82870a11800a0ac149
 #: ../../index.txt:29
 msgid ":doc:`Forms and manipulators <forms>`"
-msgstr ""
+msgstr ":doc:`フォームとマニピュレータ <forms>`"
 
 # 3ed07b7dbf124771acac18fbc4b91b80
 #: ../../index.txt:30
 msgid ":doc:`Sessions <sessions>`"
-msgstr ""
+msgstr ":doc:`セッション <sessions>`"
 
 # 6918732763ff432dbdf84f0ee159960f
 #: ../../index.txt:31
 msgid ":doc:`Caching <cache>`"
-msgstr ""
+msgstr ":doc:`キャッシュ <cache>`"
 
 # e9344cd42a4942058a4c0deba108503c
 #: ../../index.txt:32
 msgid ":doc:`Internationalization <i18n>`"
-msgstr ""
+msgstr ":doc:`国際化 <i18n>`"
 
 # 4694b2bbae714514a445a09b600a992f
 #: ../../index.txt:33
 msgid ":doc:`Middleware <middleware>`"
-msgstr ""
+msgstr ":doc:`ミドルウェア <middleware>`"
 
 # e17d098a5b614b13b9dbbc922b573282
 #: ../../index.txt:34
 msgid ":doc:`Settings files <settings>`"
-msgstr ""
+msgstr ":doc:`設定ファイル <settings>`"
 
 # 82cc71d91a2040428b5e42f1a48c5b23
 #: ../../index.txt:35
 msgid ":doc:`URL configuration <url_dispatch>`"
-msgstr ""
+msgstr ":doc:`URL の設定 <url_dispatch>`"
 
 # 67206b3fc5fb4e64b5c6d320165202d4
 #: ../../index.txt:36
 msgid ":doc:`Request and response objects <request_response>`"
-msgstr ""
+msgstr ":doc:`リクエストオブジェクトとレスポンスオブジェクト <request_response>`"
 
 # 12fda6e4ad9e40879feef38fabc71180
 #: ../../index.txt:37
 msgid ":doc:`Generic views <generic_views>`"
-msgstr ""
+msgstr ":doc:`汎用ビュー <generic_views>`"
 
 # c4451da52e6940cead7c075e0b3b2bf1
 #: ../../index.txt:38
 msgid ":doc:`Authentication <authentication>`"
-msgstr ""
+msgstr ":doc:`認証 <authentication>`"
 
 # c774abf3e95148d991be2eab0fc7963b
 #: ../../index.txt:39
 msgid ":doc:`Add-on applications (contrib) <add_ons>`"
-msgstr ""
+msgstr ":doc:`アドオンアプリケーション (contrib) <add_ons>`"
 
 # 0e5d0be91fd849719378cfb74a921a5c
 #: ../../index.txt:41
 msgid ":doc:`Syndication feeds (RSS and Atom) <syndication_feeds>`"
-msgstr ""
+msgstr ":doc:`フィード配信 (RSS and Atom) <syndication_feeds>`"
 
 # 22d518813ce547ca995d002dac80ecdb
 #: ../../index.txt:42
 msgid ":doc:`Flatpages <flatpages>`"
-msgstr ""
+msgstr ":doc:`静的ページ <flatpages>`"
 
 # 0f3c3730638041969a2924b3ab229428
 #: ../../index.txt:43
 msgid ":doc:`Redirects <redirects>`"
-msgstr ""
+msgstr ":doc:`リダイレクト <redirects>`"
 
 # 8b767dbaceb141de82644a2135174997
 #: ../../index.txt:44
 msgid ":doc:`Sites <sites>`"
-msgstr ""
+msgstr ":doc:`サイト <sites>`"
 
 # c1f8eef89d0344048aeb1d7d8e4d7bb2
 #: ../../index.txt:47
 msgid "Deployment"
-msgstr ""
+msgstr "運用関連"
 
 # 8f711be631054ec19b2bc9caa8669a77
 #: ../../index.txt:49
 msgid ":doc:`Using Django with mod_python <modpython>`"
-msgstr ""
+msgstr ":doc:`mod_python で Django を使う <modpython>`"
 
 # a5cbd3b3da7b4008b5174dc5a9377c7e
 #: ../../index.txt:50
 msgid ":doc:`Using Django with FastCGI <fastcgi>`"
-msgstr ""
+msgstr ":doc:`FastCGI で Django を使う <fastcgi>`"
 
 # 1b347ce6906e4db6adc084d59faef1b7
 #: ../../index.txt:53
 msgid "Solving specific problems"
-msgstr ""
+msgstr "特殊な話題"
 
 # c8f9672dccae4947b7daef0a8ce7bb56
 #: ../../index.txt:55
-msgid ""
-":doc:`Authenticating against Django's user database from Apache "
+msgid ":doc:`Authenticating against Django's user database from Apache "
 "<apache_auth>`"
-msgstr ""
+msgstr ":doc:`Apache での認証に Django ユーザデータベースを使う "
+"<apache_auth>`"
 
 # 4fb6ee6e51544d87b90f09ad802ae69d
 #: ../../index.txt:56
 msgid ":doc:`Serving static/media files <static_files>`"
-msgstr ""
+msgstr ":doc:`静的ファイルの提供方法 <static_files>`"
 
 # b0b5ea6d0b864db194e74eea7877ea77
 #: ../../index.txt:57
 msgid ":doc:`Sending e-mail <email>`"
-msgstr ""
+msgstr ":doc:`e-mail の送信 <email>`"
 
 # 65cbf6fa3fa2417c96fbfe1085461535
 #: ../../index.txt:58
-msgid ""
-":doc:`Integrating with (introspecting) a legacy database <legacy_databases>`"
-msgstr ""
+msgid ":doc:`Integrating with (introspecting) a legacy database <legacy_databases>`"
+msgstr ":doc:`古いデータベースの組み込み <legacy_databases>`"
 
 # a9e7194b5977407fa42007f79b1cb57f
 #: ../../index.txt:59
 msgid ":doc:`Outputting PDFs dynamically <outputting_pdf>`"
-msgstr ""
+msgstr ":doc:`動的な PDF の生成 <outputting_pdf>`"
 
 # 0237b7fcab1948c78d3c7def93dbb190
 #: ../../index.txt:60
 msgid ":doc:`Outputting CSV dynamically <outputting_csv>`"
-msgstr ""
+msgstr ":doc:`動的な CSV の生成 <outputting_csv>`"
 
 # 4ad0a2716bee4040ab55e6e72d7a013e
 #: ../../index.txt:63
 msgid "Et cetera"
-msgstr ""
+msgstr "その他"
 
 # b81b1e7f6b134432b843139e6a9625bd
 #: ../../index.txt:65
 msgid ":doc:`Design philosophies <design_philosophies>`"
-msgstr ""
+msgstr ":doc:`Django の設計思想 <design_philosophies>`"
 
 # fb1f96aabb994630a9a6f84bf76542eb
 #: ../../index.txt:66
 msgid ":doc:`How to contribute to Django <contributing>`"
-msgstr ""
+msgstr ":doc:`Django プロジェクトに協力するために <contributing>`"
 
 # 53ebb8c0524a400c809d484e545d64ce
 #: ../../index.txt:67
 msgid ":doc:`Django admin CSS guide <admin_css>`"
-msgstr ""
+msgstr ":doc:`Django admin 用 CSS ガイド <admin_css>`"
 
 # 8dc77db3c1294c62a182c71c719947dd
 #: ../../index.txt:68
 msgid ":doc:`API stability <api_stability>`"
-msgstr ""
+msgstr ":doc:`API の安定性 <api_stability>`"
 
 # da532f353d444b57894ed58c58e53800
 #: ../../index.txt:69
 msgid "`Backwards-incompatible changes`_"
-msgstr ""
+msgstr "下位互換性のない変更点: `Backwards-incompatible changes`_"
 
 # 19a4a97d81c04b6abffed05fe3ab67ea
 #: ../../index.txt:74
 msgid "Release notes"
-msgstr ""
+msgstr "リリースノート"
 
 # 4392fbc0b99c4b8a8af171ea04383607
 #: ../../index.txt:76
 msgid ":doc:`Version 0.95 <release_notes_0.95>`"
-msgstr ""
+msgstr ":doc:`バージョン 0.95 <release_notes_0.95>`"
