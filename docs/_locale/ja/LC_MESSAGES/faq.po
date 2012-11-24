@@ -1,20 +1,20 @@
 # Japanese translations for Django package.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-# Kosei <>, 2012.
+# Django-ja <django-ja@googlegroups.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Django 0.95\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 14:05\n"
+"Report-Msgid-Bugs-To: django-ja@googlegroups.com\n"
+"POT-Creation-Date: 2012-11-24 14:15\n"
 "PO-Revision-Date: 2012-11-24 14:09+0900\n"
-"Last-Translator: Kosei <>\n"
+"Last-Translator:  Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # e7bad064a02d4128aa8b76169ed9bb15
