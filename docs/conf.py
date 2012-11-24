@@ -61,6 +61,7 @@ django_next_version = '0.96'
 # for a list of supported languages.
 #language = None
 
+language = 'en'
 locale_dirs = ['_locale']
 
 # There are two options for replacing |today|: either, you set today to some

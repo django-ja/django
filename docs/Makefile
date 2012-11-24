@@ -2,8 +2,10 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
+LANGUAGE      = ja
+SPHINXOPTS    = -D language=$(LANGUAGE)
 SPHINXBUILD   = sphinx-build
+GETTEXTHELPER = sphinx-gettext-helper
 PAPER         =
 BUILDDIR      = _build
 
@@ -133,6 +135,7 @@ info:
 
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	$(GETTEXTHELPER) -l $(LANGUAGE) -p $(BUILDDIR)/locale --update --build --statistics
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
