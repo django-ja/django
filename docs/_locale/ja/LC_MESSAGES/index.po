@@ -1,13 +1,13 @@
 # Japanese translations for Django package.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-# Kosei <>, 2012.
+# Django-ja <django-ja@googlegroups.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Django 0.95\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 15:56\n"
+"POT-Creation-Date: 2012-11-24 18:44\n"
 "PO-Revision-Date: 2012-11-24 14:10+0900\n"
 "Last-Translator:  Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -29,10 +29,12 @@ msgstr "必読"
 
 # 1f8991aab3a948329169ba32a84423c7
 #: ../../index.txt:7
-msgid "Make sure to read the following documentation. The rest (in the \"Reference"
+msgid ""
+"Make sure to read the following documentation. The rest (in the \"Reference"
 "\" section below) can be read in any particular order, as you need the "
 "various functionality."
-msgstr "このドキュメントは必読です。リファレンス以降は必要に応じて読んでください。"
+msgstr ""
+"このドキュメントは必読です。リファレンス以降は必要に応じて読んでください。"
 
 # db28a76c5285444189e7f39e0755e9b5
 # 0c82408d2bc9427e837534ccaf941c78
@@ -52,12 +54,14 @@ msgstr ":doc:`インストール (Installation) <install>`"
 
 # 89ef80f3e7b54406a2ee6bc6ac77ff81
 #: ../../index.txt:17
-msgid ":doc:`Part 1: Initialization, creating models, the database API <tutorial01>`"
+msgid ""
+":doc:`Part 1: Initialization, creating models, the database API <tutorial01>`"
 msgstr ":doc:`その 1 初期化，モデル作成，データベース API <tutorial01>`"
 
 # e3c09e3a777a425ca12acb2a813795c2
 #: ../../index.txt:18
-msgid ":doc:`Part 2: Exploring the automatically-generated admin site <tutorial02>`"
+msgid ""
+":doc:`Part 2: Exploring the automatically-generated admin site <tutorial02>`"
 msgstr ":doc:`その 2: 自動生成の admin サイトを探究する <tutorial02>`"
 
 # 0a2b280ca15d41bc93aff20a57938e27
@@ -87,17 +91,21 @@ msgstr ":doc:`django-admin.py と manage.py <django-admin>`"
 
 # c049f09afa814fc88ec941c06b0c2af9
 #: ../../index.txt:27
-msgid "Models: :doc:`Creating models <model-api>` | :doc:`The database API <db-"
+msgid ""
+"Models: :doc:`Creating models <model-api>` | :doc:`The database API <db-"
 "api>` | :doc:`Transactions <transactions>`"
-msgstr "モデル: :doc:`モデルの作成 <model-api>` | :doc:`データベース API <db-api>`"
-" | :doc:`トランザクション <transactions>`"
+msgstr ""
+"モデル: :doc:`モデルの作成 <model-api>` | :doc:`データベース API <db-api>` "
+"| :doc:`トランザクション <transactions>`"
 
 # a85c35665a4242b4b0d6fbf12180a9bf
 #: ../../index.txt:28
-msgid "Templates: :doc:`Guide for HTML authors <templates>` | :doc:`Guide for "
+msgid ""
+"Templates: :doc:`Guide for HTML authors <templates>` | :doc:`Guide for "
 "Python programmers <templates_python>`"
-msgstr "テンプレート: :doc:`テンプレート作者のためのガイド <templates>`"
-" | :doc:`Python プログラマのためのガイド <templates_python>`"
+msgstr ""
+"テンプレート: :doc:`テンプレート作者のためのガイド <templates>` | :doc:"
+"`Python プログラマのためのガイド <templates_python>`"
 
 # d62fa395b9674e82870a11800a0ac149
 #: ../../index.txt:29
@@ -137,7 +145,8 @@ msgstr ":doc:`URL の設定 <url_dispatch>`"
 # 67206b3fc5fb4e64b5c6d320165202d4
 #: ../../index.txt:36
 msgid ":doc:`Request and response objects <request_response>`"
-msgstr ":doc:`リクエストオブジェクトとレスポンスオブジェクト <request_response>`"
+msgstr ""
+":doc:`リクエストオブジェクトとレスポンスオブジェクト <request_response>`"
 
 # 12fda6e4ad9e40879feef38fabc71180
 #: ../../index.txt:37
@@ -196,10 +205,10 @@ msgstr "特殊な話題"
 
 # c8f9672dccae4947b7daef0a8ce7bb56
 #: ../../index.txt:55
-msgid ":doc:`Authenticating against Django's user database from Apache "
+msgid ""
+":doc:`Authenticating against Django's user database from Apache "
 "<apache_auth>`"
-msgstr ":doc:`Apache での認証に Django ユーザデータベースを使う "
-"<apache_auth>`"
+msgstr ":doc:`Apache での認証に Django ユーザデータベースを使う <apache_auth>`"
 
 # 4fb6ee6e51544d87b90f09ad802ae69d
 #: ../../index.txt:56
@@ -213,7 +222,8 @@ msgstr ":doc:`e-mail の送信 <email>`"
 
 # 65cbf6fa3fa2417c96fbfe1085461535
 #: ../../index.txt:58
-msgid ":doc:`Integrating with (introspecting) a legacy database <legacy_databases>`"
+msgid ""
+":doc:`Integrating with (introspecting) a legacy database <legacy_databases>`"
 msgstr ":doc:`古いデータベースの組み込み <legacy_databases>`"
 
 # a9e7194b5977407fa42007f79b1cb57f
