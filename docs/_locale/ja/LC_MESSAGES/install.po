@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Django 0.95\n"
-"Report-Msgid-Bugs-To: django-ja@googlegroups.com\n"
-"POT-Creation-Date: 2012-11-24 14:15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 20:01\n"
 "PO-Revision-Date: 2012-11-24 14:10+0900\n"
 "Last-Translator:  Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -20,46 +20,48 @@ msgstr ""
 # 6a7dad4828ef42ca839ce168a694ef38
 #: ../../install.txt:3
 msgid "How to install Django"
-msgstr ""
+msgstr "Django のインストール"
 
 # 6d4abcf27d704e69a100951fcde83810
 #: ../../install.txt:5
 msgid "This document will get you up and running with Django."
-msgstr ""
+msgstr "このドキュメントを読めば Django を動かせるようになります。"
 
 # 7dc6d108ce3e400c961e43cb220eed00
 #: ../../install.txt:8
 msgid "Install Python"
-msgstr ""
+msgstr "Python のインストール"
 
 # c652c5cdb22a45f5b0edc1312c9006e4
 #: ../../install.txt:10
 msgid "Being a Python Web framework, Django requires Python."
-msgstr ""
+msgstr "Django は Python の Web フレームワークなので Python が必要です。"
 
 # 58270ec78843417d8844ef6dc0ac0e25
 #: ../../install.txt:12
 msgid "It works with any Python version 2.3 and higher."
-msgstr ""
+msgstr "Django はバージョン 2.3 以上の Python で動作します。"
 
 # 30a4a00b88f8486abe29b8cec58dc476
 #: ../../install.txt:14
 msgid ""
 "Get Python at www.python.org. If you're running Linux or Mac OS X, you "
 "probably already have it installed."
-msgstr ""
+msgstr "www.python.org から Python を取ってきましょう。Linux や Mac OSX を"
+"動かしているのなら、おそらくインストール済みのはずです。"
 
 # 3de244d10796487c9ddc53ddf2da2f13
 #: ../../install.txt:18
 msgid "Install Apache and mod_python"
-msgstr ""
+msgstr "Apache と mod_python のインストール"
 
 # 30673d04e716440bb945210002467731
 #: ../../install.txt:20
 msgid ""
 "If you just want to experiment with Django, skip this step. Django comes "
 "with its own Web server for development purposes."
-msgstr ""
+msgstr "単に Django を試してみたいだけなら、この節は読み飛ばしてかまいません。"
+"Django には独自開発用 Web サーバがついてきます。"
 
 # ba627d195a5a497e8204feeddb927c36
 #: ../../install.txt:23
@@ -71,14 +73,20 @@ msgid ""
 "significant performance gains over other server arrangements. Make sure you "
 "have Apache installed, with the mod_python module activated. Django requires "
 "Apache 2.x and mod_python 3.x."
-msgstr ""
+msgstr "Django を実運用のサイトで使いたい場合、 `Apache`_ と `mod_python`_ を"
+"使って下さい。mod_python は mod_perl のようなもので、Python を Apache の中に埋め"
+"込み、サーバの起動時に Python コードをメモリにロードします。コードは Apache "
+"プロセスが生きている間ずっとメモリ上に存在するので、他のサーバ構成よりも明らか"
+"に高いパフォーマンスを実現します。Django の動作には Apache 2.x および "
+"mod_python 3.x が必要です。"
 
 # b8d103e9d83b4ba186942f92741c985d
 #: ../../install.txt:30
 msgid ""
 "See :doc:`How to use Django with mod_python <modpython>` for information on "
 "how to configure mod_python once you have it installed."
-msgstr ""
+msgstr "mod_python をインストールしたら、設定に関する情報は :doc:`mod_python "
+"で Django を動かす <modpython>` を参照してください。"
 
 # f3c97a44c6a64493986d46d6cba4f410
 #: ../../install.txt:33
@@ -87,12 +95,16 @@ msgid ""
 "WSGI_ spec, which allows it to run on a variety of server platforms. See the "
 "`server-arrangements wiki page`_ for specific installation instructions for "
 "each platform."
-msgstr ""
+msgstr "何らかの理由で mod_python を使えない場合でも心配はいりません: Django は "
+"WSGI_ 仕様に従っているので、様々なサーバプラットフォームで動作させられます。"
+"個々のプラットフォームにおけるインストール方法の説明は `サーバ構成に関する "
+"wiki ページ <http://code.djangoproject.com/wiki/ServerArrangements>`_ を参照"
+"してください。"
 
 # 30045637c8914fa4bdd2a9f104a4fa01
 #: ../../install.txt:44
 msgid "Get your database running"
-msgstr ""
+msgstr "データベースを動かす"
 
 # a8758e82160a4df4bfe753a1ec99e528
 #: ../../install.txt:46
@@ -100,14 +112,17 @@ msgid ""
 "If you plan to use Django's database API functionality, you'll need to make "
 "sure a database server is running. Django works with PostgreSQL_ "
 "(recommended), MySQL_ and SQLite_."
-msgstr ""
+msgstr "Django のデータベース API 機能を使うのなら、データベースサーバを動かす"
+"必要があります。Django は PostgreSQL_ (推奨)、 MySQL_ 、 および SQLite_ で動作"
+"します。"
 
 # 27e2db7301554fef97b7bff16d85c0fe
 #: ../../install.txt:50
 msgid ""
 "Additionally, you'll need to make sure your Python database bindings are "
 "installed."
-msgstr ""
+msgstr "さらに、各データベースの Python バインディングをインストールしておく"
+"必要があります。"
 
 # 3766c5bb5dfa4bdca1442fea5df48f0d
 #: ../../install.txt:53
@@ -115,60 +130,66 @@ msgid ""
 "If you're using PostgreSQL, you'll need the psycopg_ package (version 1.1 -- "
 "not version 1.0 or version 2, which is still in beta). If you're on Windows, "
 "check out the unofficial `compiled Windows version`_."
-msgstr ""
+msgstr "PostgreSQL を使う場合、 psycopg_ パッケージ (1.0 やベータ版のバージョン 2 "
+"ではなく、バージョン 1.1 を使って下さい) が必要です。"
+"Windows 環境なら、非公式の `Windows むけコンパイル済みパッケージ "
+"<http://stickpeople.com/projects/python/win-psycopg/>`_ を使って下さい。"
 
 # ff2e646eb78940e8a531c9f6886a023c
 #: ../../install.txt:56
 msgid "If you're using MySQL, you'll need MySQLdb_."
-msgstr ""
+msgstr "MySQL を使う場合は MySQLdb_ が必要です。"
 
 # 132bda7d01804b0292a5b6876136fdd2
 #: ../../install.txt:57
 msgid ""
 "If you're using SQLite, you'll need pysqlite_. Use version 2.0.3 or higher."
-msgstr ""
+msgstr "SQLite を使う場合は pysqlite_ が必要です。バージョン 2.0.3 以上を使って"
+"下さい。"
 
 # e66d9da1cacc46f1a30b33ba6a226927
 #: ../../install.txt:69
 msgid "Install the Django code"
-msgstr ""
+msgstr "Django コードのインストール"
 
 # 404947c8be534e359079845143cb0d0d
 #: ../../install.txt:71
 msgid ""
 "Installation instructions are slightly different depending on whether you're "
 "using the latest official version or the latest development version."
-msgstr ""
+msgstr "公式リリース版を入れる場合と、最新の開発バージョンを入れる場合では、"
+"インストール方法の説明が少し違います。"
 
 # 0dec7b7e210b4f258435971e365ad8c1
 #: ../../install.txt:74
 msgid "It's easy either way."
-msgstr ""
+msgstr "どちらの方法も難しくはありません。"
 
 # 26f809c19f6a4d86a704c2de853aa327
 #: ../../install.txt:77
 msgid "Installing the official version"
-msgstr ""
+msgstr "公式リリースのインストール"
 
 # 8d3acbcad4ae4eabadc77306bd7c8807
 #: ../../install.txt:79
 msgid "Download Django-0.95.tar.gz from our `download page`_."
-msgstr ""
+msgstr "`ダウンロードページ <http://www.djangoproject.com/download/>`_ から、"
+"Django-0.95.tar.gz をダウンロードします。"
 
 # 9fe016b473434542be31203eef94be82
 #: ../../install.txt:80
 msgid "``tar xzvf Django-0.95.tar.gz``"
-msgstr ""
+msgstr "``tar xzvf Django-0.95.tar.gz``"
 
 # 71ef6a12bba04f1fb2856aaeca69e895
 #: ../../install.txt:81
 msgid "``cd Django-0.95``"
-msgstr ""
+msgstr "``cd Django-0.95``"
 
 # 9f8e7d2ee99e4896b086d73d5e1a321e
 #: ../../install.txt:82
 msgid "``sudo python setup.py install``"
-msgstr ""
+msgstr "``sudo python setup.py install``"
 
 # b9d4335b1c974666b33f654c3e61b377
 #: ../../install.txt:84
@@ -176,36 +197,43 @@ msgid ""
 "Note that the last command will automatically download and install "
 "setuptools_ if you don't already have it installed. This requires a working "
 "Internet connection."
-msgstr ""
+msgstr "setuptools がインストールされていない場合、最後のコマンドを実行すると "
+"setuptools_ を自動的にダウンロードしてインストールします。この作業には"
+"インターネットへの接続が必要です。また、Python 2.5 を使っている場合にはうまく"
+"動作しないでしょう。その場合には、後で説明する方法に従って開発版をインストール"
+"してください。開発版は setuptools を使っておらず、インストール時にインターネット"
+"に接続しません。"
 
 # 8e1a9818806b43059b77e279cc7bf418
 #: ../../install.txt:88
 msgid ""
 "This will install Django in your Python installation's ``site-packages`` "
 "directory."
-msgstr ""
+msgstr "上のコマンドを実行すると、Django は Python インストールディレクトリの "
+"site-packages ディレクトリ下にインストールされます。"
 
 # bef462fa07654eeeb6096bdf0326c9dd
 #: ../../install.txt:94
 msgid "Installing the development version"
-msgstr ""
+msgstr "開発バージョンのインストール"
 
 # 61bf54d98de942718fd039a5d6be6798
 #: ../../install.txt:96
 msgid "Make sure you have Subversion_ installed."
-msgstr ""
+msgstr "Subversion_ がインストールされていることを確認してください。"
 
 # 14041539fc154098a0c96df6bc2f8b01
 #: ../../install.txt:97
 msgid "``svn co http://code.djangoproject.com/svn/django/trunk/ django_src``"
-msgstr ""
+msgstr "``svn co http://code.djangoproject.com/svn/django/trunk/ django_src``"
 
 # fca3fda010604d289467af43209d614a
 #: ../../install.txt:98
 msgid ""
 "Symlink ``django_src/django`` so that ``django`` is within your Python "
 "``site-packages`` directory:"
-msgstr ""
+msgstr "Python の ``site-packages`` ディレクトリ内に ``django_src/django`` "
+"のシンボリックリンクを作成してください"
 
 # 9707f48d5cd944d9a0ce56c0183502bf
 #: ../../install.txt:101
@@ -218,16 +246,19 @@ msgstr ""
 msgid ""
 "(In the above line, change ``python2.3`` to match your current Python "
 "version.)"
-msgstr ""
+msgstr "(上の作業では、使っている Python のバージョンに合わせて "
+"python2.3 を適宜読み変えて下さい)"
 
 # 1dfe1b31bf9340f08855e2d35a316829
 #: ../../install.txt:105
 msgid "You don't have to run ``python setup.py install``."
-msgstr ""
+msgstr "``python setup.py install`` を 実行する必要はありません。"
 
 # a62d41ab294e4d719ef80855d46c4f1f
 #: ../../install.txt:107
 msgid ""
 "When you want to update your code, just run the command ``svn update`` from "
 "within the ``django_src`` directory."
-msgstr ""
+msgstr "Django のソースコードを更新する際には、 ``django_src`` ディレクトリで "
+"``svn update`` を実行してください。実行すると、Subversion が更新部分を自動的に"
+"ダウンロードします。"
