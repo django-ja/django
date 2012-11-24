@@ -1,0 +1,233 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 6a7dad4828ef42ca839ce168a694ef38
+#: ../../install.txt:3
+msgid "How to install Django"
+msgstr ""
+
+# 6d4abcf27d704e69a100951fcde83810
+#: ../../install.txt:5
+msgid "This document will get you up and running with Django."
+msgstr ""
+
+# 7dc6d108ce3e400c961e43cb220eed00
+#: ../../install.txt:8
+msgid "Install Python"
+msgstr ""
+
+# c652c5cdb22a45f5b0edc1312c9006e4
+#: ../../install.txt:10
+msgid "Being a Python Web framework, Django requires Python."
+msgstr ""
+
+# 58270ec78843417d8844ef6dc0ac0e25
+#: ../../install.txt:12
+msgid "It works with any Python version 2.3 and higher."
+msgstr ""
+
+# 30a4a00b88f8486abe29b8cec58dc476
+#: ../../install.txt:14
+msgid ""
+"Get Python at www.python.org. If you're running Linux or Mac OS X, you "
+"probably already have it installed."
+msgstr ""
+
+# 3de244d10796487c9ddc53ddf2da2f13
+#: ../../install.txt:18
+msgid "Install Apache and mod_python"
+msgstr ""
+
+# 30673d04e716440bb945210002467731
+#: ../../install.txt:20
+msgid ""
+"If you just want to experiment with Django, skip this step. Django comes "
+"with its own Web server for development purposes."
+msgstr ""
+
+# ba627d195a5a497e8204feeddb927c36
+#: ../../install.txt:23
+msgid ""
+"If you want to use Django on a production site, use Apache with "
+"`mod_python`_. mod_python is similar to mod_perl -- it embeds Python within "
+"Apache and loads Python code into memory when the server starts. Code stays "
+"in memory throughout the life of an Apache process, which leads to "
+"significant performance gains over other server arrangements. Make sure you "
+"have Apache installed, with the mod_python module activated. Django requires "
+"Apache 2.x and mod_python 3.x."
+msgstr ""
+
+# b8d103e9d83b4ba186942f92741c985d
+#: ../../install.txt:30
+msgid ""
+"See :doc:`How to use Django with mod_python <modpython>` for information on "
+"how to configure mod_python once you have it installed."
+msgstr ""
+
+# f3c97a44c6a64493986d46d6cba4f410
+#: ../../install.txt:33
+msgid ""
+"If you can't use mod_python for some reason, fear not: Django follows the "
+"WSGI_ spec, which allows it to run on a variety of server platforms. See the "
+"`server-arrangements wiki page`_ for specific installation instructions for "
+"each platform."
+msgstr ""
+
+# 30045637c8914fa4bdd2a9f104a4fa01
+#: ../../install.txt:44
+msgid "Get your database running"
+msgstr ""
+
+# a8758e82160a4df4bfe753a1ec99e528
+#: ../../install.txt:46
+msgid ""
+"If you plan to use Django's database API functionality, you'll need to make "
+"sure a database server is running. Django works with PostgreSQL_ "
+"(recommended), MySQL_ and SQLite_."
+msgstr ""
+
+# 27e2db7301554fef97b7bff16d85c0fe
+#: ../../install.txt:50
+msgid ""
+"Additionally, you'll need to make sure your Python database bindings are "
+"installed."
+msgstr ""
+
+# 3766c5bb5dfa4bdca1442fea5df48f0d
+#: ../../install.txt:53
+msgid ""
+"If you're using PostgreSQL, you'll need the psycopg_ package (version 1.1 -- "
+"not version 1.0 or version 2, which is still in beta). If you're on Windows, "
+"check out the unofficial `compiled Windows version`_."
+msgstr ""
+
+# ff2e646eb78940e8a531c9f6886a023c
+#: ../../install.txt:56
+msgid "If you're using MySQL, you'll need MySQLdb_."
+msgstr ""
+
+# 132bda7d01804b0292a5b6876136fdd2
+#: ../../install.txt:57
+msgid ""
+"If you're using SQLite, you'll need pysqlite_. Use version 2.0.3 or higher."
+msgstr ""
+
+# e66d9da1cacc46f1a30b33ba6a226927
+#: ../../install.txt:69
+msgid "Install the Django code"
+msgstr ""
+
+# 404947c8be534e359079845143cb0d0d
+#: ../../install.txt:71
+msgid ""
+"Installation instructions are slightly different depending on whether you're "
+"using the latest official version or the latest development version."
+msgstr ""
+
+# 0dec7b7e210b4f258435971e365ad8c1
+#: ../../install.txt:74
+msgid "It's easy either way."
+msgstr ""
+
+# 26f809c19f6a4d86a704c2de853aa327
+#: ../../install.txt:77
+msgid "Installing the official version"
+msgstr ""
+
+# 8d3acbcad4ae4eabadc77306bd7c8807
+#: ../../install.txt:79
+msgid "Download Django-0.95.tar.gz from our `download page`_."
+msgstr ""
+
+# 9fe016b473434542be31203eef94be82
+#: ../../install.txt:80
+msgid "``tar xzvf Django-0.95.tar.gz``"
+msgstr ""
+
+# 71ef6a12bba04f1fb2856aaeca69e895
+#: ../../install.txt:81
+msgid "``cd Django-0.95``"
+msgstr ""
+
+# 9f8e7d2ee99e4896b086d73d5e1a321e
+#: ../../install.txt:82
+msgid "``sudo python setup.py install``"
+msgstr ""
+
+# b9d4335b1c974666b33f654c3e61b377
+#: ../../install.txt:84
+msgid ""
+"Note that the last command will automatically download and install "
+"setuptools_ if you don't already have it installed. This requires a working "
+"Internet connection."
+msgstr ""
+
+# 8e1a9818806b43059b77e279cc7bf418
+#: ../../install.txt:88
+msgid ""
+"This will install Django in your Python installation's ``site-packages`` "
+"directory."
+msgstr ""
+
+# bef462fa07654eeeb6096bdf0326c9dd
+#: ../../install.txt:94
+msgid "Installing the development version"
+msgstr ""
+
+# 61bf54d98de942718fd039a5d6be6798
+#: ../../install.txt:96
+msgid "Make sure you have Subversion_ installed."
+msgstr ""
+
+# 14041539fc154098a0c96df6bc2f8b01
+#: ../../install.txt:97
+msgid "``svn co http://code.djangoproject.com/svn/django/trunk/ django_src``"
+msgstr ""
+
+# fca3fda010604d289467af43209d614a
+#: ../../install.txt:98
+msgid ""
+"Symlink ``django_src/django`` so that ``django`` is within your Python "
+"``site-packages`` directory:"
+msgstr ""
+
+# 9707f48d5cd944d9a0ce56c0183502bf
+#: ../../install.txt:101
+msgid ""
+"``ln -s `pwd`/django_src/django /usr/lib/python2.3/site-packages/django``"
+msgstr ""
+
+# 417aaaa5254b42398f719437bc51b12d
+#: ../../install.txt:103
+msgid ""
+"(In the above line, change ``python2.3`` to match your current Python "
+"version.)"
+msgstr ""
+
+# 1dfe1b31bf9340f08855e2d35a316829
+#: ../../install.txt:105
+msgid "You don't have to run ``python setup.py install``."
+msgstr ""
+
+# a62d41ab294e4d719ef80855d46c4f1f
+#: ../../install.txt:107
+msgid ""
+"When you want to update your code, just run the command ``svn update`` from "
+"within the ``django_src`` directory."
+msgstr ""

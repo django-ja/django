@@ -1,0 +1,139 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 362ee9ed8fad408886abccafbddbedae
+#: ../../csrf.txt:3
+msgid "Cross Site Request Forgery Protection"
+msgstr ""
+
+# 4aacc9c317564773aa206dabfb916618
+#: ../../csrf.txt:5
+msgid ""
+"The CsrfMiddleware class provides easy-to-use protection against `Cross Site "
+"Request Forgeries`_.  This type of attack occurs when a malicious web site "
+"creates a link or form button that is intended to perform some action on "
+"your web site, using the credentials of a logged-in user who is tricked into "
+"clicking on the link in their browser."
+msgstr ""
+
+# ca737d65475b45f785168a2888bd8e0e
+#: ../../csrf.txt:11
+msgid ""
+"The first defense against CSRF attacks is to ensure that GET requests are "
+"side-effect free.  POST requests can then be protected by adding this "
+"middleware into your list of installed middleware."
+msgstr ""
+
+# a18e03972c914b4a937f35cdcbc77ea1
+#: ../../csrf.txt:19
+msgid "How to use it"
+msgstr ""
+
+# 1ffd360135ec48c990be8a48f8aa0860
+#: ../../csrf.txt:20
+msgid ""
+"Add the middleware ``'django.contrib.csrf.middleware.CsrfMiddleware'`` to "
+"your list of middleware classes, ``MIDDLEWARE_CLASSES``. It needs to process "
+"the response after the SessionMiddleware, so must come before it in the "
+"list. It also must process the response before things like compression "
+"happen to the response, so it must come after GZipMiddleware in the list."
+msgstr ""
+
+# 9b3bd9e7e1a34d47b77e1a48badd2519
+#: ../../csrf.txt:27
+msgid "How it works"
+msgstr ""
+
+# e765bc5ee31c4767a87e6a766f73e27c
+#: ../../csrf.txt:28
+msgid "CsrfMiddleware does two things:"
+msgstr ""
+
+# 029b9c86ef1743ba8f73eeaff43a8b4c
+#: ../../csrf.txt:30
+msgid ""
+"It modifies outgoing requests by adding a hidden form field to all 'POST' "
+"forms, with the name 'csrfmiddlewaretoken' and a value which is a hash of "
+"the session ID plus a secret. If there is no session ID set, this "
+"modification of the response isn't done, so there is very little performance "
+"penalty for those requests that don't have a session."
+msgstr ""
+
+# 1ccd3a38ab9743f6b38d289653d98595
+#: ../../csrf.txt:36
+msgid ""
+"On all incoming POST requests that have the session cookie set, it checks "
+"that the 'csrfmiddlewaretoken' is present and correct. If it isn't, the user "
+"will get a 403 error."
+msgstr ""
+
+# 45c40c4c4332424b8fe4603c573c2e66
+#: ../../csrf.txt:40
+msgid ""
+"This ensures that only forms that have originated from your web site can be "
+"used to POST data back."
+msgstr ""
+
+# 88ab8877c29f49ba925060ff7de4fcee
+#: ../../csrf.txt:43
+msgid ""
+"It deliberately only targets HTTP POST requests (and the corresponding POST "
+"forms). GET requests ought never to have side effects (if you are using HTTP "
+"GET and POST correctly), and so a CSRF attack with a GET request will always "
+"be harmless."
+msgstr ""
+
+# 7777a65c77484ea2b196e1167b63c5ac
+#: ../../csrf.txt:48
+msgid ""
+"POST requests that are not accompanied by a session cookie are not "
+"protected, but they do not need to be protected, since the 'attacking' web "
+"site could make these kind of requests anyway."
+msgstr ""
+
+# 202de65b8c064e49bdb9b31a7c5634a3
+#: ../../csrf.txt:52
+msgid ""
+"The Content-Type is checked before modifying the response, and only pages "
+"that are served as 'text/html' or 'application/xml+xhtml' are modified."
+msgstr ""
+
+# 905d032850c64499973a1b6b5ab57ce6
+#: ../../csrf.txt:57
+msgid "Limitations"
+msgstr ""
+
+# 9ba06d85ab184c56bc6f8a82b594dce7
+#: ../../csrf.txt:58
+msgid ""
+"CsrfMiddleware requires Django's session framework to work. If you have a "
+"custom authentication system that manually sets cookies and the like, it "
+"won't help you."
+msgstr ""
+
+# b8448bf056fb4a1aa1bc1e83aa084da4
+#: ../../csrf.txt:62
+msgid ""
+"If your app creates HTML pages and forms in some unusual way, (e.g. it sends "
+"fragments of HTML in javascript document.write statements) you might bypass "
+"the filter that adds the hidden field to the form, in which case form "
+"submission will always fail.  It may still be possible to use the "
+"middleware, provided you can find some way to get the CSRF token and ensure "
+"that is included when your form is submitted."
+msgstr ""

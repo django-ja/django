@@ -1,0 +1,1229 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 5e8bede4a32c4f98a82075072ae4cb94
+#: ../../i18n.txt:3
+msgid "Internationalization"
+msgstr ""
+
+# 109470cb52ba4e6b924a5dcddc1b0613
+#: ../../i18n.txt:5
+msgid ""
+"Django has full support for internationalization of text in code and "
+"templates. Here's how it works."
+msgstr ""
+
+# fb95a1266d0644f0946ba826e4f59922
+#: ../../i18n.txt:9
+msgid "Overview"
+msgstr ""
+
+# 370259582cbc43f0990c926151f3de37
+#: ../../i18n.txt:11
+msgid ""
+"The goal of internationalization is to allow a single Web application to "
+"offer its content and functionality in multiple languages."
+msgstr ""
+
+# 3133bed0658248599fd39ca6ce6d3d20
+#: ../../i18n.txt:14
+msgid ""
+"You, the Django developer, can accomplish this goal by adding a minimal "
+"amount of hooks to your Python code and templates. These hooks are called "
+"**translation strings**. They tell Django: \"This text should be translated "
+"into the end user's language, if a translation for this text is available in "
+"that language.\""
+msgstr ""
+
+# 0d5c296cee914cfaaf1626d6308602b3
+#: ../../i18n.txt:20
+msgid ""
+"Django takes care of using these hooks to translate Web apps, on the fly, "
+"according to users' language preferences."
+msgstr ""
+
+# 7c6e16317633442795d5d84eaa0077db
+#: ../../i18n.txt:23
+msgid "Essentially, Django does two things:"
+msgstr ""
+
+# dfa61bf7c3994bcda854fda16f5bb57d
+#: ../../i18n.txt:25
+msgid ""
+"It lets developers and template authors specify which parts of their apps "
+"should be translatable."
+msgstr ""
+
+# 2c1894c2ffca4db0bf25d2db8d281580
+#: ../../i18n.txt:27
+msgid ""
+"It uses these hooks to translate Web apps for particular users according to "
+"their language preferences."
+msgstr ""
+
+# 0f16f3fa640d47379e426eeb848f5d0a
+#: ../../i18n.txt:31
+msgid "How to internationalize your app: in three steps"
+msgstr ""
+
+# d6a0fd86360c461cbbffb658c1bcc62d
+#: ../../i18n.txt:33
+msgid "Embed translation strings in your Python code and templates."
+msgstr ""
+
+# 9fec3104b2ee432486f654089ba8a10d
+#: ../../i18n.txt:34
+msgid ""
+"Get translations for those strings, in whichever languages you want to "
+"support."
+msgstr ""
+
+# 5a972912eb744d7fb39813beca5ab30d
+#: ../../i18n.txt:36
+msgid "Activate the locale middleware in your Django settings."
+msgstr ""
+
+# c023772484d0490ea27f699696c872a9
+#: ../../i18n.txt:40
+msgid ""
+"Django's translation machinery uses the standard ``gettext`` module that "
+"comes with Python."
+msgstr ""
+
+# f26dc8d71cb8465293564a8c38ac872d
+#: ../../i18n.txt:44
+msgid "If you don't need internationalization"
+msgstr ""
+
+# 14a51d62673942529940ab30b1f05db0
+#: ../../i18n.txt:46
+msgid ""
+"Django's internationalization hooks are on by default, and that means "
+"there's a bit of i18n-related overhead in certain places of the framework. "
+"If you don't use internationalization, you should take the two seconds to "
+"set ``USE_I18N = False`` in your settings file. If ``USE_I18N`` is set to "
+"``False``, then Django will make some optimizations so as not to load the "
+"internationalization machinery."
+msgstr ""
+
+# 0e5c4e5d2cfd4cf4bfe897c53365fdb3
+#: ../../i18n.txt:53
+msgid "See the :doc:`documentation for USE_I18N <settings>`."
+msgstr ""
+
+# e307d6bf8c0e4eefb1dcc5f15a10b35b
+#: ../../i18n.txt:56
+msgid "How to specify translation strings"
+msgstr ""
+
+# 1cac3494aae9447782110a4cd2f3d046
+#: ../../i18n.txt:58
+msgid ""
+"Translation strings specify \"This text should be translated.\" These "
+"strings can appear in your Python code and templates. It's your "
+"responsibility to mark translatable strings; the system can only translate "
+"strings it knows about."
+msgstr ""
+
+# a75fae6278f345609edfbbd965c9e23e
+#: ../../i18n.txt:63
+msgid "In Python code"
+msgstr ""
+
+# 59c4be6b51c54cfcbf532a6e0ef8f5c6
+#: ../../i18n.txt:66
+msgid "Standard translation"
+msgstr ""
+
+# 97f695ed45954f758f4985e9bf155cb9
+#: ../../i18n.txt:68
+msgid ""
+"Specify a translation string by using the function ``_()``. (Yes, the name "
+"of the function is the \"underscore\" character.) This function is available "
+"globally in any Python module; you don't have to import it."
+msgstr ""
+
+# 5205500ac88a4c9b95a7112417c6bbc0
+#: ../../i18n.txt:72
+msgid ""
+"In this example, the text ``\"Welcome to my site.\"`` is marked as a "
+"translation string::"
+msgstr ""
+
+# 2222380982fa4dc39336f04cdb37b5c5
+#: ../../i18n.txt:79
+msgid ""
+"The function ``django.utils.translation.gettext()`` is identical to ``_()``. "
+"This example is identical to the previous one::"
+msgstr ""
+
+# 3d0325f5e5e94a6bba71cae689205c89
+#: ../../i18n.txt:87
+msgid ""
+"Translation works on computed values. This example is identical to the "
+"previous two::"
+msgstr ""
+
+# f8dfc67c69874a4eb6b16e7ac25a3608
+#: ../../i18n.txt:95
+msgid "Translation works on variables. Again, here's an identical example::"
+msgstr ""
+
+# 0d39cc8f2eb54f85976d9a228cf8e9b4
+#: ../../i18n.txt:102
+msgid ""
+"(The caveat with using variables or computed values, as in the previous two "
+"examples, is that Django's translation-string-detecting utility, ``make-"
+"messages.py``, won't be able to find these strings. More on ``make-"
+"messages`` later.)"
+msgstr ""
+
+# 1b8c1f371dc749298037dea306683949
+#: ../../i18n.txt:107
+msgid ""
+"The strings you pass to ``_()`` or ``gettext()`` can take placeholders, "
+"specified with Python's standard named-string interpolation syntax. Example::"
+msgstr ""
+
+# 83d332ad50544610832d5073e9ebec6e
+#: ../../i18n.txt:114
+msgid ""
+"This technique lets language-specific translations reorder the placeholder "
+"text. For example, an English translation may be ``\"Adrian is my name.\"``, "
+"while a Spanish translation may be ``\"Me llamo Adrian.\"`` -- with the "
+"placeholder (the name) placed after the translated text instead of before it."
+msgstr ""
+
+# 03a618b7c6454ca287a79a9fc916b15a
+#: ../../i18n.txt:119
+msgid ""
+"For this reason, you should use named-string interpolation (e.g., ``%(name)"
+"s``) instead of positional interpolation (e.g., ``%s`` or ``%d``). If you "
+"used positional interpolation, translations wouldn't be able to reorder "
+"placeholder text."
+msgstr ""
+
+# 757a932fe8da4e15a5eb226547094428
+#: ../../i18n.txt:125
+msgid "Marking strings as no-op"
+msgstr ""
+
+# 727d9a0b54d645e3bb445fa3ac4a9dc2
+#: ../../i18n.txt:127
+msgid ""
+"Use the function ``django.utils.translation.gettext_noop()`` to mark a "
+"string as a translation string without translating it. The string is later "
+"translated from a variable."
+msgstr ""
+
+# 3f8f0b9813ce4df989cde1e3ed6a6411
+#: ../../i18n.txt:131
+msgid ""
+"Use this if you have constant strings that should be stored in the source "
+"language because they are exchanged over systems or users -- such as strings "
+"in a database -- but should be translated at the last possible point in "
+"time, such as when the string is presented to the user."
+msgstr ""
+
+# e427e13cf45e4a0c9a17de80011e71e4
+#: ../../i18n.txt:137
+msgid "Lazy translation"
+msgstr ""
+
+# 2817c7ad52e8407495bb671c32e22e11
+#: ../../i18n.txt:139
+msgid ""
+"Use the function ``django.utils.translation.gettext_lazy()`` to translate "
+"strings lazily -- when the value is accessed rather than when the "
+"``gettext_lazy()`` function is called."
+msgstr ""
+
+# 9a0b6e9a66be40c0b92ac3db8828e196
+#: ../../i18n.txt:143
+msgid "For example, to translate a model's ``help_text``, do the following::"
+msgstr ""
+
+# f152db7612f54fe09d8acd398d5f9b26
+#: ../../i18n.txt:150
+msgid ""
+"In this example, ``gettext_lazy()`` stores a lazy reference to the string -- "
+"not the actual translation. The translation itself will be done when the "
+"string is used in a string context, such as template rendering on the Django "
+"admin site."
+msgstr ""
+
+# a768d7c3e23f48608cc9846d868bafd7
+#: ../../i18n.txt:154
+msgid ""
+"If you don't like the verbose name ``gettext_lazy``, you can just alias it "
+"as ``_`` (underscore), like so::"
+msgstr ""
+
+# 4e07d2263cce40a3aedf8f9ef7529078
+#: ../../i18n.txt:162
+msgid ""
+"Always use lazy translations in :doc:`Django models <model-api>`. And it's a "
+"good idea to add translations for the field names and table names, too. This "
+"means writing explicit ``verbose_name`` and ``verbose_name_plural`` options "
+"in the ``Meta`` class, though::"
+msgstr ""
+
+# e41532cbdab944708a9003599a04e225
+#: ../../i18n.txt:176
+msgid "Pluralization"
+msgstr ""
+
+# 81300e2cdce14f6f9262d88b98b234ca
+#: ../../i18n.txt:178
+msgid ""
+"Use the function ``django.utils.translation.ngettext()`` to specify "
+"pluralized messages. Example::"
+msgstr ""
+
+# 6318c1bd023441a2a1229ef56357691a
+#: ../../i18n.txt:188
+msgid ""
+"``ngettext`` takes three arguments: the singular translation string, the "
+"plural translation string and the number of objects (which is passed to the "
+"translation languages as the ``count`` variable)."
+msgstr ""
+
+# 3efecadbdc5940b0a01b36e3bd2d8715
+#: ../../i18n.txt:193
+msgid "In template code"
+msgstr ""
+
+# 1a2c428db43f4893ae9b390183cc96ff
+#: ../../i18n.txt:195
+msgid ""
+"Using translations in :doc:`Django templates <templates_python>` uses two "
+"template tags and a slightly different syntax than in Python code. To give "
+"your template access to these tags, put ``{% load i18n %}`` toward the top "
+"of your template."
+msgstr ""
+
+# 32d34976c840455a94e1b2161191ff98
+#: ../../i18n.txt:199
+msgid ""
+"The ``{% trans %}`` template tag translates a constant string or a variable "
+"content::"
+msgstr ""
+
+# a51a67700b844c92a0489a44006747c7
+#: ../../i18n.txt:204
+msgid ""
+"If you only want to mark a value for translation, but translate it later "
+"from a variable, use the ``noop`` option::"
+msgstr ""
+
+# 4e69a0c1c1f9419f88dfcdc159ff4f13
+#: ../../i18n.txt:209
+msgid ""
+"It's not possible to use template variables in ``{% trans %}`` -- only "
+"constant strings, in single or double quotes, are allowed. If your "
+"translations require variables (placeholders), use ``{% blocktrans %}``. "
+"Example::"
+msgstr ""
+
+# 844dc12afd1f4b0199d2d7aa333bf94c
+#: ../../i18n.txt:215
+msgid ""
+"To translate a template expression -- say, using template filters -- you "
+"need to bind the expression to a local variable for use within the "
+"translation block::"
+msgstr ""
+
+# 428882f0a17443d5a96d3a89d8c9939a
+#: ../../i18n.txt:223
+msgid ""
+"If you need to bind more than one expression inside a ``blocktrans`` tag, "
+"separate the pieces with ``and``::"
+msgstr ""
+
+# cbe71e545e8849cea4862d6420aa3d23
+#: ../../i18n.txt:230
+msgid ""
+"To pluralize, specify both the singular and plural forms with the ``{% "
+"plural %}`` tag, which appears within ``{% blocktrans %}`` and ``{% "
+"endblocktrans %}``. Example::"
+msgstr ""
+
+# 6493c5dc95634c02a2870b2d843b1bae
+#: ../../i18n.txt:240
+msgid ""
+"Internally, all block and inline translations use the appropriate "
+"``gettext`` / ``ngettext`` call."
+msgstr ""
+
+# fb1be31956de4dc085fead56f5fdbd0f
+#: ../../i18n.txt:243
+msgid ""
+"Each ``RequestContext`` has access to two translation-specific variables:"
+msgstr ""
+
+# 8b30f37aa2624bb6b2c6aa6c01710f9c
+#: ../../i18n.txt:245
+msgid ""
+"``LANGUAGES`` is a list of tuples in which the first element is the language "
+"code and the second is the language name (in that language)."
+msgstr ""
+
+# 84d8d90011eb4c49af08d70ff8d4266c
+#: ../../i18n.txt:247
+msgid ""
+"``LANGUAGE_CODE`` is the current user's preferred language, as a string. "
+"Example: ``en-us``. (See \"How language preference is discovered\", below.)"
+msgstr ""
+
+# 8bcb62f74e4245649c7038c66ffa270d
+#: ../../i18n.txt:249
+msgid ""
+"``LANGUAGE_BIDI`` is the current language's direction. If True, it's a right-"
+"to-left language, e.g: Hebrew, Arabic. If False it's a left-to-right "
+"language, e.g: English, French, German etc."
+msgstr ""
+
+# cd1c60f811a348d9978865680344467b
+#: ../../i18n.txt:254
+msgid ""
+"If you don't use the ``RequestContext`` extension, you can get those values "
+"with three tags::"
+msgstr ""
+
+# 3fd2ad447bd34429b497abaa7e47c4e3
+#: ../../i18n.txt:261
+msgid "These tags also require a ``{% load i18n %}``."
+msgstr ""
+
+# 8c13783d991845b6996f16f23c1d98d7
+#: ../../i18n.txt:263
+msgid ""
+"Translation hooks are also available within any template block tag that "
+"accepts constant strings. In those cases, just use ``_()`` syntax to specify "
+"a translation string. Example::"
+msgstr ""
+
+# d97815eb077f4ee3a131b2d9509ec1d9
+#: ../../i18n.txt:269
+msgid ""
+"In this case, both the tag and the filter will see the already-translated "
+"string, so they don't need to be aware of translations."
+msgstr ""
+
+# 5ecf7c6ac7a4431f9846111d1df189ab
+#: ../../i18n.txt:273
+msgid "How to create language files"
+msgstr ""
+
+# 53e520a132fa483bb7eb92f1ebb393c4
+#: ../../i18n.txt:275
+msgid ""
+"Once you've tagged your strings for later translation, you need to write (or "
+"obtain) the language translations themselves. Here's how that works."
+msgstr ""
+
+# 278c29f3e3e04106afd6fd5f0ba44117
+#: ../../i18n.txt:279
+msgid "Message files"
+msgstr ""
+
+# 0c472ae11fce4dfd8406e9730b521283
+#: ../../i18n.txt:281
+msgid ""
+"The first step is to create a **message file** for a new language. A message "
+"file is a plain-text file, representing a single language, that contains all "
+"available translation strings and how they should be represented in the "
+"given language. Message files have a ``.po`` file extension."
+msgstr ""
+
+# 807b7aab33874318b0217045b6a4b76f
+#: ../../i18n.txt:286
+msgid ""
+"Django comes with a tool, ``bin/make-messages.py``, that automates the "
+"creation and upkeep of these files."
+msgstr ""
+
+# 20b82e9a3be54ca6b1c1a7561b5194ca
+#: ../../i18n.txt:289
+msgid "To create or update a message file, run this command::"
+msgstr ""
+
+# a707654c3be54444b537747cbeffc18c
+#: ../../i18n.txt:293
+msgid ""
+"...where ``de`` is the language code for the message file you want to "
+"create. The language code, in this case, is in locale format. For example, "
+"it's ``pt_BR`` for Brazilian and ``de_AT`` for Austrian German."
+msgstr ""
+
+# acdf247a9f0c4dcda485c1b8a826ddde
+#: ../../i18n.txt:297
+msgid "The script should be run from one of three places:"
+msgstr ""
+
+# abf7cef2eb724a658da4ebdb24575f37
+#: ../../i18n.txt:299
+msgid ""
+"The root ``django`` directory (not a Subversion checkout, but the one that "
+"is linked-to via ``$PYTHONPATH`` or is located somewhere on that path)."
+msgstr ""
+
+# db0c7e33707d420488c637587fc06c03
+#: ../../i18n.txt:302
+msgid "The root directory of your Django project."
+msgstr ""
+
+# 8cf79d9a927f4c739f68c09a65b87c64
+#: ../../i18n.txt:303
+msgid "The root directory of your Django app."
+msgstr ""
+
+# c0eaad918c884571bbd0b21e05bbfaf0
+#: ../../i18n.txt:305
+msgid ""
+"The script runs over the entire Django source tree and pulls out all strings "
+"marked for translation. It creates (or updates) a message file in the "
+"directory ``conf/locale``. In the ``de`` example, the file will be ``conf/"
+"locale/de/LC_MESSAGES/django.po``."
+msgstr ""
+
+# 0b31fda108f14c3f80c85f376c73641e
+#: ../../i18n.txt:310
+msgid ""
+"If run over your project source tree or your application source tree, it "
+"will do the same, but the location of the locale directory is ``locale/LANG/"
+"LC_MESSAGES`` (note the missing ``conf`` prefix)."
+msgstr ""
+
+# c32b6b1accaa4694a34349d967602a8f
+#: ../../i18n.txt:316
+msgid ""
+"If you don't have the ``gettext`` utilities installed, ``make-messages.py`` "
+"will create empty files. If that's the case, either install the ``gettext`` "
+"utilities or just copy the English message file (``conf/locale/en/"
+"LC_MESSAGES/django.po``) and use it as a starting point; it's just an empty "
+"translation file."
+msgstr ""
+
+# a18a6a813aaf4be7a05cba70fd8f201d
+#: ../../i18n.txt:322
+msgid ""
+"The format of ``.po`` files is straightforward. Each ``.po`` file contains a "
+"small bit of metadata, such as the translation maintainer's contact "
+"information, but the bulk of the file is a list of **messages** -- simple "
+"mappings between translation strings and the actual translated text for the "
+"particular language."
+msgstr ""
+
+# b4bc3d5a8104496babda3f988962d34e
+#: ../../i18n.txt:328
+msgid ""
+"For example, if your Django app contained a translation string for the text "
+"``\"Welcome to my site.\"``, like so::"
+msgstr ""
+
+# 0a05d6de405a4796b799373e8be6fecd
+#: ../../i18n.txt:333
+msgid ""
+"...then ``make-messages.py`` will have created a ``.po`` file containing the "
+"following snippet -- a message::"
+msgstr ""
+
+# 33de613b81114ec8813280c5856e672b
+#: ../../i18n.txt:340
+msgid "A quick explanation:"
+msgstr ""
+
+# 38c4f0bb569248f79887120387bcdf48
+#: ../../i18n.txt:342
+msgid ""
+"``msgid`` is the translation string, which appears in the source. Don't "
+"change it."
+msgstr ""
+
+# 4f36bf517b3844b282887783bb0f1f11
+#: ../../i18n.txt:344
+msgid ""
+"``msgstr`` is where you put the language-specific translation. It starts out "
+"empty, so it's your responsibility to change it. Make sure you keep the "
+"quotes around your translation."
+msgstr ""
+
+# 7dcd6e0de40640ccbb707e57e218d20c
+#: ../../i18n.txt:347
+msgid ""
+"As a convenience, each message includes the filename and line number from "
+"which the translation string was gleaned."
+msgstr ""
+
+# 979f98bf0ef743c7bd7069545ed44ce6
+#: ../../i18n.txt:350
+msgid ""
+"Long messages are a special case. There, the first string directly after the "
+"``msgstr`` (or ``msgid``) is an empty string. Then the content itself will "
+"be written over the next few lines as one string per line. Those strings are "
+"directly concatenated. Don't forget trailing spaces within the strings; "
+"otherwise, they'll be tacked together without whitespace!"
+msgstr ""
+
+# dc0817f97a4a49c5b756d62c25e667e4
+#: ../../i18n.txt:358
+msgid ""
+"When creating a ``.po`` file with your favorite text editor, first edit the "
+"charset line (search for ``\"CHARSET\"``) and set it to the charset you'll "
+"be using to edit the content. Generally, utf-8 should work for most "
+"languages, but ``gettext`` should handle any charset you throw at it."
+msgstr ""
+
+# 20c33e0d05f446d09af012df132a7dd3
+#: ../../i18n.txt:363
+msgid ""
+"To reexamine all source code and templates for new translation strings and "
+"update all message files for **all** languages, run this::"
+msgstr ""
+
+# f2ddd4a8026d4e6fbb9c3d6b7d60bb10
+#: ../../i18n.txt:369
+msgid "Compiling message files"
+msgstr ""
+
+# ad41cbde901d4536b1cefa462173bb6a
+#: ../../i18n.txt:371
+msgid ""
+"After you create your message file -- and each time you make changes to it "
+"-- you'll need to compile it into a more efficient form, for use by "
+"``gettext``. Do this with the ``bin/compile-messages.py`` utility."
+msgstr ""
+
+# 7a8674b2e2504dafa746f080b256e4dc
+#: ../../i18n.txt:375
+msgid ""
+"This tool runs over all available ``.po`` files and creates ``.mo`` files, "
+"which are binary files optimized for use by ``gettext``. In the same "
+"directory from which you ran ``make-messages.py``, run ``compile-messages."
+"py`` like this::"
+msgstr ""
+
+# b7c9f14d93074a1bac32a9d06ac0307d
+#: ../../i18n.txt:382
+msgid "That's it. Your translations are ready for use."
+msgstr ""
+
+# af83777605114922a1896733f77b7cfb
+#: ../../i18n.txt:386
+msgid ""
+"If you've created a translation in a language Django doesn't yet support, "
+"please let us know! See :doc:`Submitting and maintaining translations "
+"<contributing>` for the steps to take."
+msgstr ""
+
+# dea281824a3f4a10b1272dfc1ead10ed
+#: ../../i18n.txt:391
+msgid "How Django discovers language preference"
+msgstr ""
+
+# b6c6628412234858983d9b9d1422281f
+#: ../../i18n.txt:393
+msgid ""
+"Once you've prepared your translations -- or, if you just want to use the "
+"translations that come with Django -- you'll just need to activate "
+"translation for your app."
+msgstr ""
+
+# 6934f5e79d124115b1e379843bd148cf
+#: ../../i18n.txt:397
+msgid ""
+"Behind the scenes, Django has a very flexible model of deciding which "
+"language should be used -- installation-wide, for a particular user, or both."
+msgstr ""
+
+# e6062161d7734b528807199d2c0ad63b
+#: ../../i18n.txt:400
+msgid ""
+"To set an installation-wide language preference, set ``LANGUAGE_CODE`` in "
+"your :doc:`settings file <settings>`. Django uses this language as the "
+"default translation -- the final attempt if no other translator finds a "
+"translation."
+msgstr ""
+
+# 5ab0ebf51bbe4d08bcd66a7c98336219
+#: ../../i18n.txt:404
+msgid ""
+"If all you want to do is run Django with your native language, and a "
+"language file is available for your language, all you need to do is set "
+"``LANGUAGE_CODE``."
+msgstr ""
+
+# 26715c9cd66b4eb9a5277a4f789fb7d0
+#: ../../i18n.txt:408
+msgid ""
+"If you want to let each individual user specify which language he or she "
+"prefers, use ``LocaleMiddleware``. ``LocaleMiddleware`` enables language "
+"selection based on data from the request. It customizes content for each "
+"user."
+msgstr ""
+
+# c7439c36792c479798e9b332a64865d2
+#: ../../i18n.txt:412
+msgid ""
+"To use ``LocaleMiddleware``, add ``'django.middleware.locale."
+"LocaleMiddleware'`` to your ``MIDDLEWARE_CLASSES`` setting. Because "
+"middleware order matters, you should follow these guidelines:"
+msgstr ""
+
+# f8d9f442ae7f4adaa1d67715c1e214eb
+#: ../../i18n.txt:416
+msgid "Make sure it's one of the first middlewares installed."
+msgstr ""
+
+# 0dad6a36a55149a9bce55a0c9aad7a2a
+#: ../../i18n.txt:417
+msgid ""
+"It should come after ``SessionMiddleware``, because ``LocaleMiddleware`` "
+"makes use of session data."
+msgstr ""
+
+# c35fae8adade4e6dad5c05b06e75fa4b
+#: ../../i18n.txt:419
+msgid "If you use ``CacheMiddleware``, put ``LocaleMiddleware`` after it."
+msgstr ""
+
+# 0b797e1d1dab4539b92cea3e0108f445
+#: ../../i18n.txt:421
+msgid "For example, your ``MIDDLEWARE_CLASSES`` might look like this::"
+msgstr ""
+
+# 92517e84a4e443beaa3b34ff0ed2cdd5
+#: ../../i18n.txt:429
+msgid ""
+"(For more on middleware, see the :doc:`middleware documentation "
+"<middleware>`.)"
+msgstr ""
+
+# 4a084837c8114bcb8e2bf98bf958c5aa
+#: ../../i18n.txt:431
+msgid ""
+"``LocaleMiddleware`` tries to determine the user's language preference by "
+"following this algorithm:"
+msgstr ""
+
+# e2856be98dd44a1e835357972b31446c
+#: ../../i18n.txt:434
+msgid ""
+"First, it looks for a ``django_language`` key in the the current user's :doc:"
+"`session <sessions>`."
+msgstr ""
+
+# 6a69000998e04cf9871c17f46be0612b
+#: ../../i18n.txt:436
+msgid "Failing that, it looks for a cookie called ``django_language``."
+msgstr ""
+
+# c464e76ba0564eff918a68c4c63720d8
+#: ../../i18n.txt:437
+msgid ""
+"Failing that, it looks at the ``Accept-Language`` HTTP header. This header "
+"is sent by your browser and tells the server which language(s) you prefer, "
+"in order by priority. Django tries each language in the header until it "
+"finds one with available translations."
+msgstr ""
+
+# 262660f217584a7dafccc94f90699451
+#: ../../i18n.txt:441
+msgid "Failing that, it uses the global ``LANGUAGE_CODE`` setting."
+msgstr ""
+
+# ebff4f1edabd4d8d88028308d2a24147
+#: ../../i18n.txt:443
+msgid "Notes:"
+msgstr ""
+
+# 195b150a84714e808d8283cfb5f83f5d
+#: ../../i18n.txt:445
+msgid ""
+"In each of these places, the language preference is expected to be in the "
+"standard language format, as a string. For example, Brazilian is ``pt-br``."
+msgstr ""
+
+# 611a1f2558af4a4383369875e3d97ac6
+#: ../../i18n.txt:448
+msgid ""
+"If a base language is available but the sublanguage specified is not, Django "
+"uses the base language. For example, if a user specifies ``de-at`` (Austrian "
+"German) but Django only has ``de`` available, Django uses ``de``."
+msgstr ""
+
+# 94f364ae84784f3ebdd0c86a38fdfa23
+#: ../../i18n.txt:452
+msgid ""
+"Only languages listed in the :doc:`LANGUAGES setting <settings>` can be "
+"selected. If you want to restrict the language selection to a subset of "
+"provided languages (because your application doesn't provide all those "
+"languages), set ``LANGUAGES`` to a list of languages. For example::"
+msgstr ""
+
+# a0d8449b9abb489c96cb5fb661ecd19a
+#: ../../i18n.txt:462
+msgid ""
+"This example restricts languages that are available for automatic selection "
+"to German and English (and any sublanguage, like de-ch or en-us)."
+msgstr ""
+
+# 951a15f83e594ba38021a8b579830d79
+#: ../../i18n.txt:466
+msgid ""
+"If you define a custom ``LANGUAGES`` setting, as explained in the previous "
+"bullet, it's OK to mark the languages as translation strings -- but use a "
+"\"dummy\" ``gettext()`` function, not the one in ``django.utils."
+"translation``. You should *never* import ``django.utils.translation`` from "
+"within your settings file, because that module in itself depends on the "
+"settings, and that would cause a circular import."
+msgstr ""
+
+# 9911dbb33daa407fbd6de4d5b42c5a07
+#: ../../i18n.txt:474
+msgid ""
+"The solution is to use a \"dummy\" ``gettext()`` function. Here's a sample "
+"settings file::"
+msgstr ""
+
+# 005a619134584644bf451ba19533631d
+#: ../../i18n.txt:484
+msgid ""
+"With this arrangement, ``make-messages.py`` will still find and mark these "
+"strings for translation, but the translation won't happen at runtime -- so "
+"you'll have to remember to wrap the languages in the *real* ``gettext()`` in "
+"any code that uses ``LANGUAGES`` at runtime."
+msgstr ""
+
+# 904033729df04ec291b2e7d266a1b579
+#: ../../i18n.txt:489
+msgid ""
+"The ``LocaleMiddleware`` can only select languages for which there is a "
+"Django-provided base translation. If you want to provide translations for "
+"your application that aren't already in the set of translations in Django's "
+"source tree, you'll want to provide at least basic translations for that "
+"language. For example, Django uses technical message IDs to translate date "
+"formats and time formats -- so you will need at least those translations for "
+"the system to work correctly."
+msgstr ""
+
+# 2990135ed6724fc5ba87d39595125d1f
+#: ../../i18n.txt:497
+msgid ""
+"A good starting point is to copy the English ``.po`` file and to translate "
+"at least the technical messages -- maybe the validator messages, too."
+msgstr ""
+
+# 2ffb4d4eb0bd46f383cfefed6c81eb75
+#: ../../i18n.txt:501
+msgid ""
+"Technical message IDs are easily recognized; they're all upper case. You "
+"don't translate the message ID as with other messages, you provide the "
+"correct local variant on the provided English value. For example, with "
+"``DATETIME_FORMAT`` (or ``DATE_FORMAT`` or ``TIME_FORMAT``), this would be "
+"the format string that you want to use in your language. The format is "
+"identical to the format strings used by the ``now`` template tag."
+msgstr ""
+
+# 4fb645022ab044b7919ef8f81d03bd37
+#: ../../i18n.txt:508
+msgid ""
+"Once ``LocaleMiddleware`` determines the user's preference, it makes this "
+"preference available as ``request.LANGUAGE_CODE`` for each :doc:`request "
+"object <request_response>`. Feel free to read this value in your view code. "
+"Here's a simple example::"
+msgstr ""
+
+# bc608bf71301420e9e47aad0d1cb2fb0
+#: ../../i18n.txt:518
+msgid ""
+"Note that, with static (middleware-less) translation, the language is in "
+"``settings.LANGUAGE_CODE``, while with dynamic (middleware) translation, "
+"it's in ``request.LANGUAGE_CODE``."
+msgstr ""
+
+# ca822299f62542cb920b675d0b27e9f6
+#: ../../i18n.txt:523
+msgid "The ``set_language`` redirect view"
+msgstr ""
+
+# d9f0302f616e4aa49bb36726b91887bd
+#: ../../i18n.txt:525
+msgid ""
+"As a convenience, Django comes with a view, ``django.views.i18n."
+"set_language``, that sets a user's language preference and redirects back to "
+"the previous page."
+msgstr ""
+
+# 2a28eecb13aa45cab581640664f19179
+#: ../../i18n.txt:528
+msgid "Activate this view by adding the following line to your URLconf::"
+msgstr ""
+
+# 2f30d9ec01e4462fbdd7db7d6ac76c76
+#: ../../i18n.txt:532
+msgid ""
+"(Note that this example makes the view available at ``/i18n/setlang/``.)"
+msgstr ""
+
+# 4106a59b2be54dd78b243060a5068ce8
+#: ../../i18n.txt:534
+msgid ""
+"The view expects to be called via the ``GET`` method, with a ``language`` "
+"parameter set in the query string. If session support is enabled, the view "
+"saves the language choice in the user's session. Otherwise, it saves the "
+"language choice in a ``django_language`` cookie."
+msgstr ""
+
+# ef9dd3c149444487bd3aaeb33bc93030
+#: ../../i18n.txt:539
+msgid ""
+"After setting the language choice, Django redirects the user, following this "
+"algorithm:"
+msgstr ""
+
+# 6177ced85d09460d963d6ed95114613d
+#: ../../i18n.txt:542
+msgid "Django looks for a ``next`` parameter in the query string."
+msgstr ""
+
+# 6a38685baae9499493bf3428a6277215
+#: ../../i18n.txt:543
+msgid ""
+"If that doesn't exist, or is empty, Django tries the URL in the ``Referer`` "
+"header."
+msgstr ""
+
+# 489e78bee01046d7be3fba87685ac1fd
+#: ../../i18n.txt:545
+msgid ""
+"If that's empty -- say, if a user's browser suppresses that header -- then "
+"the user will be redirected to ``/`` (the site root) as a fallback."
+msgstr ""
+
+# b0dbb0bd44c64106a00f4b0e9236c6fd
+#: ../../i18n.txt:548
+msgid "Here's example HTML template code::"
+msgstr ""
+
+# 52e68aab07d5432380589917a51929c4
+#: ../../i18n.txt:561
+msgid "Using translations in your own projects"
+msgstr ""
+
+# 6a83c6ad66a1428d8f10db8ebcfd6e27
+#: ../../i18n.txt:563
+msgid "Django looks for translations by following this algorithm:"
+msgstr ""
+
+# d3b74dfaf11b4aadb3adedc6c8d1712d
+#: ../../i18n.txt:565
+msgid ""
+"First, it looks for a ``locale`` directory in the application directory of "
+"the view that's being called. If it finds a translation for the selected "
+"language, the translation will be installed."
+msgstr ""
+
+# 0bf08d8054f8412890e58a751140941a
+#: ../../i18n.txt:568
+msgid ""
+"Next, it looks for a ``locale`` directory in the project directory. If it "
+"finds a translation, the translation will be installed."
+msgstr ""
+
+# f92af57a84ca46da9a195c2f617e21d0
+#: ../../i18n.txt:570
+msgid "Finally, it checks the base translation in ``django/conf/locale``."
+msgstr ""
+
+# 5810ef6e2de14b6c9ed0fe3bcfae233f
+#: ../../i18n.txt:572
+msgid ""
+"This way, you can write applications that include their own translations, "
+"and you can override base translations in your project path. Or, you can "
+"just build a big project out of several apps and put all translations into "
+"one big project message file. The choice is yours."
+msgstr ""
+
+# 9d6f10b7970745a2bbe8d2cd85522350
+#: ../../i18n.txt:579
+msgid ""
+"If you're using manually configured settings, as described in the :doc:"
+"`settings documentation <settings>`, the ``locale`` directory in the project "
+"directory will not be examined, since Django loses the ability to work out "
+"the location of the project directory. (Django normally uses the location of "
+"the settings file to determine this, and a settings file doesn't exist if "
+"you're manually configuring your settings.)"
+msgstr ""
+
+# 1d1da11bfc434d1984dcf5028eb1c71c
+#: ../../i18n.txt:586
+msgid "All message file repositories are structured the same way. They are:"
+msgstr ""
+
+# ed271ce1d8cd478fa4dc5be10d580995
+#: ../../i18n.txt:588
+msgid "``$APPPATH/locale/<language>/LC_MESSAGES/django.(po|mo)``"
+msgstr ""
+
+# ce33d3f7b5f34d5c9ccc070895666e1e
+#: ../../i18n.txt:589
+msgid "``$PROJECTPATH/locale/<language>/LC_MESSAGES/django.(po|mo)``"
+msgstr ""
+
+# d5110dc6e24d442bb6caa1eae6bffd39
+#: ../../i18n.txt:590
+msgid ""
+"All paths listed in ``LOCALE_PATHS`` in your settings file are searched in "
+"that order for ``<language>/LC_MESSAGES/django.(po|mo)``"
+msgstr ""
+
+# 93f65c6727e44a9282d674c3d1a3fb39
+#: ../../i18n.txt:592
+msgid ""
+"``$PYTHONPATH/django/conf/locale/<language>/LC_MESSAGES/django.(po|mo)``"
+msgstr ""
+
+# de0f5bb0a0df4636b1b55494cfdf4a44
+#: ../../i18n.txt:594
+msgid ""
+"To create message files, you use the same ``make-messages.py`` tool as with "
+"the Django message files. You only need to be in the right place -- in the "
+"directory where either the ``conf/locale`` (in case of the source tree) or "
+"the ``locale/`` (in case of app messages or project messages) directory are "
+"located. And you use the same ``compile-messages.py`` to produce the binary "
+"``django.mo`` files that are used by ``gettext``."
+msgstr ""
+
+# 09e6a64bbd7045428a5ec0a40f439dba
+#: ../../i18n.txt:601
+msgid ""
+"Application message files are a bit complicated to discover -- they need the "
+"``LocaleMiddleware``. If you don't use the middleware, only the Django "
+"message files and project message files will be processed."
+msgstr ""
+
+# 6cf46f92bbb84b0398b4a11b51ee41cb
+#: ../../i18n.txt:605
+msgid ""
+"Finally, you should give some thought to the structure of your translation "
+"files. If your applications need to be delivered to other users and will be "
+"used in other projects, you might want to use app-specific translations. But "
+"using app-specific translations and project translations could produce weird "
+"problems with ``make-messages``: ``make-messages`` will traverse all "
+"directories below the current path and so might put message IDs into the "
+"project message file that are already in application message files."
+msgstr ""
+
+# 2f4b8a8a80ea41a1b9bea9ff77bcfe8f
+#: ../../i18n.txt:613
+msgid ""
+"The easiest way out is to store applications that are not part of the "
+"project (and so carry their own translations) outside the project tree. That "
+"way, ``make-messages`` on the project level will only translate strings that "
+"are connected to your explicit project and not strings that are distributed "
+"independently."
+msgstr ""
+
+# 88594371a8084b5d9f35b7abc8056131
+#: ../../i18n.txt:620
+msgid "Translations and JavaScript"
+msgstr ""
+
+# 5f0477affc124010bf786463498f2fb9
+#: ../../i18n.txt:622
+msgid "Adding translations to JavaScript poses some problems:"
+msgstr ""
+
+# 832ed650eec649508c2b1398fde0dc95
+#: ../../i18n.txt:624
+msgid "JavaScript code doesn't have access to a ``gettext`` implementation."
+msgstr ""
+
+# 0135963211a0446884774bcc205d9912
+#: ../../i18n.txt:626
+msgid ""
+"JavaScript code doesn't have access to .po or .mo files; they need to be "
+"delivered by the server."
+msgstr ""
+
+# 289f58d89fc94a948230612bf7a745a3
+#: ../../i18n.txt:629
+msgid ""
+"The translation catalogs for JavaScript should be kept as small as possible."
+msgstr ""
+
+# 874f40c571e4468da8518aeca97cabe1
+#: ../../i18n.txt:632
+msgid ""
+"Django provides an integrated solution for these problems: It passes the "
+"translations into JavaScript, so you can call ``gettext``, etc., from within "
+"JavaScript."
+msgstr ""
+
+# 4f48ba62eb9d4b5dbb7196b9b1e13d41
+#: ../../i18n.txt:637
+msgid "The ``javascript_catalog`` view"
+msgstr ""
+
+# c8aa6b2700c14d16866da94988792a2f
+#: ../../i18n.txt:639
+msgid ""
+"The main solution to these problems is the ``javascript_catalog`` view, "
+"which sends out a JavaScript code library with functions that mimic the "
+"``gettext`` interface, plus an array of translation strings. Those "
+"translation strings are taken from the application, project or Django core, "
+"according to what you specify in either the {{{info_dict}}} or the URL."
+msgstr ""
+
+# 9a0e7e261be74565badcaf2b07110b40
+#: ../../i18n.txt:645
+msgid "You hook it up like this::"
+msgstr ""
+
+# 9cd011f3527c4bfe9d0e1004aa78cea2
+#: ../../i18n.txt:655
+msgid ""
+"Each string in ``packages`` should be in Python dotted-package syntax (the "
+"same format as the strings in ``INSTALLED_APPS``) and should refer to a "
+"package that contains a ``locale`` directory. If you specify multiple "
+"packages, all those catalogs are merged into one catalog. This is useful if "
+"you have JavaScript that uses strings from different applications."
+msgstr ""
+
+# f191b83fd3e947fc8795a27e487aad56
+#: ../../i18n.txt:661
+msgid ""
+"You can make the view dynamic by putting the packages into the URL pattern::"
+msgstr ""
+
+# 0881930f32cb49f8b8da699db2ab2535
+#: ../../i18n.txt:667
+msgid ""
+"With this, you specify the packages as a list of package names delimited by "
+"'+' signs in the URL. This is especially useful if your pages use code from "
+"different apps and this changes often and you don't want to pull in one big "
+"catalog file. As a security measure, these values can only be either "
+"``django.conf`` or any package from the ``INSTALLED_APPS`` setting."
+msgstr ""
+
+# 70909c877f214433a39a7a8d1dc2d81e
+#: ../../i18n.txt:674
+msgid "Using the JavaScript translation catalog"
+msgstr ""
+
+# 9a6bf4ef672347018827c313e7db1ea1
+#: ../../i18n.txt:676
+msgid ""
+"To use the catalog, just pull in the dynamically generated script like this::"
+msgstr ""
+
+# 027e1d25deaa4010b49d55533e71c6a4
+#: ../../i18n.txt:680
+msgid ""
+"This is how the admin fetches the translation catalog from the server. When "
+"the catalog is loaded, your JavaScript code can use the standard ``gettext`` "
+"interface to access it::"
+msgstr ""
+
+# d219c7ddc3774d1199fc45f8d9fc5548
+#: ../../i18n.txt:686
+msgid ""
+"There even is a ``ngettext`` interface and a string interpolation function::"
+msgstr ""
+
+# 6f5902d3a5fc437aac74036baa762323
+#: ../../i18n.txt:693
+msgid ""
+"The ``interpolate`` function supports both positional interpolation and "
+"named interpolation. So the above could have been written as::"
+msgstr ""
+
+# fb7b18d6305a4036b2ff2b1e43350776
+#: ../../i18n.txt:698
+msgid ""
+"The interpolation syntax is borrowed from Python. You shouldn't go over the "
+"top with string interpolation, though: this is still JavaScript, so the code "
+"will have to do repeated regular-expression substitutions. This isn't as "
+"fast as string interpolation  in Python, so keep it to those cases where you "
+"really need it (for example, in conjunction with ``ngettext`` to produce "
+"proper pluralizations)."
+msgstr ""
+
+# fae2d7dd6da84117b1b7343b7170e2c9
+#: ../../i18n.txt:706
+msgid "Creating JavaScript translation catalogs"
+msgstr ""
+
+# 604a2b8167bb4f2a89a978fa70ea2e76
+#: ../../i18n.txt:708
+msgid ""
+"You create and update the translation catalogs the same way as the other "
+"Django translation catalogs -- with the {{{make-messages.py}}} tool. The "
+"only difference is you need to provide a ``-d djangojs`` parameter, like "
+"this::"
+msgstr ""
+
+# 04673d30553043dda6580e716ed091b4
+#: ../../i18n.txt:714
+msgid ""
+"This would create or update the translation catalog for JavaScript for "
+"German. After updating translation catalogs, just run ``compile-messages."
+"py`` the same way as you do with normal Django translation catalogs."
+msgstr ""
+
+# 010386c96955415b9124b3f63ee1017f
+#: ../../i18n.txt:719
+msgid "Specialities of Django translation"
+msgstr ""
+
+# 208a4194035c423ba023e83532420cb5
+#: ../../i18n.txt:721
+msgid ""
+"If you know ``gettext``, you might note these specialities in the way Django "
+"does translation:"
+msgstr ""
+
+# ab51c3936bf34c6ea80e6a30d0dca448
+#: ../../i18n.txt:724
+msgid ""
+"The string domain is ``django`` or ``djangojs``. The string domain is used "
+"to differentiate between different programs that store their data in a "
+"common message-file library (usually ``/usr/share/locale/``). The ``django`` "
+"domain is used for python and template translation strings and is loaded "
+"into the global translation catalogs. The ``djangojs`` domain is only used "
+"for JavaScript translation catalogs to make sure that those are as small as "
+"possible."
+msgstr ""
+
+# 327397845b23421683a0db98dfe67640
+#: ../../i18n.txt:731
+msgid ""
+"Django only uses ``gettext`` and ``gettext_noop``. That's because Django "
+"always uses ``DEFAULT_CHARSET`` strings internally. There isn't much use in "
+"using ``ugettext``, because you'll always need to produce utf-8 anyway."
+msgstr ""
+
+# 0f91e8b9d9ae4cc68db6f07eeb8915e1
+#: ../../i18n.txt:735
+msgid ""
+"Django doesn't use ``xgettext`` alone. It uses Python wrappers around "
+"``xgettext`` and ``msgfmt``. That's mostly for convenience."
+msgstr ""

@@ -1,0 +1,360 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:05+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# eafd76f4bf954360ae16cda3f54578b2
+#: ../../add_ons.txt:3
+msgid "The \"contrib\" add-ons"
+msgstr ""
+
+# f5a4443425254f2398d811e43a71cfaf
+#: ../../add_ons.txt:5
+msgid ""
+"Django aims to follow Python's \"batteries included\" philosophy. It ships "
+"with a variety of extra, optional tools that solve common Web-development "
+"problems."
+msgstr ""
+
+# 8d691b9093c64e869c05cefb4f104171
+#: ../../add_ons.txt:8
+msgid ""
+"This code lives in ``django/contrib`` in the Django distribution. Here's a "
+"rundown of the packages in ``contrib``:"
+msgstr ""
+
+# e8297877d3b046ffb331d3d9f043328c
+#: ../../add_ons.txt:12
+msgid "admin"
+msgstr ""
+
+# 953d2c211e274279b936b1db754599e4
+#: ../../add_ons.txt:14
+msgid ""
+"The automatic Django administrative interface. For more information, see :"
+"doc:`Tutorial 2 <tutorial02>`."
+msgstr ""
+
+# 04512b0696fd4586944a7f3d31208e2b
+#: ../../add_ons.txt:18
+msgid "auth"
+msgstr ""
+
+# a278aab4cf954a1fb3c4f3db01c04c10
+#: ../../add_ons.txt:20
+msgid "Django's authentication framework."
+msgstr ""
+
+# aad5f14b695141119122c9fbfcd2c1bd
+#: ../../add_ons.txt:22
+msgid "See the :doc:`authentication documentation <authentication>`."
+msgstr ""
+
+# b08c263cd74d47b69fed9dd2455ffbea
+#: ../../add_ons.txt:25
+msgid "comments"
+msgstr ""
+
+# 043474d16125494496087cac880c9f24
+#: ../../add_ons.txt:27
+msgid "A simple yet flexible comments system. This is not yet documented."
+msgstr ""
+
+# 0c90c4b28ace48d78bb2a2a295736b57
+#: ../../add_ons.txt:30
+msgid "contenttypes"
+msgstr ""
+
+# f5167ef0697c4daabf009b52e5231edf
+#: ../../add_ons.txt:32
+msgid ""
+"A light framework for hooking into \"types\" of content, where each "
+"installed Django model is a separate content type. This is not yet "
+"documented."
+msgstr ""
+
+# 4979a517d7ed421ab7869e0a954388ab
+#: ../../add_ons.txt:36
+msgid "csrf"
+msgstr ""
+
+# 58af3886016f4359b61026b105c671a2
+#: ../../add_ons.txt:38
+msgid "A middleware for preventing Cross Site Request Forgeries"
+msgstr ""
+
+# 1d2fb2d2ee2b42a785012bfc94c24baf
+#: ../../add_ons.txt:40
+msgid "See the :doc:`csrf documentation <csrf>`."
+msgstr ""
+
+# a587068605964c0cb311f2cb8d01c74a
+#: ../../add_ons.txt:43
+msgid "humanize"
+msgstr ""
+
+# 29e834ab0c5d4d2dbf4333a8929e83d5
+#: ../../add_ons.txt:45
+msgid ""
+"A set of Django template filters useful for adding a \"human touch\" to "
+"data. To activate these filters, add ``'django.contrib.humanize'`` to your "
+"``INSTALLED_APPS`` setting. Once you've done that, use ``{% load humanize %}"
+"`` in a template, and you'll have access to these filters:"
+msgstr ""
+
+# 10dacc4682f443b4bdf0a529831abe91
+#: ../../add_ons.txt:51
+msgid "apnumber"
+msgstr ""
+
+# 713c187c67cc4ca9926da66bdf8c0c6c
+#: ../../add_ons.txt:53
+msgid ""
+"For numbers 1-9, returns the number spelled out. Otherwise, returns the "
+"number. This follows Associated Press style."
+msgstr ""
+
+# d5c538c81f364437883a9fcb4398e352
+# d5c538c81f364437883a9fcb4398e352
+# d5c538c81f364437883a9fcb4398e352
+# d5c538c81f364437883a9fcb4398e352
+#: ../../add_ons.txt:56 ../../add_ons.txt:69 ../../add_ons.txt:84
+#: ../../add_ons.txt:99
+msgid "Examples:"
+msgstr ""
+
+# d84b3540d0984c63ab88de98eafd87d5
+#: ../../add_ons.txt:58
+msgid "``1`` becomes ``'one'``."
+msgstr ""
+
+# 429d37b83fc642d198de340b12a32660
+#: ../../add_ons.txt:59
+msgid "``2`` becomes ``'two'``."
+msgstr ""
+
+# b65f7a6b2f0e4a8399c0689c2e4e938d
+#: ../../add_ons.txt:60
+msgid "``10`` becomes ``10``."
+msgstr ""
+
+# b81d197afc2642d6af370712f22daf82
+# b81d197afc2642d6af370712f22daf82
+# b81d197afc2642d6af370712f22daf82
+# b81d197afc2642d6af370712f22daf82
+#: ../../add_ons.txt:62 ../../add_ons.txt:76 ../../add_ons.txt:92
+#: ../../add_ons.txt:105
+msgid ""
+"You can pass in either an integer or a string representation of an integer."
+msgstr ""
+
+# b65d30a37099418b87a8c778d2af899a
+#: ../../add_ons.txt:65
+msgid "intcomma"
+msgstr ""
+
+# 656aff2ba3224ddca0c288c8a14d618f
+#: ../../add_ons.txt:67
+msgid "Converts an integer to a string containing commas every three digits."
+msgstr ""
+
+# 08eca7a1bf154008b5c79e00ca4b19ef
+#: ../../add_ons.txt:71
+msgid "``4500`` becomes ``'4,500'``."
+msgstr ""
+
+# e98c7b1daff64462ba3546e7fbd33354
+#: ../../add_ons.txt:72
+msgid "``45000`` becomes ``'45,000'``."
+msgstr ""
+
+# aae958d2fdd6463e90a9c68c543bc8ab
+#: ../../add_ons.txt:73
+msgid "``450000`` becomes ``'450,000'``."
+msgstr ""
+
+# 565d86c3e6f34d36a50d68a516917918
+#: ../../add_ons.txt:74
+msgid "``4500000`` becomes ``'4,500,000'``."
+msgstr ""
+
+# 7d69f72de4324e35a7d63a44a162a093
+#: ../../add_ons.txt:79
+msgid "intword"
+msgstr ""
+
+# 6672e85a632d4c0993a6bc8ec46fffe8
+#: ../../add_ons.txt:81
+msgid ""
+"Converts a large integer to a friendly text representation. Works best for "
+"numbers over 1 million."
+msgstr ""
+
+# 4db215d802494b8893bdf3aee98c4e03
+#: ../../add_ons.txt:86
+msgid "``1000000`` becomes ``'1.0 million'``."
+msgstr ""
+
+# bf0a49e1c7944935962f667365e851dd
+#: ../../add_ons.txt:87
+msgid "``1200000`` becomes ``'1.2 million'``."
+msgstr ""
+
+# 5e977e255fe145488892f65bbc3b0bdb
+#: ../../add_ons.txt:88
+msgid "``1200000000`` becomes ``'1.2 billion'``."
+msgstr ""
+
+# 84aeecd7e94f4090a1260f880671c00d
+#: ../../add_ons.txt:90
+msgid "Values up to 1000000000000000 (one quadrillion) are supported."
+msgstr ""
+
+# bae8eebe69784885b7b0d58d528d7006
+#: ../../add_ons.txt:95
+msgid "ordinal"
+msgstr ""
+
+# d1f77cbeca0f4d09a28ca8e2bef32889
+#: ../../add_ons.txt:97
+msgid "Converts an integer to its ordinal as a string."
+msgstr ""
+
+# 77638ea222a74d27a00bfd3e4a44192c
+#: ../../add_ons.txt:101
+msgid "``1`` becomes ``'1st'``."
+msgstr ""
+
+# c06ead7983df416bb383282348576ab7
+#: ../../add_ons.txt:102
+msgid "``2`` becomes ``'2nd'``."
+msgstr ""
+
+# ffe20e1ff6d7468b8b21e5380273c4aa
+#: ../../add_ons.txt:103
+msgid "``3`` becomes ``'3rd'``."
+msgstr ""
+
+# 2ff24e7ae1de4d0aab3f423021186961
+#: ../../add_ons.txt:108
+msgid "flatpages"
+msgstr ""
+
+# fbfdc2e4d02b4be98703fa10db37a37b
+#: ../../add_ons.txt:110
+msgid "A framework for managing simple \"flat\" HTML content in a database."
+msgstr ""
+
+# d432b937527a4086be141b327d3b6c42
+#: ../../add_ons.txt:112
+msgid "See the :doc:`flatpages documentation <flatpages>`."
+msgstr ""
+
+# 1894897873ee4b0fb876b73dc2ed5f11
+#: ../../add_ons.txt:115
+msgid "markup"
+msgstr ""
+
+# 1f6b5b0bfa154a1eb725b99fd8e382d2
+#: ../../add_ons.txt:117
+msgid ""
+"A collection of template filters that implement these common markup "
+"languages:"
+msgstr ""
+
+# c524561930c94c20951fae70c4fe2dc5
+#: ../../add_ons.txt:119
+msgid "Textile"
+msgstr ""
+
+# 4b854041ec6943faade3012529851939
+#: ../../add_ons.txt:120
+msgid "Markdown"
+msgstr ""
+
+# 28893a09ee534025a81e5ff24fd8e0f4
+#: ../../add_ons.txt:121
+msgid "ReST (ReStructured Text)"
+msgstr ""
+
+# 678fee4e184b4fe5adc4886e7f03810d
+#: ../../add_ons.txt:123
+msgid ""
+"For documentation, read the source code in django/contrib/markup/"
+"templatetags/markup.py."
+msgstr ""
+
+# 1eed747614cd4d1a8ac95750afd15d5b
+#: ../../add_ons.txt:126
+msgid "redirects"
+msgstr ""
+
+# a4d5635d2a8649f48a887cd9a37a23d5
+#: ../../add_ons.txt:128
+msgid "A framework for managing redirects."
+msgstr ""
+
+# 40b0593c32b54d82b1d08242708a9213
+#: ../../add_ons.txt:130
+msgid "See the :doc:`redirects documentation <redirects>`."
+msgstr ""
+
+# a1699efdbdd04c85af297771d6c37e4a
+#: ../../add_ons.txt:133
+msgid "sites"
+msgstr ""
+
+# f6e51a730bd940afa7e39df9070d91d5
+#: ../../add_ons.txt:135
+msgid ""
+"A light framework that lets you operate multiple Web sites off of the same "
+"database and Django installation. It gives you hooks for associating objects "
+"to one or more sites."
+msgstr ""
+
+# cfb50b2afce74d8b9338f021dff9a666
+#: ../../add_ons.txt:139
+msgid "See the :doc:`sites documentation <sites>`."
+msgstr ""
+
+# 88dc313ee77b4b06b0c517fddba473b2
+#: ../../add_ons.txt:142
+msgid "syndication"
+msgstr ""
+
+# 13a89b27997b4ab08bc9a8f9a36ffd12
+#: ../../add_ons.txt:144
+msgid ""
+"A framework for generating syndication feeds, in RSS and Atom, quite easily."
+msgstr ""
+
+# b559cf3895fe448e926f6247adbbfd07
+#: ../../add_ons.txt:146
+msgid "See the :doc:`syndication documentation <syndication_feeds>`."
+msgstr ""
+
+# 76770590a7f14b668d2e3d6aeac4bb80
+#: ../../add_ons.txt:149
+msgid "Other add-ons"
+msgstr ""
+
+# c833431f682c40ad8b15ea5e07178872
+#: ../../add_ons.txt:151
+msgid ""
+"If you have an idea for functionality to include in ``contrib``, let us "
+"know! Code it up, and post it to the `django-users mailing list`_."
+msgstr ""

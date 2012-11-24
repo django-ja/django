@@ -1,0 +1,474 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 5a3e7783a9bb4003973a45bebe1970c4
+#: ../../sessions.txt:3
+msgid "How to use sessions"
+msgstr ""
+
+# 0e8c3c1feeba422ab1f113e59112543b
+#: ../../sessions.txt:5
+msgid ""
+"Django provides full support for anonymous sessions. The session framework "
+"lets you store and retrieve arbitrary data on a per-site-visitor basis. It "
+"stores data on the server side and abstracts the sending and receiving of "
+"cookies. Cookies contain a session ID -- not the data itself."
+msgstr ""
+
+# 462ee1278958422c8f414f603f20dd03
+#: ../../sessions.txt:11
+msgid "Enabling sessions"
+msgstr ""
+
+# 947bd935521f4145938300af0c1f2815
+#: ../../sessions.txt:13
+msgid ""
+"Sessions are implemented via a piece of :doc:`middleware <middleware>` and a "
+"Django model."
+msgstr ""
+
+# 40de5c4203ad4aa89050c345a9780ba4
+#: ../../sessions.txt:15
+msgid "To enable session functionality, do these two things:"
+msgstr ""
+
+# 0016b4b9b64c4bca8706cd859605e897
+#: ../../sessions.txt:17
+msgid ""
+"Edit the ``MIDDLEWARE_CLASSES`` setting and make sure ``MIDDLEWARE_CLASSES`` "
+"contains ``'django.contrib.sessions.middleware.SessionMiddleware'``. The "
+"default ``settings.py`` created by ``django-admin.py startproject`` has "
+"``SessionMiddleware`` activated."
+msgstr ""
+
+# 276f965076a94a9988e91ffa073eae97
+#: ../../sessions.txt:22
+msgid ""
+"Add ``'django.contrib.sessions'`` to your ``INSTALLED_APPS`` setting, and "
+"run ``manage.py syncdb`` to install the single database table that stores "
+"session data."
+msgstr ""
+
+# 83bd351a707f4af1a5cb938875353150
+#: ../../sessions.txt:26
+msgid ""
+"If you don't want to use sessions, you might as well remove the "
+"``SessionMiddleware`` line from ``MIDDLEWARE_CLASSES`` and ``'django.contrib."
+"sessions'`` from your ``INSTALLED_APPS``. It'll save you a small bit of "
+"overhead."
+msgstr ""
+
+# 3f7271370eab4ba9a6ef1f47db647c60
+#: ../../sessions.txt:31
+msgid "Using sessions in views"
+msgstr ""
+
+# c734918703d147fb874ffc07c99e8ef1
+#: ../../sessions.txt:33
+msgid ""
+"When ``SessionMiddleware`` is activated, each ``HttpRequest`` object -- the "
+"first argument to any Django view function -- will have a ``session`` "
+"attribute, which is a dictionary-like object. You can read it and write to "
+"it."
+msgstr ""
+
+# edcadf11522a41aca52c65b456f59b40
+#: ../../sessions.txt:37
+msgid "It implements the following standard dictionary methods:"
+msgstr ""
+
+# 6e4f9acded9c4bbeb1bd67b6992a21f0
+#: ../../sessions.txt:39
+msgid ""
+"``__getitem__(key)`` Example: ``fav_color = request.session['fav_color']``"
+msgstr ""
+
+# eee3814a2762479395e95cf705f18953
+#: ../../sessions.txt:42
+msgid ""
+"``__setitem__(key, value)`` Example: ``request.session['fav_color'] = "
+"'blue'``"
+msgstr ""
+
+# 678996504b7041cba5a9d251de5b383f
+#: ../../sessions.txt:45
+msgid ""
+"``__delitem__(key)`` Example: ``del request.session['fav_color']``. This "
+"raises ``KeyError`` if the given ``key`` isn't already in the session."
+msgstr ""
+
+# a089433c4b784a28bbb524c28c186eb0
+#: ../../sessions.txt:49
+msgid "``__contains__(key)`` Example: ``'fav_color' in request.session``"
+msgstr ""
+
+# c53c28ea5d654614ba09f5d27b1303cf
+#: ../../sessions.txt:52
+msgid ""
+"``get(key, default=None)`` Example: ``fav_color = request.session.get"
+"('fav_color', 'red')``"
+msgstr ""
+
+# 9a143879839e41369963d910d8929b78
+#: ../../sessions.txt:55
+msgid "``keys()``"
+msgstr ""
+
+# 6a3eeb888dac4b7bbce89208a38dedb0
+#: ../../sessions.txt:57
+msgid "``items()``"
+msgstr ""
+
+# 23d3dd48226a491ab22de16b63866f8b
+#: ../../sessions.txt:59
+msgid "It also has these three methods:"
+msgstr ""
+
+# 8bac0ea762774543b3c35141adc85b01
+#: ../../sessions.txt:61
+msgid ""
+"``set_test_cookie()`` Sets a test cookie to determine whether the user's "
+"browser supports cookies. Due to the way cookies work, you won't be able to "
+"test this until the user's next page request. See \"Setting test cookies\" "
+"below for more information."
+msgstr ""
+
+# 9a9f080eedda419490c93f408011f452
+#: ../../sessions.txt:67
+msgid ""
+"``test_cookie_worked()`` Returns either ``True`` or ``False``, depending on "
+"whether the user's browser accepted the test cookie. Due to the way cookies "
+"work, you'll have to call ``set_test_cookie()`` on a previous, separate page "
+"request. See \"Setting test cookies\" below for more information."
+msgstr ""
+
+# 31dc643ada45465485ea9a422fc50b65
+#: ../../sessions.txt:73
+msgid ""
+"``delete_test_cookie()`` Deletes the test cookie. Use this to clean up after "
+"yourself."
+msgstr ""
+
+# fbb12a4210ab4fa48e7aa2d92233b3a0
+#: ../../sessions.txt:76
+msgid ""
+"You can edit ``request.session`` at any point in your view. You can edit it "
+"multiple times."
+msgstr ""
+
+# 47dce8afb17148869ca9bad485ffa9de
+#: ../../sessions.txt:80
+msgid "Session object guidelines"
+msgstr ""
+
+# d528dd0f59be4d238d57f18ce1564e4d
+#: ../../sessions.txt:82
+msgid ""
+"Use normal Python strings as dictionary keys on ``request.session``. This is "
+"more of a convention than a hard-and-fast rule."
+msgstr ""
+
+# bb51fd0da3a842859dada2765a611fb9
+#: ../../sessions.txt:85
+msgid ""
+"Session dictionary keys that begin with an underscore are reserved for "
+"internal use by Django."
+msgstr ""
+
+# 3d0efff35bb7420e8ffae0a0af6a73f8
+#: ../../sessions.txt:88
+msgid ""
+"Don't override ``request.session`` with a new object, and don't access or "
+"set its attributes. Use it like a Python dictionary."
+msgstr ""
+
+# 5816257d66314c459ff10150794b3c75
+#: ../../sessions.txt:92
+msgid "Examples"
+msgstr ""
+
+# 1030bbf8bd4c40ce8e240fe15a6de28a
+#: ../../sessions.txt:94
+msgid ""
+"This simplistic view sets a ``has_commented`` variable to ``True`` after a "
+"user posts a comment. It doesn't let a user post a comment more than once::"
+msgstr ""
+
+# a1717b01259e4612a52ea556745c6239
+#: ../../sessions.txt:105
+msgid "This simplistic view logs in a \"member\" of the site::"
+msgstr ""
+
+# c89eaf01e1414be9bf103be08d2426ca
+#: ../../sessions.txt:115
+msgid "...And this one logs a member out, according to ``login()`` above::"
+msgstr ""
+
+# 817120594a1b41eea9eb85cf672c7742
+#: ../../sessions.txt:125
+msgid "Setting test cookies"
+msgstr ""
+
+# 0f8d06a96c0d44bf99d187f9163f633b
+#: ../../sessions.txt:127
+msgid ""
+"As a convenience, Django provides an easy way to test whether the user's "
+"browser accepts cookies. Just call ``request.session.set_test_cookie()`` in "
+"a view, and call ``request.session.test_cookie_worked()`` in a subsequent "
+"view -- not in the same view call."
+msgstr ""
+
+# 1db81eef317848f2a04b8707181f072c
+#: ../../sessions.txt:132
+msgid ""
+"This awkward split between ``set_test_cookie()`` and ``test_cookie_worked()"
+"`` is necessary due to the way cookies work. When you set a cookie, you "
+"can't actually tell whether a browser accepted it until the browser's next "
+"request."
+msgstr ""
+
+# 6360535b385e47c5a2af9a007788e0ea
+#: ../../sessions.txt:136
+msgid ""
+"It's good practice to use ``delete_test_cookie()`` to clean up after "
+"yourself. Do this after you've verified that the test cookie worked."
+msgstr ""
+
+# b2f81fd4c5854fecb13237a6017f7f46
+#: ../../sessions.txt:139
+msgid "Here's a typical usage example::"
+msgstr ""
+
+# 2f3388bef7804a40933911062376cca5
+#: ../../sessions.txt:152
+msgid "Using sessions out of views"
+msgstr ""
+
+# b8302e2194c5406bb77039088df34821
+#: ../../sessions.txt:154
+msgid ""
+"Internally, each session is just a normal Django model. The ``Session`` "
+"model is defined in ``django/contrib/sessions/models.py``. Because it's a "
+"normal model, you can access sessions using the normal Django database API::"
+msgstr ""
+
+# ef4f941f960a4c98bd7222383b2910e1
+#: ../../sessions.txt:163
+msgid ""
+"Note that you'll need to call ``get_decoded()`` to get the session "
+"dictionary. This is necessary because the dictionary is stored in an encoded "
+"format::"
+msgstr ""
+
+# c11d79cc3f49462497110b6dfac5ff8f
+#: ../../sessions.txt:172
+msgid "When sessions are saved"
+msgstr ""
+
+# 8e676f210b204c91acad6e6b9956e004
+#: ../../sessions.txt:174
+msgid ""
+"By default, Django only saves to the session database when the session has "
+"been modified -- that is if any of its dictionary values have been assigned "
+"or deleted::"
+msgstr ""
+
+# 7b868516b7044fa5b57347bc1cbf3071
+#: ../../sessions.txt:191
+msgid ""
+"To change this default behavior, set the ``SESSION_SAVE_EVERY_REQUEST`` "
+"setting to ``True``. If ``SESSION_SAVE_EVERY_REQUEST`` is ``True``, Django "
+"will save the session to the database on every single request."
+msgstr ""
+
+# 79b998e7bb9340148bc1fb73431387ae
+#: ../../sessions.txt:195
+msgid ""
+"Note that the session cookie is only sent when a session has been created or "
+"modified. If ``SESSION_SAVE_EVERY_REQUEST`` is ``True``, the session cookie "
+"will be sent on every request."
+msgstr ""
+
+# d62884f806c245c78c5117ba0451a858
+#: ../../sessions.txt:199
+msgid ""
+"Similarly, the ``expires`` part of a session cookie is updated each time the "
+"session cookie is sent."
+msgstr ""
+
+# 27922f4975234ae789cb4a6e63d84518
+#: ../../sessions.txt:203
+msgid "Browser-length sessions vs. persistent sessions"
+msgstr ""
+
+# ae54f3974e7d46e5a359a2282d6aab41
+#: ../../sessions.txt:205
+msgid ""
+"You can control whether the session framework uses browser-length sessions "
+"vs. persistent sessions with the ``SESSION_EXPIRE_AT_BROWSER_CLOSE`` setting."
+msgstr ""
+
+# 1414a6a49bea408ba8a459a84123c1a4
+#: ../../sessions.txt:208
+msgid ""
+"By default, ``SESSION_EXPIRE_AT_BROWSER_CLOSE`` is set to ``False``, which "
+"means session cookies will be stored in users' browsers for as long as "
+"``SESSION_COOKIE_AGE``. Use this if you don't want people to have to log in "
+"every time they open a browser."
+msgstr ""
+
+# f2e68d3fef1c43afab2b3ff518376e26
+#: ../../sessions.txt:213
+msgid ""
+"If ``SESSION_EXPIRE_AT_BROWSER_CLOSE`` is set to ``True``, Django will use "
+"browser-length cookies -- cookies that expire as soon as the user closes his "
+"or her browser. Use this if you want people to have to log in every time "
+"they open a browser."
+msgstr ""
+
+# 65c2eb84a5f64df18508bd12bd077b9e
+#: ../../sessions.txt:219
+msgid "Settings"
+msgstr ""
+
+# fb057a0853db4514aecf81a30f951315
+#: ../../sessions.txt:221
+msgid ""
+"A few :doc:`Django settings <settings>` give you control over session "
+"behavior:"
+msgstr ""
+
+# e5c624f5efc242e9bc0e8d63aefd6ccd
+#: ../../sessions.txt:224
+msgid "SESSION_COOKIE_AGE"
+msgstr ""
+
+# 6da84f0bdfc942a49161fd72b6fb5c32
+#: ../../sessions.txt:226
+msgid "Default: ``1209600`` (2 weeks, in seconds)"
+msgstr ""
+
+# 40367cb7f6874782b9612bb6dbbbc109
+#: ../../sessions.txt:228
+msgid "The age of session cookies, in seconds."
+msgstr ""
+
+# a6cf7281411143b9ac3e6f6515796dc0
+#: ../../sessions.txt:231
+msgid "SESSION_COOKIE_DOMAIN"
+msgstr ""
+
+# 46d492db9daa400e8f91c8f8c48ba584
+#: ../../sessions.txt:233
+msgid "Default: ``None``"
+msgstr ""
+
+# 37af7afa2d314f38a0eeea413889947b
+#: ../../sessions.txt:235
+msgid ""
+"The domain to use for session cookies. Set this to a string such as ``\"."
+"lawrence.com\"`` for cross-domain cookies, or use ``None`` for a standard "
+"domain cookie."
+msgstr ""
+
+# 70867c83275d48bc85f3f9cdbb369cf8
+#: ../../sessions.txt:240
+msgid "SESSION_COOKIE_NAME"
+msgstr ""
+
+# 809dbcd624bb4387ad1787858653c50e
+#: ../../sessions.txt:242
+msgid "Default: ``'sessionid'``"
+msgstr ""
+
+# 34fc8c504d2c46d692bb7b29d3d52300
+#: ../../sessions.txt:244
+msgid ""
+"The name of the cookie to use for sessions. This can be whatever you want."
+msgstr ""
+
+# b07d644080c442389dbbf767e2da112d
+#: ../../sessions.txt:247
+msgid "SESSION_EXPIRE_AT_BROWSER_CLOSE"
+msgstr ""
+
+# bdc2807b320d4fc6bd3fb49938b01c4e
+# bdc2807b320d4fc6bd3fb49938b01c4e
+#: ../../sessions.txt:249 ../../sessions.txt:257
+msgid "Default: ``False``"
+msgstr ""
+
+# ab738224312f49e59837d2a1b8940e47
+#: ../../sessions.txt:251
+msgid ""
+"Whether to expire the session when the user closes his or her browser. See "
+"\"Browser-length sessions vs. persistent sessions\" above."
+msgstr ""
+
+# 8554688074b04c6c84db739b7e1646e1
+#: ../../sessions.txt:255
+msgid "SESSION_SAVE_EVERY_REQUEST"
+msgstr ""
+
+# ee85ad2a2d6a40afa48dba1468fe7812
+#: ../../sessions.txt:259
+msgid ""
+"Whether to save the session data on every request. If this is ``False`` "
+"(default), then the session data will only be saved if it has been modified "
+"-- that is, if any of its dictionary values have been assigned or deleted."
+msgstr ""
+
+# e28e6fa9b6ae4d9b94cbccbc2a8549eb
+#: ../../sessions.txt:264
+msgid "Technical details"
+msgstr ""
+
+# 646a530489be4c2797d0c84d17bd1e9e
+#: ../../sessions.txt:266
+msgid ""
+"The session dictionary should accept any pickleable Python object. See `the "
+"pickle module`_ for more information."
+msgstr ""
+
+# cfb24ce4dde24cc285194ece2b4e73d1
+#: ../../sessions.txt:269
+msgid "Session data is stored in a database table named ``django_session`` ."
+msgstr ""
+
+# 9ccede65dfa34b6d9273b6c88e935720
+#: ../../sessions.txt:271
+msgid ""
+"Django only sends a cookie if it needs to. If you don't set any session "
+"data, it won't send a session cookie."
+msgstr ""
+
+# dbd8fe92ff10473a998eaeeeec07cacb
+#: ../../sessions.txt:277
+msgid "Session IDs in URLs"
+msgstr ""
+
+# 69e12c1bd8a742d5b1598d73e91f02d9
+#: ../../sessions.txt:279
+msgid ""
+"The Django sessions framework is entirely, and solely, cookie-based. It does "
+"not fall back to putting session IDs in URLs as a last resort, as PHP does. "
+"This is an intentional design decision. Not only does that behavior make "
+"URLs ugly, it makes your site vulnerable to session-ID theft via the "
+"\"Referer\" header."
+msgstr ""

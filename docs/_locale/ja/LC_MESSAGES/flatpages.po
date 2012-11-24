@@ -1,0 +1,224 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 92f135ab407f44ff98d7875a9f5430d2
+#: ../../flatpages.txt:3
+msgid "The flatpages app"
+msgstr ""
+
+# af63fa7ede544c95bed682ceb57fcaa8
+#: ../../flatpages.txt:5
+msgid ""
+"Django comes with an optional \"flatpages\" application. It lets you store "
+"simple \"flat\" HTML content in a database and handles the management for "
+"you via Django's admin interface and a Python API."
+msgstr ""
+
+# c57d128e4b7f404ab73411d5b514b482
+#: ../../flatpages.txt:9
+msgid ""
+"A flatpage is a simple object with a URL, title and content. Use it for one-"
+"off, special-case pages, such as \"About\" or \"Privacy Policy\" pages, that "
+"you want to store in a database but for which you don't want to develop a "
+"custom Django application."
+msgstr ""
+
+# 59b7f9a25bec42dcad01017a50ccaacf
+#: ../../flatpages.txt:14
+msgid ""
+"A flatpage can use a custom template or a default, systemwide flatpage "
+"template. It can be associated with one, or multiple, sites."
+msgstr ""
+
+# 8b4345509f1d4d639f9c648a92c28d7b
+#: ../../flatpages.txt:17
+msgid "Here are some examples of flatpages on Django-powered sites:"
+msgstr ""
+
+# 5210a058f7284d99845cbc2325f4425a
+#: ../../flatpages.txt:19
+msgid "http://www.chicagocrime.org/about/"
+msgstr ""
+
+# e3a42f7dd916459595599831ec3aa754
+#: ../../flatpages.txt:20
+msgid "http://www.lawrence.com/about/contact/"
+msgstr ""
+
+# b40c4a3a3a774fc089d5bbed54f0b3f0
+#: ../../flatpages.txt:23
+msgid "Installation"
+msgstr ""
+
+# 44e539164e844786b1d20db3a65de3a6
+#: ../../flatpages.txt:25
+msgid "To install the flatpages app, follow these steps:"
+msgstr ""
+
+# 05d40ae24e7149a7b4a6657d2d52375c
+#: ../../flatpages.txt:27
+msgid ""
+"Add ``'django.contrib.flatpages'`` to your :doc:`INSTALLED_APPS <settings>` "
+"setting."
+msgstr ""
+
+# 48c53a70bca84ded850176d2baa82bdb
+#: ../../flatpages.txt:28
+msgid ""
+"Add ``'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'`` to "
+"your :doc:`MIDDLEWARE_CLASSES <settings>` setting."
+msgstr ""
+
+# ce46c67dc2f54113ad58024f3a11c9ec
+#: ../../flatpages.txt:30
+msgid "Run the command ``manage.py syncdb``."
+msgstr ""
+
+# f2b53975f6e4474fb00470ff60725ba6
+#: ../../flatpages.txt:33
+msgid "How it works"
+msgstr ""
+
+# 285ce8bada024265ad5b4ce9dd40f6bc
+#: ../../flatpages.txt:35
+msgid ""
+"``manage.py syncdb`` creates two tables in your database: "
+"``django_flatpage`` and ``django_flatpage_sites``. ``django_flatpage`` is a "
+"simple lookup table that simply maps a URL to a title and bunch of text "
+"content. ``django_flatpage_sites`` associates a flatpage with a site."
+msgstr ""
+
+# 9c74a7e66f2b4d58a4aaee2dc37f0953
+#: ../../flatpages.txt:40
+msgid ""
+"The ``FlatpageFallbackMiddleware`` does all of the work. Each time any "
+"Django application raises a 404 error, this middleware checks the flatpages "
+"database for the requested URL as a last resort. Specifically, it checks for "
+"a flatpage with the given URL with a site ID that corresponds to the :doc:"
+"`SITE_ID <settings>` setting."
+msgstr ""
+
+# b60af2c5e41f428e84fc76e4b6f10a80
+#: ../../flatpages.txt:45
+msgid "If it finds a match, it follows this algorithm:"
+msgstr ""
+
+# 8dd11b2a8a9544c18a9a3d60325a65c2
+#: ../../flatpages.txt:47
+msgid ""
+"If the flatpage has a custom template, it loads that template. Otherwise, it "
+"loads the template ``flatpages/default``."
+msgstr ""
+
+# aed0b75c3200466a8cb4f83706162fc0
+#: ../../flatpages.txt:49
+msgid ""
+"It passes that template a single context variable, ``flatpage``, which is "
+"the flatpage object. It uses :doc:`RequestContext <templates_python>` in "
+"rendering the template."
+msgstr ""
+
+# 1543ac5997fb43009b3b913def706ca4
+#: ../../flatpages.txt:52
+msgid ""
+"If it doesn't find a match, the request continues to be processed as usual."
+msgstr ""
+
+# 540a1e3d641f45caa57a723ea71c3f5e
+#: ../../flatpages.txt:54
+msgid ""
+"The middleware only gets activated for 404s -- not for 500s or responses of "
+"any other status code."
+msgstr ""
+
+# 49b394a9466848078443808ce1155ecb
+#: ../../flatpages.txt:57
+msgid ""
+"Note that the order of ``MIDDLEWARE_CLASSES`` matters. Generally, you can "
+"put ``FlatpageFallbackMiddleware`` at the end of the list, because it's a "
+"last resort."
+msgstr ""
+
+# 087bca11715b4255a7b282494cce3246
+#: ../../flatpages.txt:61
+msgid "For more on middleware, read the :doc:`middleware docs <middleware>`."
+msgstr ""
+
+# 5574a0079e234af0968b4badaa9a375f
+#: ../../flatpages.txt:64
+msgid "How to add, change and delete flatpages"
+msgstr ""
+
+# 1e81a1bad5744be3943d899c3f472a32
+#: ../../flatpages.txt:67
+msgid "Via the admin interface"
+msgstr ""
+
+# a58cf792261f472cace58ae9f5b187df
+#: ../../flatpages.txt:69
+msgid ""
+"If you've activated the automatic Django admin interface, you should see a "
+"\"Flatpages\" section on the admin index page. Edit flatpages as you edit "
+"any other object in the system."
+msgstr ""
+
+# 8d93052b439d4d85adb2bcec796890fb
+#: ../../flatpages.txt:74
+msgid "Via the Python API"
+msgstr ""
+
+# 49b16b709e6f4fbdb9264b0412d8d6c3
+#: ../../flatpages.txt:76
+msgid ""
+"Flatpages are represented by a standard :doc:`Django model <model-api>`, "
+"which lives in `django/contrib/flatpages/models.py`_. You can access "
+"flatpage objects via the :doc:`Django database API <db-api>`."
+msgstr ""
+
+# c8ee3243a8464242ba5b45129f8178af
+#: ../../flatpages.txt:83
+msgid "Flatpage templates"
+msgstr ""
+
+# 646ab85bc55a45c5af1fe817311f02ca
+#: ../../flatpages.txt:85
+msgid ""
+"By default, flatpages are rendered via the template ``flatpages/default."
+"html``, but you can override that for a particular flatpage."
+msgstr ""
+
+# d9773fa01f75466384426c933ac424d7
+#: ../../flatpages.txt:88
+msgid ""
+"Creating the ``flatpages/default.html`` template is your responsibility; in "
+"your template directory, just create a ``flatpages`` directory containing a "
+"file ``default.html``."
+msgstr ""
+
+# 81874c2e37a942b9be89d71ec53a24d6
+#: ../../flatpages.txt:92
+msgid ""
+"Flatpage templates are passed a single context variable, ``flatpage``, which "
+"is the flatpage object."
+msgstr ""
+
+# 76b7d474cbbb4e52a353a7e26556e934
+#: ../../flatpages.txt:95
+msgid "Here's a sample ``flatpages/default.html`` template::"
+msgstr ""

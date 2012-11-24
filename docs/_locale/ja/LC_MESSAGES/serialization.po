@@ -1,0 +1,194 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# e5036de9207041c2b018dce00e69cb53
+#: ../../serialization.txt:3
+msgid "Serializing Django objects"
+msgstr ""
+
+# 54bf5a08f3734dd4b8fdf59a44a4ba52
+#: ../../serialization.txt:7
+msgid ""
+"This API is currently under heavy development and may change -- perhaps "
+"drastically -- in the future."
+msgstr ""
+
+# 659fd55ad5c94aa793b278d45882a532
+#: ../../serialization.txt:10
+msgid "You have been warned."
+msgstr ""
+
+# eebd2fd6a7c841efb70e32fff5786075
+#: ../../serialization.txt:12
+msgid ""
+"Django's serialization framework provides a mechanism for \"translating\" "
+"Django objects into other formats. Usually these other formats will be text-"
+"based and used for sending Django objects over a wire, but it's possible for "
+"a serializer to handle any format (text-based or not)."
+msgstr ""
+
+# 8f67d2ed3f5d4beaafa530722df87987
+#: ../../serialization.txt:18
+msgid "Serializing data"
+msgstr ""
+
+# 54be09939517483c8e671234c6fe0877
+#: ../../serialization.txt:20
+msgid "At the highest level, serializing data is a very simple operation::"
+msgstr ""
+
+# b75b041d4f9f4ce1a6494931fb022b2e
+#: ../../serialization.txt:25
+msgid ""
+"The arguments to the ``serialize`` function are the format to serialize the "
+"data to (see `Serialization formats`_) and a :doc:`QuerySet <db-api>` to "
+"serialize. (Actually, the second argument can be any iterator that yields "
+"Django objects, but it'll almost always be a QuerySet)."
+msgstr ""
+
+# f72ff7d149c14bd1b9f30806daed6fec
+#: ../../serialization.txt:30
+msgid "You can also use a serializer object directly::"
+msgstr ""
+
+# 72e9d0e8c3274c1cab611081efe9e777
+#: ../../serialization.txt:36
+msgid ""
+"This is useful if you want to serialize data directly to a file-like object "
+"(which includes a :doc:`HTTPResponse <request_response>`)::"
+msgstr ""
+
+# df8b40886d5b4ab8846803962fa19006
+#: ../../serialization.txt:43
+msgid "Deserializing data"
+msgstr ""
+
+# a3dc6ee99ab24c0395b9ce425c075a1e
+#: ../../serialization.txt:45
+msgid "Deserializing data is also a fairly simple operation::"
+msgstr ""
+
+# b2de80ce80a444e59dad2170f80fa051
+#: ../../serialization.txt:50
+msgid ""
+"As you can see, the ``deserialize`` function takes the same format argument "
+"as ``serialize``, a string or stream of data, and returns an iterator."
+msgstr ""
+
+# 4e4aab107cc94660817a648d4f087f06
+#: ../../serialization.txt:53
+msgid ""
+"However, here it gets slightly complicated. The objects returned by the "
+"``deserialize`` iterator *aren't* simple Django objects. Instead, they are "
+"special ``DeserializedObject`` instances that wrap a created -- but unsaved "
+"-- object and any associated relationship data."
+msgstr ""
+
+# 854f36468d8b474eba60f658e07b9a1b
+#: ../../serialization.txt:58
+msgid "Calling ``DeserializedObject.save()`` saves the object to the database."
+msgstr ""
+
+# 31e5cef901de4382bb605c4c9ffc1368
+#: ../../serialization.txt:60
+msgid ""
+"This ensures that deserializing is a non-destructive operation even if the "
+"data in your serialized representation doesn't match what's currently in the "
+"database. Usually, working with these ``DeserializedObject`` instances looks "
+"something like::"
+msgstr ""
+
+# ee38e075e9e8428db06157565d8365f9
+#: ../../serialization.txt:69
+msgid ""
+"In other words, the usual use is to examine the deserialized objects to make "
+"sure that they are \"appropriate\" for saving before doing so.  Of course, "
+"if you trust your data source you could just save the object and move on."
+msgstr ""
+
+# 118daf6dba4542c7935a294d0e4ecdca
+#: ../../serialization.txt:72
+msgid ""
+"The Django object itself can be inspected as ``deserialized_object.object``."
+msgstr ""
+
+# 4baf400637274fc89bb82b100884c1e7
+#: ../../serialization.txt:75
+msgid "Serialization formats"
+msgstr ""
+
+# afcce93928374a548a35b0c62dc2d49c
+#: ../../serialization.txt:77
+msgid "Django \"ships\" with a few included serializers:"
+msgstr ""
+
+# c5e64e55bbd2425ca57f7319ad0bf632
+#: ../../serialization.txt:80
+msgid "Identifier"
+msgstr ""
+
+# bef4e8674cd44795a56e4cd527c682f3
+#: ../../serialization.txt:80
+msgid "Information"
+msgstr ""
+
+# 54ccf3f8789243fd906e2a0734855255
+#: ../../serialization.txt:82
+msgid "``xml``"
+msgstr ""
+
+# 4d1d58045862426c8c70c46ab17ea96e
+#: ../../serialization.txt:82
+msgid "Serializes to and from a simple XML dialect."
+msgstr ""
+
+# 7bf265cece704668baad2cd55ffd4936
+#: ../../serialization.txt:84
+msgid "``json``"
+msgstr ""
+
+# c038daf5353d47a0a6e9745d25ffff91
+#: ../../serialization.txt:84
+msgid ""
+"Serializes to and from JSON_ (using a version of simplejson_ bundled with "
+"Django)."
+msgstr ""
+
+# 69dbd6dd530b4f20bf7eb563eb97ed37
+#: ../../serialization.txt:87
+msgid "``python``"
+msgstr ""
+
+# ee1e9a629b484bcfaff7101736c5bc66
+#: ../../serialization.txt:87
+msgid ""
+"Translates to and from \"simple\" Python objects (lists, dicts, strings, "
+"etc.).  Not really all that useful on its own, but used as a base for other "
+"serializers."
+msgstr ""
+
+# 94c68549b62b4c23833ee4de70af2db9
+#: ../../serialization.txt:96
+msgid "Writing custom serializers"
+msgstr ""
+
+# 79042a864a8a429892a92935e3363cff
+#: ../../serialization.txt:98
+msgid "XXX ..."
+msgstr ""

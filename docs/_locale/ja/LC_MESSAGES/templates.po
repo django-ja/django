@@ -1,0 +1,2490 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 2a9dce3fa26442cfaa6016734545add2
+#: ../../templates.txt:3
+msgid "The Django template language: For template authors"
+msgstr ""
+
+# 3f5061b90fad4994b5167ee1b29b3882
+#: ../../templates.txt:5
+msgid ""
+"Django's template language is designed to strike a balance between power and "
+"ease. It's designed to feel comfortable to those used to working with HTML. "
+"If you have any exposure to other text-based template languages, such as "
+"Smarty_ or CheetahTemplate_, you should feel right at home with Django's "
+"templates."
+msgstr ""
+
+# 4404eb8cec9c4aa6afd91cf3349c691d
+#: ../../templates.txt:14
+msgid "Templates"
+msgstr ""
+
+# 7f31a42b0d1f4f32a13a8d4d5eb1fa70
+#: ../../templates.txt:16
+msgid ""
+"A template is simply a text file. It can generate any text-based format "
+"(HTML, XML, CSV, etc.)."
+msgstr ""
+
+# 704f654d64334a388730bad54a28b2a1
+#: ../../templates.txt:19
+msgid ""
+"A template contains **variables**, which get replaced with values when the "
+"template is evaluated, and **tags**, which control the logic of the template."
+msgstr ""
+
+# 5bfdd5ebc6b545d189a86bd812cb36a7
+#: ../../templates.txt:22
+msgid ""
+"Below is a minimal template that illustrates a few basics. Each element will "
+"be explained later in this document.::"
+msgstr ""
+
+# 7b56a97d18e247269994c1d651d2cfc4
+#: ../../templates.txt:44
+msgid ""
+"Why use a text-based template instead of an XML-based one (like Zope's TAL)? "
+"We wanted Django's template language to be usable for more than just XML/"
+"HTML templates. At World Online, we use it for e-mails, JavaScript and CSV. "
+"You can use the template language for any text-based format."
+msgstr ""
+
+# 44e30910e2db43f489f8396e8f508869
+#: ../../templates.txt:50
+msgid "Oh, and one more thing: Making humans edit XML is sadistic!"
+msgstr ""
+
+# 5574c937165f4edb86a4cc21b3a15e36
+#: ../../templates.txt:53
+msgid "Variables"
+msgstr ""
+
+# 106878a3f28a48d99288ed9b34218df9
+#: ../../templates.txt:55
+msgid ""
+"Variables look like this: ``{{ variable }}``. When the template engine "
+"encounters a variable, it evaluates that variable and replaces it with the "
+"result."
+msgstr ""
+
+# 8899b6ec3a364bebb2c4a15784c8c87c
+#: ../../templates.txt:59
+msgid "Use a dot (``.``) to access attributes of a variable."
+msgstr ""
+
+# f05924c6c0894d209dddcd078113f9af
+#: ../../templates.txt:63
+msgid ""
+"Technically, when the template system encounters a dot, it tries the "
+"following lookups, in this order:"
+msgstr ""
+
+# 980148a9ae1e4669853bae8b737068c3
+#: ../../templates.txt:66
+msgid "Dictionary lookup"
+msgstr ""
+
+# 18a0ab4c76604bfca6fb2748082aba33
+#: ../../templates.txt:67
+msgid "Attribute lookup"
+msgstr ""
+
+# d3467eb5f55f4263b6a0a8f791783584
+#: ../../templates.txt:68
+msgid "Method call"
+msgstr ""
+
+# 9828e1ec3629402bbbc84e142fcda2d9
+#: ../../templates.txt:69
+msgid "List-index lookup"
+msgstr ""
+
+# 9a9ed553b4944f31a583204de9036517
+#: ../../templates.txt:71
+msgid ""
+"In the above example, ``{{ section.title }}`` will be replaced with the "
+"``title`` attribute of the ``section`` object."
+msgstr ""
+
+# 645b6a304304486daa96e7ef208bbff4
+#: ../../templates.txt:74
+msgid ""
+"If you use a variable that doesn't exist, the template system will insert "
+"the value of the ``TEMPLATE_STRING_IF_INVALID`` setting, which is set to "
+"``''`` (the empty string) by default."
+msgstr ""
+
+# 080472ad68164de0be0a24a87b5ba372
+#: ../../templates.txt:78
+msgid ""
+"See `Using the built-in reference`_, below, for help on finding what "
+"variables are available in a given template."
+msgstr ""
+
+# 07237f10d4b447a4b3e81899ea71ddf8
+#: ../../templates.txt:82
+msgid "Filters"
+msgstr ""
+
+# 6baafcd8f56c46b08442ca6cfd84e3e4
+#: ../../templates.txt:84
+msgid "You can modify variables for display by using **filters**."
+msgstr ""
+
+# 34230b385ea04f9a9e4167c330b81556
+#: ../../templates.txt:86
+msgid ""
+"Filters look like this: ``{{ name|lower }}``. This displays the value of the "
+"``{{ name }}`` variable after being filtered through the ``lower`` filter, "
+"which converts text to lowercase. Use a pipe (``|``) to apply a filter."
+msgstr ""
+
+# af8921ead563409c88dc4dd6c5038e55
+#: ../../templates.txt:90
+msgid ""
+"Filters can be \"chained.\" The output of one filter is applied to the next. "
+"``{{ text|escape|linebreaks }}`` is a common idiom for escaping text "
+"contents, then converting line breaks to ``<p>`` tags."
+msgstr ""
+
+# a254e53b915046dc93aa269af250b482
+#: ../../templates.txt:94
+msgid ""
+"Some filters take arguments. A filter argument looks like this: ``{{ bio|"
+"truncatewords:\"30\" }}``. This will display the first 30 words of the "
+"``bio`` variable. Filter arguments always are in double quotes."
+msgstr ""
+
+# 9117b8552afb4f9a9356533bea34fa27
+#: ../../templates.txt:98
+msgid ""
+"The `Built-in filter reference`_ below describes all the built-in filters."
+msgstr ""
+
+# f0051e98a8fe403fae32b5e6733df686
+#: ../../templates.txt:101
+msgid "Tags"
+msgstr ""
+
+# 3c2001bd6fe64eb89e32db7c8864125c
+#: ../../templates.txt:103
+msgid ""
+"Tags look like this: ``{% tag %}``. Tags are more complex than variables: "
+"Some create text in the output, some control flow by performing loops or "
+"logic, and some load external information into the template to be used by "
+"later variables."
+msgstr ""
+
+# 1263c8b835d54b12965090ddaf9dd983
+#: ../../templates.txt:107
+msgid ""
+"Some tags require beginning and ending tags (i.e. ``{% tag %} ... tag "
+"contents ... {% endtag %}``). The `Built-in tag reference`_ below describes "
+"all the built-in tags. You can create your own tags, if you know how to "
+"write Python code."
+msgstr ""
+
+# ffd954d2479c47bca91b8233dd67ad49
+#: ../../templates.txt:113
+msgid "Template inheritance"
+msgstr ""
+
+# b706a3acc34946a89bd425f63fb75a17
+#: ../../templates.txt:115
+msgid ""
+"The most powerful -- and thus the most complex -- part of Django's template "
+"engine is template inheritance. Template inheritance allows you to build a "
+"base \"skeleton\" template that contains all the common elements of your "
+"site and defines **blocks** that child templates can override."
+msgstr ""
+
+# aefc5141c26d4ff0890a2fac1b6b09f7
+#: ../../templates.txt:120
+msgid ""
+"It's easiest to understand template inheritance by starting with an example::"
+msgstr ""
+
+# ac9cbbe0c962414f952429bde0ae3237
+#: ../../templates.txt:145
+msgid ""
+"This template, which we'll call ``base.html``, defines a simple HTML "
+"skeleton document that you might use for a simple two-column page. It's the "
+"job of \"child\" templates to fill the empty blocks with content."
+msgstr ""
+
+# b04056cee48043df8ea1d89445a6af77
+#: ../../templates.txt:149
+msgid ""
+"In this example, the ``{% block %}`` tag defines three blocks that child "
+"templates can fill in. All the ``block`` tag does is to tell the template "
+"engine that a child template may override those portions of the template."
+msgstr ""
+
+# 70c9b5e6dc5a4e0c91e742c2037bf753
+#: ../../templates.txt:153
+msgid "A child template might look like this::"
+msgstr ""
+
+# 92997499717648bca3320dae1d744b1d
+#: ../../templates.txt:166
+msgid ""
+"The ``{% extends %}`` tag is the key here. It tells the template engine that "
+"this template \"extends\" another template. When the template system "
+"evaluates this template, first it locates the parent -- in this case, \"base."
+"html\"."
+msgstr ""
+
+# cea4e1daec0d414f80cbafb316befaa3
+#: ../../templates.txt:170
+msgid ""
+"At that point, the template engine will notice the three ``{% block %}`` "
+"tags in ``base.html`` and replace those blocks with the contents of the "
+"child template. Depending on the value of ``blog_entries``, the output might "
+"look like::"
+msgstr ""
+
+# 3523bf1aaa7c4724bdf0ae4dfb990d57
+#: ../../templates.txt:200
+msgid ""
+"Note that since the child template didn't define the ``sidebar`` block, the "
+"value from the parent template is used instead. Content within a ``{% block "
+"%}`` tag in a parent template is always used as a fallback."
+msgstr ""
+
+# ddc86b3f4a8a4e93a7ee09bd061eea2a
+#: ../../templates.txt:204
+msgid ""
+"You can use as many levels of inheritance as needed. One common way of using "
+"inheritance is the following three-level approach:"
+msgstr ""
+
+# 2c31775fd95e4e568a09398ca16f4a57
+#: ../../templates.txt:207
+msgid ""
+"Create a ``base.html`` template that holds the main look-and-feel of your "
+"site."
+msgstr ""
+
+# 98d4f0fed25e44e1832cb211bf94dce6
+#: ../../templates.txt:209
+msgid ""
+"Create a ``base_SECTIONNAME.html`` template for each \"section\" of your "
+"site. For example, ``base_news.html``, ``base_sports.html``. These templates "
+"all extend ``base.html`` and include section-specific styles/design."
+msgstr ""
+
+# 25b7491a7ad6489ba723870f11da9f59
+#: ../../templates.txt:213
+msgid ""
+"Create individual templates for each type of page, such as a news article or "
+"blog entry. These templates extend the appropriate section template."
+msgstr ""
+
+# 7fa227847ec2449aa8e2e61ce5e23f57
+#: ../../templates.txt:217
+msgid ""
+"This approach maximizes code reuse and makes it easy to add items to shared "
+"content areas, such as section-wide navigation."
+msgstr ""
+
+# 525a4a5074974894aba057d9ff59b228
+#: ../../templates.txt:220
+msgid "Here are some tips for working with inheritance:"
+msgstr ""
+
+# c811447916cb4e2ba1e26cb99fb0b94f
+#: ../../templates.txt:222
+msgid ""
+"If you use ``{% extends %}`` in a template, it must be the first template "
+"tag in that template. Template inheritance won't work, otherwise."
+msgstr ""
+
+# 3fbf8b739de642cd9ea648ef322da1e1
+#: ../../templates.txt:225
+msgid ""
+"More ``{% block %}`` tags in your base templates are better. Remember, child "
+"templates don't have to define all parent blocks, so you can fill in "
+"reasonable defaults in a number of blocks, then only define the ones you "
+"need later. It's better to have more hooks than fewer hooks."
+msgstr ""
+
+# bb62aa408ebb4cde992761cfbc502fd4
+#: ../../templates.txt:230
+msgid ""
+"If you find yourself duplicating content in a number of templates, it "
+"probably means you should move that content to a ``{% block %}`` in a parent "
+"template."
+msgstr ""
+
+# b1db05bdd7fa474992d1ec6260c52dcc
+#: ../../templates.txt:234
+msgid ""
+"If you need to get the content of the block from the parent template, the ``"
+"{{ block.super }}`` variable will do the trick. This is useful if you want "
+"to add to the contents of a parent block instead of completely overriding it."
+msgstr ""
+
+# a083266af71f47648bb859272d3dd9af
+#: ../../templates.txt:239
+msgid ""
+"Finally, note that you can't define multiple ``{% block %}`` tags with the "
+"same name in the same template. This limitation exists because a block tag "
+"works in \"both\" directions. That is, a block tag doesn't just provide a "
+"hole to fill -- it also defines the content that fills the hole in the "
+"*parent*. If there were two similarly-named ``{% block %}`` tags in a "
+"template, that template's parent wouldn't know which one of the blocks' "
+"content to use."
+msgstr ""
+
+# bc2608b0e000499c8e36c317977faffe
+#: ../../templates.txt:247
+msgid "Using the built-in reference"
+msgstr ""
+
+# e5b1c2ca7eef406abee41cef6d4f980b
+#: ../../templates.txt:249
+msgid ""
+"Django's admin interface includes a complete reference of all template tags "
+"and filters available for a given site. To see it, go to your admin "
+"interface and click the \"Documentation\" link in the upper right of the "
+"page."
+msgstr ""
+
+# 25fad0868cac42d888a408d37b894360
+#: ../../templates.txt:253
+msgid ""
+"The reference is divided into 4 sections: tags, filters, models, and views."
+msgstr ""
+
+# f2ed3511827b4db8a88236100ffbbfd9
+#: ../../templates.txt:255
+msgid ""
+"The **tags** and **filters** sections describe all the built-in tags (in "
+"fact, the tag and filter references below come directly from those pages) as "
+"well as any custom tag or filter libraries available."
+msgstr ""
+
+# 9cebf46012c642efba45fc14ee154cd5
+#: ../../templates.txt:259
+msgid ""
+"The **views** page is the most valuable. Each URL in your site has a "
+"separate entry here, and clicking on a URL will show you:"
+msgstr ""
+
+# 5b4b1c006acd4088bd75928e19e05e3c
+#: ../../templates.txt:262
+msgid "The name of the view function that generates that view."
+msgstr ""
+
+# f060d95f4f2042c7905c544035926b77
+#: ../../templates.txt:263
+msgid "A short description of what the view does."
+msgstr ""
+
+# c1251692bc3e4c57a1b9a73b7927003c
+#: ../../templates.txt:264
+msgid ""
+"The **context**, or a list of variables available in the view's template."
+msgstr ""
+
+# 4f2d3c368fff485c856f30d631b4ee84
+#: ../../templates.txt:265
+msgid "The name of the template or templates that are used for that view."
+msgstr ""
+
+# 2ecdd72ec62342f193f091eb3a30589d
+#: ../../templates.txt:267
+msgid ""
+"Each view documentation page also has a bookmarklet that you can use to jump "
+"from any page to the documentation page for that view."
+msgstr ""
+
+# 6bdf2a6d0dc94ce8aeed06e3e3be87a5
+#: ../../templates.txt:270
+msgid ""
+"Because Django-powered sites usually use database objects, the **models** "
+"section of the documentation page describes each type of object in the "
+"system along with all the fields available on that object."
+msgstr ""
+
+# 8f051dbb30724e009778435acb718608
+#: ../../templates.txt:274
+msgid ""
+"Taken together, the documentation pages should tell you every tag, filter, "
+"variable and object available to you in a given template."
+msgstr ""
+
+# 4404fc65c93a4a35a06b83fdc9996741
+#: ../../templates.txt:278
+msgid "Custom tag and filter libraries"
+msgstr ""
+
+# 89bcc9b2494942dab2da81b618610fae
+#: ../../templates.txt:280
+msgid ""
+"Certain applications provide custom tag and filter libraries. To access them "
+"in a template, use the ``{% load %}`` tag::"
+msgstr ""
+
+# 844a90429a29417da800b556036eddd9
+#: ../../templates.txt:287
+msgid ""
+"In the above, the ``load`` tag loads the ``comments`` tag library, which "
+"then makes the ``comment_form`` tag available for use. Consult the "
+"documentation area in your admin to find the list of custom libraries in "
+"your installation."
+msgstr ""
+
+# 39e10d1af9d249b4b9c31caf268a162e
+#: ../../templates.txt:291
+msgid ""
+"The ``{% load %}`` tag can take multiple library names, separated by spaces. "
+"Example::"
+msgstr ""
+
+# 02919827c2104998b93f88d1559ad8b3
+#: ../../templates.txt:297
+msgid "Custom libraries and template inheritance"
+msgstr ""
+
+# 4a2141d1b3a5459bac23269735be9a53
+#: ../../templates.txt:299
+msgid ""
+"When you load a custom tag or filter library, the tags/filters are only made "
+"available to the current template -- not any parent or child templates along "
+"the template-inheritance path."
+msgstr ""
+
+# 8d60edadacab497188a0b87a5a22a338
+#: ../../templates.txt:303
+msgid ""
+"For example, if a template ``foo.html`` has ``{% load comments %}``, a child "
+"template (e.g., one that has ``{% extends \"foo.html\" %}``) will *not* have "
+"access to the comments template tags and filters. The child template is "
+"responsible for its own ``{% load comments %}``."
+msgstr ""
+
+# 947d33f0fee042b9bef707d0556bbc10
+#: ../../templates.txt:308
+msgid "This is a feature for the sake of maintainability and sanity."
+msgstr ""
+
+# f82b6f04f1474ea693ff5bba203058a9
+#: ../../templates.txt:311
+msgid "Built-in tag and filter reference"
+msgstr ""
+
+# 0aa9bf78d6604cd9ba2c3b68eaca5ef3
+#: ../../templates.txt:313
+msgid ""
+"For those without an admin site available, reference for the stock tags and "
+"filters follows. Because Django is highly customizable, the reference in "
+"your admin should be considered the final word on what tags and filters are "
+"available, and what they do."
+msgstr ""
+
+# 1cef5dbbb0ef466c978101ac655bbc74
+#: ../../templates.txt:319
+msgid "Built-in tag reference"
+msgstr ""
+
+# 858a6152db6348dfbf22829be860f1e9
+#: ../../templates.txt:322
+msgid "block"
+msgstr ""
+
+# f7b3febbf5cc426e94bd85a9ee60d4a9
+#: ../../templates.txt:324
+msgid ""
+"Define a block that can be overridden by child templates. See `Template "
+"inheritance`_ for more information."
+msgstr ""
+
+# a61204737476411ea8d76779adb135a8
+#: ../../templates.txt:328
+msgid "comment"
+msgstr ""
+
+# 1f612d82bd6d4c899dfe384735e00131
+#: ../../templates.txt:330
+msgid "Ignore everything between ``{% comment %}`` and ``{% endcomment %}``"
+msgstr ""
+
+# 2cbc1fe2e1e24836a9bb7e27b73d54c7
+#: ../../templates.txt:333
+msgid "cycle"
+msgstr ""
+
+# 7203e7927ebb4c7abd57d6bf9ed1cac4
+#: ../../templates.txt:335
+msgid "Cycle among the given strings each time this tag is encountered."
+msgstr ""
+
+# 55b267175f5b44de85b89ecc5089ec76
+#: ../../templates.txt:337
+msgid ""
+"Within a loop, cycles among the given strings each time through the loop::"
+msgstr ""
+
+# d9d2e11b864b4474ab26319dd319bd77
+#: ../../templates.txt:345
+msgid ""
+"Outside of a loop, give the values a unique name the first time you call it, "
+"then use that name each successive time through::"
+msgstr ""
+
+# dba51d56bc4040d484d9159fefd3ec0a
+#: ../../templates.txt:352
+msgid ""
+"You can use any number of values, separated by commas. Make sure not to put "
+"spaces between the values -- only commas."
+msgstr ""
+
+# 75a5a2d4ece44075b92d9dd20ab50886
+#: ../../templates.txt:356
+msgid "debug"
+msgstr ""
+
+# 21a4b5388bac4bb1bbacb5d47031b486
+#: ../../templates.txt:358
+msgid ""
+"Output a whole load of debugging information, including the current context "
+"and imported modules."
+msgstr ""
+
+# a4c2b07ec5fe4113a11ec223d97a5e3a
+#: ../../templates.txt:362
+msgid "extends"
+msgstr ""
+
+# 75e0302f2d114dcdbdbbda6bf6a94a8b
+#: ../../templates.txt:364
+msgid "Signal that this template extends a parent template."
+msgstr ""
+
+# fa76f2fb2c9947e0851ff960475cca19
+#: ../../templates.txt:366
+msgid "This tag can be used in two ways:"
+msgstr ""
+
+# 81da3eef6a0944b7bfe11e00d6ceeec9
+#: ../../templates.txt:368
+msgid ""
+"``{% extends \"base.html\" %}`` (with quotes) uses the literal value ``"
+"\"base.html\"`` as the name of the parent template to extend."
+msgstr ""
+
+# 9c16adb970804fc0927ef683f34a8a81
+#: ../../templates.txt:371
+msgid ""
+"``{% extends variable %}`` uses the value of ``variable``. If the variable "
+"evaluates to a string, Django will use that string as the name of the parent "
+"template. If the variable evaluates to a ``Template`` object, Django will "
+"use that object as the parent template."
+msgstr ""
+
+# 395b9201d95344ad99982bf4d10dcf80
+#: ../../templates.txt:376
+msgid "See `Template inheritance`_ for more information."
+msgstr ""
+
+# c555a842cef5468a93449b3803c7f76c
+#: ../../templates.txt:379
+msgid "filter"
+msgstr ""
+
+# 6de46252d0fd484bb1dbf5ee5c479dc8
+#: ../../templates.txt:381
+msgid "Filter the contents of the variable through variable filters."
+msgstr ""
+
+# 97c8fedf3c2a4739bf06a679d5e3fd2d
+#: ../../templates.txt:383
+msgid ""
+"Filters can also be piped through each other, and they can have arguments -- "
+"just like in variable syntax."
+msgstr ""
+
+# 6be30ce5eadb460f8df7e57ba1907264
+# b45e0f2edcde452bbc939b56130676ba
+#: ../../templates.txt:386 ../../templates.txt:398
+msgid "Sample usage::"
+msgstr ""
+
+# a653a0061ceb46389eb487e450ace79a
+#: ../../templates.txt:393
+msgid "firstof"
+msgstr ""
+
+# f08317f691014e35be9a3d7c3a70b96b
+#: ../../templates.txt:395
+msgid ""
+"Outputs the first variable passed that is not False.  Outputs nothing if all "
+"the passed variables are False."
+msgstr ""
+
+# 4478fd1b0bce4ceba2adcf38b410c61e
+#: ../../templates.txt:402
+msgid "This is equivalent to::"
+msgstr ""
+
+# e840b4260d434ec0907416d6ff257312
+#: ../../templates.txt:413
+msgid "for"
+msgstr ""
+
+# ecadbdfa2ead478a868d3466876acb44
+#: ../../templates.txt:415
+msgid ""
+"Loop over each item in an array.  For example, to display a list of athletes "
+"given ``athlete_list``::"
+msgstr ""
+
+# 365f1f7bbec44945a92719bdf0496f4f
+#: ../../templates.txt:424
+msgid ""
+"You can also loop over a list in reverse by using ``{% for obj in list "
+"reversed %}``."
+msgstr ""
+
+# b477e6db08e2466ea0ffb7e87261a065
+#: ../../templates.txt:426
+msgid "The for loop sets a number of variables available within the loop:"
+msgstr ""
+
+# a0727e69e4b949579fa3ab627ef354b8
+#: ../../templates.txt:429
+msgid "Variable"
+msgstr ""
+
+# 60bf3763359042d59af5ee8a5932035b
+# 6e1346178d22413494bb0be652446883
+#: ../../templates.txt:429 ../../templates.txt:596
+msgid "Description"
+msgstr ""
+
+# 4416d07848fc4366b700c529076a9989
+#: ../../templates.txt:431
+msgid "``forloop.counter``"
+msgstr ""
+
+# 4646ee16a1bd41ba9a2f39a588e9c026
+#: ../../templates.txt:431
+msgid "The current iteration of the loop (1-indexed)"
+msgstr ""
+
+# 27f549881052444595df0e4ebd6e0c61
+#: ../../templates.txt:432
+msgid "``forloop.counter0``"
+msgstr ""
+
+# f5acb0f8d05c470b8873a0ec93b071f2
+#: ../../templates.txt:432
+msgid "The current iteration of the loop (0-indexed)"
+msgstr ""
+
+# bdcd36421fe94933a26b04418c88aa22
+#: ../../templates.txt:433
+msgid "``forloop.revcounter``"
+msgstr ""
+
+# 0dcbbdc4c10f4d2da33ed66159cafc3c
+#: ../../templates.txt:433
+msgid "The number of iterations from the end of the loop (1-indexed)"
+msgstr ""
+
+# a542d350133f43d3958e0d63ea3dd01f
+#: ../../templates.txt:435
+msgid "``forloop.revcounter0``"
+msgstr ""
+
+# 0a6e9ebda765443894917ba324185bc3
+#: ../../templates.txt:435
+msgid "The number of iterations from the end of the loop (0-indexed)"
+msgstr ""
+
+# 72f5c21c060549d8b16b8c60f04414ad
+#: ../../templates.txt:437
+msgid "``forloop.first``"
+msgstr ""
+
+# b98c80daba414eed8b94da6d80899987
+#: ../../templates.txt:437
+msgid "True if this is the first time through the loop"
+msgstr ""
+
+# f31f911e2fa64e22a22898c6cb7cc8e0
+#: ../../templates.txt:438
+msgid "``forloop.last``"
+msgstr ""
+
+# 7eba04b49fc2480a935ec278e959c224
+#: ../../templates.txt:438
+msgid "True if this is the last time through the loop"
+msgstr ""
+
+# 51f48994618647cebeefbf6165899776
+#: ../../templates.txt:439
+msgid "``forloop.parentloop``"
+msgstr ""
+
+# 49e2119029d347798bcddfc9c8c618ae
+#: ../../templates.txt:439
+msgid "For nested loops, this is the loop \"above\" the current one"
+msgstr ""
+
+# f2ea5bd6404b4a2ba9e2ce33b6cd6a58
+#: ../../templates.txt:444
+msgid "if"
+msgstr ""
+
+# d6748e4ce6b54a2ea6caea3d0ba1dbce
+#: ../../templates.txt:446
+msgid ""
+"The ``{% if %}`` tag evaluates a variable, and if that variable is \"true"
+"\" (i.e. exists, is not empty, and is not a false boolean value) the "
+"contents of the block are output::"
+msgstr ""
+
+# 28eb1e4031eb42e49d51e392ee5d6480
+#: ../../templates.txt:456
+msgid ""
+"In the above, if ``athlete_list`` is not empty, the number of athletes will "
+"be displayed by the ``{{ athlete_list|length }}`` variable."
+msgstr ""
+
+# 22e600e14fe0480e9a9883d086a05845
+#: ../../templates.txt:459
+msgid ""
+"As you can see, the ``if`` tag can take an option ``{% else %}`` clause that "
+"will be displayed if the test fails."
+msgstr ""
+
+# e2d0fd21214f48dc8c29b105943adb45
+#: ../../templates.txt:462
+msgid ""
+"``if`` tags may use ``and``, ``or`` or ``not`` to test a number of variables "
+"or to negate a given variable::"
+msgstr ""
+
+# 5adb328dea0c436cb8d44d2ce55a002c
+#: ../../templates.txt:487
+msgid ""
+"``if`` tags don't allow ``and`` and ``or`` clauses within the same tag, "
+"because the order of logic would be ambiguous. For example, this is invalid::"
+msgstr ""
+
+# 5858a85840684e77a3ea3bee142aa5e9
+#: ../../templates.txt:492
+msgid ""
+"If you need to combine ``and`` and ``or`` to do advanced logic, just use "
+"nested ``if`` tags. For example::"
+msgstr ""
+
+# 6e10e4c497254bd1a0d6181a8ef45f8f
+#: ../../templates.txt:501
+msgid ""
+"Multiple uses of the same logical operator are fine, as long as you use the "
+"same operator. For example, this is valid::"
+msgstr ""
+
+# d7bd4457c4f946029725a51940b1cdcd
+#: ../../templates.txt:507
+msgid "ifchanged"
+msgstr ""
+
+# 15ec120ce7a04d2eb42efd80cdad1a2e
+#: ../../templates.txt:509
+msgid "Check if a value has changed from the last iteration of a loop."
+msgstr ""
+
+# c56ae7c34c4a4279a168efc050ab8591
+#: ../../templates.txt:511
+msgid ""
+"The ``ifchanged`` block tag is used within a loop. It checks its own "
+"rendered contents against its previous state and only displays its content "
+"if the value has changed::"
+msgstr ""
+
+# 8e5eb7db99a34fbe9919a7554dd33b75
+#: ../../templates.txt:523
+msgid "ifequal"
+msgstr ""
+
+# f3271ddd99ac4c6a893842c70be4ba4c
+#: ../../templates.txt:525
+msgid "Output the contents of the block if the two arguments equal each other."
+msgstr ""
+
+# 4847bd325382476d99f56ef1db925934
+# b4da8a2f196946679a1f6043ac187cd5
+# e74d1107aa214cda86198147d42d1451
+# e74d1107aa214cda86198147d42d1451
+# e74d1107aa214cda86198147d42d1451
+#: ../../templates.txt:527 ../../templates.txt:654 ../../templates.txt:964
+#: ../../templates.txt:971 ../../templates.txt:978
+msgid "Example::"
+msgstr ""
+
+# f18b3a4f9d64491bafd8d1fedca37d8d
+#: ../../templates.txt:533
+msgid "As in the ``{% if %}`` tag, an ``{% else %}`` clause is optional."
+msgstr ""
+
+# 1245de832d2443508a15639d406f60d7
+#: ../../templates.txt:535
+msgid "The arguments can be hard-coded strings, so the following is valid::"
+msgstr ""
+
+# 984b4abf1d8e46d9a15816422c7b99a1
+#: ../../templates.txt:542
+msgid "ifnotequal"
+msgstr ""
+
+# 738d8b90ab6448f190a9d85019bd7bcf
+#: ../../templates.txt:544
+msgid ""
+"Just like ``ifequal``, except it tests that the two arguments are not equal."
+msgstr ""
+
+# 06c30ae3b05c4e81bc7890a3254ef0e4
+#: ../../templates.txt:547
+msgid "include"
+msgstr ""
+
+# 764b800e466c4a00a638924333863cab
+#: ../../templates.txt:549
+msgid ""
+"Loads a template and renders it with the current context. This is a way of "
+"\"including\" other templates within a template."
+msgstr ""
+
+# d6cefa518c8244a09d85885883398e9d
+#: ../../templates.txt:552
+msgid ""
+"The template name can either be a variable or a hard-coded (quoted) string, "
+"in either single or double quotes."
+msgstr ""
+
+# 169d31fb4d564747948103197a2e48a0
+#: ../../templates.txt:555
+msgid ""
+"This example includes the contents of the template ``\"foo/bar.html\"``::"
+msgstr ""
+
+# e68920f6ecbb4ee08a062e98857b3200
+#: ../../templates.txt:559
+msgid ""
+"This example includes the contents of the template whose name is contained "
+"in the variable ``template_name``::"
+msgstr ""
+
+# bf67e7d7841a4d7c960ec4d1eb98d507
+#: ../../templates.txt:564
+msgid ""
+"An included template is rendered with the context of the template that's "
+"including it. This example produces the output ``\"Hello, John\"``:"
+msgstr ""
+
+# c552acd4df02487abb2c5f46d00a40c6
+#: ../../templates.txt:567
+msgid "Context: variable ``person`` is set to ``\"john\"``."
+msgstr ""
+
+# 8199da2fcd0a46f1a60500b9a6fd4397
+#: ../../templates.txt:568
+msgid "Template::"
+msgstr ""
+
+# cfcc4282abe340b0a1b2b5733417fc33
+#: ../../templates.txt:572
+msgid "The ``name_snippet.html`` template::"
+msgstr ""
+
+# 13170dcd9b2546bdba50116e855aef53
+#: ../../templates.txt:576
+msgid "See also: ``{% ssi %}``."
+msgstr ""
+
+# 88b904598a5249d28688b178703cf047
+#: ../../templates.txt:579
+msgid "load"
+msgstr ""
+
+# f11d8c432a1748318bd299f0cae56845
+#: ../../templates.txt:581
+msgid "Load a custom template tag set."
+msgstr ""
+
+# 747c1c0203bc4f4481d7ca27beca7e22
+#: ../../templates.txt:583
+msgid "See `Custom tag and filter libraries`_ for more information."
+msgstr ""
+
+# fa75b7b6cdfb49c28d61d1c99d097249
+#: ../../templates.txt:586
+msgid "now"
+msgstr ""
+
+# 516eb21ce63143aaa57b130e327fe887
+#: ../../templates.txt:588
+msgid "Display the date, formatted according to the given string."
+msgstr ""
+
+# e14cce6e195d44faac8ef92f1a89400b
+#: ../../templates.txt:590
+msgid ""
+"Uses the same format as PHP's ``date()`` function (http://php.net/date) with "
+"some custom extensions."
+msgstr ""
+
+# 8897c1a320c84bbba1f37dde864901d7
+#: ../../templates.txt:593
+msgid "Available format strings:"
+msgstr ""
+
+# 3aef08f9cc534dbf8e61217dea485da1
+#: ../../templates.txt:596
+msgid "Format character"
+msgstr ""
+
+# 015bbe5a424448309e60a809d85f2621
+#: ../../templates.txt:596
+msgid "Example output"
+msgstr ""
+
+# de88c21301644fa1a0109730cadfaabd
+#: ../../templates.txt:598
+msgid "a"
+msgstr ""
+
+# a7eaa01bbc604a3da5e1998b2b650ec2
+#: ../../templates.txt:598
+msgid ""
+"``'a.m.'`` or ``'p.m.'`` (Note that this is slightly different than PHP's "
+"output, because this includes periods to match Associated Press style.)"
+msgstr ""
+
+# 811b2dd0ae3d4c9d9f824ab02a1917b8
+#: ../../templates.txt:598
+msgid "``'a.m.'``"
+msgstr ""
+
+# 6cea88ccefd442f69ea97504e55afb37
+#: ../../templates.txt:602
+msgid "A"
+msgstr ""
+
+# 1fad933bc82642fab0f1113c6859156c
+#: ../../templates.txt:602
+msgid "``'AM'`` or ``'PM'``."
+msgstr ""
+
+# 475ee28977354fa79af02db479214c20
+#: ../../templates.txt:602
+msgid "``'AM'``"
+msgstr ""
+
+# 12f467d9a039468990692092cd60dcf7
+#: ../../templates.txt:603
+msgid "B"
+msgstr ""
+
+# a0ff897cf7bc44f780b7fc267537ffa5
+# d5a4f5cd3e4b40a5bac992d2661fe002
+# 11fc1ebddf06480aa70992ace3591659
+#: ../../templates.txt:603 ../../templates.txt:618 ../../templates.txt:640
+msgid "Not implemented."
+msgstr ""
+
+# 76d9d2981cdd4917b4a0c788df39f514
+#: ../../templates.txt:604
+msgid "d"
+msgstr ""
+
+# a933a4049df143c9a68055fefb2b39ec
+#: ../../templates.txt:604
+msgid "Day of the month, 2 digits with leading zeros."
+msgstr ""
+
+# bfb027a17f344752a11e45958d766b4d
+#: ../../templates.txt:604
+msgid "``'01'`` to ``'31'``"
+msgstr ""
+
+# edb123c99c534230be227bde4c212c0a
+#: ../../templates.txt:606
+msgid "D"
+msgstr ""
+
+# 22509101ef184e02862e29448ddaa34e
+#: ../../templates.txt:606
+msgid "Day of the week, textual, 3 letters."
+msgstr ""
+
+# 3f570e39f19c455ca5ab073feb5355c3
+#: ../../templates.txt:606
+msgid "``'Fri'``"
+msgstr ""
+
+# 72548cf2e3a24568890cd5b6fc877b4b
+#: ../../templates.txt:607
+msgid "f"
+msgstr ""
+
+# 373fcccf2fa5482dad44843bbd045264
+#: ../../templates.txt:607
+msgid ""
+"Time, in 12-hour hours and minutes, with minutes left off if they're zero. "
+"Proprietary extension."
+msgstr ""
+
+# 1fcc556fae5741c0bb9e9781cda68ee2
+#: ../../templates.txt:607
+msgid "``'1'``, ``'1:30'``"
+msgstr ""
+
+# 62d17688c6974c96bb0433df84427504
+#: ../../templates.txt:610
+msgid "F"
+msgstr ""
+
+# 9325f6952af04263b25d846c1727b73c
+#: ../../templates.txt:610
+msgid "Month, textual, long."
+msgstr ""
+
+# 461fa6132ff34d92b728dbc27ff4cba1
+#: ../../templates.txt:610
+msgid "``'January'``"
+msgstr ""
+
+# ec5b826f76a4482bb754f2f986c4e855
+#: ../../templates.txt:611
+msgid "g"
+msgstr ""
+
+# ca711a2701ce45de955a200186548839
+#: ../../templates.txt:611
+msgid "Hour, 12-hour format without leading zeros."
+msgstr ""
+
+# ca3e478e3d21493b815ba6185733e63d
+# a5f4b70cbd7a441d8bd5cc9b67af8cc7
+#: ../../templates.txt:611 ../../templates.txt:625
+msgid "``'1'`` to ``'12'``"
+msgstr ""
+
+# f930078d767146d69d2ed3111dc43629
+#: ../../templates.txt:613
+msgid "G"
+msgstr ""
+
+# 243e64148a4641f59dc43f969dfca961
+#: ../../templates.txt:613
+msgid "Hour, 24-hour format without leading zeros."
+msgstr ""
+
+# c50e4238c2a24a159e81d1dec89e4cd7
+#: ../../templates.txt:613
+msgid "``'0'`` to ``'23'``"
+msgstr ""
+
+# 04e5c7d12b7f4377853603971673bec7
+#: ../../templates.txt:615
+msgid "h"
+msgstr ""
+
+# 60f72cb1e5b142b5964299561439f18c
+#: ../../templates.txt:615
+msgid "Hour, 12-hour format."
+msgstr ""
+
+# 4bcfd3be97af463db0d5ca8808b04fc7
+# b957e80c852147ea84b8fc7023760c81
+#: ../../templates.txt:615 ../../templates.txt:623
+msgid "``'01'`` to ``'12'``"
+msgstr ""
+
+# dfd9fc92afb7412f97837af892010c17
+#: ../../templates.txt:616
+msgid "H"
+msgstr ""
+
+# 31cc253d6c35499c8900e386665ba432
+#: ../../templates.txt:616
+msgid "Hour, 24-hour format."
+msgstr ""
+
+# df5d24c64a2341f0b8de9ff27f0014f8
+#: ../../templates.txt:616
+msgid "``'00'`` to ``'23'``"
+msgstr ""
+
+# 763207e0b92b448dbae3e1d0205c5683
+#: ../../templates.txt:617
+msgid "i"
+msgstr ""
+
+# df98aca9b4db496097cb23167870ee7a
+#: ../../templates.txt:617
+msgid "Minutes."
+msgstr ""
+
+# 136c008e23c9420f84d14ab4440b9e96
+# 15c0b918d9ad44a597f5d08783f1c6ae
+#: ../../templates.txt:617 ../../templates.txt:635
+msgid "``'00'`` to ``'59'``"
+msgstr ""
+
+# 185ce8431f0b4fc994bc793486e4d787
+#: ../../templates.txt:618
+msgid "I"
+msgstr ""
+
+# f597d59f8dc349eeb2f27d7fddb554b0
+#: ../../templates.txt:619
+msgid "j"
+msgstr ""
+
+# bb3729e95c6e4398a5e5c79c727cb01e
+#: ../../templates.txt:619
+msgid "Day of the month without leading zeros."
+msgstr ""
+
+# 6eb24da9069f412dbc1c1a437d342bb9
+#: ../../templates.txt:619
+msgid "``'1'`` to ``'31'``"
+msgstr ""
+
+# d07a42483bdf4a83b0c72a73162dc8e9
+#: ../../templates.txt:621
+msgid "l"
+msgstr ""
+
+# 11ba9b8ac87e444ea09735eaebb045d4
+#: ../../templates.txt:621
+msgid "Day of the week, textual, long."
+msgstr ""
+
+# 70573172793046ea826b8fbf2f82007a
+#: ../../templates.txt:621
+msgid "``'Friday'``"
+msgstr ""
+
+# 422534fc789d4f919041ff8e79a18647
+#: ../../templates.txt:622
+msgid "L"
+msgstr ""
+
+# 1099e9a7cf7a4e88835f544e38064353
+#: ../../templates.txt:622
+msgid "Boolean for whether it's a leap year."
+msgstr ""
+
+# 77b3a3b4e4d149418bb86f50df044061
+#: ../../templates.txt:622
+msgid "``True`` or ``False``"
+msgstr ""
+
+# c697533d38fd451a8cbd735c4ab40c1a
+#: ../../templates.txt:623
+msgid "m"
+msgstr ""
+
+# 69131c3e543d446bb3954088ecb8ad8e
+#: ../../templates.txt:623
+msgid "Month, 2 digits with leading zeros."
+msgstr ""
+
+# a96b6f17a9024b2fa07e2d41fe570702
+#: ../../templates.txt:624
+msgid "M"
+msgstr ""
+
+# 70bcc49cbf90426d8a609e4a9ce2c245
+#: ../../templates.txt:624
+msgid "Month, textual, 3 letters."
+msgstr ""
+
+# a767660ed7da45bea612a91e39c2e066
+#: ../../templates.txt:624
+msgid "``'Jan'``"
+msgstr ""
+
+# 8a34956f2f5e416b8a97d41ae834fd4a
+#: ../../templates.txt:625
+msgid "n"
+msgstr ""
+
+# beaadd90b66445c2a2b26dfcd46a0341
+#: ../../templates.txt:625
+msgid "Month without leading zeros."
+msgstr ""
+
+# 64d5fdf3103c4b69af7459b1a9e0393f
+#: ../../templates.txt:626
+msgid "N"
+msgstr ""
+
+# d3a723f814ce4ed1a76cf85e7b299653
+#: ../../templates.txt:626
+msgid "Month abbreviation in Associated Press style. Proprietary extension."
+msgstr ""
+
+# 51c18f3d40fc4c81aa41577be2ef49e1
+#: ../../templates.txt:626
+msgid "``'Jan.'``, ``'Feb.'``, ``'March'``, ``'May'``"
+msgstr ""
+
+# 8236dc5a02c14bd3a7ca28a31249011e
+#: ../../templates.txt:628
+msgid "O"
+msgstr ""
+
+# 1d5948eedf8f4738959f6c1604010cff
+#: ../../templates.txt:628
+msgid "Difference to Greenwich time in hours."
+msgstr ""
+
+# 5761a9d2dc6941539e607c013bbaf136
+#: ../../templates.txt:628
+msgid "``'+0200'``"
+msgstr ""
+
+# ff23941c39e741bb91faf524a7460a91
+#: ../../templates.txt:629
+msgid "P"
+msgstr ""
+
+# 2864ce3b70f74e15936a0a855e5827e9
+#: ../../templates.txt:629
+msgid ""
+"Time, in 12-hour hours, minutes and 'a.m.'/'p.m.', with minutes left off if "
+"they're zero and the special-case strings 'midnight' and 'noon' if "
+"appropriate. Proprietary extension."
+msgstr ""
+
+# e6e87232ff5142b7b409e19e05ce209f
+#: ../../templates.txt:629
+msgid ""
+"``'1 a.m.'``, ``'1:30 p.m.'``, ``'midnight'``, ``'noon'``, ``'12:30 p.m.'``"
+msgstr ""
+
+# aab9e4fbe19c4eaaa2f219aba21dcafa
+#: ../../templates.txt:634
+msgid "r"
+msgstr ""
+
+# 9ef36fae2778431c998950552c136410
+#: ../../templates.txt:634
+msgid "RFC 822 formatted date."
+msgstr ""
+
+# 03527edef67c4f39808f41cf8898dd73
+#: ../../templates.txt:634
+msgid "``'Thu, 21 Dec 2000 16:01:07 +0200'``"
+msgstr ""
+
+# c3ad66aec2fa4bb29266ab8544a2ba79
+#: ../../templates.txt:635
+msgid "s"
+msgstr ""
+
+# 83e9cc36c68049819ec03bfc7ddd669a
+#: ../../templates.txt:635
+msgid "Seconds, 2 digits with leading zeros."
+msgstr ""
+
+# 5991b7ceea064af7887abd030ace831c
+#: ../../templates.txt:636
+msgid "S"
+msgstr ""
+
+# 1207eecfad7d4d38abbd370e83cf1278
+#: ../../templates.txt:636
+msgid "English ordinal suffix for day of the month, 2 characters."
+msgstr ""
+
+# 8d323dbff3a947eb85b098ddf39382b8
+#: ../../templates.txt:636
+msgid "``'st'``, ``'nd'``, ``'rd'`` or ``'th'``"
+msgstr ""
+
+# df9a92a812d644a888c2c361413ba94e
+#: ../../templates.txt:638
+msgid "t"
+msgstr ""
+
+# 359e678946ad41a2a51609e12447de07
+#: ../../templates.txt:638
+msgid "Number of days in the given month."
+msgstr ""
+
+# 00dd6c32ba7a4d759c45f5129cb2ad03
+#: ../../templates.txt:638
+msgid "``28`` to ``31``"
+msgstr ""
+
+# 3ab618e72b794c769298ff4b580d5827
+#: ../../templates.txt:639
+msgid "T"
+msgstr ""
+
+# 844179ead46d4c2d8284a14b5287b88c
+#: ../../templates.txt:639
+msgid "Time zone of this machine."
+msgstr ""
+
+# 4f23dc664d884de1a7b7e1fcffd604cf
+#: ../../templates.txt:639
+msgid "``'EST'``, ``'MDT'``"
+msgstr ""
+
+# df0ff45037574c879d2a85782a26c7ee
+#: ../../templates.txt:640
+msgid "U"
+msgstr ""
+
+# ec68713d35df4e7d8b7e918e536587ca
+#: ../../templates.txt:641
+msgid "w"
+msgstr ""
+
+# a23ce02d023a4b21a2cabf721f5e152e
+#: ../../templates.txt:641
+msgid "Day of the week, digits without leading zeros."
+msgstr ""
+
+# 104504ddf0814fd59bec469a664369f2
+#: ../../templates.txt:641
+msgid "``'0'`` (Sunday) to ``'6'`` (Saturday)"
+msgstr ""
+
+# 97ab9c8fbd0e48a58fba8e257af0d820
+#: ../../templates.txt:643
+msgid "W"
+msgstr ""
+
+# 176ccaa4e4de411f83eaeec84df2a37d
+#: ../../templates.txt:643
+msgid "ISO-8601 week number of year, with weeks starting on Monday."
+msgstr ""
+
+# 1d7f33793faf43b1a3edab8f57f6f23e
+#: ../../templates.txt:643
+msgid "``1``, ``23``"
+msgstr ""
+
+# 91364e9140ae4802a4bdf8f0e2afa65e
+#: ../../templates.txt:645
+msgid "y"
+msgstr ""
+
+# ac9166d053284966953ec9567472524e
+#: ../../templates.txt:645
+msgid "Year, 2 digits."
+msgstr ""
+
+# 879759b1386c4802ad02bbf1c686b70f
+#: ../../templates.txt:645
+msgid "``'99'``"
+msgstr ""
+
+# dfc1d4288c2142d7a0d7c4b6c4364ed3
+#: ../../templates.txt:646
+msgid "Y"
+msgstr ""
+
+# 940bc6f336af459d8ad9f04ddb4aa766
+#: ../../templates.txt:646
+msgid "Year, 4 digits."
+msgstr ""
+
+# 7f022dfbb867421d94504d25ac270dd0
+#: ../../templates.txt:646
+msgid "``'1999'``"
+msgstr ""
+
+# 95c1f3b571a24186b18b4db7d768d620
+#: ../../templates.txt:647
+msgid "z"
+msgstr ""
+
+# 96d2eba6870e474bb4aac8f3a55ef80a
+#: ../../templates.txt:647
+msgid "Day of the year."
+msgstr ""
+
+# bf3f64ebc796489d994c45ac48cb91bc
+#: ../../templates.txt:647
+msgid "``0`` to ``365``"
+msgstr ""
+
+# fa5e76df69db41fd885935e272dc11f1
+#: ../../templates.txt:648
+msgid "Z"
+msgstr ""
+
+# 5509910d54a34c4fafd185d26731f014
+#: ../../templates.txt:648
+msgid ""
+"Time zone offset in seconds. The offset for timezones west of UTC is always "
+"negative, and for those east of UTC is always positive."
+msgstr ""
+
+# d4611311233440a29e2afd30358ff476
+#: ../../templates.txt:648
+msgid "``-43200`` to ``43200``"
+msgstr ""
+
+# 009c1ff7a1e846d38cce06c0fa2ccb82
+#: ../../templates.txt:658
+msgid ""
+"Note that you can backslash-escape a format string if you want to use the "
+"\"raw\" value. In this example, \"f\" is backslash-escaped, because "
+"otherwise \"f\" is a format string that displays the time. The \"o\" doesn't "
+"need to be escaped, because it's not a format character.::"
+msgstr ""
+
+# f1b89bf30b67466b9e3592c2b0d57293
+#: ../../templates.txt:665
+msgid "(Displays \"It is the 4th of September\" %}"
+msgstr ""
+
+# 4ef4c9e4a9c04943be753e1b72f1a83c
+#: ../../templates.txt:668
+msgid "regroup"
+msgstr ""
+
+# 5563846519e148d28e72077b682badf9
+#: ../../templates.txt:670
+msgid "Regroup a list of alike objects by a common attribute."
+msgstr ""
+
+# b5f7535f92f6494caebe4d081e6fe490
+#: ../../templates.txt:672
+msgid ""
+"This complex tag is best illustrated by use of an example:  say that "
+"``people`` is a list of ``Person`` objects that have ``first_name``, "
+"``last_name``, and ``gender`` attributes, and you'd like to display a list "
+"that looks like:"
+msgstr ""
+
+# ee0ea1abc6ca4ab9bd69e1e574c7893d
+#: ../../templates.txt:677
+msgid "George Bush"
+msgstr ""
+
+# c9b71aaee5f24b5badf6d19ce4d4e6a6
+#: ../../templates.txt:678
+msgid "Bill Clinton"
+msgstr ""
+
+# 5833bee067714379bbb7cce4c5021150
+#: ../../templates.txt:680
+msgid "Margaret Thatcher"
+msgstr ""
+
+# 1e37bad6fc0440cfbf7fcac02a0115f4
+#: ../../templates.txt:681
+msgid "Condoleezza Rice"
+msgstr ""
+
+# cf4ef9cf902a4dad86da4ebdaa9503c3
+#: ../../templates.txt:683
+msgid "Pat Smith"
+msgstr ""
+
+# 6e9a562e9a124724a0d7a41f212ceccd
+#: ../../templates.txt:685
+msgid ""
+"The following snippet of template code would accomplish this dubious task::"
+msgstr ""
+
+# 9a69ceafa1d1478db5598be16788c90b
+#: ../../templates.txt:699
+msgid ""
+"As you can see, ``{% regroup %}`` populates a variable with a list of "
+"objects with ``grouper`` and ``list`` attributes.  ``grouper`` contains the "
+"item that was grouped by; ``list`` contains the list of objects that share "
+"that ``grouper``.  In this case, ``grouper`` would be ``Male``, ``Female`` "
+"and ``Unknown``, and ``list`` is the list of people with those genders."
+msgstr ""
+
+# 4fd1abdb0b52407b8f29fa9dbe5e2f36
+#: ../../templates.txt:705
+msgid ""
+"Note that ``{% regroup %}`` does not work when the list to be grouped is not "
+"sorted by the key you are grouping by!  This means that if your list of "
+"people was not sorted by gender, you'd need to make sure it is sorted before "
+"using it, i.e.::"
+msgstr ""
+
+# db9bfc46019e43e2a32f1be8c4fd0cbc
+#: ../../templates.txt:713
+msgid "spaceless"
+msgstr ""
+
+# 449204480c514aa88d4535c12ed49e25
+#: ../../templates.txt:715
+msgid ""
+"Normalizes whitespace between HTML tags to a single space. This includes tab "
+"characters and newlines."
+msgstr ""
+
+# 421ccfa3c00646488f122e9fbb196899
+#: ../../templates.txt:718
+msgid "Example usage::"
+msgstr ""
+
+# 07ae217a61c8416b9f4abfde420162c4
+#: ../../templates.txt:726
+msgid "This example would return this HTML::"
+msgstr ""
+
+# bc0b6b12415b4a6fa0fdd81f785bb404
+#: ../../templates.txt:730
+msgid ""
+"Only space between *tags* is normalized -- not space between tags and text. "
+"In this example, the space around ``Hello`` won't be stripped::"
+msgstr ""
+
+# a6dc40a36f264c1f83e7cd3275c8d398
+#: ../../templates.txt:740
+msgid "ssi"
+msgstr ""
+
+# 530f35203ef643e5ba7a6c4a0ceb50c6
+#: ../../templates.txt:742
+msgid "Output the contents of a given file into the page."
+msgstr ""
+
+# 398987a7de4a459494fc3f1dc8eb3f75
+#: ../../templates.txt:744
+msgid ""
+"Like a simple \"include\" tag, ``{% ssi %}`` includes the contents of "
+"another file -- which must be specified using an absolute path -- in the "
+"current page::"
+msgstr ""
+
+# 4a1ab98398f343ec96e8c425b0c0560c
+#: ../../templates.txt:750
+msgid ""
+"If the optional \"parsed\" parameter is given, the contents of the included "
+"file are evaluated as template code, within the current context::"
+msgstr ""
+
+# 015541ae5b1b4aa09d790bb711a0fc5f
+#: ../../templates.txt:755
+msgid ""
+"Note that if you use ``{% ssi %}``, you'll need to define :doc:"
+"`ALLOWED_INCLUDE_ROOTS <settings>` in your Django settings, as a security "
+"measure."
+msgstr ""
+
+# bab38fcb92004da28191ee55b5c4321d
+#: ../../templates.txt:758
+msgid "See also: ``{% include %}``."
+msgstr ""
+
+# 95819aa26b064d41adbac3e0bc5d2597
+#: ../../templates.txt:761
+msgid "templatetag"
+msgstr ""
+
+# 3ed217effb734d92b26675242efc9c79
+#: ../../templates.txt:763
+msgid "Output one of the syntax characters used to compose template tags."
+msgstr ""
+
+# 48c5078dfbd04b4fb064c71408f5e67d
+#: ../../templates.txt:765
+msgid ""
+"Since the template system has no concept of \"escaping\", to display one of "
+"the bits used in template tags, you must use the ``{% templatetag %}`` tag."
+msgstr ""
+
+# 70e8510f192643049eb677b747cf7f74
+#: ../../templates.txt:768
+msgid "The argument tells which template bit to output:"
+msgstr ""
+
+# d332d845d211483c9ff42c36d1ef9459
+# d332d845d211483c9ff42c36d1ef9459
+#: ../../templates.txt:771 ../../templates.txt:1140
+msgid "Argument"
+msgstr ""
+
+# fe3ada54dbb644b1aeb7b9014b6d6b08
+# fe3ada54dbb644b1aeb7b9014b6d6b08
+#: ../../templates.txt:771 ../../templates.txt:1140
+msgid "Outputs"
+msgstr ""
+
+# 9e5bd2c071b64b25a21e293bf0355046
+#: ../../templates.txt:773
+msgid "``openblock``"
+msgstr ""
+
+# 29163b7e5696413382d9976ef6df3d9e
+#: ../../templates.txt:773
+msgid "``{%``"
+msgstr ""
+
+# fd663e5984e34e86917549ec5a913b27
+#: ../../templates.txt:774
+msgid "``closeblock``"
+msgstr ""
+
+# 50e73a930e69445aa63ed537a1ae2622
+#: ../../templates.txt:774
+msgid "``%}``"
+msgstr ""
+
+# 88fbddc1ebf04426b3f7684b160a3a20
+#: ../../templates.txt:775
+msgid "``openvariable``"
+msgstr ""
+
+# 9fa86610b9644fd28f130bfa12480953
+#: ../../templates.txt:775
+msgid "``{{``"
+msgstr ""
+
+# fddc766a1a6849fc8661791c1f8e8513
+#: ../../templates.txt:776
+msgid "``closevariable``"
+msgstr ""
+
+# 340fbacca1ef4c529f75ea1913432863
+#: ../../templates.txt:776
+msgid "``}}``"
+msgstr ""
+
+# 27ff56fb823748d6824cc7e6e5aa0574
+#: ../../templates.txt:777
+msgid "``openbrace``"
+msgstr ""
+
+# 4f1505634425461ba25062460104139d
+#: ../../templates.txt:777
+msgid "``{``"
+msgstr ""
+
+# c2553553c10e4f9dbd169d032fcdabe4
+#: ../../templates.txt:778
+msgid "``closebrace``"
+msgstr ""
+
+# 429557c9dfae4d8295f468ad9e83148d
+#: ../../templates.txt:778
+msgid "``}``"
+msgstr ""
+
+# 7d676363018c486faf6db3ca4d78c055
+#: ../../templates.txt:782
+msgid "widthratio"
+msgstr ""
+
+# 733a3e5c5a3245eca7832c09213c600b
+#: ../../templates.txt:784
+msgid ""
+"For creating bar charts and such, this tag calculates the ratio of a given "
+"value to a maximum value, and then applies that ratio to a constant."
+msgstr ""
+
+# 97c7e8fa32374000a979d67a562443ff
+#: ../../templates.txt:787
+msgid "For example::"
+msgstr ""
+
+# ac5044c0e189467a95d04869cae462b9
+#: ../../templates.txt:791
+msgid ""
+"Above, if ``this_value`` is 175 and ``max_value`` is 200, the the image in "
+"the above example will be 88 pixels wide (because 175/200 = .875; .875 * 100 "
+"= 87.5 which is rounded up to 88)."
+msgstr ""
+
+# 9bb7e44437e4413ca029db78ceded420
+#: ../../templates.txt:796
+msgid "Built-in filter reference"
+msgstr ""
+
+# c3713fa75cf743a3999bac982ace5237
+#: ../../templates.txt:799
+msgid "add"
+msgstr ""
+
+# 2009cb7a2c05472bbc5c7c38fa881f2e
+#: ../../templates.txt:801
+msgid "Adds the arg to the value."
+msgstr ""
+
+# 5a0cdeab468847638f4904dfa90e45ae
+#: ../../templates.txt:804
+msgid "addslashes"
+msgstr ""
+
+# 075999c37f97426ba32c2243ddd39dd4
+#: ../../templates.txt:806
+msgid "Adds slashes. Useful for passing strings to JavaScript, for example."
+msgstr ""
+
+# 2ab99f9a5c8f4532b5da207ac87ecd70
+#: ../../templates.txt:810
+msgid "capfirst"
+msgstr ""
+
+# 1f4c7c329993463cbfce5fee6baa9f56
+#: ../../templates.txt:812
+msgid "Capitalizes the first character of the value."
+msgstr ""
+
+# a3712fd27ca34a029b746be3fd7abb2e
+#: ../../templates.txt:815
+msgid "center"
+msgstr ""
+
+# a8685128e9ec4b81975004dccb331d4b
+#: ../../templates.txt:817
+msgid "Centers the value in a field of a given width."
+msgstr ""
+
+# 52d216c0a4754ee69ea3d4d32d48d5e2
+#: ../../templates.txt:820
+msgid "cut"
+msgstr ""
+
+# 631f29a8bef34eb08793665d1d8eb33a
+#: ../../templates.txt:822
+msgid "Removes all values of arg from the given string."
+msgstr ""
+
+# 7d61b11b06264c12a46e91ca0c93e418
+#: ../../templates.txt:825
+msgid "date"
+msgstr ""
+
+# d0b61ca93f0e44e78d228075a97d7923
+#: ../../templates.txt:827
+msgid "Formats a date according to the given format (same as the ``now`` tag)."
+msgstr ""
+
+# 0738d99271234a5c8ccf2945fba5e94c
+#: ../../templates.txt:830
+msgid "default"
+msgstr ""
+
+# a9af73afd6304bf6a278660777de8073
+#: ../../templates.txt:832
+msgid "If value is unavailable, use given default."
+msgstr ""
+
+# d068bc23ca7b40b3ba7180d743a56673
+#: ../../templates.txt:835
+msgid "default_if_none"
+msgstr ""
+
+# 51b3daf977f043d49976f94c6e3f519e
+#: ../../templates.txt:837
+msgid "If value is ``None``, use given default."
+msgstr ""
+
+# 03e42b51a6fb4c888066654d8e934b29
+#: ../../templates.txt:840
+msgid "dictsort"
+msgstr ""
+
+# 590621171ad64d828c630be35ad3ea2c
+#: ../../templates.txt:842
+msgid ""
+"Takes a list of dicts, returns that list sorted by the property given in the "
+"argument."
+msgstr ""
+
+# 5c125dd6720b40c0be94389a458ad2de
+#: ../../templates.txt:846
+msgid "dictsortreversed"
+msgstr ""
+
+# 55bd41932fc64c29a1858e86213723ad
+#: ../../templates.txt:848
+msgid ""
+"Takes a list of dicts, returns that list sorted in reverse order by the "
+"property given in the argument."
+msgstr ""
+
+# b5b0fa457c3847db8b242a37350ce931
+#: ../../templates.txt:852
+msgid "divisibleby"
+msgstr ""
+
+# 35799e074af448949f6042afa796af6e
+#: ../../templates.txt:854
+msgid "Returns true if the value is divisible by the argument."
+msgstr ""
+
+# 2a56f3baf1e7451baf1146241316ff16
+#: ../../templates.txt:857
+msgid "escape"
+msgstr ""
+
+# 6ed3062e28af42ef8845689d5d23ae27
+#: ../../templates.txt:859
+msgid "Escapes a string's HTML. Specifically, it makes these replacements:"
+msgstr ""
+
+# 98150004f6a0486c80610580867af457
+#: ../../templates.txt:861
+msgid "``\"&\"`` to ``\"&amp;\"``"
+msgstr ""
+
+# afbb8b9163724a3c82c7e8eab40d121b
+#: ../../templates.txt:862
+msgid "``<`` to ``\"&lt;\"``"
+msgstr ""
+
+# 8084bfd1f3a34c40a7836ea6e5c457c7
+#: ../../templates.txt:863
+msgid "``>`` to ``\"&gt;\"``"
+msgstr ""
+
+# 395c2f22dc284e629a9894af314918a0
+#: ../../templates.txt:864
+msgid "``'\"'`` (double quote) to ``'&quot;'``"
+msgstr ""
+
+# a09b28fbbfd540829b64a1cd21ed7d38
+#: ../../templates.txt:865
+msgid "``\"'\"`` (single quote) to ``'&#39;'``"
+msgstr ""
+
+# cb13e5a60b7d4420b945a831f97f59bc
+#: ../../templates.txt:868
+msgid "filesizeformat"
+msgstr ""
+
+# 61e445c90b2b4e6f957b03c7f5d55544
+#: ../../templates.txt:870
+msgid ""
+"Format the value like a 'human-readable' file size (i.e. ``'13 KB'``, ``'4.1 "
+"MB'``, ``'102 bytes'``, etc)."
+msgstr ""
+
+# 7aa028b9d85e45258aa6d2345b374534
+#: ../../templates.txt:874
+msgid "first"
+msgstr ""
+
+# 061eb20b234b45358917099c80de6827
+#: ../../templates.txt:876
+msgid "Returns the first item in a list."
+msgstr ""
+
+# c0eebc0d37414eb88a0d08205e810060
+#: ../../templates.txt:879
+msgid "fix_ampersands"
+msgstr ""
+
+# 7d7425ae82e64b7196cdcaa736961e01
+#: ../../templates.txt:881
+msgid "Replaces ampersands with ``&amp;`` entities."
+msgstr ""
+
+# d5996fc35bfa40d7b8d5ab52ab889ad1
+#: ../../templates.txt:884
+msgid "floatformat"
+msgstr ""
+
+# b5825ecc76e846c7abb31aedaa0128e7
+#: ../../templates.txt:886
+msgid ""
+"Rounds a floating-point number to one decimal place -- but only if there's a "
+"decimal part to be displayed. For example:"
+msgstr ""
+
+# eeca3e5bdd0f4bd8844a62c2798bdca7
+#: ../../templates.txt:889
+msgid "``36.123`` gets converted to ``36.1``"
+msgstr ""
+
+# b8b2be1c8e8b484183ce959261b7440b
+#: ../../templates.txt:890
+msgid "``36.15`` gets converted to ``36.2``"
+msgstr ""
+
+# 59011236cc064e1eb7ab2d404b7515a7
+#: ../../templates.txt:891
+msgid "``36`` gets converted to ``36``"
+msgstr ""
+
+# 535617f0bae74b63aad87f4ca4640d06
+#: ../../templates.txt:894
+msgid "get_digit"
+msgstr ""
+
+# dcd323ce0afc43eb89c12ba0a3cec547
+#: ../../templates.txt:896
+msgid ""
+"Given a whole number, returns the requested digit of it, where 1 is the "
+"right-most digit, 2 is the second-right-most digit, etc. Returns the "
+"original value for invalid input (if input or argument is not an integer, or "
+"if argument is less than 1). Otherwise, output is always an integer."
+msgstr ""
+
+# 7eca8abc85db438482d37638a54660c3
+#: ../../templates.txt:902
+msgid "join"
+msgstr ""
+
+# 464da864cab94792b76571b266b35563
+#: ../../templates.txt:904
+msgid "Joins a list with a string, like Python's ``str.join(list)``."
+msgstr ""
+
+# ac73afec94e64127b2d325553cad1e0d
+#: ../../templates.txt:907
+msgid "length"
+msgstr ""
+
+# dfc39044dc6745ab8344a46e9d67290b
+#: ../../templates.txt:909
+msgid "Returns the length of the value. Useful for lists."
+msgstr ""
+
+# 91a2e9a1316341098cbe8fc5dbf6a95a
+#: ../../templates.txt:912
+msgid "length_is"
+msgstr ""
+
+# c9eb8ae133464801b47469ab71af24a8
+#: ../../templates.txt:914
+msgid "Returns a boolean of whether the value's length is the argument."
+msgstr ""
+
+# bc90202308184f2d95c6b1fd74227eae
+#: ../../templates.txt:917
+msgid "linebreaks"
+msgstr ""
+
+# 8a456aa8190c47a08f4e29b74440af39
+#: ../../templates.txt:919
+msgid "Converts newlines into ``<p>`` and ``<br />`` tags."
+msgstr ""
+
+# 7eb9188352fe48d1aeb6b845b315a421
+#: ../../templates.txt:922
+msgid "linebreaksbr"
+msgstr ""
+
+# eeac28d96c6141abb0c88857985cfbac
+#: ../../templates.txt:924
+msgid "Converts newlines into ``<br />`` tags."
+msgstr ""
+
+# d263f4c35a274c9e96243bea9b006977
+#: ../../templates.txt:927
+msgid "linenumbers"
+msgstr ""
+
+# f7d35968e3c7493baf3461cb3acbb289
+#: ../../templates.txt:929
+msgid "Displays text with line numbers."
+msgstr ""
+
+# 51da9e40aca34052a6a6081494a0f0fe
+#: ../../templates.txt:932
+msgid "ljust"
+msgstr ""
+
+# 1876da5d3c63486d900ae9d538ecd56d
+#: ../../templates.txt:934
+msgid "Left-aligns the value in a field of a given width."
+msgstr ""
+
+# 5c49be6818a34d8c89b55c6bc4c0c44e
+# 5c49be6818a34d8c89b55c6bc4c0c44e
+#: ../../templates.txt:936 ../../templates.txt:1002
+msgid "**Argument:** field size"
+msgstr ""
+
+# e9274cf49e63482dbe9839625915cff1
+#: ../../templates.txt:939
+msgid "lower"
+msgstr ""
+
+# feec06f9e85745a2ac26cba272611e96
+#: ../../templates.txt:941
+msgid "Converts a string into all lowercase."
+msgstr ""
+
+# 4ac09bc15dc64697894d3a59a1306568
+#: ../../templates.txt:944
+msgid "make_list"
+msgstr ""
+
+# 3d6987d6ec0d48abba8f104108f3a2c0
+#: ../../templates.txt:946
+msgid ""
+"Returns the value turned into a list. For an integer, it's a list of digits. "
+"For a string, it's a list of characters."
+msgstr ""
+
+# a0b1d8b755c4422e838ebe3d83cba9f7
+#: ../../templates.txt:950
+msgid "phone2numeric"
+msgstr ""
+
+# efd29eb560f643d6bd0dbaaada2953c7
+#: ../../templates.txt:952
+msgid ""
+"Converts a phone number (possibly containing letters) to its numerical "
+"equivalent. For example, ``'800-COLLECT'`` will be converted to "
+"``'800-2655328'``."
+msgstr ""
+
+# 0288fb3a15444050b82129f8b2a17f68
+#: ../../templates.txt:956
+msgid ""
+"The input doesn't have to be a valid phone number. This will happily convert "
+"any string."
+msgstr ""
+
+# 4c8a5d96407f4de8a05d891f9e968b78
+#: ../../templates.txt:960
+msgid "pluralize"
+msgstr ""
+
+# 46ea5077b3a34e66a29a544ada1b23f4
+#: ../../templates.txt:962
+msgid ""
+"Returns a plural suffix if the value is not 1. By default, this suffix is "
+"``'s'``."
+msgstr ""
+
+# b31e4b85d03d4d46bacc763f973e0a27
+#: ../../templates.txt:968
+msgid ""
+"For words that require a suffix other than ``'s'``, you can provide an "
+"alternate suffix as a parameter to the filter."
+msgstr ""
+
+# 4a67ae89de86446f9b8e857cfab95e0f
+#: ../../templates.txt:975
+msgid ""
+"For words that don't pluralize by simple suffix, you can specify both a "
+"singular and plural suffix, separated by a comma."
+msgstr ""
+
+# b7cf109daea945be927d35046cd33b85
+#: ../../templates.txt:983
+msgid "pprint"
+msgstr ""
+
+# 499c94af0c1f40e0a76d22eab2bd305d
+#: ../../templates.txt:985
+msgid "A wrapper around pprint.pprint -- for debugging, really."
+msgstr ""
+
+# e1a84c94e9ae49b89d44ca46196b309c
+#: ../../templates.txt:988
+msgid "random"
+msgstr ""
+
+# 2f7689e1414a42569000e3af7677acc5
+#: ../../templates.txt:990
+msgid "Returns a random item from the list."
+msgstr ""
+
+# 209d231f91284d3dbd21fa099ebcc967
+#: ../../templates.txt:993
+msgid "removetags"
+msgstr ""
+
+# db6b8d8a8e474d3fb6e864f49fce73d3
+#: ../../templates.txt:995
+msgid "Removes a space separated list of [X]HTML tags from the output."
+msgstr ""
+
+# bfe8485d72684bd5907d6435b94401f8
+#: ../../templates.txt:998
+msgid "rjust"
+msgstr ""
+
+# 19771d985b0d42e881d9660fa65d55c1
+#: ../../templates.txt:1000
+msgid "Right-aligns the value in a field of a given width."
+msgstr ""
+
+# 0b6c613d8f054f579ed51c578c034a39
+#: ../../templates.txt:1005
+msgid "slice"
+msgstr ""
+
+# 0aeb8641fe774174a00635cc02948469
+#: ../../templates.txt:1007
+msgid "Returns a slice of the list."
+msgstr ""
+
+# 60c71f281e1a41dca351cbda09c1dac4
+#: ../../templates.txt:1009
+msgid ""
+"Uses the same syntax as Python's list slicing. See http://diveintopython.org/"
+"native_data_types/lists.html#odbchelper.list.slice for an introduction."
+msgstr ""
+
+# e16010ad1bcb4ebb9992fc35566b271e
+#: ../../templates.txt:1013
+msgid "Example: ``{{ some_list|slice:\":2\" }}``"
+msgstr ""
+
+# ac53526c3e5648ffa439fbd5e3684c5d
+#: ../../templates.txt:1016
+msgid "slugify"
+msgstr ""
+
+# 19d6abd023d84247a962c0b9e9f552a3
+#: ../../templates.txt:1018
+msgid ""
+"Converts to lowercase, removes non-word characters (alphanumerics and "
+"underscores) and converts spaces to hyphens. Also strips leading and "
+"trailing whitespace."
+msgstr ""
+
+# 38ab6f7d413642a6b047e2b6967fe0d6
+#: ../../templates.txt:1023
+msgid "stringformat"
+msgstr ""
+
+# 27a3965ddcd14b67aeeeb065813afb81
+#: ../../templates.txt:1025
+msgid ""
+"Formats the variable according to the argument, a string formatting "
+"specifier. This specifier uses Python string formating syntax, with the "
+"exception that the leading \"%\" is dropped."
+msgstr ""
+
+# d3daf3d26981439abd2414acee72bffd
+#: ../../templates.txt:1029
+msgid ""
+"See http://docs.python.org/lib/typesseq-strings.html for documentation of "
+"Python string formatting"
+msgstr ""
+
+# bcda36ed341949359f965b2f8c09b942
+#: ../../templates.txt:1033
+msgid "striptags"
+msgstr ""
+
+# 557ed1f92a2b45c3969f820753a77beb
+#: ../../templates.txt:1035
+msgid "Strips all [X]HTML tags."
+msgstr ""
+
+# c26bf08f5c124b0fbf025be2c313977f
+#: ../../templates.txt:1038
+msgid "time"
+msgstr ""
+
+# ed0c8474e9cc4deeaba0f2bf921efdc4
+#: ../../templates.txt:1040
+msgid "Formats a time according to the given format (same as the ``now`` tag)."
+msgstr ""
+
+# b53e280e9b634f8b95f1933b231c18e7
+#: ../../templates.txt:1043
+msgid "timesince"
+msgstr ""
+
+# 04348148549446bdb6dbb123e7d8c91c
+#: ../../templates.txt:1045
+msgid "Formats a date as the time since that date (i.e. \"4 days, 6 hours\")."
+msgstr ""
+
+# c01ea7f5b38e4eb499c4fdbf897d2881
+#: ../../templates.txt:1047
+msgid ""
+"Takes an optional argument that is a variable containing the date to use as "
+"the comparison point (without the argument, the comparison point is *now*). "
+"For example, if ``blog_date`` is a date instance representing midnight on 1 "
+"June 2006, and ``comment_date`` is a date instanace for 08:00 on 1 June "
+"2006, then ``{{ comment_date|timesince:blog_date }}`` would return \"8 hours"
+"\"."
+msgstr ""
+
+# f90def8961e149e4b31c9a81da7a162a
+#: ../../templates.txt:1054
+msgid "timeuntil"
+msgstr ""
+
+# e50ad1ea9359460681c80e7255729411
+#: ../../templates.txt:1056
+msgid ""
+"Similar to ``timesince``, except that it measures the time from now until "
+"the given date or datetime. For example, if today is 1 June 2006 and "
+"``conference_date`` is a date instance holding 29 June 2006, then ``"
+"{{ conference_date|timeuntil }}`` will return \"28 days\"."
+msgstr ""
+
+# 9d8d4c96dffa4fad9b82d231bac468f9
+#: ../../templates.txt:1061
+msgid ""
+"Takes an optional argument that is a variable containing the date to use as "
+"the comparison point (instead of *now*). If ``from_date`` contains 22 June "
+"2006, then ``{{ conference_date|timeuntil:from_date }}`` will return \"7 days"
+"\"."
+msgstr ""
+
+# 2adedd15b13a4da89efcd1483fd49d96
+#: ../../templates.txt:1066
+msgid "title"
+msgstr ""
+
+# 7e8f058d55434c37b5578387d5caafa7
+#: ../../templates.txt:1068
+msgid "Converts a string into titlecase."
+msgstr ""
+
+# 827796d415a84026b0fc603cecea34ff
+#: ../../templates.txt:1071
+msgid "truncatewords"
+msgstr ""
+
+# 5f23849668944358a2f5c6aa5c4febc3
+#: ../../templates.txt:1073
+msgid "Truncates a string after a certain number of words."
+msgstr ""
+
+# c457c6d0396446d2b98bd8b4fa2f8d68
+#: ../../templates.txt:1075
+msgid "**Argument:** Number of words to truncate after"
+msgstr ""
+
+# 93887890a8594dc78e61dbac1e670b88
+#: ../../templates.txt:1078
+msgid "unordered_list"
+msgstr ""
+
+# 610616f1f852406192138d62b34c1318
+#: ../../templates.txt:1080
+msgid ""
+"Recursively takes a self-nested list and returns an HTML unordered list -- "
+"WITHOUT opening and closing <ul> tags."
+msgstr ""
+
+# 9125e6d3ef82472d836b93566166b91a
+#: ../../templates.txt:1083
+msgid ""
+"The list is assumed to be in the proper format. For example, if ``var`` "
+"contains ``['States', [['Kansas', [['Lawrence', []], ['Topeka', []]]], "
+"['Illinois', []]]]``, then ``{{ var|unordered_list }}`` would return::"
+msgstr ""
+
+# 1cedc70f4e784b8ebf1237d4f57991b0
+#: ../../templates.txt:1100
+msgid "upper"
+msgstr ""
+
+# 89fea02d77d042a1a58609f9b5c36d0d
+#: ../../templates.txt:1102
+msgid "Converts a string into all uppercase."
+msgstr ""
+
+# d5fd71a404694561b1e781f401ca1cd4
+#: ../../templates.txt:1105
+msgid "urlencode"
+msgstr ""
+
+# 001c908445a64e57a2ef8e343d536554
+#: ../../templates.txt:1107
+msgid "Escapes a value for use in a URL."
+msgstr ""
+
+# 0c8e0d624a4543db9f6e9021678829c9
+#: ../../templates.txt:1110
+msgid "urlize"
+msgstr ""
+
+# cefdfe652caf4de1b17588badf9fd99e
+#: ../../templates.txt:1112
+msgid "Converts URLs in plain text into clickable links."
+msgstr ""
+
+# 4bae5cd0e261469abc3d5c462c3c41b7
+#: ../../templates.txt:1115
+msgid "urlizetrunc"
+msgstr ""
+
+# 8115cca2bd5e4bb38d389b05aef19d40
+#: ../../templates.txt:1117
+msgid ""
+"Converts URLs into clickable links, truncating URLs to the given character "
+"limit."
+msgstr ""
+
+# 8a110509a52c47eba4f92b9ec81d4f2b
+#: ../../templates.txt:1119
+msgid "**Argument:** Length to truncate URLs to"
+msgstr ""
+
+# ccb9dd295df14e7dae4f250304a48cb0
+#: ../../templates.txt:1122
+msgid "wordcount"
+msgstr ""
+
+# 648684e847c544fca49279c58b29529c
+#: ../../templates.txt:1124
+msgid "Returns the number of words."
+msgstr ""
+
+# dd8ba5e2814f49819c95761cb212ed3a
+#: ../../templates.txt:1127
+msgid "wordwrap"
+msgstr ""
+
+# 86fb6442907f4566b9a8381e3309e125
+#: ../../templates.txt:1129
+msgid "Wraps words at specified line length."
+msgstr ""
+
+# ad6f6870d945434292106dd6932cacc2
+#: ../../templates.txt:1131
+msgid "**Argument:** number of characters at which to wrap the text"
+msgstr ""
+
+# eab2d3328bd74f6f8d75db035ef0bd31
+#: ../../templates.txt:1134
+msgid "yesno"
+msgstr ""
+
+# ffa27997aa854866b058a25cb186b1a1
+#: ../../templates.txt:1136
+msgid ""
+"Given a string mapping values for true, false and (optionally) None, returns "
+"one of those strings according to the value:"
+msgstr ""
+
+# ee422005208a4e07b691b360035a43af
+#: ../../templates.txt:1140
+msgid "Value"
+msgstr ""
+
+# 9d425959b86648de8cdbfbbc0c9365ae
+#: ../../templates.txt:1142
+msgid "``True``"
+msgstr ""
+
+# 20c0a95e9153494ebf5b9f24989f3d38
+# 20c0a95e9153494ebf5b9f24989f3d38
+# 20c0a95e9153494ebf5b9f24989f3d38
+#: ../../templates.txt:1142 ../../templates.txt:1143 ../../templates.txt:1144
+msgid "``\"yeah,no,maybe\"``"
+msgstr ""
+
+# 5e8cbad458b3443f82ddd30d02daa33e
+#: ../../templates.txt:1142
+msgid "``yeah``"
+msgstr ""
+
+# f4cc10b27eea454cb871029fd83d11e9
+#: ../../templates.txt:1143
+msgid "``False``"
+msgstr ""
+
+# 655446b0f7c94e7cb41a09047d0e3d96
+#: ../../templates.txt:1143
+msgid "``no``"
+msgstr ""
+
+# 3129ad89e4f340b8bf7fb22a41057934
+# 3129ad89e4f340b8bf7fb22a41057934
+#: ../../templates.txt:1144 ../../templates.txt:1145
+msgid "``None``"
+msgstr ""
+
+# bb8d40d9f4a949f5b3cab0a30fa6cff1
+#: ../../templates.txt:1144
+msgid "``maybe``"
+msgstr ""
+
+# 473f5594b648434d90ec9cd2952d2398
+#: ../../templates.txt:1145
+msgid "``\"yeah,no\"``"
+msgstr ""
+
+# 39be7548e662407bae5eec3c47aa165c
+#: ../../templates.txt:1145
+msgid "``\"no\"`` (converts None to False if no mapping for None is given)"
+msgstr ""
+
+# 4ec06b80837c4ed68ec8059fd267f47e
+#: ../../templates.txt:1150
+msgid "Other tags and filter libraries"
+msgstr ""
+
+# e02b2e3821a94e059a06417b4b4e2d2f
+#: ../../templates.txt:1152
+msgid ""
+"Django comes with a couple of other template-tag libraries that you have to "
+"enable explicitly in your ``INSTALLED_APPS`` setting and enable in your "
+"template with the ``{% load %}`` tag."
+msgstr ""
+
+# 07305e36df424e4d93e19669694153de
+#: ../../templates.txt:1157
+msgid "django.contrib.humanize"
+msgstr ""
+
+# cb591967119040ff80d92bfb181afc13
+#: ../../templates.txt:1159
+msgid ""
+"A set of Django template filters useful for adding a \"human touch\" to "
+"data. See the :doc:`humanize documentation <add_ons>`."
+msgstr ""
+
+# c1c3cd7e67bc44c18bac06a1b67461f4
+#: ../../templates.txt:1163
+msgid "django.contrib.markup"
+msgstr ""
+
+# c62c1b00e69f4be3a7e619e649ee904f
+#: ../../templates.txt:1165
+msgid ""
+"A collection of template filters that implement these common markup "
+"languages:"
+msgstr ""
+
+# ce703c92bd7e4779a897e0d2028621da
+#: ../../templates.txt:1167
+msgid "Textile"
+msgstr ""
+
+# b1ebad70712e4f4b8fec6376ae9b8d6f
+#: ../../templates.txt:1168
+msgid "Markdown"
+msgstr ""
+
+# 5cf641dd42134bc0b4d9d70de0d0f053
+#: ../../templates.txt:1169
+msgid "ReST (ReStructured Text)"
+msgstr ""

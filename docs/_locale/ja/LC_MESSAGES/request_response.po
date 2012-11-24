@@ -1,0 +1,738 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# c741174303de4e03b57cbee014cd62aa
+#: ../../request_response.txt:3
+msgid "Request and response objects"
+msgstr ""
+
+# af0e4b057a45424f970a829187786adf
+#: ../../request_response.txt:6
+msgid "Quick overview"
+msgstr ""
+
+# 9658809d634f4b06894c68c3c8799e4f
+#: ../../request_response.txt:8
+msgid ""
+"Django uses request and response objects to pass state through the system."
+msgstr ""
+
+# 887fa704cf4340219b678cc29c3bddf2
+#: ../../request_response.txt:10
+msgid ""
+"When a page is requested, Django creates an ``HttpRequest`` object that "
+"contains metadata about the request. Then Django loads the appropriate view, "
+"passing the ``HttpRequest`` as the first argument to the view function. Each "
+"view is responsible for returning an ``HttpResponse`` object."
+msgstr ""
+
+# a0b8e7c61eb0481c90f6577b05238d1f
+#: ../../request_response.txt:15
+msgid ""
+"This document explains the APIs for ``HttpRequest`` and ``HttpResponse`` "
+"objects."
+msgstr ""
+
+# dca1db127d234437bd10cb72ba87ca66
+#: ../../request_response.txt:19
+msgid "HttpRequest objects"
+msgstr ""
+
+# bc0c8518dcf94e50973d497516f90f7f
+#: ../../request_response.txt:22
+msgid "Attributes"
+msgstr ""
+
+# 83367ee11a134fd394fba13cda167d9f
+#: ../../request_response.txt:24
+msgid "All attributes except ``session`` should be considered read-only."
+msgstr ""
+
+# 123cfa8f0bea4dcc9215c42210a4049b
+#: ../../request_response.txt:27
+msgid ""
+"A string representing the full path to the requested page, not including the "
+"domain."
+msgstr ""
+
+# b8477930597c4c0893f0ae7259b353db
+#: ../../request_response.txt:30
+msgid "Example: ``\"/music/bands/the_beatles/\"``"
+msgstr ""
+
+# 6a4e834ace424cd18c5e2dd0b9dbadb7
+#: ../../request_response.txt:33
+msgid ""
+"A string representing the HTTP method used in the request. This is "
+"guaranteed to be uppercase. Example::"
+msgstr ""
+
+# 7fe425a02fde4b55827b7f82e2e3b547
+#: ../../request_response.txt:42
+msgid ""
+"A dictionary-like object containing all given HTTP GET parameters. See the "
+"``QueryDict`` documentation below."
+msgstr ""
+
+# 1846f3300e1947e7a032c003c8b0fb4b
+#: ../../request_response.txt:46
+msgid ""
+"A dictionary-like object containing all given HTTP POST parameters. See the "
+"``QueryDict`` documentation below."
+msgstr ""
+
+# ee7fcca090cc4b3da27e6139002b42c5
+#: ../../request_response.txt:49
+msgid ""
+"It's possible that a request can come in via POST with an empty ``POST`` "
+"dictionary -- if, say, a form is requested via the POST HTTP method but does "
+"not include form data. Therefore, you shouldn't use ``if request.POST`` to "
+"check for use of the POST method; instead, use ``if request.method == \"POST"
+"\"`` (see above)."
+msgstr ""
+
+# 4bb58a59f15d4ee1854c159fd4289ac1
+#: ../../request_response.txt:55
+msgid ""
+"Note: ``POST`` does *not* include file-upload information. See ``FILES``."
+msgstr ""
+
+# 704565fc25ff4a778410977f725edde6
+#: ../../request_response.txt:58
+msgid ""
+"For convenience, a dictionary-like object that searches ``POST`` first, then "
+"``GET``. Inspired by PHP's ``$_REQUEST``."
+msgstr ""
+
+# 0017be25c22c450eb918e96ef45dfeed
+#: ../../request_response.txt:61
+msgid ""
+"For example, if ``GET = {\"name\": \"john\"}`` and ``POST = {\"age\": '34'}"
+"``, ``REQUEST[\"name\"]`` would be ``\"john\"``, and ``REQUEST[\"age\"]`` "
+"would be ``\"34\"``."
+msgstr ""
+
+# 201fe80cb8e34760bda3a040664be446
+#: ../../request_response.txt:65
+msgid ""
+"It's strongly suggested that you use ``GET`` and ``POST`` instead of "
+"``REQUEST``, because the former are more explicit."
+msgstr ""
+
+# ec239da76fd841e9abdbc02d372319d4
+#: ../../request_response.txt:69
+msgid ""
+"A standard Python dictionary containing all cookies. Keys and values are "
+"strings."
+msgstr ""
+
+# aaba07b3c66942da905e843119a93953
+#: ../../request_response.txt:73
+msgid ""
+"A dictionary-like object containing all uploaded files. Each key in "
+"``FILES`` is the ``name`` from the ``<input type=\"file\" name=\"\" />``. "
+"Each value in ``FILES`` is a standard Python dictionary with the following "
+"three keys:"
+msgstr ""
+
+# 6fbeaba70af841a2ba0236f7852dd82d
+#: ../../request_response.txt:78
+msgid "``filename`` -- The name of the uploaded file, as a Python string."
+msgstr ""
+
+# 32f78ae43f6049aca8995924b316350b
+#: ../../request_response.txt:79
+msgid "``content-type`` -- The content type of the uploaded file."
+msgstr ""
+
+# 22ece67741e74f939d3da4d70cbb796d
+#: ../../request_response.txt:80
+msgid "``content`` -- The raw content of the uploaded file."
+msgstr ""
+
+# e7fd64e4ae614dc6928f85c9715e29a0
+#: ../../request_response.txt:82
+msgid ""
+"Note that ``FILES`` will only contain data if the request method was POST "
+"and the ``<form>`` that posted to the request had ``enctype=\"multipart/form-"
+"data\"``. Otherwise, ``FILES`` will be a blank dictionary-like object."
+msgstr ""
+
+# d5048bd8a2454889bd4ab9cb9b6db738
+#: ../../request_response.txt:88
+msgid ""
+"A standard Python dictionary containing all available HTTP headers. "
+"Available headers depend on the client and server, but here are some "
+"examples:"
+msgstr ""
+
+# 9a9dd86a65dd48ceaa5eaa4b4882a073
+#: ../../request_response.txt:92
+msgid "``CONTENT_LENGTH``"
+msgstr ""
+
+# fc53166b92744b43bffdcf7ca8f18bb3
+#: ../../request_response.txt:93
+msgid "``CONTENT_TYPE``"
+msgstr ""
+
+# 9d03bc7aeaf8443faa22c6ae3abe92e4
+#: ../../request_response.txt:94
+msgid "``HTTP_ACCEPT_ENCODING``"
+msgstr ""
+
+# e527cde7ad764ea986dd82238a381d38
+#: ../../request_response.txt:95
+msgid "``HTTP_ACCEPT_LANGUAGE``"
+msgstr ""
+
+# 7d1c9ca977d84e3292221640a3d8ad3a
+#: ../../request_response.txt:96
+msgid "``HTTP_REFERER`` -- The referring page, if any."
+msgstr ""
+
+# e17e505c383a46758d051defb1cc047a
+#: ../../request_response.txt:97
+msgid "``HTTP_USER_AGENT`` -- The client's user-agent string."
+msgstr ""
+
+# c6b467cbb9244702bb3d2a871c7f8734
+#: ../../request_response.txt:98
+msgid "``QUERY_STRING`` -- The query string, as a single (unparsed) string."
+msgstr ""
+
+# 24084ac0bb3d4129afa04f14bfdca0c5
+#: ../../request_response.txt:99
+msgid "``REMOTE_ADDR`` -- The IP address of the client."
+msgstr ""
+
+# 13b09887a21b47fab5ba1244a5dad4e4
+#: ../../request_response.txt:100
+msgid "``REMOTE_HOST`` -- The hostname of the client."
+msgstr ""
+
+# 8a02cbf663704971a274a84c53d5c7cf
+#: ../../request_response.txt:101
+msgid "``REQUEST_METHOD`` -- A string such as ``\"GET\"`` or ``\"POST\"``."
+msgstr ""
+
+# e854a080b97a4ace8bffa6fb49c76695
+#: ../../request_response.txt:102
+msgid "``SERVER_NAME`` -- The hostname of the server."
+msgstr ""
+
+# 8dca3a2ae30241689567d9a56a4ca9ad
+#: ../../request_response.txt:103
+msgid "``SERVER_PORT`` -- The port of the server."
+msgstr ""
+
+# 6336eeabf96340169fe27b64d95198f9
+#: ../../request_response.txt:106
+msgid ""
+"A ``django.contrib.auth.models.User`` object representing the currently "
+"logged-in user. If the user isn't currently logged in, ``user`` will be set "
+"to an instance of ``django.contrib.auth.models.AnonymousUser``. You can tell "
+"them apart with ``is_authenticated()``, like so::"
+msgstr ""
+
+# da55e7074a4f4fdbb0fa04452a4da2b1
+#: ../../request_response.txt:116
+msgid ""
+"``user`` is only available if your Django installation has the "
+"``AuthenticationMiddleware`` activated. For more, see :doc:`Authentication "
+"in Web requests <authentication>`."
+msgstr ""
+
+# 752e7e98d8804c93a5eea846c5532de2
+#: ../../request_response.txt:121
+msgid ""
+"A readable-and-writable, dictionary-like object that represents the current "
+"session. This is only available if your Django installation has session "
+"support activated. See the :doc:`session documentation <sessions>` for full "
+"details."
+msgstr ""
+
+# cc26645e2ef14f0b990d5be799e3c7cb
+#: ../../request_response.txt:126
+msgid ""
+"The raw HTTP POST data. This is only useful for advanced processing. Use "
+"``POST`` instead."
+msgstr ""
+
+# 864f1d81faf3442bb2bd712fdfc8365e
+# 864f1d81faf3442bb2bd712fdfc8365e
+#: ../../request_response.txt:130 ../../request_response.txt:338
+msgid "Methods"
+msgstr ""
+
+# 5a35016612c14f07931a888bf6204de9
+#: ../../request_response.txt:133
+msgid ""
+"Returns the GET/POST value for the given key, checking POST first, then GET. "
+"Raises ``KeyError`` if the key doesn't exist."
+msgstr ""
+
+# 7e451acd70c541b3821af65cd1993ab2
+#: ../../request_response.txt:136
+msgid ""
+"This lets you use dictionary-accessing syntax on an ``HttpRequest`` "
+"instance. Example: ``request[\"foo\"]`` would return ``True`` if either "
+"``request.POST`` or ``request.GET`` had a ``\"foo\"`` key."
+msgstr ""
+
+# b4c7adf598ee4a0da36cc5afe076b046
+#: ../../request_response.txt:141
+msgid ""
+"Returns ``True`` or ``False``, designating whether ``request.GET`` or "
+"``request.POST`` has the given key."
+msgstr ""
+
+# 3567597f4453448ebe0bce85d0dca40f
+#: ../../request_response.txt:145
+msgid "Returns the ``path``, plus an appended query string, if applicable."
+msgstr ""
+
+# fd698c2024644de8af4ddd38d43fe9c2
+#: ../../request_response.txt:147
+msgid "Example: ``\"/music/bands/the_beatles/?print=true\"``"
+msgstr ""
+
+# 9edf7c92eebb48d0867916b1e1ecee62
+#: ../../request_response.txt:150
+msgid ""
+"Returns ``True`` if the request is secure; that is, if it was made with "
+"HTTPS."
+msgstr ""
+
+# 99461435063d47ce9a260b2f79774161
+#: ../../request_response.txt:154
+msgid "QueryDict objects"
+msgstr ""
+
+# ae7cf61c92344ee4bca86cdc34b56c33
+#: ../../request_response.txt:156
+msgid ""
+"In an ``HttpRequest`` object, the ``GET`` and ``POST`` attributes are "
+"instances of ``django.http.QueryDict``. ``QueryDict`` is a dictionary-like "
+"class customized to deal with multiple values for the same key. This is "
+"necessary because some HTML form elements, notably ``<select multiple="
+"\"multiple\">``, pass multiple values for the same key."
+msgstr ""
+
+# 00e9bab92ba84007a0b08171f795fae0
+#: ../../request_response.txt:162
+msgid ""
+"``QueryDict`` instances are immutable, unless you create a ``copy()`` of "
+"them. That means you can't change attributes of ``request.POST`` and "
+"``request.GET`` directly."
+msgstr ""
+
+# 5f68ff3cf5714f858490dd1035606c62
+#: ../../request_response.txt:166
+msgid ""
+"``QueryDict`` implements the all standard dictionary methods, because it's a "
+"subclass of dictionary. Exceptions are outlined here:"
+msgstr ""
+
+# 87806896e3be447b823c92ad1f921bb8
+#: ../../request_response.txt:169
+msgid ""
+"``__getitem__(key)`` -- Returns the value for the given key. If the key has "
+"more than one value, ``__getitem__()`` returns the last value."
+msgstr ""
+
+# e92753d6ed4840c2a9118ac6092b5743
+#: ../../request_response.txt:172
+msgid ""
+"``__setitem__(key, value)`` -- Sets the given key to ``[value]`` (a Python "
+"list whose single element is ``value``). Note that this, as other dictionary "
+"functions that have side effects, can only be called on a mutable "
+"``QueryDict`` (one that was created via ``copy()``)."
+msgstr ""
+
+# d222e9f6388f42928ddac4305c664386
+#: ../../request_response.txt:177
+msgid ""
+"``__contains__(key)`` -- Returns ``True`` if the given key is set. This lets "
+"you do, e.g., ``if \"foo\" in request.GET``."
+msgstr ""
+
+# 02793ef734454a88a5d4e383740edb52
+#: ../../request_response.txt:180
+msgid ""
+"``get(key, default)`` -- Uses the same logic as ``__getitem__()`` above, "
+"with a hook for returning a default value if the key doesn't exist."
+msgstr ""
+
+# 70f578ef40e449fbb7dcf0fc631e05b5
+#: ../../request_response.txt:183
+msgid "``has_key(key)``"
+msgstr ""
+
+# 7644fc77a66d4285a8f5df832d4a2e5d
+#: ../../request_response.txt:185
+msgid ""
+"``setdefault(key, default)`` -- Just like the standard dictionary "
+"``setdefault()`` method, except it uses ``__setitem__`` internally."
+msgstr ""
+
+# f08878fb1cb844e48ee220c87b7f71bd
+#: ../../request_response.txt:188
+msgid ""
+"``update(other_dict)`` -- Takes either a ``QueryDict`` or standard "
+"dictionary. Just like the standard dictionary ``update()`` method, except it "
+"*appends* to the current dictionary items rather than replacing them. For "
+"example::"
+msgstr ""
+
+# 62cc3aff95af4b398d40f740d8d8dd9d
+#: ../../request_response.txt:201
+msgid ""
+"``items()`` -- Just like the standard dictionary ``items()`` method, except "
+"this uses the same last-value logic as ``__getitem()__``. For example::"
+msgstr ""
+
+# 1f5802b2243d4b5b8ef065ef4fa975b8
+#: ../../request_response.txt:209
+msgid ""
+"``values()`` -- Just like the standard dictionary ``values()`` method, "
+"except this uses the same last-value logic as ``__getitem()__``. For "
+"example::"
+msgstr ""
+
+# 150c8c81d72c482cafe4e6107bc36af9
+#: ../../request_response.txt:217
+msgid "In addition, ``QueryDict`` has the following methods:"
+msgstr ""
+
+# d116f6107175437690fc92e45f78f6e1
+#: ../../request_response.txt:219
+msgid ""
+"``copy()`` -- Returns a copy of the object, using ``copy.deepcopy()`` from "
+"the Python standard library. The copy will be mutable -- that is, you can "
+"change its values."
+msgstr ""
+
+# fed195dd9d914c2d9bdc96dc5cf6425c
+#: ../../request_response.txt:223
+msgid ""
+"``getlist(key)`` -- Returns the data with the requested key, as a Python "
+"list. Returns an empty list if the key doesn't exist. It's guaranteed to "
+"return a list of some sort."
+msgstr ""
+
+# 4a09982d774b4ed6bdec6e554d88f252
+#: ../../request_response.txt:227
+msgid ""
+"``setlist(key, list_)`` -- Sets the given key to ``list_`` (unlike "
+"``__setitem__()``)."
+msgstr ""
+
+# f020b41aefef416b90e8b7bd21fc4c5c
+#: ../../request_response.txt:230
+msgid ""
+"``appendlist(key, item)`` -- Appends an item to the internal list associated "
+"with key."
+msgstr ""
+
+# 378af090d73d4e23bbea5a9ee5b3a40e
+#: ../../request_response.txt:233
+msgid ""
+"``setlistdefault(key, default_list)`` -- Just like ``setdefault``, except it "
+"takes a list of values instead of a single value."
+msgstr ""
+
+# dbed4fbd73174163b012e5921bbd80d5
+#: ../../request_response.txt:236
+msgid ""
+"``lists()`` -- Like ``items()``, except it includes all values, as a list, "
+"for each member of the dictionary. For example::"
+msgstr ""
+
+# 9033c3ab73dc49e2be024198264760dd
+#: ../../request_response.txt:243
+msgid ""
+"``urlencode()`` -- Returns a string of the data in query-string format. "
+"Example: ``\"a=2&b=3&b=5\"``."
+msgstr ""
+
+# 46042a850da144c88b6f34ead79a40ab
+#: ../../request_response.txt:247
+msgid "Examples"
+msgstr ""
+
+# 5ca215a917a443dd81abef970cd5fd0a
+#: ../../request_response.txt:249
+msgid "Here's an example HTML form and how Django would treat the input::"
+msgstr ""
+
+# a01384c8dde2482783eef3d9e1aec077
+#: ../../request_response.txt:261
+msgid ""
+"If the user enters ``\"John Smith\"`` in the ``your_name`` field and selects "
+"both \"The Beatles\" and \"The Zombies\" in the multiple select box, here's "
+"what Django's request object would have::"
+msgstr ""
+
+# f06f6d1aa7764a29b57b2112483c290c
+#: ../../request_response.txt:281
+msgid "Implementation notes"
+msgstr ""
+
+# 6a9307092dd94144b9fa37405ed264ba
+#: ../../request_response.txt:283
+msgid ""
+"The ``GET``, ``POST``, ``COOKIES``, ``FILES``, ``META``, ``REQUEST``, "
+"``raw_post_data`` and ``user`` attributes are all lazily loaded. That means "
+"Django doesn't spend resources calculating the values of those attributes "
+"until your code requests them."
+msgstr ""
+
+# 42f35a9aea484ac8babb94f2d59444b6
+#: ../../request_response.txt:289
+msgid "HttpResponse objects"
+msgstr ""
+
+# fb34e667398b4962b5292c055e926a39
+#: ../../request_response.txt:291
+msgid ""
+"In contrast to ``HttpRequest`` objects, which are created automatically by "
+"Django, ``HttpResponse`` objects are your responsibility. Each view you "
+"write is responsible for instantiating, populating and returning an "
+"``HttpResponse``."
+msgstr ""
+
+# da6828c03cba466bb3e09dbcb26badf4
+#: ../../request_response.txt:295
+msgid "The ``HttpResponse`` class lives at ``django.http.HttpResponse``."
+msgstr ""
+
+# b34262c936ba4e18819247dd07b8f304
+#: ../../request_response.txt:298
+msgid "Usage"
+msgstr ""
+
+# 7710bc19d3454a7aa3771ba3deeea813
+#: ../../request_response.txt:301
+msgid "Passing strings"
+msgstr ""
+
+# e5c6aff347014182821dadc9ec3fdaa9
+#: ../../request_response.txt:303
+msgid ""
+"Typical usage is to pass the contents of the page, as a string, to the "
+"``HttpResponse`` constructor::"
+msgstr ""
+
+# 52e2d1c6c6074d909b9e58557e8c0033
+#: ../../request_response.txt:309
+msgid ""
+"But if you want to add content incrementally, you can use ``response`` as a "
+"file-like object::"
+msgstr ""
+
+# 7485a444d3bf42858be6ed810ea5d634
+#: ../../request_response.txt:316
+msgid "You can add and delete headers using dictionary syntax::"
+msgstr ""
+
+# b9698b46ca5a4406b43ba2621d3a041b
+#: ../../request_response.txt:324
+msgid ""
+"Note that ``del`` doesn't raise ``KeyError`` if the header doesn't exist."
+msgstr ""
+
+# a59d298f82684e2999880af78660a43d
+#: ../../request_response.txt:327
+msgid "Passing iterators"
+msgstr ""
+
+# b42a284e020f44fbbefe0dfbea4d12c0
+#: ../../request_response.txt:329
+msgid ""
+"Finally, you can pass ``HttpResponse`` an iterator rather than passing it "
+"hard-coded strings. If you use this technique, follow these guidelines:"
+msgstr ""
+
+# 12d3ec975219415e9c0ed95018437f2b
+#: ../../request_response.txt:332
+msgid "The iterator should return strings."
+msgstr ""
+
+# 68901f1900f24687a98a78136ce8024e
+#: ../../request_response.txt:333
+msgid ""
+"If an ``HttpResponse`` has been initialized with an iterator as its content, "
+"you can't use the ``HttpResponse`` instance as a file-like object. Doing so "
+"will raise ``Exception``."
+msgstr ""
+
+# 68d64e7bd3654c8f9b3aadc9394acd61
+#: ../../request_response.txt:341
+msgid ""
+"Instantiates an ``HttpResponse`` object with the given page content (a "
+"string) and MIME type. The ``DEFAULT_MIME_TYPE`` is ``'text/html'``."
+msgstr ""
+
+# 90e7e79c15fa4150b41173f66c9ef388
+#: ../../request_response.txt:344
+msgid ""
+"``content`` can be an iterator or a string. If it's an iterator, it should "
+"return strings, and those strings will be joined together to form the "
+"content of the response."
+msgstr ""
+
+# 24a5184deb094512866cc57e18fc0a78
+#: ../../request_response.txt:349
+msgid ""
+"Sets the given header name to the given value. Both ``header`` and ``value`` "
+"should be strings."
+msgstr ""
+
+# 219cfa1b333d46e386aac09f74246c20
+#: ../../request_response.txt:353
+msgid ""
+"Deletes the header with the given name. Fails silently if the header doesn't "
+"exist. Case-sensitive."
+msgstr ""
+
+# b959bfff5999473cb0472d95f2abb8dd
+#: ../../request_response.txt:357
+msgid "Returns the value for the given header name. Case-sensitive."
+msgstr ""
+
+# a38af993afd64c719c67109724c9dbf5
+#: ../../request_response.txt:360
+msgid ""
+"Returns ``True`` or ``False`` based on a case-insensitive check for a header "
+"with the given name."
+msgstr ""
+
+# b289f63aa4014b6e8ab381767ee243ca
+#: ../../request_response.txt:364
+msgid ""
+"Sets a cookie. The parameters are the same as in the `cookie Morsel`_ object "
+"in the Python standard library."
+msgstr ""
+
+# 7467778cd4bd4abaafee2718edff3a2e
+#: ../../request_response.txt:367
+msgid ""
+"``max_age`` should be a number of seconds, or ``None`` (default) if the "
+"cookie should last only as long as the client's browser session."
+msgstr ""
+
+# 3f342252a029475692e15f28bb3c4320
+#: ../../request_response.txt:369
+msgid ""
+"``expires`` should be a string in the format ``\"Wdy, DD-Mon-YY HH:MM:SS GMT"
+"\"``."
+msgstr ""
+
+# 5e71e41c10da44698c8a047e9b71bb05
+#: ../../request_response.txt:371
+msgid ""
+"Use ``domain`` if you want to set a cross-domain cookie. For example, "
+"``domain=\".lawrence.com\"`` will set a cookie that is readable by the "
+"domains www.lawrence.com, blogs.lawrence.com and calendars.lawrence.com. "
+"Otherwise, a cookie will only be readable by the domain that set it."
+msgstr ""
+
+# 3106126ae94e4bdc94f610008689a25b
+#: ../../request_response.txt:380
+msgid ""
+"Deletes the cookie with the given key. Fails silently if the key doesn't "
+"exist."
+msgstr ""
+
+# 230df9c77c1d42af990c2841632161ad
+#: ../../request_response.txt:384
+msgid ""
+"Returns the content as a Python string, encoding it from a Unicode object if "
+"necessary. Note this is a property, not a method, so use ``r.content`` "
+"instead of ``r.content()``."
+msgstr ""
+
+# 41c5aef5ef21467490c18647cfe84711
+#: ../../request_response.txt:389
+msgid "These methods make an ``HttpResponse`` instance a file-like object."
+msgstr ""
+
+# 66ee476f2e0c4703a4b77d95504a0da1
+#: ../../request_response.txt:392
+msgid "HttpResponse subclasses"
+msgstr ""
+
+# 689e34dc1db74f4897e4724b92583445
+#: ../../request_response.txt:394
+msgid ""
+"Django includes a number of ``HttpResponse`` subclasses that handle "
+"different types of HTTP responses. Like ``HttpResponse``, these subclasses "
+"live in ``django.http``."
+msgstr ""
+
+# 220f78b5438a4a8fb129ab97416b397c
+#: ../../request_response.txt:399
+msgid ""
+"The constructor takes a single argument -- the path to redirect to. This can "
+"be a fully qualified URL (e.g. ``'http://www.yahoo.com/search/'``) or an "
+"absolute URL with no domain (e.g. ``'/search/'``). Note that this returns an "
+"HTTP status code 302."
+msgstr ""
+
+# c55d03852f6f40d99f9a7f0203c6ab16
+#: ../../request_response.txt:405
+msgid ""
+"Like ``HttpResponseRedirect``, but it returns a permanent redirect (HTTP "
+"status code 301) instead of a \"found\" redirect (status code 302)."
+msgstr ""
+
+# ddca972583fc4068a61114fc6714a2c6
+#: ../../request_response.txt:409
+msgid ""
+"The constructor doesn't take any arguments. Use this to designate that a "
+"page hasn't been modified since the user's last request."
+msgstr ""
+
+# fb9ebef7ab10478698895f93008d1b81
+#: ../../request_response.txt:413
+msgid "Acts just like ``HttpResponse`` but uses a 404 status code."
+msgstr ""
+
+# d9bff37b8152432b9521e28489202e0d
+#: ../../request_response.txt:416
+msgid "Acts just like ``HttpResponse`` but uses a 403 status code."
+msgstr ""
+
+# 6210d19fa83c4f5595838f2e882ed0ed
+#: ../../request_response.txt:419
+msgid ""
+"Like ``HttpResponse``, but uses a 405 status code. Takes a single, required "
+"argument: a list of permitted methods (e.g. ``['GET', 'POST']``)."
+msgstr ""
+
+# 294a157bd875470c9aed5180ff8eff7e
+#: ../../request_response.txt:423
+msgid "Acts just like ``HttpResponse`` but uses a 410 status code."
+msgstr ""
+
+# e6a47bb1846140658a1630486bb8e5e9
+#: ../../request_response.txt:426
+msgid "Acts just like ``HttpResponse`` but uses a 500 status code."
+msgstr ""

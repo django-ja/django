@@ -1,0 +1,195 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# bb77e0bc983b4c4985135d808054fe07
+#: ../../outputting_pdf.txt:3
+msgid "Outputting PDFs with Django"
+msgstr ""
+
+# a7bc961254ea4a4295e174bb75dc6c0e
+#: ../../outputting_pdf.txt:5
+msgid ""
+"This document explains how to output PDF files dynamically using Django "
+"views. This is made possible by the excellent, open-source ReportLab_ Python "
+"PDF library."
+msgstr ""
+
+# c38807c06361436f8c389bd9a84fadfa
+#: ../../outputting_pdf.txt:9
+msgid ""
+"The advantage of generating PDF files dynamically is that you can create "
+"customized PDFs for different purposes -- say, for different users or "
+"different pieces of content."
+msgstr ""
+
+# 46f6c3c3d5b648b3807f14126d71421f
+#: ../../outputting_pdf.txt:13
+msgid ""
+"For example, Django was used at kusports.com_ to generate customized, "
+"printer-friendly NCAA tournament brackets, as PDF files, for people "
+"participating in a March Madness contest."
+msgstr ""
+
+# ac85d0732ba246da88168531378839e2
+#: ../../outputting_pdf.txt:21
+msgid "Install ReportLab"
+msgstr ""
+
+# f99d28644a944da09cf28b1a60f879a4
+#: ../../outputting_pdf.txt:23
+msgid ""
+"Download and install the ReportLab library from http://www.reportlab.org/"
+"downloads.html. The `user guide`_ (not coincidentally, a PDF file) explains "
+"how to install it."
+msgstr ""
+
+# f3b32f3cb5864a05901c2129a274c4ec
+#: ../../outputting_pdf.txt:26
+msgid ""
+"Test your installation by importing it in the Python interactive "
+"interpreter::"
+msgstr ""
+
+# e8f1976e16f24a4099bab9a4fc15af8a
+#: ../../outputting_pdf.txt:30
+msgid "If that command doesn't raise any errors, the installation worked."
+msgstr ""
+
+# 52c7b3eda672472e842c8554ad878c1a
+#: ../../outputting_pdf.txt:35
+msgid "Write your view"
+msgstr ""
+
+# c888a43479024157b2cdc7005dd49a2b
+#: ../../outputting_pdf.txt:37
+msgid ""
+"The key to generating PDFs dynamically with Django is that the ReportLab API "
+"acts on file-like objects, and Django's ``HttpResponse`` objects are file-"
+"like objects."
+msgstr ""
+
+# 8a7f17d8dd0b4caf856b063d6f80392a
+#: ../../outputting_pdf.txt:43
+msgid ""
+"For more information on ``HttpResponse`` objects, see :doc:`Request and "
+"response objects <request_response>`."
+msgstr ""
+
+# 65503ffdcdac4255b3e8b86886cb03c9
+#: ../../outputting_pdf.txt:46
+msgid "Here's a \"Hello World\" example::"
+msgstr ""
+
+# 4980a530213a49c689370b303ae511f4
+#: ../../outputting_pdf.txt:68
+msgid ""
+"The code and comments should be self-explanatory, but a few things deserve a "
+"mention:"
+msgstr ""
+
+# 83fc8ed00ddf49e5af341ab148ad0e62
+#: ../../outputting_pdf.txt:71
+msgid ""
+"The response gets a special mimetype, ``application/pdf``. This tells "
+"browsers that the document is a PDF file, rather than an HTML file. If you "
+"leave this off, browsers will probably interpret the output as HTML, which "
+"would result in ugly, scary gobbledygook in the browser window."
+msgstr ""
+
+# 7b90c2415a0e41cc86767bf73de7cdeb
+#: ../../outputting_pdf.txt:76
+msgid ""
+"The response gets an additional ``Content-Disposition`` header, which "
+"contains the name of the PDF file. This filename is arbitrary: Call it "
+"whatever you want. It'll be used by browsers in the \"Save as...\" dialogue, "
+"etc."
+msgstr ""
+
+# 1a3de3e0a3fc4b0e813a939c6aa51656
+#: ../../outputting_pdf.txt:81
+msgid ""
+"The ``Content-Disposition`` header starts with ``'attachment; '`` in this "
+"example. This forces Web browsers to pop-up a dialog box prompting/"
+"confirming how to handle the document even if a default is set on the "
+"machine. If you leave off ``'attachment;'``, browsers will handle the PDF "
+"using whatever program/plugin they've been configured to use for PDFs. "
+"Here's what that code would look like::"
+msgstr ""
+
+# 5d4f31d92c134312ab212886837f0258
+#: ../../outputting_pdf.txt:90
+msgid ""
+"Hooking into the ReportLab API is easy: Just pass ``response`` as the first "
+"argument to ``canvas.Canvas``. The ``Canvas`` class expects a file-like "
+"object, and ``HttpResponse`` objects fit the bill."
+msgstr ""
+
+# 50269923ada14dd3bc4d5073a4b01755
+#: ../../outputting_pdf.txt:94
+msgid ""
+"Note that all subsequent PDF-generation methods are called on the PDF object "
+"(in this case, ``p``) -- not on ``response``."
+msgstr ""
+
+# 2f351e27e5514e74acff46542a456dad
+#: ../../outputting_pdf.txt:97
+msgid ""
+"Finally, it's important to call ``showPage()`` and ``save()`` on the PDF "
+"file."
+msgstr ""
+
+# d304fb6a20484d5ca4d5a91c529fa350
+#: ../../outputting_pdf.txt:101
+msgid "Complex PDFs"
+msgstr ""
+
+# bee2187d871440fc89b82b0ba83bb615
+#: ../../outputting_pdf.txt:103
+msgid ""
+"If you're creating a complex PDF document with ReportLab, consider using the "
+"cStringIO_ library as a temporary holding place for your PDF file. The "
+"cStringIO library provides a file-like object interface that is particularly "
+"efficient. Here's the above \"Hello World\" example rewritten to use "
+"``cStringIO``::"
+msgstr ""
+
+# 383638bc1a4a4a8383b385b807c033f9
+#: ../../outputting_pdf.txt:140
+msgid "Further resources"
+msgstr ""
+
+# ad5901c079874d2ba5028f57206d1223
+#: ../../outputting_pdf.txt:142
+msgid ""
+"PDFlib_ is another PDF-generation library that has Python bindings. To use "
+"it with Django, just use the same concepts explained in this article."
+msgstr ""
+
+# 02cc65e4024c4dad8376d2beeecccd90
+#: ../../outputting_pdf.txt:144
+msgid ""
+"HTMLdoc_ is a command-line script that can convert HTML to PDF. It doesn't "
+"have a Python interface, but you can escape out to the shell using "
+"``system`` or ``popen`` and retrieve the output in Python."
+msgstr ""
+
+# 9f4a8d118d4d4f649156191d435b5d13
+#: ../../outputting_pdf.txt:147
+msgid "`forge_fdf in Python`_ is a library that fills in PDF forms."
+msgstr ""

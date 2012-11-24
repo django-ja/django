@@ -1,0 +1,1552 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 2d4f0d575b404eb28bfe185accc2b1d5
+#: ../../settings.txt:3
+msgid "Django settings"
+msgstr ""
+
+# 5779623ad0a044cf83a6aaed5b944e4a
+#: ../../settings.txt:5
+msgid ""
+"A Django settings file contains all the configuration of your Django "
+"installation. This document explains how settings work and which settings "
+"are available."
+msgstr ""
+
+# 14768cc187a646859de2e19e834f850e
+#: ../../settings.txt:10
+msgid "The basics"
+msgstr ""
+
+# 1bfe0078c3d0461cbd9f59fa8ef43e1e
+#: ../../settings.txt:12
+msgid "A settings file is just a Python module with module-level variables."
+msgstr ""
+
+# b7320425277b44e4853878b4208637db
+#: ../../settings.txt:14
+msgid "Here are a couple of example settings::"
+msgstr ""
+
+# 261d1b54ee6e49d5ae26c6978c72787c
+#: ../../settings.txt:20
+msgid "Because a settings file is a Python module, the following apply:"
+msgstr ""
+
+# 0b1c1f8588ae4282b0b2386efd552821
+#: ../../settings.txt:22
+msgid "It doesn't allow for Python syntax errors."
+msgstr ""
+
+# 183b7424c256426abdca8decbc14e8be
+#: ../../settings.txt:23
+msgid ""
+"It can assign settings dynamically using normal Python syntax. For example::"
+msgstr ""
+
+# b5ccf3fa8c004bcaa3642b1a007d4650
+#: ../../settings.txt:28
+msgid "It can import values from other settings files."
+msgstr ""
+
+# c7f485668f5c42469608ea5a58d571fc
+#: ../../settings.txt:31
+msgid "Designating the settings"
+msgstr ""
+
+# 527e18de81ca49b9843f3cfe1664e51a
+#: ../../settings.txt:33
+msgid ""
+"When you use Django, you have to tell it which settings you're using. Do "
+"this by using an environment variable, ``DJANGO_SETTINGS_MODULE``."
+msgstr ""
+
+# e12fdc88b3434e7e876e7a09654f02bb
+#: ../../settings.txt:36
+msgid ""
+"The value of ``DJANGO_SETTINGS_MODULE`` should be in Python path syntax, e."
+"g. ``mysite.settings``. Note that the settings module should be on the "
+"Python `import search path`_."
+msgstr ""
+
+# 081da952a12b41e19c0749a0813b0b4c
+#: ../../settings.txt:43
+msgid "The django-admin.py utility"
+msgstr ""
+
+# bd4df95ba5f14b84b90317c8bb98acee
+#: ../../settings.txt:45
+msgid ""
+"When using :doc:`django-admin.py <django-admin>`, you can either set the "
+"environment variable once, or explicitly pass in the settings module each "
+"time you run the utility."
+msgstr ""
+
+# 35d4fd2346d04241b5bc66a8b5644ec7
+#: ../../settings.txt:48
+msgid "Example (Unix Bash shell)::"
+msgstr ""
+
+# 7e37ab99aaf244009c7438b8116af654
+#: ../../settings.txt:53
+msgid "Example (Windows shell)::"
+msgstr ""
+
+# 4f7aac6e6ef8442d83d83db7644f8423
+#: ../../settings.txt:58
+msgid ""
+"Use the ``--settings`` command-line argument to specify the settings "
+"manually::"
+msgstr ""
+
+# a4c6c14512a44b508fafd7cd9ab9585e
+#: ../../settings.txt:63
+msgid "On the server (mod_python)"
+msgstr ""
+
+# b590aafa97d146a5a73bbdff5f260b3f
+#: ../../settings.txt:65
+msgid ""
+"In your live server environment, you'll need to tell Apache/mod_python which "
+"settings file to use. Do that with ``SetEnv``::"
+msgstr ""
+
+# 85dddc04572242d99440dc0533273503
+#: ../../settings.txt:74
+msgid ""
+"Read the :doc:`Django mod_python documentation <modpython>` for more "
+"information."
+msgstr ""
+
+# 5ac2f59ac1f34754a72d1626c4d85556
+#: ../../settings.txt:77
+msgid "Default settings"
+msgstr ""
+
+# 88c396729a2e4646b67cbc2cf756fc31
+#: ../../settings.txt:79
+msgid ""
+"A Django settings file doesn't have to define any settings if it doesn't "
+"need to. Each setting has a sensible default value. These defaults live in "
+"the file ``django/conf/global_settings.py``."
+msgstr ""
+
+# 3b9490953aa940cf8263ab0fa7cec87c
+#: ../../settings.txt:83
+msgid "Here's the algorithm Django uses in compiling settings:"
+msgstr ""
+
+# 776ddfdfd3344a7aad1156db1a43a930
+#: ../../settings.txt:85
+msgid "Load settings from ``global_settings.py``."
+msgstr ""
+
+# dc4a3050b9d74b368b0b543118eb3e5a
+#: ../../settings.txt:86
+msgid ""
+"Load settings from the specified settings file, overriding the global "
+"settings as necessary."
+msgstr ""
+
+# 5f4213d28f94469f83e747d09312d154
+#: ../../settings.txt:89
+msgid ""
+"Note that a settings file should *not* import from ``global_settings``, "
+"because that's redundant."
+msgstr ""
+
+# 13a3396460fa41008d4c09fabbee35af
+#: ../../settings.txt:93
+msgid "Seeing which settings you've changed"
+msgstr ""
+
+# e8fd99b11efb47e1a12c821b5c65d4c0
+#: ../../settings.txt:95
+msgid ""
+"There's an easy way to view which of your settings deviate from the default "
+"settings. The command ``python manage.py diffsettings`` displays differences "
+"between the current settings file and Django's default settings."
+msgstr ""
+
+# 9aad884ba6614c5e840fc695dd564eff
+#: ../../settings.txt:99
+msgid "For more, see the :doc:`diffsettings documentation <django-admin>`."
+msgstr ""
+
+# ec4f55f340704664bb1c802c70a43d31
+#: ../../settings.txt:102
+msgid "Using settings in Python code"
+msgstr ""
+
+# 78d13a11e3cc42bc8f8734ae9eb99a75
+#: ../../settings.txt:104
+msgid ""
+"In your Django apps, use settings by importing the object ``django.conf."
+"settings``. Example::"
+msgstr ""
+
+# 1c87918d18fd4219aa06f32760c617fb
+#: ../../settings.txt:112
+msgid ""
+"Note that ``django.conf.settings`` isn't a module -- it's an object. So "
+"importing individual settings is not possible::"
+msgstr ""
+
+# 5c894da7bb45441d9a524ffa99d8549b
+#: ../../settings.txt:117
+msgid ""
+"Also note that your code should *not* import from either ``global_settings`` "
+"or your own settings file. ``django.conf.settings`` abstracts the concepts "
+"of default settings and site-specific settings; it presents a single "
+"interface. It also decouples the code that uses settings from the location "
+"of your settings."
+msgstr ""
+
+# 8755450e1d964e0484e298de66081bcc
+#: ../../settings.txt:124
+msgid "Altering settings at runtime"
+msgstr ""
+
+# 7525c5a11c684144a6a6ad05a91ce5bb
+#: ../../settings.txt:126
+msgid ""
+"You shouldn't alter settings in your applications at runtime. For example, "
+"don't do this in a view::"
+msgstr ""
+
+# da939f716d9a4f4588963451d56a6acc
+#: ../../settings.txt:133
+msgid "The only place you should assign to settings is in a settings file."
+msgstr ""
+
+# 9feca09e8cf84b279d1b3c584f5d75b2
+#: ../../settings.txt:136
+msgid "Security"
+msgstr ""
+
+# 9813084ed7a94ce5a0efc5a370422d09
+#: ../../settings.txt:138
+msgid ""
+"Because a settings file contains sensitive information, such as the database "
+"password, you should make every attempt to limit access to it. For example, "
+"change its file permissions so that only you and your Web server's user can "
+"read it. This is especially important in a shared-hosting environment."
+msgstr ""
+
+# 866dab483c5e49b68e604bf00c936d45
+#: ../../settings.txt:144
+msgid "Available settings"
+msgstr ""
+
+# 716c2f00b22a45739c06cbc3b3b38afa
+#: ../../settings.txt:146
+msgid ""
+"Here's a full list of all available settings, in alphabetical order, and "
+"their default values."
+msgstr ""
+
+# 3be1aebe85424abd87db4f58e1cf9b91
+#: ../../settings.txt:150
+msgid "ABSOLUTE_URL_OVERRIDES"
+msgstr ""
+
+# 5f981013602b49469b836d0843684717
+#: ../../settings.txt:152
+msgid "Default: ``{}`` (Empty dictionary)"
+msgstr ""
+
+# 8ec4474e17a64274942e2507777e6481
+#: ../../settings.txt:154
+msgid ""
+"A dictionary mapping ``\"app_label.module_name\"`` strings to functions that "
+"take a model object and return its URL. This is a way of overriding "
+"``get_absolute_url()`` methods on a per-installation basis. Example::"
+msgstr ""
+
+# 9aa48da4d8744697a3bd72094b8f199c
+#: ../../settings.txt:164
+msgid "ADMIN_FOR"
+msgstr ""
+
+# d4100ae0172c4fb3b1a6a19b35102fea
+#: ../../settings.txt:166
+msgid "Default: ``()`` (Empty list)"
+msgstr ""
+
+# 83a02c4cf4794fc3a33a4e4818dd8f05
+#: ../../settings.txt:168
+msgid ""
+"Used for admin-site settings modules, this should be a tuple of settings "
+"modules (in the format ``'foo.bar.baz'``) for which this site is an admin."
+msgstr ""
+
+# 7e14fa26ef0e40079b2589c174bd1b6d
+#: ../../settings.txt:171
+msgid ""
+"The admin site uses this in its automatically-introspected documentation of "
+"models, views and template tags."
+msgstr ""
+
+# 2edde6955c3147d4b1ae07b5daf7b381
+#: ../../settings.txt:175
+msgid "ADMIN_MEDIA_PREFIX"
+msgstr ""
+
+# 78d8e3ca851648fa8d11925557afcc57
+#: ../../settings.txt:177
+msgid "Default: ``'/media/'``"
+msgstr ""
+
+# b58b0ed58667459f947cf7150c7d18b1
+#: ../../settings.txt:179
+msgid ""
+"The URL prefix for admin media -- CSS, JavaScript and images. Make sure to "
+"use a trailing slash."
+msgstr ""
+
+# 4999fccd6e24408184b9f917d9c55a3a
+#: ../../settings.txt:183
+msgid "ADMINS"
+msgstr ""
+
+# 8e18c70d280e4ab5a2fa321d59c54f0a
+# 8e18c70d280e4ab5a2fa321d59c54f0a
+# 8e18c70d280e4ab5a2fa321d59c54f0a
+# 8e18c70d280e4ab5a2fa321d59c54f0a
+# 90c5df4cdc8a484286f1d57b5009a34c
+# 8e18c70d280e4ab5a2fa321d59c54f0a
+#: ../../settings.txt:185 ../../settings.txt:197 ../../settings.txt:342
+#: ../../settings.txt:421 ../../settings.txt:430 ../../settings.txt:691
+msgid "Default: ``()`` (Empty tuple)"
+msgstr ""
+
+# d6afccf8654e44ca92c5408140c63e37
+#: ../../settings.txt:187
+msgid ""
+"A tuple that lists people who get code error notifications. When "
+"``DEBUG=False`` and a view raises an exception, Django will e-mail these "
+"people with the full exception information. Each member of the tuple should "
+"be a tuple of (Full name, e-mail address). Example::"
+msgstr ""
+
+# 774d61342ac6439b8e98b8096719f7fe
+#: ../../settings.txt:195
+msgid "ALLOWED_INCLUDE_ROOTS"
+msgstr ""
+
+# 73ac0fdc4f004769b4fd94cda73703b0
+#: ../../settings.txt:199
+msgid ""
+"A tuple of strings representing allowed prefixes for the ``{% ssi %}`` "
+"template tag. This is a security measure, so that template authors can't "
+"access files that they shouldn't be accessing."
+msgstr ""
+
+# cbdd6e0e4d7f4625a8980d9befdfa6c8
+#: ../../settings.txt:203
+msgid ""
+"For example, if ``ALLOWED_INCLUDE_ROOTS`` is ``('/home/html', '/var/www')``, "
+"then ``{% ssi /home/html/foo.txt %}`` would work, but ``{% ssi /etc/passwd %}"
+"`` wouldn't."
+msgstr ""
+
+# e2813dd26dfb4390939c00c154fd682c
+#: ../../settings.txt:208
+msgid "APPEND_SLASH"
+msgstr ""
+
+# d725c87087af4de4972b07ce9e0ea983
+# d725c87087af4de4972b07ce9e0ea983
+#: ../../settings.txt:210 ../../settings.txt:760
+msgid "Default: ``True``"
+msgstr ""
+
+# 955790eb8af34eea9eb21b3102b54dcc
+#: ../../settings.txt:212
+msgid ""
+"Whether to append trailing slashes to URLs. This is only used if "
+"``CommonMiddleware`` is installed (see the :doc:`middleware docs "
+"<middleware>`). See also ``PREPEND_WWW``."
+msgstr ""
+
+# b905409a9f71451b8d6bc36c5884fa49
+#: ../../settings.txt:217
+msgid "CACHE_BACKEND"
+msgstr ""
+
+# 2bd2a7a25614480ba9066a3e94a7a0c8
+#: ../../settings.txt:219
+msgid "Default: ``'simple://'``"
+msgstr ""
+
+# efa45752d436494dae00925d69c0615b
+#: ../../settings.txt:221
+msgid "The cache backend to use. See the :doc:`cache docs <cache>`."
+msgstr ""
+
+# 62e790c363e34cd6b1536da6245a669d
+#: ../../settings.txt:223
+msgid "CACHE_MIDDLEWARE_KEY_PREFIX"
+msgstr ""
+
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+# 08f5603b2646480184b42d96accf53ba
+#: ../../settings.txt:225 ../../settings.txt:241 ../../settings.txt:257
+#: ../../settings.txt:265 ../../settings.txt:272 ../../settings.txt:280
+#: ../../settings.txt:361 ../../settings.txt:371 ../../settings.txt:523
+#: ../../settings.txt:531 ../../settings.txt:585 ../../settings.txt:709
+msgid "Default: ``''`` (Empty string)"
+msgstr ""
+
+# 40e1b96e70064a84a284ba5e0cfeef1b
+#: ../../settings.txt:227
+msgid ""
+"The cache key prefix that the cache middleware should use. See the :doc:"
+"`cache docs <cache>`."
+msgstr ""
+
+# 614f5572583c463cae3dfe64572a904e
+#: ../../settings.txt:231
+msgid "DATABASE_ENGINE"
+msgstr ""
+
+# 82c16b53b0f642be848254cc99c51721
+#: ../../settings.txt:233
+msgid "Default: ``'postgresql'``"
+msgstr ""
+
+# a0ecd94953874c328c0621a0e7ad8208
+#: ../../settings.txt:235
+msgid ""
+"Which database backend to use. Either ``'postgresql'``, ``'mysql'``, "
+"``'sqlite3'`` or ``'ado_mssql'``."
+msgstr ""
+
+# 2176e88d8988495aab08219fcb6c425f
+#: ../../settings.txt:239
+msgid "DATABASE_HOST"
+msgstr ""
+
+# 18615110a423471194e6695821bae3a7
+#: ../../settings.txt:243
+msgid ""
+"Which host to use when connecting to the database. An empty string means "
+"localhost. Not used with SQLite."
+msgstr ""
+
+# 847a977707ba409595d42a83adabb533
+#: ../../settings.txt:246
+msgid ""
+"If this value starts with a forward slash (``'/'``) and you're using MySQL, "
+"MySQL will connect via a Unix socket to the specified socket. For example::"
+msgstr ""
+
+# e1f322f17311422c950252979593b611
+#: ../../settings.txt:251
+msgid ""
+"If you're using MySQL and this value *doesn't* start with a forward slash, "
+"then this value is assumed to be the host."
+msgstr ""
+
+# 86747db6e69c4e7c8dc7a7867c9a1157
+#: ../../settings.txt:255
+msgid "DATABASE_NAME"
+msgstr ""
+
+# c6a769c3dd8443199db7d90801989f76
+#: ../../settings.txt:259
+msgid ""
+"The name of the database to use. For SQLite, it's the full path to the "
+"database file."
+msgstr ""
+
+# 13c30db3704f4a86836c210c1631dd18
+#: ../../settings.txt:263
+msgid "DATABASE_PASSWORD"
+msgstr ""
+
+# 8e9821292c8a41d6a219816622fba83c
+#: ../../settings.txt:267
+msgid ""
+"The password to use when connecting to the database. Not used with SQLite."
+msgstr ""
+
+# 3c52a3ec85b7476bbc05c80f12300d3e
+#: ../../settings.txt:270
+msgid "DATABASE_PORT"
+msgstr ""
+
+# 51d59d80f83c43a0b2af13b95f36be76
+#: ../../settings.txt:274
+msgid ""
+"The port to use when connecting to the database. An empty string means the "
+"default port. Not used with SQLite."
+msgstr ""
+
+# 271066b9f8e8487cbe57e45de51a74e6
+#: ../../settings.txt:278
+msgid "DATABASE_USER"
+msgstr ""
+
+# e35da37728894cdfbfc5ea2f2d8e6f34
+#: ../../settings.txt:282
+msgid ""
+"The username to use when connecting to the database. Not used with SQLite."
+msgstr ""
+
+# ebc288d71c9b45fdbb419a4235d08ce0
+#: ../../settings.txt:285
+msgid "DATE_FORMAT"
+msgstr ""
+
+# f1b06252bc024c1db1a7fe9a8db7e309
+#: ../../settings.txt:287
+msgid "Default: ``'N j, Y'`` (e.g. ``Feb. 4, 2003``)"
+msgstr ""
+
+# e5642f320b214aeb8e4deea407652625
+#: ../../settings.txt:289
+msgid ""
+"The default formatting to use for date fields on Django admin change-list "
+"pages -- and, possibly, by other parts of the system. See :doc:`allowed date "
+"format strings <templates>`."
+msgstr ""
+
+# aee3244f60a14fdbafc668f410da2cc4
+#: ../../settings.txt:293
+msgid ""
+"See also DATETIME_FORMAT, TIME_FORMAT, YEAR_MONTH_FORMAT and "
+"MONTH_DAY_FORMAT."
+msgstr ""
+
+# 4675d2c539fe4bf2998333f69cfaa8d9
+#: ../../settings.txt:296
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+# 3bea1f9350b94f9389884ee90d122622
+#: ../../settings.txt:298
+msgid "Default: ``'N j, Y, P'`` (e.g. ``Feb. 4, 2003, 4 p.m.``)"
+msgstr ""
+
+# 62e183070d11476f91fbc60229087080
+#: ../../settings.txt:300
+msgid ""
+"The default formatting to use for datetime fields on Django admin change-"
+"list pages -- and, possibly, by other parts of the system. See :doc:`allowed "
+"date format strings <templates>`."
+msgstr ""
+
+# 9e4e77e014244d31ad920efe283e2367
+# 7593b47da45e488aa399a26bb814491c
+#: ../../settings.txt:304 ../../settings.txt:723
+msgid ""
+"See also DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT, YEAR_MONTH_FORMAT and "
+"MONTH_DAY_FORMAT."
+msgstr ""
+
+# e72fc19f6fd641538fee7692cd73e2fe
+#: ../../settings.txt:307
+msgid "DEBUG"
+msgstr ""
+
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+# bda68aabe41641f1b5a1cfb1dcfc63c8
+#: ../../settings.txt:309 ../../settings.txt:397 ../../settings.txt:568
+#: ../../settings.txt:594 ../../settings.txt:637 ../../settings.txt:645
+#: ../../settings.txt:676 ../../settings.txt:751
+msgid "Default: ``False``"
+msgstr ""
+
+# 857dee18d2734dadabea481f0e55761f
+#: ../../settings.txt:311
+msgid "A boolean that turns on/off debug mode."
+msgstr ""
+
+# 6c8e7df2001a4bb098415480299a6d13
+#: ../../settings.txt:314
+msgid "DEFAULT_CHARSET"
+msgstr ""
+
+# f67674bcaf13434ca46f9de5ca338fee
+#: ../../settings.txt:316
+msgid "Default: ``'utf-8'``"
+msgstr ""
+
+# 7a7329081cb44978ac8876c1db726884
+#: ../../settings.txt:318
+msgid ""
+"Default charset to use for all ``HttpResponse`` objects, if a MIME type "
+"isn't manually specified. Used with ``DEFAULT_CONTENT_TYPE`` to construct "
+"the ``Content-Type`` header."
+msgstr ""
+
+# 7c207ab6433f4851aa8fa069e536a654
+#: ../../settings.txt:323
+msgid "DEFAULT_CONTENT_TYPE"
+msgstr ""
+
+# 8aa4ce740f574d7ba1ef9082ee92b485
+#: ../../settings.txt:325
+msgid "Default: ``'text/html'``"
+msgstr ""
+
+# 9e25605d52fd4589973ccadcd6734259
+#: ../../settings.txt:327
+msgid ""
+"Default content type to use for all ``HttpResponse`` objects, if a MIME type "
+"isn't manually specified. Used with ``DEFAULT_CHARSET`` to construct the "
+"``Content-Type`` header."
+msgstr ""
+
+# cbab361d8ebf4e2288cdd675ff00020c
+#: ../../settings.txt:332
+msgid "DEFAULT_FROM_EMAIL"
+msgstr ""
+
+# 58cb1fe7d208474eb1c7f36cdb9c7490
+#: ../../settings.txt:334
+msgid "Default: ``'webmaster@localhost'``"
+msgstr ""
+
+# a5ebfc130ec64450886a83d487f7bb33
+#: ../../settings.txt:336
+msgid ""
+"Default e-mail address to use for various automated correspondence from the "
+"site manager(s)."
+msgstr ""
+
+# f721f616c83847faadf3ca89e114b418
+#: ../../settings.txt:340
+msgid "DISALLOWED_USER_AGENTS"
+msgstr ""
+
+# eed150c0b5c14826b65ebf60d2950fb9
+#: ../../settings.txt:344
+msgid ""
+"List of compiled regular expression objects representing User-Agent strings "
+"that are not allowed to visit any page, systemwide. Use this for bad robots/"
+"crawlers.  This is only used if ``CommonMiddleware`` is installed (see the :"
+"doc:`middleware docs <middleware>`)."
+msgstr ""
+
+# eb73c3144a264d808dabde2675abaefc
+#: ../../settings.txt:350
+msgid "EMAIL_HOST"
+msgstr ""
+
+# b5b56cd81cd549bf8aee94234e1b2c39
+#: ../../settings.txt:352
+msgid "Default: ``'localhost'``"
+msgstr ""
+
+# 6e5ecd09a9af4844a4e61f9146e293db
+#: ../../settings.txt:354
+msgid "The host to use for sending e-mail."
+msgstr ""
+
+# d04d159a65df493bbecdea1f11df27f7
+#: ../../settings.txt:356
+msgid "See also ``EMAIL_PORT``."
+msgstr ""
+
+# 0509ae4372304ea2a6bc8e71aec5ad0f
+#: ../../settings.txt:359
+msgid "EMAIL_HOST_PASSWORD"
+msgstr ""
+
+# 82f594074c6e4640ac7cf85e45e7cfc5
+# 82f594074c6e4640ac7cf85e45e7cfc5
+#: ../../settings.txt:363 ../../settings.txt:373
+msgid ""
+"Username to use for the SMTP server defined in ``EMAIL_HOST``. If empty, "
+"Django won't attempt authentication."
+msgstr ""
+
+# 59ee5851058846d4932397e9c5ad812d
+#: ../../settings.txt:366
+msgid "See also ``EMAIL_HOST_USER``."
+msgstr ""
+
+# 9b78d4e830f24909a54db8c769ec44d1
+#: ../../settings.txt:369
+msgid "EMAIL_HOST_USER"
+msgstr ""
+
+# 05a62ec097f64c2c8bbfd69f2d20398d
+#: ../../settings.txt:376
+msgid "See also ``EMAIL_HOST_PASSWORD``."
+msgstr ""
+
+# b249be80370744cd91930018d645e6dd
+#: ../../settings.txt:379
+msgid "EMAIL_PORT"
+msgstr ""
+
+# 76b1069708eb4adbaa8257e340b90ae3
+#: ../../settings.txt:381
+msgid "Default: ``25``"
+msgstr ""
+
+# dcd49161106448378682edcab90de3bd
+#: ../../settings.txt:383
+msgid "Port to use for the SMTP server defined in ``EMAIL_HOST``."
+msgstr ""
+
+# 8c66ed2e2f1941eaacabcd33f563d708
+#: ../../settings.txt:386
+msgid "EMAIL_SUBJECT_PREFIX"
+msgstr ""
+
+# e705e427e9bb47b9a549e19f9955aaf4
+#: ../../settings.txt:388
+msgid "Default: ``'[Django] '``"
+msgstr ""
+
+# 7639a8f2babb4d8988c402420e13e516
+#: ../../settings.txt:390
+msgid ""
+"Subject-line prefix for e-mail messages sent with ``django.core.mail."
+"mail_admins`` or ``django.core.mail.mail_managers``. You'll probably want to "
+"include the trailing space."
+msgstr ""
+
+# 9943a4d586f04c6d8fc218871cebd8a0
+#: ../../settings.txt:395
+msgid "ENABLE_PSYCO"
+msgstr ""
+
+# 1301a68e8db448a2b797187a95c435f5
+#: ../../settings.txt:399
+msgid "Whether to enable Psyco, which optimizes Python code. Requires Psyco_."
+msgstr ""
+
+# d4bbe5f82a334cfa80b88f53eb7958ff
+#: ../../settings.txt:404
+msgid "IGNORABLE_404_ENDS"
+msgstr ""
+
+# abcef14d2f0341f6ae7ca087d8f3a3fc
+#: ../../settings.txt:406
+msgid ""
+"Default: ``('mail.pl', 'mailform.pl', 'mail.cgi', 'mailform.cgi', 'favicon."
+"ico', '.php')``"
+msgstr ""
+
+# f97691eac8b74b769f89cae001024a7f
+#: ../../settings.txt:408
+msgid "See also ``IGNORABLE_404_STARTS``."
+msgstr ""
+
+# 9acff069dda74c55aa0b6200e1613490
+#: ../../settings.txt:411
+msgid "IGNORABLE_404_STARTS"
+msgstr ""
+
+# e5463f82c84d4b7abd31add7c6409e5e
+#: ../../settings.txt:413
+msgid "Default: ``('/cgi-bin/', '/_vti_bin', '/_vti_inf')``"
+msgstr ""
+
+# a35dbcb2ae794cd09d79fefdbe2cd4d0
+#: ../../settings.txt:415
+msgid ""
+"A tuple of strings that specify beginnings of URLs that should be ignored by "
+"the 404 e-mailer. See ``SEND_BROKEN_LINK_EMAILS`` and ``IGNORABLE_404_ENDS``."
+msgstr ""
+
+# f0a9fb103f4f42399750aaf45f94d896
+#: ../../settings.txt:419
+msgid "INSTALLED_APPS"
+msgstr ""
+
+# d88caac3c5de4b6ea092aedce7b2a2b0
+#: ../../settings.txt:423
+msgid ""
+"A tuple of strings designating all applications that are enabled in this "
+"Django installation. Each string should be a full Python path to a Python "
+"package that contains a Django application, as created by :doc:`django-admin."
+"py startapp <django-admin>`."
+msgstr ""
+
+# 6e76780db18841758d1344beab4f0faf
+#: ../../settings.txt:428
+msgid "INTERNAL_IPS"
+msgstr ""
+
+# 78cb1877459748538e0a13be4f49d9e1
+#: ../../settings.txt:432
+msgid "A tuple of IP addresses, as strings, that:"
+msgstr ""
+
+# 0b3861ea59f84f81ab9eee0f4bf7deea
+#: ../../settings.txt:434
+msgid "See debug comments, when ``DEBUG`` is ``True``"
+msgstr ""
+
+# f61274e111d04699a115ad560d83a4b0
+#: ../../settings.txt:435
+msgid ""
+"Receive X headers if the ``XViewMiddleware`` is installed (see the :doc:"
+"`middleware docs <middleware>`)"
+msgstr ""
+
+# 2bf6927c895a44b0a6e21ab1f19044c0
+#: ../../settings.txt:439
+msgid "JING_PATH"
+msgstr ""
+
+# eb36af65bc52457e8e93e93b6e875b13
+#: ../../settings.txt:441
+msgid "Default: ``'/usr/bin/jing'``"
+msgstr ""
+
+# ed32e7dd81da4d64b571d3e8e4b2e578
+#: ../../settings.txt:443
+msgid ""
+"Path to the \"Jing\" executable. Jing is a RELAX NG validator, and Django "
+"uses it to validate each ``XMLField`` in your models. See http://www."
+"thaiopensource.com/relaxng/jing.html ."
+msgstr ""
+
+# 1fb23809415542fdb0e1fe35408389c0
+#: ../../settings.txt:448
+msgid "LANGUAGE_CODE"
+msgstr ""
+
+# e34a921a191648789e413504680249ce
+#: ../../settings.txt:450
+msgid "Default: ``'en-us'``"
+msgstr ""
+
+# 5b8a8ae44ce74246b297563bcc36a42b
+#: ../../settings.txt:452
+msgid ""
+"A string representing the language code for this installation. This should "
+"be in standard language format. For example, U.S. English is ``\"en-us\"``. "
+"See the :doc:`internationalization docs <i18n>`."
+msgstr ""
+
+# b8608ca300364546a9d179c9bd1a0fac
+#: ../../settings.txt:457
+msgid "LANGUAGES"
+msgstr ""
+
+# 33d30eb5352c42f18abd018870dec4db
+#: ../../settings.txt:459
+msgid "Default: A tuple of all available languages. Currently, this is::"
+msgstr ""
+
+# 56a24c6142c249ee934e27c12e281012
+#: ../../settings.txt:483
+msgid ""
+"A tuple of two-tuples in the format (language code, language name). This "
+"specifies which languages are available for language selection. See the :doc:"
+"`internationalization docs <i18n>` for details."
+msgstr ""
+
+# e08dfeb4a56b4395bb7e79967384aab0
+#: ../../settings.txt:487
+msgid ""
+"Generally, the default value should suffice. Only set this setting if you "
+"want to restrict language selection to a subset of the Django-provided "
+"languages."
+msgstr ""
+
+# f386d67caf104548ac27eaa31b689746
+#: ../../settings.txt:490
+msgid ""
+"If you define a custom ``LANGUAGES`` setting, it's OK to mark the languages "
+"as translation strings (as in the default value displayed above) -- but use "
+"a \"dummy\" ``gettext()`` function, not the one in ``django.utils."
+"translation``. You should *never* import ``django.utils.translation`` from "
+"within your settings file, because that module in itself depends on the "
+"settings, and that would cause a circular import."
+msgstr ""
+
+# 54c57e6e8d80493a9f8255b7f109dca1
+#: ../../settings.txt:497
+msgid ""
+"The solution is to use a \"dummy\" ``gettext()`` function. Here's a sample "
+"settings file::"
+msgstr ""
+
+# f2b8c5111c314f228f174751624eacf3
+#: ../../settings.txt:507
+msgid ""
+"With this arrangement, ``make-messages.py`` will still find and mark these "
+"strings for translation, but the translation won't happen at runtime -- so "
+"you'll have to remember to wrap the languages in the *real* ``gettext()`` in "
+"any code that uses ``LANGUAGES`` at runtime."
+msgstr ""
+
+# c32fa976b9f34d7daba98d34ff866447
+#: ../../settings.txt:513
+msgid "MANAGERS"
+msgstr ""
+
+# 5a8626605f68441b9f5a0f27f01fbfc1
+#: ../../settings.txt:515
+msgid "Default: ``ADMINS`` (Whatever ``ADMINS`` is set to)"
+msgstr ""
+
+# f60d436cc1c04686b2806cf50fbf5fb8
+#: ../../settings.txt:517
+msgid ""
+"A tuple in the same format as ``ADMINS`` that specifies who should get "
+"broken-link notifications when ``SEND_BROKEN_LINK_EMAILS=True``."
+msgstr ""
+
+# c2a86b24167c49678c719fd3fb6197da
+#: ../../settings.txt:521
+msgid "MEDIA_ROOT"
+msgstr ""
+
+# 2d2ee880aac847668a61a3602f3dcb9a
+#: ../../settings.txt:525
+msgid ""
+"Absolute path to the directory that holds media for this installation. "
+"Example: ``\"/home/media/media.lawrence.com/\"`` See also ``MEDIA_URL``."
+msgstr ""
+
+# 14263897ef064a22b69bb5e1dec20d96
+#: ../../settings.txt:529
+msgid "MEDIA_URL"
+msgstr ""
+
+# 88cfb93624e54f66ac085725d75448f0
+#: ../../settings.txt:533
+msgid ""
+"URL that handles the media served from ``MEDIA_ROOT``. Example: ``\"http://"
+"media.lawrence.com\"``"
+msgstr ""
+
+# 56a6ba09abf2462ab5561c2dd29b9816
+#: ../../settings.txt:537
+msgid "MIDDLEWARE_CLASSES"
+msgstr ""
+
+# a2e9f774d5014826a154b0d745886abd
+# a2e9f774d5014826a154b0d745886abd
+#: ../../settings.txt:539 ../../settings.txt:663
+msgid "Default::"
+msgstr ""
+
+# dfd8c38d65e846f9b62b7bb2c5da8fe2
+#: ../../settings.txt:546
+msgid ""
+"A tuple of middleware classes to use. See the :doc:`middleware docs "
+"<middleware>`."
+msgstr ""
+
+# 18bd5ddc79444be68988f8636191e47f
+#: ../../settings.txt:549
+msgid "MONTH_DAY_FORMAT"
+msgstr ""
+
+# 1d40dd7afe654193b4bd474a22e97cb3
+#: ../../settings.txt:551
+msgid "Default: ``'F j'``"
+msgstr ""
+
+# 8375aba7734749f4b43ccf5a78071745
+#: ../../settings.txt:553
+msgid ""
+"The default formatting to use for date fields on Django admin change-list "
+"pages -- and, possibly, by other parts of the system -- in cases when only "
+"the month and day are displayed."
+msgstr ""
+
+# e51cc09f3ff24e929b0a9f41b33c9c30
+#: ../../settings.txt:557
+msgid ""
+"For example, when a Django admin change-list page is being filtered by a "
+"date drilldown, the header for a given day displays the day and month. "
+"Different locales have different formats. For example, U.S. English would "
+"say \"January 1,\" whereas Spanish might say \"1 Enero.\""
+msgstr ""
+
+# 45d185463886487b8e7c4cc2de1ee23a
+#: ../../settings.txt:562
+msgid ""
+"See :doc:`allowed date format strings <templates>`. See also DATE_FORMAT, "
+"DATETIME_FORMAT, TIME_FORMAT and YEAR_MONTH_FORMAT."
+msgstr ""
+
+# 186850555e9140c9803ba2c8427995f3
+#: ../../settings.txt:566
+msgid "PREPEND_WWW"
+msgstr ""
+
+# 13c258a227bf4202a952e54c34fb4487
+#: ../../settings.txt:570
+msgid ""
+"Whether to prepend the \"www.\" subdomain to URLs that don't have it. This "
+"is only used if ``CommonMiddleware`` is installed (see the :doc:`middleware "
+"docs <middleware>`). See also ``APPEND_SLASH``."
+msgstr ""
+
+# 669403a376b64166b3d0222b709aa644
+#: ../../settings.txt:575
+msgid "ROOT_URLCONF"
+msgstr ""
+
+# fc09aa423cdd4fa090d646932941b055
+# fc09aa423cdd4fa090d646932941b055
+#: ../../settings.txt:577 ../../settings.txt:652
+msgid "Default: Not defined"
+msgstr ""
+
+# 41743fbaf3d042dba7497c62a429b006
+#: ../../settings.txt:579
+msgid ""
+"A string representing the full Python import path to your root URLconf. For "
+"example: ``\"mydjangoapps.urls\"``. See :doc:`How Django processes a request "
+"<url_dispatch>`."
+msgstr ""
+
+# 0ee3a60150394c96bd50efacc5f812ad
+#: ../../settings.txt:583
+msgid "SECRET_KEY"
+msgstr ""
+
+# ba43fb15bfa04e46b53c39b1eafc1a8e
+#: ../../settings.txt:587
+msgid ""
+"A secret key for this particular Django installation. Used to provide a seed "
+"in secret-key hashing algorithms. Set this to a random string -- the longer, "
+"the better. ``django-admin.py startproject`` creates one automatically."
+msgstr ""
+
+# edd96fad40124e848941e8ad7910582f
+#: ../../settings.txt:592
+msgid "SEND_BROKEN_LINK_EMAILS"
+msgstr ""
+
+# 5481e934177f4f66add6353d8b8b1c85
+#: ../../settings.txt:596
+msgid ""
+"Whether to send an e-mail to the ``MANAGERS`` each time somebody visits a "
+"Django-powered page that is 404ed with a non-empty referer (i.e., a broken "
+"link). This is only used if ``CommonMiddleware`` is installed (see the :doc:"
+"`middleware docs <middleware>`). See also ``IGNORABLE_404_STARTS`` and "
+"``IGNORABLE_404_ENDS``."
+msgstr ""
+
+# 37ba642ff4d84de5971316d9891788b4
+#: ../../settings.txt:603
+msgid "SERVER_EMAIL"
+msgstr ""
+
+# 487351a513fc4a82a95e326f92a37c3f
+#: ../../settings.txt:605
+msgid "Default: ``'root@localhost'``"
+msgstr ""
+
+# 95c8ecdebd8443029778bf03ee2c66e8
+#: ../../settings.txt:607
+msgid ""
+"The e-mail address that error messages come from, such as those sent to "
+"``ADMINS`` and ``MANAGERS``."
+msgstr ""
+
+# cd3b351353594c0d987b28e3102e4c12
+#: ../../settings.txt:611
+msgid "SESSION_COOKIE_AGE"
+msgstr ""
+
+# 1348167e22b74cc5b99e40dadfeccff0
+#: ../../settings.txt:613
+msgid "Default: ``1209600`` (2 weeks, in seconds)"
+msgstr ""
+
+# ccb8824ebbb044d885d4ed554404c21e
+#: ../../settings.txt:615
+msgid ""
+"The age of session cookies, in seconds. See the :doc:`session docs "
+"<sessions>`."
+msgstr ""
+
+# bbe8a528900a4006af86e243a5d2ad81
+#: ../../settings.txt:618
+msgid "SESSION_COOKIE_DOMAIN"
+msgstr ""
+
+# 37645f78464b4f6daf2a84334cd43dc4
+#: ../../settings.txt:620
+msgid "Default: ``None``"
+msgstr ""
+
+# f41e8f96f76a44889eef3efd2b63cea5
+#: ../../settings.txt:622
+msgid ""
+"The domain to use for session cookies. Set this to a string such as ``\"."
+"lawrence.com\"`` for cross-domain cookies, or use ``None`` for a standard "
+"domain cookie. See the :doc:`session docs <sessions>`."
+msgstr ""
+
+# 6a9d72a6eff54a1590da872fc902224e
+#: ../../settings.txt:627
+msgid "SESSION_COOKIE_NAME"
+msgstr ""
+
+# e7807c86c079467a93fc20418f50bf32
+#: ../../settings.txt:629
+msgid "Default: ``'sessionid'``"
+msgstr ""
+
+# 2afce05cb71440cd9a32aca170fab192
+#: ../../settings.txt:631
+msgid ""
+"The name of the cookie to use for sessions. This can be whatever you want. "
+"See the :doc:`session docs <sessions>`."
+msgstr ""
+
+# bbb2eac7a8a44ab985bf2e510839090b
+#: ../../settings.txt:635
+msgid "SESSION_EXPIRE_AT_BROWSER_CLOSE"
+msgstr ""
+
+# 5896db1372f64a809defd5c1b882eabe
+#: ../../settings.txt:639
+msgid ""
+"Whether to expire the session when the user closes his or her browser. See "
+"the :doc:`session docs <sessions>`."
+msgstr ""
+
+# a88d8df8e9c74033930eabebdae2544d
+#: ../../settings.txt:643
+msgid "SESSION_SAVE_EVERY_REQUEST"
+msgstr ""
+
+# 300ccc85b2c84fe8985ecc28d21d72fe
+#: ../../settings.txt:647
+msgid ""
+"Whether to save the session data on every request. See the :doc:`session "
+"docs <sessions>`."
+msgstr ""
+
+# 3f4f95db19074ee0acf5bb66d1209e62
+#: ../../settings.txt:650
+msgid "SITE_ID"
+msgstr ""
+
+# a2c8a3a4c5eb4aa084f48ab7fabf1743
+#: ../../settings.txt:654
+msgid ""
+"The ID, as an integer, of the current site in the ``django_site`` database "
+"table. This is used so that application data can hook into specific site(s) "
+"and a single database can manage content for multiple sites."
+msgstr ""
+
+# 77a08c0815a5492ea13462bf06237174
+#: ../../settings.txt:658
+msgid "See the :doc:`site framework docs <sites>`."
+msgstr ""
+
+# c60e08d86aa846b290bb261c056fb1e7
+#: ../../settings.txt:661
+msgid "TEMPLATE_CONTEXT_PROCESSORS"
+msgstr ""
+
+# cca916f3678749059d273acaf5564a1b
+#: ../../settings.txt:669
+msgid ""
+"A tuple of callables that are used to populate the context in "
+"``RequestContext``. These callables take a request object as their argument "
+"and return a dictionary of items to be merged into the context."
+msgstr ""
+
+# 326ada99002048ad91bba957e66030ba
+#: ../../settings.txt:674
+msgid "TEMPLATE_DEBUG"
+msgstr ""
+
+# 72728de138424115bd0d8bec7c36cdd2
+#: ../../settings.txt:678
+msgid ""
+"A boolean that turns on/off template debug mode. If this is ``True``, the "
+"fancy error page will display a detailed report for any "
+"``TemplateSyntaxError``. This report contains the relevant snippet of the "
+"template, with the appropriate line highlighted."
+msgstr ""
+
+# bd21df24b2de403ea85f2177aa1bb7a9
+#: ../../settings.txt:683
+msgid ""
+"Note that Django only displays fancy error pages if ``DEBUG`` is ``True``, "
+"so you'll want to set that to take advantage of this setting."
+msgstr ""
+
+# 062041327c374cd0b14fa7bfb2707218
+#: ../../settings.txt:686
+msgid "See also DEBUG."
+msgstr ""
+
+# c043924035d54c3cad50d40cde4b8d3b
+#: ../../settings.txt:689
+msgid "TEMPLATE_DIRS"
+msgstr ""
+
+# ec00bf345b3342e89b654b414bbc3eb3
+#: ../../settings.txt:693
+msgid ""
+"List of locations of the template source files, in search order. Note that "
+"these paths should use Unix-style forward slashes, even on Windows."
+msgstr ""
+
+# 1344d784558d414a96108f45dc4c49d3
+#: ../../settings.txt:696
+msgid "See the :doc:`template documentation <templates>`."
+msgstr ""
+
+# 40a9369094a34003957291159e9e78b8
+#: ../../settings.txt:699
+msgid "TEMPLATE_LOADERS"
+msgstr ""
+
+# a95dee9bc207488b8b2407a3690d8e4e
+#: ../../settings.txt:701
+msgid ""
+"Default: ``('django.template.loaders.filesystem.load_template_source',)``"
+msgstr ""
+
+# c132ad4771dd49469bf86fd498f7871f
+#: ../../settings.txt:703
+msgid ""
+"A tuple of callables (as strings) that know how to import templates from "
+"various sources. See the :doc:`template documentation <templates>`."
+msgstr ""
+
+# 3e24855d0e0f453486a9a357b355c38e
+#: ../../settings.txt:707
+msgid "TEMPLATE_STRING_IF_INVALID"
+msgstr ""
+
+# f0efe01f28074c689dded4f4d074f002
+#: ../../settings.txt:711
+msgid ""
+"Output, as a string, that the template system should use for invalid (e.g. "
+"misspelled) variables. See :doc:`How invalid variables are handled "
+"<templates_python>`."
+msgstr ""
+
+# 526c43c41ce2453d8925ebf72e11fd47
+#: ../../settings.txt:715
+msgid "TIME_FORMAT"
+msgstr ""
+
+# 5a7c484656c944edbe0a449ca7ee3b06
+#: ../../settings.txt:717
+msgid "Default: ``'P'`` (e.g. ``4 p.m.``)"
+msgstr ""
+
+# 18bbd165230a41afa240fed24ee30efa
+#: ../../settings.txt:719
+msgid ""
+"The default formatting to use for time fields on Django admin change-list "
+"pages -- and, possibly, by other parts of the system. See :doc:`allowed date "
+"format strings <templates>`."
+msgstr ""
+
+# 2ceee7a81518493c872b11979d06cfcc
+#: ../../settings.txt:727
+msgid "TIME_ZONE"
+msgstr ""
+
+# ba9e5816e05141bf9f96bb174aa499fa
+#: ../../settings.txt:729
+msgid "Default: ``'America/Chicago'``"
+msgstr ""
+
+# 31b75f998b5e4e71a0ba7f71ecf51cc3
+#: ../../settings.txt:731
+msgid ""
+"A string representing the time zone for this installation. `See available "
+"choices`_. (Note that list of available choices lists more than one on the "
+"same line; you'll want to use just one of the choices for a given time zone. "
+"For instance, one line says ``'Europe/London GB GB-Eire'``, but you should "
+"use the first bit of that -- ``'Europe/London'`` -- as your ``TIME_ZONE`` "
+"setting.)"
+msgstr ""
+
+# 964211be86ae4987ac39d09f81171686
+#: ../../settings.txt:737
+msgid ""
+"Note that this is the time zone to which Django will convert all dates/times "
+"-- not necessarily the timezone of the server. For example, one server may "
+"serve multiple Django-powered sites, each with a separate time-zone setting."
+msgstr ""
+
+# 84208c14f1644118a0aa5af1538a11f0
+#: ../../settings.txt:741
+msgid ""
+"Normally, Django sets the ``os.environ['TZ']`` variable to the time zone you "
+"specify in the  ``TIME_ZONE`` setting. Thus, all your views and models will "
+"automatically operate in the correct time zone. However, if you're using the "
+"manual configuration option (see below), Django will *not* touch the ``TZ`` "
+"environment variable, and it'll be up to you to ensure your processes are "
+"running in the correct environment."
+msgstr ""
+
+# 6edffbf7cc3445fd8a97ba90bdbaf2c2
+#: ../../settings.txt:749
+msgid "USE_ETAGS"
+msgstr ""
+
+# 7302144746e14b05bf01f89d512023b0
+#: ../../settings.txt:753
+msgid ""
+"A boolean that specifies whether to output the \"Etag\" header. This saves "
+"bandwidth but slows down performance. This is only used if "
+"``CommonMiddleware`` is installed (see the :doc:`middleware docs "
+"<middleware>`)."
+msgstr ""
+
+# 3978eb0b4d7943bbac8adee6f50ea47a
+#: ../../settings.txt:758
+msgid "USE_I18N"
+msgstr ""
+
+# 3abe87e43b744cb9933678bd834f2223
+#: ../../settings.txt:762
+msgid ""
+"A boolean that specifies whether Django's internationalization system should "
+"be enabled. This provides an easy way to turn it off, for performance. If "
+"this is set to ``False``, Django will make some optimizations so as not to "
+"load the internationalization machinery."
+msgstr ""
+
+# e5dd559c3aff4ef8916b1bbe3883926a
+#: ../../settings.txt:768
+msgid "YEAR_MONTH_FORMAT"
+msgstr ""
+
+# 52438bd839d14f56a49f513d326d3c2f
+#: ../../settings.txt:770
+msgid "Default: ``'F Y'``"
+msgstr ""
+
+# b902ae0ed5d546acb85fe9ffe8015356
+#: ../../settings.txt:772
+msgid ""
+"The default formatting to use for date fields on Django admin change-list "
+"pages -- and, possibly, by other parts of the system -- in cases when only "
+"the year and month are displayed."
+msgstr ""
+
+# 4b7a293c2e684d1ca33b5c2b6bb02617
+#: ../../settings.txt:776
+msgid ""
+"For example, when a Django admin change-list page is being filtered by a "
+"date drilldown, the header for a given month displays the month and the "
+"year. Different locales have different formats. For example, U.S. English "
+"would say \"January 2006,\" whereas another locale might say \"2006/January."
+"\""
+msgstr ""
+
+# 46e466ad8b3b4bb098fc1bb5a9c924b8
+#: ../../settings.txt:781
+msgid ""
+"See :doc:`allowed date format strings <templates>`. See also DATE_FORMAT, "
+"DATETIME_FORMAT, TIME_FORMAT and MONTH_DAY_FORMAT."
+msgstr ""
+
+# 1d2224fb423240128c225a5373af1b6e
+#: ../../settings.txt:787
+msgid "Creating your own settings"
+msgstr ""
+
+# be2b36082c7c4a2b8a999e8197dd09ee
+#: ../../settings.txt:789
+msgid ""
+"There's nothing stopping you from creating your own settings, for your own "
+"Django apps. Just follow these conventions:"
+msgstr ""
+
+# 89a1fa25e9e54240b2c72cede87650bc
+#: ../../settings.txt:792
+msgid "Setting names are in all uppercase."
+msgstr ""
+
+# 609832574c7640c4bac2b618c1af7685
+#: ../../settings.txt:793
+msgid ""
+"For settings that are sequences, use tuples instead of lists. This is purely "
+"for performance."
+msgstr ""
+
+# de7c4995d02f4220a2b47769d0df97d8
+#: ../../settings.txt:795
+msgid "Don't reinvent an already-existing setting."
+msgstr ""
+
+# 0507c98dd3a64fa8acfb2476b4bbe3c5
+#: ../../settings.txt:798
+msgid "Using settings without setting DJANGO_SETTINGS_MODULE"
+msgstr ""
+
+# 5be1db6c6bea4299bcfd0504c745f91d
+#: ../../settings.txt:800
+msgid ""
+"In some cases, you might want to bypass the ``DJANGO_SETTINGS_MODULE`` "
+"environment variable. For example, if you're using the template system by "
+"itself, you likely don't want to have to set up an environment variable "
+"pointing to a settings module."
+msgstr ""
+
+# a3f77577c5fd4fdfbe155e316c6a5d11
+#: ../../settings.txt:805
+msgid ""
+"In these cases, you can configure Django's settings manually. Do this by "
+"calling ``django.conf.settings.configure()``."
+msgstr ""
+
+# 929e3ac6f88048998ddaa43923474222
+#: ../../settings.txt:808
+msgid "Example::"
+msgstr ""
+
+# 1873253986054f7b9b51d2946b2c6b42
+#: ../../settings.txt:815
+msgid ""
+"Pass ``configure()`` as many keyword arguments as you'd like, with each "
+"keyword argument representing a setting and its value. Each argument name "
+"should be all uppercase, with the same name as the settings described above. "
+"If a particular setting is not passed to ``configure()`` and is needed at "
+"some later point, Django will use the default setting value."
+msgstr ""
+
+# 42b609287ef84f53aa4fcabce3439942
+#: ../../settings.txt:821
+msgid ""
+"Configuring Django in this fashion is mostly necessary -- and, indeed, "
+"recommended -- when you're using a piece of the framework inside a larger "
+"application."
+msgstr ""
+
+# c7a411b48ab04c3d92b39f4e6f9b6148
+#: ../../settings.txt:825
+msgid ""
+"Consequently, when configured via ``settings.configure()``, Django will not "
+"make any modifications to the process environment variables. (See the "
+"explanation of ``TIME_ZONE``, above, for why this would normally occur.) "
+"It's assumed that you're already in full control of your environment in "
+"these cases."
+msgstr ""
+
+# 0da8276997284f92b66368f5e476ddc2
+#: ../../settings.txt:831
+msgid "Custom default settings"
+msgstr ""
+
+# d48a45e55d2b45b2a7d20a85346cd64c
+#: ../../settings.txt:833
+msgid ""
+"If you'd like default values to come from somewhere other than ``django.conf."
+"global_settings``, you can pass in a module or class that provides the "
+"default settings as the ``default_settings`` argument (or as the first "
+"positional argument) in the call to ``configure()``."
+msgstr ""
+
+# 51eb22347bd641be8f315ef273f02a87
+#: ../../settings.txt:838
+msgid ""
+"In this example, default settings are taken from ``myapp_defaults``, and the "
+"``DEBUG`` setting is set to ``True``, regardless of its value in "
+"``myapp_defaults``::"
+msgstr ""
+
+# 1bbb46611b634f45b88025d8b25644f3
+#: ../../settings.txt:847
+msgid ""
+"The following example, which uses ``myapp_defaults`` as a positional "
+"argument, is equivalent::"
+msgstr ""
+
+# 6bc49191442b4fbba03b67db0414503d
+#: ../../settings.txt:852
+msgid ""
+"Normally, you will not need to override the defaults in this fashion. The "
+"Django defaults are sufficiently tame that you can safely use them. Be aware "
+"that if you do pass in a new default module, it entirely *replaces* the "
+"Django defaults, so you must specify a value for every possible setting that "
+"might be used in that code you are importing. Check in ``django.conf."
+"settings.global_settings`` for the full list."
+msgstr ""
+
+# fb0adf7ef7fa4186a62277d31a979b31
+#: ../../settings.txt:860
+msgid "Either configure() or DJANGO_SETTINGS_MODULE is required"
+msgstr ""
+
+# 446180018f7a444cb46cef651e2188ac
+#: ../../settings.txt:862
+msgid ""
+"If you're not setting the ``DJANGO_SETTINGS_MODULE`` environment variable, "
+"you *must* call ``configure()`` at some point before using any code that "
+"reads settings."
+msgstr ""
+
+# 816b9bf1c2ce402d985ba56940d3184e
+#: ../../settings.txt:866
+msgid ""
+"If you don't set ``DJANGO_SETTINGS_MODULE`` and don't call ``configure()``, "
+"Django will raise an ``EnvironmentError`` exception the first time a setting "
+"is accessed."
+msgstr ""
+
+# 1cf63ba2444a43e0bc7084fc1174d46f
+#: ../../settings.txt:870
+msgid ""
+"If you set ``DJANGO_SETTINGS_MODULE``, access settings values somehow, "
+"*then* call ``configure()``, Django will raise an ``EnvironmentError`` "
+"saying settings have already been configured."
+msgstr ""
+
+# 2133a4c60aac49b8bc77cbf3c4c67a6d
+#: ../../settings.txt:874
+msgid ""
+"Also, it's an error to call ``configure()`` more than once, or to call "
+"``configure()`` after any setting has been accessed."
+msgstr ""
+
+# 7937a876bb754c24809784c516aac80c
+#: ../../settings.txt:877
+msgid ""
+"It boils down to this: Use exactly one of either ``configure()`` or "
+"``DJANGO_SETTINGS_MODULE``. Not both, and not neither."
+msgstr ""

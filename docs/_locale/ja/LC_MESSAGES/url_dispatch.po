@@ -1,0 +1,617 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:11+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 42cafe8db23e4f1ba920e4a407aa5e3a
+#: ../../url_dispatch.txt:3
+msgid "URL dispatcher"
+msgstr ""
+
+# 6e64013901974618bc43a17a982f791a
+#: ../../url_dispatch.txt:5
+msgid ""
+"A clean, elegant URL scheme is an important detail in a high-quality Web "
+"application. Django lets you design URLs however you want, with no framework "
+"limitations."
+msgstr ""
+
+# b81ab4ec79cc49a8a931c669205b8f3e
+#: ../../url_dispatch.txt:9
+msgid ""
+"There's no ``.php`` or ``.cgi`` required, and certainly none of that "
+"``0,2097,1-1-1928,00`` nonsense."
+msgstr ""
+
+# d7d8c7ba6cd94c6f822e8b407d1a72a0
+#: ../../url_dispatch.txt:12
+msgid ""
+"See `Cool URIs don't change`_, by World Wide Web creator Tim Berners-Lee, "
+"for excellent arguments on why URLs should be clean and usable."
+msgstr ""
+
+# 7f8cbf0f8d5943e6bdc45d88018fb272
+#: ../../url_dispatch.txt:18
+msgid "Overview"
+msgstr ""
+
+# 47329ca4232441d78d88ba11075f0fd5
+#: ../../url_dispatch.txt:20
+msgid ""
+"To design URLs for an app, you create a Python module informally called a "
+"**URLconf** (URL configuration). This module is pure Python code and is a "
+"simple mapping between URL patterns (as simple regular expressions) to "
+"Python callback functions (your views)."
+msgstr ""
+
+# 0c38d91b19ff41929ac08d1cc6af525e
+#: ../../url_dispatch.txt:25
+msgid ""
+"This mapping can be as short or as long as needed. It can reference other "
+"mappings. And, because it's pure Python code, it can be constructed "
+"dynamically."
+msgstr ""
+
+# 670261a26710419f88f3877dd706a8a3
+#: ../../url_dispatch.txt:30
+msgid "How Django processes a request"
+msgstr ""
+
+# d66fd544fd7947399c59d825ae79a456
+#: ../../url_dispatch.txt:32
+msgid ""
+"When a user requests a page from your Django-powered site, this is the "
+"algorithm the system follows to determine which Python code to execute:"
+msgstr ""
+
+# 877b35b8aa4e4e74bd448dec35731367
+#: ../../url_dispatch.txt:35
+msgid ""
+"Django looks at the ``ROOT_URLCONF`` setting in your :doc:`settings file "
+"<settings>`. This should be a string representing the full Python import "
+"path to your URLconf. For example: ``\"mydjangoapps.urls\"``."
+msgstr ""
+
+# 370a9143d41a4ac492b0946261976c6a
+#: ../../url_dispatch.txt:38
+msgid ""
+"Django loads that Python module and looks for the variable ``urlpatterns``. "
+"This should be a Python list, in the format returned by the function "
+"``django.conf.urls.defaults.patterns()``."
+msgstr ""
+
+# d4b7e22051f44dd689bfd6499bc87c9b
+#: ../../url_dispatch.txt:41
+msgid ""
+"Django runs through each URL pattern, in order, and stops at the first one "
+"that matches the requested URL."
+msgstr ""
+
+# 5d3b0e1b811642c4b77d000d17add24f
+#: ../../url_dispatch.txt:43
+msgid ""
+"Once one of the regexes matches, Django imports and calls the given view, "
+"which is a simple Python function. The view gets passed a :doc:`request "
+"object <request_response>` as its first argument and any values captured in "
+"the regex as remaining arguments."
+msgstr ""
+
+# 66c7ff06f7b647bb9ff2531e02954c52
+#: ../../url_dispatch.txt:49
+msgid "Example"
+msgstr ""
+
+# 774e46c16282446fbaa4d73c5ef8140c
+#: ../../url_dispatch.txt:51
+msgid "Here's a sample URLconf::"
+msgstr ""
+
+# 0250472e077d4cc384cb3165cb0ae62a
+#: ../../url_dispatch.txt:62
+msgid "Notes:"
+msgstr ""
+
+# 3ef84244546c4d5e92ad16789c99eb85
+#: ../../url_dispatch.txt:64
+msgid ""
+"``from django.conf.urls.defaults import *`` makes the ``patterns()`` "
+"function available."
+msgstr ""
+
+# afa2e8dc1fdf4facbfb32c16d43511cd
+#: ../../url_dispatch.txt:67
+msgid "To capture a value from the URL, just put parenthesis around it."
+msgstr ""
+
+# c2538446e95e464bbdb3db29e749bc43
+#: ../../url_dispatch.txt:69
+msgid ""
+"There's no need to add a leading slash, because every URL has that. For "
+"example, it's ``^articles``, not ``^/articles``."
+msgstr ""
+
+# 81d6fd49ec604623acf70c5847d60392
+#: ../../url_dispatch.txt:72
+msgid ""
+"The ``'r'`` in front of each regular expression string is optional but "
+"recommended. It tells Python that a string is \"raw\" -- that nothing in the "
+"string should be escaped. See `Dive Into Python's explanation`_."
+msgstr ""
+
+# bf400702db924b34a743a8e5efd89104
+#: ../../url_dispatch.txt:76
+msgid "Example requests:"
+msgstr ""
+
+# a4c39b24440940718899c917f5ec450b
+#: ../../url_dispatch.txt:78
+msgid ""
+"A request to ``/articles/2005/03/`` would match the third entry in the list. "
+"Django would call the function ``news.views.month_archive(request, '2005', "
+"'03')``."
+msgstr ""
+
+# 07de6ee6489e4c53b003cfbf6819a1f2
+#: ../../url_dispatch.txt:82
+msgid ""
+"``/articles/2005/3/`` would not match any URL patterns, because the third "
+"entry in the list requires two digits for the month."
+msgstr ""
+
+# 1bc1693c031a452d8fd3a37d657ab355
+#: ../../url_dispatch.txt:85
+msgid ""
+"``/articles/2003/`` would match the first pattern in the list, not the "
+"second one, because the patterns are tested in order, and the first one is "
+"the first test to pass. Feel free to exploit the ordering to insert special "
+"cases like this."
+msgstr ""
+
+# 5a7c2351dd4246b58b722a6ec804d527
+#: ../../url_dispatch.txt:90
+msgid ""
+"``/articles/2003`` would not match any of these patterns, because each "
+"pattern requires that the URL end with a slash."
+msgstr ""
+
+# 8028189253f44a85845b173e1b0afcc4
+#: ../../url_dispatch.txt:93
+msgid ""
+"``/articles/2003/03/3/`` would match the final pattern. Django would call "
+"the function ``news.views.article_detail(request, '2003', '03', '3')``."
+msgstr ""
+
+# 4fe90239cec241a6b5e185dca0b51814
+#: ../../url_dispatch.txt:99
+msgid "Named groups"
+msgstr ""
+
+# 2b62e35dff014b529c053a11c0bff04f
+#: ../../url_dispatch.txt:101
+msgid ""
+"The above example used simple, *non-named* regular-expression groups (via "
+"parenthesis) to capture bits of the URL and pass them as *positional* "
+"arguments to a view. In more advanced usage, it's possible to use *named* "
+"regular-expression groups to capture URL bits and pass them as *keyword* "
+"arguments to a view."
+msgstr ""
+
+# 405e12cf849245de9c494ec7adc21cfc
+#: ../../url_dispatch.txt:107
+msgid ""
+"In Python regular expressions, the syntax for named regular-expression "
+"groups is ``(?P<name>pattern)``, where ``name`` is the name of the group and "
+"``pattern`` is some pattern to match."
+msgstr ""
+
+# 1b7d7beab1d641bc9854e69f06223fc9
+#: ../../url_dispatch.txt:111
+msgid "Here's the above example URLconf, rewritten to use named groups::"
+msgstr ""
+
+# d89a12c305f94576b2b74c518482a71c
+#: ../../url_dispatch.txt:120
+msgid ""
+"This accomplishes exactly the same thing as the previous example, with one "
+"subtle difference: The captured values are passed to view functions as "
+"keyword arguments rather than positional arguments. For example:"
+msgstr ""
+
+# 2a17f7a66dc94a19905f20be97e8d423
+#: ../../url_dispatch.txt:124
+msgid ""
+"A request to ``/articles/2005/03/`` would call the function ``news.views."
+"month_archive(request, year='2005', month='03')``, instead of ``news.views."
+"month_archive(request, '2005', '03')``."
+msgstr ""
+
+# 6aaaac804bf04915b202fe0c6b774479
+#: ../../url_dispatch.txt:128
+msgid ""
+"A request to ``/articles/2003/03/3/`` would call the function ``news.views."
+"article_detail(request, year='2003', month='03', day='3')``."
+msgstr ""
+
+# ec79db97ceba45288f261b2400b29574
+#: ../../url_dispatch.txt:131
+msgid ""
+"In practice, this means your URLconfs are slightly more explicit and less "
+"prone to argument-order bugs -- and you can reorder the arguments in your "
+"views' function definitions. Of course, these benefits come at the cost of "
+"brevity; some developers find the named-group syntax ugly and too verbose."
+msgstr ""
+
+# 6cc182d2bf6646c28a3ec9ff1aa085cd
+#: ../../url_dispatch.txt:137
+msgid "The matching/grouping algorithm"
+msgstr ""
+
+# 45b1ee04219e491a855519dc018e83dc
+#: ../../url_dispatch.txt:139
+msgid ""
+"Here's the algorithm the URLconf parser follows, with respect to named "
+"groups vs. non-named groups in a regular expression:"
+msgstr ""
+
+# ef7358fb4a23457ba356f79f6e3586d7
+#: ../../url_dispatch.txt:142
+msgid ""
+"If there are any named arguments, it will use those, ignoring non-named "
+"arguments. Otherwise, it will pass all non-named arguments as positional "
+"arguments."
+msgstr ""
+
+# 9207be05df69468695361c460f557f69
+#: ../../url_dispatch.txt:145
+msgid ""
+"In both cases, it will pass any extra keyword arguments as keyword "
+"arguments. See \"Passing extra options to view functions\" below."
+msgstr ""
+
+# da85f96cf7774fb8b3ecf6f541f55b86
+#: ../../url_dispatch.txt:149
+msgid "What the URLconf searches against"
+msgstr ""
+
+# db7702bb732c4b76a7bbf738169578a0
+#: ../../url_dispatch.txt:151
+msgid ""
+"The URLconf searches against the requested URL, as a normal Python string. "
+"This does not include GET or POST parameters, or the domain name."
+msgstr ""
+
+# 0aa4ca0324fe4a39b30de983975b36ea
+#: ../../url_dispatch.txt:154
+msgid ""
+"For example, in a request to ``http://www.example.com/myapp/``, the URLconf "
+"will look for ``/myapp/``."
+msgstr ""
+
+# 1bc42e37a2a94eaebeeeb41084811c8a
+#: ../../url_dispatch.txt:157
+msgid ""
+"In a request to ``http://www.example.com/myapp/?page=3``, the URLconf will "
+"look for ``/myapp/``."
+msgstr ""
+
+# f2aebddb78af41bebccc032decce103f
+#: ../../url_dispatch.txt:160
+msgid ""
+"The URLconf doesn't look at the request method. In other words, all request "
+"methods -- ``POST``, ``GET``, ``HEAD``, etc. -- will be routed to the same "
+"function for the same URL."
+msgstr ""
+
+# e22a6b562b0845a8b3bdc347e6277400
+#: ../../url_dispatch.txt:165
+msgid "Syntax of the urlpatterns variable"
+msgstr ""
+
+# c57c2840c11843ecaeb0811de13eaa82
+#: ../../url_dispatch.txt:167
+msgid ""
+"``urlpatterns`` should be a Python list, in the format returned by the "
+"function ``django.conf.urls.defaults.patterns()``. Always use ``patterns()`` "
+"to create the ``urlpatterns`` variable."
+msgstr ""
+
+# dcfe8502baea4690a4aee906011fce07
+#: ../../url_dispatch.txt:171
+msgid ""
+"Convention is to use ``from django.conf.urls.defaults import *`` at the top "
+"of your URLconf. This gives your module access to these objects:"
+msgstr ""
+
+# a524a385c3ff4e43b15b98d17c35d640
+#: ../../url_dispatch.txt:175
+msgid "patterns"
+msgstr ""
+
+# dda154d993894d5488a214095616be41
+#: ../../url_dispatch.txt:177
+msgid ""
+"A function that takes a prefix, and an arbitrary number of URL patterns, and "
+"returns a list of URL patterns in the format Django needs."
+msgstr ""
+
+# 273bfdfa75014efa9682e3eac165656f
+#: ../../url_dispatch.txt:180
+msgid ""
+"The first argument to ``patterns()`` is a string ``prefix``. See \"The view "
+"prefix\" below."
+msgstr ""
+
+# 5bafbea4b2d14cda9a35e6edcaf0e24b
+#: ../../url_dispatch.txt:183
+msgid "The remaining arguments should be tuples in this format::"
+msgstr ""
+
+# 0c56372e1a14485b9244e26661493abc
+#: ../../url_dispatch.txt:187
+msgid ""
+"...where ``optional dictionary`` is optional. (See _`Passing extra options "
+"to view functions` below.)"
+msgstr ""
+
+# 0348061b08b94f019390fd5f7838cd06
+#: ../../url_dispatch.txt:191
+msgid "handler404"
+msgstr ""
+
+# 65c673a559bb4404889ea96ac8d96aca
+#: ../../url_dispatch.txt:193
+msgid ""
+"A string representing the full Python import path to the view that should be "
+"called if none of the URL patterns match."
+msgstr ""
+
+# 64b65d8634144b84ad24a580499c7c74
+#: ../../url_dispatch.txt:196
+msgid ""
+"By default, this is ``'django.views.defaults.page_not_found'``. That default "
+"value should suffice."
+msgstr ""
+
+# 81209922a9f14babbd0e3abf4a73a847
+#: ../../url_dispatch.txt:200
+msgid "handler500"
+msgstr ""
+
+# 85200c6a139a4263b062cfd13a45c30e
+#: ../../url_dispatch.txt:202
+msgid ""
+"A string representing the full Python import path to the view that should be "
+"called in case of server errors. Server errors happen when you have runtime "
+"errors in view code."
+msgstr ""
+
+# a810e56763964d5197c12c8b75c30671
+#: ../../url_dispatch.txt:206
+msgid ""
+"By default, this is ``'django.views.defaults.server_error'``. That default "
+"value should suffice."
+msgstr ""
+
+# 438ccc207a6347caa2349018ffa36736
+#: ../../url_dispatch.txt:210
+msgid "include"
+msgstr ""
+
+# 419485eabcfa4226b42e47760aa64479
+#: ../../url_dispatch.txt:212
+msgid ""
+"A function that takes a full Python import path to another URLconf that "
+"should be \"included\" in this place. See _`Including other URLconfs` below."
+msgstr ""
+
+# afd1e1d0baaf4fcb92ba164479519bff
+#: ../../url_dispatch.txt:216
+msgid "Notes on capturing text in URLs"
+msgstr ""
+
+# 05abb6903ad44cc89d7acd48c13e2d51
+#: ../../url_dispatch.txt:218
+msgid ""
+"Each captured argument is sent to the view as a plain Python string, "
+"regardless of what sort of match the regular expression makes. For example, "
+"in this URLconf line::"
+msgstr ""
+
+# 7c54bee90d41406e983843b17e57921c
+#: ../../url_dispatch.txt:224
+msgid ""
+"...the ``year`` argument to ``news.views.year_archive()`` will be a string, "
+"not an integer, even though the ``\\d{4}`` will only match integer strings."
+msgstr ""
+
+# 70cf2cf6b93f45ebbdfd5703fad868e8
+#: ../../url_dispatch.txt:227
+msgid ""
+"A convenient trick is to specify default parameters for your views' "
+"arguments. Here's an example URLconf and view::"
+msgstr ""
+
+# f682a7f22fe749d8a5d640843d1c6ca8
+#: ../../url_dispatch.txt:240
+msgid ""
+"In the above example, both URL patterns point to the same view -- ``blog."
+"views.page`` -- but the first pattern doesn't capture anything from the URL. "
+"If the first pattern matches, the ``page()`` function will use its default "
+"argument for ``num``, ``\"1\"``. If the second pattern matches, ``page()`` "
+"will use whatever ``num`` value was captured by the regex."
+msgstr ""
+
+# de376ffc204b49b5bb01842acfc49aa6
+#: ../../url_dispatch.txt:247
+msgid "Performance"
+msgstr ""
+
+# 15e181b526da4d629bb5e010e4b9c6a4
+#: ../../url_dispatch.txt:249
+msgid ""
+"Each regular expression in a ``urlpatterns`` is compiled the first time it's "
+"accessed. This makes the system blazingly fast."
+msgstr ""
+
+# befdabb5ebc0432c84764893080c02bc
+#: ../../url_dispatch.txt:253
+msgid "The view prefix"
+msgstr ""
+
+# 9e0fe782827c43d194d5c4acd6d46928
+#: ../../url_dispatch.txt:255
+msgid ""
+"You can specify a common prefix in your ``patterns()`` call, to cut down on "
+"code duplication."
+msgstr ""
+
+# 84c4433fd4894fff9c9784c3f7a17490
+#: ../../url_dispatch.txt:258
+msgid "Here's the example URLconf from the :doc:`Django overview <overview>`::"
+msgstr ""
+
+# 9d7d84c48f4543b0b86ceee6c5e2e473
+#: ../../url_dispatch.txt:268
+msgid ""
+"In this example, each view has a common prefix -- ``'myproject.news."
+"views'``. Instead of typing that out for each entry in ``urlpatterns``, you "
+"can use the first argument to the ``patterns()`` function to specify a "
+"prefix to apply to each view function."
+msgstr ""
+
+# da4e27ae71a54b17a71bc0011ea1a83d
+#: ../../url_dispatch.txt:273
+msgid "With this in mind, the above example can be written more concisely as::"
+msgstr ""
+
+# 59c44309dbe249849bb086a1c7dda797
+#: ../../url_dispatch.txt:283
+msgid ""
+"Note that you don't put a trailing dot (``\".\"``) in the prefix. Django "
+"puts that in automatically."
+msgstr ""
+
+# ae72c21c90c146198de2259fe2e6d5fa
+#: ../../url_dispatch.txt:287
+msgid "Multiple view prefixes"
+msgstr ""
+
+# 3db635b8471c4b83abcf8ecd7ea5c956
+#: ../../url_dispatch.txt:289
+msgid ""
+"In practice, you'll probably end up mixing and matching views to the point "
+"where the views in your ``urlpatterns`` won't have a common prefix. However, "
+"you can still take advantage of the view prefix shortcut to remove "
+"duplication. Just add multiple ``patterns()`` objects together, like this:"
+msgstr ""
+
+# 0a62706bb79a49f8ac55d8d6789cf697
+#: ../../url_dispatch.txt:294
+msgid "Old::"
+msgstr ""
+
+# 49b9260462b44340845e9780f327922e
+#: ../../url_dispatch.txt:304
+msgid "New::"
+msgstr ""
+
+# fe51d4a76ca44d9aad52026420b63a9e
+#: ../../url_dispatch.txt:318
+msgid "Including other URLconfs"
+msgstr ""
+
+# f04a2befe94344b58cf7e26302619b73
+#: ../../url_dispatch.txt:320
+msgid ""
+"At any point, your ``urlpatterns`` can \"include\" other URLconf modules. "
+"This essentially \"roots\" a set of URLs below other ones."
+msgstr ""
+
+# 96b9a24bb8c64634996e2650df7b1ac1
+#: ../../url_dispatch.txt:323
+msgid ""
+"For example, here's the URLconf for the `Django website`_ itself. It "
+"includes a number of other URLconfs::"
+msgstr ""
+
+# 995910a3f2884bd8af1e24b4c1cbecb9
+#: ../../url_dispatch.txt:334
+msgid ""
+"Note that the regular expressions in this example don't have a ``$`` (end-of-"
+"string match character) but do include a trailing slash. Whenever Django "
+"encounters ``include()``, it chops off whatever part of the URL matched up "
+"to that point and sends the remaining string to the included URLconf for "
+"further processing."
+msgstr ""
+
+# f7d7d9b9d6964f3098cf4b491e3127e9
+#: ../../url_dispatch.txt:343
+msgid "Captured parameters"
+msgstr ""
+
+# e6eeb9c0d5454f2e860269b8134557d4
+#: ../../url_dispatch.txt:345
+msgid ""
+"An included URLconf receives any captured parameters from parent URLconfs, "
+"so the following example is valid::"
+msgstr ""
+
+# f7ddccdf600f4f2198d48cec4b1bd9ad
+#: ../../url_dispatch.txt:359
+msgid ""
+"In the above example, the captured ``\"username\"`` variable is passed to "
+"the included URLconf, as expected."
+msgstr ""
+
+# 3255595408bf45e589c8dca78a1d5455
+#: ../../url_dispatch.txt:363
+msgid "Passing extra options to view functions"
+msgstr ""
+
+# 5f9562a8efd54fe1aab1043743e64884
+#: ../../url_dispatch.txt:365
+msgid ""
+"URLconfs have a hook that lets you pass extra arguments to your view "
+"functions, as a Python dictionary."
+msgstr ""
+
+# 90e7591c29644b42b4eea58489fbf588
+#: ../../url_dispatch.txt:368
+msgid ""
+"Any URLconf tuple can have an optional third element, which should be a "
+"dictionary of extra keyword arguments to pass to the view function."
+msgstr ""
+
+# ccb6233c16614b27b1413b584f3c787f
+#: ../../url_dispatch.txt:371
+msgid "For example::"
+msgstr ""
+
+# 4fd316c36c794a0d8d798546bc7987f5
+#: ../../url_dispatch.txt:377
+msgid ""
+"In this example, for a request to ``/blog/2005/``, Django will call the "
+"``blog.views.year_archive()`` view, passing it these keyword arguments::"
+msgstr ""
+
+# a54a17d8c34f41829f2fc874dda3fb01
+#: ../../url_dispatch.txt:382
+msgid ""
+"This technique is used in :doc:`generic views <generic_views>` and in the :"
+"doc:`syndication framework <syndication_feeds>` to pass metadata and options "
+"to views."
+msgstr ""

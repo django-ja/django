@@ -1,0 +1,389 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 5899f6cf80b7459b99bc06e44379e2a2
+#: ../../sites.txt:3
+msgid "The \"sites\" framework"
+msgstr ""
+
+# 79ac16b972dd4a9ba93a05c1eb0c64f6
+#: ../../sites.txt:5
+msgid ""
+"Django comes with an optional \"sites\" framework. It's a hook for "
+"associating objects and functionality to particular Web sites, and it's a "
+"holding place for the domain names and \"verbose\" names of your Django-"
+"powered sites."
+msgstr ""
+
+# 31d0489a979b438b9822cb8e1e249681
+#: ../../sites.txt:9
+msgid ""
+"Use it if your single Django installation powers more than one site and you "
+"need to differentiate between those sites in some way."
+msgstr ""
+
+# 61150a247b2c4dce88ae713c6d76ecd4
+#: ../../sites.txt:12
+msgid "The whole sites framework is based on two simple concepts:"
+msgstr ""
+
+# 26ba75cf0b0b4c0e904658c843695325
+#: ../../sites.txt:14
+msgid ""
+"The ``Site`` model, found in ``django.contrib.sites``, has ``domain`` and "
+"``name`` fields."
+msgstr ""
+
+# 227121d6f41c415e95ea0661f9a230f5
+#: ../../sites.txt:16
+msgid ""
+"The ``SITE_ID`` setting specifies the database ID of the ``Site`` object "
+"associated with that particular settings file."
+msgstr ""
+
+# 781cc5773b99443e9a96d79379ccc318
+#: ../../sites.txt:19
+msgid ""
+"How you use this is up to you, but Django uses it in a couple of ways "
+"automatically via simple conventions."
+msgstr ""
+
+# 3ea9c99bb779482bab7af8633d30422a
+#: ../../sites.txt:23
+msgid "Example usage"
+msgstr ""
+
+# c35499689b0d4ea8b11c0be687144daf
+#: ../../sites.txt:25
+msgid "Why would you use sites? It's best explained through examples."
+msgstr ""
+
+# 60a727cca6ad4295b58d0966d0250053
+#: ../../sites.txt:28
+msgid "Associating content with multiple sites"
+msgstr ""
+
+# bc8697c1e7784c62bfb336caa5d400c8
+#: ../../sites.txt:30
+msgid ""
+"The Django-powered sites LJWorld.com_ and Lawrence.com_ are operated by the "
+"same news organization -- the Lawrence Journal-World newspaper in Lawrence, "
+"Kansas. LJWorld.com focuses on news, while Lawrence.com focuses on local "
+"entertainment. But sometimes editors want to publish an article on *both* "
+"sites."
+msgstr ""
+
+# e7ef7b9fc2204ceab529828ff061a13c
+#: ../../sites.txt:36
+msgid ""
+"The brain-dead way of solving the problem would be to require site producers "
+"to publish the same story twice: once for LJWorld.com and again for Lawrence."
+"com. But that's inefficient for site producers, and it's redundant to store "
+"multiple copies of the same story in the database."
+msgstr ""
+
+# c27f3b1d738b49d680d6378ead25c16e
+#: ../../sites.txt:41
+msgid ""
+"The better solution is simple: Both sites use the same article database, and "
+"an article is associated with one or more sites. In Django model "
+"terminology, that's represented by a ``ManyToManyField`` in the ``Article`` "
+"model::"
+msgstr ""
+
+# 202fbcc5d2b24653af76ce386203c79e
+#: ../../sites.txt:53
+msgid "This accomplishes several things quite nicely:"
+msgstr ""
+
+# b4bb86393c6e4d0eb563cdc7bcc12142
+#: ../../sites.txt:55
+msgid ""
+"It lets the site producers edit all content -- on both sites -- in a single "
+"interface (the Django admin)."
+msgstr ""
+
+# b8428b1bbabe4bd0978805c4079159bc
+#: ../../sites.txt:58
+msgid ""
+"It means the same story doesn't have to be published twice in the database; "
+"it only has a single record in the database."
+msgstr ""
+
+# b08319e6a2b941f7a854f346b2f7bea5
+#: ../../sites.txt:61
+msgid ""
+"It lets the site developers use the same Django view code for both sites. "
+"The view code that displays a given story just checks to make sure the "
+"requested story is on the current site. It looks something like this::"
+msgstr ""
+
+# 665838a4f141441b9eae330751cb2521
+#: ../../sites.txt:78
+msgid "Associating content with a single site"
+msgstr ""
+
+# e2b462259e9c42709032b188152551ea
+#: ../../sites.txt:80
+msgid ""
+"Similarly, you can associate a model to the ``Site`` model in a many-to-one "
+"relationship, using ``ForeignKey``."
+msgstr ""
+
+# 919e8ff88e904c3ea42fe1c7d419b401
+#: ../../sites.txt:83
+msgid ""
+"For example, if an article is only allowed on a single site, you'd use a "
+"model like this::"
+msgstr ""
+
+# a43b944ed65b42f1b5d5cdf2da8e1faa
+#: ../../sites.txt:94
+msgid "This has the same benefits as described in the last section."
+msgstr ""
+
+# de7e36af6e5a493da34504d6ec7ab621
+#: ../../sites.txt:97
+msgid "Hooking into the current site from views"
+msgstr ""
+
+# 0e467be802d54ca5a0a6cc7d6b832605
+#: ../../sites.txt:99
+msgid ""
+"On a lower level, you can use the sites framework in your Django views to do "
+"particular things based on what site in which the view is being called. For "
+"example::"
+msgstr ""
+
+# 8227cfe90edd4b1fb2c4b22f72a2643f
+#: ../../sites.txt:111
+msgid ""
+"Of course, it's ugly to hard-code the site IDs like that. This sort of hard-"
+"coding is best for hackish fixes that you need done quickly. A slightly "
+"cleaner way of accomplishing the same thing is to check the current site's "
+"domain::"
+msgstr ""
+
+# d2cff71c088e457280a5a61670ea36b0
+#: ../../sites.txt:126
+msgid ""
+"The idiom of retrieving the ``Site`` object for the value of ``settings."
+"SITE_ID`` is quite common, so the ``Site`` model's manager has a "
+"``get_current()`` method. This example is equivalent to the previous one::"
+msgstr ""
+
+# 1d9ace0a1ced4b26b178e26fb3401634
+#: ../../sites.txt:140
+msgid "Getting the current domain for display"
+msgstr ""
+
+# 01736e4ec8ab45f99c80fb079f57fe64
+#: ../../sites.txt:142
+msgid ""
+"LJWorld.com and Lawrence.com both have e-mail alert functionality, which "
+"lets readers sign up to get notifications when news happens. It's pretty "
+"basic: A reader signs up on a Web form, and he immediately gets an e-mail "
+"saying, \"Thanks for your subscription.\""
+msgstr ""
+
+# afc7dcc28f474211bf9e49b695c7c315
+#: ../../sites.txt:147
+msgid ""
+"It'd be inefficient and redundant to implement this signup-processing code "
+"twice, so the sites use the same code behind the scenes. But the \"thank you "
+"for signing up\" notice needs to be different for each site. By using "
+"``Site`` objects, we can abstract the \"thank you\" notice to use the values "
+"of the current site's ``name`` and ``domain``."
+msgstr ""
+
+# 10accb2fd3c64a7a9ccf8fba73a7c3a0
+#: ../../sites.txt:153
+msgid "Here's an example of what the form-handling view looks like::"
+msgstr ""
+
+# 238d74085a874cb089ff66994bd23195
+#: ../../sites.txt:170
+msgid ""
+"On Lawrence.com, this e-mail has the subject line \"Thanks for subscribing "
+"to lawrence.com alerts.\" On LJWorld.com, the e-mail has the subject "
+"\"Thanks for subscribing to LJWorld.com alerts.\" Same goes for the e-mail's "
+"message body."
+msgstr ""
+
+# 6240275674fd43dca066e3425742f5ec
+#: ../../sites.txt:174
+msgid ""
+"Note that an even more flexible (but more heavyweight) way of doing this "
+"would be to use Django's template system. Assuming Lawrence.com and LJWorld."
+"com have different template directories (``TEMPLATE_DIRS``), you could "
+"simply farm out to the template system like so::"
+msgstr ""
+
+# 5b50590e87324571801fb611b06a124b
+#: ../../sites.txt:192
+msgid ""
+"In this case, you'd have to create ``subject.txt`` and ``message.txt`` "
+"template files for both the LJWorld.com and Lawrence.com template "
+"directories. That gives you more flexibility, but it's also more complex."
+msgstr ""
+
+# f0fc71728c294723872dbcc0e513d5ad
+#: ../../sites.txt:196
+msgid ""
+"It's a good idea to exploit the ``Site`` objects as much as possible, to "
+"remove unneeded complexity and redundancy."
+msgstr ""
+
+# c8c38e1bb5694326920cfd6f14e1bbb2
+#: ../../sites.txt:200
+msgid "Getting the current domain for full URLs"
+msgstr ""
+
+# fa8f96396ead4398be47a7d3e308f5bb
+#: ../../sites.txt:202
+msgid ""
+"Django's ``get_absolute_url()`` convention is nice for getting your objects' "
+"URL without the domain name, but in some cases you might want to display the "
+"full URL -- with ``http://`` and the domain and everything -- for an object. "
+"To do this, you can use the sites framework. A simple example::"
+msgstr ""
+
+# 4fffdd4a75cb423ebaa15708f405387f
+#: ../../sites.txt:217
+msgid "The ``CurrentSiteManager``"
+msgstr ""
+
+# d1701bded0f34d75880b03723e3a6393
+#: ../../sites.txt:219
+msgid ""
+"If ``Site``\\s play a key role in your application, consider using the "
+"helpful ``CurrentSiteManager`` in your model(s). It's a model :doc:`manager "
+"<model-api>` that automatically filters its queries to include only objects "
+"associated with the current ``Site``."
+msgstr ""
+
+# e45c0dc280484554bd8450ce32dc70dc
+#: ../../sites.txt:224
+msgid ""
+"Use ``CurrentSiteManager`` by adding it to your model explicitly. For "
+"example::"
+msgstr ""
+
+# 5ae11f1483d448968b6a5a484dd0c567
+#: ../../sites.txt:238
+msgid ""
+"With this model, ``Photo.objects.all()`` will return all ``Photo`` objects "
+"in the database, but ``Photo.on_site.all()`` will return only the ``Photo`` "
+"objects associated with the current site, according to the ``SITE_ID`` "
+"setting."
+msgstr ""
+
+# c4615b7382ae4845a69fe4dc0a852356
+#: ../../sites.txt:242
+msgid "Put another way, these two statements are equivalent::"
+msgstr ""
+
+# 9a4a1420c6494113b51b443961d18d91
+#: ../../sites.txt:247
+msgid ""
+"How did ``CurrentSiteManager`` know which field of ``Photo`` was the "
+"``Site``? It defaults to looking for a field called ``site``. If your model "
+"has a ``ForeignKey`` or ``ManyToManyField`` called something *other* than "
+"``site``, you need to explicitly pass that as the parameter to "
+"``CurrentSiteManager``. The following model, which has a field called "
+"``publish_on``, demonstrates this::"
+msgstr ""
+
+# 9ee33f40426a4d409799fb9b8a762f45
+#: ../../sites.txt:266
+msgid ""
+"If you attempt to use ``CurrentSiteManager`` and pass a field name that "
+"doesn't exist, Django will raise a ``ValueError``."
+msgstr ""
+
+# 11f66a386ae144968d199f504ab2eaef
+#: ../../sites.txt:270
+msgid "How Django uses the sites framework"
+msgstr ""
+
+# d2fd5c88e7594729aa275d22b9ce256e
+#: ../../sites.txt:272
+msgid ""
+"Although it's not required that you use the sites framework, it's strongly "
+"encouraged, because Django takes advantage of it in a few places. Even if "
+"your Django installation is powering only a single site, you should take the "
+"two seconds to create the site object with your ``domain`` and ``name``, and "
+"point to its ID in your ``SITE_ID`` setting."
+msgstr ""
+
+# 62f7494bee8c48aaafd186350c434add
+#: ../../sites.txt:278
+msgid "Here's how Django uses the sites framework:"
+msgstr ""
+
+# c6e78fa6e27c4e199123d5a0cfa14e69
+#: ../../sites.txt:280
+msgid ""
+"In the :doc:`redirects framework <redirects>`, each redirect object is "
+"associated with a particular site. When Django searches for a redirect, it "
+"takes into account the current ``SITE_ID``."
+msgstr ""
+
+# 6b88c80230ad43d09ace1df68fa7bf10
+#: ../../sites.txt:284
+msgid ""
+"In the comments framework, each comment is associated with a particular "
+"site. When a comment is posted, its ``site`` is set to the current "
+"``SITE_ID``, and when comments are listed via the appropriate template tag, "
+"only the comments for the current site are displayed."
+msgstr ""
+
+# f4e64262a04d42ffa2c9d202294417ec
+#: ../../sites.txt:289
+msgid ""
+"In the :doc:`flatpages framework <flatpages>`, each flatpage is associated "
+"with a particular site. When a flatpage is created, you specify its "
+"``site``, and the ``FlatpageFallbackMiddleware`` checks the current "
+"``SITE_ID`` in retrieving flatpages to display."
+msgstr ""
+
+# 9f39e01e538a4de49d57c091a8100704
+#: ../../sites.txt:294
+msgid ""
+"In the :doc:`syndication framework <syndication_feeds>`, the templates for "
+"``title`` and ``description`` automatically have access to a variable ``"
+"{{{ site }}}``, which is the ``Site`` object representing the current site. "
+"Also, the hook for providing item URLs will use the ``domain`` from the "
+"current ``Site`` object if you don't specify a fully-qualified domain."
+msgstr ""
+
+# e815be19d67e404583c36c6f9b58b097
+#: ../../sites.txt:300
+msgid ""
+"In the :doc:`authentication framework <authentication>`, the ``django."
+"contrib.auth.views.login`` view passes the current ``Site`` name to the "
+"template as ``{{{ site_name }}}``."
+msgstr ""
+
+# 11018e389a644841936ad0cd724159cb
+#: ../../sites.txt:303
+msgid ""
+"The shortcut view (``django.views.defaults.shortcut``) uses the domain of "
+"the current ``Site`` object when calculating an object's URL."
+msgstr ""

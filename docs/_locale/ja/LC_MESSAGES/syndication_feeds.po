@@ -1,0 +1,639 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ae1e7e1a4f0c4907bd6d2b30a634b750
+#: ../../syndication_feeds.txt:3
+msgid "The syndication feed framework"
+msgstr ""
+
+# 16e60ff52a3045a895772f0490b4981f
+#: ../../syndication_feeds.txt:5
+msgid ""
+"Django comes with a high-level syndication-feed-generating framework that "
+"makes creating RSS_ and Atom_ feeds easy."
+msgstr ""
+
+# d4414b59ebfe4271b58a0587c468dc06
+#: ../../syndication_feeds.txt:8
+msgid ""
+"To create any syndication feed, all you have to do is write a short Python "
+"class. You can create as many feeds as you want."
+msgstr ""
+
+# 85cd7959499f45b0a1e5690b43674aed
+#: ../../syndication_feeds.txt:11
+msgid ""
+"Django also comes with a lower-level feed-generating API. Use this if you "
+"want to generate feeds outside of a Web context, or in some other lower-"
+"level way."
+msgstr ""
+
+# 7c74853c49104badb46619e6c4d84c2c
+#: ../../syndication_feeds.txt:18
+msgid "The high-level framework"
+msgstr ""
+
+# ce0252fc3956418d9f1d331a49a0c21d
+#: ../../syndication_feeds.txt:21
+msgid "Overview"
+msgstr ""
+
+# d6d38f41aa47425a9206e33038d7dfab
+#: ../../syndication_feeds.txt:23
+msgid ""
+"The high-level feed-generating framework is a view that's hooked to ``/feeds/"
+"`` by default. Django uses the remainder of the URL (everything after ``/"
+"feeds/``) to determine which feed to output."
+msgstr ""
+
+# a2e82c02ba9e45e3a80b83216a7b9e5a
+#: ../../syndication_feeds.txt:27
+msgid ""
+"To create a feed, just write a ``Feed`` class and point to it in your :doc:"
+"`URLconf <url_dispatch>`."
+msgstr ""
+
+# f80d4fab1fcc4296b39e3c3b8d2058a2
+#: ../../syndication_feeds.txt:30
+msgid "Initialization"
+msgstr ""
+
+# bbe1223080364b2087ed9b6693d04a60
+#: ../../syndication_feeds.txt:32
+msgid ""
+"To activate syndication feeds on your Django site, add this line to your :"
+"doc:`URLconf <url_dispatch>`::"
+msgstr ""
+
+# e82f00e0be694ac3a7a3a342d2e33d5c
+#: ../../syndication_feeds.txt:37
+msgid ""
+"This tells Django to use the RSS framework to handle all URLs starting with "
+"``\"feeds/\"``. (You can change that ``\"feeds/\"`` prefix to fit your own "
+"needs.)"
+msgstr ""
+
+# 3f46fb3d654a442db11c727bdc107661
+#: ../../syndication_feeds.txt:40
+msgid ""
+"This URLconf line has an extra argument: ``{'feed_dict': feeds}``. Use this "
+"extra argument to pass the syndication framework the feeds that should be "
+"published under that URL."
+msgstr ""
+
+# b7df72aed0a54e93871fc86cd2c6316e
+#: ../../syndication_feeds.txt:44
+msgid ""
+"Specifically, ``feed_dict`` should be a dictionary that maps a feed's slug "
+"(short URL label) to its ``Feed`` class."
+msgstr ""
+
+# ddb3ee52199a42fe88939f8751d3ce28
+#: ../../syndication_feeds.txt:47
+msgid ""
+"You can define the ``feed_dict`` in the URLconf itself. Here's a full "
+"example URLconf::"
+msgstr ""
+
+# 427943e86b6c4282aca3dde4d5023fe7
+#: ../../syndication_feeds.txt:65
+msgid "The above example registers two feeds:"
+msgstr ""
+
+# b21e2491693b48dfade96b3c1b6f4ed9
+#: ../../syndication_feeds.txt:67
+msgid ""
+"The feed represented by ``LatestEntries`` will live at ``feeds/latest/``."
+msgstr ""
+
+# e28895bde9f94565ac21f978346bb170
+#: ../../syndication_feeds.txt:68
+msgid ""
+"The feed represented by ``LatestEntriesByCategory`` will live at ``feeds/"
+"categories/``."
+msgstr ""
+
+# bb3129aa548f4144a44c9aa7e131d222
+#: ../../syndication_feeds.txt:71
+msgid ""
+"Once that's set up, you just need to define the ``Feed`` classes themselves."
+msgstr ""
+
+# 901408569f7f424bb93bb9beb5c2f6e8
+#: ../../syndication_feeds.txt:74
+msgid "Feed classes"
+msgstr ""
+
+# 42618e28afb541568013df751b0935b7
+#: ../../syndication_feeds.txt:76
+msgid ""
+"A ``Feed`` class is a simple Python class that represents a syndication "
+"feed. A feed can be simple (e.g., a \"site news\" feed, or a basic feed "
+"displaying the latest entries of a blog) or more complex (e.g., a feed "
+"displaying all the blog entries in a particular category, where the category "
+"is variable)."
+msgstr ""
+
+# 19e78a3730334817932a6a8828ad5370
+#: ../../syndication_feeds.txt:81
+msgid ""
+"``Feed`` classes must subclass ``django.contrib.syndication.feeds.Feed``. "
+"They can live anywhere in your codebase."
+msgstr ""
+
+# 7ff6ac9c80b74024a3341952a9572320
+#: ../../syndication_feeds.txt:85
+msgid "A simple example"
+msgstr ""
+
+# 0d3a351cc78742a2a08ab799082738cb
+#: ../../syndication_feeds.txt:87
+msgid ""
+"This simple example, taken from `chicagocrime.org`_, describes a feed of the "
+"latest five news items::"
+msgstr ""
+
+# 4ac4addb2b2947e092e57c1bc2bfb00e
+#: ../../syndication_feeds.txt:101
+msgid "Note:"
+msgstr ""
+
+# 8da39946d8e442e6902a2a9106585c8c
+#: ../../syndication_feeds.txt:103
+msgid "The class subclasses ``django.contrib.syndication.feeds.Feed``."
+msgstr ""
+
+# e3b38e9300c64b2cbaf4d8cff466d3e5
+#: ../../syndication_feeds.txt:104
+msgid ""
+"``title``, ``link`` and ``description`` correspond to the standard RSS "
+"``<title>``, ``<link>`` and ``<description>`` elements, respectively."
+msgstr ""
+
+# 1aa607aebb544231a86e8b647ab1a0ec
+#: ../../syndication_feeds.txt:106
+msgid ""
+"``items()`` is, simply, a method that returns a list of objects that should "
+"be included in the feed as ``<item>`` elements. Although this example "
+"returns ``NewsItem`` objects using Django's :doc:`object-relational mapper "
+"<db-api>`, ``items()`` doesn't have to return model instances. Although you "
+"get a few bits of functionality \"for free\" by using Django models, ``items"
+"()`` can return any type of object you want."
+msgstr ""
+
+# e638a7c3393e41b8a7c17aedf9a50bf6
+#: ../../syndication_feeds.txt:113
+msgid ""
+"One thing's left to do. In an RSS feed, each ``<item>`` has a ``<title>``, "
+"``<link>`` and ``<description>``. We need to tell the framework what data to "
+"put into those elements."
+msgstr ""
+
+# 3a0466222292416995916bbc5e026cff
+#: ../../syndication_feeds.txt:117
+msgid ""
+"To specify the contents of ``<title>`` and ``<description>``, create :doc:"
+"`Django templates <templates>` called ``feeds/sitenews_title.html`` and "
+"``feeds/sitenews_description.html``, where ``sitenews`` is the ``slug`` "
+"specified in the URLconf for the given feed. Note the ``.html`` extension is "
+"required. The RSS system renders that template for each item, passing it two "
+"template context variables:"
+msgstr ""
+
+# a4e602ac9f2f4e30afd9d5cf05401313
+#: ../../syndication_feeds.txt:124
+msgid ""
+"``{{ obj }}`` -- The current object (one of whichever objects you returned "
+"in ``items()``)."
+msgstr ""
+
+# aac09d8cd98b457aae4382d3b1c5667b
+#: ../../syndication_feeds.txt:126
+msgid ""
+"``{{ site }}`` -- A ``django.models.core.sites.Site`` object representing "
+"the current site. This is useful for ``{{ site.domain }}`` or ``{{ site."
+"name }}``."
+msgstr ""
+
+# c7195473d6ee466aaf96b390b36ffd11
+#: ../../syndication_feeds.txt:130
+msgid ""
+"If you don't create a template for either the title or description, the "
+"framework will use the template ``\"{{ obj }}\"`` by default -- that is, the "
+"normal string representation of the object. You can also change the names of "
+"these two templates by specifying ``title_template`` and "
+"``description_template`` as attributes of your ``Feed`` class."
+msgstr ""
+
+# 4299747a68914fe9965a8063dea8fbcc
+#: ../../syndication_feeds.txt:135
+msgid ""
+"To specify the contents of ``<link>``, you have two options. For each item "
+"in ``items()``, Django first tries executing a ``get_absolute_url()`` method "
+"on that object. If that method doesn't exist, it tries calling a method "
+"``item_link()`` in the ``Feed`` class, passing it a single parameter, "
+"``item``, which is the object itself. Both ``get_absolute_url()`` and "
+"``item_link()`` should return the item's URL as a normal Python string."
+msgstr ""
+
+# 8227c3a71d8e461ab2a6d41067aa8711
+#: ../../syndication_feeds.txt:146
+msgid "A complex example"
+msgstr ""
+
+# 334c3ecc84ac403e88774fc7759716fa
+#: ../../syndication_feeds.txt:148
+msgid "The framework also supports more complex feeds, via parameters."
+msgstr ""
+
+# 6d2af406d33a4dad92e80ce7ace8b75d
+#: ../../syndication_feeds.txt:150
+msgid ""
+"For example, `chicagocrime.org`_ offers an RSS feed of recent crimes for "
+"every police beat in Chicago. It'd be silly to create a separate ``Feed`` "
+"class for each police beat; that would violate the `DRY principle`_ and "
+"would couple data to programming logic. Instead, the syndication framework "
+"lets you make generic feeds that output items based on information in the "
+"feed's URL."
+msgstr ""
+
+# 6649b89983c34a7faa4ec3dd707985dc
+#: ../../syndication_feeds.txt:156
+msgid ""
+"On chicagocrime.org, the police-beat feeds are accessible via URLs like this:"
+msgstr ""
+
+# ea6653996e92490f8925965ca3aa388c
+#: ../../syndication_feeds.txt:158
+msgid "``/rss/beats/0613/`` -- Returns recent crimes for beat 0613."
+msgstr ""
+
+# 8eb4e150c90143d387ceac8557c6d66b
+#: ../../syndication_feeds.txt:159
+msgid "``/rss/beats/1424/`` -- Returns recent crimes for beat 1424."
+msgstr ""
+
+# 10670852285d4aeb881e86d2187d9553
+#: ../../syndication_feeds.txt:161
+msgid ""
+"The slug here is ``\"beats\"``. The syndication framework sees the extra URL "
+"bits after the slug -- ``0613`` and ``1424`` -- and gives you a hook to tell "
+"it what those URL bits mean, and how they should influence which items get "
+"published in the feed."
+msgstr ""
+
+# 5919f1038f314a1aad763f2026580da6
+#: ../../syndication_feeds.txt:166
+msgid ""
+"An example makes this clear. Here's the code for these beat-specific feeds::"
+msgstr ""
+
+# b883b196c33d4478983bc16f59aeac9c
+#: ../../syndication_feeds.txt:188
+msgid ""
+"Here's the basic algorithm the RSS framework follows, given this class and a "
+"request to the URL ``/rss/beats/0613/``:"
+msgstr ""
+
+# d31e4c4cdc6c4d949cfa8fe58b552eb0
+#: ../../syndication_feeds.txt:191
+msgid ""
+"The framework gets the URL ``/rss/beats/0613/`` and notices there's an extra "
+"bit of URL after the slug. It splits that remaining string by the slash "
+"character (``\"/\"``) and calls the ``Feed`` class' ``get_object()`` method, "
+"passing it the bits. In this case, bits is ``['0613']``. For a request to ``/"
+"rss/beats/0613/foo/bar/``, bits would be ``['0613', 'foo', 'bar']``."
+msgstr ""
+
+# 7973b62f70684070b7d7a1c805e1e19d
+#: ../../syndication_feeds.txt:197
+msgid ""
+"``get_object()`` is responsible for retrieving the given beat, from the "
+"given ``bits``. In this case, it uses the Django database API to retrieve "
+"the beat. Note that ``get_object()`` should raise ``django.core.exceptions."
+"ObjectDoesNotExist`` if given invalid parameters. There's no ``try``/"
+"``except`` around the ``Beat.objects.get()`` call, because it's not "
+"necessary; that function raises ``Beat.DoesNotExist`` on failure, and ``Beat."
+"DoesNotExist`` is a subclass of ``ObjectDoesNotExist``. Raising "
+"``ObjectDoesNotExist`` in ``get_object()`` tells Django to produce a 404 "
+"error for that request."
+msgstr ""
+
+# bb8a5b8cb36642bebae744752086da4d
+#: ../../syndication_feeds.txt:206
+msgid ""
+"To generate the feed's ``<title>``, ``<link>`` and ``<description>``, Django "
+"uses the ``title()``, ``link()`` and ``description()`` methods. In the "
+"previous example, they were simple string class attributes, but this example "
+"illustrates that they can be either strings *or* methods. For each of "
+"``title``, ``link`` and ``description``, Django follows this algorithm:"
+msgstr ""
+
+# 20ff71668f1e4bf38e76b0d2986382e9
+#: ../../syndication_feeds.txt:213
+msgid ""
+"First, it tries to call a method, passing the ``obj`` argument, where "
+"``obj`` is the object returned by ``get_object()``."
+msgstr ""
+
+# 6adecbe4231a4556b16cb3b3e605dea0
+#: ../../syndication_feeds.txt:215
+msgid "Failing that, it tries to call a method with no arguments."
+msgstr ""
+
+# 708276dcef46410eb38c923bc1d2ebbc
+#: ../../syndication_feeds.txt:216
+msgid "Failing that, it uses the class attribute."
+msgstr ""
+
+# a35fbffa2b214961b298feefe7dfaedc
+#: ../../syndication_feeds.txt:218
+msgid ""
+"Finally, note that ``items()`` in this example also takes the ``obj`` "
+"argument. The algorithm for ``items`` is the same as described in the "
+"previous step -- first, it tries ``items(obj)``, then ``items()``, then "
+"finally an ``items`` class attribute (which should be a list)."
+msgstr ""
+
+# 89a1c70cc7ed41e8a1076c89c5b8aec1
+#: ../../syndication_feeds.txt:223
+msgid ""
+"The ``ExampleFeed`` class below gives full documentation on methods and "
+"attributes of ``Feed`` classes."
+msgstr ""
+
+# 5ba1c2c894d647edad1cf8439af5acd6
+#: ../../syndication_feeds.txt:229
+msgid "Specifying the type of feed"
+msgstr ""
+
+# 8d566569b7554014b5dc715241172b7a
+#: ../../syndication_feeds.txt:231
+msgid "By default, feeds produced in this framework use RSS 2.0."
+msgstr ""
+
+# 2148e17d3d0c4426bd2feb556a9b5da0
+#: ../../syndication_feeds.txt:233
+msgid ""
+"To change that, add a ``feed_type`` attribute to your ``Feed`` class, like "
+"so::"
+msgstr ""
+
+# f54f6437aacd433baa85fe601be973d4
+#: ../../syndication_feeds.txt:240
+msgid "Note that you set ``feed_type`` to a class object, not an instance."
+msgstr ""
+
+# f3c935ad69d2419b91765bee2e1b3350
+#: ../../syndication_feeds.txt:242
+msgid "Currently available feed types are:"
+msgstr ""
+
+# cdf54c5430264ab8b0be3a491bc11ea4
+#: ../../syndication_feeds.txt:244
+msgid "``django.utils.feedgenerator.Rss201rev2Feed`` (RSS 2.01. Default.)"
+msgstr ""
+
+# 1a43d7756a00418da4bc70bff1b679f1
+#: ../../syndication_feeds.txt:245
+msgid "``django.utils.feedgenerator.RssUserland091Feed`` (RSS 0.91.)"
+msgstr ""
+
+# 37bb9c68221046109b897ead94e09876
+#: ../../syndication_feeds.txt:246
+msgid "``django.utils.feedgenerator.Atom1Feed`` (Atom 1.0.)"
+msgstr ""
+
+# cea3320ce7ca47c48991ce91f72719fc
+#: ../../syndication_feeds.txt:249
+msgid "Enclosures"
+msgstr ""
+
+# 82fceadb65104a079d4df7c1df7c1f58
+#: ../../syndication_feeds.txt:251
+msgid ""
+"To specify enclosures, such as those used in creating podcast feeds, use the "
+"``item_enclosure_url``, ``item_enclosure_length`` and "
+"``item_enclosure_mime_type`` hooks. See the ``ExampleFeed`` class below for "
+"usage examples."
+msgstr ""
+
+# 986d1fa9512b46c39e5edd94f8142150
+#: ../../syndication_feeds.txt:257
+msgid "Language"
+msgstr ""
+
+# 297ee3e84fbf4f4890d1c95ae8961a4d
+#: ../../syndication_feeds.txt:259
+msgid ""
+"Feeds created by the syndication framework automatically include the "
+"appropriate ``<language>`` tag (RSS 2.0) or ``xml:lang`` attribute (Atom). "
+"This comes directly from your :doc:`LANGUAGE_CODE setting <settings>`."
+msgstr ""
+
+# 763b8ef174904b25a5d9c40abbb6beb2
+#: ../../syndication_feeds.txt:264
+msgid "URLs"
+msgstr ""
+
+# 90adf6bd0ceb48c29cbe7419986b0124
+#: ../../syndication_feeds.txt:266
+msgid ""
+"The ``link`` method/attribute can return either an absolute URL (e.g. ``\"/"
+"blog/\"``) or a URL with the fully-qualified domain and protocol (e.g. ``"
+"\"http://www.example.com/blog/\"``). If ``link`` doesn't return the domain, "
+"the syndication framework will insert the domain of the current site, "
+"according to your :doc:`SITE_ID setting <settings>`."
+msgstr ""
+
+# cd3c8bd9f2a947cfb1c9ecf9cf08122d
+#: ../../syndication_feeds.txt:272
+msgid ""
+"Atom feeds require a ``<link rel=\"self\">`` that defines the feed's current "
+"location. The syndication framework populates this automatically, using the "
+"domain of the current site according to the SITE_ID setting."
+msgstr ""
+
+# c306206e1ab54e5f9d232248f0f68188
+#: ../../syndication_feeds.txt:277
+msgid "Publishing Atom and RSS feeds in tandem"
+msgstr ""
+
+# ebb1fa2e4fd9443cad18772915c107e8
+#: ../../syndication_feeds.txt:279
+msgid ""
+"Some developers like to make available both Atom *and* RSS versions of their "
+"feeds. That's easy to do with Django: Just create a subclass of your "
+"``feed`` class and set the ``feed_type`` to something different. Then update "
+"your URLconf to add the extra versions."
+msgstr ""
+
+# 25b390cbd3114700ae6baff0b502ffc4
+#: ../../syndication_feeds.txt:284
+msgid "Here's a full example::"
+msgstr ""
+
+# e497dc80c06a4cb88b70c56af856b070
+#: ../../syndication_feeds.txt:301
+msgid "And the accompanying URLconf::"
+msgstr ""
+
+# e270d86c376f49ddabe08efa2b262af2
+#: ../../syndication_feeds.txt:319
+msgid "Feed class reference"
+msgstr ""
+
+# d8346b09eadf4f54846cf903a24203bb
+#: ../../syndication_feeds.txt:321
+msgid ""
+"This example illustrates all possible attributes and methods for a ``Feed`` "
+"class::"
+msgstr ""
+
+# a31cf25becbe4be286cc500ce42150df
+#: ../../syndication_feeds.txt:643
+msgid "The low-level framework"
+msgstr ""
+
+# d1ebb63a8dc643dd97ce52c4cb62f824
+#: ../../syndication_feeds.txt:645
+msgid ""
+"Behind the scenes, the high-level RSS framework uses a lower-level framework "
+"for generating feeds' XML. This framework lives in a single module: `django/"
+"utils/feedgenerator.py`_."
+msgstr ""
+
+# ca901bf17ed348349c073b299e24f460
+#: ../../syndication_feeds.txt:649
+msgid "Feel free to use this framework on your own, for lower-level tasks."
+msgstr ""
+
+# 61e845ee60ca4c1c9f201de4e9b0163b
+#: ../../syndication_feeds.txt:651
+msgid ""
+"The ``feedgenerator`` module contains a base class ``SyndicationFeed`` and "
+"several subclasses:"
+msgstr ""
+
+# 2e3efb7bc51243c1aa09809ff982b60e
+#: ../../syndication_feeds.txt:654
+msgid "``RssUserland091Feed``"
+msgstr ""
+
+# 010ed331f8f74ed19bac485e3edcaafc
+#: ../../syndication_feeds.txt:655
+msgid "``Rss201rev2Feed``"
+msgstr ""
+
+# 2ee29afa6ec64ca9a0e7dccfb9c7ef24
+#: ../../syndication_feeds.txt:656
+msgid "``Atom1Feed``"
+msgstr ""
+
+# 07e8004c93fd4b94ab8836c4cebf8ca3
+#: ../../syndication_feeds.txt:658
+msgid ""
+"Each of these three classes knows how to render a certain type of feed as "
+"XML. They share this interface:"
+msgstr ""
+
+# bf10954e7f30463f8037b3bde549755a
+#: ../../syndication_feeds.txt:661
+msgid ""
+"``__init__(title, link, description, language=None, author_email=None,`` "
+"``author_name=None, author_link=None, subtitle=None, categories=None,`` "
+"``feed_url=None)``"
+msgstr ""
+
+# 04e5cc6b0ebe4853b7ffc8c53bda49d6
+#: ../../syndication_feeds.txt:665
+msgid ""
+"Initializes the feed with the given metadata, which applies to the entire "
+"feed (i.e., not just to a specific item in the feed)."
+msgstr ""
+
+# c7fe48e9cc4a4cebbd492436ae684eb4
+#: ../../syndication_feeds.txt:668
+msgid ""
+"All parameters, if given, should be Unicode objects, except ``categories``, "
+"which should be a sequence of Unicode objects."
+msgstr ""
+
+# 5e54af6889194d4395659cda3c7fc230
+#: ../../syndication_feeds.txt:671
+msgid ""
+"``add_item(title, link, description, author_email=None, author_name=None,`` "
+"``pubdate=None, comments=None, unique_id=None, enclosure=None, categories=())"
+"``"
+msgstr ""
+
+# 7e687563154b407cb8bbb3f86e5ed67b
+#: ../../syndication_feeds.txt:674
+msgid ""
+"Add an item to the feed with the given parameters. All parameters, if given, "
+"should be Unicode objects, except:"
+msgstr ""
+
+# 88e35b42a126431ba88c3ec1cbd78acb
+#: ../../syndication_feeds.txt:677
+msgid "``pubdate`` should be a `Python datetime object`_."
+msgstr ""
+
+# 142daf6203314a3a9e0824849baf7b3d
+#: ../../syndication_feeds.txt:678
+msgid "``enclosure`` should be an instance of ``feedgenerator.Enclosure``."
+msgstr ""
+
+# 58ac18b55727430fa6e1b000c7a9c5da
+#: ../../syndication_feeds.txt:679
+msgid "``categories`` should be a sequence of Unicode objects."
+msgstr ""
+
+# 89e6eac379524cda95d0259e8dffd897
+#: ../../syndication_feeds.txt:681
+msgid "``write(outfile, encoding)``"
+msgstr ""
+
+# dd4a722e12e741b8a8ff88cddaff9920
+#: ../../syndication_feeds.txt:683
+msgid ""
+"Outputs the feed in the given encoding to outfile, which is a file-like "
+"object."
+msgstr ""
+
+# efe2e2c668c1416492446809bb4f9ea7
+#: ../../syndication_feeds.txt:685
+msgid "``writeString(encoding)``"
+msgstr ""
+
+# a3d70b80fb8d455fb26fa98f652d5c72
+#: ../../syndication_feeds.txt:687
+msgid "Returns the feed as a string in the given encoding."
+msgstr ""
+
+# b8a53c51516047bab1fe581bb08c7580
+#: ../../syndication_feeds.txt:690
+msgid "Example usage"
+msgstr ""
+
+# b191e12900b044a08094e36371fa1c1a
+#: ../../syndication_feeds.txt:692
+msgid ""
+"This example creates an Atom 1.0 feed and prints it to standard output::"
+msgstr ""

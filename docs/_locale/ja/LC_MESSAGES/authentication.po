@@ -1,0 +1,1208 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# c64c2560060e4414a0b7119e39579293
+#: ../../authentication.txt:3
+msgid "User authentication in Django"
+msgstr ""
+
+# 8460e5466a084907a3398b599ea383ca
+#: ../../authentication.txt:5
+msgid ""
+"Django comes with a user authentication system. It handles user accounts, "
+"groups, permissions and cookie-based user sessions. This document explains "
+"how things work."
+msgstr ""
+
+# 4f8b005690aa47049803fbaaf9925c88
+#: ../../authentication.txt:10
+msgid "Overview"
+msgstr ""
+
+# 7fe732c2b2e24d6daab08004db0d50a1
+#: ../../authentication.txt:12
+msgid "The auth system consists of:"
+msgstr ""
+
+# 729ac998cb654e47b5b3a9139e398804
+# edb8f11bf3c6416ba8d7c0b9eaf28877
+# 700a4cfca3ed4124a86b19c83631f465
+#: ../../authentication.txt:14 ../../authentication.txt:44
+#: ../../authentication.txt:593
+msgid "Users"
+msgstr ""
+
+# 5bcd38b5dd1c4a24bde3ee95af704675
+#: ../../authentication.txt:15
+msgid ""
+"Permissions: Binary (yes/no) flags designating whether a user may perform a "
+"certain task."
+msgstr ""
+
+# aff3b753ed2e44b98b88ce7d0f6a6315
+#: ../../authentication.txt:17
+msgid ""
+"Groups: A generic way of applying labels and permissions to more than one "
+"user."
+msgstr ""
+
+# cf1c5427b8334fdca6f3fc7fb8c460e0
+#: ../../authentication.txt:19
+msgid "Messages: A simple way to queue messages for given users."
+msgstr ""
+
+# cbc27eac0b6246b0a015701d064cf32d
+#: ../../authentication.txt:22
+msgid "Installation"
+msgstr ""
+
+# 89118d53339d443a94785516bed39a4f
+#: ../../authentication.txt:24
+msgid ""
+"Authentication support is bundled as a Django application in ``django."
+"contrib.auth``. To install it, do the following:"
+msgstr ""
+
+# ba1866479e31491d917efa54ada8ea60
+#: ../../authentication.txt:27
+msgid "Put ``'django.contrib.auth'`` in your ``INSTALLED_APPS`` setting."
+msgstr ""
+
+# 36af517319b1405caff85fbf442ba914
+#: ../../authentication.txt:28
+msgid "Run the command ``manage.py syncdb``."
+msgstr ""
+
+# f27b30ecc29c45309f3830b00cfb09d8
+#: ../../authentication.txt:30
+msgid ""
+"Note that the default ``settings.py`` file created by ``django-admin.py "
+"startproject`` includes ``'django.contrib.auth'`` in ``INSTALLED_APPS`` for "
+"convenience. If your ``INSTALLED_APPS`` already contains ``'django.contrib."
+"auth'``, feel free to run ``manage.py syncdb`` again; you can run that "
+"command as many times as you'd like, and each time it'll only install what's "
+"needed."
+msgstr ""
+
+# 67a918c095cb4089b4125df9db2fe537
+#: ../../authentication.txt:37
+msgid ""
+"The ``syncdb`` command creates the necessary database tables, creates "
+"permission objects for all installed apps that need 'em, and prompts you to "
+"create a superuser account the first time you run it."
+msgstr ""
+
+# 1ef00e5679ca4d08aba2b2c5fd1a7dc5
+#: ../../authentication.txt:41
+msgid "Once you've taken those steps, that's it."
+msgstr ""
+
+# e684efa2751e4c0ba7dda42b828f6714
+#: ../../authentication.txt:46
+msgid ""
+"Users are represented by a standard Django model, which lives in `django/"
+"contrib/auth/models.py`_."
+msgstr ""
+
+# 432eeedf4a44471e87cfb56789110af5
+# df406801e6664a78a9d64f00209d6a11
+#: ../../authentication.txt:52 ../../authentication.txt:556
+msgid "API reference"
+msgstr ""
+
+# 1d79082a66074ff5abb85ef140aa6206
+# be013e943ed347fbbcb6526acb47c1a2
+#: ../../authentication.txt:55 ../../authentication.txt:564
+msgid "Fields"
+msgstr ""
+
+# 59131c207ff04bdbaeeb264076d86dc4
+#: ../../authentication.txt:57
+msgid "``User`` objects have the following fields:"
+msgstr ""
+
+# c18e2c4cf3564208bd634f5aa70f3770
+#: ../../authentication.txt:59
+msgid ""
+"``username`` -- Required. 30 characters or fewer. Alphanumeric characters "
+"only (letters, digits and underscores)."
+msgstr ""
+
+# 7aa9ddf13b2a4b1fb702df5d85a383d4
+#: ../../authentication.txt:61
+msgid "``first_name`` -- Optional. 30 characters or fewer."
+msgstr ""
+
+# c34ff565aad642fb97e21e817eae3c29
+#: ../../authentication.txt:62
+msgid "``last_name`` -- Optional. 30 characters or fewer."
+msgstr ""
+
+# 691896c544204690b5ef1d88864e75fe
+#: ../../authentication.txt:63
+msgid "``email`` -- Optional. E-mail address."
+msgstr ""
+
+# 83a21f15441b415782eae682b44bcb37
+#: ../../authentication.txt:64
+msgid ""
+"``password`` -- Required. A hash of, and metadata about, the password. "
+"(Django doesn't store the raw password.) Raw passwords can be arbitrarily "
+"long and can contain any character. See the \"Passwords\" section below."
+msgstr ""
+
+# ca07ee26e7ac4b5286c6288ff6c99980
+#: ../../authentication.txt:67
+msgid ""
+"``is_staff`` -- Boolean. Designates whether this user can access the admin "
+"site."
+msgstr ""
+
+# 16c5fc13fd92428497650840d045149e
+#: ../../authentication.txt:69
+msgid ""
+"``is_active`` -- Boolean. Designates whether this user can log into the "
+"Django admin. Set this to ``False`` instead of deleting accounts."
+msgstr ""
+
+# c971a3c3c3d9498d8196152f2de43f2d
+#: ../../authentication.txt:71
+msgid ""
+"``is_superuser`` -- Boolean. Designates that this user has all permissions "
+"without explicitly assigning them."
+msgstr ""
+
+# f7e8fa0d0f4a4277af9bf3ea5b538d8b
+#: ../../authentication.txt:73
+msgid ""
+"``last_login`` -- A datetime of the user's last login. Is set to the current "
+"date/time by default."
+msgstr ""
+
+# cdcdde73051243f68bff51e6c25ce816
+#: ../../authentication.txt:75
+msgid ""
+"``date_joined`` -- A datetime designating when the account was created. Is "
+"set to the current date/time by default when the account is created."
+msgstr ""
+
+# db9d5373e4944be9bc1f015ac116453e
+# 0452f813c0644b2eb5e85158ea723a2c
+#: ../../authentication.txt:79 ../../authentication.txt:574
+msgid "Methods"
+msgstr ""
+
+# 7dfc3b5a27b5442093fc6ee0036df7ca
+#: ../../authentication.txt:81
+msgid ""
+"``User`` objects have two many-to-many fields: ``groups`` and "
+"``user_permissions``. ``User`` objects can access their related objects in "
+"the same way as any other :doc:`Django model <model-api>`::"
+msgstr ""
+
+# 0043824bc5eb4773bb0791fad565474d
+#: ../../authentication.txt:94
+msgid ""
+"In addition to those automatic API methods, ``User`` objects have the "
+"following custom methods:"
+msgstr ""
+
+# ccea1273707441ab8ffc837cad9b64f6
+#: ../../authentication.txt:97
+msgid ""
+"``is_anonymous()`` -- Always returns ``False``. This is a way of "
+"differentiating ``User`` and ``AnonymousUser`` objects. Generally, you "
+"should prefer using ``is_authenticated()`` to this method."
+msgstr ""
+
+# aa0ed9d7b9b84aeeb661adcad30d3e00
+#: ../../authentication.txt:101
+msgid ""
+"``is_authenticated()`` -- Always returns ``True``. This is a way to tell if "
+"the user has been authenticated."
+msgstr ""
+
+# c8f68bc81fd14703a09399da4cc631e9
+#: ../../authentication.txt:104
+msgid ""
+"``get_full_name()`` -- Returns the ``first_name`` plus the ``last_name``, "
+"with a space in between."
+msgstr ""
+
+# e27f3da13925468f83ba087d28b63e2d
+#: ../../authentication.txt:107
+msgid ""
+"``set_password(raw_password)`` -- Sets the user's password to the given raw "
+"string, taking care of the password hashing. Doesn't save the ``User`` "
+"object."
+msgstr ""
+
+# 09666aca5c6b47b9b93b1b048c63abf7
+#: ../../authentication.txt:111
+msgid ""
+"``check_password(raw_password)`` -- Returns ``True`` if the given raw string "
+"is the correct password for the user. (This takes care of the password "
+"hashing in making the comparison.)"
+msgstr ""
+
+# 697d4b45565a4b8d9a8c2940ff46ccae
+#: ../../authentication.txt:115
+msgid ""
+"``get_group_permissions()`` -- Returns a list of permission strings that the "
+"user has, through his/her groups."
+msgstr ""
+
+# 9448d180ef084f99896ae4ecbff61d55
+#: ../../authentication.txt:118
+msgid ""
+"``get_all_permissions()`` -- Returns a list of permission strings that the "
+"user has, both through group and user permissions."
+msgstr ""
+
+# afb6246d73ba4778a95c7fc285e2220b
+#: ../../authentication.txt:121
+msgid ""
+"``has_perm(perm)`` -- Returns ``True`` if the user has the specified "
+"permission, where perm is in the format ``\"package.codename\"``."
+msgstr ""
+
+# 50c7403c53024d2fbd565b65ccc7ecfa
+#: ../../authentication.txt:124
+msgid ""
+"``has_perms(perm_list)`` -- Returns ``True`` if the user has each of the "
+"specified permissions, where each perm is in the format ``\"package.codename"
+"\"``."
+msgstr ""
+
+# 3990d14bcc154f04a878bfcb35c41f6e
+#: ../../authentication.txt:128
+msgid ""
+"``has_module_perms(package_name)`` -- Returns ``True`` if the user has any "
+"permissions in the given package (the Django app label)."
+msgstr ""
+
+# 07a1fe44f65f4701a19fe1453f4cc2f0
+#: ../../authentication.txt:131
+msgid ""
+"``get_and_delete_messages()`` -- Returns a list of ``Message`` objects in "
+"the user's queue and deletes the messages from the queue."
+msgstr ""
+
+# 2ddc42c916844e1582a82542920de839
+#: ../../authentication.txt:134
+msgid ""
+"``email_user(subject, message, from_email=None)`` -- Sends an e-mail to the "
+"user. If ``from_email`` is ``None``, Django uses the :doc:"
+"`DEFAULT_FROM_EMAIL <settings>` setting."
+msgstr ""
+
+# d36b599a467d4496ba2d63d08eedf05d
+#: ../../authentication.txt:138
+msgid ""
+"``get_profile()`` -- Returns a site-specific profile for this user. Raises "
+"``django.contrib.auth.models.SiteProfileNotAvailable`` if the current site "
+"doesn't allow profiles."
+msgstr ""
+
+# 5220e2e083be4ce28fadd10b491de78a
+#: ../../authentication.txt:143
+msgid "Manager functions"
+msgstr ""
+
+# 32977541000e4a199aa03a996a888484
+#: ../../authentication.txt:145
+msgid ""
+"The ``User`` model has a custom manager that has the following helper "
+"functions:"
+msgstr ""
+
+# 4749b98924e64d9d83b2783957637cf0
+#: ../../authentication.txt:147
+msgid ""
+"``create_user(username, email, password)`` -- Creates, saves and returns a "
+"``User``. The ``username``, ``email`` and ``password`` are set as given, and "
+"the ``User`` gets ``is_active=True``."
+msgstr ""
+
+# 9ac67d51b59f4e559d5dbf291ad83fa1
+#: ../../authentication.txt:151
+msgid "See _`Creating users` for example usage."
+msgstr ""
+
+# 009bb6d8d7f64c5b8db2ac2f53d60cd6
+#: ../../authentication.txt:153
+msgid ""
+"``make_random_password(length=10, "
+"allowed_chars='abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789')`` "
+"Returns a random password with the given length and given string of allowed "
+"characters. (Note that the default value of ``allowed_chars`` doesn't "
+"contain ``\"I\"`` or letters that look like it, to avoid user confusion."
+msgstr ""
+
+# f2fe035be4a449ee9d64d3f6e0edd4da
+#: ../../authentication.txt:160
+msgid "Basic usage"
+msgstr ""
+
+# 07792d57bcc540418472f4eea4f03dfa
+#: ../../authentication.txt:163
+msgid "Creating users"
+msgstr ""
+
+# 8c90b520081240b18632c409223140c3
+#: ../../authentication.txt:165
+msgid ""
+"The most basic way to create users is to use the ``create_user`` helper "
+"function that comes with Django::"
+msgstr ""
+
+# 8d739e13ba754b97ac0c0138a24745d7
+#: ../../authentication.txt:178
+msgid "Changing passwords"
+msgstr ""
+
+# 5ed4f198c0b1493fbd72e43f00a906a6
+#: ../../authentication.txt:180
+msgid "Change a password with ``set_password()``::"
+msgstr ""
+
+# 2ab6543be6e84eefa7f71fc161069b1e
+#: ../../authentication.txt:187
+msgid ""
+"Don't set the ``password`` attribute directly unless you know what you're "
+"doing. This is explained in the next section."
+msgstr ""
+
+# b3dcea11d7fb4102886632ce06821c96
+#: ../../authentication.txt:191
+msgid "Passwords"
+msgstr ""
+
+# 889fd02721854f80aad503238fa53292
+#: ../../authentication.txt:193
+msgid ""
+"The ``password`` attribute of a ``User`` object is a string in this format::"
+msgstr ""
+
+# c82c4dd29edb416faae97762da3e7200
+#: ../../authentication.txt:197
+msgid "That's hashtype, salt and hash, separated by the dollar-sign character."
+msgstr ""
+
+# c8cf892b2a7f4f7eb7fba6578d8ff3a8
+#: ../../authentication.txt:199
+msgid ""
+"Hashtype is either ``sha1`` (default) or ``md5`` -- the algorithm used to "
+"perform a one-way hash of the password. Salt is a random string used to salt "
+"the raw password to create the hash."
+msgstr ""
+
+# b6314e80afe04d8da9f537e505888997
+#: ../../authentication.txt:203
+msgid "For example::"
+msgstr ""
+
+# fe4b5e322c1d4337ab2bcd0798975252
+#: ../../authentication.txt:207
+msgid ""
+"The ``User.set_password()`` and ``User.check_password()`` functions handle "
+"the setting and checking of these values behind the scenes."
+msgstr ""
+
+# af1d08e0393b410d8062bef41d9e08f2
+#: ../../authentication.txt:210
+msgid ""
+"Previous Django versions, such as 0.90, used simple MD5 hashes without "
+"password salts. For backwards compatibility, those are still supported; "
+"they'll be converted automatically to the new style the first time "
+"``check_password()`` works correctly for a given user."
+msgstr ""
+
+# 3308b36cc4e842548dc1a15cd94a6101
+#: ../../authentication.txt:216
+msgid "Anonymous users"
+msgstr ""
+
+# b77223fb25e24c2588f1fed8625fb84c
+#: ../../authentication.txt:218
+msgid ""
+"``django.contrib.auth.models.AnonymousUser`` is a class that implements the "
+"``django.contrib.auth.models.User`` interface, with these differences:"
+msgstr ""
+
+# 7176d929f55d4232aec362014b67aba4
+#: ../../authentication.txt:221
+msgid "``id`` is always ``None``."
+msgstr ""
+
+# cddfa4951af34fbdadecfd6cb9cac951
+#: ../../authentication.txt:222
+msgid "``is_anonymous()`` returns ``True`` instead of ``False``."
+msgstr ""
+
+# 4d55c98137b8403986a96224f46e4b5e
+#: ../../authentication.txt:223
+msgid "``is_authenticated()`` returns ``False`` instead of ``True``."
+msgstr ""
+
+# a112ef319b0c4733993a75baa3290f4f
+#: ../../authentication.txt:224
+msgid "``has_perm()`` always returns ``False``."
+msgstr ""
+
+# 1222b035fc034bb299a3c888b91b1b7a
+#: ../../authentication.txt:225
+msgid ""
+"``set_password()``, ``check_password()``, ``save()``, ``delete()``, "
+"``set_groups()`` and ``set_permissions()`` raise ``NotImplementedError``."
+msgstr ""
+
+# 3bf71d85eeed40fca5209facf8bcfa65
+#: ../../authentication.txt:228
+msgid ""
+"In practice, you probably won't need to use ``AnonymousUser`` objects on "
+"your own, but they're used by Web requests, as explained in the next section."
+msgstr ""
+
+# aeb73b3b5e2c4a7abacf70569737185c
+#: ../../authentication.txt:232
+msgid "Creating superusers"
+msgstr ""
+
+# 57d89db2e9ed439eb6e3678254db8f10
+#: ../../authentication.txt:234
+msgid ""
+"``manage.py syncdb`` prompts you to create a superuser the first time you "
+"run it after adding ``'django.contrib.auth'`` to your ``INSTALLED_APPS``. "
+"But if you need to create a superuser after that via the command line, you "
+"can use the ``create_superuser.py`` utility. Just run this command::"
+msgstr ""
+
+# 438a8dff2e244f709ca227f7d71a4fb6
+#: ../../authentication.txt:241
+msgid ""
+"Make sure to substitute ``/path/to/`` with the path to the Django codebase "
+"on your filesystem."
+msgstr ""
+
+# 6768f29807b34d869851f5ab45e2259c
+#: ../../authentication.txt:245
+msgid "Authentication in Web requests"
+msgstr ""
+
+# 9299c95e8e594f0fbc722478394ac81c
+#: ../../authentication.txt:247
+msgid ""
+"Until now, this document has dealt with the low-level APIs for manipulating "
+"authentication-related objects. On a higher level, Django can hook this "
+"authentication framework into its system of :doc:`request objects "
+"<request_response>`."
+msgstr ""
+
+# e3e3a22566034440955663c53cc13260
+#: ../../authentication.txt:251
+msgid ""
+"First, install the ``SessionMiddleware`` and ``AuthenticationMiddleware`` "
+"middlewares by adding them to your ``MIDDLEWARE_CLASSES`` setting. See the :"
+"doc:`session documentation <sessions>` for more information."
+msgstr ""
+
+# f65ad472c2ef437b914f66d89d629794
+#: ../../authentication.txt:255
+msgid ""
+"Once you have those middlewares installed, you'll be able to access "
+"``request.user`` in views. ``request.user`` will give you a ``User`` object "
+"representing the currently logged-in user. If a user isn't currently logged "
+"in, ``request.user`` will be set to an instance of ``AnonymousUser`` (see "
+"the previous section). You can tell them apart with ``is_authenticated()``, "
+"like so::"
+msgstr ""
+
+# f687bfe3ccb84668950b906c1fde3779
+#: ../../authentication.txt:267
+msgid "How to log a user in"
+msgstr ""
+
+# c16b5b631e4f4c89a1f365047efc39ce
+#: ../../authentication.txt:269
+msgid ""
+"Django provides two functions in ``django.contrib.auth``: ``authenticate()`` "
+"and ``login()``."
+msgstr ""
+
+# 6bb5d9a79ef64271a81f14c130ec5d96
+#: ../../authentication.txt:272
+msgid ""
+"To authenticate a given username and password, use ``authenticate()``. It "
+"takes two keyword arguments, ``username`` and ``password``, and it returns a "
+"``User`` object if the password is valid for the given username. If the "
+"password is invalid, ``authenticate()`` returns ``None``. Example::"
+msgstr ""
+
+# 7b51db1184314c67ad3033f89ba61e9c
+#: ../../authentication.txt:284
+msgid ""
+"To log a user in, in a view, use ``login()``. It takes an ``HttpRequest`` "
+"object and a ``User`` object. ``login()`` saves the user's ID in the "
+"session, using Django's session framework, so, as mentioned above, you'll "
+"need to make sure to have the session middleware installed."
+msgstr ""
+
+# edf4f7b19eb249b5917fc98657a3725b
+#: ../../authentication.txt:289
+msgid ""
+"This example shows how you might use both ``authenticate()`` and ``login()"
+"``::"
+msgstr ""
+
+# 5a25fb3d2d774ea18cf61ed6ca435ae6
+#: ../../authentication.txt:304
+msgid "How to log a user out"
+msgstr ""
+
+# 7924998bebf34e20a4e47ef341d92e83
+#: ../../authentication.txt:306
+msgid ""
+"To log out a user who has been logged in via ``django.contrib.auth.login()"
+"``, use ``django.contrib.auth.logout()`` within your view. It takes an "
+"``HttpRequest`` object and has no return value. Example::"
+msgstr ""
+
+# e80a8d32da774b96819d16e411acf763
+#: ../../authentication.txt:316
+msgid ""
+"Note that ``logout()`` doesn't throw any errors if the user wasn't logged in."
+msgstr ""
+
+# 5bd3e10f1fe446e080c8e155384a026b
+#: ../../authentication.txt:319
+msgid "Limiting access to logged-in users"
+msgstr ""
+
+# 2c69797279714b0697f4b7930b2de0c7
+#: ../../authentication.txt:322
+msgid "The raw way"
+msgstr ""
+
+# 6ad7c85abafe4ec2b3b8280208d95d47
+#: ../../authentication.txt:324
+msgid ""
+"The simple, raw way to limit access to pages is to check ``request.user."
+"is_authenticated()`` and either redirect to a login page::"
+msgstr ""
+
+# c7e89ba2fefe43b298814245b457d3a8
+#: ../../authentication.txt:334
+msgid "...or display an error message::"
+msgstr ""
+
+# 7703c4bd38824342b85892bb6721f0bf
+#: ../../authentication.txt:342
+msgid "The login_required decorator"
+msgstr ""
+
+# caa4dc1279fe44e98fba47a085cd77c7
+#: ../../authentication.txt:344
+msgid ""
+"As a shortcut, you can use the convenient ``login_required`` decorator::"
+msgstr ""
+
+# d22e5f4a5ac64f3aa573af60e0740a97
+#: ../../authentication.txt:352
+msgid ""
+"Here's an equivalent example, using the more compact decorator syntax "
+"introduced in Python 2.4::"
+msgstr ""
+
+# fe1536ee66974fb4bd8c0510622b60bf
+#: ../../authentication.txt:361
+msgid "``login_required`` does the following:"
+msgstr ""
+
+# 309f5f74fda8444d9ecc590c60739231
+#: ../../authentication.txt:363
+msgid ""
+"If the user isn't logged in, redirect to ``/accounts/login/``, passing the "
+"current absolute URL in the query string as ``next``. For example: ``/"
+"accounts/login/?next=/polls/3/``."
+msgstr ""
+
+# a84d3cc441d247aeb20fff5b83b2e13c
+#: ../../authentication.txt:366
+msgid ""
+"If the user is logged in, execute the view normally. The view code is free "
+"to assume the user is logged in."
+msgstr ""
+
+# af80d35acbd2481ba79999712336ed4f
+#: ../../authentication.txt:369
+msgid ""
+"Note that you'll need to map the appropriate Django view to ``/accounts/"
+"login/``. To do this, add the following line to your URLconf::"
+msgstr ""
+
+# 177c22554b834f71b1494bee43f93471
+#: ../../authentication.txt:374
+msgid "Here's what ``django.contrib.auth.views.login`` does::"
+msgstr ""
+
+# 12894bf6e3b746249079c3e8638f95bc
+#: ../../authentication.txt:385
+msgid ""
+"It's your responsibility to provide the login form in a template called "
+"``registration/login.html`` by default. This template gets passed three "
+"template context variables:"
+msgstr ""
+
+# 2ca0ec9a696546e6919921b8a2530d1b
+#: ../../authentication.txt:389
+msgid ""
+"``form``: A ``FormWrapper`` object representing the login form. See the :doc:"
+"`forms documentation <forms>` for more on ``FormWrapper`` objects."
+msgstr ""
+
+# 05850177bba94abca91ba3408883f4d5
+#: ../../authentication.txt:391
+msgid ""
+"``next``: The URL to redirect to after successful login. This may contain a "
+"query string, too."
+msgstr ""
+
+# e67b9aa603864238ba478c8ed05645f3
+#: ../../authentication.txt:393
+msgid ""
+"``site_name``: The name of the current ``Site``, according to the "
+"``SITE_ID`` setting. See the :doc:`site framework docs <sites>`."
+msgstr ""
+
+# c8a09641b01745369c3fe33121da77c5
+#: ../../authentication.txt:396
+msgid ""
+"If you'd prefer not to call the template ``registration/login.html``, you "
+"can pass the ``template_name`` parameter via the extra arguments to the view "
+"in your URLconf. For example, this URLconf line would use ``myapp/login."
+"html`` instead::"
+msgstr ""
+
+# 056f0501869d4b4494bf99004707e960
+#: ../../authentication.txt:403
+msgid ""
+"Here's a sample ``registration/login.html`` template you can use as a "
+"starting point. It assumes you have a ``base.html`` template that defines a "
+"``content`` block::"
+msgstr ""
+
+# 39f921a92c69495790a42b875f672831
+#: ../../authentication.txt:428
+msgid "Limiting access to logged-in users that pass a test"
+msgstr ""
+
+# e7762913ca8a41d2be4b7a4748c35b6c
+#: ../../authentication.txt:430
+msgid ""
+"To limit access based on certain permissions or some other test, you'd do "
+"essentially the same thing as described in the previous section."
+msgstr ""
+
+# eaccab6161554ea788e00407b89ed27d
+#: ../../authentication.txt:433
+msgid ""
+"The simple way is to run your test on ``request.user`` in the view directly. "
+"For example, this view checks to make sure the user is logged in and has the "
+"permission ``polls.can_vote``::"
+msgstr ""
+
+# b0d598c04a994d31b587c9088c6b96b3
+#: ../../authentication.txt:442
+msgid ""
+"As a shortcut, you can use the convenient ``user_passes_test`` decorator::"
+msgstr ""
+
+# 58dbb8df96ab421092e5aaf8a629e235
+#: ../../authentication.txt:450
+msgid "Here's the same thing, using Python 2.4's decorator syntax::"
+msgstr ""
+
+# ba81694bfebc42c5821de4fbfe7d7d16
+#: ../../authentication.txt:458
+msgid ""
+"``user_passes_test`` takes a required argument: a callable that takes a "
+"``User`` object and returns ``True`` if the user is allowed to view the "
+"page. Note that ``user_passes_test`` does not automatically check that the "
+"``User`` is not anonymous."
+msgstr ""
+
+# 50175097342644bdb4f4038a15951e6a
+#: ../../authentication.txt:463
+msgid ""
+"``user_passes_test()`` takes an optional ``login_url`` argument, which lets "
+"you specify the URL for your login page (``/accounts/login/`` by default)."
+msgstr ""
+
+# 0977c2d6a8fc4f5ba1247e28fb8f4ae4
+#: ../../authentication.txt:466
+msgid "Example in Python 2.3 syntax::"
+msgstr ""
+
+# 973c4eb2aa854528a18261548743c4a9
+#: ../../authentication.txt:474
+msgid "Example in Python 2.4 syntax::"
+msgstr ""
+
+# fd463198968f4358b9f3a41a90ffaed4
+#: ../../authentication.txt:483
+msgid "Limiting access to generic views"
+msgstr ""
+
+# 351e09e332f842b98f6ae350979407a7
+#: ../../authentication.txt:485
+msgid ""
+"To limit access to a :doc:`generic view <generic_views>`, write a thin "
+"wrapper around the view, and point your URLconf to your wrapper instead of "
+"the generic view itself. For example::"
+msgstr ""
+
+# 19a815638fab48ff96972dd51137e676
+# be8dab6057d544c8853994bd22571e32
+#: ../../authentication.txt:496 ../../authentication.txt:605
+msgid "Permissions"
+msgstr ""
+
+# 827464036d3c46bd81cdfe88cf1f6709
+#: ../../authentication.txt:498
+msgid ""
+"Django comes with a simple permissions system. It provides a way to assign "
+"permissions to specific users and groups of users."
+msgstr ""
+
+# b40de747dfc54b2dafc85bcb62027fa2
+#: ../../authentication.txt:501
+msgid ""
+"It's used by the Django admin site, but you're welcome to use it in your own "
+"code."
+msgstr ""
+
+# d65b28a2832a4af79f5b6429e20825b0
+#: ../../authentication.txt:504
+msgid "The Django admin site uses permissions as follows:"
+msgstr ""
+
+# 0e7409950f3d47d4b2a8ca73dfe1a5e2
+#: ../../authentication.txt:506
+msgid ""
+"Access to view the \"add\" form and add an object is limited to users with "
+"the \"add\" permission for that type of object."
+msgstr ""
+
+# e6850fc4ad8d4acfa4ab70d32bf3bfb8
+#: ../../authentication.txt:508
+msgid ""
+"Access to view the change list, view the \"change\" form and change an "
+"object is limited to users with the \"change\" permission for that type of "
+"object."
+msgstr ""
+
+# 7ba3ea65621f46efa9c9d371b020679f
+#: ../../authentication.txt:511
+msgid ""
+"Access to delete an object is limited to users with the \"delete\" "
+"permission for that type of object."
+msgstr ""
+
+# 5e7b94222e5d4d30bc67c75cf3fae9e8
+#: ../../authentication.txt:514
+msgid ""
+"Permissions are set globally per type of object, not per specific object "
+"instance. For example, it's possible to say \"Mary may change news stories,"
+"\" but it's not currently possible to say \"Mary may change news stories, "
+"but only the ones she created herself\" or \"Mary may only change news "
+"stories that have a certain status, publication date or ID.\" The latter "
+"functionality is something Django developers are currently discussing."
+msgstr ""
+
+# 69d1bea91cec4b489361629983731bc7
+#: ../../authentication.txt:522
+msgid "Default permissions"
+msgstr ""
+
+# 69ed6ef59d6840cc94b62fb1894c57d6
+#: ../../authentication.txt:524
+msgid ""
+"Three basic permissions -- add, create and delete -- are automatically "
+"created for each Django model that has a ``class Admin`` set. Behind the "
+"scenes, these permissions are added to the ``auth_permission`` database "
+"table when you run ``manage.py syncdb``."
+msgstr ""
+
+# 1274c09623434595a30096672da48284
+#: ../../authentication.txt:529
+msgid ""
+"Note that if your model doesn't have ``class Admin`` set when you run "
+"``syncdb``, the permissions won't be created. If you initialize your "
+"database and add ``class Admin`` to models after the fact, you'll need to "
+"run ``manage.py syncdb`` again. It will create any missing permissions for "
+"all of your installed apps."
+msgstr ""
+
+# 8088d8f7bc064f2a8d2405f372491012
+#: ../../authentication.txt:536
+msgid "Custom permissions"
+msgstr ""
+
+# 8d1c1a4821a4470292d72633dd6d5b9c
+#: ../../authentication.txt:538
+msgid ""
+"To create custom permissions for a given model object, use the "
+"``permissions`` :doc:`model Meta attribute <model-api>`."
+msgstr ""
+
+# 7f130cace7af4fa18af5881a30830429
+#: ../../authentication.txt:541
+msgid "This example model creates three custom permissions::"
+msgstr ""
+
+# 734b326d587b4c9f8468311607e119e4
+#: ../../authentication.txt:552
+msgid ""
+"The only thing this does is create those extra permissions when you run "
+"``syncdb``."
+msgstr ""
+
+# 50d1df0a6ad442c2b9574543fbd03621
+#: ../../authentication.txt:558
+msgid ""
+"Just like users, permissions are implemented in a Django model that lives in "
+"`django/contrib/auth/models.py`_."
+msgstr ""
+
+# 7f17732d17e3457b9483899cb277ce7a
+#: ../../authentication.txt:566
+msgid "``Permission`` objects have the following fields:"
+msgstr ""
+
+# a82453521c654326a4f043a50ad23f71
+#: ../../authentication.txt:568
+msgid "``name`` -- Required. 50 characters or fewer. Example: ``'Can vote'``."
+msgstr ""
+
+# 198031646aca4371bcdceebad91b7936
+#: ../../authentication.txt:569
+msgid ""
+"``content_type`` -- Required. A reference to the ``django_content_type`` "
+"database table, which contains a record for each installed Django model."
+msgstr ""
+
+# a17291ef04ff44518dd4b485e2e0002b
+#: ../../authentication.txt:571
+msgid ""
+"``codename`` -- Required. 100 characters or fewer. Example: ``'can_vote'``."
+msgstr ""
+
+# cce724031fa945ff92c4cdad5c835bdf
+#: ../../authentication.txt:576
+msgid ""
+"``Permission`` objects have the standard data-access methods like any other :"
+"doc:`Django model <model-api>`."
+msgstr ""
+
+# 349619ccad7a4228bb5c0cf418825f29
+#: ../../authentication.txt:580
+msgid "Authentication data in templates"
+msgstr ""
+
+# 4a77ca0798324dff8475172332483180
+#: ../../authentication.txt:582
+msgid ""
+"The currently logged-in user and his/her permissions are made available in "
+"the :doc:`template context <templates_python>` when you use "
+"``RequestContext``."
+msgstr ""
+
+# 52f389693343403280af752ecca0b95e
+#: ../../authentication.txt:587
+msgid ""
+"Technically, these variables are only made available in the template context "
+"if you use ``RequestContext`` *and* your ``TEMPLATE_CONTEXT_PROCESSORS`` "
+"setting contains ``\"django.core.context_processors.auth\"``, which is "
+"default. For more, see the :doc:`RequestContext docs <templates_python>`."
+msgstr ""
+
+# d7f76d095be64698b0f3ca73348957cc
+#: ../../authentication.txt:595
+msgid ""
+"The currently logged-in user, either a ``User`` instance or "
+"an``AnonymousUser`` instance, is stored in the template variable ``{{ user }}"
+"``::"
+msgstr ""
+
+# b4d7131742eb4b21b44f5ade3e560a7e
+#: ../../authentication.txt:607
+msgid ""
+"The currently logged-in user's permissions are stored in the template "
+"variable ``{{ perms }}``. This is an instance of ``django.core."
+"context_processors.PermWrapper``, which is a template-friendly proxy of "
+"permissions."
+msgstr ""
+
+# 2e3d615dd39140e4874345d1eb98ae34
+#: ../../authentication.txt:611
+msgid ""
+"In the ``{{ perms }}`` object, single-attribute lookup is a proxy to ``User."
+"has_module_perms``. This example would display ``True`` if the logged-in "
+"user had any permissions in the ``foo`` app::"
+msgstr ""
+
+# 1adc933846d4463181b618e12732d9d8
+#: ../../authentication.txt:617
+msgid ""
+"Two-level-attribute lookup is a proxy to ``User.has_perm``. This example "
+"would display ``True`` if the logged-in user had the permission ``foo."
+"can_vote``::"
+msgstr ""
+
+# 4c72f6ab97664d01932a3d15a80d1789
+#: ../../authentication.txt:622
+msgid "Thus, you can check permissions in template ``{% if %}`` statements::"
+msgstr ""
+
+# 8253964a2470463591c94984eb84254a
+#: ../../authentication.txt:637
+msgid "Groups"
+msgstr ""
+
+# 2d9146b310f04409b892219aa878a430
+#: ../../authentication.txt:639
+msgid ""
+"Groups are a generic way of categorizing users so you can apply permissions, "
+"or some other label, to those users. A user can belong to any number of "
+"groups."
+msgstr ""
+
+# e28bb8f660c0493bb836efe2b957c17b
+#: ../../authentication.txt:642
+msgid ""
+"A user in a group automatically has the permissions granted to that group. "
+"For example, if the group ``Site editors`` has the permission "
+"``can_edit_home_page``, any user in that group will have that permission."
+msgstr ""
+
+# 3f77d2e26aea4a4580945620895b1a7e
+#: ../../authentication.txt:646
+msgid ""
+"Beyond permissions, groups are a convenient way to categorize users to give "
+"them some label, or extended functionality. For example, you could create a "
+"group ``'Special users'``, and you could write code that could, say, give "
+"them access to a members-only portion of your site, or send them members-"
+"only e-mail messages."
+msgstr ""
+
+# 047d9d41de94498f818d4432524b880a
+#: ../../authentication.txt:653
+msgid "Messages"
+msgstr ""
+
+# 9b2f1f8aacc1437fbd5a197fd00c6782
+#: ../../authentication.txt:655
+msgid ""
+"The message system is a lightweight way to queue messages for given users."
+msgstr ""
+
+# 4dbd6aade93847bda9b91a628f702281
+#: ../../authentication.txt:657
+msgid ""
+"A message is associated with a ``User``. There's no concept of expiration or "
+"timestamps."
+msgstr ""
+
+# e564aa5d722d462f97bb3567ead6e136
+#: ../../authentication.txt:660
+msgid ""
+"Messages are used by the Django admin after successful actions. For example, "
+"``\"The poll Foo was created successfully.\"`` is a message."
+msgstr ""
+
+# 810ac9dcef124a3ba3499fd09143ccd9
+#: ../../authentication.txt:663
+msgid "The API is simple::"
+msgstr ""
+
+# fd9b27dafe364da8a25ed55e17f5bf92
+#: ../../authentication.txt:671
+msgid ""
+"In this example view, the system saves a message for the user after creating "
+"a playlist::"
+msgstr ""
+
+# 2eda2cc7dd5d44829b9e8716a8e62988
+#: ../../authentication.txt:681
+msgid ""
+"When you use ``RequestContext``, the currently logged-in user and his/her "
+"messages are made available in the :doc:`template context "
+"<templates_python>` as the template variable ``{{ messages }}``. Here's an "
+"example of template code that displays messages::"
+msgstr ""
+
+# 2e46e1eb6bf84c52a94715acea8857da
+#: ../../authentication.txt:693
+msgid ""
+"Note that ``RequestContext`` calls ``get_and_delete_messages`` behind the "
+"scenes, so any messages will be deleted even if you don't display them."
+msgstr ""
+
+# 5593255ef5694df9ba7834592e144e20
+#: ../../authentication.txt:696
+msgid ""
+"Finally, note that this messages framework only works with users in the user "
+"database. To send messages to anonymous users, use the :doc:`session "
+"framework <sessions>`."
+msgstr ""
+
+# 12ad9ed461c946fba4b998cc4dbda38d
+#: ../../authentication.txt:700
+msgid "Other authentication sources"
+msgstr ""
+
+# 96b36406d8ea4d4fb7b0f532baba48f5
+#: ../../authentication.txt:702
+msgid ""
+"The authentication that comes with Django is good enough for most common "
+"cases, but you may have the need to hook into another authentication source "
+"-- that is, another source of usernames and passwords or authentication "
+"methods."
+msgstr ""
+
+# b4004419ce874639832e2e087757fd6b
+#: ../../authentication.txt:706
+msgid ""
+"For example, your company may already have an LDAP setup that stores a "
+"username and password for every employee. It'd be a hassle for both the "
+"network administrator and the users themselves if users had separate "
+"accounts in LDAP and the Django-based applications."
+msgstr ""
+
+# 778cc4b4a19f4b8a906c546477b5c5bc
+#: ../../authentication.txt:711
+msgid ""
+"So, to handle situations like this, the Django authentication system lets "
+"you plug in another authentication sources. You can override Django's "
+"default database-based scheme, or you can use the default system in tandem "
+"with other systems."
+msgstr ""
+
+# fd6357a394cf451bb0da66b032474c87
+#: ../../authentication.txt:717
+msgid "Specifying authentication backends"
+msgstr ""
+
+# 47dc081a74c34576a94293a67bde40db
+#: ../../authentication.txt:719
+msgid ""
+"Behind the scenes, Django maintains a list of \"authentication backends\" "
+"that it checks for authentication. When somebody calls ``django.contrib.auth."
+"authenticate()`` -- as described in \"How to log a user in\" above -- Django "
+"tries authenticating across all of its authentication backends. If the first "
+"authentication method fails, Django tries the second one, and so on, until "
+"all backends have been attempted."
+msgstr ""
+
+# 1404140561b84cd8a25d3930339be42a
+#: ../../authentication.txt:726
+msgid ""
+"The list of authentication backends to use is specified in the "
+"``AUTHENTICATION_BACKENDS`` setting. This should be a tuple of Python path "
+"names that point to Python classes that know how to authenticate. These "
+"classes can be anywhere on your Python path."
+msgstr ""
+
+# 6f3410dd9224445e90d5ff0bfc4eceaf
+#: ../../authentication.txt:731
+msgid "By default, ``AUTHENTICATION_BACKENDS`` is set to::"
+msgstr ""
+
+# 9ecee3fbb70a4377a2b946b1d5080196
+#: ../../authentication.txt:735
+msgid ""
+"That's the basic authentication scheme that checks the Django users database."
+msgstr ""
+
+# 26c479c411e146d49d54527f16ada07d
+#: ../../authentication.txt:737
+msgid ""
+"The order of ``AUTHENTICATION_BACKENDS`` matters, so if the same username "
+"and password is valid in multiple backends, Django will stop processing at "
+"the first positive match."
+msgstr ""
+
+# bc87b82a9caa4d14a7fac296418c8427
+#: ../../authentication.txt:742
+msgid "Writing an authentication backend"
+msgstr ""
+
+# c53ae1b8c2b94a9e82f52fe1b50d51db
+#: ../../authentication.txt:744
+msgid ""
+"An authentication backend is a class that implements two methods: ``get_user"
+"(id)`` and ``authenticate(**credentials)``."
+msgstr ""
+
+# 4f2e2855e619485f87200045c04eaf4c
+#: ../../authentication.txt:747
+msgid ""
+"The ``get_user`` method takes an ``id`` -- which could be a username, "
+"database ID or whatever -- and returns a ``User`` object."
+msgstr ""
+
+# ae5eb4a099d7439ab4de8157fdcfd585
+#: ../../authentication.txt:750
+msgid ""
+"The  ``authenticate`` method takes credentials as keyword arguments. Most of "
+"the time, it'll just look like this::"
+msgstr ""
+
+# a51f0f87f89c4a948e43c05294baa17d
+#: ../../authentication.txt:757
+msgid "But it could also authenticate a token, like so::"
+msgstr ""
+
+# e2cb177b43a948d584dca56b420fb27c
+#: ../../authentication.txt:763
+msgid ""
+"Either way, ``authenticate`` should check the credentials it gets, and it "
+"should return a ``User`` object that matches those credentials, if the "
+"credentials are valid. If they're not valid, it should return ``None``."
+msgstr ""
+
+# b637a634e61b4cf99a20c4a1b2086f13
+#: ../../authentication.txt:767
+msgid ""
+"The Django admin system is tightly coupled to the Django ``User`` object "
+"described at the beginning of this document. For now, the best way to deal "
+"with this is to create a Django ``User`` object for each user that exists "
+"for your backend (e.g., in your LDAP directory, your external SQL database, "
+"etc.) You can either write a script to do this in advance, or your "
+"``authenticate`` method can do it the first time a user logs in."
+msgstr ""
+
+# 6e6d8a2b26ec44ec9ffcef543d98690c
+#: ../../authentication.txt:774
+msgid ""
+"Here's an example backend that authenticates against a username and password "
+"variable defined in your ``settings.py`` file and creates a Django ``User`` "
+"object the first time a user authenticates::"
+msgstr ""

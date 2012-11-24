@@ -1,0 +1,164 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# abc292a5fd304364b973afb79666454d
+#: ../../outputting_csv.txt:3
+msgid "Outputting CSV with Django"
+msgstr ""
+
+# 4adf41cac9114d0085a483ed3d2f90dd
+#: ../../outputting_csv.txt:5
+msgid ""
+"This document explains how to output CSV (Comma Separated Values) "
+"dynamically using Django views."
+msgstr ""
+
+# 631617e16b714efaa9cdcba30a12728d
+#: ../../outputting_csv.txt:8
+msgid ""
+"To do this, you can either use the `Python CSV library`_ or the Django "
+"template system."
+msgstr ""
+
+# 3d74db2208cc49df93816d6c463c66b8
+#: ../../outputting_csv.txt:14
+msgid "Using the Python CSV library"
+msgstr ""
+
+# 51e920082eb04c2ca888899dca4bc59c
+#: ../../outputting_csv.txt:16
+msgid ""
+"Python comes with a CSV library, ``csv``. The key to using it with Django is "
+"that the ``csv`` module's CSV-creation capability acts on file-like objects, "
+"and Django's ``HttpResponse`` objects are file-like objects."
+msgstr ""
+
+# f8bb988f732345cc9d762e16bd148841
+#: ../../outputting_csv.txt:22
+msgid ""
+"For more information on ``HttpResponse`` objects, see :doc:`Request and "
+"response objects <request_response>`."
+msgstr ""
+
+# 42ab6b3e4b5e4ee88d5d114b0d08e0ae
+#: ../../outputting_csv.txt:25
+msgid "For more information on the CSV library, see the `CSV library docs`_."
+msgstr ""
+
+# b1152722d7fc4188a13f74f513c820d0
+#: ../../outputting_csv.txt:29
+msgid "Here's an example::"
+msgstr ""
+
+# b849b0b4d37e42638c54346d968410dc
+#: ../../outputting_csv.txt:45
+msgid ""
+"The code and comments should be self-explanatory, but a few things deserve a "
+"mention:"
+msgstr ""
+
+# 0ba5c8913c5f49988ef276bb4485dcc5
+#: ../../outputting_csv.txt:48
+msgid ""
+"The response gets a special mimetype, ``text/csv``. This tells browsers that "
+"the document is a CSV file, rather than an HTML file. If you leave this off, "
+"browsers will probably interpret the output as HTML, which will result in "
+"ugly, scary gobbledygook in the browser window."
+msgstr ""
+
+# 9fd3361e333e4a0b9911f46484fc9abc
+#: ../../outputting_csv.txt:53
+msgid ""
+"The response gets an additional ``Content-Disposition`` header, which "
+"contains the name of the CSV file. This filename is arbitrary; call it "
+"whatever you want. It'll be used by browsers in the \"Save as...\" dialogue, "
+"etc."
+msgstr ""
+
+# c7c01b117cc0446b9ffe37edc224c368
+#: ../../outputting_csv.txt:58
+msgid ""
+"Hooking into the CSV-generation API is easy: Just pass ``response`` as the "
+"first argument to ``csv.writer``. The ``csv.writer`` function expects a file-"
+"like object, and ``HttpResponse`` objects fit the bill."
+msgstr ""
+
+# 55177eae375c4f2ebf81ca34840be116
+#: ../../outputting_csv.txt:62
+msgid ""
+"For each row in your CSV file, call ``writer.writerow``, passing it an "
+"iterable object such as a list or tuple."
+msgstr ""
+
+# 96429fc9673a4e41a8018c833153e19e
+#: ../../outputting_csv.txt:65
+msgid ""
+"The CSV module takes care of quoting for you, so you don't have to worry "
+"about escaping strings with quotes or commas in them. Just pass ``writerow()"
+"`` your raw strings, and it'll do the right thing."
+msgstr ""
+
+# 8000d2ebe374444f89056cf9208fcdcd
+#: ../../outputting_csv.txt:70
+msgid "Using the template system"
+msgstr ""
+
+# d88208d208cb4e41aabee02347faf9e9
+#: ../../outputting_csv.txt:72
+msgid ""
+"Alternatively, you can use the :doc:`Django template system <templates>` to "
+"generate CSV. This is lower-level than using the convenient CSV, but the "
+"solution is presented here for completeness."
+msgstr ""
+
+# dd012a26ccc9410986aafa81385febc4
+#: ../../outputting_csv.txt:76
+msgid ""
+"The idea here is to pass a list of items to your template, and have the "
+"template output the commas in a ``{% for %}`` loop."
+msgstr ""
+
+# dd40cd9060424e68bf158b816c72f56c
+#: ../../outputting_csv.txt:79
+msgid "Here's an example, which generates the same CSV file as above::"
+msgstr ""
+
+# 7024ed0dd028454ba1b8e57f30c9b068
+#: ../../outputting_csv.txt:103
+msgid ""
+"The only difference between this example and the previous example is that "
+"this one uses template loading instead of the CSV module. The rest of the "
+"code -- such as the ``mimetype='text/csv'`` -- is the same."
+msgstr ""
+
+# 616d1bd30bfe4b80b2abc8b4b56ebb24
+#: ../../outputting_csv.txt:107
+msgid ""
+"Then, create the template ``my_template_name.txt``, with this template code::"
+msgstr ""
+
+# 35b968544fb44b2985ce61484982a100
+#: ../../outputting_csv.txt:112
+msgid ""
+"This template is quite basic. It just iterates over the given data and "
+"displays a line of CSV for each row. It uses the :doc:`addslashes template "
+"filter <templates>` to ensure there aren't any problems with quotes. If you "
+"can be certain your data doesn't have single or double quotes in it, you can "
+"remove the ``addslashes`` filters."
+msgstr ""

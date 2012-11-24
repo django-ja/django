@@ -1,0 +1,280 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 2b45658dde8e46f886e44c8e36bd9c84
+#: ../../release_notes_0.95.txt:3
+msgid "Django version 0.95.2 release notes"
+msgstr ""
+
+# c61c07c21d3040bfad4a31a01ba28694
+#: ../../release_notes_0.95.txt:5
+msgid "Welcome to the Django 0.95.2 release."
+msgstr ""
+
+# e82d1b6ee07f461ab6a0a20e69a5ae06
+#: ../../release_notes_0.95.txt:7
+msgid ""
+"This represents a significant advance in Django development since the 0.91 "
+"release in January 2006. The details of every change in this release would "
+"be too extensive to list in full, but a summary is presented below."
+msgstr ""
+
+# c196ec80d231401a8a557807d0d6595b
+#: ../../release_notes_0.95.txt:12
+msgid "Suitability and API stability"
+msgstr ""
+
+# dd5201b48fd242878ecd7f3b0ddd3fe7
+#: ../../release_notes_0.95.txt:14
+msgid ""
+"This release is intended to provide a stable reference point for developers "
+"wanting to work on production-level applications that use Django."
+msgstr ""
+
+# c4a0fbcede05408abac7fff6d09e9c4d
+#: ../../release_notes_0.95.txt:17
+msgid ""
+"However, it's not the 1.0 release, and we'll be introducing further changes "
+"before 1.0. For a clear look at which areas of the framework will change "
+"(and which ones will *not* change) before 1.0, see the api-stability.txt "
+"file, which lives in the docs/ directory of the distribution."
+msgstr ""
+
+# 385c27ca5fd44c06804da79ef76400e0
+#: ../../release_notes_0.95.txt:22
+msgid ""
+"You may have a need to use some of the features that are marked as \"subject "
+"to API change\" in that document, but that's OK with us as long as it's OK "
+"with you, and as long as you understand APIs may change in the future."
+msgstr ""
+
+# f20949d2ff0c4f7fbe8b5f97d07556fc
+#: ../../release_notes_0.95.txt:26
+msgid ""
+"Fortunately, most of Django's core APIs won't be changing before version "
+"1.0. There likely won't be as big of a change between 0.95 and 1.0 versions "
+"as there was between 0.91 and 0.95."
+msgstr ""
+
+# 62e2d3e3522c492095a92ee61198bd9c
+#: ../../release_notes_0.95.txt:31
+msgid "Changes and new features"
+msgstr ""
+
+# 3ba27f0ae4d04d27831be56acbf62138
+#: ../../release_notes_0.95.txt:33
+msgid ""
+"The major changes in this release (for developers currently using the 0.91 "
+"release) are a result of merging the 'magic-removal' branch of development. "
+"This branch removed a number of constraints in the way Django code had to be "
+"written that were a consequence of decisions made in the early days of "
+"Django, prior to its open-source release. It's now possible to write more "
+"natural, Pythonic code that works as expected, and there's less \"black magic"
+"\" happening behind the scenes."
+msgstr ""
+
+# 74c98c6c763f4db9ac44f06590518939
+#: ../../release_notes_0.95.txt:41
+msgid ""
+"Aside from that, another main theme of this release is a dramatic increase "
+"in usability. We've made countless improvements in error messages, "
+"documentation, etc., to improve developers' quality of life."
+msgstr ""
+
+# b2979b57aed141a5b03944647f29c2c6
+#: ../../release_notes_0.95.txt:45
+msgid "The new features and changes introduced in 0.95 include:"
+msgstr ""
+
+# bf078f8a49504af5b5badacbca88a950
+#: ../../release_notes_0.95.txt:47
+msgid ""
+"Django now uses a more consistent and natural filtering interface for "
+"retrieving objects from the database."
+msgstr ""
+
+# c54f44579bb44c338949ff9003ed6f55
+#: ../../release_notes_0.95.txt:50
+msgid ""
+"User-defined models, functions and constants now appear in the module "
+"namespace they were defined in. (Previously everything was magically "
+"transferred to the django.models.* namespace.)"
+msgstr ""
+
+# 8da5b09a48c943d7b60424f39ac13355
+#: ../../release_notes_0.95.txt:54
+msgid ""
+"Some optional applications, such as the FlatPage, Sites and Redirects apps, "
+"have been decoupled and moved into django.contrib. If you don't want to use "
+"these applications, you no longer have to install their database tables."
+msgstr ""
+
+# e84a2f024039407aa7056de49b323eec
+#: ../../release_notes_0.95.txt:59
+msgid "Django now has support for managing database transactions."
+msgstr ""
+
+# f50b9528353c4e57b3dded2e85e51b81
+#: ../../release_notes_0.95.txt:61
+msgid ""
+"We've added the ability to write custom authentication and authorization "
+"backends for authenticating users against alternate systems, such as LDAP."
+msgstr ""
+
+# f7bf9c81bd5f485ea36f5fd3746d9a1d
+#: ../../release_notes_0.95.txt:65
+msgid ""
+"We've made it easier to add custom table-level functions to models, through "
+"a new \"Manager\" API."
+msgstr ""
+
+# fdb90c4c5cd541dabb41a293491202b2
+#: ../../release_notes_0.95.txt:68
+msgid "It's now possible to use Django without a database."
+msgstr ""
+
+# 03fba4e9e3e3460983aeb33662a0236f
+#: ../../release_notes_0.95.txt:70
+msgid ""
+"It's now more explicit and natural to override save() and delete() methods "
+"on models, rather than needing to hook into the pre_save() and post_save() "
+"method hooks."
+msgstr ""
+
+# 6f75cac5d79845c88e42b8885edc0723
+#: ../../release_notes_0.95.txt:74
+msgid ""
+"Individual pieces of the framework now can be configured without requiring "
+"the setting of an environment variable. This permits use of, for example, "
+"the Django templating system inside other applications."
+msgstr ""
+
+# 92e29e3392384cd98cd557f647ba21eb
+#: ../../release_notes_0.95.txt:78
+msgid ""
+"More and more parts of the framework have been internationalized, as we've "
+"expanded internationalization (i18n) support. The Django codebase, including "
+"code and templates, has now been translated, at least in part, into 31 "
+"languages. From Arabic to Chinese to Hungarian to Welsh, it is now possible "
+"to use Django's admin site in your native language."
+msgstr ""
+
+# b053a5ecfb1a448d89d2104e780b516a
+#: ../../release_notes_0.95.txt:84
+msgid ""
+"The number of changes required to port from 0.91-compatible code to the 0.95 "
+"code base are significant in some cases. However, they are, for the most "
+"part, reasonably routine and only need to be done once. A list of the "
+"necessary changes is described in the 'Removing The Magic`_ wiki page. There "
+"is also an easy checklist_ for reference when undertaking the porting "
+"operation."
+msgstr ""
+
+# b3986a30f0b24f7a9ac4ccbcd8b8cd4c
+#: ../../release_notes_0.95.txt:94
+msgid "Changes since the 0.95 release"
+msgstr ""
+
+# 8b7e6a7f30154b3ea5ea0168857a2972
+#: ../../release_notes_0.95.txt:96
+msgid ""
+"This release contains fixes for several bugs discovered after the initial "
+"release of Django 0.95; these include:"
+msgstr ""
+
+# d7f71352e363425aba2cbc2a8fa012e3
+#: ../../release_notes_0.95.txt:99
+msgid ""
+"A patch for a small security vulnerability in the script Django's "
+"internationalization system uses to compile translation files."
+msgstr ""
+
+# f26bad44025b473498862680b710ada2
+#: ../../release_notes_0.95.txt:103
+msgid ""
+"A fix for a bug in Django's authentication middleware which could cause "
+"apparent \"caching\" of a logged-in user."
+msgstr ""
+
+# b4f93e2dc72f4e1ba5b69c16a29bad3f
+#: ../../release_notes_0.95.txt:106
+msgid ""
+"A patch which disables debugging mode in the flup FastCGI package Django "
+"uses to launch its FastCGI server, which prevents tracebacks from bubbling "
+"up during production use."
+msgstr ""
+
+# 9d1baf2ea9de4e2f970632647675dc29
+#: ../../release_notes_0.95.txt:110
+msgid ""
+"A security fix to the i18n framework which could allow an attacker to send "
+"extremely large strings in the Accept-Language header and cause a denial of "
+"service by filling available memory."
+msgstr ""
+
+# f6d8455b91f243f7ad39a28e60e0fa48
+#: ../../release_notes_0.95.txt:114
+msgid ""
+"Because these problems weren't discovered and fixed until after the 0.95 "
+"release, it's recommended that you use this release rather than the original "
+"0.95."
+msgstr ""
+
+# 1d31348c9ac64df2ab1bee5285fb696c
+#: ../../release_notes_0.95.txt:119
+msgid "Problem reports and getting help"
+msgstr ""
+
+# a799781f3c014895a322340d7a501fdb
+#: ../../release_notes_0.95.txt:121
+msgid ""
+"Need help resolving a problem with Django? The documentation in the "
+"distribution is also available :doc:`online <index>` at the `Django "
+"website`_. The :doc:`FAQ <faq>` document is especially recommended, as it "
+"contains a number of issues that come up time and again."
+msgstr ""
+
+# 0aaa39092ec84f449003824dd6ac0086
+#: ../../release_notes_0.95.txt:126
+msgid ""
+"For more personalized help, the `django-users` mailing list is a very active "
+"list, with more than 2,000 subscribers who can help you solve any sort of "
+"Django problem. We recommend you search the archives first, though, because "
+"many common questions appear with some regularity, and any particular "
+"problem may already have been answered."
+msgstr ""
+
+# 18ecd2a17e7049b985b90e636ce9d456
+#: ../../release_notes_0.95.txt:132
+msgid ""
+"Finally, for those who prefer the more immediate feedback offered by IRC, "
+"there's a #django channel or irc.freenode.net that is regularly populated by "
+"Django users and developers from around the world. Friendly people are "
+"usually available at any hour of the day -- to help, or just to chat."
+msgstr ""
+
+# ac1c4ceb3aa64f21999a83e1f1629741
+#: ../../release_notes_0.95.txt:140
+msgid "Thanks for using Django!"
+msgstr ""
+
+# 0304e64134254763b1cf39eb40da1dc6
+#: ../../release_notes_0.95.txt:142
+msgid "The Django Team January 2007"
+msgstr ""

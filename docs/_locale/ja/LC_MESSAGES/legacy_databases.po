@@ -1,0 +1,137 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 5c036f01063c455eb489b08565480b94
+#: ../../legacy_databases.txt:3
+msgid "Integrating with a legacy database"
+msgstr ""
+
+# 8e9d64e86d7640048bbbb2b0bea1243d
+#: ../../legacy_databases.txt:5
+msgid ""
+"While Django is best suited for developing new applications, it's quite "
+"possible to integrate it into legacy databases. Django includes a couple of "
+"utilities to automate as much of this process as possible."
+msgstr ""
+
+# 3c05c5984f2e40ae8869d1f1f2ccc1f6
+#: ../../legacy_databases.txt:9
+msgid ""
+"This document assumes you know the Django basics, as covered in the :doc:"
+"`official tutorial <tutorial01>`."
+msgstr ""
+
+# a5f502d24dda486f84be5ef171cedc1f
+#: ../../legacy_databases.txt:13
+msgid "Give Django your database parameters"
+msgstr ""
+
+# 76f84252f2084815bc797d2f30b46c8a
+#: ../../legacy_databases.txt:15
+msgid ""
+"You'll need to tell Django what your database connection parameters are, and "
+"what the name of the database is. Do that by editing these settings in your :"
+"doc:`settings file <settings>`:"
+msgstr ""
+
+# 47ad5296be8348d5a14de8fda972da80
+#: ../../legacy_databases.txt:19
+msgid "DATABASE_ENGINE"
+msgstr ""
+
+# 30d5227aedbe4caa9a53e558723733e6
+#: ../../legacy_databases.txt:20
+msgid "DATABASE_USER"
+msgstr ""
+
+# 2aa6c132e6e1410aa264245388b127de
+#: ../../legacy_databases.txt:21
+msgid "DATABASE_PASSWORD"
+msgstr ""
+
+# b03f5334b88e46ffab80c77b5490550e
+#: ../../legacy_databases.txt:22
+msgid "DATABASE_NAME"
+msgstr ""
+
+# ef796fec0e6a4a3e8445efdf7e7b7f1e
+#: ../../legacy_databases.txt:23
+msgid "DATABASE_HOST"
+msgstr ""
+
+# 315d2959be9846fe88ac6546778c82ee
+#: ../../legacy_databases.txt:24
+msgid "DATABASE_PORT"
+msgstr ""
+
+# 6043edb515b9413ea7403988e1224633
+#: ../../legacy_databases.txt:27
+msgid "Auto-generate the models"
+msgstr ""
+
+# 29eb7b2f8d9d48d3971aa6cf869a0cdc
+#: ../../legacy_databases.txt:29
+msgid ""
+"Django comes with a utility that can create models by introspecting an "
+"existing database. You can view the output by running this command::"
+msgstr ""
+
+# 3f7931b5a0ab47bcbffcf30a9290ba2a
+#: ../../legacy_databases.txt:34
+msgid "Save this as a file by using standard Unix output redirection::"
+msgstr ""
+
+# 5ea22896c1154405b0cf8ecd69c08b5a
+#: ../../legacy_databases.txt:38
+msgid ""
+"This feature is meant as a shortcut, not as definitive model generation. See "
+"the :doc:`django-admin.py documentation <django-admin>` for more information."
+msgstr ""
+
+# 0c1f170533d44eaeafad034f73408428
+#: ../../legacy_databases.txt:41
+msgid ""
+"Once you've cleaned up your models, name the file ``models.py`` and put it "
+"in the Python package that holds your app. Then add the app to your "
+"``INSTALLED_APPS`` setting."
+msgstr ""
+
+# 3cc1e4cce6b04d6b8d5b31753930da63
+#: ../../legacy_databases.txt:46
+msgid "Install the core Django tables"
+msgstr ""
+
+# 955ab12835cb4e8c9d6f540c6c18074a
+#: ../../legacy_databases.txt:48
+msgid ""
+"Next, run the ``manage.py syncdb`` command to install any extra needed "
+"database records such as admin permissions and content types::"
+msgstr ""
+
+# 6b332a94e3cf4dc2841b2fffc25fe9ec
+#: ../../legacy_databases.txt:54
+msgid "See whether it worked"
+msgstr ""
+
+# c198d4fe09ec47ee8324fa83fc5158aa
+#: ../../legacy_databases.txt:56
+msgid ""
+"That's it. Try accessing your data via the Django database API, and try "
+"editing objects via Django's admin site."
+msgstr ""

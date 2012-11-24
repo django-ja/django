@@ -1,0 +1,153 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# d50354e7f8724b578c7a77a62d32272a
+#: ../../redirects.txt:3
+msgid "The redirects app"
+msgstr ""
+
+# 597b06274e064d6288b956d135aa90ef
+#: ../../redirects.txt:5
+msgid ""
+"Django comes with an optional redirects application. It lets you store "
+"simple redirects in a database and handles the redirecting for you."
+msgstr ""
+
+# 959562b4934b4310833b5779e8c4324c
+#: ../../redirects.txt:9
+msgid "Installation"
+msgstr ""
+
+# bee5ac2981fe468da48ce06a73695ff3
+#: ../../redirects.txt:11
+msgid "To install the redirects app, follow these steps:"
+msgstr ""
+
+# 8b9deb0a41d04798a29b61d2dd375f2e
+#: ../../redirects.txt:13
+msgid ""
+"Add ``'django.contrib.redirects'`` to your :doc:`INSTALLED_APPS <settings>` "
+"setting."
+msgstr ""
+
+# 1e907a810e2340bc9427fe3d5e4792c2
+#: ../../redirects.txt:14
+msgid ""
+"Add ``'django.contrib.redirects.middleware.RedirectFallbackMiddleware'`` to "
+"your :doc:`MIDDLEWARE_CLASSES <settings>` setting."
+msgstr ""
+
+# a21dd29f53b048b4ac1788f101153126
+#: ../../redirects.txt:16
+msgid "Run the command ``manage.py syncdb``."
+msgstr ""
+
+# 7abf89b52b494f77a51342271e78cf84
+#: ../../redirects.txt:19
+msgid "How it works"
+msgstr ""
+
+# 0d6d25cd58f74154b759b62474a8bcc2
+#: ../../redirects.txt:21
+msgid ""
+"``manage.py syncdb`` creates a ``django_redirect`` table in your database. "
+"This is a simple lookup table with ``site_id``, ``old_path`` and "
+"``new_path`` fields."
+msgstr ""
+
+# 87658e095f1c4990a0f23f83854ebb21
+#: ../../redirects.txt:24
+msgid ""
+"The ``RedirectFallbackMiddleware`` does all of the work. Each time any "
+"Django application raises a 404 error, this middleware checks the redirects "
+"database for the requested URL as a last resort. Specifically, it checks for "
+"a redirect with the given ``old_path`` with a site ID that corresponds to "
+"the :doc:`SITE_ID <settings>` setting."
+msgstr ""
+
+# c0641a4b83104971bb261521fd940c97
+#: ../../redirects.txt:30
+msgid ""
+"If it finds a match, and ``new_path`` is not empty, it redirects to "
+"``new_path``."
+msgstr ""
+
+# 6e080dffe0d3474a8d442a191930731b
+#: ../../redirects.txt:32
+msgid ""
+"If it finds a match, and ``new_path`` is empty, it sends a 410 (\"Gone\") "
+"HTTP header and empty (content-less) response."
+msgstr ""
+
+# a88fe441a9934bc4ad31bd04cac4defd
+#: ../../redirects.txt:34
+msgid ""
+"If it doesn't find a match, the request continues to be processed as usual."
+msgstr ""
+
+# 07b77ec7f5f54d039696ea1a165915cb
+#: ../../redirects.txt:37
+msgid ""
+"The middleware only gets activated for 404s -- not for 500s or responses of "
+"any other status code."
+msgstr ""
+
+# 7a501f0d6cd4469d9a1dad629d237f56
+#: ../../redirects.txt:40
+msgid ""
+"Note that the order of ``MIDDLEWARE_CLASSES`` matters. Generally, you can "
+"put ``RedirectFallbackMiddleware`` at the end of the list, because it's a "
+"last resort."
+msgstr ""
+
+# 35b84ba59dfe4ee9bf043c184b06ebbd
+#: ../../redirects.txt:44
+msgid "For more on middleware, read the :doc:`middleware docs <middleware>`."
+msgstr ""
+
+# 1dc254a3d4c64f71993cb4f5ad161db3
+#: ../../redirects.txt:47
+msgid "How to add, change and delete redirects"
+msgstr ""
+
+# f91dfe1d53814999bb92da289ac199c2
+#: ../../redirects.txt:50
+msgid "Via the admin interface"
+msgstr ""
+
+# 3b33be1affc34d6885611f787c895d38
+#: ../../redirects.txt:52
+msgid ""
+"If you've activated the automatic Django admin interface, you should see a "
+"\"Redirects\" section on the admin index page. Edit redirects as you edit "
+"any other object in the system."
+msgstr ""
+
+# f89562c04d2d4ed1925250f7dde06093
+#: ../../redirects.txt:57
+msgid "Via the Python API"
+msgstr ""
+
+# 6e49a100b09f429dabb7332e778cbd91
+#: ../../redirects.txt:59
+msgid ""
+"Redirects are represented by a standard :doc:`Django model <model-api>`, "
+"which lives in `django/contrib/redirects/models/redirects.py`_. You can "
+"access redirect objects via the :doc:`Django database API <db-api>`."
+msgstr ""

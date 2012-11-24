@@ -1,0 +1,352 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 0c82e0ba212c46e684894cadf348cf2d
+#: ../../modpython.txt:3
+msgid "How to use Django with mod_python"
+msgstr ""
+
+# 7d806e7ad5064423b3ef2d95df226c50
+#: ../../modpython.txt:5
+msgid ""
+"Apache_ with `mod_python`_ currently is the preferred setup for using Django "
+"on a production server."
+msgstr ""
+
+# bd3e7d7955d74fa39a51038cc3b5def8
+#: ../../modpython.txt:8
+msgid ""
+"mod_python is similar to `mod_perl`_ : It embeds Python within Apache and "
+"loads Python code into memory when the server starts. Code stays in memory "
+"throughout the life of an Apache process, which leads to significant "
+"performance gains over other server arrangements."
+msgstr ""
+
+# bc369bc9d17d481da602dd5d554f4e70
+#: ../../modpython.txt:13
+msgid ""
+"Django requires Apache 2.x and mod_python 3.x, and you should use Apache's "
+"`prefork MPM`_, as opposed to the `worker MPM`_."
+msgstr ""
+
+# c4821ebf999545b38f75a81a6c144ed6
+#: ../../modpython.txt:16
+msgid ""
+"You may also be interested in :doc:`How to use Django with FastCGI "
+"<fastcgi>`."
+msgstr ""
+
+# dca84c27ae8342df92d807d0fc70cd21
+#: ../../modpython.txt:25
+msgid "Basic configuration"
+msgstr ""
+
+# 7a751f04491c418794bf58a4e9260031
+#: ../../modpython.txt:27
+msgid ""
+"To configure Django with mod_python, first make sure you have Apache "
+"installed, with the mod_python module activated."
+msgstr ""
+
+# ea024503452249d0b7fe879578626c2c
+#: ../../modpython.txt:30
+msgid "Then edit your ``httpd.conf`` file and add the following::"
+msgstr ""
+
+# 5bff16f3d4c84d7f8c1c4f44be73cecc
+#: ../../modpython.txt:39
+msgid ""
+"...and replace ``mysite.settings`` with the Python path to your settings "
+"file."
+msgstr ""
+
+# 566074df84be450cb0a0b53abf72dea8
+#: ../../modpython.txt:41
+msgid ""
+"This tells Apache: \"Use mod_python for any URL at or under '/mysite/', "
+"using the Django mod_python handler.\" It passes the value of "
+"``DJANGO_SETTINGS_MODULE`` so mod_python knows which settings to use."
+msgstr ""
+
+# b8c5fb3f32654e4f9779440bc10b4757
+#: ../../modpython.txt:45
+msgid ""
+"Also, if you've manually altered your ``PYTHONPATH`` to put your Django "
+"project on it, you'll need to tell mod_python::"
+msgstr ""
+
+# 86c190151ac34da583b90aaa8f74db4d
+#: ../../modpython.txt:50
+msgid ""
+"You can also add directives such as ``PythonAutoReload Off`` for "
+"performance. See the `mod_python documentation`_ for a full list of options."
+msgstr ""
+
+# 400cce7929c94ecda6fb16de3e05458f
+#: ../../modpython.txt:53
+msgid ""
+"Note that you should set ``PythonDebug Off`` on a production server. If you "
+"leave ``PythonDebug On``, your users would see ugly (and revealing) Python "
+"tracebacks if something goes wrong within mod_python."
+msgstr ""
+
+# 76183275ccf44205912f66b08825fa78
+#: ../../modpython.txt:57
+msgid ""
+"Restart Apache, and any request to /mysite/ or below will be served by "
+"Django. Note that Django's URLconfs won't trim the \"/mysite/\" -- they get "
+"passed the full URL."
+msgstr ""
+
+# a2bb242f5e774c86963c0ab20dc4583d
+#: ../../modpython.txt:61
+msgid ""
+"When deploying Django sites on mod_python, you'll need to restart Apache "
+"each time you make changes to your Python code."
+msgstr ""
+
+# 5f619c99653249bd8ed8871a3504cc98
+#: ../../modpython.txt:65
+msgid "Multiple Django installations on the same Apache"
+msgstr ""
+
+# 4368e55e7a6641ae9b2a521dda5ec775
+#: ../../modpython.txt:67
+msgid ""
+"It's entirely possible to run multiple Django installations on the same "
+"Apache instance. Just use ``VirtualHost`` for that, like so::"
+msgstr ""
+
+# be3e5d494e1e4dd289b840b2230d30e6
+#: ../../modpython.txt:84
+msgid ""
+"If you need to put two Django installations within the same ``VirtualHost``, "
+"you'll need to take a special precaution to ensure mod_python's cache "
+"doesn't mess things up. Use the ``PythonInterpreter`` directive to give "
+"different ``<Location>`` directives separate interpreters::"
+msgstr ""
+
+# 61abf9e612d94a5096b65a551fecb1be
+#: ../../modpython.txt:103
+msgid ""
+"The values of ``PythonInterpreter`` don't really matter, as long as they're "
+"different between the two ``Location`` blocks."
+msgstr ""
+
+# ab2477f0fb114fbb9869f5b46578552b
+#: ../../modpython.txt:107
+msgid "Running a development server with mod_python"
+msgstr ""
+
+# 97d4ce3eb28b449ca83bd56ccac3ca81
+#: ../../modpython.txt:109
+msgid ""
+"If you use mod_python for your development server, you can avoid the hassle "
+"of having to restart the server each time you make code changes. Just set "
+"``MaxRequestsPerChild 1`` in your ``httpd.conf`` file to force Apache to "
+"reload everything for each request. But don't do that on a production "
+"server, or we'll revoke your Django privileges."
+msgstr ""
+
+# 2cbccfebb44241fcb95df35dbeabd1e0
+#: ../../modpython.txt:115
+msgid ""
+"If you're the type of programmer who debugs using scattered ``print`` "
+"statements, note that ``print`` statements have no effect in mod_python; "
+"they don't appear in the Apache log, as one might expect. If you have the "
+"need to print debugging information in a mod_python setup, either do this::"
+msgstr ""
+
+# c56bdbb8665b458ba9767c585cf95f62
+#: ../../modpython.txt:122
+msgid "Or add the debugging information to the template of your page."
+msgstr ""
+
+# 84585770d8734dcca967656623fb49de
+#: ../../modpython.txt:127
+msgid "Serving media files"
+msgstr ""
+
+# f819a670791d4570b3e9f6e916336a6f
+#: ../../modpython.txt:129
+msgid ""
+"Django doesn't serve media files itself; it leaves that job to whichever Web "
+"server you choose."
+msgstr ""
+
+# 8d1816caded048edaab8b30e8c134e28
+#: ../../modpython.txt:132
+msgid ""
+"We recommend using a separate Web server -- i.e., one that's not also "
+"running Django -- for serving media. Here are some good choices:"
+msgstr ""
+
+# a3df0785151c4af28a9fdf4541ccc9f0
+#: ../../modpython.txt:135
+msgid "lighttpd_"
+msgstr ""
+
+# 07aaf13ec45d4d97929f3ce55ee83890
+#: ../../modpython.txt:136
+msgid "TUX_"
+msgstr ""
+
+# 13814f2835d747c7b2e31ba6a8d3ce25
+#: ../../modpython.txt:137
+msgid "A stripped-down version of Apache_"
+msgstr ""
+
+# af43f82e22b348a4b4a5bd6f3d60e657
+#: ../../modpython.txt:139
+msgid ""
+"If, however, you have no option but to serve media files on the same Apache "
+"``VirtualHost`` as Django, here's how you can turn off mod_python for a "
+"particular part of the site::"
+msgstr ""
+
+# d019e10cd17149b3a3d1e44751bdf4b7
+#: ../../modpython.txt:147
+msgid ""
+"Just change ``Location`` to the root URL of your media files. You can also "
+"use ``<LocationMatch>`` to match a regular expression."
+msgstr ""
+
+# 844619c4ab4b4e4fae181953591c9729
+#: ../../modpython.txt:150
+msgid ""
+"This example sets up Django at the site root but explicitly disables Django "
+"for the ``media`` subdirectory and any URL that ends with ``.jpg``, ``.gif`` "
+"or ``.png``::"
+msgstr ""
+
+# 95fb457da07f4e3c96af6406fd466da2
+#: ../../modpython.txt:174
+msgid "Serving the admin files"
+msgstr ""
+
+# cb1150ec78db414982db8b155d052bf4
+#: ../../modpython.txt:176
+msgid ""
+"Note that the Django development server automagically serves admin media "
+"files, but this is not the case when you use any other server arrangement. "
+"You're responsible for setting up Apache, or whichever media server you're "
+"using, to serve the admin files."
+msgstr ""
+
+# e30bbedcc6ca4be782a3f19b23561683
+#: ../../modpython.txt:181
+msgid ""
+"The admin files live in (``django/contrib/admin/media``) of the Django "
+"distribution."
+msgstr ""
+
+# 5eadf7f47b0b4d2c8f19c0f48bae9604
+#: ../../modpython.txt:184
+msgid "Here are two recommended approaches:"
+msgstr ""
+
+# 64295b0c3e544e079333c36325d75f89
+#: ../../modpython.txt:186
+msgid ""
+"Create a symbolic link to the admin media files from within your document "
+"root. This way, all of your Django-related files -- code **and** templates "
+"-- stay in one place, and you'll still be able to ``svn update`` your code "
+"to get the latest admin templates, if they change."
+msgstr ""
+
+# 088cc612d36f4144b37bf2cecae9435d
+#: ../../modpython.txt:191
+msgid ""
+"Or, copy the admin media files so that they live within your Apache document "
+"root."
+msgstr ""
+
+# 46db581d3c5f4de4aa263354d313faa4
+#: ../../modpython.txt:195
+msgid "Error handling"
+msgstr ""
+
+# b3105f38012248359563f41cecac7607
+#: ../../modpython.txt:197
+msgid ""
+"When you use Apache/mod_python, errors will be caught by Django -- in other "
+"words, they won't propagate to the Apache level and won't appear in the "
+"Apache ``error_log``."
+msgstr ""
+
+# c33b3c25965b4ee2812a2dc8fe1642c7
+#: ../../modpython.txt:201
+msgid ""
+"The exception for this is if something is really wonky in your Django setup. "
+"In that case, you'll see an \"Internal Server Error\" page in your browser "
+"and the full Python traceback in your Apache ``error_log`` file. The "
+"``error_log`` traceback is spread over multiple lines. (Yes, this is ugly "
+"and rather hard to read, but it's how mod_python does things.)"
+msgstr ""
+
+# 992254cd28c04b159992fcdd5f474cd7
+#: ../../modpython.txt:208
+msgid "If you get a segmentation fault"
+msgstr ""
+
+# f2425b961e594cc6a145751d9062fe67
+#: ../../modpython.txt:210
+msgid ""
+"If Apache causes a segmentation fault, there are two probable causes, "
+"neither of which has to do with Django itself."
+msgstr ""
+
+# 55a768ff28844dcd9309bdc59135a260
+#: ../../modpython.txt:213
+msgid ""
+"It may be because your Python code is importing the \"pyexpat\" module, "
+"which may conflict with the version embedded in Apache. For full "
+"information, see `Expat Causing Apache Crash`_."
+msgstr ""
+
+# 068065a02d89400590cded11eb69dc94
+#: ../../modpython.txt:216
+msgid ""
+"It may be because you're running mod_python and mod_php in the same Apache "
+"instance, with MySQL as your database backend. In some cases, this causes a "
+"known mod_python issue due to version conflicts in PHP and the Python MySQL "
+"backend. There's full information in the `mod_python FAQ entry`_."
+msgstr ""
+
+# affa66b0df3441579529e54a11c62b73
+#: ../../modpython.txt:222
+msgid ""
+"If you continue to have problems setting up mod_python, a good thing to do "
+"is get a barebones mod_python site working, without the Django framework. "
+"This is an easy way to isolate mod_python-specific problems. `Getting "
+"mod_python Working`_ details this procedure."
+msgstr ""
+
+# c951d3a3377141368ef62f6d69f493dc
+#: ../../modpython.txt:227
+msgid ""
+"The next step should be to edit your test code and add an import of any "
+"Django-specific code you're using -- your views, your models, your URLconf, "
+"your RSS configuration, etc. Put these imports in your test handler function "
+"and access your test URL in a browser. If this causes a crash, you've "
+"confirmed it's the importing of Django code that causes the problem. "
+"Gradually reduce the set of imports until it stops crashing, so as to find "
+"the specific module that causes the problem. Drop down further into modules "
+"and look into their imports, as necessary."
+msgstr ""

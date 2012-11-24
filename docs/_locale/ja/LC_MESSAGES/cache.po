@@ -1,0 +1,897 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 6664a0d81889414cbaa7ed58bac6ee34
+#: ../../cache.txt:3
+msgid "Django's cache framework"
+msgstr ""
+
+# 07afa838b7454fd8920b68d3188ce34a
+#: ../../cache.txt:5
+msgid ""
+"A fundamental tradeoff in dynamic Web sites is, well, they're dynamic. Each "
+"time a user requests a page, the Web server makes all sorts of calculations "
+"-- from database queries to template rendering to business logic -- to "
+"create the page that your site's visitor sees. This is a lot more expensive, "
+"from a processing-overhead perspective, than your standard read-a-file-off-"
+"the-filesystem server arrangement."
+msgstr ""
+
+# 99241bd4510e4c9a9798604532c53ae4
+#: ../../cache.txt:12
+msgid ""
+"For most Web applications, this overhead isn't a big deal. Most Web "
+"applications aren't washingtonpost.com or slashdot.org; they're simply "
+"small- to medium-sized sites with so-so traffic. But for medium- to high-"
+"traffic sites, it's essential to cut as much overhead as possible."
+msgstr ""
+
+# 2152a06b58e84de7a64b1e36d1075193
+#: ../../cache.txt:17
+msgid "That's where caching comes in."
+msgstr ""
+
+# 87f74f6a6f8840289144888ef35d1b8c
+#: ../../cache.txt:19
+msgid ""
+"To cache something is to save the result of an expensive calculation so that "
+"you don't have to perform the calculation next time. Here's some pseudocode "
+"explaining how this would work for a dynamically generated Web page::"
+msgstr ""
+
+# 2d97febd058b46ec829303d916df39f4
+#: ../../cache.txt:31
+msgid ""
+"Django comes with a robust cache system that lets you save dynamic pages so "
+"they don't have to be calculated for each request. For convenience, Django "
+"offers different levels of cache granularity: You can cache the output of "
+"specific views, you can cache only the pieces that are difficult to produce, "
+"or you can cache your entire site."
+msgstr ""
+
+# 292a432b081a4c8d84af50375330d0c2
+#: ../../cache.txt:37
+msgid ""
+"Django also works well with \"upstream\" caches, such as Squid (http://www."
+"squid-cache.org/) and browser-based caches. These are the types of caches "
+"that you don't directly control but to which you can provide hints (via HTTP "
+"headers) about which parts of your site should be cached, and how."
+msgstr ""
+
+# 50068c3bc24b49d5b5587a0075eb6b62
+#: ../../cache.txt:43
+msgid "Setting up the cache"
+msgstr ""
+
+# 86d6fd07c27149a995125b22964c5639
+#: ../../cache.txt:45
+msgid ""
+"The cache system requires a small amount of setup. Namely, you have to tell "
+"it where your cached data should live -- whether in a database, on the "
+"filesystem or directly in memory. This is an important decision that affects "
+"your cache's performance; yes, some cache types are faster than others."
+msgstr ""
+
+# ca43901e152248b4af8935f14e0ce7bc
+#: ../../cache.txt:50
+msgid ""
+"Your cache preference goes in the ``CACHE_BACKEND`` setting in your settings "
+"file. Here's an explanation of all available values for CACHE_BACKEND."
+msgstr ""
+
+# 7799e40c768e4726b09d0b461c025f85
+#: ../../cache.txt:54
+msgid "Memcached"
+msgstr ""
+
+# 94bd05413aaa41eba5c9f59cb24e1c27
+#: ../../cache.txt:56
+msgid ""
+"By far the fastest, most efficient type of cache available to Django, "
+"Memcached is an entirely memory-based cache framework originally developed "
+"to handle high loads at LiveJournal.com and subsequently open-sourced by "
+"Danga Interactive. It's used by sites such as Slashdot and Wikipedia to "
+"reduce database access and dramatically increase site performance."
+msgstr ""
+
+# a0f96c12c7f14e40aebfb2a1185feeeb
+#: ../../cache.txt:62
+msgid ""
+"Memcached is available for free at http://danga.com/memcached/ . It runs as "
+"a daemon and is allotted a specified amount of RAM. All it does is provide "
+"an interface -- a *super-lightning-fast* interface -- for adding, retrieving "
+"and deleting arbitrary data in the cache. All data is stored directly in "
+"memory, so there's no overhead of database or filesystem usage."
+msgstr ""
+
+# 2678b52a61f84845aab1cd1cc273ea21
+#: ../../cache.txt:68
+msgid ""
+"After installing Memcached itself, you'll need to install the Memcached "
+"Python bindings. They're in a single Python module, memcache.py, available "
+"at ftp://ftp.tummy.com/pub/python-memcached/ . If that URL is no longer "
+"valid, just go to the Memcached Web site (http://www.danga.com/memcached/) "
+"and get the Python bindings from the \"Client APIs\" section."
+msgstr ""
+
+# e8c5dc6ee79944d083eeccf1ac5a88d8
+#: ../../cache.txt:74
+msgid ""
+"To use Memcached with Django, set ``CACHE_BACKEND`` to ``memcached://ip:port/"
+"``, where ``ip`` is the IP address of the Memcached daemon and ``port`` is "
+"the port on which Memcached is running."
+msgstr ""
+
+# dd922c12f4ae4e0ebe856c949e3e2617
+#: ../../cache.txt:78
+msgid ""
+"In this example, Memcached is running on localhost (127.0.0.1) port 11211::"
+msgstr ""
+
+# 0feb19a1834d439eb1c6dae96917fdfe
+#: ../../cache.txt:82
+msgid ""
+"One excellent feature of Memcached is its ability to share cache over "
+"multiple servers. To take advantage of this feature, include all server "
+"addresses in ``CACHE_BACKEND``, separated by semicolons. In this example, "
+"the cache is shared over Memcached instances running on IP address "
+"172.19.26.240 and 172.19.26.242, both on port 11211::"
+msgstr ""
+
+# 8ce6107b53c5471795729183820a84b2
+#: ../../cache.txt:90
+msgid ""
+"Memory-based caching has one disadvantage: Because the cached data is stored "
+"in memory, the data will be lost if your server crashes. Clearly, memory "
+"isn't intended for permanent data storage, so don't rely on memory-based "
+"caching as your only data storage. Actually, none of the Django caching "
+"backends should be used for permanent storage -- they're all intended to be "
+"solutions for caching, not storage -- but we point this out here because "
+"memory-based caching is particularly temporary."
+msgstr ""
+
+# fd4a13fe5a7445faa97ac75c6a96722a
+#: ../../cache.txt:99
+msgid "Database caching"
+msgstr ""
+
+# 2cf5771868bd4a3c943b55b6ae8ed7bd
+#: ../../cache.txt:101
+msgid ""
+"To use a database table as your cache backend, first create a cache table in "
+"your database by running this command::"
+msgstr ""
+
+# 2f522c552a1842539cc62a844e0630da
+#: ../../cache.txt:106
+msgid ""
+"...where ``[cache_table_name]`` is the name of the database table to create. "
+"(This name can be whatever you want, as long as it's a valid table name "
+"that's not already being used in your database.) This command creates a "
+"single table in your database that is in the proper format that Django's "
+"database-cache system expects."
+msgstr ""
+
+# 60668f8123f74df1a8e7c1a29fa1700e
+#: ../../cache.txt:112
+msgid ""
+"Once you've created that database table, set your ``CACHE_BACKEND`` setting "
+"to ``\"db://tablename/\"``, where ``tablename`` is the name of the database "
+"table. In this example, the cache table's name is ``my_cache_table``:"
+msgstr ""
+
+# c5ea2b0b6cb045c6b29f6c247da024ec
+#: ../../cache.txt:116
+msgid "CACHE_BACKEND = 'db://my_cache_table'"
+msgstr ""
+
+# 73aef853a8d24bd4a0365514902993f7
+#: ../../cache.txt:118
+msgid ""
+"Database caching works best if you've got a fast, well-indexed database "
+"server."
+msgstr ""
+
+# 92b86d2c15db48b3b9ce7376ab6bb06b
+#: ../../cache.txt:121
+msgid "Filesystem caching"
+msgstr ""
+
+# 6b918e6e95b649489fc41ec94456723c
+#: ../../cache.txt:123
+msgid ""
+"To store cached items on a filesystem, use the ``\"file://\"`` cache type "
+"for ``CACHE_BACKEND``. For example, to store cached data in ``/var/tmp/"
+"django_cache``, use this setting::"
+msgstr ""
+
+# 8178907a58c34cc3a9c39bd579efbb22
+#: ../../cache.txt:129
+msgid ""
+"Note that there are three forward slashes toward the beginning of that "
+"example. The first two are for ``file://``, and the third is the first "
+"character of the directory path, ``/var/tmp/django_cache``."
+msgstr ""
+
+# ac73f86b0c164b519bec8dffa952d316
+#: ../../cache.txt:133
+msgid ""
+"The directory path should be absolute -- that is, it should start at the "
+"root of your filesystem. It doesn't matter whether you put a slash at the "
+"end of the setting."
+msgstr ""
+
+# bc322df4083a4174b468d063f84bc1c0
+#: ../../cache.txt:137
+msgid ""
+"Make sure the directory pointed-to by this setting exists and is readable "
+"and writable by the system user under which your Web server runs. Continuing "
+"the above example, if your server runs as the user ``apache``, make sure the "
+"directory ``/var/tmp/django_cache`` exists and is readable and writable by "
+"the user ``apache``."
+msgstr ""
+
+# 81e91cd00fb54c6281723445ab0f82b0
+#: ../../cache.txt:144
+msgid "Local-memory caching"
+msgstr ""
+
+# a71aacbad2274452a5831ff44d00d8aa
+#: ../../cache.txt:146
+msgid ""
+"If you want the speed advantages of in-memory caching but don't have the "
+"capability of running Memcached, consider the local-memory cache backend. "
+"This cache is multi-process and thread-safe. To use it, set "
+"``CACHE_BACKEND`` to ``\"locmem:///\"``. For example::"
+msgstr ""
+
+# ddde8da2a37c452fa67ba082a55c0e78
+#: ../../cache.txt:154
+msgid "Simple caching (for development)"
+msgstr ""
+
+# 5a154386001247dfb952f932c7d74c36
+#: ../../cache.txt:156
+msgid ""
+"A simple, single-process memory cache is available as ``\"simple:///\"``. "
+"This merely saves cached data in-process, which means it should only be used "
+"in development or testing environments. For example::"
+msgstr ""
+
+# 15e320bb65264a60a97d909f4caf7aaf
+#: ../../cache.txt:163
+msgid "Dummy caching (for development)"
+msgstr ""
+
+# 738f7902f7fb49efb72e5f784b127947
+#: ../../cache.txt:165
+msgid ""
+"Finally, Django comes with a \"dummy\" cache that doesn't actually cache -- "
+"it just implements the cache interface without doing anything."
+msgstr ""
+
+# 66cc4db08e054a59b1c3c099738dde7e
+#: ../../cache.txt:168
+msgid ""
+"This is useful if you have a production site that uses heavy-duty caching in "
+"various places but a development/test environment on which you don't want to "
+"cache. In that case, set ``CACHE_BACKEND`` to ``\"dummy:///\"`` in the "
+"settings file for your development environment. As a result, your "
+"development environment won't use caching and your production environment "
+"still will."
+msgstr ""
+
+# 7556ecf47bbd46b8b9eb290f1c4526af
+#: ../../cache.txt:175
+msgid "CACHE_BACKEND arguments"
+msgstr ""
+
+# 27e718439bb64e258eefee94d9e05784
+#: ../../cache.txt:177
+msgid ""
+"All caches may take arguments. They're given in query-string style on the "
+"``CACHE_BACKEND`` setting. Valid arguments are:"
+msgstr ""
+
+# 034842e6eaa3488a8f2c499d4412e65d
+#: ../../cache.txt:181
+msgid ""
+"Default timeout, in seconds, to use for the cache. Defaults to 5 minutes "
+"(300 seconds)."
+msgstr ""
+
+# a4631c831c284ffc8a4a1519d23db601
+#: ../../cache.txt:185
+msgid ""
+"For the simple and database backends, the maximum number of entries allowed "
+"in the cache before it is cleaned. Defaults to 300."
+msgstr ""
+
+# 286327a4ac334ba7bcde2af9d234f5f2
+#: ../../cache.txt:189
+msgid ""
+"The percentage of entries that are culled when max_entries is reached. The "
+"actual percentage is 1/cull_percentage, so set cull_percentage=3 to cull 1/3 "
+"of the entries when max_entries is reached."
+msgstr ""
+
+# b6e3cd7f904746cbbadfa5604022c8ff
+#: ../../cache.txt:193
+msgid ""
+"A value of 0 for cull_percentage means that the entire cache will be dumped "
+"when max_entries is reached. This makes culling *much* faster at the expense "
+"of more cache misses."
+msgstr ""
+
+# 410bbac0c724417d83a7c8f6aa6d06f4
+#: ../../cache.txt:197
+msgid "In this example, ``timeout`` is set to ``60``::"
+msgstr ""
+
+# 2fc0a2a114cc437eac729128395f33a7
+#: ../../cache.txt:201
+msgid "In this example, ``timeout`` is ``30`` and ``max_entries`` is ``400``::"
+msgstr ""
+
+# 92b7c3fe53694e169996d288d668b1dd
+#: ../../cache.txt:205
+msgid ""
+"Invalid arguments are silently ignored, as are invalid values of known "
+"arguments."
+msgstr ""
+
+# ca7e1fc0899848de8c6cb134ead17721
+#: ../../cache.txt:209
+msgid "The per-site cache"
+msgstr ""
+
+# c8faeb8390884d45ad8d0448dfb4b2e0
+#: ../../cache.txt:211
+msgid ""
+"Once the cache is set up, the simplest way to use caching is to cache your "
+"entire site. Just add ``'django.middleware.cache.CacheMiddleware'`` to your "
+"``MIDDLEWARE_CLASSES`` setting, as in this example::"
+msgstr ""
+
+# cec4b80796d7459697b1babda2ab5eca
+#: ../../cache.txt:220
+msgid ""
+"(The order of ``MIDDLEWARE_CLASSES`` matters. See \"Order of "
+"MIDDLEWARE_CLASSES\" below.)"
+msgstr ""
+
+# 097425a2d20d43ce93b61454d15ac0bf
+#: ../../cache.txt:223
+msgid "Then, add the following required settings to your Django settings file:"
+msgstr ""
+
+# f82e69a8d80547d793753a2d951520ae
+#: ../../cache.txt:225
+msgid ""
+"``CACHE_MIDDLEWARE_SECONDS`` -- The number of seconds each page should be "
+"cached."
+msgstr ""
+
+# 54838f8637bc4238a1de4556d5c72506
+#: ../../cache.txt:227
+msgid ""
+"``CACHE_MIDDLEWARE_KEY_PREFIX`` -- If the cache is shared across multiple "
+"sites using the same Django installation, set this to the name of the site, "
+"or some other string that is unique to this Django instance, to prevent key "
+"collisions. Use an empty string if you don't care."
+msgstr ""
+
+# a35f958357614add8a783ff3b7d53464
+#: ../../cache.txt:232
+msgid ""
+"The cache middleware caches every page that doesn't have GET or POST "
+"parameters. Optionally, if the ``CACHE_MIDDLEWARE_ANONYMOUS_ONLY`` setting "
+"is ``True``, only anonymous requests (i.e., not those made by a logged-in "
+"user) will be cached. This is a simple and effective way of disabling "
+"caching for any user-specific pages (include Django's admin interface)."
+msgstr ""
+
+# 78c6f734bb3040d3aeb8e6264486c8f0
+#: ../../cache.txt:238
+msgid ""
+"Additionally, ``CacheMiddleware`` automatically sets a few headers in each "
+"``HttpResponse``:"
+msgstr ""
+
+# c414b8ddb3a34937b8125dac05ecab74
+#: ../../cache.txt:241
+msgid ""
+"Sets the ``Last-Modified`` header to the current date/time when a fresh "
+"(uncached) version of the page is requested."
+msgstr ""
+
+# c54cc84cccb84837985b07c72e8cfe17
+#: ../../cache.txt:243
+msgid ""
+"Sets the ``Expires`` header to the current date/time plus the defined "
+"``CACHE_MIDDLEWARE_SECONDS``."
+msgstr ""
+
+# 545dfb890ed44961ba13b898212bd1fd
+#: ../../cache.txt:245
+msgid ""
+"Sets the ``Cache-Control`` header to give a max age for the page -- again, "
+"from the ``CACHE_MIDDLEWARE_SECONDS`` setting."
+msgstr ""
+
+# ab0720f61598428bb0dfd4c6e187e8f3
+#: ../../cache.txt:248
+msgid ""
+"See the :doc:`middleware documentation <middleware>`_ for more on middleware."
+msgstr ""
+
+# 92ebecfd01214892bb2b2119af6b980e
+#: ../../cache.txt:251
+msgid "The per-view cache"
+msgstr ""
+
+# d027616282ae4bee9400a2e0afa57cf8
+#: ../../cache.txt:253
+msgid ""
+"A more granular way to use the caching framework is by caching the output of "
+"individual views. ``django.views.decorators.cache`` defines a ``cache_page`` "
+"decorator that will automatically cache the view's response for you. It's "
+"easy to use::"
+msgstr ""
+
+# 911b41e8a1da494db9c4ff22c1575e7f
+#: ../../cache.txt:265
+msgid "Or, using Python 2.4's decorator syntax::"
+msgstr ""
+
+# f32cbc50be0645beab0e396e335bba6e
+#: ../../cache.txt:271
+msgid ""
+"``cache_page`` takes a single argument: the cache timeout, in seconds. In "
+"the above example, the result of the ``slashdot_this()`` view will be cached "
+"for 15 minutes."
+msgstr ""
+
+# f6d0e4f08bea4f748f28a23cf93e8f32
+#: ../../cache.txt:276
+msgid "The low-level cache API"
+msgstr ""
+
+# 79f2fd5264fa4b4e837c415348604bd4
+#: ../../cache.txt:278
+msgid ""
+"Sometimes, however, caching an entire rendered page doesn't gain you very "
+"much. For example, you may find it's only necessary to cache the result of "
+"an intensive database query. In cases like this, you can use the low-level "
+"cache API to store objects in the cache with any level of granularity you "
+"like."
+msgstr ""
+
+# 9cb6cf1be2fa4d688b8a314ffa603c4b
+#: ../../cache.txt:283
+msgid ""
+"The cache API is simple. The cache module, ``django.core.cache``, exports a "
+"``cache`` object that's automatically created from the ``CACHE_BACKEND`` "
+"setting::"
+msgstr ""
+
+# 6cad5b0ec4f24f9080ec0820f7d7d5b1
+#: ../../cache.txt:289
+msgid ""
+"The basic interface is ``set(key, value, timeout_seconds)`` and ``get(key)"
+"``::"
+msgstr ""
+
+# eed3d60dc5c2488a8697041ce51b5c54
+#: ../../cache.txt:295
+msgid ""
+"The ``timeout_seconds`` argument is optional and defaults to the ``timeout`` "
+"argument in the ``CACHE_BACKEND`` setting (explained above)."
+msgstr ""
+
+# 42e7b3d9a60a4786adcbed498fb4f0bd
+#: ../../cache.txt:298
+msgid ""
+"If the object doesn't exist in the cache, ``cache.get()`` returns ``None``::"
+msgstr ""
+
+# 0575d2794cca42fb8255dc76b5d6c9f7
+#: ../../cache.txt:308
+msgid "get() can take a ``default`` argument::"
+msgstr ""
+
+# 93dd77f61147446b9b7e1d2b8be3c148
+#: ../../cache.txt:313
+msgid ""
+"There's also a get_many() interface that only hits the cache once. get_many"
+"() returns a dictionary with all the keys you asked for that actually exist "
+"in the cache (and haven't expired)::"
+msgstr ""
+
+# 1d80e077a5434cd4bdb754d0a332dac1
+#: ../../cache.txt:323
+msgid ""
+"Finally, you can delete keys explicitly with ``delete()``. This is an easy "
+"way of clearing the cache for a particular object::"
+msgstr ""
+
+# 33c1ad5447a0446f9e7e96d36006777e
+#: ../../cache.txt:328
+msgid ""
+"That's it. The cache has very few restrictions: You can cache any object "
+"that can be pickled safely, although keys must be strings."
+msgstr ""
+
+# 508e05f8f9ae4b65abd285758b85a0fa
+#: ../../cache.txt:332
+msgid "Upstream caches"
+msgstr ""
+
+# 7f218bfb90b44ae0bbdfec58cc373ff9
+#: ../../cache.txt:334
+msgid ""
+"So far, this document has focused on caching your *own* data. But another "
+"type of caching is relevant to Web development, too: caching performed by "
+"\"upstream\" caches. These are systems that cache pages for users even "
+"before the request reaches your Web site."
+msgstr ""
+
+# 6e1a0479d3c24fbeae9773cabc5b21fc
+#: ../../cache.txt:339
+msgid "Here are a few examples of upstream caches:"
+msgstr ""
+
+# 3190f7d8a61549eaa0157aeb9c08b064
+#: ../../cache.txt:341
+msgid ""
+"Your ISP may cache certain pages, so if you requested a page from somedomain."
+"com, your ISP would send you the page without having to access somedomain."
+"com directly."
+msgstr ""
+
+# cf6cb3d6572146cf85379f98943fcd41
+#: ../../cache.txt:345
+msgid ""
+"Your Django Web site may sit behind a Squid Web proxy (http://www.squid-"
+"cache.org/) that caches pages for performance. In this case, each request "
+"first would be handled by Squid, and it'd only be passed to your application "
+"if needed."
+msgstr ""
+
+# 1f8542256d83496ba1c12b1f78585f3a
+#: ../../cache.txt:350
+msgid ""
+"Your Web browser caches pages, too. If a Web page sends out the right "
+"headers, your browser will use the local (cached) copy for subsequent "
+"requests to that page."
+msgstr ""
+
+# 7f13c3d5c8b44bed9eca52fdb02b9df3
+#: ../../cache.txt:354
+msgid ""
+"Upstream caching is a nice efficiency boost, but there's a danger to it: "
+"Many Web pages' contents differ based on authentication and a host of other "
+"variables, and cache systems that blindly save pages based purely on URLs "
+"could expose incorrect or sensitive data to subsequent visitors to those "
+"pages."
+msgstr ""
+
+# 7528bf384cc64421a40dfa5156cb09b9
+#: ../../cache.txt:359
+msgid ""
+"For example, say you operate a Web e-mail system, and the contents of the "
+"\"inbox\" page obviously depend on which user is logged in. If an ISP "
+"blindly cached your site, then the first user who logged in through that ISP "
+"would have his user-specific inbox page cached for subsequent visitors to "
+"the site. That's not cool."
+msgstr ""
+
+# caddc5bcd93c4f4aa31c93dae0fbe8ae
+#: ../../cache.txt:365
+msgid ""
+"Fortunately, HTTP provides a solution to this problem: A set of HTTP headers "
+"exist to instruct caching mechanisms to differ their cache contents "
+"depending on designated variables, and to tell caching mechanisms not to "
+"cache particular pages."
+msgstr ""
+
+# 70666a739db1466fbd51ffed79d59889
+#: ../../cache.txt:371
+msgid "Using Vary headers"
+msgstr ""
+
+# 27f41e1d8b9547fb8fec5705ae13bced
+#: ../../cache.txt:373
+msgid ""
+"One of these headers is ``Vary``. It defines which request headers a cache "
+"mechanism should take into account when building its cache key. For example, "
+"if the contents of a Web page depend on a user's language preference, the "
+"page is said to \"vary on language.\""
+msgstr ""
+
+# 63e1af1b912548a183424171723a66c1
+#: ../../cache.txt:378
+msgid ""
+"By default, Django's cache system creates its cache keys using the requested "
+"path -- e.g., ``\"/stories/2005/jun/23/bank_robbed/\"``. This means every "
+"request to that URL will use the same cached version, regardless of user-"
+"agent differences such as cookies or language preferences."
+msgstr ""
+
+# c4ed3ec3972645719ad5b15453dd308e
+#: ../../cache.txt:383
+msgid "That's where ``Vary`` comes in."
+msgstr ""
+
+# d38c1dc4333a40e595a3b0ff26cbd4a3
+#: ../../cache.txt:385
+msgid ""
+"If your Django-powered page outputs different content based on some "
+"difference in request headers -- such as a cookie, or language, or user-"
+"agent -- you'll need to use the ``Vary`` header to tell caching mechanisms "
+"that the page output depends on those things."
+msgstr ""
+
+# 942b83ea37a548e9a9df9b036850df9f
+#: ../../cache.txt:390
+msgid ""
+"To do this in Django, use the convenient ``vary_on_headers`` view decorator, "
+"like so::"
+msgstr ""
+
+# 9b4575dfa75f490d9256fbd1995619f7
+#: ../../cache.txt:405
+msgid ""
+"In this case, a caching mechanism (such as Django's own cache middleware) "
+"will cache a separate version of the page for each unique user-agent."
+msgstr ""
+
+# 3d43b267a8aa4cd8aaf72b5ef7d3062e
+#: ../../cache.txt:408
+msgid ""
+"The advantage to using the ``vary_on_headers`` decorator rather than "
+"manually setting the ``Vary`` header (using something like ``response"
+"['Vary'] = 'user-agent'``) is that the decorator adds to the ``Vary`` header "
+"(which may already exist) rather than setting it from scratch."
+msgstr ""
+
+# 555d872f757e4c7baa50bce1f27d18ce
+#: ../../cache.txt:413
+msgid "You can pass multiple headers to ``vary_on_headers()``::"
+msgstr ""
+
+# 0de1dc5cf1ce417bbcabb83e09545531
+#: ../../cache.txt:419
+msgid ""
+"Because varying on cookie is such a common case, there's a "
+"``vary_on_cookie`` decorator. These two views are equivalent::"
+msgstr ""
+
+# 72f92a8e59494ca498be6c46ac97c3ea
+#: ../../cache.txt:430
+msgid ""
+"Also note that the headers you pass to ``vary_on_headers`` are not case "
+"sensitive. ``\"User-Agent\"`` is the same thing as ``\"user-agent\"``."
+msgstr ""
+
+# 9482449e950343c8956d75aabe67153d
+#: ../../cache.txt:433
+msgid ""
+"You can also use a helper function, ``django.utils.cache."
+"patch_vary_headers``, directly::"
+msgstr ""
+
+# 27b05e2ecfec4e07af93f8c7fbfc641c
+#: ../../cache.txt:443
+msgid ""
+"``patch_vary_headers`` takes an ``HttpResponse`` instance as its first "
+"argument and a list/tuple of header names as its second argument."
+msgstr ""
+
+# dd5f019e91994cb1b9fc8df59eca0589
+#: ../../cache.txt:446
+msgid "For more on Vary headers, see the `official Vary spec`_."
+msgstr ""
+
+# f2930f36151a46899fdfa34f4c9fda8a
+#: ../../cache.txt:451
+msgid "Controlling cache: Using other headers"
+msgstr ""
+
+# 73e485d5257b4f3da8c6d8bacf291da0
+#: ../../cache.txt:453
+msgid ""
+"Another problem with caching is the privacy of data and the question of "
+"where data should be stored in a cascade of caches."
+msgstr ""
+
+# 9fd712d039ca4c14b6295474543028df
+#: ../../cache.txt:456
+msgid ""
+"A user usually faces two kinds of caches: his own browser cache (a private "
+"cache) and his provider's cache (a public cache). A public cache is used by "
+"multiple users and controlled by someone else. This poses problems with "
+"sensitive data: You don't want, say, your banking-account number stored in a "
+"public cache. So Web applications need a way to tell caches which data is "
+"private and which is public."
+msgstr ""
+
+# d23a5720ed4841768091e20b3e2cc409
+#: ../../cache.txt:463
+msgid ""
+"The solution is to indicate a page's cache should be \"private.\" To do this "
+"in Django, use the ``cache_control`` view decorator. Example::"
+msgstr ""
+
+# bc9cc1f1d5d94495a7d8f8dc7197373d
+#: ../../cache.txt:471
+msgid ""
+"This decorator takes care of sending out the appropriate HTTP header behind "
+"the scenes."
+msgstr ""
+
+# cb71e79e3cdd4e148b4574a4f6d3e408
+#: ../../cache.txt:474
+msgid ""
+"There are a few other ways to control cache parameters. For example, HTTP "
+"allows applications to do the following:"
+msgstr ""
+
+# d78626aaa29c4baabfd859c0cac078b1
+#: ../../cache.txt:477
+msgid "Define the maximum time a page should be cached."
+msgstr ""
+
+# b773bea4868f44b29beb868a61afe343
+#: ../../cache.txt:478
+msgid ""
+"Specify whether a cache should always check for newer versions, only "
+"delivering the cached content when there are no changes. (Some caches might "
+"deliver cached content even if the server page changed -- simply because the "
+"cache copy isn't yet expired.)"
+msgstr ""
+
+# c597b7b5ef88453fa1ad1c484289da6e
+#: ../../cache.txt:483
+msgid ""
+"In Django, use the ``cache_control`` view decorator to specify these cache "
+"parameters. In this example, ``cache_control`` tells caches to revalidate "
+"the cache on every access and to store cached versions for, at most, 3600 "
+"seconds::"
+msgstr ""
+
+# 5d77024d1bfc4035bd41eb4389fcffd0
+#: ../../cache.txt:492
+msgid ""
+"Any valid ``Cache-Control`` HTTP directive is valid in ``cache_control()``. "
+"Here's a full list:"
+msgstr ""
+
+# 28d5da582f8d4ce2a046524d93beab0e
+#: ../../cache.txt:495
+msgid "``public=True``"
+msgstr ""
+
+# 3af7758835ba4099b4e68c1ba47aeb58
+#: ../../cache.txt:496
+msgid "``private=True``"
+msgstr ""
+
+# d7999e9d2e294c04a90bc66cfbd48c80
+#: ../../cache.txt:497
+msgid "``no_cache=True``"
+msgstr ""
+
+# d7ec5d8306fc4d6b88bf41a8f8075429
+#: ../../cache.txt:498
+msgid "``no_transform=True``"
+msgstr ""
+
+# d7f7da0f69a247eea377416b6cb3515d
+#: ../../cache.txt:499
+msgid "``must_revalidate=True``"
+msgstr ""
+
+# c622075e46f6429484a971ed9cc2d79f
+#: ../../cache.txt:500
+msgid "``proxy_revalidate=True``"
+msgstr ""
+
+# 1eb40b49c12b4a92aa85aa3e50b61ded
+#: ../../cache.txt:501
+msgid "``max_age=num_seconds``"
+msgstr ""
+
+# d7f23abaff3449d881a397b11520b65b
+#: ../../cache.txt:502
+msgid "``s_maxage=num_seconds``"
+msgstr ""
+
+# 5cf0a9e0c6d1405082945cf0d9511861
+#: ../../cache.txt:504
+msgid ""
+"For explanation of Cache-Control HTTP directives, see the `Cache-Control "
+"spec`_."
+msgstr ""
+
+# b260676c56824f4a9251fb286eb6867a
+#: ../../cache.txt:506
+msgid ""
+"(Note that the caching middleware already sets the cache header's max-age "
+"with the value of the ``CACHE_MIDDLEWARE_SETTINGS`` setting. If you use a "
+"custom ``max_age`` in a ``cache_control`` decorator, the decorator will take "
+"precedence, and the header values will be merged correctly.)"
+msgstr ""
+
+# 976201f6f60a47ce9b44f324c25227b9
+#: ../../cache.txt:514
+msgid "Other optimizations"
+msgstr ""
+
+# 9b27ff5f5aa244a6b9d367ced32a55e4
+#: ../../cache.txt:516
+msgid ""
+"Django comes with a few other pieces of middleware that can help optimize "
+"your apps' performance:"
+msgstr ""
+
+# b4db816091154c4aab40744bc963f574
+#: ../../cache.txt:519
+msgid ""
+"``django.middleware.http.ConditionalGetMiddleware`` adds support for "
+"conditional GET. This makes use of ``ETag`` and ``Last-Modified`` headers."
+msgstr ""
+
+# 2309fcd853c44664b9b1c234d5a6e003
+#: ../../cache.txt:523
+msgid ""
+"``django.middleware.gzip.GZipMiddleware`` compresses content for browsers "
+"that understand gzip compression (all modern browsers)."
+msgstr ""
+
+# 90fb07fab33643939fb9045dd98a1072
+#: ../../cache.txt:527
+msgid "Order of MIDDLEWARE_CLASSES"
+msgstr ""
+
+# 5a1d466c57df49e2a7bcb0845ced7a0b
+#: ../../cache.txt:529
+msgid ""
+"If you use ``CacheMiddleware``, it's important to put it in the right place "
+"within the ``MIDDLEWARE_CLASSES`` setting, because the cache middleware "
+"needs to know which headers by which to vary the cache storage. Middleware "
+"always adds something the ``Vary`` response header when it can."
+msgstr ""
+
+# 9d541192e85240fcb1c271b04c2f2966
+#: ../../cache.txt:534
+msgid ""
+"Put the ``CacheMiddleware`` after any middlewares that might add something "
+"to the ``Vary`` header. The following middlewares do so:"
+msgstr ""
+
+# 06f726daf93146f4a740afd24284fbc9
+#: ../../cache.txt:537
+msgid "``SessionMiddleware`` adds ``Cookie``"
+msgstr ""
+
+# 89b4e91209df41278f52b6cf4416fe92
+#: ../../cache.txt:538
+msgid "``GZipMiddleware`` adds ``Accept-Encoding``"
+msgstr ""

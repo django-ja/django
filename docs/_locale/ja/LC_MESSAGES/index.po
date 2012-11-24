@@ -1,0 +1,271 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 181cf3d4135c4ae6a80f04dec7ef3333
+#: ../../index.txt:3
+msgid "Documentation"
+msgstr ""
+
+# 4f344ee5fd5b43c3887f24bb575ed1d5
+#: ../../index.txt:5
+msgid "The essential documentation"
+msgstr ""
+
+# 1f8991aab3a948329169ba32a84423c7
+#: ../../index.txt:7
+msgid ""
+"Make sure to read the following documentation. The rest (in the \"Reference"
+"\" section below) can be read in any particular order, as you need the "
+"various functionality."
+msgstr ""
+
+# db28a76c5285444189e7f39e0755e9b5
+# 0c82408d2bc9427e837534ccaf941c78
+#: ../../index.txt:11 ../../index.txt:15
+msgid "Tutorial: Writing your first Django app"
+msgstr ""
+
+# 8a41b7f4433142309ad0727d7af53a66
+#: ../../index.txt:13
+msgid ":doc:`Overview <overview>`"
+msgstr ""
+
+# dcd73c19c458435c8fe553b5d82f756c
+#: ../../index.txt:14
+msgid ":doc:`Installation guide <install>`"
+msgstr ""
+
+# 89ef80f3e7b54406a2ee6bc6ac77ff81
+#: ../../index.txt:17
+msgid ""
+":doc:`Part 1: Initialization, creating models, the database API <tutorial01>`"
+msgstr ""
+
+# e3c09e3a777a425ca12acb2a813795c2
+#: ../../index.txt:18
+msgid ""
+":doc:`Part 2: Exploring the automatically-generated admin site <tutorial02>`"
+msgstr ""
+
+# 0a2b280ca15d41bc93aff20a57938e27
+#: ../../index.txt:19
+msgid ":doc:`Part 3: Creating the public interface views <tutorial03>`"
+msgstr ""
+
+# de9dd539bb1242f0a1119bef5fb17f49
+#: ../../index.txt:20
+msgid ":doc:`Part 4: Simple form processing and generic views <tutorial04>`"
+msgstr ""
+
+# f33e927627fd4f9f8797423873076b6e
+#: ../../index.txt:21
+msgid ":doc:`Frequently asked questions (FAQ) <faq>`"
+msgstr ""
+
+# de8b0dda037b4f9ea4f648cdf7c3ad3f
+#: ../../index.txt:24
+msgid "Reference"
+msgstr ""
+
+# cb9580ed60f94dd5a5d9b3f5825fad21
+#: ../../index.txt:26
+msgid ":doc:`The django-admin.py and manage.py utilities <django-admin>`"
+msgstr ""
+
+# c049f09afa814fc88ec941c06b0c2af9
+#: ../../index.txt:27
+msgid ""
+"Models: :doc:`Creating models <model-api>` | :doc:`The database API <db-"
+"api>` | :doc:`Transactions <transactions>`"
+msgstr ""
+
+# a85c35665a4242b4b0d6fbf12180a9bf
+#: ../../index.txt:28
+msgid ""
+"Templates: :doc:`Guide for HTML authors <templates>` | :doc:`Guide for "
+"Python programmers <templates_python>`"
+msgstr ""
+
+# d62fa395b9674e82870a11800a0ac149
+#: ../../index.txt:29
+msgid ":doc:`Forms and manipulators <forms>`"
+msgstr ""
+
+# 3ed07b7dbf124771acac18fbc4b91b80
+#: ../../index.txt:30
+msgid ":doc:`Sessions <sessions>`"
+msgstr ""
+
+# 6918732763ff432dbdf84f0ee159960f
+#: ../../index.txt:31
+msgid ":doc:`Caching <cache>`"
+msgstr ""
+
+# e9344cd42a4942058a4c0deba108503c
+#: ../../index.txt:32
+msgid ":doc:`Internationalization <i18n>`"
+msgstr ""
+
+# 4694b2bbae714514a445a09b600a992f
+#: ../../index.txt:33
+msgid ":doc:`Middleware <middleware>`"
+msgstr ""
+
+# e17d098a5b614b13b9dbbc922b573282
+#: ../../index.txt:34
+msgid ":doc:`Settings files <settings>`"
+msgstr ""
+
+# 82cc71d91a2040428b5e42f1a48c5b23
+#: ../../index.txt:35
+msgid ":doc:`URL configuration <url_dispatch>`"
+msgstr ""
+
+# 67206b3fc5fb4e64b5c6d320165202d4
+#: ../../index.txt:36
+msgid ":doc:`Request and response objects <request_response>`"
+msgstr ""
+
+# 12fda6e4ad9e40879feef38fabc71180
+#: ../../index.txt:37
+msgid ":doc:`Generic views <generic_views>`"
+msgstr ""
+
+# c4451da52e6940cead7c075e0b3b2bf1
+#: ../../index.txt:38
+msgid ":doc:`Authentication <authentication>`"
+msgstr ""
+
+# c774abf3e95148d991be2eab0fc7963b
+#: ../../index.txt:39
+msgid ":doc:`Add-on applications (contrib) <add_ons>`"
+msgstr ""
+
+# 0e5d0be91fd849719378cfb74a921a5c
+#: ../../index.txt:41
+msgid ":doc:`Syndication feeds (RSS and Atom) <syndication_feeds>`"
+msgstr ""
+
+# 22d518813ce547ca995d002dac80ecdb
+#: ../../index.txt:42
+msgid ":doc:`Flatpages <flatpages>`"
+msgstr ""
+
+# 0f3c3730638041969a2924b3ab229428
+#: ../../index.txt:43
+msgid ":doc:`Redirects <redirects>`"
+msgstr ""
+
+# 8b767dbaceb141de82644a2135174997
+#: ../../index.txt:44
+msgid ":doc:`Sites <sites>`"
+msgstr ""
+
+# c1f8eef89d0344048aeb1d7d8e4d7bb2
+#: ../../index.txt:47
+msgid "Deployment"
+msgstr ""
+
+# 8f711be631054ec19b2bc9caa8669a77
+#: ../../index.txt:49
+msgid ":doc:`Using Django with mod_python <modpython>`"
+msgstr ""
+
+# a5cbd3b3da7b4008b5174dc5a9377c7e
+#: ../../index.txt:50
+msgid ":doc:`Using Django with FastCGI <fastcgi>`"
+msgstr ""
+
+# 1b347ce6906e4db6adc084d59faef1b7
+#: ../../index.txt:53
+msgid "Solving specific problems"
+msgstr ""
+
+# c8f9672dccae4947b7daef0a8ce7bb56
+#: ../../index.txt:55
+msgid ""
+":doc:`Authenticating against Django's user database from Apache "
+"<apache_auth>`"
+msgstr ""
+
+# 4fb6ee6e51544d87b90f09ad802ae69d
+#: ../../index.txt:56
+msgid ":doc:`Serving static/media files <static_files>`"
+msgstr ""
+
+# b0b5ea6d0b864db194e74eea7877ea77
+#: ../../index.txt:57
+msgid ":doc:`Sending e-mail <email>`"
+msgstr ""
+
+# 65cbf6fa3fa2417c96fbfe1085461535
+#: ../../index.txt:58
+msgid ""
+":doc:`Integrating with (introspecting) a legacy database <legacy_databases>`"
+msgstr ""
+
+# a9e7194b5977407fa42007f79b1cb57f
+#: ../../index.txt:59
+msgid ":doc:`Outputting PDFs dynamically <outputting_pdf>`"
+msgstr ""
+
+# 0237b7fcab1948c78d3c7def93dbb190
+#: ../../index.txt:60
+msgid ":doc:`Outputting CSV dynamically <outputting_csv>`"
+msgstr ""
+
+# 4ad0a2716bee4040ab55e6e72d7a013e
+#: ../../index.txt:63
+msgid "Et cetera"
+msgstr ""
+
+# b81b1e7f6b134432b843139e6a9625bd
+#: ../../index.txt:65
+msgid ":doc:`Design philosophies <design_philosophies>`"
+msgstr ""
+
+# fb1f96aabb994630a9a6f84bf76542eb
+#: ../../index.txt:66
+msgid ":doc:`How to contribute to Django <contributing>`"
+msgstr ""
+
+# 53ebb8c0524a400c809d484e545d64ce
+#: ../../index.txt:67
+msgid ":doc:`Django admin CSS guide <admin_css>`"
+msgstr ""
+
+# 8dc77db3c1294c62a182c71c719947dd
+#: ../../index.txt:68
+msgid ":doc:`API stability <api_stability>`"
+msgstr ""
+
+# da532f353d444b57894ed58c58e53800
+#: ../../index.txt:69
+msgid "`Backwards-incompatible changes`_"
+msgstr ""
+
+# 19a4a97d81c04b6abffed05fe3ab67ea
+#: ../../index.txt:74
+msgid "Release notes"
+msgstr ""
+
+# 4392fbc0b99c4b8a8af171ea04383607
+#: ../../index.txt:76
+msgid ":doc:`Version 0.95 <release_notes_0.95>`"
+msgstr ""

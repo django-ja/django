@@ -1,0 +1,1291 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# fe6cc18e680a445e9c86bbe445e0b2f9
+#: ../../generic_views.txt:3
+msgid "Generic views"
+msgstr ""
+
+# 95f17b4436454b17b8729da514298076
+#: ../../generic_views.txt:5
+msgid ""
+"Writing Web applications can be monotonous, because we repeat certain "
+"patterns again and again. In Django, the most common of these patterns have "
+"been abstracted into \"generic views\" that let you quickly provide common "
+"views of an object without actually needing to write any Python code."
+msgstr ""
+
+# d0198041932d4895a423a5f1daf6e82e
+#: ../../generic_views.txt:10
+msgid "Django's generic views contain the following:"
+msgstr ""
+
+# 4aacd997c1014e869b3b752e52575a5a
+#: ../../generic_views.txt:12
+msgid ""
+"A set of views for doing list/detail interfaces (for example, Django's :doc:"
+"`documentation index <index>` and :doc:`detail pages <faq>`)."
+msgstr ""
+
+# 38055b7c3a2f4fee93ece11923b1026c
+#: ../../generic_views.txt:15
+msgid ""
+"A set of views for year/month/day archive pages and associated detail and "
+"\"latest\" pages (for example, the Django weblog's year_, month_, day_, "
+"detail_, and latest_ pages)."
+msgstr ""
+
+# 5856955af5c24798bc95e23cb864bb9d
+#: ../../generic_views.txt:19
+msgid "A set of views for creating, editing, and deleting objects."
+msgstr ""
+
+# 4404f1096cc94b50b1528947883a399a
+#: ../../generic_views.txt:27
+msgid ""
+"All of these views are used by creating configuration dictionaries in your "
+"URLconf files and passing those dictionaries as the third member of the "
+"URLconf tuple for a given pattern. For example, here's the URLconf for the "
+"simple weblog app that drives the blog on djangoproject.com::"
+msgstr ""
+
+# f3312501b4cd463d811b963c96ab90f2
+#: ../../generic_views.txt:48
+msgid ""
+"As you can see, this URLconf defines a few options in ``info_dict``. "
+"``'queryset'`` gives the generic view a ``QuerySet`` of objects to use (in "
+"this case, all of the ``Entry`` objects) and tells the generic view which "
+"model is being used."
+msgstr ""
+
+# 64d0ef8b1f4d4d01a06108f174f420c1
+#: ../../generic_views.txt:53
+msgid ""
+"Documentation of each generic view follows, along with a list of all keyword "
+"arguments that a generic view expects. Remember that as in the example "
+"above, arguments may either come from the URL pattern (as ``month``, "
+"``day``, ``year``, etc. do above) or from the additional-information "
+"dictionary (as for ``queryset``, ``date_field``, etc.)."
+msgstr ""
+
+# 287bd2b2295d4e0b9a53bd40e9b36a1c
+#: ../../generic_views.txt:59
+msgid ""
+"Most generic views require the ``queryset`` key, which is a ``QuerySet`` "
+"instance; see the :doc:`database API docs <db-api>` for more information "
+"about ``Queryset`` objects."
+msgstr ""
+
+# b06c957f841b4bb8bd3663fc011a4aec
+#: ../../generic_views.txt:63
+msgid ""
+"Most views also take an optional ``extra_context`` dictionary that you can "
+"use to pass any auxiliary information you wish to the view. The values in "
+"the ``extra_context`` dictionary can be either functions (or other "
+"callables) or other objects. Functions are evaluated just before they are "
+"passed to the template. However, note that QuerySets retrieve and cache "
+"their data when they are first evaluated, so if you want to pass in a "
+"QuerySet via ``extra_context`` that is always fresh you need to wrap it in a "
+"function or lambda that returns the QuerySet."
+msgstr ""
+
+# a2882d050d28450e98b97fe770d5bc18
+#: ../../generic_views.txt:73
+msgid "\"Simple\" generic views"
+msgstr ""
+
+# 3dcf064209fb4d7c95b1bc541f074927
+#: ../../generic_views.txt:75
+msgid ""
+"The ``django.views.generic.simple`` module contains simple views to handle a "
+"couple of common cases: rendering a template when no view logic is needed, "
+"and issuing a redirect."
+msgstr ""
+
+# 0e28efd22f264b668c90f8007ef8ddd8
+#: ../../generic_views.txt:80
+msgid "``django.views.generic.simple.direct_to_template``"
+msgstr ""
+
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+# 64064e281d67460c92ba975bbbec8516
+#: ../../generic_views.txt:82 ../../generic_views.txt:107
+#: ../../generic_views.txt:144 ../../generic_views.txt:217
+#: ../../generic_views.txt:302 ../../generic_views.txt:390
+#: ../../generic_views.txt:462 ../../generic_views.txt:552
+#: ../../generic_views.txt:561 ../../generic_views.txt:662
+#: ../../generic_views.txt:770 ../../generic_views.txt:841
+#: ../../generic_views.txt:908 ../../generic_views.txt:992
+msgid "**Description:**"
+msgstr ""
+
+# be6bcd6ee24f499aa5a1db6c259ec66a
+#: ../../generic_views.txt:84
+msgid ""
+"Renders a given template, passing it a ``{{ params }}`` template variable, "
+"which is a dictionary of the parameters captured in the URL."
+msgstr ""
+
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+# 4a92c421d9714635835cc272da5898f0
+#: ../../generic_views.txt:87 ../../generic_views.txt:116
+#: ../../generic_views.txt:150 ../../generic_views.txt:223
+#: ../../generic_views.txt:308 ../../generic_views.txt:395
+#: ../../generic_views.txt:468 ../../generic_views.txt:567
+#: ../../generic_views.txt:666 ../../generic_views.txt:774
+#: ../../generic_views.txt:847 ../../generic_views.txt:914
+#: ../../generic_views.txt:999
+msgid "**Required arguments:**"
+msgstr ""
+
+# f409821f26b44fe7949b7e0728975181
+#: ../../generic_views.txt:89
+msgid "``template``: The full name of a template to use."
+msgstr ""
+
+# c50bab3eadba47408e21d72184746c73
+# c50bab3eadba47408e21d72184746c73
+#: ../../generic_views.txt:91 ../../generic_views.txt:121
+msgid "**Example:**"
+msgstr ""
+
+# b8bc3a1435704c02a3f3dd8668aff5fe
+#: ../../generic_views.txt:93
+msgid "Given the following URL patterns::"
+msgstr ""
+
+# 8ef7c5cbb6f844f0a3119b300bd0602e
+#: ../../generic_views.txt:100
+msgid ""
+"... a request to ``/foo/`` would render the template ``foo_index.html``, and "
+"a request to ``/foo/15/`` would render the ``foo_detail.html`` with a "
+"context variable ``{{ params.id }}`` that is set to ``15``."
+msgstr ""
+
+# aa12dd28caf445ef9205ed4a3d0c7e6a
+#: ../../generic_views.txt:105
+msgid "``django.views.generic.simple.redirect_to``"
+msgstr ""
+
+# 3fddfcf185204ef3a4c7d2b31cb7dbf4
+#: ../../generic_views.txt:109
+msgid "Redirects to a given URL."
+msgstr ""
+
+# 3f3dd200902b440882dbf046a2eac572
+#: ../../generic_views.txt:111
+msgid ""
+"The given URL may contain dictionary-style string formatting, which will be "
+"interpolated against the parameters captured in the URL."
+msgstr ""
+
+# 045905fd7d62458e992da0a00f7e7eb1
+#: ../../generic_views.txt:114
+msgid ""
+"If the given URL is ``None``, Django will return an ``HttpResponseGone`` "
+"(410)."
+msgstr ""
+
+# 563c9db7b5e94f12bd1255c947c8ec57
+#: ../../generic_views.txt:118
+msgid ""
+"``url``: The URL to redirect to, as a string. Or ``None`` to raise a 410 "
+"(Gone) HTTP error."
+msgstr ""
+
+# 2502fd10388b4e92be6f05d0d50aa3b3
+#: ../../generic_views.txt:123
+msgid "This example redirects from ``/foo/<id>/`` to ``/bar/<id>/``::"
+msgstr ""
+
+# 715c634359a94f1fbe41b55c97106284
+#: ../../generic_views.txt:129
+msgid "This example returns a 410 HTTP error for requests to ``/bar/``::"
+msgstr ""
+
+# 701dd34f30b247d08f45dc460a783f27
+#: ../../generic_views.txt:136
+msgid "Date-based generic views"
+msgstr ""
+
+# 4ed1a0213470492595adde30bcc32d6f
+#: ../../generic_views.txt:138
+msgid ""
+"Date-based generic views (in the module ``django.views.generic.date_based``) "
+"are views for displaying drilldown pages for date-based data."
+msgstr ""
+
+# 02f6cfc14dc545f3b30f8222d6b6c377
+#: ../../generic_views.txt:142
+msgid "``django.views.generic.date_based.archive_index``"
+msgstr ""
+
+# d6ea4997a4cf4a44a8c82f47e4b49ccf
+#: ../../generic_views.txt:146
+msgid ""
+"A top-level index page showing the \"latest\" objects, by date. Objects with "
+"a date in the *future* are not included unless you set ``allow_future`` to "
+"``True``."
+msgstr ""
+
+# 127b3b893c9a4c73bedf656f7874a9c5
+# 127b3b893c9a4c73bedf656f7874a9c5
+# 127b3b893c9a4c73bedf656f7874a9c5
+# 127b3b893c9a4c73bedf656f7874a9c5
+# 127b3b893c9a4c73bedf656f7874a9c5
+#: ../../generic_views.txt:152 ../../generic_views.txt:227
+#: ../../generic_views.txt:315 ../../generic_views.txt:402
+#: ../../generic_views.txt:478
+msgid "``queryset``: A ``QuerySet`` of objects for which the archive serves."
+msgstr ""
+
+# 7862e96b930f41e5abd1ef0b3e1a31ec
+# 7862e96b930f41e5abd1ef0b3e1a31ec
+# 7862e96b930f41e5abd1ef0b3e1a31ec
+# 7862e96b930f41e5abd1ef0b3e1a31ec
+# 7862e96b930f41e5abd1ef0b3e1a31ec
+#: ../../generic_views.txt:154 ../../generic_views.txt:229
+#: ../../generic_views.txt:317 ../../generic_views.txt:404
+#: ../../generic_views.txt:480
+msgid ""
+"``date_field``: The name of the ``DateField`` or ``DateTimeField`` in the "
+"``QuerySet``'s model that the date-based archive should use to determine the "
+"objects on the page."
+msgstr ""
+
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+# 4f04865cf2f64f2e8ed5064ef6a1c32b
+#: ../../generic_views.txt:158 ../../generic_views.txt:233
+#: ../../generic_views.txt:321 ../../generic_views.txt:408
+#: ../../generic_views.txt:484 ../../generic_views.txt:592
+#: ../../generic_views.txt:670 ../../generic_views.txt:787
+#: ../../generic_views.txt:852 ../../generic_views.txt:928
+#: ../../generic_views.txt:1016
+msgid "**Optional arguments:**"
+msgstr ""
+
+# f10cfd853daa467785d4df92497f2991
+#: ../../generic_views.txt:160
+msgid ""
+"``num_latest``: The number of latest objects to send to the template "
+"context. By default, it's 15."
+msgstr ""
+
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+# 26de4809c7ef496ab459e5af79c34823
+#: ../../generic_views.txt:163 ../../generic_views.txt:235
+#: ../../generic_views.txt:329 ../../generic_views.txt:410
+#: ../../generic_views.txt:495 ../../generic_views.txt:603
+#: ../../generic_views.txt:679 ../../generic_views.txt:789
+#: ../../generic_views.txt:868 ../../generic_views.txt:944
+#: ../../generic_views.txt:1025
+msgid ""
+"``template_name``: The full name of a template to use in rendering the page. "
+"This lets you override the default template name (see below)."
+msgstr ""
+
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+# 63987c56115f4381af0198c5a0eafbd8
+#: ../../generic_views.txt:166 ../../generic_views.txt:238
+#: ../../generic_views.txt:332 ../../generic_views.txt:413
+#: ../../generic_views.txt:498 ../../generic_views.txt:615
+#: ../../generic_views.txt:682 ../../generic_views.txt:801
+#: ../../generic_views.txt:871 ../../generic_views.txt:947
+#: ../../generic_views.txt:1028
+msgid ""
+"``template_loader``: The template loader to use when loading the template. "
+"By default, it's ``django.template.loader``."
+msgstr ""
+
+# 0c93fb5d97424df9a065589b85f4f800
+#: ../../generic_views.txt:169
+msgid ""
+"``extra_context``: A dictionary of values to add to the template context. By "
+"default, this is an empty dictionary. dictionary is callable, the generic "
+"view will call it just before rendering the template."
+msgstr ""
+
+# 7ca56f58e0ba4b5485d5883669bc66f9
+# 7ca56f58e0ba4b5485d5883669bc66f9
+# 7ca56f58e0ba4b5485d5883669bc66f9
+# 7ca56f58e0ba4b5485d5883669bc66f9
+# 7ca56f58e0ba4b5485d5883669bc66f9
+#: ../../generic_views.txt:174 ../../generic_views.txt:246
+#: ../../generic_views.txt:340 ../../generic_views.txt:506
+#: ../../generic_views.txt:690
+msgid ""
+"``allow_empty``: A boolean specifying whether to display the page if no "
+"objects are available. If this is ``False`` and no objects are available, "
+"the view will raise a 404 instead of displaying an empty page. By default, "
+"this is ``False``."
+msgstr ""
+
+# 270d5d7ae86d406d93de9d2eede37389
+# fde99a9aadf346678e3f360a4b10783e
+# 255f14e49814447b9cb6622675616cd5
+# 77bd910768c44249abf29d414e0a2a8e
+# 255f14e49814447b9cb6622675616cd5
+# f728f3d9eca74908ab81197cd73ea24c
+# 0414d1f6b4e74ce6b0c697368b5f8e19
+# 255f14e49814447b9cb6622675616cd5
+# 270d5d7ae86d406d93de9d2eede37389
+# fde99a9aadf346678e3f360a4b10783e
+# dbae7a473ab44a9c9e1ff3caa0da1283
+#: ../../generic_views.txt:179 ../../generic_views.txt:251
+#: ../../generic_views.txt:345 ../../generic_views.txt:426
+#: ../../generic_views.txt:511 ../../generic_views.txt:623
+#: ../../generic_views.txt:695 ../../generic_views.txt:809
+#: ../../generic_views.txt:879 ../../generic_views.txt:955
+#: ../../generic_views.txt:1036
+msgid ""
+"``context_processors``: A list of template-context processors to apply to "
+"the view's template. See the :doc:`RequestContext docs <templates_python>`."
+msgstr ""
+
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+# ea6f9c451c3340749728d639f9faafdb
+#: ../../generic_views.txt:182 ../../generic_views.txt:266
+#: ../../generic_views.txt:353 ../../generic_views.txt:434
+#: ../../generic_views.txt:519 ../../generic_views.txt:629
+#: ../../generic_views.txt:703 ../../generic_views.txt:815
+msgid ""
+"``mimetype``: The MIME type to use for the resulting document. Defaults to "
+"the value of the ``DEFAULT_MIME_TYPE`` setting."
+msgstr ""
+
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+# 3e5eb9b6edf345f89151b2064e3f8dd3
+#: ../../generic_views.txt:185 ../../generic_views.txt:269
+#: ../../generic_views.txt:356 ../../generic_views.txt:437
+#: ../../generic_views.txt:522 ../../generic_views.txt:632
+msgid ""
+"``allow_future``: A boolean specifying whether to include \"future\" objects "
+"on this page, where \"future\" means objects in which the field specified in "
+"``date_field`` is greater than the current date/time. By default, this is "
+"``False``."
+msgstr ""
+
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+# df901c60c1e1475992eab5b9eda50974
+#: ../../generic_views.txt:190 ../../generic_views.txt:274
+#: ../../generic_views.txt:361 ../../generic_views.txt:442
+#: ../../generic_views.txt:527 ../../generic_views.txt:637
+#: ../../generic_views.txt:706 ../../generic_views.txt:818
+#: ../../generic_views.txt:882 ../../generic_views.txt:961
+#: ../../generic_views.txt:1042
+msgid "**Template name:**"
+msgstr ""
+
+# 746f55fa2a9c475aa1ec8a87997c43c8
+#: ../../generic_views.txt:192
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_archive.html`` by default, where:"
+msgstr ""
+
+# 0436ab82b54f4602a648dab8fd828244
+#: ../../generic_views.txt:196
+msgid "``StaffMember``, that'd be ``staffmember``."
+msgstr ""
+
+# ac2ab33164704e3eae8a7a665fadc055
+#: ../../generic_views.txt:199
+msgid ""
+"your model's app. For example, if your model lives in ``apps/blog/models."
+"py``, that'd be ``blog``."
+msgstr ""
+
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+# 7f9fa6c47cfb40dfbca2a764aabf821f
+#: ../../generic_views.txt:202 ../../generic_views.txt:279
+#: ../../generic_views.txt:366 ../../generic_views.txt:447
+#: ../../generic_views.txt:532 ../../generic_views.txt:642
+#: ../../generic_views.txt:711 ../../generic_views.txt:823
+#: ../../generic_views.txt:887 ../../generic_views.txt:966
+#: ../../generic_views.txt:1047
+msgid "**Template context:**"
+msgstr ""
+
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+# fe85081d1ce2492f8a261fdc514fc130
+#: ../../generic_views.txt:204 ../../generic_views.txt:281
+#: ../../generic_views.txt:368 ../../generic_views.txt:449
+#: ../../generic_views.txt:534 ../../generic_views.txt:644
+#: ../../generic_views.txt:713 ../../generic_views.txt:825
+#: ../../generic_views.txt:889 ../../generic_views.txt:968
+#: ../../generic_views.txt:1049
+msgid "In addition to ``extra_context``, the template's context will be:"
+msgstr ""
+
+# 75104658f6624b4bb6cfdc955d52e567
+#: ../../generic_views.txt:206
+msgid ""
+"``date_list``: A list of ``datetime.date`` objects representing all years "
+"that have objects available according to ``queryset``. These are ordered in "
+"reverse. This is equivalent to ``queryset.dates(date_field, 'year')[::-1]``."
+msgstr ""
+
+# 75d408afe69d46a39bc885b4fd7e5406
+#: ../../generic_views.txt:210
+msgid ""
+"``latest``: The ``num_latest`` objects in the system, ordered descending by "
+"``date_field``. For example, if ``num_latest`` is ``10``, then ``latest`` "
+"will be a list of the latest 10 objects in ``queryset``."
+msgstr ""
+
+# 20a38354c0a74cdb8ab5482c454f5247
+#: ../../generic_views.txt:215
+msgid "``django.views.generic.date_based.archive_year``"
+msgstr ""
+
+# 3ecf490b251a4af1bbb1638dd89bc29b
+#: ../../generic_views.txt:219
+msgid ""
+"A yearly archive page showing all available months in a given year. Objects "
+"with a date in the *future* are not displayed unless you set "
+"``allow_future`` to ``True``."
+msgstr ""
+
+# 0ad04d05261f44cd885790cc5dd41187
+#: ../../generic_views.txt:225
+msgid "``year``: The four-digit year for which the archive serves."
+msgstr ""
+
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+# 12c235c923ca414e80064b7c3aaf0726
+#: ../../generic_views.txt:241 ../../generic_views.txt:335
+#: ../../generic_views.txt:416 ../../generic_views.txt:501
+#: ../../generic_views.txt:618 ../../generic_views.txt:685
+#: ../../generic_views.txt:804 ../../generic_views.txt:874
+#: ../../generic_views.txt:950 ../../generic_views.txt:1031
+msgid ""
+"``extra_context``: A dictionary of values to add to the template context. By "
+"default, this is an empty dictionary. If a value in the dictionary is "
+"callable, the generic view will call it just before rendering the template."
+msgstr ""
+
+# 46cb86b4f634476fadabd2e6d9ba0554
+# 46cb86b4f634476fadabd2e6d9ba0554
+# 46cb86b4f634476fadabd2e6d9ba0554
+# 46cb86b4f634476fadabd2e6d9ba0554
+# 46cb86b4f634476fadabd2e6d9ba0554
+#: ../../generic_views.txt:255 ../../generic_views.txt:349
+#: ../../generic_views.txt:430 ../../generic_views.txt:515
+#: ../../generic_views.txt:699
+msgid ""
+"to use in the template context. By default, this is ``'object'``. The view "
+"will append ``'_list'`` to the value of this parameter in determining the "
+"variable's name."
+msgstr ""
+
+# e03a3f1b9c1f4ca68d5bb7706a705bd1
+#: ../../generic_views.txt:259
+msgid ""
+"``make_object_list``: A boolean specifying whether to retrieve the full list "
+"of objects for this year and pass those to the template. If ``True``, this "
+"list of objects will be made available to the template as ``object_list``. "
+"(The name ``object_list`` may be different; see the docs for ``object_list`` "
+"in the \"Template context\" section below.) By default, this is ``False``."
+msgstr ""
+
+# ceb8d57ea5c845688fe907bca9db4709
+#: ../../generic_views.txt:276
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_archive_year.html`` by default."
+msgstr ""
+
+# aeec1bfd1d81481f99f91ae5ce6ff769
+#: ../../generic_views.txt:283
+msgid ""
+"``date_list``: A list of ``datetime.date`` objects representing all months "
+"that have objects available in the given year, according to ``queryset``, in "
+"ascending order."
+msgstr ""
+
+# d43e4e479b13487bb411dee4674874c5
+#: ../../generic_views.txt:287
+msgid "``year``: The given year, as a four-character string."
+msgstr ""
+
+# cd811b0db67042dba3913176f4ab0a48
+#: ../../generic_views.txt:289
+msgid ""
+"``object_list``: If the ``make_object_list`` parameter is ``True``, this "
+"will be set to a list of objects available for the given year, ordered by "
+"the date field. This variable's name depends on the ``template_object_name`` "
+"parameter, which is ``'object'`` by default. If ``template_object_name`` is "
+"``'foo'``, this variable's name will be ``foo_list``."
+msgstr ""
+
+# 92a44efb31f24ab6aa825822e176a128
+#: ../../generic_views.txt:296
+msgid ""
+"If ``make_object_list`` is ``False``, ``object_list`` will be passed to the "
+"template as an empty list."
+msgstr ""
+
+# 6b33fd654cd94044892b29b48422a452
+#: ../../generic_views.txt:300
+msgid "``django.views.generic.date_based.archive_month``"
+msgstr ""
+
+# 87c4c56084c640dd9244add1cbafba13
+#: ../../generic_views.txt:304
+msgid ""
+"A monthly archive page showing all objects in a given month. Objects with a "
+"date in the *future* are not displayed unless you set ``allow_future`` to "
+"``True``."
+msgstr ""
+
+# a30bb64031634912abbf6e39a04c7599
+# a30bb64031634912abbf6e39a04c7599
+# a30bb64031634912abbf6e39a04c7599
+#: ../../generic_views.txt:310 ../../generic_views.txt:397
+#: ../../generic_views.txt:470
+msgid "``year``: The four-digit year for which the archive serves (a string)."
+msgstr ""
+
+# 062a571a219b45889309bf4a0a2795f2
+# 062a571a219b45889309bf4a0a2795f2
+#: ../../generic_views.txt:312 ../../generic_views.txt:472
+msgid ""
+"``month``: The month for which the archive serves, formatted according to "
+"the ``month_format`` argument."
+msgstr ""
+
+# 2efe3ce8a6f84367949b4a9dbd42f0ed
+# 2efe3ce8a6f84367949b4a9dbd42f0ed
+# 2efe3ce8a6f84367949b4a9dbd42f0ed
+#: ../../generic_views.txt:323 ../../generic_views.txt:486
+#: ../../generic_views.txt:594
+msgid ""
+"``month_format``: A format string that regulates what format the ``month`` "
+"parameter uses. This should be in the syntax accepted by Python's ``time."
+"strftime``. (See the `strftime docs`_.) It's set to ``\"%b\"`` by default, "
+"which is a three-letter month abbreviation. To change it to use numbers, use "
+"``\"%m\"``."
+msgstr ""
+
+# a312e48dde7946718c2c140d5e187db1
+#: ../../generic_views.txt:363
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_archive_month.html`` by default."
+msgstr ""
+
+# 751164dccd104f95b3da5b55deb85116
+#: ../../generic_views.txt:370
+msgid "``month``: A ``datetime.date`` object representing the given month."
+msgstr ""
+
+# ed1435569d43418f85ecfc20d347f69e
+#: ../../generic_views.txt:372
+msgid ""
+"``next_month``: A ``datetime.date`` object representing the first day of the "
+"next month. If the next month is in the future, this will be ``None``."
+msgstr ""
+
+# a699403837374476a31ed0141a14c8c5
+#: ../../generic_views.txt:376
+msgid ""
+"``previous_month``: A ``datetime.date`` object representing the first day of "
+"the previous month. Unlike ``next_month``, this will never be ``None``."
+msgstr ""
+
+# 268248b0893e447c814073e61f033922
+#: ../../generic_views.txt:380
+msgid ""
+"``object_list``: A list of objects available for the given month. This "
+"variable's name depends on the ``template_object_name`` parameter, which is "
+"``'object'`` by default. If ``template_object_name`` is ``'foo'``, this "
+"variable's name will be ``foo_list``."
+msgstr ""
+
+# 4ffd8010e7a040cc88f12ff9a74e771d
+#: ../../generic_views.txt:388
+msgid "``django.views.generic.date_based.archive_week``"
+msgstr ""
+
+# 41f6265176f948f98bd6e94448dc8581
+#: ../../generic_views.txt:392
+msgid ""
+"A weekly archive page showing all objects in a given week. Objects with a "
+"date in the *future* are not displayed unless you set ``allow_future`` to "
+"``True``."
+msgstr ""
+
+# 32b773c903244ed29929f98bb1ae21d2
+#: ../../generic_views.txt:399
+msgid ""
+"``week``: The week of the year for which the archive serves (a string). "
+"Weeks start with Sunday."
+msgstr ""
+
+# 0d86b4cbcd814da0b1800107e9fde508
+#: ../../generic_views.txt:421
+msgid ""
+"``allow_empty``: A boolean specifying whether to display the page if no "
+"objects are available. If this is ``False`` and no objects are available, "
+"the view will raise a 404 instead of displaying an empty page. By default, "
+"this is ``True``."
+msgstr ""
+
+# 5cff99ddf00d4f6e917e23eb7c2f4651
+#: ../../generic_views.txt:444
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_archive_week.html`` by default."
+msgstr ""
+
+# 3aafc4a1d7594b72b957f411dc684ee3
+#: ../../generic_views.txt:451
+msgid ""
+"``week``: A ``datetime.date`` object representing the first day of the given "
+"week."
+msgstr ""
+
+# 0597b62d564c4b2385c5ca08fd93d1db
+#: ../../generic_views.txt:454
+msgid ""
+"``object_list``: A list of objects available for the given week. This "
+"variable's name depends on the ``template_object_name`` parameter, which is "
+"``'object'`` by default. If ``template_object_name`` is ``'foo'``, this "
+"variable's name will be ``foo_list``."
+msgstr ""
+
+# 5a85fdb31e6f4a0c92e8689493013f1e
+#: ../../generic_views.txt:460
+msgid "``django.views.generic.date_based.archive_day``"
+msgstr ""
+
+# 003143b9f7d34c14b841a285c346e872
+#: ../../generic_views.txt:464
+msgid ""
+"A day archive page showing all objects in a given day. Days in the future "
+"throw a 404 error, regardless of whether any objects exist for future days, "
+"unless you set ``allow_future`` to ``True``."
+msgstr ""
+
+# 213fef0f619940b790a7475004e38b8e
+#: ../../generic_views.txt:475
+msgid ""
+"``day``: The day for which the archive serves, formatted according to the "
+"``day_format`` argument."
+msgstr ""
+
+# 2edc60c34fd341a49afe82f299a4d847
+# 2edc60c34fd341a49afe82f299a4d847
+#: ../../generic_views.txt:492 ../../generic_views.txt:600
+msgid ""
+"``day_format``: Like ``month_format``, but for the ``day`` parameter. It "
+"defaults to ``\"%d\"`` (day of the month as a decimal number, 01-31)."
+msgstr ""
+
+# e4c7401899014f90a26c6dcf3ea348c2
+#: ../../generic_views.txt:529
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_archive_day.html`` by default."
+msgstr ""
+
+# 9d723169d5794116adfb5c2b4dad597a
+#: ../../generic_views.txt:536
+msgid "``day``: A ``datetime.date`` object representing the given day."
+msgstr ""
+
+# 7529ecb9d0a448818936d947b42981d7
+#: ../../generic_views.txt:538
+msgid ""
+"``next_day``: A ``datetime.date`` object representing the next day. If the "
+"next day is in the future, this will be ``None``."
+msgstr ""
+
+# 6827ced0a69342338e406bfe85fa97b8
+#: ../../generic_views.txt:541
+msgid ""
+"``previous_day``: A ``datetime.date`` object representing the given day. "
+"Unlike ``next_day``, this will never be ``None``."
+msgstr ""
+
+# 32b29976463a424ba1dbed8038a21209
+#: ../../generic_views.txt:544
+msgid ""
+"``object_list``: A list of objects available for the given day. This "
+"variable's name depends on the ``template_object_name`` parameter, which is "
+"``'object'`` by default. If ``template_object_name`` is ``'foo'``, this "
+"variable's name will be ``foo_list``."
+msgstr ""
+
+# e554b6cb53f3483bbf61a927fdab5c29
+#: ../../generic_views.txt:550
+msgid "``django.views.generic.date_based.archive_today``"
+msgstr ""
+
+# 141220b72c8c4f88b8a9ff8c8683263c
+#: ../../generic_views.txt:554
+msgid ""
+"A day archive page showing all objects for *today*. This is exactly the same "
+"as ``archive_day``, except the ``year``/``month``/``day`` arguments are not "
+"used, and today's date is used instead."
+msgstr ""
+
+# d873a8b49fba4147a5dc35bd7ed2a0cb
+#: ../../generic_views.txt:559
+msgid "``django.views.generic.date_based.object_detail``"
+msgstr ""
+
+# 17c4384d11854aa999d35e8d0b385241
+#: ../../generic_views.txt:563
+msgid ""
+"A page representing an individual object. If the object has a date value in "
+"the future, the view will throw a 404 error by default, unless you set "
+"``allow_future`` to ``True``."
+msgstr ""
+
+# 2f635407253d4b5fa6585a5d5ee5ad48
+#: ../../generic_views.txt:569
+msgid "``year``: The object's four-digit year (a string)."
+msgstr ""
+
+# 34f1ea2a7a0744fc9133a695912e845f
+#: ../../generic_views.txt:571
+msgid ""
+"``month``: The object's month , formatted according to the ``month_format`` "
+"argument."
+msgstr ""
+
+# 3a0f8250f9c64fb0a14c3485f9509198
+#: ../../generic_views.txt:574
+msgid ""
+"``day``: The object's day , formatted according to the ``day_format`` "
+"argument."
+msgstr ""
+
+# 524f214115cf4476933e3f3da366fd0c
+# 524f214115cf4476933e3f3da366fd0c
+#: ../../generic_views.txt:577 ../../generic_views.txt:776
+msgid "``queryset``: A ``QuerySet`` that contains the object."
+msgstr ""
+
+# 1571605942bd43d39e7476c115291eae
+#: ../../generic_views.txt:579
+msgid ""
+"``date_field``: The name of the ``DateField`` or ``DateTimeField`` in the "
+"``QuerySet``'s model that the generic view should use to look up the object "
+"according to ``year``, ``month`` and ``day``."
+msgstr ""
+
+# 886e4d807bf74124b42635778056c55b
+# 886e4d807bf74124b42635778056c55b
+# 886e4d807bf74124b42635778056c55b
+# 886e4d807bf74124b42635778056c55b
+#: ../../generic_views.txt:583 ../../generic_views.txt:778
+#: ../../generic_views.txt:919 ../../generic_views.txt:1004
+msgid "Either ``object_id`` or (``slug`` *and* ``slug_field``) is required."
+msgstr ""
+
+# b6508ef3bcc142cfa04f55d2ca5968fa
+# b6508ef3bcc142cfa04f55d2ca5968fa
+# b6508ef3bcc142cfa04f55d2ca5968fa
+# b6508ef3bcc142cfa04f55d2ca5968fa
+#: ../../generic_views.txt:585 ../../generic_views.txt:780
+#: ../../generic_views.txt:921 ../../generic_views.txt:1006
+msgid ""
+"If you provide ``object_id``, it should be the value of the primary-key "
+"field for the object being displayed on this page."
+msgstr ""
+
+# 5be5a4e294d547898439388d2d261fff
+# 5be5a4e294d547898439388d2d261fff
+# 5be5a4e294d547898439388d2d261fff
+# 5be5a4e294d547898439388d2d261fff
+#: ../../generic_views.txt:588 ../../generic_views.txt:783
+#: ../../generic_views.txt:924 ../../generic_views.txt:1009
+msgid ""
+"Otherwise, ``slug`` should be the slug of the given object, and "
+"``slug_field`` should be the name of the slug field in the ``QuerySet``'s "
+"model."
+msgstr ""
+
+# a4fd7aeaa56145968537f26187ce52c9
+# a4fd7aeaa56145968537f26187ce52c9
+#: ../../generic_views.txt:606 ../../generic_views.txt:792
+msgid ""
+"``template_name_field``: The name of a field on the object whose value is "
+"the template name to use. This lets you store template names in the data. In "
+"other words, if your object has a field ``'the_template'`` that contains a "
+"string ``'foo.html'``, and you set ``template_name_field`` to "
+"``'the_template'``, then the generic view for this object will use the "
+"template ``'foo.html'``."
+msgstr ""
+
+# cd5a023bbd3845799134c10e1ff6161e
+# cd5a023bbd3845799134c10e1ff6161e
+#: ../../generic_views.txt:613 ../../generic_views.txt:799
+msgid "It's a bit of a brain-bender, but it's useful in some cases."
+msgstr ""
+
+# f458c0aa12a8475d91f4c82197703b52
+# f458c0aa12a8475d91f4c82197703b52
+# f458c0aa12a8475d91f4c82197703b52
+# f458c0aa12a8475d91f4c82197703b52
+#: ../../generic_views.txt:627 ../../generic_views.txt:813
+#: ../../generic_views.txt:959 ../../generic_views.txt:1040
+msgid "to use in the template context. By default, this is ``'object'``."
+msgstr ""
+
+# 87e772b565224232af8e96a0c35883bc
+# 87e772b565224232af8e96a0c35883bc
+#: ../../generic_views.txt:639 ../../generic_views.txt:820
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_detail.html`` by default."
+msgstr ""
+
+# 439de4d0bdf64e958d216612263f6f7c
+# 439de4d0bdf64e958d216612263f6f7c
+#: ../../generic_views.txt:646 ../../generic_views.txt:827
+msgid ""
+"``object``: The object. This variable's name depends on the "
+"``template_object_name`` parameter, which is ``'object'`` by default. If "
+"``template_object_name`` is ``'foo'``, this variable's name will be ``foo``."
+msgstr ""
+
+# 0d17ce09da984b4ca29b635453b66de1
+#: ../../generic_views.txt:652
+msgid "List/detail generic views"
+msgstr ""
+
+# e193f95682594da4a29b53b1054a171c
+#: ../../generic_views.txt:654
+msgid ""
+"The list-detail generic-view framework (in the ``django.views.generic."
+"list_detail`` module) is similar to the date-based one, except the former "
+"simply has two views: a list of objects and an individual object page."
+msgstr ""
+
+# f40b11758b674030bf896e757ef0c88e
+#: ../../generic_views.txt:660
+msgid "``django.views.generic.list_detail.object_list``"
+msgstr ""
+
+# 35597abeaf0349bb9b2a75cfa3a7fd88
+#: ../../generic_views.txt:664
+msgid "A page representing a list of objects."
+msgstr ""
+
+# 5d07cd7ec2e44fd797704c9b2a9fba31
+#: ../../generic_views.txt:668
+msgid "``queryset``: A ``QuerySet`` that represents the objects."
+msgstr ""
+
+# fc84a70874a14154a697e06450301b98
+#: ../../generic_views.txt:672
+msgid ""
+"``paginate_by``: An integer specifying how many objects should be displayed "
+"per page. If this is given, the view will paginate objects with "
+"``paginate_by`` objects per page. The view will expect either a ``page`` "
+"query string parameter (via ``GET``) containing a zero-indexed page number, "
+"or a ``page`` variable specified in the URLconf. See \"Notes on pagination\" "
+"below."
+msgstr ""
+
+# 33d71234e2f845d6b1f2c2f641d953ea
+#: ../../generic_views.txt:708
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_list.html`` by default."
+msgstr ""
+
+# bb66ef6d8a7e4e839444700fa4d4cecc
+#: ../../generic_views.txt:715
+msgid ""
+"``object_list``: The list of objects. This variable's name depends on the "
+"``template_object_name`` parameter, which is ``'object'`` by default. If "
+"``template_object_name`` is ``'foo'``, this variable's name will be "
+"``foo_list``."
+msgstr ""
+
+# 00b549a5b4e3424d8a8fddbf8e3390f5
+#: ../../generic_views.txt:720
+msgid ""
+"``is_paginated``: A boolean representing whether the results are paginated. "
+"Specifically, this is set to ``False`` if the number of available objects is "
+"less than or equal to ``paginate_by``."
+msgstr ""
+
+# 45c71adb04614bb1bc1c552457d11f37
+#: ../../generic_views.txt:724
+msgid ""
+"If the results are paginated, the context will contain these extra variables:"
+msgstr ""
+
+# 2b5cd3ebac38415e9ef7217d36b7e447
+#: ../../generic_views.txt:726
+msgid ""
+"``results_per_page``: The number of objects per page. (Same as the "
+"``paginate_by`` parameter.)"
+msgstr ""
+
+# fd642a527f7a404294d9dc1c583a82e1
+#: ../../generic_views.txt:729
+msgid "``has_next``: A boolean representing whether there's a next page."
+msgstr ""
+
+# 86aba7664b594067aa87198176bcdd06
+#: ../../generic_views.txt:731
+msgid ""
+"``has_previous``: A boolean representing whether there's a previous page."
+msgstr ""
+
+# a34a3e88139349e3a2235bb6e68664a8
+#: ../../generic_views.txt:733
+msgid "``page``: The current page number, as an integer. This is 1-based."
+msgstr ""
+
+# 5be05070091a44ef921b93b2d8a19168
+#: ../../generic_views.txt:735
+msgid ""
+"``next``: The next page number, as an integer. If there's no next page, this "
+"will still be an integer representing the theoretical next-page number. This "
+"is 1-based."
+msgstr ""
+
+# 17efa47d9b6e43659ccffa0c646c77c9
+#: ../../generic_views.txt:739
+msgid "``previous``: The previous page number, as an integer. This is 1-based."
+msgstr ""
+
+# b228a363baf6427db5ea7d8acdaa9f39
+#: ../../generic_views.txt:741
+msgid "``pages``: The total number of pages, as an integer."
+msgstr ""
+
+# abc450fd80ec4b229eef67a3d3423ca7
+#: ../../generic_views.txt:743
+msgid ""
+"``hits``: The total number of objects across *all* pages, not just this page."
+msgstr ""
+
+# 45cf671eaca749649cb6940b0e6172a6
+#: ../../generic_views.txt:747
+msgid "Notes on pagination"
+msgstr ""
+
+# 27bc46962ed84719973bae889fc8ba03
+#: ../../generic_views.txt:749
+msgid ""
+"If ``paginate_by`` is specified, Django will paginate the results. You can "
+"specify the page number in the URL in one of two ways:"
+msgstr ""
+
+# 48538e3e3970403aa4d8f02ffc167304
+#: ../../generic_views.txt:752
+msgid ""
+"Use the ``page`` parameter in the URLconf. For example, this is what your "
+"URLconf might look like::"
+msgstr ""
+
+# 8b7e6688c38544c693b5a593f3016697
+#: ../../generic_views.txt:757
+msgid ""
+"Pass the page number via the ``page`` query-string parameter. For example, a "
+"URL would look like this:"
+msgstr ""
+
+# 933a695c0ee74f7a95965799e7ccf366
+#: ../../generic_views.txt:760
+msgid "/objects/?page=3"
+msgstr ""
+
+# a5258a7fa65244c0b7a760d2f8dd8dd6
+#: ../../generic_views.txt:762
+msgid ""
+"In both cases, ``page`` is 1-based, not 0-based, so the first page would be "
+"represented as page ``1``."
+msgstr ""
+
+# fb6e8814fa264d299a34b4dde1b52bea
+#: ../../generic_views.txt:766
+msgid "``django.views.generic.list_detail.object_detail``"
+msgstr ""
+
+# 17bf677437764d279081d62d0610bed3
+# 17bf677437764d279081d62d0610bed3
+#: ../../generic_views.txt:768 ../../generic_views.txt:772
+msgid "A page representing an individual object."
+msgstr ""
+
+# e4c3fb25db254d5db6622b0a484026a6
+#: ../../generic_views.txt:833
+msgid "Create/update/delete generic views"
+msgstr ""
+
+# 150d326b7eb4416a85852aa5b95f8451
+#: ../../generic_views.txt:835
+msgid ""
+"The ``django.views.generic.create_update`` module contains a set of "
+"functions for creating, editing and deleting objects."
+msgstr ""
+
+# 21d0ca7897e948f0bff7aeced0e64d69
+#: ../../generic_views.txt:839
+msgid "``django.views.generic.create_update.create_object``"
+msgstr ""
+
+# bb53c47b07d44fae88129cb2bd237fcc
+#: ../../generic_views.txt:843
+msgid ""
+"A page that displays a form for creating an object, redisplaying the form "
+"with validation errors (if there are any) and saving the object. This uses "
+"the automatic manipulators that come with Django models."
+msgstr ""
+
+# c8d348fc3eb84febb1e3074183106482
+# c8d348fc3eb84febb1e3074183106482
+# c8d348fc3eb84febb1e3074183106482
+#: ../../generic_views.txt:849 ../../generic_views.txt:916
+#: ../../generic_views.txt:1001
+msgid ""
+"``model``: The Django model class of the object that the form will create."
+msgstr ""
+
+# dfa795194795478095f2c563db589209
+# dfa795194795478095f2c563db589209
+#: ../../generic_views.txt:854 ../../generic_views.txt:930
+msgid ""
+"``post_save_redirect``: A URL to which the view will redirect after saving "
+"the object. By default, it's ``object.get_absolute_url()``."
+msgstr ""
+
+# 21b72d4d68b0426f92840d78a99b62a2
+# 21b72d4d68b0426f92840d78a99b62a2
+#: ../../generic_views.txt:857 ../../generic_views.txt:933
+msgid ""
+"``post_save_redirect`` may contain dictionary string formatting, which will "
+"be interpolated against the object's field attributes. For example, you "
+"could use ``post_save_redirect=\"/polls/%(slug)s/\"``."
+msgstr ""
+
+# c07a83f77e67412fa5e86725efe673cc
+# 24e5f4cd4dff460a9f163ca637746bec
+# c07a83f77e67412fa5e86725efe673cc
+#: ../../generic_views.txt:861 ../../generic_views.txt:937
+#: ../../generic_views.txt:1018
+msgid ""
+"``login_required``: A boolean that designates whether a user must be logged "
+"in, in order to see the page and save changes. This hooks into the Django :"
+"doc:`authentication system <authentication>`. By default, this is ``False``."
+msgstr ""
+
+# 11a079791b62434887606268c3ca8887
+# 11a079791b62434887606268c3ca8887
+# 11a079791b62434887606268c3ca8887
+#: ../../generic_views.txt:865 ../../generic_views.txt:941
+#: ../../generic_views.txt:1022
+msgid ""
+"If this is ``True``, and a non-logged-in user attempts to visit this page or "
+"save the form, Django will redirect the request to ``/accounts/login/``."
+msgstr ""
+
+# bcba5b1d6ba84ebd89a24a01dbcdf69d
+# bcba5b1d6ba84ebd89a24a01dbcdf69d
+#: ../../generic_views.txt:884 ../../generic_views.txt:963
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_form.html`` by default."
+msgstr ""
+
+# 0063d1b5a4bf4fde8812ccc297ccd186
+# 0063d1b5a4bf4fde8812ccc297ccd186
+#: ../../generic_views.txt:891 ../../generic_views.txt:970
+msgid ""
+"``form``: A ``django.forms.FormWrapper`` instance representing the form for "
+"editing the object. This lets you refer to form fields easily in the "
+"template system."
+msgstr ""
+
+# da568b69bf3d4b2ca8a911802cf3d5d3
+# da568b69bf3d4b2ca8a911802cf3d5d3
+#: ../../generic_views.txt:895 ../../generic_views.txt:974
+msgid "For example, if ``model`` has two fields, ``name`` and ``address``::"
+msgstr ""
+
+# 5d147ffa0fce421485c5c3c49ed43746
+# e34de7f9373645dca1f3611bd61eefbc
+#: ../../generic_views.txt:902 ../../generic_views.txt:981
+msgid ""
+"See the :doc:`manipulator and formfield documentation <forms>` for more "
+"information about using ``FormWrapper`` objects in templates."
+msgstr ""
+
+# cb45af969bb743b0a31e1257bcc5b3fe
+#: ../../generic_views.txt:906
+msgid "``django.views.generic.create_update.update_object``"
+msgstr ""
+
+# db12b425d013435e8dc014acc2cdd18a
+#: ../../generic_views.txt:910
+msgid ""
+"A page that displays a form for editing an existing object, redisplaying the "
+"form with validation errors (if there are any) and saving changes to the "
+"object. This uses the automatic manipulators that come with Django models."
+msgstr ""
+
+# 5ab6e326a19f4fa09160f61b4274e9d6
+#: ../../generic_views.txt:984
+msgid ""
+"``object``: The original object being edited. This variable's name depends "
+"on the ``template_object_name`` parameter, which is ``'object'`` by default. "
+"If ``template_object_name`` is ``'foo'``, this variable's name will be "
+"``foo``."
+msgstr ""
+
+# 15a2e0ec7c84489598f0abcc5ad91f5a
+#: ../../generic_views.txt:990
+msgid "``django.views.generic.create_update.delete_object``"
+msgstr ""
+
+# 14a43f118d804e028b6328555706ef31
+#: ../../generic_views.txt:994
+msgid ""
+"A view that displays a confirmation page and deletes an existing object. The "
+"given object will only be deleted if the request method is ``POST``. If this "
+"view is fetched via ``GET``, it will display a confirmation page that should "
+"contain a form that POSTs to the same URL."
+msgstr ""
+
+# b29da47ad45846d0bb9a957d11f137db
+#: ../../generic_views.txt:1013
+msgid ""
+"``post_delete_redirect``: A URL to which the view will redirect after "
+"deleting the object."
+msgstr ""
+
+# 569342d5cdd747e2a49634c02a4412db
+#: ../../generic_views.txt:1044
+msgid ""
+"If ``template_name`` isn't specified, this view will use the template "
+"``<app_label>/<model_name>_confirm_delete.html`` by default."
+msgstr ""
+
+# c242ab167127453c95532f3f19d1d48f
+#: ../../generic_views.txt:1051
+msgid ""
+"``object``: The original object that's about to be deleted. This variable's "
+"name depends on the ``template_object_name`` parameter, which is "
+"``'object'`` by default. If ``template_object_name`` is ``'foo'``, this "
+"variable's name will be ``foo``."
+msgstr ""

@@ -1,0 +1,43 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# dbeb61b2edb747baae9f274b8ff519b2
+#: ../../contents.txt:5
+msgid "Django documentation contents"
+msgstr ""
+
+# 9e9a5ba698b64014b726cdc32ae1c9e0
+#: ../../contents.txt:60
+msgid "Indices, glossary and tables"
+msgstr ""
+
+# 74eb280bb26f4a3891b26b7b6578ed3a
+#: ../../contents.txt:62
+msgid ":ref:`genindex`"
+msgstr ""
+
+# 9f77f24356b54217a206a639f93c89e5
+#: ../../contents.txt:63
+msgid ":ref:`modindex`"
+msgstr ""
+
+# eef6758ecfab4f1e95488e561b6f3f50
+#: ../../contents.txt:64
+msgid ":ref:`glossary`"
+msgstr ""

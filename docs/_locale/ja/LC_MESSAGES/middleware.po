@@ -1,0 +1,401 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 350ccf43121743609b7c9795fab503a7
+#: ../../middleware.txt:3
+msgid "Middleware"
+msgstr ""
+
+# 573f9b8163ea4a0e8d04858f479711a7
+#: ../../middleware.txt:5
+msgid ""
+"Middleware is a framework of hooks into Django's request/response "
+"processing. It's a light, low-level \"plugin\" system for globally altering "
+"Django's input and/or output."
+msgstr ""
+
+# 51e68591c7a2461ca34c17ba24ead003
+#: ../../middleware.txt:9
+msgid ""
+"Each middleware component is responsible for doing some specific function. "
+"For example, Django includes a middleware component, ``XViewMiddleware``, "
+"that adds an ``\"X-View\"`` HTTP header to every response to a ``HEAD`` "
+"request."
+msgstr ""
+
+# 0d10da9b6f0348778f4bc9087874dd60
+#: ../../middleware.txt:13
+msgid ""
+"This document explains all middleware components that come with Django, how "
+"to use them, and how to write your own middleware."
+msgstr ""
+
+# ff5c5ad8228f41bba677a2bfdcf78f01
+#: ../../middleware.txt:17
+msgid "Activating middleware"
+msgstr ""
+
+# 36fd0e36dbb643abba672c9220944009
+#: ../../middleware.txt:19
+msgid ""
+"To activate a middleware component, add it to the ``MIDDLEWARE_CLASSES`` "
+"list in your Django settings. In ``MIDDLEWARE_CLASSES``, each middleware "
+"component is represented by a string: the full Python path to the "
+"middleware's class name. For example, here's the default "
+"``MIDDLEWARE_CLASSES`` created by ``django-admin.py startproject``::"
+msgstr ""
+
+# 2750adaa41c2405b8754188f5b3fd8ff
+#: ../../middleware.txt:32
+msgid ""
+"Django applies middleware in the order it's defined in "
+"``MIDDLEWARE_CLASSES``, except in the case of response and exception "
+"middleware, which is applied in reverse order."
+msgstr ""
+
+# c3e5e3ce2c6940409c56da4bff3ab08d
+#: ../../middleware.txt:36
+msgid ""
+"A Django installation doesn't require any middleware -- e.g., "
+"``MIDDLEWARE_CLASSES`` can be empty, if you'd like -- but it's strongly "
+"suggested that you use ``CommonMiddleware``."
+msgstr ""
+
+# d5f9961396664b3fab6c94848d271a3b
+#: ../../middleware.txt:41
+msgid "Available middleware"
+msgstr ""
+
+# f8e05c143a8e4da2936c413ade45b7c9
+#: ../../middleware.txt:44
+msgid "django.middleware.cache.CacheMiddleware"
+msgstr ""
+
+# 463096e74c604c27a2f61de0d58f0d82
+#: ../../middleware.txt:46
+msgid ""
+"Enables site-wide cache. If this is enabled, each Django-powered page will "
+"be cached for as long as the ``CACHE_MIDDLEWARE_SECONDS`` setting defines. "
+"See the :doc:`cache documentation <cache>`."
+msgstr ""
+
+# d3627ab79bad4da79c79d77286b2bc27
+#: ../../middleware.txt:51
+msgid "django.middleware.common.CommonMiddleware"
+msgstr ""
+
+# 027efa5cb32f464e804188dd4f168b1a
+#: ../../middleware.txt:53
+msgid "Adds a few conveniences for perfectionists:"
+msgstr ""
+
+# e642561d3f6a44e6a72ec5418ccd5f43
+#: ../../middleware.txt:55
+msgid ""
+"Forbids access to user agents in the ``DISALLOWED_USER_AGENTS`` setting, "
+"which should be a list of strings."
+msgstr ""
+
+# 1a853feacb6445c8822c5bd7ff95dfa7
+#: ../../middleware.txt:58
+msgid ""
+"Performs URL rewriting based on the ``APPEND_SLASH`` and ``PREPEND_WWW`` "
+"settings. If ``APPEND_SLASH`` is ``True``, URLs that lack a trailing slash "
+"will be redirected to the same URL with a trailing slash, unless the last "
+"component in the path contains a period. So ``foo.com/bar`` is redirected to "
+"``foo.com/bar/``, but ``foo.com/bar/file.txt`` is passed through unchanged."
+msgstr ""
+
+# 92fa0670ace84a3c83df354b1d9bbd75
+#: ../../middleware.txt:65
+msgid ""
+"If ``PREPEND_WWW`` is ``True``, URLs that lack a leading \"www.\" will be "
+"redirected to the same URL with a leading \"www.\""
+msgstr ""
+
+# b9fe17038ec5451c94f7dc7ed6480e35
+#: ../../middleware.txt:68
+msgid ""
+"Both of these options are meant to normalize URLs. The philosophy is that "
+"each URL should exist in one, and only one, place. Technically a URL ``foo."
+"com/bar`` is distinct from ``foo.com/bar/`` -- a search-engine indexer would "
+"treat them as separate URLs -- so it's best practice to normalize URLs."
+msgstr ""
+
+# a924c414f7b5491782268f11e6517f9f
+#: ../../middleware.txt:74
+msgid ""
+"Handles ETags based on the ``USE_ETAGS`` setting. If ``USE_ETAGS`` is set to "
+"``True``, Django will calculate an ETag for each request by MD5-hashing the "
+"page content, and it'll take care of sending ``Not Modified`` responses, if "
+"appropriate."
+msgstr ""
+
+# 1c4905fe3dd241179e1b32b4ccba47f2
+#: ../../middleware.txt:80
+msgid "django.middleware.doc.XViewMiddleware"
+msgstr ""
+
+# c4b8ec687ac547a59a3fe8a66cf9513d
+#: ../../middleware.txt:82
+msgid ""
+"Sends custom ``X-View`` HTTP headers to HEAD requests that come from IP "
+"addresses defined in the ``INTERNAL_IPS`` setting. This is used by Django's "
+"automatic documentation system."
+msgstr ""
+
+# bfd29edc7cfe45afbd39e2c129f1a0ee
+#: ../../middleware.txt:87
+msgid "django.middleware.gzip.GZipMiddleware"
+msgstr ""
+
+# ee934472bb6e4443afb82c787660a596
+#: ../../middleware.txt:89
+msgid ""
+"Compresses content for browsers that understand gzip compression (all modern "
+"browsers)."
+msgstr ""
+
+# 0b9e4ba0b77e4a06a2b5d4e3eef0b224
+#: ../../middleware.txt:93
+msgid "django.middleware.http.ConditionalGetMiddleware"
+msgstr ""
+
+# 29b8a069a3374550870ed729e40aedfb
+#: ../../middleware.txt:95
+msgid ""
+"Handles conditional GET operations. If the response has a ``ETag`` or ``Last-"
+"Modified`` header, and the request has ``If-None-Match`` or ``If-Modified-"
+"Since``, the response is replaced by an HttpNotModified."
+msgstr ""
+
+# 2cb9253e3a6d43e08a17845f0918cc83
+#: ../../middleware.txt:99
+msgid ""
+"Also removes the content from any response to a HEAD request and sets the "
+"``Date`` and ``Content-Length`` response-headers."
+msgstr ""
+
+# 0995d4974e0e49708dd1c4f6ab9175cd
+#: ../../middleware.txt:103
+msgid "django.contrib.sessions.middleware.SessionMiddleware"
+msgstr ""
+
+# a00dd522199e41efac90570c53920f07
+#: ../../middleware.txt:105
+msgid ""
+"Enables session support. See the :doc:`session documentation <sessions>`."
+msgstr ""
+
+# 167e69e7dbd740ceb41232a1f6195c59
+#: ../../middleware.txt:108
+msgid "django.contrib.auth.middleware.AuthenticationMiddleware"
+msgstr ""
+
+# fa8d96d07e214277a8939aa81a7df987
+#: ../../middleware.txt:110
+msgid ""
+"Adds the ``user`` attribute, representing the currently-logged-in user, to "
+"every incoming ``HttpRequest`` object. See :doc:`Authentication in Web "
+"requests <authentication>`."
+msgstr ""
+
+# 450f2164b32b4d968b10b3aecdfd7fe0
+#: ../../middleware.txt:114
+msgid "django.middleware.transaction.TransactionMiddleware"
+msgstr ""
+
+# 1216458803a74d7cac5e9e4f22cd6390
+#: ../../middleware.txt:116
+msgid ""
+"Binds commit and rollback to the request/response phase. If a view function "
+"runs successfully, a commit is done. If it fails with an exception, a "
+"rollback is done."
+msgstr ""
+
+# 6dbfb57b2d4440469a8556998159ddd1
+#: ../../middleware.txt:120
+msgid ""
+"The order of this middleware in the stack is important: middleware modules "
+"running outside of it run with commit-on-save - the default Django behavior. "
+"Middleware modules running inside it (coming later in the stack) will be "
+"under the same transaction control as the view functions."
+msgstr ""
+
+# 69a2649302264f76bbd6ad42f7776356
+#: ../../middleware.txt:125
+msgid "See the :doc:`transaction management documentation <transactions>`."
+msgstr ""
+
+# 95ac0f541ec64389b89520eef2bddc91
+#: ../../middleware.txt:128
+msgid "Writing your own middleware"
+msgstr ""
+
+# d2995ea8fce64c09a6f0e76aebc0339d
+#: ../../middleware.txt:130
+msgid ""
+"Writing your own middleware is easy. Each middleware component is a single "
+"Python class that defines one or more of the following methods:"
+msgstr ""
+
+# 72f80d736a544319af99fa9b8b8546be
+#: ../../middleware.txt:134
+msgid "process_request"
+msgstr ""
+
+# 2489a0325ae6454e9963ca9c4d6044f6
+#: ../../middleware.txt:136
+msgid "Interface: ``process_request(self, request)``"
+msgstr ""
+
+# b43072f550fb48d2a04e4883ec66211f
+#: ../../middleware.txt:138
+msgid ""
+"``request`` is an ``HttpRequest`` object. This method is called on each "
+"request, before Django decides which view to execute."
+msgstr ""
+
+# 0d7efe7612d5497cb846c3fecb74993a
+#: ../../middleware.txt:141
+msgid ""
+"``process_request()`` should return either ``None`` or an ``HttpResponse`` "
+"object. If it returns ``None``, Django will continue processing this "
+"request, executing any other middleware and, then, the appropriate view. If "
+"it returns an ``HttpResponse`` object, Django won't bother calling ANY other "
+"middleware or the appropriate view; it'll return that ``HttpResponse``."
+msgstr ""
+
+# 7a2be12e7c144caa97959078b70ba6c1
+#: ../../middleware.txt:148
+msgid "process_view"
+msgstr ""
+
+# b6fe3a1390fd4ddd87a1166d27672bce
+#: ../../middleware.txt:150
+msgid ""
+"Interface: ``process_view(self, request, view_func, view_args, view_kwargs)``"
+msgstr ""
+
+# 237fe68d988c4cf4a2f4d378fef63c07
+#: ../../middleware.txt:152
+msgid ""
+"``request`` is an ``HttpRequest`` object. ``view_func`` is the Python "
+"function that Django is about to use. (It's the actual function object, not "
+"the name of the function as a string.) ``view_args`` is a list of positional "
+"arguments that will be passed to the view, and ``view_kwargs`` is a "
+"dictionary of keyword arguments that will be passed to the view. Neither "
+"``view_args`` nor ``view_kwargs`` include the first view argument "
+"(``request``)."
+msgstr ""
+
+# c22b27b5772140ef9a4e6f75e7bacd95
+#: ../../middleware.txt:159
+msgid ""
+"``process_view()`` is called just before Django calls the view. It should "
+"return either ``None`` or an ``HttpResponse`` object. If it returns "
+"``None``, Django will continue processing this request, executing any other "
+"``process_view()`` middleware and, then, the appropriate view. If it returns "
+"an ``HttpResponse`` object, Django won't bother calling ANY other middleware "
+"or the appropriate view; it'll return that ``HttpResponse``."
+msgstr ""
+
+# f420082547bf42ffbbaaa9b1849285be
+#: ../../middleware.txt:167
+msgid "process_response"
+msgstr ""
+
+# c4b802753b8b462db6ec11778b186820
+#: ../../middleware.txt:169
+msgid "Interface: ``process_response(self, request, response)``"
+msgstr ""
+
+# cc46495c083649e4957ec7e238a74d14
+#: ../../middleware.txt:171
+msgid ""
+"``request`` is an ``HttpRequest`` object. ``response`` is the "
+"``HttpResponse`` object returned by a Django view."
+msgstr ""
+
+# 287786c0571e43a8a5247bccfdaa1b2c
+#: ../../middleware.txt:174
+msgid ""
+"``process_response()`` should return an ``HttpResponse`` object. It could "
+"alter the given ``response``, or it could create and return a brand-new "
+"``HttpResponse``."
+msgstr ""
+
+# 8214c3109e92410295cd8d6a52932349
+#: ../../middleware.txt:179
+msgid "process_exception"
+msgstr ""
+
+# 816d297ecb55484089479930e45da302
+#: ../../middleware.txt:181
+msgid "Interface: ``process_exception(self, request, exception)``"
+msgstr ""
+
+# ffe14749244d42cfbdb9952a1d0b695a
+#: ../../middleware.txt:183
+msgid ""
+"``request`` is an ``HttpRequest`` object. ``exception`` is an ``Exception`` "
+"object raised by the view function."
+msgstr ""
+
+# a2f6d2f5c7e54dc2b99f4ef6ea9cc6c8
+#: ../../middleware.txt:186
+msgid ""
+"Django calls ``process_exception()`` when a view raises an exception. "
+"``process_exception()`` should return either ``None`` or an ``HttpResponse`` "
+"object. If it returns an ``HttpResponse`` object, the response will be "
+"returned to the browser. Otherwise, default exception handling kicks in."
+msgstr ""
+
+# fcd40c0ff7964da1bd054dde8902473c
+#: ../../middleware.txt:192
+msgid "Guidelines"
+msgstr ""
+
+# 5ec2a50f5e4a42bf8d1ff469d76d820b
+#: ../../middleware.txt:194
+msgid "Middleware classes don't have to subclass anything."
+msgstr ""
+
+# 091262e72b8b4c69a3f513ea58472413
+#: ../../middleware.txt:196
+msgid ""
+"The middleware class can live anywhere on your Python path. All Django cares "
+"about is that the ``MIDDLEWARE_CLASSES`` setting includes the path to it."
+msgstr ""
+
+# 17e56309dc77427c880a139ffcbeef00
+#: ../../middleware.txt:200
+msgid ""
+"Feel free to look at Django's available middleware for examples. The core "
+"Django middleware classes are in ``django/middleware/`` in the Django "
+"distribution. The session middleware is in ``django/contrib/sessions``."
+msgstr ""
+
+# 4aa6e3fa6f8a4d7db32f0ee1f962d7b6
+#: ../../middleware.txt:204
+msgid ""
+"If you write a middleware component that you think would be useful to other "
+"people, contribute to the community! Let us know, and we'll consider adding "
+"it to Django."
+msgstr ""

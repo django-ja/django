@@ -1,0 +1,546 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# b4cbcb86b7754e52b7f915b44504d463
+#: ../../design_philosophies.txt:3
+msgid "Design philosophies"
+msgstr ""
+
+# e5ef83f9215a4a7ebfb293a116880acd
+#: ../../design_philosophies.txt:5
+msgid ""
+"This document explains some of the fundamental philosophies Django's "
+"developers have used in creating the framework. Its goal is to explain the "
+"past and guide the future."
+msgstr ""
+
+# c9de91a444ea42aa9bb6f7a63dbf0258
+#: ../../design_philosophies.txt:10
+msgid "Overall"
+msgstr ""
+
+# 7bc32929021240f2a2c9a4419630707b
+# 21681b75215a41909c9ef594c25f70fd
+# 0492effa53c34590bd03e38f185b19f8
+#: ../../design_philosophies.txt:13 ../../design_philosophies.txt:131
+#: ../../design_philosophies.txt:270
+msgid "Loose coupling"
+msgstr ""
+
+# f221b942d88f4e82a57767a22a253d5c
+#: ../../design_philosophies.txt:15
+msgid ""
+"A fundamental goal of Django's stack is `loose coupling and tight "
+"cohesion`_. The various layers of the framework shouldn't \"know\" about "
+"each other unless absolutely necessary."
+msgstr ""
+
+# 07fde13aeac549ccb61c106d51e185c4
+#: ../../design_philosophies.txt:19
+msgid ""
+"For example, the template system knows nothing about Web requests, the "
+"database layer knows nothing about data display and the view system doesn't "
+"care which template system a programmer uses."
+msgstr ""
+
+# 2a876423273840f2a4bf6031f4b6367c
+#: ../../design_philosophies.txt:23
+msgid ""
+"Although Django comes with a full stack for convenience, the pieces of the "
+"stack are independent of another wherever possible."
+msgstr ""
+
+# 5a25680ce14247f0be2fe6095e8a2dcc
+#: ../../design_philosophies.txt:29
+msgid "Less code"
+msgstr ""
+
+# 7af9a9910ec1456395f26eedc671b3f4
+#: ../../design_philosophies.txt:31
+msgid ""
+"Django apps should use as little code as possible; they should lack "
+"boilerplate. Django should take full advantage of Python's dynamic "
+"capabilities, such as introspection."
+msgstr ""
+
+# 481d5316ee304f588b1176f88093f271
+#: ../../design_philosophies.txt:36
+msgid "Quick development"
+msgstr ""
+
+# 162dc398b1b241bd8d3bb5cb18af6d45
+#: ../../design_philosophies.txt:38
+msgid ""
+"The point of a Web framework in the 21st century is to make the tedious "
+"aspects of Web development fast. Django should allow for incredibly quick "
+"Web development."
+msgstr ""
+
+# 75a87b85d7d043e780fdc7bc9192758f
+#: ../../design_philosophies.txt:43
+msgid "Don't repeat yourself (DRY)"
+msgstr ""
+
+# 9ef7ee7eaa874eaeb56cfc2aafee617d
+#: ../../design_philosophies.txt:45
+msgid ""
+"Every distinct concept and/or piece of data should live in one, and only "
+"one, place. Redundancy is bad. Normalization is good."
+msgstr ""
+
+# 8bc44cbb7bcb42ef83882d2e4f5f11bd
+#: ../../design_philosophies.txt:48
+msgid ""
+"The framework, within reason, should deduce as much as possible from as "
+"little as possible."
+msgstr ""
+
+# 520cb014ca7a4195a20bbca17208cfc8
+# ada9e071dc154efba0d12494bb4ad725
+#: ../../design_philosophies.txt:52 ../../design_philosophies.txt:73
+msgid "Explicit is better than implicit"
+msgstr ""
+
+# 1a198192f4784402b986d39376ec3031
+#: ../../design_philosophies.txt:54
+msgid ""
+"This, a `core Python principle`_, means Django shouldn't do too much \"magic."
+"\" Magic shouldn't happen unless there's a really good reason for it. Magic "
+"is worth using only if it creates a huge convenience unattainable in other "
+"ways, and it isn't implemented in a way that confuses developers who are "
+"trying to learn how to use the feature."
+msgstr ""
+
+# 53facd6dca4644c0ade416c3012e9cff
+#: ../../design_philosophies.txt:63
+msgid "Consistency"
+msgstr ""
+
+# c6eaa4c2fc0142f296f89de60389d1d6
+#: ../../design_philosophies.txt:65
+msgid ""
+"The framework should be consistent at all levels. Consistency applies to "
+"everything from low-level (the Python coding style used) to high-level (the "
+"\"experience\" of using Django)."
+msgstr ""
+
+# e4cceb4e676044bd897a4c867d91cb23
+#: ../../design_philosophies.txt:70
+msgid "Models"
+msgstr ""
+
+# 6dddc2fde72f4c63a3c284c351ee32dc
+#: ../../design_philosophies.txt:75
+msgid ""
+"Fields shouldn't assume certain behaviors based solely on the name of the "
+"field. This requires too much knowledge of the system and is prone to "
+"errors. Instead, behaviors should be based on keyword arguments and, in some "
+"cases, on the type of the field."
+msgstr ""
+
+# 8914e0ce32774cd6b752d62b71b45ecf
+#: ../../design_philosophies.txt:81
+msgid "Include all relevant domain logic"
+msgstr ""
+
+# d0549cb1b5b34a6ca0fc12b9ed0f478b
+#: ../../design_philosophies.txt:83
+msgid ""
+"Models should encapsulate every aspect of an \"object,\" following Martin "
+"Fowler's `Active Record`_ design pattern."
+msgstr ""
+
+# 7fd9d79d04784d279a0168a34e6a6551
+#: ../../design_philosophies.txt:86
+msgid ""
+"This is why model-specific admin options are included in the model itself; "
+"data related to a model should be stored *in* the model."
+msgstr ""
+
+# ae61542a1cc84d8eadf4a4c5edd383ce
+#: ../../design_philosophies.txt:92
+msgid "Database API"
+msgstr ""
+
+# 02da2625c37f4331853ebb1809473c0f
+#: ../../design_philosophies.txt:94
+msgid "The core goals of the database API are:"
+msgstr ""
+
+# 502892fb83ae47c8aaedebfca30dcec0
+#: ../../design_philosophies.txt:97
+msgid "SQL efficiency"
+msgstr ""
+
+# 05df39d04a60426b872c6c475146af53
+#: ../../design_philosophies.txt:99
+msgid ""
+"It should execute SQL statements as few times as possible, and it should "
+"optimize statements internally."
+msgstr ""
+
+# 012d338df9eb45c286f17c7ec378e63d
+#: ../../design_philosophies.txt:102
+msgid ""
+"This is why developers need to call ``save()`` explicitly, rather than the "
+"framework saving things behind the scenes silently."
+msgstr ""
+
+# 58906f647bcd4e35a11488d1b68cc944
+#: ../../design_philosophies.txt:105
+msgid ""
+"This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
+"an optional performance booster for the common case of selecting \"every "
+"related object.\""
+msgstr ""
+
+# 2db0791868bf496dae0e934ebb74f547
+#: ../../design_philosophies.txt:110
+msgid "Terse, powerful syntax"
+msgstr ""
+
+# 818902880cab4fcb9a2c38dd73b73296
+#: ../../design_philosophies.txt:112
+msgid ""
+"The database API should allow rich, expressive statements in as little "
+"syntax as possible. It should not rely on importing other modules or helper "
+"objects."
+msgstr ""
+
+# 9f4248f00ddd4c42969077509207d46a
+#: ../../design_philosophies.txt:115
+msgid ""
+"Joins should be performed automatically, behind the scenes, when necessary."
+msgstr ""
+
+# 10ba8c719e09488fbd8125c2a7b3f6dc
+#: ../../design_philosophies.txt:117
+msgid ""
+"Every object should be able to access every related object, systemwide. This "
+"access should work both ways."
+msgstr ""
+
+# 438e23069bd643019268c63faac45828
+#: ../../design_philosophies.txt:121
+msgid "Option to drop into raw SQL easily, when needed"
+msgstr ""
+
+# 40b0ce76ec5f480989f26c18bd6cbfde
+#: ../../design_philosophies.txt:123
+msgid ""
+"The database API should realize it's a shortcut but not necessarily an end-"
+"all-be-all. The framework should make it easy to write custom SQL -- entire "
+"statements, or just custom ``WHERE`` clauses as custom parameters to API "
+"calls."
+msgstr ""
+
+# e7f41894966f407aab3f6b6d8a4f7ac4
+#: ../../design_philosophies.txt:128
+msgid "URL design"
+msgstr ""
+
+# 3c01a84ba74943ae82f72c937c716305
+#: ../../design_philosophies.txt:133
+msgid ""
+"URLs in a Django app should not be coupled to the underlying Python code. "
+"Tying URLs to Python function names is a Bad And Ugly Thing."
+msgstr ""
+
+# 1f33bbbb82054d9f93e210729ce2a4ae
+#: ../../design_philosophies.txt:136
+msgid ""
+"Along these lines, the Django URL system should allow URLs for the same app "
+"to be different in different contexts. For example, one site may put stories "
+"at ``/stories/``, while another may use ``/news/``."
+msgstr ""
+
+# 3f727cd9da1b4c21adac7a38df545575
+#: ../../design_philosophies.txt:141
+msgid "Infinite flexibility"
+msgstr ""
+
+# 00fb13684f934ebd9361d2f8d0962d25
+#: ../../design_philosophies.txt:143
+msgid ""
+"URLs should be as flexible as possible. Any conceivable URL design should be "
+"allowed."
+msgstr ""
+
+# 3b6c03a623c44ac5b69e1e30c8aca119
+#: ../../design_philosophies.txt:147
+msgid "Encourage best practices"
+msgstr ""
+
+# 30733a4a01c0427e805440bc82a6a5dc
+#: ../../design_philosophies.txt:149
+msgid ""
+"The framework should make it just as easy (or even easier) for a developer "
+"to design pretty URLs than ugly ones."
+msgstr ""
+
+# df63413bfc094b44b6766db2e203619b
+#: ../../design_philosophies.txt:152
+msgid "File extensions in Web-page URLs should be avoided."
+msgstr ""
+
+# 82d93602c25d4778b047ba8870895085
+#: ../../design_philosophies.txt:154
+msgid "Vignette-style commas in URLs deserve severe punishment."
+msgstr ""
+
+# cd99411e55564fb082ce864250be6249
+#: ../../design_philosophies.txt:157
+msgid "Definitive URLs"
+msgstr ""
+
+# 16853741b6ca44bfa3e0c7a341bab46b
+#: ../../design_philosophies.txt:159
+msgid ""
+"Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
+"and search-engine robots (and some Web traffic-analyzing tools) would treat "
+"them as separate pages. Django should make an effort to \"normalize\" URLs "
+"so that search-engine robots don't get confused."
+msgstr ""
+
+# 52bba3256b2f4049928efbce8b32187d
+#: ../../design_philosophies.txt:164
+msgid "This is the reasoning behind the ``APPEND_SLASH`` setting."
+msgstr ""
+
+# fdde68727ed54c0bafed3700119f5a8e
+#: ../../design_philosophies.txt:167
+msgid "Template system"
+msgstr ""
+
+# b7dbf94b4643430bb3341f7c81b83ee1
+#: ../../design_philosophies.txt:170
+msgid "Separate logic from presentation"
+msgstr ""
+
+# 0b893ac9b2e44ecfb12f89920cfa7a5d
+#: ../../design_philosophies.txt:172
+msgid ""
+"We see a template system as a tool that controls presentation and "
+"presentation-related logic -- and that's it. The template system shouldn't "
+"support functionality that goes beyond this basic goal."
+msgstr ""
+
+# 30a7ec62f86148cda3358b241d7a4183
+#: ../../design_philosophies.txt:176
+msgid ""
+"If we wanted to put everything in templates, we'd be using PHP. Been there, "
+"done that, wised up."
+msgstr ""
+
+# e430918c5ab54a35b457788a06ef1946
+#: ../../design_philosophies.txt:180
+msgid "Discourage redundancy"
+msgstr ""
+
+# f73e5d67f61b45319cac560978c0eed0
+#: ../../design_philosophies.txt:182
+msgid ""
+"The majority of dynamic Web sites use some sort of common sitewide design -- "
+"a common header, footer, navigation bar, etc. The Django template system "
+"should make it easy to store those elements in a single place, eliminating "
+"duplicate code."
+msgstr ""
+
+# 5a8c4c1a7beb4795bacbe567bb35029d
+#: ../../design_philosophies.txt:187
+msgid "This is the philosophy behind :doc:`template inheritance <templates>`."
+msgstr ""
+
+# f0673db04fef4bcdba1cfd2b7456e6b3
+#: ../../design_philosophies.txt:190
+msgid "Be decoupled from HTML"
+msgstr ""
+
+# 6ae461287d824e47b607e1c7024327d3
+#: ../../design_philosophies.txt:192
+msgid ""
+"The template system shouldn't be designed so that it only outputs HTML. It "
+"should be equally good at generating other text-based formats, or just plain "
+"text."
+msgstr ""
+
+# 82b60798a22f43b291b8ebb248a21a30
+#: ../../design_philosophies.txt:197
+msgid "XML should not be used for template languages"
+msgstr ""
+
+# c5b0c83046cb47c5abd3dc36a324cfb0
+#: ../../design_philosophies.txt:199
+msgid ""
+"Using an XML engine to parse templates introduces a whole new world of human "
+"error in editing templates -- and incurs an unacceptable level of overhead "
+"in template processing."
+msgstr ""
+
+# 599af3a85d644dd59b80c1b8c27643fe
+#: ../../design_philosophies.txt:204
+msgid "Assume designer competence"
+msgstr ""
+
+# e54aa33d180d4c4a9cc251940a7ecb50
+#: ../../design_philosophies.txt:206
+msgid ""
+"The template system shouldn't be designed so that templates necessarily are "
+"displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django "
+"expects template authors are comfortable editing HTML directly."
+msgstr ""
+
+# 00fe4140f9144bc385335f78c1c57e6c
+#: ../../design_philosophies.txt:212
+msgid "Treat whitespace obviously"
+msgstr ""
+
+# a000a6742e494eebb4f3b0704117830a
+#: ../../design_philosophies.txt:214
+msgid ""
+"The template system shouldn't do magic things with whitespace. If a template "
+"includes whitespace, the system should treat the whitespace as it treats "
+"text -- just display it. Any whitespace that's not in a template tag should "
+"be displayed."
+msgstr ""
+
+# 3b8226ca622f4240bcc4d5ff4dc5a12e
+#: ../../design_philosophies.txt:220
+msgid "Don't invent a programming language"
+msgstr ""
+
+# 8e2ebaccccbb4ec7bf430934af665122
+#: ../../design_philosophies.txt:222
+msgid "The template system intentionally doesn't allow the following:"
+msgstr ""
+
+# ecf8f684282846d7a4409ca63b57aee4
+#: ../../design_philosophies.txt:224
+msgid "Assignment to variables"
+msgstr ""
+
+# 14bcde71ee33457f986cf288aaf6ed1a
+#: ../../design_philosophies.txt:225
+msgid "Advanced logic"
+msgstr ""
+
+# c93ef69568804e339abee71ec8981820
+#: ../../design_philosophies.txt:227
+msgid ""
+"The goal is not to invent a programming language. The goal is to offer just "
+"enough programming-esque functionality, such as branching and looping, that "
+"is essential for making presentation-related decisions."
+msgstr ""
+
+# c430ea20512c4575b169c5dc6f11d325
+#: ../../design_philosophies.txt:231
+msgid ""
+"The Django template system recognizes that templates are most often written "
+"by *designers*, not *programmers*, and therefore should not assume Python "
+"knowledge."
+msgstr ""
+
+# 4c88b3b6aedc4400853f284121dfe9b1
+#: ../../design_philosophies.txt:236
+msgid "Safety and security"
+msgstr ""
+
+# 16990ed8efd84c24addedcd158b7c46a
+#: ../../design_philosophies.txt:238
+msgid ""
+"The template system, out of the box, should forbid the inclusion of "
+"malicious code -- such as commands that delete database records."
+msgstr ""
+
+# 199592dc421246bcb08635018f8c97be
+#: ../../design_philosophies.txt:241
+msgid ""
+"This is another reason the template system doesn't allow arbitrary Python "
+"code."
+msgstr ""
+
+# 635d6df07b9c4d9392dd903cb3d96b39
+#: ../../design_philosophies.txt:244
+msgid "Extensibility"
+msgstr ""
+
+# 5c8e2eab73444e57b1f284e28d2a950b
+#: ../../design_philosophies.txt:246
+msgid ""
+"The template system should recognize that advanced template authors may want "
+"to extend its technology."
+msgstr ""
+
+# 70f004e68f5d4efb908f2ffdb479f6d0
+#: ../../design_philosophies.txt:249
+msgid "This is the philosophy behind custom template tags and filters."
+msgstr ""
+
+# 07e32cf912804fca8312a2c39876ed86
+#: ../../design_philosophies.txt:252
+msgid "Views"
+msgstr ""
+
+# 80eff65874bb4f81806db78d97b9872b
+#: ../../design_philosophies.txt:255
+msgid "Simplicity"
+msgstr ""
+
+# 777e5fd994e2430990170573364ec986
+#: ../../design_philosophies.txt:257
+msgid ""
+"Writing a view should be as simple as writing a Python function. Developers "
+"shouldn't have to instantiate a class when a function will do."
+msgstr ""
+
+# c8758b642b0f4c569f5965b73d9db5df
+#: ../../design_philosophies.txt:261
+msgid "Use request objects"
+msgstr ""
+
+# fb4d87ebc884400f8ce8aa36b520a463
+#: ../../design_philosophies.txt:263
+msgid ""
+"Views should have access to a request object -- an object that stores "
+"metadata about the current request. The object should be passed directly to "
+"a view function, rather than the view function having to access the request "
+"data from a global variable. This makes it light, clean and easy to test "
+"views by passing in \"fake\" request objects."
+msgstr ""
+
+# 0e31a262efd04913af1400abf440c815
+#: ../../design_philosophies.txt:272
+msgid ""
+"A view shouldn't care about which template system the developer uses -- or "
+"even whether a template system is used at all."
+msgstr ""
+
+# 8478b2d0c3b54894a9d359a6f973b77e
+#: ../../design_philosophies.txt:276
+msgid "Differentiate between GET and POST"
+msgstr ""
+
+# 1c010b2f352f4ada8a94e50af381c966
+#: ../../design_philosophies.txt:278
+msgid ""
+"GET and POST are distinct; developers should explicitly use one or the "
+"other. The framework should make it easy to distinguish between GET and POST "
+"data."
+msgstr ""

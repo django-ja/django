@@ -1,0 +1,344 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# af04a475474b40bfb0d2a9fe5fc65d17
+#: ../../overview.txt:3
+msgid "Django at a glance"
+msgstr ""
+
+# 2f0fb357b61e4169ad8017cfab7eedb8
+#: ../../overview.txt:5
+msgid ""
+"Because Django was developed in a fast-paced newsroom environment, it was "
+"designed to make common Web-development tasks fast and easy. Here's an "
+"informal overview of how to write a database-driven Web app with Django."
+msgstr ""
+
+# 503b2f8ea0234150b3918f49da8eb68f
+#: ../../overview.txt:9
+msgid ""
+"The goal of this document is to give you enough technical specifics to "
+"understand how Django works, but this isn't intended to be a tutorial or "
+"reference. Please see our more-detailed Django :doc:`documentation <index>` "
+"when you're ready to start a project."
+msgstr ""
+
+# c929b71c9a8d46bfb80c7767ad0adc7a
+#: ../../overview.txt:15
+msgid "Design your model"
+msgstr ""
+
+# e2cdbcfa550b40d3856a9620c9adc880
+#: ../../overview.txt:17
+msgid ""
+"Although you can use Django without a database, it comes with an object-"
+"relational mapper in which you describe your database layout in Python code."
+msgstr ""
+
+# 6b563312071e49fab1969888f518a5a5
+#: ../../overview.txt:21
+msgid ""
+"The data-model syntax offers many rich ways of representing your models -- "
+"so far, it's been solving two years' worth of database-schema problems. "
+"Here's a quick example::"
+msgstr ""
+
+# e7903798c607454d92296fed520d9f83
+#: ../../overview.txt:41
+msgid "Install it"
+msgstr ""
+
+# d0cda3cc396d49c8abadcffed387b2b2
+#: ../../overview.txt:43
+msgid ""
+"Next, run the Django command-line utility to create the database tables "
+"automatically::"
+msgstr ""
+
+# cdd316d980174d19b5d3c9d09a3990f8
+#: ../../overview.txt:48
+msgid ""
+"The ``syncdb`` command looks at all your available models and creates tables "
+"in your database for whichever tables don't already exist."
+msgstr ""
+
+# fe61e7d62585410fb4331e282d98e744
+#: ../../overview.txt:52
+msgid "Enjoy the free API"
+msgstr ""
+
+# c87023b832064fb39e3406d08a51bd5b
+#: ../../overview.txt:54
+msgid ""
+"With that, you've got a free, and rich, Python API to access your data. The "
+"API is created on the fly: No code generation necessary::"
+msgstr ""
+
+# 5e05d46462b241a3bd778a7e9fdd2a0e
+#: ../../overview.txt:126
+msgid ""
+"A dynamic admin interface: It's not just scaffolding -- it's the whole house"
+msgstr ""
+
+# dfa0c6947a60472e8e98dfa8bb5f31b7
+#: ../../overview.txt:128
+msgid ""
+"Once your models are defined, Django can automatically create a "
+"professional, production ready administrative interface -- a Web site that "
+"lets authenticated users add, change and delete objects. It's as easy as "
+"adding a line of code to your model classes::"
+msgstr ""
+
+# 62099d210b5746d0a95e2043a4836ef5
+#: ../../overview.txt:140
+msgid ""
+"The philosophy here is that your site is edited by a staff, or a client, or "
+"maybe just you -- and you don't want to have to deal with creating backend "
+"interfaces just to manage content."
+msgstr ""
+
+# b6989603c9344594b0a9fe2f119c3d7f
+#: ../../overview.txt:144
+msgid ""
+"One typical workflow in creating Django apps is to create models and get the "
+"admin sites up and running as fast as possible, so your staff (or clients) "
+"can start populating data. Then, develop the way data is presented to the "
+"public."
+msgstr ""
+
+# 1797f3460c5e488995b6cea7f01a4b29
+#: ../../overview.txt:149
+msgid "Design your URLs"
+msgstr ""
+
+# 7d7f237b2dfb4b27aeda436d49099da8
+#: ../../overview.txt:151
+msgid ""
+"A clean, elegant URL scheme is an important detail in a high-quality Web "
+"application. Django encourages beautiful URL design and doesn't put any "
+"cruft in URLs, like ``.php`` or ``.asp``."
+msgstr ""
+
+# 48907af62c0048e6aecb4ac0c2f7bd5e
+#: ../../overview.txt:155
+msgid ""
+"To design URLs for an app, you create a Python module called a URLconf. A "
+"table of contents for your app, it contains a simple mapping between URL "
+"patterns and Python callback functions. URLconfs also serve to decouple URLs "
+"from Python code."
+msgstr ""
+
+# 5872de7f004e49d189268366a2029483
+#: ../../overview.txt:160
+msgid ""
+"Here's what a URLconf might look like for the above ``Reporter``/``Article`` "
+"example above::"
+msgstr ""
+
+# b2fc2c067ad64ca6b5285e0306803445
+#: ../../overview.txt:171
+msgid ""
+"The code above maps URLs, as simple regular expressions, to the location of "
+"Python callback functions (\"views\"). The regular expressions use "
+"parenthesis to \"capture\" values from the URLs. When a user requests a "
+"page, Django runs through each pattern, in order, and stops at the first one "
+"that matches the requested URL. (If none of them matches, Django calls a "
+"special-case 404 view.) This is blazingly fast, because the regular "
+"expressions are compiled at load time."
+msgstr ""
+
+# 7cf70e8fbbf34fbdb69b5bd60eb50aad
+#: ../../overview.txt:179
+msgid ""
+"Once one of the regexes matches, Django imports and calls the given view, "
+"which is a simple Python function. Each view gets passed a request object -- "
+"which contains request metadata -- and the values captured in the regex."
+msgstr ""
+
+# 1559bd1c4188408991398b71e470345a
+#: ../../overview.txt:183
+msgid ""
+"For example, if a user requested the URL \"/articles/2005/05/39323/\", "
+"Django would call the function ``mysite.views.article_detail(request, "
+"'2005', '05', '39323')``."
+msgstr ""
+
+# 217a4dae7c43498984c8d58a256bfc92
+#: ../../overview.txt:188
+msgid "Write your views"
+msgstr ""
+
+# 91880a92fc354878978b14ec6033a5da
+#: ../../overview.txt:190
+msgid ""
+"Each view is responsible for doing one of two things: Returning an "
+"``HttpResponse`` object containing the content for the requested page, or "
+"raising an exception such as ``Http404``. The rest is up to you."
+msgstr ""
+
+# efc36e78482b4430b1c3b02486aef0bd
+#: ../../overview.txt:194
+msgid ""
+"Generally, a view retrieves data according to the parameters, loads a "
+"template and renders the template with the retrieved data. Here's an example "
+"view for ``year_archive`` from above::"
+msgstr ""
+
+# 2117b52088fc45e6b51372af05d8313b
+#: ../../overview.txt:202
+msgid ""
+"This example uses Django's template system, which has several powerful "
+"features but strives to stay simple enough for non-programmers to use."
+msgstr ""
+
+# e49da2413c974c059010330d7eb9c4ce
+#: ../../overview.txt:206
+msgid "Design your templates"
+msgstr ""
+
+# 6a37328a64844ed09d60d197930f613e
+#: ../../overview.txt:208
+msgid "The code above loads the ``news/year_archive.html`` template."
+msgstr ""
+
+# 65c0e6971c564e3cb14402439c588b04
+#: ../../overview.txt:210
+msgid ""
+"Django has a template search path, which allows you to minimize redundancy "
+"among templates. In your Django settings, you specify a list of directories "
+"to check for templates. If a template doesn't exist in the first directory, "
+"it checks the second, and so on."
+msgstr ""
+
+# daf59f62ee9c427dad4f71b421baeb96
+#: ../../overview.txt:215
+msgid ""
+"Let's say the ``news/article_detail.html`` template was found. Here's what "
+"that might look like::"
+msgstr ""
+
+# 6063716cc32648318291e035940bf7a2
+#: ../../overview.txt:232
+msgid ""
+"Variables are surrounded by double-curly braces. ``{{ article.headline }}`` "
+"means \"Output the value of the article's headline attribute.\" But dots "
+"aren't used only for attribute lookup: They also can do dictionary-key "
+"lookup, index lookup and function calls."
+msgstr ""
+
+# 44c8c3c3d8694329852c1d017ab19f03
+#: ../../overview.txt:237
+msgid ""
+"Note ``{{ article.pub_date|date:\"F j, Y\" }}`` uses a Unix-style \"pipe"
+"\" (the \"|\" character). This is called a template filter, and it's a way "
+"to filter the value of a variable. In this case, the date filter formats a "
+"Python datetime object in the given format (as found in PHP's date function; "
+"yes, there is one good idea in PHP)."
+msgstr ""
+
+# 017e688e4d6441fd96dc6d3902b11dca
+#: ../../overview.txt:243
+msgid ""
+"You can chain together as many filters as you'd like. You can write custom "
+"filters. You can write custom template tags, which run custom Python code "
+"behind the scenes."
+msgstr ""
+
+# 510ff3556372422ba945631a8362935e
+#: ../../overview.txt:247
+msgid ""
+"Finally, Django uses the concept of \"template inheritance\": That's what "
+"the ``{% extends \"base.html\" %}`` does. It means \"First load the template "
+"called 'base', which has defined a bunch of blocks, and fill the blocks with "
+"the following blocks.\" In short, that lets you dramatically cut down on "
+"redundancy in templates: Each template has to define only what's unique to "
+"that template."
+msgstr ""
+
+# cd88384319414fd380bde39320f2843f
+#: ../../overview.txt:253
+msgid "Here's what the \"base.html\" template might look like::"
+msgstr ""
+
+# ca6e62896975435b9704f3dd86446c83
+#: ../../overview.txt:265
+msgid ""
+"Simplistically, it defines the look-and-feel of the site (with the site's "
+"logo), and provides \"holes\" for child templates to fill. This makes a site "
+"redesign as easy as changing a single file -- the base template."
+msgstr ""
+
+# 62a9ca883b134246bd3c75ac37b05caa
+#: ../../overview.txt:269
+msgid ""
+"It also lets you create multiple versions of a site, with different base "
+"templates, while reusing child templates. Django's creators have used this "
+"technique to create strikingly different cell-phone editions of sites -- "
+"simply by creating a new base template."
+msgstr ""
+
+# 1e447f20a7414c89b99a3bb56d3d463b
+#: ../../overview.txt:274
+msgid ""
+"Note that you don't have to use Django's template system if you prefer "
+"another system. While Django's template system is particularly well-"
+"integrated with Django's model layer, nothing forces you to use it. For that "
+"matter, you don't have to use Django's database API, either. You can use "
+"another database abstraction layer, you can read XML files, you can read "
+"files off disk, or anything you want. Each piece of Django -- models, views, "
+"templates -- is decoupled from the next."
+msgstr ""
+
+# 5fae346b256a46b898ed06e042b23a71
+#: ../../overview.txt:283
+msgid "This is just the surface"
+msgstr ""
+
+# 3196c78e09114c34a1d6653ab6818780
+#: ../../overview.txt:285
+msgid ""
+"This has been only a quick overview of Django's functionality. Some more "
+"useful features:"
+msgstr ""
+
+# 7d5ce68b8f2d40a083a0329e499e2879
+#: ../../overview.txt:288
+msgid "A caching framework that integrates with memcached or other backends."
+msgstr ""
+
+# 33175da92f2c4d1b9af884dbac07152a
+#: ../../overview.txt:289
+msgid ""
+"A syndication framework that makes creating RSS and Atom feeds as easy as "
+"writing a small Python class."
+msgstr ""
+
+# c4d132986f9d45658f641c55f0d5616f
+#: ../../overview.txt:291
+msgid ""
+"More sexy automatically-generated admin features -- this overview barely "
+"scratched the surface."
+msgstr ""
+
+# 51e0ca7436c14f9cb2e57b27315fe89a
+#: ../../overview.txt:294
+msgid ""
+"The next obvious steps are for you to `download Django`_, read :doc:`the "
+"tutorial <tutorial01>` and join `the community`_. Thanks for your interest!"
+msgstr ""

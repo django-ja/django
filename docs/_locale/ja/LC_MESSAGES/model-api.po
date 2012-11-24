@@ -1,0 +1,2824 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 4dcb252d14954a36883e996665c095ca
+#: ../../model-api.txt:3
+msgid "Model reference"
+msgstr ""
+
+# ad9ef8a8eebf4c2195c14eae21e50228
+#: ../../model-api.txt:5
+msgid ""
+"A model is the single, definitive source of data about your data. It "
+"contains the essential fields and behaviors of the data you're storing. "
+"Generally, each model maps to a single database table."
+msgstr ""
+
+# f1e3b1dea01e46948416d95fe28394f5
+#: ../../model-api.txt:9
+msgid "The basics:"
+msgstr ""
+
+# 7fcfdb5ef2604d6f975a60fecb0a3387
+#: ../../model-api.txt:11
+msgid ""
+"Each model is a Python class that subclasses ``django.db.models.Model``."
+msgstr ""
+
+# cda498dc1eda468aa8e9653bd1ac2606
+#: ../../model-api.txt:12
+msgid "Each attribute of the model represents a database field."
+msgstr ""
+
+# 3e5e08cdcd074d099625496e9168e61c
+#: ../../model-api.txt:13
+msgid ""
+"Model metadata (non-field information) goes in an inner class named ``Meta``."
+msgstr ""
+
+# 3826489d848e46ed8532f164a88ad8de
+#: ../../model-api.txt:15
+msgid ""
+"Metadata used for Django's admin site goes into an inner class named "
+"``Admin``."
+msgstr ""
+
+# 3220b54f9cac4e31a219aa5dc9388978
+#: ../../model-api.txt:17
+msgid ""
+"With all of this, Django gives you an automatically-generated database-"
+"access API, which is explained in the :doc:`Database API reference <db-api>`."
+msgstr ""
+
+# 43896c7394394674a2bba15a1398e1c7
+#: ../../model-api.txt:20
+msgid ""
+"A companion to this document is the `official repository of model "
+"examples`_. (In the Django source distribution, these examples are in the "
+"``tests/modeltests`` directory.)"
+msgstr ""
+
+# b94d8982ef3f45e6a22d1dd33f6db2df
+#: ../../model-api.txt:27
+msgid "Quick example"
+msgstr ""
+
+# 2cf65ba95dd94e309d4fef593504044f
+#: ../../model-api.txt:29
+msgid ""
+"This example model defines a ``Person``, which has a ``first_name`` and "
+"``last_name``::"
+msgstr ""
+
+# 72360507761b41daba26b55ee0ba4732
+#: ../../model-api.txt:38
+msgid ""
+"``first_name`` and ``last_name`` are *fields* of the model. Each field is "
+"specified as a class attribute, and each attribute maps to a database column."
+msgstr ""
+
+# 42cc2d9daf3041f3936c59119fb00944
+#: ../../model-api.txt:41
+msgid "The above ``Person`` model would create a database table like this::"
+msgstr ""
+
+# e41173b109d44fc5b26bef0b20d2e012
+#: ../../model-api.txt:49
+msgid "Some technical notes:"
+msgstr ""
+
+# 66501d8fa6b24c288482c6a22be0bc93
+#: ../../model-api.txt:51
+msgid ""
+"The name of the table, ``myapp_person``, is automatically derived from some "
+"model metadata but can be overridden. See _`Table names` below."
+msgstr ""
+
+# 6366da5d3baf45f19e2f1f6d9eba056b
+#: ../../model-api.txt:53
+msgid ""
+"An ``id`` field is added automatically, but this behavior can be overriden. "
+"See `Automatic primary key fields`_ below."
+msgstr ""
+
+# 1fcb6fe1b5be49e483751529d4f5f689
+#: ../../model-api.txt:55
+msgid ""
+"The ``CREATE TABLE`` SQL in this example is formatted using PostgreSQL "
+"syntax, but it's worth noting Django uses SQL tailored to the database "
+"backend specified in your :doc:`settings file <settings>`."
+msgstr ""
+
+# e6f978aeadb34491b9a194ea538b210a
+#: ../../model-api.txt:60
+msgid "Fields"
+msgstr ""
+
+# 2f945ef1cae343a5beed8d806713f985
+#: ../../model-api.txt:62
+msgid ""
+"The most important part of a model -- and the only required part of a model "
+"-- is the list of database fields it defines. Fields are specified by class "
+"attributes."
+msgstr ""
+
+# 4e5a056d47a34676b41aa0905afd79ac
+# 4e5a056d47a34676b41aa0905afd79ac
+# 4e5a056d47a34676b41aa0905afd79ac
+# 4e5a056d47a34676b41aa0905afd79ac
+# 4e5a056d47a34676b41aa0905afd79ac
+# 4e5a056d47a34676b41aa0905afd79ac
+#: ../../model-api.txt:66 ../../model-api.txt:921 ../../model-api.txt:1080
+#: ../../model-api.txt:1126 ../../model-api.txt:1145 ../../model-api.txt:1183
+msgid "Example::"
+msgstr ""
+
+# ac16491bfda843fb9f292307beee107d
+#: ../../model-api.txt:80
+msgid "Field name restrictions"
+msgstr ""
+
+# 3c1d7ac93bb340d6b4af0b6eaa3434e2
+#: ../../model-api.txt:82
+msgid "Django places only two restrictions on model field names:"
+msgstr ""
+
+# a24d151567104124a6619ba4d254c490
+#: ../../model-api.txt:84
+msgid ""
+"A field name cannot be a Python reserved word, because that would result in "
+"a Python syntax error. For example::"
+msgstr ""
+
+# 5ee8e88f9d924a309f30e5b2dd656a5c
+#: ../../model-api.txt:90
+msgid ""
+"A field name cannot contain more than one underscore in a row, due to the "
+"way Django's query lookup syntax works. For example::"
+msgstr ""
+
+# 41c4ca0f426f44f19a234af852f85ef8
+#: ../../model-api.txt:96
+msgid ""
+"These limitations can be worked around, though, because your field name "
+"doesn't necessarily have to match your database column name. See "
+"`db_column`_ below."
+msgstr ""
+
+# 991d2a8a03874e7a8e63ceaf7e19735e
+#: ../../model-api.txt:99
+msgid ""
+"SQL reserved words, such as ``join``, ``where`` or ``select``, *are* allowed "
+"as model field names, because Django escapes all database table names and "
+"column names in every underlying SQL query. It uses the quoting syntax of "
+"your particular database engine."
+msgstr ""
+
+# 8cbfe0af2b9b408c8ad16df55682c2f0
+#: ../../model-api.txt:105
+msgid "Field types"
+msgstr ""
+
+# 19e552c54fd743cea06cd64574a13d92
+#: ../../model-api.txt:107
+msgid ""
+"Each field in your model should be an instance of the appropriate ``Field`` "
+"class. Django uses the field class types to determine a few things:"
+msgstr ""
+
+# f46596689aed472bad69bf49bfa2fbc4
+#: ../../model-api.txt:110
+msgid "The database column type (e.g. ``INTEGER``, ``VARCHAR``)."
+msgstr ""
+
+# 1caf22fc6af94ca7a3a26a1b413221aa
+#: ../../model-api.txt:111
+msgid ""
+"The widget to use in Django's admin interface, if you care to use it (e.g. "
+"``<input type=\"text\">``, ``<select>``)."
+msgstr ""
+
+# 6cb70b70f7eb48229d19edac877bd38e
+#: ../../model-api.txt:113
+msgid ""
+"The minimal validation requirements, used in Django's admin and in "
+"manipulators."
+msgstr ""
+
+# 0684b35d25ac4eb9bb145fff9a709df8
+#: ../../model-api.txt:116
+msgid "Here are all available field types:"
+msgstr ""
+
+# 2d680ffdcbbf4ef1a7ede61bb23fc8ed
+#: ../../model-api.txt:119
+msgid "``AutoField``"
+msgstr ""
+
+# 7a081f5bf9584f4b8c33caccca09196e
+#: ../../model-api.txt:121
+msgid ""
+"An ``IntegerField`` that automatically increments according to available "
+"IDs. You usually won't need to use this directly; a primary key field will "
+"automatically be added to your model if you don't specify otherwise. See "
+"`Automatic primary key fields`_."
+msgstr ""
+
+# f394bd6ece114d42983f3369cd9ddbde
+#: ../../model-api.txt:127
+msgid "``BooleanField``"
+msgstr ""
+
+# a28d16b8d02f4a23a94f5ce54afa983a
+#: ../../model-api.txt:129
+msgid "A true/false field."
+msgstr ""
+
+# 7638c1202f9d401ea71ef91da3491c37
+#: ../../model-api.txt:131
+msgid "The admin represents this as a checkbox."
+msgstr ""
+
+# 3456f42b84a342b1a9624e0370f453ec
+#: ../../model-api.txt:134
+msgid "``CharField``"
+msgstr ""
+
+# 9817c505ffff42c5b0b5c2f32959c8c9
+#: ../../model-api.txt:136
+msgid "A string field, for small- to large-sized strings."
+msgstr ""
+
+# a89b230e8aff43f4bd4edb8d3d3fb95f
+#: ../../model-api.txt:138
+msgid "For large amounts of text, use ``TextField``."
+msgstr ""
+
+# 14b6e085bc9747048b13f9289bec7ce4
+# 14b6e085bc9747048b13f9289bec7ce4
+# 14b6e085bc9747048b13f9289bec7ce4
+# 14b6e085bc9747048b13f9289bec7ce4
+# 14b6e085bc9747048b13f9289bec7ce4
+# 14b6e085bc9747048b13f9289bec7ce4
+#: ../../model-api.txt:140 ../../model-api.txt:286 ../../model-api.txt:305
+#: ../../model-api.txt:312 ../../model-api.txt:392 ../../model-api.txt:399
+msgid ""
+"The admin represents this as an ``<input type=\"text\">`` (a single-line "
+"input)."
+msgstr ""
+
+# 8726b8f478d0438aae9d89a681a3d030
+#: ../../model-api.txt:142
+msgid ""
+"``CharField`` has an extra required argument, ``maxlength``, the maximum "
+"length (in characters) of the field. The maxlength is enforced at the "
+"database level and in Django's validation."
+msgstr ""
+
+# db404e1018fa44c794702358512113b0
+#: ../../model-api.txt:147
+msgid "``CommaSeparatedIntegerField``"
+msgstr ""
+
+# fe870b39fffd4fd78c7785e4ee822cbf
+#: ../../model-api.txt:149
+msgid ""
+"A field of integers separated by commas. As in ``CharField``, the "
+"``maxlength`` argument is required."
+msgstr ""
+
+# acbd9cbd08fc4dd8b4afe5e87f5ac29c
+#: ../../model-api.txt:153
+msgid "``DateField``"
+msgstr ""
+
+# 2cfe7457efbd4957b6380a56df81caa5
+#: ../../model-api.txt:155
+msgid "A date field. Has a few extra optional arguments:"
+msgstr ""
+
+# ac42d013dd2344bf96660f1e5d38d543
+# ac42d013dd2344bf96660f1e5d38d543
+# ac42d013dd2344bf96660f1e5d38d543
+# ac42d013dd2344bf96660f1e5d38d543
+# ac42d013dd2344bf96660f1e5d38d543
+#: ../../model-api.txt:158 ../../model-api.txt:233 ../../model-api.txt:268
+#: ../../model-api.txt:695 ../../model-api.txt:816
+msgid "Argument"
+msgstr ""
+
+# d9d577c254aa4443acf0e0fe9c81cb70
+# d9d577c254aa4443acf0e0fe9c81cb70
+# d9d577c254aa4443acf0e0fe9c81cb70
+# d9d577c254aa4443acf0e0fe9c81cb70
+# d9d577c254aa4443acf0e0fe9c81cb70
+#: ../../model-api.txt:158 ../../model-api.txt:233 ../../model-api.txt:268
+#: ../../model-api.txt:695 ../../model-api.txt:816
+msgid "Description"
+msgstr ""
+
+# ac990bbbb8074a0695a39a65af308b45
+#: ../../model-api.txt:160
+msgid "``auto_now``"
+msgstr ""
+
+# f45e4230a1ab4b4e9fc0afd8c122aba5
+#: ../../model-api.txt:160
+msgid ""
+"Automatically set the field to now every time the object is saved. Useful "
+"for \"last-modified\" timestamps. Note that the current date is *always* "
+"used; it's not just a default value that you can override."
+msgstr ""
+
+# 440d8f97d87146618ddf5eb22fb7c52c
+#: ../../model-api.txt:166
+msgid "``auto_now_add``"
+msgstr ""
+
+# 94b342ed5cfc42c5980f0f56f0f98860
+#: ../../model-api.txt:166
+msgid ""
+"Automatically set the field to now when the object is first created. Useful "
+"for creation of timestamps. Note that the current date is *always* used; "
+"it's not just a default value that you can override."
+msgstr ""
+
+# 20c1d6c53d8e462396b272b46c741063
+#: ../../model-api.txt:173
+msgid ""
+"The admin represents this as an ``<input type=\"text\">`` with a JavaScript "
+"calendar and a shortcut for \"Today.\""
+msgstr ""
+
+# fd18c0f57d8746eeb627d46ebb4be115
+#: ../../model-api.txt:177
+msgid "``DateTimeField``"
+msgstr ""
+
+# bdac66e4262949148e5174f87854b3e1
+#: ../../model-api.txt:179
+msgid "A date and time field. Takes the same extra options as ``DateField``."
+msgstr ""
+
+# 7726938d830840c6afd0182bcf60233e
+#: ../../model-api.txt:181
+msgid ""
+"The admin represents this as two ``<input type=\"text\">`` fields, with "
+"JavaScript shortcuts."
+msgstr ""
+
+# b52b7f77da604cf88a9566d770727360
+#: ../../model-api.txt:185
+msgid "``EmailField``"
+msgstr ""
+
+# dfb3c679f177403ea4e791cdff5a17fd
+#: ../../model-api.txt:187
+msgid ""
+"A ``CharField`` that checks that the value is a valid e-mail address. This "
+"doesn't accept ``maxlength``."
+msgstr ""
+
+# 2634043cf2e847b8bc7b5bf76268051e
+#: ../../model-api.txt:191
+msgid "``FileField``"
+msgstr ""
+
+# 29a29921f154469a94cbc7e05561409b
+#: ../../model-api.txt:193
+msgid "A file-upload field."
+msgstr ""
+
+# e272fcd2aa6c41ecb564007d95d5ec6c
+#: ../../model-api.txt:195
+msgid ""
+"Has an extra required argument, ``upload_to``, a local filesystem path to "
+"which files should be upload. This path may contain `strftime formatting`_, "
+"which will be replaced by the date/time of the file upload (so that uploaded "
+"files don't fill up the given directory)."
+msgstr ""
+
+# 6b184bec9c024708af365f47a166c50a
+#: ../../model-api.txt:200
+msgid ""
+"The admin represents this as an ``<input type=\"file\">`` (a file-upload "
+"widget)."
+msgstr ""
+
+# c5c8785692a845a0888c2b4fe7a50fa5
+#: ../../model-api.txt:202
+msgid ""
+"Using a ``FileField`` or an ``ImageField`` (see below) in a model takes a "
+"few steps:"
+msgstr ""
+
+# 34f9115a363942b2a5dc574623815e32
+#: ../../model-api.txt:205
+msgid ""
+"In your settings file, you'll need to define ``MEDIA_ROOT`` as the full path "
+"to a directory where you'd like Django to store uploaded files. (For "
+"performance, these files are not stored in the database.) Define "
+"``MEDIA_URL`` as the base public URL of that directory. Make sure that this "
+"directory is writable by the Web server's user account."
+msgstr ""
+
+# 763db871d95d4d6c89b76b49ec886de6
+#: ../../model-api.txt:212
+msgid ""
+"Add the ``FileField`` or ``ImageField`` to your model, making sure to define "
+"the ``upload_to`` option to tell Django to which subdirectory of "
+"``MEDIA_ROOT`` it should upload files."
+msgstr ""
+
+# 633c0eabc47f481c96b0d721e1ce04a1
+#: ../../model-api.txt:216
+msgid ""
+"All that will be stored in your database is a path to the file (relative to "
+"``MEDIA_ROOT``). You'll must likely want to use the convenience "
+"``get_<fieldname>_url`` function provided by Django. For example, if your "
+"``ImageField`` is called ``mug_shot``, you can get the absolute URL to your "
+"image in a template with ``{{ object.get_mug_shot_url }}``."
+msgstr ""
+
+# 98c18465f76145cbb35e3a03f7d7404b
+#: ../../model-api.txt:226
+msgid "``FilePathField``"
+msgstr ""
+
+# 97e60f4b01cf412d9129566e8a399e61
+#: ../../model-api.txt:228
+msgid ""
+"A field whose choices are limited to the filenames in a certain directory on "
+"the filesystem. Has three special arguments, of which the first is required:"
+msgstr ""
+
+# c033b24761c04720bcef806a99410d61
+#: ../../model-api.txt:235
+msgid "``path``"
+msgstr ""
+
+# 0bf49412e1b84f8d9f11595ba36f3515
+#: ../../model-api.txt:235
+msgid ""
+"Required. The absolute filesystem path to a directory from which this "
+"``FilePathField`` should get its choices. Example: ``\"/home/images\"``."
+msgstr ""
+
+# 03d6909384e3413a919c6e084dfbcf46
+#: ../../model-api.txt:239
+msgid "``match``"
+msgstr ""
+
+# 9273bb5c348544c3a403f709cb2915cb
+#: ../../model-api.txt:239
+msgid ""
+"Optional. A regular expression, as a string, that ``FilePathField`` will use "
+"to filter filenames. Note that the regex will be applied to the base "
+"filename, not the full path. Example: ``\"foo.*\\.txt^\"``, which will match "
+"a file called ``foo23.txt`` but not ``bar.txt`` or ``foo23.gif``."
+msgstr ""
+
+# cdd3ce0abf3d453b886ef93929b93547
+#: ../../model-api.txt:246
+msgid "``recursive``"
+msgstr ""
+
+# b0655f953c34413d93a0571aec345766
+#: ../../model-api.txt:246
+msgid ""
+"Optional. Either ``True`` or ``False``. Default is ``False``. Specifies "
+"whether all subdirectories of ``path`` should be included."
+msgstr ""
+
+# c04714f360e5493ca9b26aa62ec3072a
+#: ../../model-api.txt:251
+msgid "Of course, these arguments can be used together."
+msgstr ""
+
+# bc754b2c4cc04e71ac59102829821989
+#: ../../model-api.txt:253
+msgid ""
+"The one potential gotcha is that ``match`` applies to the base filename, not "
+"the full path. So, this example::"
+msgstr ""
+
+# 143cd831bfe8415a9d378276ca703689
+#: ../../model-api.txt:258
+msgid ""
+"...will match ``/home/images/foo.gif`` but not ``/home/images/foo/bar.gif`` "
+"because the ``match`` applies to the base filename (``foo.gif`` and ``bar."
+"gif``)."
+msgstr ""
+
+# 213d0e00eaef49ca8d7a98ffce3168bc
+#: ../../model-api.txt:263
+msgid "``FloatField``"
+msgstr ""
+
+# 55e896038e6449db8a1439e501555838
+#: ../../model-api.txt:265
+msgid "A floating-point number. Has two **required** arguments:"
+msgstr ""
+
+# de446d6685e74c099a5119adbc6b90e5
+#: ../../model-api.txt:270
+msgid "``max_digits``"
+msgstr ""
+
+# 68d409ca712441a9832f579f3adf2f0c
+#: ../../model-api.txt:270
+msgid "The maximum number of digits allowed in the number."
+msgstr ""
+
+# 9d779a103a4647798108c1251c979f41
+#: ../../model-api.txt:272
+msgid "``decimal_places``"
+msgstr ""
+
+# a085ba5da145448f872da6e1f0d38cf9
+#: ../../model-api.txt:272
+msgid "The number of decimal places to store with the number."
+msgstr ""
+
+# 46879df25de344a2890f3fe3f4ff8cbe
+#: ../../model-api.txt:276
+msgid ""
+"For example, to store numbers up to 999 with a resolution of 2 decimal "
+"places, you'd use::"
+msgstr ""
+
+# ab60615ec6504e3b94db24de23032e92
+#: ../../model-api.txt:281
+msgid ""
+"And to store numbers up to approximately one billion with a resolution of 10 "
+"decimal places::"
+msgstr ""
+
+# c6317dc771344f43b5153ac3b384b9cc
+#: ../../model-api.txt:289
+msgid "``ImageField``"
+msgstr ""
+
+# e519e9f507c544339dc2ab1e35e0ba85
+#: ../../model-api.txt:291
+msgid ""
+"Like ``FileField``, but validates that the uploaded object is a valid image. "
+"Has two extra optional arguments, ``height_field`` and ``width_field``, "
+"which, if set, will be auto-populated with the height and width of the image "
+"each time a model instance is saved."
+msgstr ""
+
+# ac3170b246c0496aa0173fc0343b1866
+#: ../../model-api.txt:296
+msgid "Requires the `Python Imaging Library`_."
+msgstr ""
+
+# 99bf1438eb6f42edabd052d1503efbd8
+#: ../../model-api.txt:301
+msgid "``IntegerField``"
+msgstr ""
+
+# 17d78698809b4a5ab706faf98bdd28eb
+#: ../../model-api.txt:303
+msgid "An integer."
+msgstr ""
+
+# 32920d90dd3e46b4b76d1537e4d0b019
+#: ../../model-api.txt:308
+msgid "``IPAddressField``"
+msgstr ""
+
+# 591c9ac424f84b79ab17b1c9d11cae5b
+#: ../../model-api.txt:310
+msgid "An IP address, in string format (i.e. \"24.124.1.30\")."
+msgstr ""
+
+# ed21c1d0292044fcadbedf2680fe4e66
+#: ../../model-api.txt:315
+msgid "``NullBooleanField``"
+msgstr ""
+
+# ce77c8e60c7743f6b38a38dde2220fdc
+#: ../../model-api.txt:317
+msgid ""
+"Like a ``BooleanField``, but allows ``NULL`` as one of the options.  Use "
+"this instead of a ``BooleanField`` with ``null=True``."
+msgstr ""
+
+# 0851533d7eb040e2865e8656b92cb445
+#: ../../model-api.txt:320
+msgid ""
+"The admin represents this as a ``<select>`` box with \"Unknown\", \"Yes\" "
+"and \"No\" choices."
+msgstr ""
+
+# 63c51a79fa9d4a3fb6290e416bc2c09a
+#: ../../model-api.txt:323
+msgid "``PhoneNumberField``"
+msgstr ""
+
+# fa99647a27d34b24acb9319742a66628
+#: ../../model-api.txt:325
+msgid ""
+"A ``CharField`` that checks that the value is a valid U.S.A.-style phone "
+"number (in the format ``XXX-XXX-XXXX``)."
+msgstr ""
+
+# 07a9d670d22645f08c85442fba722605
+#: ../../model-api.txt:329
+msgid "``PositiveIntegerField``"
+msgstr ""
+
+# a25ee255808c48a49cc4046787388595
+#: ../../model-api.txt:331
+msgid "Like an ``IntegerField``, but must be positive."
+msgstr ""
+
+# 649093abac584917a0ec7ee5a7110b99
+#: ../../model-api.txt:334
+msgid "``PositiveSmallIntegerField``"
+msgstr ""
+
+# 8b6be7af6f204d59b3b7860e1a77cdcd
+#: ../../model-api.txt:336
+msgid ""
+"Like a ``PositiveIntegerField``, but only allows values under a certain "
+"(database-dependent) point."
+msgstr ""
+
+# a7a755ac6a3c467481115d69bd346826
+#: ../../model-api.txt:340
+msgid "``SlugField``"
+msgstr ""
+
+# 02d65974dc7c41f690c79608e1d4a556
+#: ../../model-api.txt:342
+msgid ""
+"\"Slug\" is a newspaper term. A slug is a short label for something, "
+"containing only letters, numbers, underscores or hyphens. They're generally "
+"used in URLs."
+msgstr ""
+
+# 1c7d1a6e9f2d40f39492356a0a068fe1
+#: ../../model-api.txt:346
+msgid ""
+"In the Django development version, you can specify ``maxlength``. If "
+"``maxlength`` is not specified, Django will use a default length of 50. In "
+"previous Django versions, there's no way to override the length of 50."
+msgstr ""
+
+# 7e80db7e5be74b3b9cb73afa6aabb964
+#: ../../model-api.txt:350
+msgid "Implies ``db_index=True``."
+msgstr ""
+
+# 0cde27224d2941a6a80e0130a8bdd42d
+#: ../../model-api.txt:352
+msgid ""
+"Accepts an extra option, ``prepopulate_from``, which is a list of fields "
+"from which to auto-populate the slug, via JavaScript, in the object's admin "
+"form::"
+msgstr ""
+
+# 16b40b7a0c8a4626982a4fab8e88b1d2
+#: ../../model-api.txt:358
+msgid "``prepopulate_from`` doesn't accept DateTimeFields."
+msgstr ""
+
+# 1cf45e0e7ede42248329119f2858fad5
+#: ../../model-api.txt:360
+msgid ""
+"The admin represents ``SlugField`` as an ``<input type=\"text\">`` (a single-"
+"line input)."
+msgstr ""
+
+# 5b7112ad70314a73b898caa2af6d571e
+#: ../../model-api.txt:364
+msgid "``SmallIntegerField``"
+msgstr ""
+
+# 29b8639a1801476a831b662b2c082e17
+#: ../../model-api.txt:366
+msgid ""
+"Like an ``IntegerField``, but only allows values under a certain (database-"
+"dependent) point."
+msgstr ""
+
+# bb8600e52d1948db88c88ea7440ad4b4
+#: ../../model-api.txt:370
+msgid "``TextField``"
+msgstr ""
+
+# db1b6a614cfc4ad38b8008b7135c8852
+#: ../../model-api.txt:372
+msgid "A large text field."
+msgstr ""
+
+# 53f50f193cc64645a89bbbb0f7b34ae9
+#: ../../model-api.txt:374
+msgid "The admin represents this as a ``<textarea>`` (a multi-line input)."
+msgstr ""
+
+# 964cb0e38826473d95607ea0a90a42f8
+#: ../../model-api.txt:377
+msgid "``TimeField``"
+msgstr ""
+
+# 4ac33f2759014aeabe421d8ecfeb93e8
+#: ../../model-api.txt:379
+msgid ""
+"A time. Accepts the same auto-population options as ``DateField`` and "
+"``DateTimeField``."
+msgstr ""
+
+# 5ddc6760dcf84516ba20a0b0bbd44a13
+#: ../../model-api.txt:382
+msgid ""
+"The admin represents this as an ``<input type=\"text\">`` with some "
+"JavaScript shortcuts."
+msgstr ""
+
+# 824b49d4dd3844998699bea4387ddd60
+#: ../../model-api.txt:386
+msgid "``URLField``"
+msgstr ""
+
+# f1fa77a9260f468d8e23d27d2c5cee84
+#: ../../model-api.txt:388
+msgid ""
+"A field for a URL. If the ``verify_exists`` option is ``True`` (default), "
+"the URL given will be checked for existence (i.e., the URL actually loads "
+"and doesn't give a 404 response)."
+msgstr ""
+
+# 2dcf64ce9b10413b901fe0b7ed645f75
+#: ../../model-api.txt:395
+msgid "``USStateField``"
+msgstr ""
+
+# 848b02921416400c8182553284c7dce5
+#: ../../model-api.txt:397
+msgid "A two-letter U.S. state abbreviation."
+msgstr ""
+
+# 00d08aeb5d60411589f8e9e47251d8c7
+#: ../../model-api.txt:402
+msgid "``XMLField``"
+msgstr ""
+
+# e90b91b6068e4def8e8bad28a279db5b
+#: ../../model-api.txt:404
+msgid ""
+"A ``TextField`` that checks that the value is valid XML that matches a given "
+"schema. Takes one required argument, ``schema_path``, which is the "
+"filesystem path to a RelaxNG_ schema against which to validate the field."
+msgstr ""
+
+# 1527518a34ff4341aaed7ff0c86c8b62
+#: ../../model-api.txt:411
+msgid "Field options"
+msgstr ""
+
+# e6041685c6844a24b76bde27cb835c3f
+#: ../../model-api.txt:413
+msgid ""
+"The following arguments are available to all field types. All are optional."
+msgstr ""
+
+# 6486afa488c049b69bcc18c780aa83fb
+#: ../../model-api.txt:416
+msgid "``null``"
+msgstr ""
+
+# 68512c5a6d0d428cb96ce3e158200b27
+#: ../../model-api.txt:418
+msgid ""
+"If ``True``, Django will store empty values as ``NULL`` in the database. "
+"Default is ``False``."
+msgstr ""
+
+# 56f31536de6c4db6a391cf365bdaee8a
+#: ../../model-api.txt:421
+msgid ""
+"Note that empty string values will always get stored as empty strings, not "
+"as ``NULL`` -- so use ``null=True`` for non-string fields such as integers, "
+"booleans and dates."
+msgstr ""
+
+# 91c2194fb9b14902b603ccb0e72b51f8
+#: ../../model-api.txt:425
+msgid ""
+"Avoid using ``null`` on string-based fields such as ``CharField`` and "
+"``TextField`` unless you have an excellent reason. If a string-based field "
+"has ``null=True``, that means it has two possible values for \"no data\": "
+"``NULL``, and the empty string. In most cases, it's redundant to have two "
+"possible values for \"no data;\" Django convention is to use the empty "
+"string, not ``NULL``."
+msgstr ""
+
+# be48f867c2f74003b6b30c8ec6fd0ebc
+#: ../../model-api.txt:433
+msgid "``blank``"
+msgstr ""
+
+# 2d1f561da19c4115987f72f277f83817
+#: ../../model-api.txt:435
+msgid "If ``True``, the field is allowed to be blank."
+msgstr ""
+
+# be988c5d0d194802855a1ad7c392b509
+#: ../../model-api.txt:437
+msgid ""
+"Note that this is different than ``null``. ``null`` is purely database-"
+"related, whereas ``blank`` is validation-related. If a field has "
+"``blank=True``, validation on Django's admin site will allow entry of an "
+"empty value. If a field has ``blank=False``, the field will be required."
+msgstr ""
+
+# 2cb46165ca1b47fabb7e42d45dc5cb0c
+#: ../../model-api.txt:443
+msgid "``choices``"
+msgstr ""
+
+# 403d564912144228b632dbbec4480302
+#: ../../model-api.txt:445
+msgid ""
+"An iterable (e.g., a list or tuple) of 2-tuples to use as choices for this "
+"field."
+msgstr ""
+
+# 77773b982172453184d1fc733249792c
+#: ../../model-api.txt:448
+msgid ""
+"If this is given, Django's admin will use a select box instead of the "
+"standard text field and will limit choices to the choices given."
+msgstr ""
+
+# caa910d297d9469f8afcbfd638af9508
+#: ../../model-api.txt:451
+msgid "A choices list looks like this::"
+msgstr ""
+
+# 2cabd1e115cc497787ba4f649bae2726
+#: ../../model-api.txt:461
+msgid ""
+"The first element in each tuple is the actual value to be stored. The second "
+"element is the human-readable name for the option."
+msgstr ""
+
+# efaafb7d0a8d45558f9b901030d1f6cc
+#: ../../model-api.txt:464
+msgid "The choices list can be defined either as part of your model class::"
+msgstr ""
+
+# 4b62a2ac1101492090690b28a63684ab
+#: ../../model-api.txt:473
+msgid "or outside your model class altogether::"
+msgstr ""
+
+# 4c2fe95b3a5b4002b9692f80c7efa3d6
+#: ../../model-api.txt:482
+msgid ""
+"Finally, note that choices can be any iterable object -- not necessarily a "
+"list or tuple. This lets you construct choices dynamically. But if you find "
+"yourself hacking ``choices`` to be dynamic, you're probably better off using "
+"a proper database table with a ``ForeignKey``. ``choices`` is meant for "
+"static data that doesn't change much, if ever."
+msgstr ""
+
+# ce9689984c0a421cbf5481254a646263
+#: ../../model-api.txt:489
+msgid "``core``"
+msgstr ""
+
+# e183dd70a43c44a99b76251333316d88
+#: ../../model-api.txt:491
+msgid "For objects that are edited inline to a related object."
+msgstr ""
+
+# e7f6974fe4d3464c8553fe57849c040d
+#: ../../model-api.txt:493
+msgid ""
+"In the Django admin, if all \"core\" fields in an inline-edited object are "
+"cleared, the object will be deleted."
+msgstr ""
+
+# c40e2ef7427142699d5cb689c03f1e3f
+#: ../../model-api.txt:496
+msgid ""
+"It is an error to have an inline-editable relation without at least one "
+"``core=True`` field."
+msgstr ""
+
+# 5815fbe400254ca9b73a4e2839e24f93
+#: ../../model-api.txt:499
+msgid ""
+"Please note that each field marked \"core\" is treated as a required field "
+"by the Django admin site. Essentially, this means you should put "
+"``core=True`` on all required fields in your related object that is being "
+"edited inline."
+msgstr ""
+
+# 5df584d75e8b44f3a9eddf1354a5680d
+#: ../../model-api.txt:504
+msgid "``db_column``"
+msgstr ""
+
+# abe21411c95040258a30f0f2d71614f0
+#: ../../model-api.txt:506
+msgid ""
+"The name of the database column to use for this field. If this isn't given, "
+"Django will use the field's name."
+msgstr ""
+
+# dc947fa47a134f6583f8ba8731e7de61
+#: ../../model-api.txt:509
+msgid ""
+"If your database column name is an SQL reserved word, or contains characters "
+"that aren't allowed in Python variable names -- notably, the hyphen -- "
+"that's OK. Django quotes column and table names behind the scenes."
+msgstr ""
+
+# 22752836f20045149a45e88a085fb699
+#: ../../model-api.txt:515
+msgid "``db_index``"
+msgstr ""
+
+# c293dd5e8a084f37ad40e09a0aad83f9
+#: ../../model-api.txt:517
+msgid ""
+"If ``True``, ``django-admin.py sqlindexes`` will output a ``CREATE INDEX`` "
+"statement for this field."
+msgstr ""
+
+# 6be913d5d95b47f19c668e07330c52db
+#: ../../model-api.txt:521
+msgid "``default``"
+msgstr ""
+
+# 54c969cd514d4da2af963ff9b865154e
+#: ../../model-api.txt:523
+msgid "The default value for the field."
+msgstr ""
+
+# de20b2b6830947c9a925c4ecf52633e1
+#: ../../model-api.txt:526
+msgid "``editable``"
+msgstr ""
+
+# b173eb5ca8da4cccb7eab71a34d0de9e
+#: ../../model-api.txt:528
+msgid ""
+"If ``False``, the field will not be editable in the admin. Default is  "
+"``True``."
+msgstr ""
+
+# bb69ec3c487b466cab623c41519bcba2
+#: ../../model-api.txt:531
+msgid "``help_text``"
+msgstr ""
+
+# 273433a8325743b08ac9358ab43f1a69
+#: ../../model-api.txt:533
+msgid ""
+"Extra \"help\" text to be displayed under the field on the object's admin "
+"form. It's useful for documentation even if your object doesn't have an "
+"admin form."
+msgstr ""
+
+# 83e514edb38b4e2b902f2ce8062f1724
+#: ../../model-api.txt:538
+msgid "``primary_key``"
+msgstr ""
+
+# 65cc5b70209b4f718aea576fd5d001c9
+#: ../../model-api.txt:540
+msgid "If ``True``, this field is the primary key for the model."
+msgstr ""
+
+# 64aa2844e8604813adc3c34a0c4e72d8
+#: ../../model-api.txt:542
+msgid ""
+"If you don't specify ``primary_key=True`` for any fields in your model, "
+"Django will automatically add this field::"
+msgstr ""
+
+# a8515c58f3ae42eaac4aef909f304c34
+#: ../../model-api.txt:547
+msgid ""
+"Thus, you don't need to set ``primary_key=True`` on any of your fields "
+"unless you want to override the default primary-key behavior."
+msgstr ""
+
+# 181cda5da7324d76afedb6a3db29ceac
+#: ../../model-api.txt:550
+msgid ""
+"``primary_key=True`` implies ``blank=False``, ``null=False`` and "
+"``unique=True``. Only one primary key is allowed on an object."
+msgstr ""
+
+# 614303c93c8f4ec2a6d1d2a083e08ea4
+#: ../../model-api.txt:554
+msgid "``radio_admin``"
+msgstr ""
+
+# 4b07969c7d3d4cbea2039c70e930a779
+#: ../../model-api.txt:556
+msgid ""
+"By default, Django's admin uses a select-box interface (<select>) for fields "
+"that are ``ForeignKey`` or have ``choices`` set. If ``radio_admin`` is set "
+"to ``True``, Django will use a radio-button interface instead."
+msgstr ""
+
+# a04ef0ce5ba2472fb49884ad1ee93697
+#: ../../model-api.txt:560
+msgid ""
+"Don't use this for a field unless it's a ``ForeignKey`` or has ``choices`` "
+"set."
+msgstr ""
+
+# b310cd5392c84e1c9a928066593c1f0b
+#: ../../model-api.txt:564
+msgid "``unique``"
+msgstr ""
+
+# 2927aa31786c4a04b394dea6921d3b4e
+#: ../../model-api.txt:566
+msgid "If ``True``, this field must be unique throughout the table."
+msgstr ""
+
+# 16e4687d91c14912abb5a240892a9281
+#: ../../model-api.txt:568
+msgid ""
+"This is enforced at the database level and at the Django admin-form level."
+msgstr ""
+
+# e9469ac1049f4264a4da81fbc1800760
+#: ../../model-api.txt:571
+msgid "``unique_for_date``"
+msgstr ""
+
+# 0a63d3c7d715467bac59ed5001cf61be
+#: ../../model-api.txt:573
+msgid ""
+"Set this to the name of a ``DateField`` or ``DateTimeField`` to require that "
+"this field be unique for the value of the date field."
+msgstr ""
+
+# 037f823ea4544d3a87d74fdd801e2456
+#: ../../model-api.txt:576
+msgid ""
+"For example, if you have a field ``title`` that has ``unique_for_date="
+"\"pub_date\"``, then Django wouldn't allow the entry of two records with the "
+"same ``title`` and ``pub_date``."
+msgstr ""
+
+# 0a6db3901516455490c2cd7ce690e359
+#: ../../model-api.txt:580
+msgid ""
+"This is enforced at the Django admin-form level but not at the database "
+"level."
+msgstr ""
+
+# 6f028d4f88fd47eebbc9f3ce083b51d8
+#: ../../model-api.txt:583
+msgid "``unique_for_month``"
+msgstr ""
+
+# 10a22f8cd4024b45b3d339ffe6544097
+#: ../../model-api.txt:585
+msgid ""
+"Like ``unique_for_date``, but requires the field to be unique with respect "
+"to the month."
+msgstr ""
+
+# 5c28a5928b4e4f468b40762412a6764e
+#: ../../model-api.txt:589
+msgid "``unique_for_year``"
+msgstr ""
+
+# 4ffa036e6750482b9bcc968c43a0afe8
+#: ../../model-api.txt:591
+msgid "Like ``unique_for_date`` and ``unique_for_month``."
+msgstr ""
+
+# b578389caa43449fb0dc99e25f32988b
+#: ../../model-api.txt:594
+msgid "``validator_list``"
+msgstr ""
+
+# bb61e3ad27ca4665a56b8960ebef721e
+#: ../../model-api.txt:596
+msgid ""
+"A list of extra validators to apply to the field. Each should be a callable "
+"that takes the parameters ``field_data, all_data`` and raises ``django.core."
+"validators.ValidationError`` for errors. (See the :doc:`validator docs "
+"<forms>`.)"
+msgstr ""
+
+# 39a05258fc1b4a07ab4efeef87f8f515
+#: ../../model-api.txt:601
+msgid ""
+"Django comes with quite a few validators. They're in ``django.core."
+"validators``."
+msgstr ""
+
+# 7df4cf0f62ca4222a60d4272f98612ec
+#: ../../model-api.txt:604
+msgid "Verbose field names"
+msgstr ""
+
+# b92530c1f784468ab9327200c7541ca9
+#: ../../model-api.txt:606
+msgid ""
+"Each field type, except for ``ForeignKey``, ``ManyToManyField`` and "
+"``OneToOneField``, takes an optional first positional argument -- a verbose "
+"name. If the verbose name isn't given, Django will automatically create it "
+"using the field's attribute name, converting underscores to spaces."
+msgstr ""
+
+# 8105ac216ec44873a373f78b88f638be
+#: ../../model-api.txt:611
+msgid "In this example, the verbose name is ``\"Person's first name\"``::"
+msgstr ""
+
+# c172f3cafe684717ad3a7ca8fbf11535
+#: ../../model-api.txt:615
+msgid "In this example, the verbose name is ``\"first name\"``::"
+msgstr ""
+
+# 25d935f4202849feb183479bc4505d0f
+#: ../../model-api.txt:619
+msgid ""
+"``ForeignKey``, ``ManyToManyField`` and ``OneToOneField`` require the first "
+"argument to be a model class, so use the ``verbose_name`` keyword argument::"
+msgstr ""
+
+# 0f96a61bfa554348add61782766217c5
+#: ../../model-api.txt:626
+msgid ""
+"Convention is not to capitalize the first letter of the ``verbose_name``. "
+"Django will automatically capitalize the first letter where it needs to."
+msgstr ""
+
+# 3e83296e0f894cbca41f3835de6eeff7
+#: ../../model-api.txt:630
+msgid "Relationships"
+msgstr ""
+
+# a4fa7e46a44a480588934a3d574401ed
+#: ../../model-api.txt:632
+msgid ""
+"Clearly, the power of relational databases lies in relating tables to each "
+"other. Django offers ways to define the three most common types of database "
+"relationships: Many-to-one, many-to-many and one-to-one."
+msgstr ""
+
+# d6cc55cdcb23442cbb217b1894367921
+#: ../../model-api.txt:637
+msgid "Many-to-one relationships"
+msgstr ""
+
+# 3eda4dd73db64569babfa311a3bf8119
+#: ../../model-api.txt:639
+msgid ""
+"To define a many-to-one relationship, use ``ForeignKey``. You use it just "
+"like any other ``Field`` type: by including it as a class attribute of your "
+"model."
+msgstr ""
+
+# 4111759ed695477389aaeeb9a78235c6
+#: ../../model-api.txt:642
+msgid ""
+"``ForeignKey`` requires a positional argument: The class to which the model "
+"is related."
+msgstr ""
+
+# bb4c92f6b02f44f590f2dd7c79b2c3ff
+#: ../../model-api.txt:645
+msgid ""
+"For example, if a ``Car`` model has a ``Manufacturer`` -- that is, a "
+"``Manufacturer`` makes multiple cars but each ``Car`` only has one "
+"``Manufacturer`` -- use the following definitions::"
+msgstr ""
+
+# 4bcf1b84930d4519ab9791976dd7215a
+#: ../../model-api.txt:656
+msgid ""
+"To create a recursive relationship -- an object that has a many-to-one "
+"relationship with itself -- use ``models.ForeignKey('self')``."
+msgstr ""
+
+# 2d172fb8ef4541cca016698331fc8c53
+#: ../../model-api.txt:659
+msgid ""
+"If you need to create a relationship on a model that has not yet been "
+"defined, you can use the name of the model, rather than the model object "
+"itself::"
+msgstr ""
+
+# 09960673b6374386977817da5bb5cc36
+#: ../../model-api.txt:669
+msgid ""
+"Note, however, that support for strings around model names in ``ForeignKey`` "
+"is quite new, and it can be buggy in some cases."
+msgstr ""
+
+# 277385ed05b84b7fad9c2374455ee15f
+#: ../../model-api.txt:672
+msgid ""
+"Behind the scenes, Django appends ``\"_id\"`` to the field name to create "
+"its database column name. In the above example, the database table for the "
+"``Car`` model will have a ``manufacturer_id`` column. (You can change this "
+"explicitly by specifying ``db_column``; see ``db_column`` below.)  However, "
+"your code should never have to deal with the database column name, unless "
+"you write custom SQL. You'll always deal with the field names of your model "
+"object."
+msgstr ""
+
+# 08448985396442fda566acaf1d39ad4a
+#: ../../model-api.txt:679
+msgid ""
+"It's suggested, but not required, that the name of a ``ForeignKey`` field "
+"(``manufacturer`` in the example above) be the name of the model, lowercase. "
+"You can, of course, call the field whatever you want. For example::"
+msgstr ""
+
+# 43e0d42acdc843b7897c412364a94861
+#: ../../model-api.txt:687
+msgid "See the `Many-to-one relationship model example`_ for a full example."
+msgstr ""
+
+# 3c69f7145abf46fd84b28f4262644a49
+#: ../../model-api.txt:691
+msgid ""
+"``ForeignKey`` fields take a number of extra arguments for defining how the "
+"relationship should work. All are optional:"
+msgstr ""
+
+# ac0d5e4fc5da47a5bea4fad210109d6b
+#: ../../model-api.txt:697
+msgid "``edit_inline``"
+msgstr ""
+
+# baabd0471fe84625846e47e8a171a6b9
+#: ../../model-api.txt:697
+msgid ""
+"If not ``False``, this related object is edited \"inline\" on the related "
+"object's page. This means that the object will not have its own admin "
+"interface. Use either ``models.TABULAR`` or ``models.STACKED``, which, "
+"respectively, designate whether the inline-editable objects are displayed as "
+"a table or as a \"stack\" of fieldsets."
+msgstr ""
+
+# 818c6f71471240a0b81751fa5682d6ae
+# 818c6f71471240a0b81751fa5682d6ae
+#: ../../model-api.txt:705 ../../model-api.txt:827
+msgid "``limit_choices_to``"
+msgstr ""
+
+# c73039740ae844759f58c323620d5af6
+#: ../../model-api.txt:705
+msgid ""
+"A dictionary of lookup arguments and values (see the :doc:`Database API "
+"reference <db-api>`) that limit the available admin choices for this object. "
+"Use this with ``models.LazyDate`` to limit choices of objects by date. For "
+"example::"
+msgstr ""
+
+# 2c9e529f2cdc4c5bbc8f302d02d4864d
+#: ../../model-api.txt:713
+msgid ""
+"only allows the choice of related objects with a ``pub_date`` before the "
+"current date/time to be chosen."
+msgstr ""
+
+# 1f0117b5942341ef9d7262d5ebf1044b
+#: ../../model-api.txt:717
+msgid ""
+"Instead of a dictionary this can also be a ``Q`` object (an object with a "
+"``get_sql()`` method) for more complex queries."
+msgstr ""
+
+# b7346efd885e465badda4e47ee4b80b9
+#: ../../model-api.txt:721
+msgid "Not compatible with ``edit_inline``."
+msgstr ""
+
+# c6809d2d89d9408fa5527bb271c4327e
+#: ../../model-api.txt:723
+msgid "``max_num_in_admin``"
+msgstr ""
+
+# 2e2e2cf6ff3449a1aba0d02ed233c3a3
+#: ../../model-api.txt:723
+msgid ""
+"For inline-edited objects, this is the maximum number of related objects to "
+"display in the admin. Thus, if a pizza could only have up to 10 toppings, "
+"``max_num_in_admin=10`` would ensure that a user never enters more than 10 "
+"toppings."
+msgstr ""
+
+# eb2e228c45a540dab782cdc96669ea35
+#: ../../model-api.txt:729
+msgid ""
+"Note that this doesn't ensure more than 10 related toppings ever get "
+"created. It simply controls the admin interface; it doesn't enforce things "
+"at the Python API level or database level."
+msgstr ""
+
+# 6016fe59a60a45659950d250b9a85994
+#: ../../model-api.txt:734
+msgid "``min_num_in_admin``"
+msgstr ""
+
+# 8684b95ffe794f0caef814fd81930349
+#: ../../model-api.txt:734
+msgid ""
+"The minimum number of related objects displayed in the admin. Normally, at "
+"the creation stage, ``num_in_admin`` inline objects are shown, and at the "
+"edit stage ``num_extra_on_change`` blank objects are shown in addition to "
+"all pre-existing related objects.  However, no fewer than "
+"``min_num_in_admin`` related objects will ever be displayed."
+msgstr ""
+
+# bcb30ca153484049aa5479f11b24649c
+#: ../../model-api.txt:743
+msgid "``num_extra_on_change``"
+msgstr ""
+
+# e4d8b5e50aa749779ef1146d0a7bc9e7
+#: ../../model-api.txt:743
+msgid ""
+"The number of extra blank related-object fields to show at the change stage."
+msgstr ""
+
+# c773292f904d40988501561bdc93a110
+#: ../../model-api.txt:746
+msgid "``num_in_admin``"
+msgstr ""
+
+# acabd121bd754e4b84914e555aa0f4e0
+#: ../../model-api.txt:746
+msgid ""
+"The default number of inline objects to display on the object page at the "
+"add stage."
+msgstr ""
+
+# 0ba70e86845846638f12b28cceda3d67
+#: ../../model-api.txt:749
+msgid "``raw_id_admin``"
+msgstr ""
+
+# b62f03aa428248f792be845f2445e0ba
+#: ../../model-api.txt:749
+msgid ""
+"Only display a field for the integer to be entered instead of a drop-down "
+"menu. This is useful when related to an object type that will have too many "
+"rows to make a select box practical."
+msgstr ""
+
+# 6596a515f16441e6bd66215df31e2614
+#: ../../model-api.txt:754
+msgid "Not used with ``edit_inline``."
+msgstr ""
+
+# 675e5618525d4f4ca4bb0d1216a1732f
+# 675e5618525d4f4ca4bb0d1216a1732f
+#: ../../model-api.txt:756 ../../model-api.txt:818
+msgid "``related_name``"
+msgstr ""
+
+# b56ff45adbb54ad1af6d14f55ea87a9e
+#: ../../model-api.txt:756
+msgid ""
+"The name to use for the relation from the related object back to this one. "
+"See the :doc:`related objects documentation <db-api>` for a full explanation "
+"and example."
+msgstr ""
+
+# e43de681f3974391807129fbd03f7176
+#: ../../model-api.txt:761
+msgid "``to_field``"
+msgstr ""
+
+# 34b3ad84c22b4fbd99196cbb00e9d3ec
+#: ../../model-api.txt:761
+msgid ""
+"The field on the related object that the relation is to. By default, Django "
+"uses the primary key of the related object."
+msgstr ""
+
+# 5075c1cf971746e1be3c1a65a62be66f
+#: ../../model-api.txt:767
+msgid "Many-to-many relationships"
+msgstr ""
+
+# fbc1992207a64943af2395429bf6fd0f
+#: ../../model-api.txt:769
+msgid ""
+"To define a many-to-many relationship, use ``ManyToManyField``. You use it "
+"just like any other ``Field`` type: by including it as a class attribute of "
+"your model."
+msgstr ""
+
+# cc0bacdace964b488361ffc2c4bdaaa0
+#: ../../model-api.txt:773
+msgid ""
+"``ManyToManyField`` requires a positional argument: The class to which the "
+"model is related."
+msgstr ""
+
+# 846c9aadead6462eabc94abe143ef774
+#: ../../model-api.txt:776
+msgid ""
+"For example, if a ``Pizza`` has multiple ``Topping`` objects -- that is, a "
+"``Topping`` can be on multiple pizzas and each ``Pizza`` has multiple "
+"toppings -- here's how you'd represent that::"
+msgstr ""
+
+# fd5d743245a540758f025bc8d625f3dd
+#: ../../model-api.txt:787
+msgid ""
+"As with ``ForeignKey``, a relationship to self can be defined by using the "
+"string ``'self'`` instead of the model name, and you can refer to as-yet "
+"undefined models by using a string containing the model name."
+msgstr ""
+
+# 335504cbe2dd40aabccdffc54b87cf5e
+#: ../../model-api.txt:791
+msgid ""
+"It's suggested, but not required, that the name of a ``ManyToManyField`` "
+"(``toppings`` in the example above) be a plural describing the set of "
+"related model objects."
+msgstr ""
+
+# 831792c603e840599b62525b51479d37
+#: ../../model-api.txt:795
+msgid ""
+"Behind the scenes, Django creates an intermediary join table to represent "
+"the many-to-many relationship."
+msgstr ""
+
+# 424f907fc55e46da99729b3bbc1bb46a
+#: ../../model-api.txt:798
+msgid ""
+"It doesn't matter which model gets the ``ManyToManyField``, but you only "
+"need it in one of the models -- not in both."
+msgstr ""
+
+# 60ebfc46de8f41369503058eab5acdf2
+#: ../../model-api.txt:801
+msgid ""
+"Generally, ``ManyToManyField`` instances should go in the object that's "
+"going to be edited in the admin interface, if you're using Django's admin. "
+"In the above example, ``toppings`` is in ``Pizza`` (rather than ``Topping`` "
+"having a ``pizzas`` ``ManyToManyField`` ) because it's more natural to think "
+"about a ``Pizza`` having toppings than a topping being on multiple pizzas. "
+"The way it's set up above, the ``Pizza`` admin form would let users select "
+"the toppings."
+msgstr ""
+
+# 9b13c816b01545e093cdca55fa919e38
+#: ../../model-api.txt:808
+msgid "See the `Many-to-many relationship model example`_ for a full example."
+msgstr ""
+
+# caa27c06ba274c749e64af08eeecb81c
+#: ../../model-api.txt:812
+msgid ""
+"``ManyToManyField`` objects take a number of extra arguments for defining "
+"how the relationship should work. All are optional:"
+msgstr ""
+
+# dc2717fcd17040c39c57d6caffe07810
+# dc2717fcd17040c39c57d6caffe07810
+#: ../../model-api.txt:818 ../../model-api.txt:827
+msgid "See the description under ``ForeignKey`` above."
+msgstr ""
+
+# 11a3b3ef6d134bfa8ea47bc217789ffe
+#: ../../model-api.txt:820
+msgid "``filter_interface``"
+msgstr ""
+
+# 0d93f179ab0f45688452d1ea7a87f16e
+#: ../../model-api.txt:820
+msgid ""
+"Use a nifty unobtrusive Javascript \"filter\" interface instead of the "
+"usability-challenged ``<select multiple>`` in the admin form for this "
+"object. The value should be ``models.HORIZONTAL`` or ``models.VERTICAL`` (i."
+"e. should the interface be stacked horizontally or vertically)."
+msgstr ""
+
+# a43e132fb4fe4b849f939fdb2ae00e5f
+#: ../../model-api.txt:829
+msgid "``symmetrical``"
+msgstr ""
+
+# 1c04f4ea891148af9ed9c3141dbf1db9
+#: ../../model-api.txt:829
+msgid ""
+"Only used in the definition of ManyToManyFields on self. Consider the "
+"following model:"
+msgstr ""
+
+# a92ff6b6fd5d427691a6f5db66075cf1
+#: ../../model-api.txt:833
+msgid "friends = models.ManyToManyField(\"self\")"
+msgstr ""
+
+# fecc6bed39194fb7afa928e44deaa113
+#: ../../model-api.txt:835
+msgid ""
+"When Django processes this model, it identifies that it has a "
+"``ManyToManyField`` on itself, and as a result, it doesn't add a "
+"``person_set`` attribute to the ``Person`` class. Instead, the "
+"``ManyToManyField`` is assumed to be symmetrical -- that is, if I am your "
+"friend, then you are my friend."
+msgstr ""
+
+# c8b3547057b14c1db288392aa2cb025c
+#: ../../model-api.txt:842
+msgid ""
+"If you do not want symmetry in ``ManyToMany`` relationships with ``self``, "
+"set ``symmetrical`` to ``False``. This will force Django to add the "
+"descriptor for the reverse relationship, allowing ``ManyToMany`` "
+"relationships to be non-symmetrical."
+msgstr ""
+
+# 691e155f675d4052b3ac8d80288797cd
+#: ../../model-api.txt:851
+msgid "One-to-one relationships"
+msgstr ""
+
+# 3b82927b2c17493cbe797c1d0581aee4
+#: ../../model-api.txt:853
+msgid ""
+"The semantics of one-to-one relationships will be changing soon, so we don't "
+"recommend you use them. If that doesn't scare you away, keep reading."
+msgstr ""
+
+# 13841e977fb3416a97820ef118a51bf1
+#: ../../model-api.txt:856
+msgid ""
+"To define a one-to-one relationship, use ``OneToOneField``. You use it just "
+"like any other ``Field`` type: by including it as a class attribute of your "
+"model."
+msgstr ""
+
+# f1577fe78a764390b2db46713a8019a8
+#: ../../model-api.txt:860
+msgid ""
+"This is most useful on the primary key of an object when that object "
+"\"extends\" another object in some way."
+msgstr ""
+
+# 4affa275b4c6417e84dac47e0d077f8a
+#: ../../model-api.txt:863
+msgid ""
+"``OneToOneField`` requires a positional argument: The class to which the "
+"model is related."
+msgstr ""
+
+# a16fcc90f64f4783a19fe5723d239db0
+#: ../../model-api.txt:866
+msgid ""
+"For example, if you're building a database of \"places\", you would build "
+"pretty standard stuff such as address, phone number, etc. in the database. "
+"Then, if you wanted to build a database of restaurants on top of the places, "
+"instead of repeating yourself and replicating those fields in the "
+"``Restaurant`` model, you could make ``Restaurant`` have a ``OneToOneField`` "
+"to ``Place`` (because a restaurant \"is-a\" place)."
+msgstr ""
+
+# 8d822f65d3124bd2b1d4981eb5e8ea51
+#: ../../model-api.txt:873
+msgid ""
+"As with ``ForeignKey``, a relationship to self can be defined by using the "
+"string ``\"self\"`` instead of the model name; references to as-yet "
+"undefined models can be made by using a string containing the model name."
+msgstr ""
+
+# 227ed2092d91419dbc81b823416486ff
+#: ../../model-api.txt:877
+msgid ""
+"This ``OneToOneField`` will actually replace the primary key ``id`` field "
+"(since one-to-one relations share the same primary key), and will be "
+"displayed as a read-only field when you edit an object in the admin "
+"interface:"
+msgstr ""
+
+# 8a7af14952594f88aa9764fb1e527b0e
+#: ../../model-api.txt:881
+msgid "See the `One-to-one relationship model example`_ for a full example."
+msgstr ""
+
+# c1a88a8aeed943c88ad77e9232d3d048
+#: ../../model-api.txt:886
+msgid "Meta options"
+msgstr ""
+
+# 11032c67453b4e8ca25e4de043cf317c
+#: ../../model-api.txt:888
+msgid "Give your model metadata by using an inner ``class Meta``, like so::"
+msgstr ""
+
+# 9d9586dc057e4083be49227bf4e18f2f
+#: ../../model-api.txt:896
+msgid ""
+"Model metadata is \"anything that's not a field\", such as ordering options, "
+"etc."
+msgstr ""
+
+# f4115cd3858d4dd58f2e8ce00e122894
+#: ../../model-api.txt:898
+msgid ""
+"Here's a list of all possible ``Meta`` options. No options are required. "
+"Adding ``class Meta`` to a model is completely optional."
+msgstr ""
+
+# 34b94c3433694a81841cf7adce6a00e8
+#: ../../model-api.txt:902
+msgid "``db_table``"
+msgstr ""
+
+# 5d0e6c94a2bf41eaac888543bc3ac827
+#: ../../model-api.txt:904
+msgid "The name of the database table to use for the model::"
+msgstr ""
+
+# 1e963e938d5847e8902a7cda0940c90e
+#: ../../model-api.txt:908
+msgid ""
+"If this isn't given, Django will use ``app_label + '_' + model_class_name``. "
+"See \"Table names\" below for more."
+msgstr ""
+
+# e6bdab981aa4408ea2d92bcbf6d3f5ed
+#: ../../model-api.txt:911
+msgid ""
+"If your database table name is an SQL reserved word, or contains characters "
+"that aren't allowed in Python variable names -- notably, the hyphen -- "
+"that's OK. Django quotes column and table names behind the scenes."
+msgstr ""
+
+# 3998a735db484f3280d276c8788ec8e9
+#: ../../model-api.txt:916
+msgid "``get_latest_by``"
+msgstr ""
+
+# 3b3a1966759748dba9310082b1f75eec
+#: ../../model-api.txt:918
+msgid ""
+"The name of a ``DateField`` or ``DateTimeField`` in the model. This "
+"specifies the default field to use in your model ``Manager``'s ``latest()`` "
+"method."
+msgstr ""
+
+# 49dce4dd24b44f3ba2865ee550c2b0b5
+#: ../../model-api.txt:925
+msgid "See the :doc:`docs for latest() <db-api>` for more."
+msgstr ""
+
+# 16436c36a1cb45209d973c2f9fdba517
+#: ../../model-api.txt:928
+msgid "``order_with_respect_to``"
+msgstr ""
+
+# 6ee2e1f30d334ec0978799268096f6a0
+#: ../../model-api.txt:930
+msgid ""
+"Marks this object as \"orderable\" with respect to the given field. This is "
+"almost always used with related objects to allow them to be ordered with "
+"respect to a parent object. For example, if an ``Answer`` relates to a "
+"``Question`` object, and a question has more than one answer, and the order "
+"of answers matters, you'd do this::"
+msgstr ""
+
+# d03f0fa7033b4281b4eb7d7386be3c42
+# d03f0fa7033b4281b4eb7d7386be3c42
+#: ../../model-api.txt:944 ../../model-api.txt:1305
+msgid "``ordering``"
+msgstr ""
+
+# 2b4c0f4e4e1a44728b1df8d3944438ef
+#: ../../model-api.txt:946
+msgid ""
+"The default ordering for the object, for use when obtaining lists of "
+"objects::"
+msgstr ""
+
+# 1515d2e805f241f7b42efc19c054ee2e
+#: ../../model-api.txt:950
+msgid ""
+"This is a tuple or list of strings. Each string is a field name with an "
+"optional \"-\" prefix, which indicates descending order. Fields without a "
+"leading \"-\" will be ordered ascending. Use the string \"?\" to order "
+"randomly."
+msgstr ""
+
+# 61326d8260664fc9b2d1d08c89eed34a
+#: ../../model-api.txt:954
+msgid "For example, to order by a ``pub_date`` field ascending, use this::"
+msgstr ""
+
+# 46b671b58742482aa372cd364f26d121
+#: ../../model-api.txt:958
+msgid "To order by ``pub_date`` descending, use this::"
+msgstr ""
+
+# b03060c7ed394ab7a026ea594cd31242
+#: ../../model-api.txt:962
+msgid ""
+"To order by ``pub_date`` descending, then by ``author`` ascending, use this::"
+msgstr ""
+
+# f0eb616c82024b1e808c353701ddfcfa
+#: ../../model-api.txt:966
+msgid "See `Specifying ordering`_ for more examples."
+msgstr ""
+
+# 42a2ff98e14d45f4a2cafeb8c97995f6
+#: ../../model-api.txt:968
+msgid ""
+"Note that, regardless of how many fields are in ``ordering``, the admin site "
+"uses only the first field."
+msgstr ""
+
+# 1b76b09d969c4de3873e4d03be491cdc
+#: ../../model-api.txt:974
+msgid "``permissions``"
+msgstr ""
+
+# 01a2f7a5beae4d3da298adb19af4f907
+#: ../../model-api.txt:976
+msgid ""
+"Extra permissions to enter into the permissions table when creating this "
+"object. Add, delete and change permissions are automatically created for "
+"each object that has ``admin`` set. This example specifies an extra "
+"permission, ``can_deliver_pizzas``::"
+msgstr ""
+
+# 13d5c116b6bc4140861dd02c7ddb5bed
+#: ../../model-api.txt:983
+msgid ""
+"This is a list or tuple of 2-tuples in the format ``(permission_code, "
+"human_readable_permission_name)``."
+msgstr ""
+
+# c0d88b2e507849258b06abbaeeaa5864
+#: ../../model-api.txt:987
+msgid "``unique_together``"
+msgstr ""
+
+# 0d562c4ebb2b4328a0d77b60b50d0a06
+#: ../../model-api.txt:989
+msgid "Sets of field names that, taken together, must be unique::"
+msgstr ""
+
+# 5fa8f71d1e0b4af3b1109797d6e09a4c
+#: ../../model-api.txt:993
+msgid ""
+"This is a list of lists of fields that must be unique when considered "
+"together. It's used in the Django admin and is enforced at the database "
+"level (i.e., the appropriate ``UNIQUE`` statements are included in the "
+"``CREATE TABLE`` statement)."
+msgstr ""
+
+# 7f2d25dc1acb4bc9924e4506e48e7ac8
+#: ../../model-api.txt:999
+msgid "``verbose_name``"
+msgstr ""
+
+# 0bac0e42e22643ffb71cb35dba1b4984
+#: ../../model-api.txt:1001
+msgid "A human-readable name for the object, singular::"
+msgstr ""
+
+# 696feae6cbb24b9d873424e4aec8fb36
+#: ../../model-api.txt:1005
+msgid ""
+"If this isn't given, Django will use a munged version of the class name: "
+"``CamelCase`` becomes ``camel case``."
+msgstr ""
+
+# c9cf700a784a461fa5ed222a72aad7ab
+#: ../../model-api.txt:1009
+msgid "``verbose_name_plural``"
+msgstr ""
+
+# 68807a3cf3f540e6a0b885fecf77580f
+#: ../../model-api.txt:1011
+msgid "The plural name for the object::"
+msgstr ""
+
+# 811583e3d9f44becb226ef6928049c9b
+#: ../../model-api.txt:1015
+msgid "If this isn't given, Django will use ``verbose_name + \"s\"``."
+msgstr ""
+
+# 4f18a7a113dc4e30a8977802575a59d7
+#: ../../model-api.txt:1018
+msgid "Table names"
+msgstr ""
+
+# fc995bcd36a54b6886d8384719e39ea8
+#: ../../model-api.txt:1020
+msgid ""
+"To save you time, Django automatically derives the name of the database "
+"table from the name of your model class and the app that contains it. A "
+"model's database table name is constructed by joining the model's \"app label"
+"\" -- the name you used in ``manage.py startapp`` -- to the model's class "
+"name, with an underscore between them."
+msgstr ""
+
+# 26dc497bca2741c3a7ad1bc2994a600f
+#: ../../model-api.txt:1026
+msgid ""
+"For example, if you have an app ``bookstore`` (as created by ``manage.py "
+"startapp bookstore``), a model defined as ``class Book`` will have a "
+"database table named ``bookstore_book``."
+msgstr ""
+
+# a7b1679510c241fa96de5cb3461ceba5
+#: ../../model-api.txt:1030
+msgid ""
+"To override the database table name, use the ``db_table`` parameter in "
+"``class Meta``."
+msgstr ""
+
+# abaf057ab3bd4c4f97cd4a0619af513e
+#: ../../model-api.txt:1034
+msgid "Automatic primary key fields"
+msgstr ""
+
+# 2eccc6b9fe2e49c696b663bb5da75239
+#: ../../model-api.txt:1036
+msgid "By default, Django gives each model the following field::"
+msgstr ""
+
+# 05731b5f5f064d19919cbc958c563394
+#: ../../model-api.txt:1040
+msgid "This is an auto-incrementing primary key."
+msgstr ""
+
+# d4205b23c6304b4f87d006b8c6092db1
+#: ../../model-api.txt:1042
+msgid ""
+"If you'd like to specify a custom primary key, just specify "
+"``primary_key=True`` on one of your fields. If Django sees you've explicitly "
+"set ``primary_key``, it won't add the automatic ``id`` column."
+msgstr ""
+
+# f620e1917b4049819fcb7256ea88bb62
+#: ../../model-api.txt:1046
+msgid "Each model requires exactly one field to have ``primary_key=True``."
+msgstr ""
+
+# cc757b9e3b7c4be293665ca1d90f1b64
+#: ../../model-api.txt:1049
+msgid "Admin options"
+msgstr ""
+
+# 88d01ce7dcd941fea131d6d2ce8ae541
+#: ../../model-api.txt:1051
+msgid ""
+"If you want your model to be visible to Django's admin site, give your model "
+"an inner ``\"class Admin\"``, like so::"
+msgstr ""
+
+# 391e820e680d40efac21ba92e19ad7f5
+#: ../../model-api.txt:1062
+msgid ""
+"The ``Admin`` class tells Django how to display the model in the admin site."
+msgstr ""
+
+# bba586e68533419f80c556c4873030d4
+#: ../../model-api.txt:1064
+msgid ""
+"Here's a list of all possible ``Admin`` options. None of these options are "
+"required. To use an admin interface without specifying any options, use "
+"``pass``, like so::"
+msgstr ""
+
+# 2e5763af8cac496c9b9bd932cd5db636
+#: ../../model-api.txt:1071
+msgid "Adding ``class Admin`` to a model is completely optional."
+msgstr ""
+
+# 4dff9abe3d6e49e9883c052623045052
+#: ../../model-api.txt:1074
+msgid "``date_hierarchy``"
+msgstr ""
+
+# 07f78e362af1414dbd0803a93f893bad
+#: ../../model-api.txt:1076
+msgid ""
+"Set ``date_hierarchy`` to the name of a ``DateField`` or ``DateTimeField`` "
+"in your model, and the change list page will include a date-based drilldown "
+"navigation by that field."
+msgstr ""
+
+# 94f2346446e34155b072e17fe7f023ee
+# 94f2346446e34155b072e17fe7f023ee
+#: ../../model-api.txt:1085 ../../model-api.txt:1122
+msgid "``fields``"
+msgstr ""
+
+# d62fbffe8fa549e8ab40256c889d390f
+#: ../../model-api.txt:1087
+msgid ""
+"Set ``fields`` to control the layout of admin \"add\" and \"change\" pages."
+msgstr ""
+
+# 928c840d93a441a48161a4c5aaff0428
+#: ../../model-api.txt:1089
+msgid ""
+"``fields`` is a list of two-tuples, in which each two-tuple represents a "
+"``<fieldset>`` on the admin form page. (A ``<fieldset>`` is a \"section\" of "
+"the form.)"
+msgstr ""
+
+# 9cd3e797a51a4b69bb2e657d13260eeb
+#: ../../model-api.txt:1093
+msgid ""
+"The two-tuples are in the format ``(name, field_options)``, where ``name`` "
+"is a string representing the title of the fieldset and ``field_options`` is "
+"a dictionary of information about the fieldset, including a list of fields "
+"to be displayed in it."
+msgstr ""
+
+# 151c3cc5400c4614949c20094ee65b8e
+#: ../../model-api.txt:1098
+msgid ""
+"A full example, taken from the ``django.contrib.flatpages.FlatPage`` model::"
+msgstr ""
+
+# 8cfd07dae4c54764be9ed3b7297e4a63
+#: ../../model-api.txt:1111
+msgid "This results in an admin page that looks like:"
+msgstr ""
+
+# 9d2db05ed5b04b368f8a08753744b86c
+#: ../../model-api.txt:1115
+msgid ""
+"If ``fields`` isn't given, Django will default to displaying each field that "
+"isn't an ``AutoField`` and has ``editable=True``, in a single fieldset, in "
+"the same order as the fields are defined in the model."
+msgstr ""
+
+# 3109a8a8837b452e9dfaf1cbc6cc0055
+#: ../../model-api.txt:1119
+msgid "The ``field_options`` dictionary can have the following keys:"
+msgstr ""
+
+# e3ccb75b37fd49aab43dd37716f598dc
+#: ../../model-api.txt:1124
+msgid ""
+"A tuple of field names to display in this fieldset. This key is required."
+msgstr ""
+
+# 1b2d809b16aa4ffd866aac24a5255445
+#: ../../model-api.txt:1132
+msgid ""
+"To display multiple fields on the same line, wrap those fields in their own "
+"tuple. In this example, the ``first_name`` and ``last_name`` fields will "
+"display on the same line::"
+msgstr ""
+
+# f01aa70add4b4dbcb117bebe95108d24
+#: ../../model-api.txt:1141
+msgid "``classes``"
+msgstr ""
+
+# 1cd0e89e38cc483fb42615e7037912a6
+#: ../../model-api.txt:1143
+msgid "A string containing extra CSS classes to apply to the fieldset."
+msgstr ""
+
+# 603345429e13471e8a5d4b3b91f37dac
+#: ../../model-api.txt:1151
+msgid "Apply multiple classes by separating them with spaces. Example::"
+msgstr ""
+
+# 2b297e8462794ef08475a1f2628dd613
+#: ../../model-api.txt:1157
+msgid ""
+"Two useful classes defined by the default admin-site stylesheet are "
+"``collapse`` and ``wide``. Fieldsets with the ``collapse`` style will be "
+"initially collapsed in the admin and replaced with a small \"click to expand"
+"\" link. Fieldsets with the ``wide`` style will be given extra horizontal "
+"space."
+msgstr ""
+
+# 00f044b94822462b861ecbb9f12a7807
+#: ../../model-api.txt:1163
+msgid "``description``"
+msgstr ""
+
+# d6ada5eec84b4eddb45c434c5256c207
+#: ../../model-api.txt:1165
+msgid ""
+"A string of optional extra text to be displayed at the top of each fieldset, "
+"under the heading of the fieldset. It's used verbatim, so you can use any "
+"HTML and you must escape any special HTML characters (such as ampersands) "
+"yourself."
+msgstr ""
+
+# 7a5b25922c314459b13d40c04b83b35a
+#: ../../model-api.txt:1170
+msgid "``js``"
+msgstr ""
+
+# 6332cafb147a4e3ba29cd413bf3bb3ec
+#: ../../model-api.txt:1172
+msgid ""
+"A list of strings representing URLs of JavaScript files to link into the "
+"admin screen via ``<script src=\"\">`` tags. This can be used to tweak a "
+"given type of admin page in JavaScript or to provide \"quick links\" to fill "
+"in default values for certain fields."
+msgstr ""
+
+# ef24251cf8ef495b9070e7ee4c26998d
+#: ../../model-api.txt:1178
+msgid "``list_display``"
+msgstr ""
+
+# 09f070ab572e44bfbf92826adb328d3b
+#: ../../model-api.txt:1180
+msgid ""
+"Set ``list_display`` to control which fields are displayed on the change "
+"list page of the admin."
+msgstr ""
+
+# eb1fe9663feb44139399d5e42e2d6a3f
+#: ../../model-api.txt:1187
+msgid ""
+"If you don't set ``list_display``, the admin site will display a single "
+"column that displays the ``__str__()`` representation of each object."
+msgstr ""
+
+# 40610a92c44d494da9509d1a05f76183
+#: ../../model-api.txt:1190
+msgid "A few special cases to note about ``list_display``:"
+msgstr ""
+
+# 6646905005f24a8ab3e5a6ded068afef
+#: ../../model-api.txt:1192
+msgid ""
+"If the field is a ``ForeignKey``, Django will display the ``__str__()`` of "
+"the related object."
+msgstr ""
+
+# f7a7e6139e984457924066c9170dcbac
+#: ../../model-api.txt:1196
+msgid "executing a separate SQL statement for each row in the table."
+msgstr ""
+
+# 3522f7c507944f4792a9228a8cb8b8a7
+#: ../../model-api.txt:1198
+msgid ""
+"If the field is a ``BooleanField``, Django will display a pretty \"on\" or "
+"\"off\" icon instead of ``True`` or ``False``."
+msgstr ""
+
+# 9e848665bc484300af24663cb9740fe9
+#: ../../model-api.txt:1201
+msgid ""
+"If the string given is a method of the model, Django will call it and "
+"display the output. This method should have a ``short_description`` function "
+"attribute, for use as the header for the field."
+msgstr ""
+
+# b2686c29c6684f7683b140bdcfe65127
+# b2686c29c6684f7683b140bdcfe65127
+#: ../../model-api.txt:1205 ../../model-api.txt:1222
+msgid "Here's a full example model::"
+msgstr ""
+
+# 04a3c9aea1164fdc94aa396d202fb745
+#: ../../model-api.txt:1218
+msgid ""
+"If the string given is a method of the model, Django will HTML-escape the "
+"output by default. If you'd rather not escape the output of the method, give "
+"the method an ``allow_tags`` attribute whose value is ``True``."
+msgstr ""
+
+# 629e7f4b03e94c2f96270be335c4f947
+#: ../../model-api.txt:1237
+msgid "``list_display_links``"
+msgstr ""
+
+# b5cabfd790a84ab89a18606caf736f8d
+#: ../../model-api.txt:1239
+msgid ""
+"Set ``list_display_links`` to control which fields in ``list_display`` "
+"should be linked to the \"change\" page for an object."
+msgstr ""
+
+# ca44d25500ba457e8bcb352818a733bc
+#: ../../model-api.txt:1242
+msgid ""
+"By default, the change list page will link the first column -- the first "
+"field specified in ``list_display`` -- to the change page for each item. But "
+"``list_display_links`` lets you change which columns are linked. Set "
+"``list_display_links`` to a list or tuple of field names (in the same format "
+"as ``list_display``) to link."
+msgstr ""
+
+# c5a8142675264bd3b0126dfab20a6588
+#: ../../model-api.txt:1248
+msgid ""
+"``list_display_links`` can specify one or many field names. As long as the "
+"field names appear in ``list_display``, Django doesn't care how many (or how "
+"few) fields are linked. The only requirement is: If you want to use "
+"``list_display_links``, you must define ``list_display``."
+msgstr ""
+
+# f638255d9ff84597a00a2d1ac8e94c90
+#: ../../model-api.txt:1253
+msgid ""
+"In this example, the ``first_name`` and ``last_name`` fields will be linked "
+"on the change list page::"
+msgstr ""
+
+# 8e6e66dc91bb4376a823a5e5c839fa84
+#: ../../model-api.txt:1260
+msgid ""
+"Finally, note that in order to use ``list_display_links``, you must define "
+"``list_display``, too."
+msgstr ""
+
+# 013da017b1a347fd9cc53fcde35cf1d6
+#: ../../model-api.txt:1264
+msgid "``list_filter``"
+msgstr ""
+
+# 05683836fc504e1eb55b625c01e493f5
+#: ../../model-api.txt:1266
+msgid ""
+"Set ``list_filter`` to activate filters in the right sidebar of the change "
+"list page of the admin. This should be a list of field names, and each "
+"specified field should be either a ``BooleanField``, ``DateField``, "
+"``DateTimeField`` or ``ForeignKey``."
+msgstr ""
+
+# ed5e1071f9a04d318745d823c0579f68
+#: ../../model-api.txt:1271
+msgid ""
+"This example, taken from the ``django.contrib.auth.models.User`` model, "
+"shows how both ``list_display`` and ``list_filter`` work::"
+msgstr ""
+
+# e598a893839946798da9ec6db23e386c
+#: ../../model-api.txt:1278
+msgid ""
+"The above code results in an admin change list page that looks like this:"
+msgstr ""
+
+# 862d06a864554616900637bf0ca7bab1
+#: ../../model-api.txt:1282
+msgid "(This example also has ``search_fields`` defined. See below.)"
+msgstr ""
+
+# d586e14bec284b1ab251fe579c3066c9
+#: ../../model-api.txt:1285
+msgid "``list_per_page``"
+msgstr ""
+
+# 3d210bc46f6d44b0855134fc41777976
+#: ../../model-api.txt:1287
+msgid ""
+"Set ``list_per_page`` to control how many items appear on each paginated "
+"admin change list page. By default, this is set to ``100``."
+msgstr ""
+
+# fa22cb82f981405bb167c26389112472
+#: ../../model-api.txt:1291
+msgid "``list_select_related``"
+msgstr ""
+
+# 04abd4187ade4af499b5547cb2cde915
+#: ../../model-api.txt:1293
+msgid ""
+"Set ``list_select_related`` to tell Django to use ``select_related()`` in "
+"retrieving the list of objects on the admin change list page. This can save "
+"you a bunch of database queries."
+msgstr ""
+
+# 67c8a6bfeca5454eb75b75b014bad98f
+#: ../../model-api.txt:1297
+msgid "The value should be either ``True`` or ``False``. Default is ``False``."
+msgstr ""
+
+# ba4ddee231f842cdbf7b29de2bceacc0
+#: ../../model-api.txt:1299
+msgid ""
+"Note that Django will use ``select_related()``, regardless of this setting, "
+"if one of the ``list_display`` fields is a ``ForeignKey``."
+msgstr ""
+
+# 312b6437aa7c49fc84758f8f1bd048b5
+#: ../../model-api.txt:1302
+msgid ""
+"For more on ``select_related()``, see :doc:`the select_related() docs <db-"
+"api>`."
+msgstr ""
+
+# 6d78889c7948415faa328bceff5d405e
+#: ../../model-api.txt:1307
+msgid ""
+"Set ``ordering`` to specify how objects on the admin change list page should "
+"be ordered. This should be a list or tuple in the same format as a model's "
+"``ordering`` parameter."
+msgstr ""
+
+# 6d7d1a7f55d94d898340a36f8af6ae1a
+#: ../../model-api.txt:1311
+msgid ""
+"If this isn't provided, the Django admin will use the model's default "
+"ordering."
+msgstr ""
+
+# 5359b81ae94747338785935861d126fb
+#: ../../model-api.txt:1314
+msgid "``save_as``"
+msgstr ""
+
+# 6ca2c85169f9448fb20d4002b109130e
+#: ../../model-api.txt:1316
+msgid "Set ``save_as`` to enable a \"save as\" feature on admin change forms."
+msgstr ""
+
+# 4eb35fac712e4cb7a3afe330c72033ba
+#: ../../model-api.txt:1318
+msgid ""
+"Normally, objects have three save options: \"Save\", \"Save and continue "
+"editing\" and \"Save and add another\". If ``save_as`` is ``True``, \"Save "
+"and add another\" will be replaced by a \"Save as\" button."
+msgstr ""
+
+# 36d4b9a1a56240e2a519b779a508ad7d
+#: ../../model-api.txt:1322
+msgid ""
+"\"Save as\" means the object will be saved as a new object (with a new ID), "
+"rather than the old object."
+msgstr ""
+
+# 65b0773abb1742d6a33914a38ba37e26
+#: ../../model-api.txt:1325
+msgid "By default, ``save_as`` is set to ``False``."
+msgstr ""
+
+# 914fa196d8964fc7a247beb7a96f5278
+#: ../../model-api.txt:1328
+msgid "``save_on_top``"
+msgstr ""
+
+# a263949bca2a4a92adaae4cfea6959ec
+#: ../../model-api.txt:1330
+msgid ""
+"Set ``save_on_top`` to add save buttons across the top of your admin change "
+"forms."
+msgstr ""
+
+# 7d232b2825e141ac88f7e5b537a55acb
+#: ../../model-api.txt:1333
+msgid ""
+"Normally, the save buttons appear only at the bottom of the forms. If you "
+"set ``save_on_top``, the buttons will appear both on the top and the bottom."
+msgstr ""
+
+# fbc43be5ea564e368b7ae5183db6151a
+#: ../../model-api.txt:1336
+msgid "By default, ``save_on_top`` is set to ``False``."
+msgstr ""
+
+# 34a57d7bb5974046ac1de8a6cee5264b
+#: ../../model-api.txt:1339
+msgid "``search_fields``"
+msgstr ""
+
+# 21500463bab54c7a9575f4593cdd613f
+#: ../../model-api.txt:1341
+msgid ""
+"Set ``search_fields`` to enable a search box on the admin change list page. "
+"This should be set to a list of field names that will be searched whenever "
+"somebody submits a search query in that text box."
+msgstr ""
+
+# 9c1fb78eb4e4493ebcdee85d53f73f77
+#: ../../model-api.txt:1345
+msgid ""
+"These fields should be some kind of text field, such as ``CharField`` or "
+"``TextField``."
+msgstr ""
+
+# baa6c497f08847e2be5035a7f3d8244b
+#: ../../model-api.txt:1348
+msgid ""
+"When somebody does a search in the admin search box, Django splits the "
+"search query into words and returns all objects that contain each of the "
+"words, case insensitive, where each word must be in at least one of "
+"``search_fields``. For example, if ``search_fields`` is set to ``"
+"['first_name', 'last_name']`` and a user searches for ``john lennon``, "
+"Django will do the equivalent of this SQL ``WHERE`` clause::"
+msgstr ""
+
+# 9c847a0cb610491f98215ba346898352
+#: ../../model-api.txt:1359
+msgid "Managers"
+msgstr ""
+
+# 9997b4c53c5f427eb29dfb3148e2a64b
+#: ../../model-api.txt:1361
+msgid ""
+"A ``Manager`` is the interface through which database query operations are "
+"provided to Django models. At least one ``Manager`` exists for every model "
+"in a Django application."
+msgstr ""
+
+# 9e47acf1a7be4370939e896f3454eeff
+#: ../../model-api.txt:1365
+msgid ""
+"The way ``Manager`` classes work is documented in the :doc:`Retrieving "
+"objects <db-api>` section of the database API docs, but this section "
+"specifically touches on model options that customize ``Manager`` behavior."
+msgstr ""
+
+# 5699b7a5b16547c68e3624b49647f4f0
+#: ../../model-api.txt:1370
+msgid "Manager names"
+msgstr ""
+
+# 4f3fb39009f348a2807a49114f6b0bec
+#: ../../model-api.txt:1372
+msgid ""
+"By default, Django adds a ``Manager`` with the name ``objects`` to every "
+"Django model class. However, if you want to use ``objects`` as a field name, "
+"or if you want to use a name other than ``objects`` for the ``Manager``, you "
+"can rename it on a per-model basis. To rename the ``Manager`` for a given "
+"class, define a class attribute of type ``models.Manager()`` on that model. "
+"For example::"
+msgstr ""
+
+# 0e8291ec7f9d4a6a82cad9ae9669a1d7
+#: ../../model-api.txt:1384
+msgid ""
+"Using this example model, ``Person.objects`` will generate an "
+"``AttributeError`` exception, but ``Person.people.all()`` will provide a "
+"list of all ``Person`` objects."
+msgstr ""
+
+# 0c9d1025eb5347608d1d6441543f0c44
+#: ../../model-api.txt:1389
+msgid "Custom Managers"
+msgstr ""
+
+# b71a8aa480c5457895154056084c652a
+#: ../../model-api.txt:1391
+msgid ""
+"You can use a custom ``Manager`` in a particular model by extending the base "
+"``Manager`` class and instantiating your custom ``Manager`` in your model."
+msgstr ""
+
+# dbb821e1cd834ee796427ecdf4e4f4a2
+#: ../../model-api.txt:1394
+msgid ""
+"There are two reasons you might want to customize a ``Manager``: to add "
+"extra ``Manager`` methods, and/or to modify the initial ``QuerySet`` the "
+"``Manager`` returns."
+msgstr ""
+
+# fdcf3c078e4f4b3e999c3656dd215c2d
+#: ../../model-api.txt:1399
+msgid "Adding extra Manager methods"
+msgstr ""
+
+# 282520eb416349b0ab8bb2675bb45c17
+#: ../../model-api.txt:1401
+msgid ""
+"Adding extra ``Manager`` methods is the preferred way to add \"table-level\" "
+"functionality to your models. (For \"row-level\" functionality -- i.e., "
+"functions that act on a single instance of a model object -- use _`Model "
+"methods`, not custom ``Manager`` methods.)"
+msgstr ""
+
+# 4d8b09af985b4dd78875c3cf182be2bf
+#: ../../model-api.txt:1406
+msgid ""
+"A custom ``Manager`` method can return anything you want. It doesn't have to "
+"return a ``QuerySet``."
+msgstr ""
+
+# cfed5474b8494398a5d884be097fd455
+#: ../../model-api.txt:1409
+msgid ""
+"For example, this custom ``Manager`` offers a method ``with_counts()``, "
+"which returns a list of all ``OpinionPoll`` objects, each with an extra "
+"``num_responses`` attribute that is the result of an aggregate query::"
+msgstr ""
+
+# d7a3223e33ba4cea8136b2367ac9e718
+#: ../../model-api.txt:1440
+msgid ""
+"With this example, you'd use ``OpinionPoll.objects.with_counts()`` to return "
+"that list of ``OpinionPoll`` objects with ``num_responses`` attributes."
+msgstr ""
+
+# 9129d31ce1174c899cd149a616fea5f8
+#: ../../model-api.txt:1443
+msgid ""
+"Another thing to note about this example is that ``Manager`` methods can "
+"access ``self.model`` to get the model class to which they're attached."
+msgstr ""
+
+# 659672a8a39b47a0b6e905c816d22c1e
+#: ../../model-api.txt:1447
+msgid "Modifying initial Manager QuerySets"
+msgstr ""
+
+# 16cfd21f3fbc4b2aaa8e08672152ad49
+#: ../../model-api.txt:1449
+msgid ""
+"A ``Manager``'s base ``QuerySet`` returns all objects in the system. For "
+"example, using this model::"
+msgstr ""
+
+# 60a9eafcef7546619ef97020747d81a5
+#: ../../model-api.txt:1456
+msgid ""
+"...the statement ``Book.objects.all()`` will return all books in the "
+"database."
+msgstr ""
+
+# 997a8c99d6c241deb776ffc3337c12d0
+#: ../../model-api.txt:1458
+msgid ""
+"You can override a ``Manager``\\'s base ``QuerySet`` by overriding the "
+"``Manager.get_query_set()`` method. ``get_query_set()`` should return a "
+"``QuerySet`` with the properties you require."
+msgstr ""
+
+# fa37ba56b39e44f5967d610d4428bbe0
+#: ../../model-api.txt:1462
+msgid ""
+"For example, the following model has *two* ``Manager``\\s -- one that "
+"returns all objects, and one that returns only the books by Roald Dahl::"
+msgstr ""
+
+# f04b818b27204aaea8878cf2bd6de8b1
+#: ../../model-api.txt:1478
+msgid ""
+"With this sample model, ``Book.objects.all()`` will return all books in the "
+"database, but ``Book.dahl_objects.all()`` will only return the ones written "
+"by Roald Dahl."
+msgstr ""
+
+# 95115d8245be416686ad7ffc245f13cc
+#: ../../model-api.txt:1482
+msgid ""
+"Of course, because ``get_query_set()`` returns a ``QuerySet`` object, you "
+"can use ``filter()``, ``exclude()`` and all the other ``QuerySet`` methods "
+"on it. So these statements are all legal::"
+msgstr ""
+
+# 44334d8a61f3448fa4cea5f8ca14a4a5
+#: ../../model-api.txt:1490
+msgid ""
+"This example also pointed out another interesting technique: using multiple "
+"managers on the same model. You can attach as many ``Manager()`` instances "
+"to a model as you'd like. This is an easy way to define common \"filters\" "
+"for your models."
+msgstr ""
+
+# aef569e50a0544baad4b6b8eb0edb957
+# aef569e50a0544baad4b6b8eb0edb957
+#: ../../model-api.txt:1495 ../../model-api.txt:1579
+msgid "For example::"
+msgstr ""
+
+# 2785463de57845dab9969f169e414673
+#: ../../model-api.txt:1513
+msgid ""
+"This example allows you to request ``Person.men.all()``, ``Person.women.all()"
+"``, and ``Person.people.all()``, yielding predictable results."
+msgstr ""
+
+# 63c2033d172847679b924278358724fe
+#: ../../model-api.txt:1516
+msgid ""
+"If you use custom ``Manager`` objects, take note that the first ``Manager`` "
+"Django encounters (in order by which they're defined in the model) has a "
+"special status. Django interprets the first ``Manager`` defined in a class "
+"as the \"default\" ``Manager``. Certain operations -- such as Django's admin "
+"site -- use the default ``Manager`` to obtain lists of objects, so it's "
+"generally a good idea for the first ``Manager`` to be relatively unfiltered. "
+"In the last example, the ``people`` ``Manager`` is defined first -- so it's "
+"the default ``Manager``."
+msgstr ""
+
+# 503a57d920244f0db53f85ff09b58435
+#: ../../model-api.txt:1526
+msgid "Model methods"
+msgstr ""
+
+# 08dfed853e824ac19627ca88760ce52a
+#: ../../model-api.txt:1528
+msgid ""
+"Define custom methods on a model to add custom \"row-level\" functionality "
+"to your objects. Whereas ``Manager`` methods are intended to do \"table-wide"
+"\" things, model methods should act on a particular model instance."
+msgstr ""
+
+# 9d6f14e1f3214007b7f23584baa17ea9
+#: ../../model-api.txt:1532
+msgid ""
+"This is a valuable technique for keeping business logic in one place -- the "
+"model."
+msgstr ""
+
+# ce890e67baa9491dbe6f8dac2eec31a0
+#: ../../model-api.txt:1535
+msgid "For example, this model has a few custom methods::"
+msgstr ""
+
+# 4661e0ae8ff245519e6c77d1c08426eb
+#: ../../model-api.txt:1563
+msgid ""
+"The last method in this example is a *property*. `Read more about "
+"properties`_."
+msgstr ""
+
+# 389099bdfdc54a0aaee8cdbe2f118b83
+#: ../../model-api.txt:1567
+msgid "A few object methods have special meaning:"
+msgstr ""
+
+# f8e378715fb24bdc92f9ba4d82dd67a4
+#: ../../model-api.txt:1570
+msgid "``__str__``"
+msgstr ""
+
+# e7a4710176974b6a837c259830c07f3a
+#: ../../model-api.txt:1572
+msgid ""
+"``__str__()`` is a Python \"magic method\" that defines what should be "
+"returned if you call ``str()`` on the object. Django uses ``str(obj)`` in a "
+"number of places, most notably as the value displayed to render an object in "
+"the Django admin site and as the value inserted into a template when it "
+"displays an object. Thus, you should always return a nice, human-readable "
+"string for the object's ``__str__``. Although this isn't required, it's "
+"strongly encouraged."
+msgstr ""
+
+# 8ad78809efcc40f0a37976272a779b5f
+#: ../../model-api.txt:1589
+msgid "``get_absolute_url``"
+msgstr ""
+
+# 24e571ca938e4f18819ced95a394ba04
+#: ../../model-api.txt:1591
+msgid ""
+"Define a ``get_absolute_url()`` method to tell Django how to calculate the "
+"URL for an object. For example::"
+msgstr ""
+
+# 39e8997f4b334805bff970873de0bf94
+#: ../../model-api.txt:1597
+msgid ""
+"Django uses this in its admin interface. If an object defines "
+"``get_absolute_url()``, the object-editing page will have a \"View on site\" "
+"link that will jump you directly to the object's public view, according to "
+"``get_absolute_url()``."
+msgstr ""
+
+# 82322c03958345c7a073ee4936927bff
+#: ../../model-api.txt:1602
+msgid ""
+"Also, a couple of other bits of Django, such as the syndication-feed "
+"framework, use ``get_absolute_url()`` as a convenience to reward people "
+"who've defined the method."
+msgstr ""
+
+# 3805726b728b4fe3ba13a61ce0785b3b
+#: ../../model-api.txt:1606
+msgid ""
+"It's good practice to use ``get_absolute_url()`` in templates, instead of "
+"hard-coding your objects' URLs. For example, this template code is bad::"
+msgstr ""
+
+# 0ed7743d9f1549369531269332cca434
+#: ../../model-api.txt:1611
+msgid "But this template code is good::"
+msgstr ""
+
+# 6d0b9560a0294d4f9142cfd3a9fbc329
+#: ../../model-api.txt:1615
+msgid ""
+"(Yes, we know ``get_absolute_url()`` couples URLs to models, which violates "
+"the DRY principle, because URLs are defined both in a URLconf and in the "
+"model. This is a rare case in which we've intentionally violated that "
+"principle for the sake of convenience. With that said, we're working on an "
+"even cleaner way of specifying URLs in a more DRY fashion.)"
+msgstr ""
+
+# a254d537b39c496f8daca7ee629d485e
+#: ../../model-api.txt:1622
+msgid "Executing custom SQL"
+msgstr ""
+
+# 1e3b0ad89d7e417a85eed57c7b3d755d
+#: ../../model-api.txt:1624
+msgid ""
+"Feel free to write custom SQL statements in custom model methods and module-"
+"level methods. The object ``django.db.connection`` represents the current "
+"database connection. To use it, call ``connection.cursor()`` to get a cursor "
+"object. Then, call ``cursor.execute(sql, [params])`` to execute the SQL and "
+"``cursor.fetchone()`` or ``cursor.fetchall()`` to return the resulting rows. "
+"Example::"
+msgstr ""
+
+# d67309a286b44942b314225d0f781e79
+#: ../../model-api.txt:1638
+msgid ""
+"``connection`` and ``cursor`` simply use the standard `Python DB-API`_. If "
+"you're not familiar with the Python DB-API, note that the SQL statement in "
+"``cursor.execute()`` uses placeholders, ``\"%s\"``, rather than adding "
+"parameters directly within the SQL. If you use this technique, the "
+"underlying database library will automatically add quotes and escaping to "
+"your parameter(s) as necessary. (Also note that Django expects the ``\"%s"
+"\"`` placeholder, *not* the ``\"?\"`` placeholder, which is used by the "
+"SQLite Python bindings. This is for the sake of consistency and sanity.)"
+msgstr ""
+
+# 02ea9f1870ed42a885c2666296d069e7
+#: ../../model-api.txt:1647
+msgid ""
+"A final note: If all you want to do is a custom ``WHERE`` clause, you can "
+"just just the ``where``, ``tables`` and ``params`` arguments to the standard "
+"lookup API. See :doc:`Other lookup options <db-api>`."
+msgstr ""
+
+# 30e03d9b70404e9db1db0d312865fd61
+#: ../../model-api.txt:1654
+msgid "Overriding default model methods"
+msgstr ""
+
+# 04a6a837c8034904b4e44cc520322b60
+#: ../../model-api.txt:1656
+msgid ""
+"As explained in the :doc:`database API docs <db-api>`, each model gets a few "
+"methods automatically -- most notably, ``save()`` and ``delete()``. You can "
+"override these methods to alter behavior."
+msgstr ""
+
+# cf42856da87b4d04a0702294fc1a6968
+#: ../../model-api.txt:1660
+msgid ""
+"A classic use-case for overriding the built-in methods is if you want "
+"something to happen whenever you save an object. For example::"
+msgstr ""
+
+# 72be5d580ec841659eb71fa1218cd0d8
+#: ../../model-api.txt:1672
+msgid "You can also prevent saving::"
+msgstr ""
+
+# 577e124975c64c5d90c340af96a45ed1
+#: ../../model-api.txt:1685
+msgid "Models across files"
+msgstr ""
+
+# f50266eb0d8844e8b11ef58f570f7765
+#: ../../model-api.txt:1687
+msgid ""
+"It's perfectly OK to relate a model to one from another app. To do this, "
+"just import the related model at the top of the model that holds your model. "
+"Then, just refer to the other model class wherever needed. For example::"
+msgstr ""
+
+# 871185bd85af44058a09ffd0deaa32c5
+#: ../../model-api.txt:1698
+msgid "Using models"
+msgstr ""
+
+# 1326de60e7d1432eb393ab17be870fda
+#: ../../model-api.txt:1700
+msgid ""
+"Once you have created your models, the final step is to tell Django you're "
+"going to *use* those models."
+msgstr ""
+
+# d00ae548c05d4d0fb6d3cc782ce19866
+#: ../../model-api.txt:1703
+msgid ""
+"Do this by editing your settings file and changing the ``INSTALLED_APPS`` "
+"setting to add the name of the module that contains your ``models.py``."
+msgstr ""
+
+# 7c649eac4b6f48c998f1a2c3e43010cc
+#: ../../model-api.txt:1706
+msgid ""
+"For example, if the models for your application live in the module ``mysite."
+"myapp.models`` (the package structure that is created for an application by "
+"the ``manage.py startapp`` script), ``INSTALLED_APPS`` should read, in part::"
+msgstr ""
+
+# a3383b41e5d84f6f811013184b03e6a0
+#: ../../model-api.txt:1718
+msgid "Providing initial SQL data"
+msgstr ""
+
+# c3865d237b944b14ae469a4406943172
+#: ../../model-api.txt:1720
+msgid ""
+"Django provides a hook for passing the database arbitrary SQL that's "
+"executed just after the CREATE TABLE statements. Use this hook, for example, "
+"if you want to populate default records, or create SQL functions, "
+"automatically."
+msgstr ""
+
+# f8e70b6946724384be915a1c68dcb5a2
+#: ../../model-api.txt:1724
+msgid ""
+"The hook is simple: Django just looks for a file called ``<appname>/sql/"
+"<modelname>.sql``, where ``<appname>`` is your app directory and "
+"``<modelname>`` is the model's name in lowercase."
+msgstr ""
+
+# ab3d4a5f0a674cc6aff6ffde103291c3
+#: ../../model-api.txt:1728
+msgid ""
+"In the ``Person`` example model at the top of this document, assuming it "
+"lives in an app called ``myapp``, you could add arbitrary SQL to the file "
+"``myapp/sql/person.sql``. Here's an example of what the file might contain::"
+msgstr ""
+
+# 098104e194784dd886e076ba167fb7ba
+#: ../../model-api.txt:1735
+msgid ""
+"Each SQL file, if given, is expected to contain valid SQL. The SQL files are "
+"piped directly into the database after all of the models' table-creation "
+"statements have been executed."
+msgstr ""
+
+# d78afe2a53ad46289aba1fe0a098137b
+#: ../../model-api.txt:1739
+msgid ""
+"The SQL files are read by the ``sqlinitialdata``, ``sqlreset``, ``sqlall`` "
+"and ``reset`` commands in ``manage.py``. Refer to the :doc:`manage.py "
+"documentation <django-admin>` for more information."
+msgstr ""
+
+# 382e66fc219a47e39f45b11cd91be916
+#: ../../model-api.txt:1743
+msgid ""
+"Note that if you have multiple SQL data files, there's no guarantee of the "
+"order in which they're executed. The only thing you can assume is that, by "
+"the time your custom data files are executed, all the database tables "
+"already will have been created."
+msgstr ""
+
+# 54005f07efab48bea373c6f4d9ef719a
+#: ../../model-api.txt:1749
+msgid "Database-backend-specific SQL data"
+msgstr ""
+
+# 83f7969f3aaf48e79238ccaa12cc4478
+#: ../../model-api.txt:1751
+msgid ""
+"There's also a hook for backend-specific SQL data. For example, you can have "
+"separate initial-data files for PostgreSQL and MySQL. For each app, Django "
+"looks for a file called ``<appname>/sql/<modelname>.<backend>.sql``, where "
+"``<appname>`` is your app directory, ``<modelname>`` is the model's name in "
+"lowercase and ``<backend>`` is the value of ``DATABASE_ENGINE`` in your "
+"settings file (e.g., ``postgresql``, ``mysql``)."
+msgstr ""
+
+# 4581631828f3448ca4f9610bd9b37bad
+#: ../../model-api.txt:1758
+msgid ""
+"Backend-specific SQL data is executed before non-backend-specific SQL data. "
+"For example, if your app contains the files ``sql/person.sql`` and ``sql/"
+"person.postgresql.sql`` and you're installing the app on PostgreSQL, Django "
+"will execute the contents of ``sql/person.postgresql.sql`` first, then ``sql/"
+"person.sql``."
+msgstr ""

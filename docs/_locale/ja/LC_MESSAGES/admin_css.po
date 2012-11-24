@@ -1,0 +1,298 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# f977daf9de9f4ba0a372b5480403f69f
+#: ../../admin_css.txt:3
+msgid "Customizing the Django admin interface"
+msgstr ""
+
+# 8c5891b736a945d8bcc5c5a5a5da92a6
+#: ../../admin_css.txt:5
+msgid ""
+"Django's dynamic admin interface gives you a fully-functional admin for free "
+"with no hand-coding required. The dynamic admin is designed to be production-"
+"ready, not just a starting point, so you can use it as-is on a real site. "
+"While the underlying format of the admin pages is built in to Django, you "
+"can customize the look and feel by editing the admin stylesheet and images."
+msgstr ""
+
+# 5e5200cdbfcf4b97b0554ef103d72cab
+#: ../../admin_css.txt:11
+msgid ""
+"Here's a quick and dirty overview some of the main styles and classes used "
+"in the Django admin CSS."
+msgstr ""
+
+# 3834b59cd1194baf8ae69b9138bcc0c2
+#: ../../admin_css.txt:15
+msgid "Modules"
+msgstr ""
+
+# de363563df6849e8bc7b4ea0251cd3e5
+#: ../../admin_css.txt:17
+msgid ""
+"The ``.module`` class is a basic building block for grouping content in the "
+"admin. It's generally applied to a ``div`` or a ``fieldset``. It wraps the "
+"content group in a box and applies certain styles to the elements within. An "
+"``h2`` within a ``div.module`` will align to the top of the ``div`` as a "
+"header for the whole group."
+msgstr ""
+
+# 574820f768d947f3a27ee947b07befcc
+#: ../../admin_css.txt:27
+msgid "Column Types"
+msgstr ""
+
+# fc90db6a3338433ab00ffbad0bb2f50d
+#: ../../admin_css.txt:31
+msgid ""
+"All admin pages (except the dashboard) are fluid-width. All fixed-width "
+"classes from previous Django versions have been removed."
+msgstr ""
+
+# 76d4be2f806c4356a43014793f05c7d2
+#: ../../admin_css.txt:34
+msgid ""
+"The base template for each admin page has a block that defines the column "
+"structure for the page. This sets a class on the page content area "
+"(``div#content``) so everything on the page knows how wide it should be. "
+"There are three column types available."
+msgstr ""
+
+# 4f7d09ba26724b4fa215bf76c7d9fab3
+#: ../../admin_css.txt:40
+msgid ""
+"This is the default column setting for all pages. The \"M\" stands for \"main"
+"\". Assumes that all content on the page is in one main column "
+"(``div#content-main``)."
+msgstr ""
+
+# 2d967834ebc44f3eb9f2cf4c14620e33
+#: ../../admin_css.txt:44
+msgid ""
+"This is for pages with one main column and a sidebar on the right. The \"S\" "
+"stands for \"sidebar\". Assumes that main content is in ``div#content-main`` "
+"and sidebar content is in ``div#content-related``. This is used on the main "
+"admin page."
+msgstr ""
+
+# c52d90fb2c1e4a218ba696173bf24fdb
+#: ../../admin_css.txt:49
+msgid ""
+"Same as above, with the sidebar on the left. The source order of the columns "
+"doesn't matter."
+msgstr ""
+
+# 2286bff361dc4f7898bf347b9a4a247d
+#: ../../admin_css.txt:52
+msgid ""
+"For instance, you could stick this in a template to make a two-column page "
+"with the sidebar on the right::"
+msgstr ""
+
+# 165f0c231baf47b38800f1088cd6d459
+#: ../../admin_css.txt:58
+msgid "Text Styles"
+msgstr ""
+
+# e98ee84e8b3d453d875ea7385e45e0aa
+#: ../../admin_css.txt:61
+msgid "Font Sizes"
+msgstr ""
+
+# 81be4143299c4c889907d8d5323a48d9
+#: ../../admin_css.txt:63
+msgid ""
+"Most HTML elements (headers, lists, etc.) have base font sizes in the "
+"stylesheet based on context. There are three classes are available for "
+"forcing text to a certain size in any context."
+msgstr ""
+
+# 53f7e429a01f492d91d496d38733eeb0
+#: ../../admin_css.txt:68
+msgid "11px"
+msgstr ""
+
+# 215826123ef74857a47f38399462f1b2
+#: ../../admin_css.txt:70
+msgid "10px"
+msgstr ""
+
+# 798cabc7c5d24af4bf71663b875e5821
+#: ../../admin_css.txt:72
+msgid "9px (use sparingly)"
+msgstr ""
+
+# 983a9b99bc73492982f0f4b41d07aade
+#: ../../admin_css.txt:75
+msgid "Font Styles and Alignment"
+msgstr ""
+
+# 2328632ffafd4ac59a0af3c35ab46966
+#: ../../admin_css.txt:77
+msgid "There are also a few styles for styling text."
+msgstr ""
+
+# e6f3146a582d43588e1abc335268671c
+#: ../../admin_css.txt:80
+msgid ""
+"Sets font color to light gray. Good for side notes in instructions. Combine "
+"with ``.small`` or ``.tiny`` for sheer excitement."
+msgstr ""
+
+# 597568ebba6c476aa975efc8ae0c6a83
+#: ../../admin_css.txt:83
+msgid ""
+"This is a custom class for blocks of inline help text explaining the "
+"function of form elements. It makes text smaller and gray, and when applied "
+"to ``p`` elements withing ``.form-row`` elements (see Form Styles below), it "
+"will offset the text to align with the form field. Use this for help text, "
+"instead of ``small quiet``. It works on other elements, but try to put the "
+"class on a ``p`` whenever you can."
+msgstr ""
+
+# 5f0c71760f3b4660ac2a608bb3c48ec7
+#: ../../admin_css.txt:90
+msgid ""
+"It aligns the text left. Only works on block elements containing inline "
+"elements."
+msgstr ""
+
+# 404d1a2cbd23497b97b4b362cfd95121
+#: ../../admin_css.txt:93
+msgid "Are you paying attention?"
+msgstr ""
+
+# c6de369df9c140f78784dd5b2a0d4c78
+#: ../../admin_css.txt:95
+msgid ""
+"Keeps text and inline objects from wrapping. Comes in handy for table "
+"headers you want to stay on one line."
+msgstr ""
+
+# a88975d0224c405d86114b7cb97123e5
+#: ../../admin_css.txt:99
+msgid "Floats and Clears"
+msgstr ""
+
+# 3a710822496a4626af47847d87cdb93d
+#: ../../admin_css.txt:102
+msgid "floats left"
+msgstr ""
+
+# 5fd5db7850f541f084275e28cc48baa6
+#: ../../admin_css.txt:104
+msgid "floats right"
+msgstr ""
+
+# e3171835352a4745a84a4519a1d68afe
+#: ../../admin_css.txt:106
+msgid "clears all"
+msgstr ""
+
+# a2617d5e6225491191ac8fb720c3bf57
+#: ../../admin_css.txt:109
+msgid "Object Tools"
+msgstr ""
+
+# 6520399ef1f34ba9bb02e9a6adfdef31
+#: ../../admin_css.txt:111
+msgid ""
+"Certain actions which apply directly to an object are used in form and "
+"changelist pages. These appear in a \"toolbar\" row above the form or "
+"changelist, to the right of the page. The tools are wrapped in a ``ul`` with "
+"the class ``object-tools``. There are two custom tool types which can be "
+"defined with an additional class on the ``a`` for that tool. These are ``."
+"addlink`` and ``.viewsitelink``."
+msgstr ""
+
+# 9937f7441b6c4f21891dbd9c7b11146b
+#: ../../admin_css.txt:118
+msgid "Example from a changelist page::"
+msgstr ""
+
+# 23bf2185631b43e7abb2f6dfec0e64cf
+#: ../../admin_css.txt:127
+msgid "and from a form page::"
+msgstr ""
+
+# d1edcad5fe5e4b09ae172505fcde8f47
+#: ../../admin_css.txt:138
+msgid "Form Styles"
+msgstr ""
+
+# 8125ec6c22494038bbd0ee0c6c631b10
+#: ../../admin_css.txt:141
+msgid "Fieldsets"
+msgstr ""
+
+# cd9f51d987c646beb613e6fab2f2ae8b
+#: ../../admin_css.txt:143
+msgid ""
+"Admin forms are broken up into groups by ``fieldset`` elements. Each form "
+"fieldset should have a class ``.module``. Each fieldset should have a header "
+"``h2`` within the fieldset at the top (except the first group in the form, "
+"and in some cases where the group of fields doesn't have a logical label)."
+msgstr ""
+
+# 0e3ed3e9e4f04bd88eb1b475d8caf108
+#: ../../admin_css.txt:148
+msgid ""
+"Each fieldset can also take extra classes in addition to ``.module`` to "
+"apply appropriate formatting to the group of fields."
+msgstr ""
+
+# 06c18e3908ea4469840850159ffb126e
+#: ../../admin_css.txt:152
+msgid "This will align the labels and inputs side by side on the same line."
+msgstr ""
+
+# 41f26d87b56a44ae8b86fb7a5ef57094
+#: ../../admin_css.txt:154
+msgid ""
+"Used in combination with ``.aligned`` to widen the space available for the "
+"labels."
+msgstr ""
+
+# b056570a61f8429894be0debd276e842
+#: ../../admin_css.txt:158
+msgid "Form Rows"
+msgstr ""
+
+# ce54952d6e4844059194fb43a07146e4
+#: ../../admin_css.txt:160
+msgid ""
+"Each row of the form (within the ``fieldset``) should be enclosed in a "
+"``div`` with class ``form-row``. If the field in the row is required, a "
+"class of ``required`` should also be added to the ``div.form-row``."
+msgstr ""
+
+# 2bb9c005b8b34020a339ae72999a62db
+#: ../../admin_css.txt:168
+msgid "Labels"
+msgstr ""
+
+# 97c1c684cabf4a48a49689debb2e4b5c
+#: ../../admin_css.txt:170
+msgid ""
+"Form labels should always precede the field, except in the case of "
+"checkboxes and radio buttons, where the ``input`` should come first. Any "
+"explanation or help text should follow the ``label`` in a ``p`` with class "
+"``.help``."
+msgstr ""

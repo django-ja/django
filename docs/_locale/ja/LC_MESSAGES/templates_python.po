@@ -1,0 +1,1512 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 8da416492648477aaf61ca661bc3e037
+#: ../../templates_python.txt:3
+msgid "The Django template language: For Python programmers"
+msgstr ""
+
+# 4d2cc389b91446e4b2ca33088dc1cc79
+#: ../../templates_python.txt:5
+msgid ""
+"This document explains the Django template system from a technical "
+"perspective -- how it works and how to extend it. If you're just looking for "
+"reference on the language syntax, see :doc:`The Django template language: "
+"For template authors <templates>`."
+msgstr ""
+
+# 788cb980b7c44049be2ab08cf9bb9e05
+#: ../../templates_python.txt:10
+msgid ""
+"If you're looking to use the Django template system as part of another "
+"application -- i.e., without the rest of the framework -- make sure to read "
+"the `configuration`_ section later in this document."
+msgstr ""
+
+# d6b6be2a8d904f1cba3016b7fc159e6b
+#: ../../templates_python.txt:15
+msgid "Basics"
+msgstr ""
+
+# 7d1cd5e9fe8144ffb1b1c6ee750f2254
+#: ../../templates_python.txt:17
+msgid ""
+"A **template** is a text document, or a normal Python string, that is marked-"
+"up using the Django template language. A template can contain **block tags** "
+"or **variables**."
+msgstr ""
+
+# 6f9c2c01973443838ce4e5a03b959cc8
+#: ../../templates_python.txt:21
+msgid "A **block tag** is a symbol within a template that does something."
+msgstr ""
+
+# 2c1c7b3feb4e4a778d72ef63aa0ae147
+#: ../../templates_python.txt:23
+msgid ""
+"This definition is deliberately vague. For example, a block tag can output "
+"content, serve as a control structure (an \"if\" statement or \"for\" loop), "
+"grab content from a database or enable access to other template tags."
+msgstr ""
+
+# ca9427162fdf4abab69315def428fb15
+#: ../../templates_python.txt:27
+msgid "Block tags are surrounded by ``\"{%\"`` and ``\"%}\"``."
+msgstr ""
+
+# 3b65c1b562ca429785d5fbcb08483efc
+#: ../../templates_python.txt:29
+msgid "Example template with block tags::"
+msgstr ""
+
+# ac6a79290a874336b936c28acc4c2381
+#: ../../templates_python.txt:33
+msgid "A **variable** is a symbol within a template that outputs a value."
+msgstr ""
+
+# afb21ad5436640bf987acd6381e88980
+#: ../../templates_python.txt:35
+msgid "Variable tags are surrounded by ``\"{{\"`` and ``\"}}\"``."
+msgstr ""
+
+# 1e1d87e654c7466c8a45ede38294b335
+#: ../../templates_python.txt:37
+msgid "Example template with variables::"
+msgstr ""
+
+# da94100757594317a4f15fb326ee8401
+#: ../../templates_python.txt:41
+msgid ""
+"A **context** is a \"variable name\" -> \"variable value\" mapping that is "
+"passed to a template."
+msgstr ""
+
+# 9cdedb4833bc4afcb3ba713e6468319c
+#: ../../templates_python.txt:44
+msgid ""
+"A template **renders** a context by replacing the variable \"holes\" with "
+"values from the context and executing all block tags."
+msgstr ""
+
+# 63fd57c5eb1549de9d1c4093dec9e937
+#: ../../templates_python.txt:48
+msgid "Using the template system"
+msgstr ""
+
+# eb8a0250db9a40f089f3c3e856098378
+#: ../../templates_python.txt:50
+msgid "Using the template system in Python is a two-step process:"
+msgstr ""
+
+# 0ad780c28bcb40baaa7cdb5181f8e47d
+#: ../../templates_python.txt:52
+msgid "First, you compile the raw template code into a ``Template`` object."
+msgstr ""
+
+# 3b191607b58a472e85b4fc97d14a7f45
+#: ../../templates_python.txt:53
+msgid ""
+"Then, you call the ``render()`` method of the ``Template`` object with a "
+"given context."
+msgstr ""
+
+# af767ac38b454d13bd7cadd9635faad4
+#: ../../templates_python.txt:57
+msgid "Compiling a string"
+msgstr ""
+
+# 35fe2a8c1a8741cb93c8dee4e83d6e61
+#: ../../templates_python.txt:59
+msgid ""
+"The easiest way to create a ``Template`` object is by instantiating it "
+"directly. The class lives at ``django.template.Template``. The constructor "
+"takes one argument -- the raw template code::"
+msgstr ""
+
+# 41ec7414b374411abfbc43bed3c7ba5e
+#: ../../templates_python.txt:70
+msgid ""
+"The system only parses your raw template code once -- when you create the "
+"``Template`` object. From then on, it's stored internally as a \"node\" "
+"structure for performance."
+msgstr ""
+
+# 372152f378e74298886b61a76df942a8
+#: ../../templates_python.txt:74
+msgid ""
+"Even the parsing itself is quite fast. Most of the parsing happens via a "
+"single call to a single, short, regular expression."
+msgstr ""
+
+# 7e50fbfb3dc84509818b202b6413b571
+#: ../../templates_python.txt:78
+msgid "Rendering a context"
+msgstr ""
+
+# 42343782e2644a449ee3827df526bc0e
+#: ../../templates_python.txt:80
+msgid ""
+"Once you have a compiled ``Template`` object, you can render a context -- or "
+"multiple contexts -- with it. The ``Context`` class lives at ``django."
+"template.Context``, and the constructor takes one (optional) argument: a "
+"dictionary mapping variable names to variable values. Call the ``Template`` "
+"object's ``render()`` method with the context to \"fill\" the template::"
+msgstr ""
+
+# 92f0dd68547b46abb7019b36abb18012
+#: ../../templates_python.txt:98
+msgid ""
+"Variable names must consist of any letter (A-Z), any digit (0-9), an "
+"underscore or a dot."
+msgstr ""
+
+# f13ea91f38294e6cb6fc9905624eb8d7
+#: ../../templates_python.txt:101
+msgid ""
+"Dots have a special meaning in template rendering. A dot in a variable name "
+"signifies **lookup**. Specifically, when the template system encounters a "
+"dot in a variable name, it tries the following lookups, in this order:"
+msgstr ""
+
+# f92ad6c1d26446afa18082b5edbfd61b
+#: ../../templates_python.txt:105
+msgid "Dictionary lookup. Example: ``foo[\"bar\"]``"
+msgstr ""
+
+# 196a3f77efbc4661a2d8a35628c4bbd4
+#: ../../templates_python.txt:106
+msgid "Attribute lookup. Example: ``foo.bar``"
+msgstr ""
+
+# 5a2982d059a34669a58f4c7223688bc0
+#: ../../templates_python.txt:107
+msgid "Method call. Example: ``foo.bar()``"
+msgstr ""
+
+# f3e220a605f24aa38e60ff64ea67d590
+#: ../../templates_python.txt:108
+msgid "List-index lookup. Example: ``foo[bar]``"
+msgstr ""
+
+# 71fcd9dd242c4f74b7692176c972183c
+#: ../../templates_python.txt:110
+msgid ""
+"The template system uses the first lookup type that works. It's short-"
+"circuit logic."
+msgstr ""
+
+# 7387b800518c42c89d4514b0de9774a8
+#: ../../templates_python.txt:113
+msgid "Here are a few examples::"
+msgstr ""
+
+# 2b42570a8e0545349cd16d1331f3f918
+#: ../../templates_python.txt:140
+msgid ""
+"Method lookups are slightly more complex than the other lookup types. Here "
+"are some things to keep in mind:"
+msgstr ""
+
+# e364502d20d24327bd2f6f1beda3ba6a
+#: ../../templates_python.txt:143
+msgid ""
+"If, during the method lookup, a method raises an exception, the exception "
+"will be propagated, unless the exception has an attribute "
+"``silent_variable_failure`` whose value is ``True``. If the exception *does* "
+"have a ``silent_variable_failure`` attribute, the variable will render as an "
+"empty string. Example::"
+msgstr ""
+
+# 99bfdac25dff44e1979c46ea569adf7c
+#: ../../templates_python.txt:168
+msgid ""
+"Note that ``django.core.exceptions.ObjectDoesNotExist``, which is the base "
+"class for all Django database API ``DoesNotExist`` exceptions, has "
+"``silent_variable_failure = True``. So if you're using Django templates with "
+"Django model objects, any ``DoesNotExist`` exception will fail silently."
+msgstr ""
+
+# 75e678ca6d19493787e7d6fd2a4ed059
+#: ../../templates_python.txt:174
+msgid ""
+"A method call will only work if the method has no required arguments. "
+"Otherwise, the system will move to the next lookup type (list-index lookup)."
+msgstr ""
+
+# c4dc7d0e3a7d47fcbe86652acdf957f1
+#: ../../templates_python.txt:178
+msgid ""
+"Obviously, some methods have side effects, and it'd be either foolish or a "
+"security hole to allow the template system to access them."
+msgstr ""
+
+# 04136bc18e4d4a4cbe95ab90c6ea9f32
+#: ../../templates_python.txt:181
+msgid ""
+"A good example is the ``delete()`` method on each Django model object. The "
+"template system shouldn't be allowed to do something like this::"
+msgstr ""
+
+# 77c271b6831042899867576630da5de7
+#: ../../templates_python.txt:186
+msgid ""
+"To prevent this, set a function attribute ``alters_data`` on the method. The "
+"template system won't execute a method if the method has "
+"``alters_data=True`` set. The dynamically-generated ``delete()`` and ``save()"
+"`` methods on Django model objects get ``alters_data=True`` automatically. "
+"Example::"
+msgstr ""
+
+# e489fcdf01704aebbbc8bacf4498f826
+#: ../../templates_python.txt:197
+msgid "How invalid variables are handled"
+msgstr ""
+
+# d42bb5f9588040e889ad82e0557a0582
+#: ../../templates_python.txt:199
+msgid ""
+"If a variable doesn't exist, the template system inserts the value of the "
+"``TEMPLATE_STRING_IF_INVALID`` setting, which is set to ``''`` (the empty "
+"string) by default."
+msgstr ""
+
+# 2c200a96f7e244429562fdfb70c9d06b
+#: ../../templates_python.txt:204
+msgid "Playing with Context objects"
+msgstr ""
+
+# 991893aa0abc44dab20bf6b24280d15e
+#: ../../templates_python.txt:206
+msgid ""
+"Most of the time, you'll instantiate ``Context`` objects by passing in a "
+"fully-populated dictionary to ``Context()``. But you can add and delete "
+"items from a ``Context`` object once it's been instantiated, too, using "
+"standard dictionary syntax::"
+msgstr ""
+
+# abe98b218b8140469a4e0039a72d41eb
+#: ../../templates_python.txt:221
+msgid ""
+"A ``Context`` object is a stack. That is, you can ``push()`` and ``pop()`` "
+"it. If you ``pop()`` too much, it'll raise ``django.template."
+"ContextPopException``::"
+msgstr ""
+
+# 1ffdee2bd86349009f86f410deb2e935
+#: ../../templates_python.txt:242
+msgid ""
+"Using a ``Context`` as a stack comes in handy in some custom template tags, "
+"as you'll see below."
+msgstr ""
+
+# a441ef7952a94e929a1a98b5620142be
+#: ../../templates_python.txt:246
+msgid "Subclassing Context: RequestContext"
+msgstr ""
+
+# f17b1970eba44ae283cdf2dac51a0b1c
+#: ../../templates_python.txt:248
+msgid ""
+"Django comes with a special ``Context`` class, ``django.template."
+"RequestContext``, that acts slightly differently than the normal ``django."
+"template.Context``. The first difference is that takes an :doc:`HttpRequest "
+"object <request_response>` as its first argument. For example::"
+msgstr ""
+
+# ed342d4c3e874dfeb24995bc7774a5da
+#: ../../templates_python.txt:257
+msgid ""
+"The second difference is that it automatically populates the context with a "
+"few variables, according to your :doc:`TEMPLATE_CONTEXT_PROCESSORS setting "
+"<settings>`."
+msgstr ""
+
+# 1644f490d42f46e68bd1767baf085bcb
+#: ../../templates_python.txt:260
+msgid ""
+"The ``TEMPLATE_CONTEXT_PROCESSORS`` setting is a tuple of callables that "
+"take a request object as their argument and return a dictionary of items to "
+"be merged into the context. By default, ``TEMPLATE_CONTEXT_PROCESSORS`` is "
+"set to::"
+msgstr ""
+
+# 194b6d028bd04a929193877ee8548ff1
+#: ../../templates_python.txt:268
+msgid ""
+"Each processor is applied in order. That means, if one processor adds a "
+"variable to the context and a second processor adds a variable with the same "
+"name, the second will override the first. The default processors are "
+"explained below."
+msgstr ""
+
+# 401d5e085a6b475c8b8f9e6d718160dd
+#: ../../templates_python.txt:273
+msgid ""
+"Also, you can give ``RequestContext`` a list of additional processors, using "
+"the optional, third positional argument, ``processors``. In this example, "
+"the ``RequestContext`` instance gets a ``ip_address`` variable::"
+msgstr ""
+
+# 7701fb2c46264618b009b94cfcfca4ca
+#: ../../templates_python.txt:286
+msgid "Here's what each of the default processors does:"
+msgstr ""
+
+# 382327ab0b15425a95300b0658d21248
+#: ../../templates_python.txt:289
+msgid "django.core.context_processors.auth"
+msgstr ""
+
+# cca30b778a97406885ed76af8d8236f2
+#: ../../templates_python.txt:291
+msgid ""
+"If ``TEMPLATE_CONTEXT_PROCESSORS`` contains this processor, every "
+"``RequestContext`` will contain these three variables:"
+msgstr ""
+
+# ff76bfdcc27546e4a27a4ee17ef34f39
+#: ../../templates_python.txt:294
+msgid ""
+"``user`` -- An ``auth.User`` instance representing the currently logged-in "
+"user (or an ``AnonymousUser`` instance, if the client isn't logged in). See "
+"the :doc:`user authentication docs <authentication>`."
+msgstr ""
+
+# ca19bbd2ed5342259543329523407bf7
+#: ../../templates_python.txt:297
+msgid ""
+"``messages`` -- A list of ``auth.Message`` objects for the currently logged-"
+"in user."
+msgstr ""
+
+# a75d764d0ccf48b7937c65c6242c209f
+#: ../../templates_python.txt:299
+msgid ""
+"``perms`` -- An instance of ``django.core.context_processors.PermWrapper``, "
+"representing the permissions that the currently logged-in user has. See the :"
+"doc:`permissions docs <authentication>`."
+msgstr ""
+
+# 9e41cca3feea42b8b54cfd51fc6fcaa3
+#: ../../templates_python.txt:304
+msgid "django.core.context_processors.debug"
+msgstr ""
+
+# 6ca6925741344a06bd303eaeacbf756c
+#: ../../templates_python.txt:306
+msgid ""
+"If ``TEMPLATE_CONTEXT_PROCESSORS`` contains this processor, every "
+"``RequestContext`` will contain these two variables -- but only if your "
+"``DEBUG`` setting is set to ``True`` and the request's IP address (``request."
+"META['REMOTE_ADDR']``) is in the ``INTERNAL_IPS`` setting:"
+msgstr ""
+
+# 7a12fd98db3b416b9fc56a4da45b1c4f
+#: ../../templates_python.txt:311
+msgid ""
+"``debug`` -- ``True``. You can use this in templates to test whether you're "
+"in ``DEBUG`` mode."
+msgstr ""
+
+# 1d88ad02cbaa4ec98b99ed50f80ca295
+#: ../../templates_python.txt:313
+msgid ""
+"``sql_queries`` -- A list of ``{'sql': ..., 'time': ...}`` dictionaries, "
+"representing every SQL query that has happened so far during the request and "
+"how long it took. The list is in order by query."
+msgstr ""
+
+# 8c6be2efe42a4453b43574f05815db95
+#: ../../templates_python.txt:318
+msgid "django.core.context_processors.i18n"
+msgstr ""
+
+# fd10f63e8c004095941eebb8bf66a4c2
+#: ../../templates_python.txt:320
+msgid ""
+"If ``TEMPLATE_CONTEXT_PROCESSORS`` contains this processor, every "
+"``RequestContext`` will contain these two variables:"
+msgstr ""
+
+# 08a3dfe54cdc4d2caf0ac572ebe3123e
+#: ../../templates_python.txt:323
+msgid "``LANGUAGES`` -- The value of the :doc:`LANGUAGES setting <settings>`."
+msgstr ""
+
+# cf7a8132060c4a0fb9710e18562d494c
+#: ../../templates_python.txt:324
+msgid ""
+"``LANGUAGE_CODE`` -- ``request.LANGUAGE_CODE``, if it exists. Otherwise, the "
+"value of the :doc:`LANGUAGE_CODE setting <settings>`."
+msgstr ""
+
+# 8deb0c44888f45248573fdcbc5853323
+#: ../../templates_python.txt:327
+msgid "See the :doc:`internationalization docs <i18n>` for more."
+msgstr ""
+
+# 2b24eae9eb504e6b933cf5690253f324
+#: ../../templates_python.txt:330
+msgid "django.core.context_processors.request"
+msgstr ""
+
+# 9bdb7c07ee254934bf6b728810d89ec0
+#: ../../templates_python.txt:332
+msgid ""
+"If ``TEMPLATE_CONTEXT_PROCESSORS`` contains this processor, every "
+"``RequestContext`` will contain a variable ``request``, which is the "
+"current :doc:`HttpRequest object <request_response>`. Note that this "
+"processor is not enabled by default; you'll have to activate it."
+msgstr ""
+
+# 2eac212e30d94190a77c8c78edccdcc2
+#: ../../templates_python.txt:338
+msgid "Loading templates"
+msgstr ""
+
+# 21a2f87f38a04c9fab01b4c604937e71
+#: ../../templates_python.txt:340
+msgid ""
+"Generally, you'll store templates in files on your filesystem rather than "
+"using the low-level ``Template`` API yourself. Save templates in a directory "
+"specified as a **template directory**."
+msgstr ""
+
+# 872fd488e14340db84d876ce9af7b9b4
+#: ../../templates_python.txt:344
+msgid ""
+"Django searches for template directories in a number of places, depending on "
+"your template-loader settings (see \"Loader types\" below), but the most "
+"basic way of specifying template directories is by using the "
+"``TEMPLATE_DIRS`` setting."
+msgstr ""
+
+# 8553f014f3104fe78f28dcc949f62cb9
+#: ../../templates_python.txt:350
+msgid "The TEMPLATE_DIRS setting"
+msgstr ""
+
+# 90c7508f5f1e455cbd3350e3f7e843fb
+#: ../../templates_python.txt:352
+msgid ""
+"Tell Django what your template directories are by using the "
+"``TEMPLATE_DIRS`` setting in your settings file. This should be set to a "
+"list or tuple of strings that contain full paths to your template directory"
+"(ies). Example::"
+msgstr ""
+
+# 238e66a569cb484786bbd4cf24c381d1
+#: ../../templates_python.txt:361
+msgid ""
+"Your templates can go anywhere you want, as long as the directories and "
+"templates are readable by the Web server. They can have any extension you "
+"want, such as ``.html`` or ``.txt``, or they can have no extension at all."
+msgstr ""
+
+# ffd471320fda4853b106173dce78745d
+#: ../../templates_python.txt:365
+msgid ""
+"Note that these paths should use Unix-style forward slashes, even on Windows."
+msgstr ""
+
+# 41a42e6c2457453aa8b5c647c312542e
+#: ../../templates_python.txt:368
+msgid "The Python API"
+msgstr ""
+
+# d173cd8b149a4ed08de49f2dfb8f34a4
+#: ../../templates_python.txt:370
+msgid "Django has two ways to load templates from files:"
+msgstr ""
+
+# 82168aeac4e04a94b8a09a5fc7b66ce2
+#: ../../templates_python.txt:373
+msgid ""
+"``get_template`` returns the compiled template (a ``Template`` object) for "
+"the template with the given name. If the template doesn't exist, it raises "
+"``django.template.TemplateDoesNotExist``."
+msgstr ""
+
+# db894ec996c743eea275f7fce11ceb03
+#: ../../templates_python.txt:378
+msgid ""
+"``select_template`` is just like ``get_template``, except it takes a list of "
+"template names. Of the list, it returns the first template that exists."
+msgstr ""
+
+# 13a4094c5f68412db169aa39358476a8
+#: ../../templates_python.txt:381
+msgid ""
+"For example, if you call ``get_template('story_detail.html')`` and have the "
+"above ``TEMPLATE_DIRS`` setting, here are the files Django will look for, in "
+"order:"
+msgstr ""
+
+# 62c98b6aa648479a85d886021623be48
+# 62c98b6aa648479a85d886021623be48
+#: ../../templates_python.txt:385 ../../templates_python.txt:393
+msgid "``/home/html/templates/lawrence.com/story_detail.html``"
+msgstr ""
+
+# 778bb2e997b04d88a51feed7e9ca21c0
+# 778bb2e997b04d88a51feed7e9ca21c0
+#: ../../templates_python.txt:386 ../../templates_python.txt:394
+msgid "``/home/html/templates/default/story_detail.html``"
+msgstr ""
+
+# e4eec6f1fd274abe9f0b41dc2456051e
+#: ../../templates_python.txt:388
+msgid ""
+"If you call ``select_template(['story_253_detail.html', 'story_detail.html'])"
+"``, here's what Django will look for:"
+msgstr ""
+
+# 9e6e06f850b94996838036972667b778
+#: ../../templates_python.txt:391
+msgid "``/home/html/templates/lawrence.com/story_253_detail.html``"
+msgstr ""
+
+# f78497cec5a343d1b7c8d63b6d2f7706
+#: ../../templates_python.txt:392
+msgid "``/home/html/templates/default/story_253_detail.html``"
+msgstr ""
+
+# c20865b15268494e8a998cb6fbf5325a
+#: ../../templates_python.txt:396
+msgid "When Django finds a template that exists, it stops looking."
+msgstr ""
+
+# 7f74ac6f7ccf4f37887bb707cd021660
+#: ../../templates_python.txt:400
+msgid ""
+"You can use ``select_template()`` for super-flexible \"templatability.\" For "
+"example, if you've written a news story and want some stories to have custom "
+"templates, use something like ``select_template(['story_%s_detail.html' % "
+"story.id, 'story_detail.html'])``. That'll allow you to use a custom "
+"template for an individual story, with a fallback template for stories that "
+"don't have custom templates."
+msgstr ""
+
+# 462cdde9d42a421bb794ab8ea54039ec
+#: ../../templates_python.txt:408
+msgid "Using subdirectories"
+msgstr ""
+
+# 0c9e881a23fc4474875878184dec57ad
+#: ../../templates_python.txt:410
+msgid ""
+"It's possible -- and preferable -- to organize templates in subdirectories "
+"of the template directory. The convention is to make a subdirectory for each "
+"Django app, with subdirectories within those subdirectories as needed."
+msgstr ""
+
+# 5cad199decf8414d86615ad45e994271
+#: ../../templates_python.txt:414
+msgid ""
+"Do this for your own sanity. Storing all templates in the root level of a "
+"single directory gets messy."
+msgstr ""
+
+# dd2066b483194b2e8dddf0674d3c6161
+#: ../../templates_python.txt:417
+msgid ""
+"To load a template that's within a subdirectory, just use a slash, like so::"
+msgstr ""
+
+# ee706d51baa24c19bb69027f387285d7
+#: ../../templates_python.txt:421
+msgid ""
+"Using the same ``TEMPLATE_DIRS`` setting from above, this example "
+"``get_template()`` call will attempt to load the following templates:"
+msgstr ""
+
+# 75cfe6954bd04fdd871fca2d93a08343
+#: ../../templates_python.txt:424
+msgid "``/home/html/templates/lawrence.com/news/story_detail.html``"
+msgstr ""
+
+# 7263bff5d4a54622bd3023678962fea0
+#: ../../templates_python.txt:425
+msgid "``/home/html/templates/default/news/story_detail.html``"
+msgstr ""
+
+# a92010b4d223466cb6648634d0e93f35
+#: ../../templates_python.txt:428
+msgid "Loader types"
+msgstr ""
+
+# 1ac086ce8baa44c7965c8dc73a40c173
+#: ../../templates_python.txt:430
+msgid ""
+"By default, Django uses a filesystem-based template loader, but Django comes "
+"with a few other template loaders, which know how to load templates from "
+"other sources."
+msgstr ""
+
+# 95882be4146f4eaf9a6507688346e668
+#: ../../templates_python.txt:434
+msgid ""
+"These other loaders are disabled by default, but you can activate them by "
+"editing your ``TEMPLATE_LOADERS`` setting. ``TEMPLATE_LOADERS`` should be a "
+"tuple of strings, where each string represents a template loader. Here are "
+"the template loaders that come with Django:"
+msgstr ""
+
+# 9bb7f56b0e554fbe8fb5bbe879b1b1a7
+#: ../../templates_python.txt:440
+msgid "Loads templates from the filesystem, according to ``TEMPLATE_DIRS``."
+msgstr ""
+
+# 15117598c1d0470880461a4b36f13f16
+#: ../../templates_python.txt:443
+msgid ""
+"Loads templates from Django apps on the filesystem. For each app in "
+"``INSTALLED_APPS``, the loader looks for a ``templates`` subdirectory. If "
+"the directory exists, Django looks for templates in there."
+msgstr ""
+
+# 2195a778862d4eebbdd16dd1064bda21
+#: ../../templates_python.txt:447
+msgid ""
+"This means you can store templates with your individual apps. This also "
+"makes it easy to distribute Django apps with default templates."
+msgstr ""
+
+# 5e32955813e34d5b87c3893cbce22c91
+#: ../../templates_python.txt:450
+msgid "For example, for this setting::"
+msgstr ""
+
+# 570489d223d747388788ad814efdc70e
+#: ../../templates_python.txt:454
+msgid ""
+"...then ``get_template('foo.html')`` will look for templates in these "
+"directories, in this order:"
+msgstr ""
+
+# f1c60dc155c34a86851777b83746d5cb
+#: ../../templates_python.txt:457
+msgid "``/path/to/myproject/polls/templates/foo.html``"
+msgstr ""
+
+# c9b425a778524ce1a67f4be7036d5eb2
+#: ../../templates_python.txt:458
+msgid "``/path/to/myproject/music/templates/foo.html``"
+msgstr ""
+
+# 562f334cd5fe45ebbfacbb0733412855
+#: ../../templates_python.txt:460
+msgid ""
+"Note that the loader performs an optimization when it is first imported: It "
+"caches a list of which ``INSTALLED_APPS`` packages have a ``templates`` "
+"subdirectory."
+msgstr ""
+
+# b51d303dc5c14d73929a48e41cda3035
+#: ../../templates_python.txt:465
+msgid ""
+"Just like ``app_directories`` above, but it loads templates from Python eggs "
+"rather than from the filesystem."
+msgstr ""
+
+# 59cb7669d1ea4e419b96c08a0d90d6e2
+#: ../../templates_python.txt:468
+msgid ""
+"Django uses the template loaders in order according to the "
+"``TEMPLATE_LOADERS`` setting. It uses each loader until a loader finds a "
+"match."
+msgstr ""
+
+# 9250201818b448d29007fd092ca92515
+#: ../../templates_python.txt:472
+msgid "Extending the template system"
+msgstr ""
+
+# 5f8afe41619d4d2ea70c5d9fe290b054
+#: ../../templates_python.txt:474
+msgid ""
+"Although the Django template language comes with several default tags and "
+"filters, you might want to write your own. It's easy to do."
+msgstr ""
+
+# 20c6970c0b094c3683008bde245eb65b
+#: ../../templates_python.txt:477
+msgid ""
+"First, create a ``templatetags`` package in the appropriate Django app's "
+"package. It should be on the same level as ``models.py``, ``views.py``, etc. "
+"For example::"
+msgstr ""
+
+# bf3e6b653103406c855198b133a4769b
+#: ../../templates_python.txt:486
+msgid ""
+"Add two files to the ``templatetags`` package: an ``__init__.py`` file and a "
+"file that will contain your custom tag/filter definitions. The name of the "
+"latter file is the name you'll use to load the tags later. For example, if "
+"your custom tags/filters are in a file called ``poll_extras.py``, you'd do "
+"the following in a template::"
+msgstr ""
+
+# a3438fcea7084e32b4520d69c3505217
+#: ../../templates_python.txt:494
+msgid ""
+"The ``{% load %}`` tag looks at your ``INSTALLED_APPS`` setting and only "
+"allows the loading of template libraries within installed Django apps. This "
+"is a security feature: It allows you to host Python code for many template "
+"libraries on a single computer without enabling access to all of them for "
+"every Django installation."
+msgstr ""
+
+# 87ec1a7d095645c78630c6ef00e6aefa
+#: ../../templates_python.txt:500
+msgid ""
+"If you write a template library that isn't tied to any particular models/"
+"views, it's perfectly OK to have a Django app package that only contains a "
+"``templatetags`` package."
+msgstr ""
+
+# d97c9804b93447e589a58f49393ee0b3
+#: ../../templates_python.txt:504
+msgid ""
+"There's no limit on how many modules you put in the ``templatetags`` "
+"package. Just keep in mind that a ``{% load %}`` statement will load tags/"
+"filters for the given Python module name, not the name of the app."
+msgstr ""
+
+# b1974fb53ca44bd8993d1b52ecd92d8b
+#: ../../templates_python.txt:508
+msgid ""
+"Once you've created that Python module, you'll just have to write a bit of "
+"Python code, depending on whether you're writing filters or tags."
+msgstr ""
+
+# cfe9e4ba1fa049fdb8cec4a180b85796
+#: ../../templates_python.txt:511
+msgid ""
+"To be a valid tag library, the module contain a module-level variable named "
+"``register`` that is a ``template.Library`` instance, in which all the tags "
+"and filters are registered. So, near the top of your module, put the "
+"following::"
+msgstr ""
+
+# 9fe6fa2dedf844cb91967c450bd05db0
+#: ../../templates_python.txt:521
+msgid ""
+"For a ton of examples, read the source code for Django's default filters and "
+"tags. They're in ``django/template/defaultfilters.py`` and ``django/template/"
+"defaulttags.py``, respectively."
+msgstr ""
+
+# adf4fc07a7dd4c7ab0ac8fdc229fb371
+#: ../../templates_python.txt:526
+msgid "Writing custom template filters"
+msgstr ""
+
+# ecb9ff6bb3844fdda4fe049d6d540abe
+#: ../../templates_python.txt:528
+msgid ""
+"Custom filters are just Python functions that take one or two arguments:"
+msgstr ""
+
+# 6f390c7fd69343dda7c7e7cf5c50a65c
+#: ../../templates_python.txt:530
+msgid "The value of the variable (input) -- not necessarily a string."
+msgstr ""
+
+# e621a756bf594e6295ce3df66f954961
+#: ../../templates_python.txt:531
+msgid ""
+"The value of the argument -- this can have a default value, or be left out "
+"altogether."
+msgstr ""
+
+# 3d33348821c94444afce6fd2ad8b6e45
+#: ../../templates_python.txt:534
+msgid ""
+"For example, in the filter ``{{ var|foo:\"bar\" }}``, the filter ``foo`` "
+"would be passed the variable ``var`` and the argument ``\"bar\"``."
+msgstr ""
+
+# 964617ac59474918a712a6f557458a47
+#: ../../templates_python.txt:537
+msgid ""
+"Filter functions should always return something. They shouldn't raise "
+"exceptions. They should fail silently. In case of error, they should return "
+"either the original input or an empty string -- whichever makes more sense."
+msgstr ""
+
+# e8999bdf68cb4ee09746cab61a1a6331
+#: ../../templates_python.txt:541
+msgid "Here's an example filter definition::"
+msgstr ""
+
+# 40dfc8d977194c55bd2b1b408678cb9f
+#: ../../templates_python.txt:547
+msgid "And here's an example of how that filter would be used::"
+msgstr ""
+
+# 8ec1ff43877641acbf8eea1de090c644
+#: ../../templates_python.txt:551
+msgid ""
+"Most filters don't take arguments. In this case, just leave the argument out "
+"of your function. Example::"
+msgstr ""
+
+# 5326989cb4e64e7d90b10320a2e6a3d4
+#: ../../templates_python.txt:558
+msgid ""
+"When you've written your filter definition, you need to register it with "
+"your ``Library`` instance, to make it available to Django's template "
+"language::"
+msgstr ""
+
+# d43c476d1ca644228b0813cf7299c9fa
+#: ../../templates_python.txt:564
+msgid "The ``Library.filter()`` method takes two arguments:"
+msgstr ""
+
+# dd122a8958c741149100d8509430120a
+#: ../../templates_python.txt:566
+msgid "The name of the filter -- a string."
+msgstr ""
+
+# 2a18f6c1704f42538fb8c79532384df0
+# 2a18f6c1704f42538fb8c79532384df0
+#: ../../templates_python.txt:567 ../../templates_python.txt:714
+msgid ""
+"The compilation function -- a Python function (not the name of the function "
+"as a string)."
+msgstr ""
+
+# 2807989dfe004a088d7bef483ee252fa
+#: ../../templates_python.txt:570
+msgid ""
+"If you're using Python 2.4 or above, you can use ``register.filter()`` as a "
+"decorator instead::"
+msgstr ""
+
+# 195dd0a1bce9406eb279ceaafa6a880c
+#: ../../templates_python.txt:581
+msgid ""
+"If you leave off the ``name`` argument, as in the second example above, "
+"Django will use the function's name as the filter name."
+msgstr ""
+
+# 07c42c1c43ed4328bc2a4b8361ac9c28
+#: ../../templates_python.txt:585
+msgid "Writing custom template tags"
+msgstr ""
+
+# 5baaf5906bd646c39f86cc69eede40aa
+#: ../../templates_python.txt:587
+msgid "Tags are more complex than filters, because tags can do anything."
+msgstr ""
+
+# add47968e5da4728976e640a7b7d6997
+#: ../../templates_python.txt:590
+msgid "A quick overview"
+msgstr ""
+
+# 88cfeeb744654fd5b54b149b6900775a
+#: ../../templates_python.txt:592
+msgid ""
+"Above, this document explained that the template system works in a two-step "
+"process: compiling and rendering. To define a custom template tag, you "
+"specify how the compilation works and how the rendering works."
+msgstr ""
+
+# 3172412ee22a448ebf44d93a08e48392
+#: ../../templates_python.txt:596
+msgid ""
+"When Django compiles a template, it splits the raw template text into "
+"''nodes''. Each node is an instance of ``django.template.Node`` and has a "
+"``render()`` method. A compiled template is, simply, a list of ``Node`` "
+"objects. When you call ``render()`` on a compiled template object, the "
+"template calls ``render()`` on each ``Node`` in its node list, with the "
+"given context. The results are all concatenated together to form the output "
+"of the template."
+msgstr ""
+
+# 2934e17f36b645c6829fe3ef5a310171
+#: ../../templates_python.txt:603
+msgid ""
+"Thus, to define a custom template tag, you specify how the raw template tag "
+"is converted into a ``Node`` (the compilation function), and what the node's "
+"``render()`` method does."
+msgstr ""
+
+# f91e479ecf0e4af58d370188351c798b
+#: ../../templates_python.txt:608
+msgid "Writing the compilation function"
+msgstr ""
+
+# 22276fd33a7e4389859cf43b3bab6852
+#: ../../templates_python.txt:610
+msgid ""
+"For each template tag the template parser encounters, it calls a Python "
+"function with the tag contents and the parser object itself. This function "
+"is responsible for returning a ``Node`` instance based on the contents of "
+"the tag."
+msgstr ""
+
+# df8a34c0ec474323a20cffb183429024
+#: ../../templates_python.txt:614
+msgid ""
+"For example, let's write a template tag, ``{% current_time %}``, that "
+"displays the current date/time, formatted according to a parameter given in "
+"the tag, in `strftime syntax`_. It's a good idea to decide the tag syntax "
+"before anything else. In our case, let's say the tag should be used like "
+"this::"
+msgstr ""
+
+# f973d7295858478095d430609f682243
+#: ../../templates_python.txt:623
+msgid ""
+"The parser for this function should grab the parameter and create a ``Node`` "
+"object::"
+msgstr ""
+
+# 11c8e4d019cc4e41bb5b7e7d8d067450
+# 11c8e4d019cc4e41bb5b7e7d8d067450
+#: ../../templates_python.txt:637 ../../templates_python.txt:687
+msgid "Notes:"
+msgstr ""
+
+# a9c7b3e4eb7a4bbea3fd44e3bc9469e8
+#: ../../templates_python.txt:639
+msgid ""
+"``parser`` is the template parser object. We don't need it in this example."
+msgstr ""
+
+# 50d75a38507046aba05f8220fb7c1d90
+#: ../../templates_python.txt:642
+msgid ""
+"``token.contents`` is a string of the raw contents of the tag. In our "
+"example, it's ``'current_time \"%Y-%m-%d %I:%M %p\"'``."
+msgstr ""
+
+# dbd60ebee5564b769f34f77f8cf621a0
+#: ../../templates_python.txt:645
+msgid ""
+"The ``token.split_contents()`` method separates the arguments on spaces "
+"while keeping quoted strings together. The more straightforward ``token."
+"contents.split()`` wouldn't be as robust, as it would naively split on *all* "
+"spaces, including those within quoted strings. It's a good idea to always "
+"use ``token.split_contents()``."
+msgstr ""
+
+# 4e917a13663e4469a5b939026b0bb0fc
+#: ../../templates_python.txt:651
+msgid ""
+"This function is responsible for raising ``django.template."
+"TemplateSyntaxError``, with helpful messages, for any syntax error."
+msgstr ""
+
+# 3ed4612aff9a423b9f64529802568a3a
+#: ../../templates_python.txt:655
+msgid ""
+"The ``TemplateSyntaxError`` exceptions use the ``tag_name`` variable. Don't "
+"hard-code the tag's name in your error messages, because that couples the "
+"tag's name to your function. ``token.contents.split()[0]`` will ''always'' "
+"be the name of your tag -- even when the tag has no arguments."
+msgstr ""
+
+# 2de3b9536c6e441ba133b6a493e846d5
+#: ../../templates_python.txt:661
+msgid ""
+"The function returns a ``CurrentTimeNode`` with everything the node needs to "
+"know about this tag. In this case, it just passes the argument -- ``\"%Y-%m-"
+"%d %I:%M %p\"``. The leading and trailing quotes from the template tag are "
+"removed in ``format_string[1:-1]``."
+msgstr ""
+
+# 3fb5b20740bd466d938dca24494238df
+#: ../../templates_python.txt:666
+msgid ""
+"The parsing is very low-level. The Django developers have experimented with "
+"writing small frameworks on top of this parsing system, using techniques "
+"such as EBNF grammars, but those experiments made the template engine too "
+"slow. It's low-level because that's fastest."
+msgstr ""
+
+# 26d2b7e48e254a52bb95ec2b0f7e5d1a
+#: ../../templates_python.txt:672
+msgid "Writing the renderer"
+msgstr ""
+
+# e2b0234e092b4b16bab24f14ffa5b14b
+#: ../../templates_python.txt:674
+msgid ""
+"The second step in writing custom tags is to define a ``Node`` subclass that "
+"has a ``render()`` method."
+msgstr ""
+
+# d59320efe9b24ead825aa0b93a1a8a02
+#: ../../templates_python.txt:677
+msgid "Continuing the above example, we need to define ``CurrentTimeNode``::"
+msgstr ""
+
+# 24e96964c300424db6d7ae7cee955f41
+#: ../../templates_python.txt:689
+msgid ""
+"``__init__()`` gets the ``format_string`` from ``do_current_time()``. Always "
+"pass any options/parameters/arguments to a ``Node`` via its ``__init__()``."
+msgstr ""
+
+# 69ffa5c96816486e9204300b246ffe9f
+#: ../../templates_python.txt:693
+msgid "The ``render()`` method is where the work actually happens."
+msgstr ""
+
+# bfc6d96ac89540f5bfed173a4a16a2d3
+#: ../../templates_python.txt:695
+msgid ""
+"``render()`` should never raise ``TemplateSyntaxError`` or any other "
+"exception. It should fail silently, just as template filters should."
+msgstr ""
+
+# 19070df5aed348ec80f48802bdd80c85
+#: ../../templates_python.txt:698
+msgid ""
+"Ultimately, this decoupling of compilation and rendering results in an "
+"efficient template system, because a template can render multiple context "
+"without having to be parsed multiple times."
+msgstr ""
+
+# 2f18ddf0c3d14e01bf185cf6c6cfd626
+#: ../../templates_python.txt:703
+msgid "Registering the tag"
+msgstr ""
+
+# 36b071ce86c34992a9ace7a5028bae2a
+#: ../../templates_python.txt:705
+msgid ""
+"Finally, register the tag with your module's ``Library`` instance, as "
+"explained in \"Writing custom template filters\" above. Example::"
+msgstr ""
+
+# b2ebe842bd3f4502a26959198fdb7916
+#: ../../templates_python.txt:710
+msgid "The ``tag()`` method takes two arguments:"
+msgstr ""
+
+# 04986652d55f497db8774599af6d3db2
+#: ../../templates_python.txt:712
+msgid ""
+"The name of the template tag -- a string. If this is left out, the name of "
+"the compilation function will be used."
+msgstr ""
+
+# b1002902e6474ccc92878702c7e34967
+#: ../../templates_python.txt:717
+msgid ""
+"As with filter registration, it is also possible to use this as a decorator, "
+"in Python 2.4 and above::"
+msgstr ""
+
+# 5c711d16ae154ab4a197c27c100c0d62
+#: ../../templates_python.txt:728
+msgid ""
+"If you leave off the ``name`` argument, as in the second example above, "
+"Django will use the function's name as the tag name."
+msgstr ""
+
+# 44b783cce9b64e7cabde7c2ec7d2a9b4
+#: ../../templates_python.txt:732
+msgid "Shortcut for simple tags"
+msgstr ""
+
+# 4f2241e4846544d3a881c523bd5156b5
+#: ../../templates_python.txt:734
+msgid ""
+"Many template tags take a single argument -- a string or a template variable "
+"reference -- and return a string after doing some processing based solely on "
+"the input argument and some external information. For example, the "
+"``current_time`` tag we wrote above is of this variety: we give it a format "
+"string, it returns the time as a string."
+msgstr ""
+
+# d56b8dfe00934e8096699ff40746f5be
+#: ../../templates_python.txt:740
+msgid ""
+"To ease the creation of the types of tags, Django provides a helper "
+"function, ``simple_tag``. This function, which is a method of ``django."
+"template.Library``, takes a function that accepts one argument, wraps it in "
+"a ``render`` function and the other necessary bits mentioned above and "
+"registers it with the template system."
+msgstr ""
+
+# d433722ebb88497db0c14920def4b1ab
+#: ../../templates_python.txt:746
+msgid "Our earlier ``current_time`` function could thus be written like this::"
+msgstr ""
+
+# 403a09b2a4d4458e9ed2f23f5a536cb0
+#: ../../templates_python.txt:753
+msgid "In Python 2.4, the decorator syntax also works::"
+msgstr ""
+
+# b69bb2a275654aaf8f906de11241377e
+#: ../../templates_python.txt:760
+msgid "Only the (single) argument is passed into our function."
+msgstr ""
+
+# d534cf4c241541588e52159c36a17f73
+#: ../../templates_python.txt:761
+msgid ""
+"Checking for the required number of arguments, etc, has already been done by "
+"the time our function is called, so we don't need to do that."
+msgstr ""
+
+# f05d775d593942c895489a3cb89c4053
+#: ../../templates_python.txt:763
+msgid ""
+"The quotes around the argument (if any) have already been stripped away, so "
+"we just receive a plain string."
+msgstr ""
+
+# 124cf6cbaacb40729b2bae4acaf97baa
+#: ../../templates_python.txt:767
+msgid "Inclusion tags"
+msgstr ""
+
+# 9fdba4b8bc0a4038b3b997f41be0e617
+#: ../../templates_python.txt:769
+msgid ""
+"Another common type of template tag is the type that displays some data by "
+"rendering *another* template. For example, Django's admin interface uses "
+"custom template tags to display the buttons along the botton of the \"add/"
+"change\" form pages. Those buttons always look the same, but the link "
+"targets change depending on the object being edited -- so they're a perfect "
+"case for using a small template that is filled with details from the current "
+"object. (In the admin's case, this is the ``submit_row`` tag.)"
+msgstr ""
+
+# eae82574e3d64ea899391753e291d35b
+#: ../../templates_python.txt:777
+msgid "These sorts of tags are called `inclusion tags`."
+msgstr ""
+
+# c1726f4e71c84c2c81e194a57abb0982
+#: ../../templates_python.txt:779
+msgid ""
+"Writing inclusion tags is probably best demonstrated by example. Let's write "
+"a tag that outputs a list of choices for a given ``Poll`` object, such as "
+"was created in the :doc:`tutorials <tutorial01>`. We'll use the tag like "
+"this::"
+msgstr ""
+
+# 9f3fb6b19ce442ed884f68c4184df873
+#: ../../templates_python.txt:785
+msgid "...and the output will be something like this::"
+msgstr ""
+
+# a779428c6d964719a1bb473fc7955190
+#: ../../templates_python.txt:793
+msgid ""
+"First, define the function that takes the argument and produces a dictionary "
+"of data for the result. The important point here is we only need to return a "
+"dictionary, not anything more complex. This will be used as a template "
+"context for the template fragment. Example::"
+msgstr ""
+
+# 92b6c51c1eac49d18bdb40002f1cd806
+#: ../../templates_python.txt:802
+msgid ""
+"Next, create the template used to render the tag's output. This template is "
+"a fixed feature of the tag: the tag writer specifies it, not the template "
+"designer. Following our example, the template is very simple::"
+msgstr ""
+
+# 628c602ca28b4d3aa993866f3c19125d
+#: ../../templates_python.txt:812
+msgid ""
+"Now, create and register the inclusion tag by calling the ``inclusion_tag()"
+"`` method on a ``Library`` object. Following our example, if the above "
+"template is in a file called ``results.html`` in a directory that's searched "
+"by the template loader, we'd register the tag like this::"
+msgstr ""
+
+# 7665ffd68bb845d1a718109b33d279a4
+#: ../../templates_python.txt:820
+msgid ""
+"As always, Python 2.4 decorator syntax works as well, so we could have "
+"written::"
+msgstr ""
+
+# bd8e328ab61443dbaa54e34fa6654f4c
+#: ../../templates_python.txt:827
+msgid "...when first creating the function."
+msgstr ""
+
+# c0d304d9bf63452ea0c1e8c839be176f
+#: ../../templates_python.txt:829
+msgid ""
+"Sometimes, your inclusion tags might require a large number of arguments, "
+"making it a pain for template authors to pass in all the arguments and "
+"remember their order. To solve this, Django provides a ``takes_context`` "
+"option for inclusion tags. If you specify ``takes_context`` in creating a "
+"template tag, the tag will have no required arguments, and the underlying "
+"Python function will have one argument -- the template context as of when "
+"the tag was called."
+msgstr ""
+
+# 4e50ebc4b0be4d79ab727d989bc24491
+#: ../../templates_python.txt:836
+msgid ""
+"For example, say you're writing an inclusion tag that will always be used in "
+"a context that contains ``home_link`` and ``home_title`` variables that "
+"point back to the main page. Here's what the Python function would look "
+"like::"
+msgstr ""
+
+# 82c3f278b26647eaa4c752ad3d63bb1b
+#: ../../templates_python.txt:849
+msgid ""
+"(Note that the first parameter to the function *must* be called ``context``.)"
+msgstr ""
+
+# 9a80001449eb417bbdb91c538a67b8c8
+#: ../../templates_python.txt:851
+msgid ""
+"In that ``register.inclusion_tag()`` line, we specified "
+"``takes_context=True`` and the name of the template. Here's what the "
+"template ``link.html`` might look like::"
+msgstr ""
+
+# 29f41e40f2a0402ca3b60bc3f42c87a9
+#: ../../templates_python.txt:857
+msgid ""
+"Then, any time you want to use that custom tag, load its library and call it "
+"without any arguments, like so::"
+msgstr ""
+
+# f2437bb2a76744928df0bce6dffdd3d9
+#: ../../templates_python.txt:862
+msgid ""
+"Note that when you're using ``takes_context=True``, there's no need to pass "
+"arguments to the template tag. It automatically gets access to the context."
+msgstr ""
+
+# d7c942848f784854af73a043d27595c1
+#: ../../templates_python.txt:865
+msgid ""
+"The ``takes_context`` parameter defaults to ``False``. When it's set to "
+"*True*, the tag is passed the context object, as in this example. That's the "
+"only difference between this case and the previous ``inclusion_tag`` example."
+msgstr ""
+
+# eb450af9e80f4d8289626448038e09e2
+#: ../../templates_python.txt:870
+msgid "Setting a variable in the context"
+msgstr ""
+
+# 4cbec430126849cba09560c3a45d76f2
+#: ../../templates_python.txt:872
+msgid ""
+"The above example simply output a value. Generally, it's more flexible if "
+"your template tags set template variables instead of outputting values. That "
+"way, template authors can reuse the values that your template tags create."
+msgstr ""
+
+# 6bde1ca6630e4bab8a318ffc350af00d
+#: ../../templates_python.txt:876
+msgid ""
+"To set a variable in the context, just use dictionary assignment on the "
+"context object in the ``render()`` method. Here's an updated version of "
+"``CurrentTimeNode`` that sets a template variable ``current_time`` instead "
+"of outputting it::"
+msgstr ""
+
+# cdb40c16117641a8902d313bb68d125f
+#: ../../templates_python.txt:888
+msgid ""
+"Note that ``render()`` returns the empty string. ``render()`` should always "
+"return string output. If all the template tag does is set a variable, "
+"``render()`` should return the empty string."
+msgstr ""
+
+# 80c1db9b5f9949aea580029e85121975
+#: ../../templates_python.txt:892
+msgid "Here's how you'd use this new version of the tag::"
+msgstr ""
+
+# 644c1c433f2c42b9bb904351f5305353
+#: ../../templates_python.txt:896
+msgid ""
+"But, there's a problem with ``CurrentTimeNode2``: The variable name "
+"``current_time`` is hard-coded. This means you'll need to make sure your "
+"template doesn't use ``{{ current_time }}`` anywhere else, because the ``{% "
+"current_time %}`` will blindly overwrite that variable's value. A cleaner "
+"solution is to make the template tag specify the name of the output "
+"variable, like so::"
+msgstr ""
+
+# 886dd7f3b2ae4551a2ff4b430c547d80
+#: ../../templates_python.txt:906
+msgid ""
+"To do that, you'll need to refactor both the compilation function and "
+"``Node`` class, like so::"
+msgstr ""
+
+# 3458fe3447204d45974adaefdaece8a0
+#: ../../templates_python.txt:933
+msgid ""
+"The difference here is that ``do_current_time()`` grabs the format string "
+"and the variable name, passing both to ``CurrentTimeNode3``."
+msgstr ""
+
+# ab81d9076e1e437ea88d0d16f8748670
+#: ../../templates_python.txt:937
+msgid "Parsing until another block tag"
+msgstr ""
+
+# 429da065d2d84005a7555596f110caf5
+#: ../../templates_python.txt:939
+msgid ""
+"Template tags can work in tandem. For instance, the standard ``{% comment %}"
+"`` tag hides everything until ``{% endcomment %}``. To create a template tag "
+"such as this, use ``parser.parse()`` in your compilation function."
+msgstr ""
+
+# 5d7f028782f04c34ad5915294f1d5014
+#: ../../templates_python.txt:943
+msgid "Here's how the standard ``{% comment %}`` tag is implemented::"
+msgstr ""
+
+# 6ef9337963fa4e2791d018c63bed5650
+#: ../../templates_python.txt:954
+msgid ""
+"``parser.parse()`` takes a tuple of names of block tags ''to parse until''. "
+"It returns an instance of ``django.template.NodeList``, which is a list of "
+"all ``Node`` objects that the parser encountered ''before'' it encountered "
+"any of the tags named in the tuple."
+msgstr ""
+
+# 4e9e0ff8e66a4241b2cf30427ba959e1
+#: ../../templates_python.txt:959
+msgid ""
+"In ``\"nodelist = parser.parse(('endcomment',))\"`` in the above example, "
+"``nodelist`` is a list of all nodes between the ``{% comment %}`` and ``{% "
+"endcomment %}``, not counting ``{% comment %}`` and ``{% endcomment %}`` "
+"themselves."
+msgstr ""
+
+# d06eaeeba8524625a12b133981688bbf
+#: ../../templates_python.txt:964
+msgid ""
+"After ``parser.parse()`` is called, the parser hasn't yet \"consumed\" the ``"
+"{% endcomment %}`` tag, so the code needs to explicitly call ``parser."
+"delete_first_token()``."
+msgstr ""
+
+# 807e6aa4c52246fa800706bb75051c3a
+#: ../../templates_python.txt:968
+msgid ""
+"``CommentNode.render()`` simply returns an empty string. Anything between ``"
+"{% comment %}`` and ``{% endcomment %}`` is ignored."
+msgstr ""
+
+# ed34f84db04149a995fc03783a057ee9
+#: ../../templates_python.txt:972
+msgid "Parsing until another block tag, and saving contents"
+msgstr ""
+
+# cdc9292469714e8a88c182e7610b860e
+#: ../../templates_python.txt:974
+msgid ""
+"In the previous example, ``do_comment()`` discarded everything between ``{% "
+"comment %}`` and ``{% endcomment %}``. Instead of doing that, it's possible "
+"to do something with the code between block tags."
+msgstr ""
+
+# 5c9507cf374145fbb936944fd5b24104
+#: ../../templates_python.txt:978
+msgid ""
+"For example, here's a custom template tag, ``{% upper %}``, that capitalizes "
+"everything between itself and ``{% endupper %}``."
+msgstr ""
+
+# bd50ddc5668742159661a652446837fa
+#: ../../templates_python.txt:981
+msgid "Usage::"
+msgstr ""
+
+# 8a466721d4514222ad1b203fc5ea512d
+#: ../../templates_python.txt:985
+msgid ""
+"As in the previous example, we'll use ``parser.parse()``. But this time, we "
+"pass the resulting ``nodelist`` to the ``Node``::"
+msgstr ""
+
+# c8578e1a8ae9415abc4db3933bea7736
+#: ../../templates_python.txt:1000
+msgid ""
+"The only new concept here is the ``self.nodelist.render(context)`` in "
+"``UpperNode.render()``."
+msgstr ""
+
+# 30dfd5f77a964418bfa6cc10da82b59d
+#: ../../templates_python.txt:1003
+msgid ""
+"For more examples of complex rendering, see the source code for ``{% if %}"
+"``, ``{% for %}``, ``{% ifequal %}`` and ``{% ifchanged %}``. They live in "
+"``django/template/defaulttags.py``."
+msgstr ""
+
+# 29294bcad4bf41cca837e0fc58dde63e
+#: ../../templates_python.txt:1010
+msgid "Configuring the template system in standalone mode"
+msgstr ""
+
+# ee93de9736114c23b02732770bf8d911
+#: ../../templates_python.txt:1014
+msgid ""
+"This section is only of interest to people trying to use the template system "
+"as an output component in another application. If you are using the template "
+"system as part of a Django application, nothing here applies to you."
+msgstr ""
+
+# f713ae711d204fddaec8c87cd5f8f11b
+#: ../../templates_python.txt:1019
+msgid ""
+"Normally, Django will load all the configuration information it needs from "
+"its own default configuration file, combined with the settings in the module "
+"given in the ``DJANGO_SETTINGS_MODULE`` environment variable. But if you're "
+"using the template system independently of the rest of Django, the "
+"environment variable approach isn't very convenient, because you probably "
+"want to configure the template system in line with the rest of your "
+"application rather than dealing with settings files and pointing to them via "
+"environment variables."
+msgstr ""
+
+# f1dc4d972dd548a4800d92316da77c38
+#: ../../templates_python.txt:1027
+msgid ""
+"To solve this problem, you need to use the manual configuration option "
+"described in the :doc:`settings file <settings>` documentation. Simply "
+"import the appropriate pieces of the templating system and then, *before* "
+"you call any of the templating functions, call ``django.conf.settings."
+"configure()`` with any settings you wish to specify. You might want to "
+"consider setting at least ``TEMPLATE_DIRS`` (if you are going to use "
+"template loaders), ``DEFAULT_CHARSET`` (although the default of ``utf-8`` is "
+"probably fine) and ``TEMPLATE_DEBUG``. All available settings are described "
+"in the :doc:`settings documentation <settings>`, and any setting starting "
+"with *TEMPLATE_* is of obvious interest."
+msgstr ""

@@ -1,0 +1,244 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 66d4cbb4c7e74cca9f92bddea3d6c5e3
+#: ../../api_stability.txt:3
+msgid "API stability"
+msgstr ""
+
+# fc89d1a5b0ce48b3bf0dd4837a331447
+#: ../../api_stability.txt:5
+msgid ""
+"Although Django has not reached a 1.0 release, the bulk of Django's public "
+"APIs are stable as of the 0.95 release. This document explains which APIs "
+"will and will not change before the 1.0 release."
+msgstr ""
+
+# 9d8f16dcabc04bd48e2ecd618a2f863b
+#: ../../api_stability.txt:10
+msgid "What \"stable\" means"
+msgstr ""
+
+# 7d92191359bd4978bbb09a10cac76140
+#: ../../api_stability.txt:12
+msgid "In this context, stable means:"
+msgstr ""
+
+# de408ee7b8734681ba4f0fc16d2a08e6
+#: ../../api_stability.txt:14
+msgid ""
+"All the public APIs -- everything documented in the linked documents, and "
+"all methods that don't begin with an underscore -- will not be moved or "
+"renamed without providing backwards-compatible aliases."
+msgstr ""
+
+# 17a2c9fa8fcc4627b995aec6e7bf9a98
+#: ../../api_stability.txt:18
+msgid ""
+"If new features are added to these APIs -- which is quite possible -- they "
+"will not break or change the meaning of existing methods. In other words, "
+"\"stable\" does not (necessarily) mean \"complete.\""
+msgstr ""
+
+# 528a38e24f2f47dd8a7fdd5ca1217995
+#: ../../api_stability.txt:22
+msgid ""
+"If, for some reason, an API declared stable must be removed or replaced, it "
+"will be declared deprecated but will remain in the API until at least "
+"version 1.1. Warnings will be issued when the deprecated method is called."
+msgstr ""
+
+# a53fc88aa9e7477881df2d612a6001ac
+#: ../../api_stability.txt:27
+msgid ""
+"We'll only break backwards compatibility of these APIs if a bug or security "
+"hole makes it completely unavoidable."
+msgstr ""
+
+# d5d9deb5a3af44178562ebc896a5cab2
+#: ../../api_stability.txt:31
+msgid "Stable APIs"
+msgstr ""
+
+# a67fd0a15aef4388900a97ac65368111
+#: ../../api_stability.txt:33
+msgid "These APIs are stable:"
+msgstr ""
+
+# 5dddf5d5b3a84770967b337eb48d1214
+#: ../../api_stability.txt:35
+msgid ":doc:`Caching <cache>`."
+msgstr ""
+
+# 4fb69ac1c92943b99531c2bb30c6e599
+#: ../../api_stability.txt:37
+msgid ""
+":doc:`Custom template tags and libraries <templates_python>` (with the "
+"possible exception for a small change in the way templates are registered "
+"and loaded)."
+msgstr ""
+
+# 1c3c9b9c56584afc9290d03439ee2c9a
+#: ../../api_stability.txt:40
+msgid ""
+":doc:`Database lookup <db-api>` (with the exception of validation; see "
+"below)."
+msgstr ""
+
+# b228fa8399b34b7caf74e8f7ef42b907
+#: ../../api_stability.txt:42
+msgid ":doc:`django-admin utility <django-admin>`."
+msgstr ""
+
+# 7d363a1eed754d6099c28a586fd0a3bf
+#: ../../api_stability.txt:44
+msgid ":doc:`FastCGI integration <fastcgi>`."
+msgstr ""
+
+# 8990ab1057804e0ba23f2f9c1744ec2a
+#: ../../api_stability.txt:46
+msgid ":doc:`Flatpages <flatpages>`."
+msgstr ""
+
+# 4d359dd7be854000b6f6dbc32eda9ee7
+#: ../../api_stability.txt:48
+msgid ":doc:`Generic views <generic_views>`."
+msgstr ""
+
+# a910ae69d5504c2e9623f2e49ce277c5
+#: ../../api_stability.txt:50
+msgid ":doc:`Internationalization <i18n>`."
+msgstr ""
+
+# d80633ded2b146d79f5b32a91371d57b
+#: ../../api_stability.txt:52
+msgid ":doc:`Legacy database integration <legacy_databases>`."
+msgstr ""
+
+# aa8ef18f1e314ed0ba2ebb11f35b3543
+#: ../../api_stability.txt:54
+msgid ""
+":doc:`Model definition <model-api>` (with the exception of generic "
+"relations; see below)."
+msgstr ""
+
+# 6bdc61ebd1c743c89aafbd8e64df036f
+#: ../../api_stability.txt:56
+msgid ":doc:`mod_python integration <modpython>`."
+msgstr ""
+
+# e31ad8253ef34a6bb5378f49bdb3cf52
+#: ../../api_stability.txt:58
+msgid ":doc:`Redirects <redirects>`."
+msgstr ""
+
+# 783f8c1dc08948aba56e89f31413de7b
+#: ../../api_stability.txt:60
+msgid ":doc:`Request/response objects <request_response>`."
+msgstr ""
+
+# 997e40153a3c41e3981eae24050b68b6
+#: ../../api_stability.txt:62
+msgid ":doc:`Sending email <email>`."
+msgstr ""
+
+# ab960eec613144fb890ceff19e7c556f
+#: ../../api_stability.txt:64
+msgid ":doc:`Sessions <sessions>`."
+msgstr ""
+
+# 5d392555773c44248845730bd489d2de
+#: ../../api_stability.txt:66
+msgid ":doc:`Settings <settings>`."
+msgstr ""
+
+# 30b6ff5a32194b68babdc8687c38ce20
+#: ../../api_stability.txt:68
+msgid ":doc:`Syndication <syndication_feeds>`."
+msgstr ""
+
+# fa86a02fbaac48f6a513fe4b09b4836f
+#: ../../api_stability.txt:70
+msgid ""
+":doc:`Template language <templates>` (with the exception of some possible "
+"disambiguation of how tag arguments are passed to tags and filters)."
+msgstr ""
+
+# f031d25cee624cbe9299a6e06ef83dee
+#: ../../api_stability.txt:73
+msgid ":doc:`Transactions <transactions>`."
+msgstr ""
+
+# 5e88801277544181b789934e20eb1d10
+#: ../../api_stability.txt:75
+msgid ":doc:`URL dispatch <url_dispatch>`."
+msgstr ""
+
+# c67d069624de42b1a70d97ad65565b71
+#: ../../api_stability.txt:77
+msgid ""
+"You'll notice that this list comprises the bulk of Django's APIs. That's "
+"right -- most of the changes planned between now and Django 1.0 are either "
+"under the hood, feature additions, or changes to a few select bits. A good "
+"estimate is that 90% of Django can be considered forwards-compatible at this "
+"point."
+msgstr ""
+
+# bffc66239ffd4ee1a018fb85a7b3a1c5
+#: ../../api_stability.txt:82
+msgid ""
+"That said, these APIs should *not* be considered stable, and are likely to "
+"change:"
+msgstr ""
+
+# 9089215018154fb4aa639899801c3c70
+#: ../../api_stability.txt:85
+msgid ""
+":doc:`Forms and validation <forms>` will most likely be compeltely rewritten "
+"to deemphasize Manipulators in favor of validation-aware models."
+msgstr ""
+
+# 17bad36d84614179a9fe6093f69ce711
+#: ../../api_stability.txt:88
+msgid ""
+":doc:`Serialization <serialization>` is under heavy development; changes are "
+"likely."
+msgstr ""
+
+# 734df6aa86bc4bf299577221e0ba32f4
+#: ../../api_stability.txt:90
+msgid ""
+"The :doc:`authentication <authentication>` framework is changing to be far "
+"more flexible, and API changes may be necessary."
+msgstr ""
+
+# 69291a9809264d7184bac5fe6e7521cb
+#: ../../api_stability.txt:93
+msgid ""
+"Generic relations will most likely be moved out of core and into the content-"
+"types contrib package to avoid core dependacies on optional components."
+msgstr ""
+
+# c4921c08f5fc4bb3a993454fa6ba7c81
+#: ../../api_stability.txt:97
+msgid ""
+"The comments framework, which is yet undocumented, will likely get a "
+"complete rewrite before Django 1.0. Even if the change isn't quite that "
+"drastic,"
+msgstr ""

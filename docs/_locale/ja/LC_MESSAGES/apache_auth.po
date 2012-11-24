@@ -1,0 +1,141 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# b1412be6b4ff4b388face9b283e5431d
+#: ../../apache_auth.txt:3
+msgid "Authenticating against Django's user database from Apache"
+msgstr ""
+
+# e690be67e9d248eda77827841ba11817
+#: ../../apache_auth.txt:5
+msgid ""
+"Since keeping multiple authentication databases in sync is a common problem "
+"when dealing with Apache, you can configuring Apache to authenticate against "
+"Django's :doc:`authentication system <authentication>` directly.  For "
+"example, you could:"
+msgstr ""
+
+# 37e7462b5d1141e1be8214cceef58c05
+#: ../../apache_auth.txt:9
+msgid "Serve media files directly from Apache only to authenticated users."
+msgstr ""
+
+# 9afa44f3daf4478c98083fb0688239f5
+#: ../../apache_auth.txt:11
+msgid ""
+"Authenticate access to a Subversion_ repository against Django users with a "
+"certain permission."
+msgstr ""
+
+# 215392ccb7604411ac7ed3bfe98ad1cf
+#: ../../apache_auth.txt:14
+msgid "Allow certain users to connect to a WebDAV share created with mod_dav_."
+msgstr ""
+
+# 368d7318334a4b518e94188f83abda0a
+#: ../../apache_auth.txt:17
+msgid "Configuring Apache"
+msgstr ""
+
+# 41e875e2d5cb44348727abdaf285383b
+#: ../../apache_auth.txt:19
+msgid ""
+"To check against Django's authorization database from a Apache configuration "
+"file, you'll need to use mod_python's ``PythonAuthenHandler`` directive "
+"along with the standard ``Auth*`` and ``Require`` directives::"
+msgstr ""
+
+# dc5fd1252eb64496817154ed2c0b5444
+#: ../../apache_auth.txt:32
+msgid ""
+"By default, the authentication handler will limit access to the ``/example/"
+"`` location to users marked as staff members.  You can use a set of "
+"``PythonOption`` directives to modify this behavior:"
+msgstr ""
+
+# 87a0580de7034804a95dfdc21772ef8f
+#: ../../apache_auth.txt:37
+msgid "``PythonOption``"
+msgstr ""
+
+# c28b14fca50b4cce835c863a036a8555
+#: ../../apache_auth.txt:37
+msgid "Explanation"
+msgstr ""
+
+# 6c5b6689545049c4a89a13715f8ecd2a
+#: ../../apache_auth.txt:39
+msgid "``DjangoRequireStaffStatus``"
+msgstr ""
+
+# 3c48d4e56bc24d5cb7c3b0ce9bf77e08
+#: ../../apache_auth.txt:39
+msgid ""
+"If set to ``on`` only \"staff\" users (i.e. those with the ``is_staff`` flag "
+"set) will be allowed."
+msgstr ""
+
+# 3d495cc6d195436993af864c135fe9bd
+#: ../../apache_auth.txt:43
+msgid "Defaults to ``on``."
+msgstr ""
+
+# c0186c7322954c9c982ef84553d8f20e
+#: ../../apache_auth.txt:45
+msgid "``DjangoRequireSuperuserStatus``"
+msgstr ""
+
+# 78ced4e9baa247ecbd9b01ae259bc50d
+#: ../../apache_auth.txt:45
+msgid ""
+"If set to ``on`` only superusers (i.e. those with the ``is_superuser`` flag "
+"set) will be allowed."
+msgstr ""
+
+# 007d0acd4bfe45d7bf2543730b62ebf7
+#: ../../apache_auth.txt:49
+msgid "Defaults to ``off``."
+msgstr ""
+
+# 5749598573954640928ada074bc2ec40
+#: ../../apache_auth.txt:51
+msgid "``DjangoPermissionName``"
+msgstr ""
+
+# 4f0765a32c924ce6a03658ef2175f840
+#: ../../apache_auth.txt:51
+msgid ""
+"The name of a permission to require for access. See :doc:`custom permissions "
+"<authentication>` for more information."
+msgstr ""
+
+# bf2f45737d8740aebc49568b7d14c94e
+#: ../../apache_auth.txt:55
+msgid "By default no specific permission will be required."
+msgstr ""
+
+# bbab0a58ea634586b7a3498e861f89eb
+#: ../../apache_auth.txt:59
+msgid ""
+"Note that sometimes ``SetEnv`` doesn't play well in this mod_python "
+"configuration, for reasons unknown. If you're having problems getting "
+"mod_python to recognize your ``DJANGO_SETTINGS_MODULE``, you can set it "
+"using ``PythonOption`` instead of ``SetEnv``. Therefore, these two Apache "
+"directives are equivalent::"
+msgstr ""

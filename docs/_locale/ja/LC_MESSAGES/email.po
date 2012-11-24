@@ -1,0 +1,270 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 43d7e9beb6654bcca4784682be06f854
+#: ../../email.txt:3
+msgid "Sending e-mail"
+msgstr ""
+
+# d718855ea3e54e77bc966978846196fb
+#: ../../email.txt:5
+msgid ""
+"Although Python makes sending e-mail relatively easy via the `smtplib "
+"library`_, Django provides a couple of light wrappers over it, to make "
+"sending e-mail extra quick."
+msgstr ""
+
+# dd52f81875064dbc984250597c223831
+#: ../../email.txt:9
+msgid "The code lives in a single module: ``django.core.mail``."
+msgstr ""
+
+# a553a781c22f4c1e90d73039bacbff86
+#: ../../email.txt:14
+msgid "Quick example"
+msgstr ""
+
+# cd7f14420ea34c43aa0f22920d57bcd4
+#: ../../email.txt:16
+msgid "In two lines::"
+msgstr ""
+
+# 29fa97b9039445e5976acced6d53bbab
+#: ../../email.txt:25
+msgid ""
+"The character set of email sent with ``django.core.mail`` will be set to the "
+"value of your :doc:`DEFAULT_CHARSET setting <settings>`."
+msgstr ""
+
+# 4781aad414f14d17869698717e1fd7bd
+#: ../../email.txt:29
+msgid "send_mail()"
+msgstr ""
+
+# b4caa1405ebd4f61b53b7fe8e91e9d8f
+#: ../../email.txt:31
+msgid ""
+"The simplest way to send e-mail is using the function ``django.core.mail."
+"send_mail()``. Here's its definition::"
+msgstr ""
+
+# 9e1cc79eea01440db2351acc5740e1ee
+#: ../../email.txt:38
+msgid ""
+"The ``subject``, ``message``, ``from_email`` and ``recipient_list`` "
+"parameters are required."
+msgstr ""
+
+# 350fbdf486fb402a8d3236dd5cdb7776
+#: ../../email.txt:41
+msgid "``subject``: A string."
+msgstr ""
+
+# ce60f0a762534909a2d7997142c24e15
+#: ../../email.txt:42
+msgid "``message``: A string."
+msgstr ""
+
+# b07231debb4243e28effaa599f301bd5
+#: ../../email.txt:43
+msgid "``from_email``: A string."
+msgstr ""
+
+# d8a3b7af55e94ad9a17e7d8741f002b6
+#: ../../email.txt:44
+msgid ""
+"``recipient_list``: A list of strings, each an e-mail address. Each member "
+"of ``recipient_list`` will see the other recipients in the \"To:\" field of "
+"the e-mail message."
+msgstr ""
+
+# 7429b4fb3d71469f99f115bea98ea37a
+#: ../../email.txt:47
+msgid ""
+"``fail_silently``: A boolean. If it's ``False``, ``send_mail`` will raise an "
+"``smtplib.SMTPException``. See the `smtplib docs`_ for a list of possible "
+"exceptions, all of which are subclasses of ``SMTPException``."
+msgstr ""
+
+# e164f2657f8f4c8bb72b9d523ccf07a9
+#: ../../email.txt:50
+msgid ""
+"``auth_user``: The optional username to use to authenticate to the SMTP "
+"server. If this isn't provided, Django will use the value of the "
+"``EMAIL_HOST_USER`` setting."
+msgstr ""
+
+# a0fcd8c5f7d34f03802cefa1f25be2ee
+#: ../../email.txt:53
+msgid ""
+"``auth_password``: The optional password to use to authenticate to the SMTP "
+"server. If this isn't provided, Django will use the value of the "
+"``EMAIL_HOST_PASSWORD`` setting."
+msgstr ""
+
+# 45239614dd7c424e9ea66122176a8287
+#: ../../email.txt:60
+msgid "send_mass_mail()"
+msgstr ""
+
+# e28607d62ee14e029762f6a7557c413f
+#: ../../email.txt:62
+msgid ""
+"``django.core.mail.send_mass_mail()`` is intended to handle mass e-mailing. "
+"Here's the definition::"
+msgstr ""
+
+# 130c86a8801e4e92a44767a83dd32ada
+#: ../../email.txt:68
+msgid "``datatuple`` is a tuple in which each element is in this format::"
+msgstr ""
+
+# 635b741bea5440f6929a609e539ac864
+#: ../../email.txt:72
+msgid ""
+"``fail_silently``, ``auth_user`` and ``auth_password`` have the same "
+"functions as in ``send_mail()``."
+msgstr ""
+
+# 93d5c9a35a2d4f89bfb40a6abc2c1300
+#: ../../email.txt:75
+msgid ""
+"Each separate element of ``datatuple`` results in a separate e-mail message. "
+"As in ``send_mail()``, recipients in the same ``recipient_list`` will all "
+"see the other addresses in the e-mail messages's \"To:\" field."
+msgstr ""
+
+# 22d872a26fbf43b89c424fa3dbcee11c
+#: ../../email.txt:80
+msgid "send_mass_mail() vs. send_mail()"
+msgstr ""
+
+# db5ec97a3d98482cb9aacb5b0d96e8b8
+#: ../../email.txt:82
+msgid ""
+"The main difference between ``send_mass_mail()`` and ``send_mail()`` is that "
+"``send_mail()`` opens a connection to the mail server each time it's "
+"executed, while ``send_mass_mail()`` uses a single connection for all of its "
+"messages. This makes ``send_mass_mail()`` slightly more efficient."
+msgstr ""
+
+# 0d4fe79532bc47d3ac57bcd21ad23699
+#: ../../email.txt:88
+msgid "mail_admins()"
+msgstr ""
+
+# 19fb655de9b74639bed5dfc7400ad445
+#: ../../email.txt:90
+msgid ""
+"``django.core.mail.mail_admins()`` is a shortcut for sending an e-mail to "
+"the site admins, as defined in the :doc:`ADMINS setting <settings>`. Here's "
+"the definition::"
+msgstr ""
+
+# 507c520f2ce1406a9cb2ceff1e4a85c9
+#: ../../email.txt:95
+msgid ""
+"``mail_admins()`` prefixes the subject with the value of the :doc:"
+"`EMAIL_SUBJECT_PREFIX setting <settings>`, which is ``\"[Django] \"`` by "
+"default."
+msgstr ""
+
+# 03bc33f4ae5b4169ba8ada4cf9328360
+#: ../../email.txt:98
+msgid ""
+"The \"From:\" header of the e-mail will be the value of the :doc:"
+"`SERVER_EMAIL setting <settings>`."
+msgstr ""
+
+# 78be21d89d5843bc8532c9ba4476dd34
+#: ../../email.txt:100
+msgid "This method exists for convenience and readability."
+msgstr ""
+
+# 0547637b11d3443ea4b04cbe902175eb
+#: ../../email.txt:103
+msgid "mail_managers() function"
+msgstr ""
+
+# 1f67901bd28340828f51e33b3daf20fb
+#: ../../email.txt:105
+msgid ""
+"``django.core.mail.mail_managers()`` is just like ``mail_admins()``, except "
+"it sends an e-mail to the site managers, as defined in the :doc:`MANAGERS "
+"setting <settings>`. Here's the definition::"
+msgstr ""
+
+# 1da190faba094d0281f7807f869e00a8
+#: ../../email.txt:112
+msgid "Examples"
+msgstr ""
+
+# 8f15730c73874ba7b67dd899a05f12bf
+#: ../../email.txt:114
+msgid ""
+"This sends a single e-mail to john@example.com and jane@example.com, with "
+"them both appearing in the \"To:\"::"
+msgstr ""
+
+# 078f61bcb94d41ae9824700b0a216da4
+#: ../../email.txt:120
+msgid ""
+"This sends a message to john@example.com and jane@example.com, with them "
+"both receiving a separate e-mail::"
+msgstr ""
+
+# 2934e7b8b6a842c3acaf969202945d3b
+#: ../../email.txt:130
+msgid "Preventing header injection"
+msgstr ""
+
+# b7bd795f4a2f48978f7f76ac97680d75
+#: ../../email.txt:132
+msgid ""
+"`Header injection`_ is a security exploit in which an attacker inserts extra "
+"e-mail headers to control the \"To:\" and \"From:\" in e-mail messages that "
+"your scripts generate."
+msgstr ""
+
+# b2b8f06ba8f643d6abd7874c82a36bcb
+#: ../../email.txt:136
+msgid ""
+"The Django e-mail functions outlined above all protect against header "
+"injection by forbidding newlines in header values. If any ``subject``, "
+"``from_email`` or ``recipient_list`` contains a newline (in either Unix, "
+"Windows or Mac style), the e-mail function (e.g. ``send_mail()``) will raise "
+"``django.core.mail.BadHeaderError`` (a subclass of ``ValueError``) and, "
+"hence, will not send the e-mail. It's your responsibility to validate all "
+"data before passing it to the e-mail functions."
+msgstr ""
+
+# c31bca7d7dfc48f3ac10be51df75ee37
+#: ../../email.txt:144
+msgid ""
+"If a ``message`` contains headers at the start of the string, the headers "
+"will simply be printed as the first bit of the e-mail message."
+msgstr ""
+
+# 4fd99246e78543e5a44fec311eaae5a2
+#: ../../email.txt:147
+msgid ""
+"Here's an example view that takes a ``subject``, ``message`` and "
+"``from_email`` from the request's POST data, sends that to admin@example.com "
+"and redirects to \"/contact/thanks/\" when it's done::"
+msgstr ""

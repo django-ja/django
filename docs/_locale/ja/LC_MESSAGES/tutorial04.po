@@ -1,0 +1,365 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:11+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 019138f99384486898b876892a478a5a
+#: ../../tutorial04.txt:3
+msgid "Writing your first Django app, part 4"
+msgstr ""
+
+# 72ca3963636f4e6e99d302536588f2c5
+#: ../../tutorial04.txt:5
+msgid ""
+"This tutorial begins where :doc:`Tutorial3 <tutorial03>` left off. We're "
+"continuing the Web-poll application and will focus on simple form processing "
+"and cutting down our code."
+msgstr ""
+
+# 0e92d7c6b30d4658a088707a1c22d8f9
+#: ../../tutorial04.txt:9
+msgid "Write a simple form"
+msgstr ""
+
+# 4b2bfb6ed5aa4ab590b9b801f2708eb0
+#: ../../tutorial04.txt:11
+msgid ""
+"Let's update our poll detail template from the last tutorial, so that the "
+"template contains an HTML ``<form>`` element::"
+msgstr ""
+
+# e77f2aee297148cf952db326805be212
+#: ../../tutorial04.txt:26
+msgid "A quick rundown:"
+msgstr ""
+
+# d978810391ad4e298e5f79d935e0bcbf
+#: ../../tutorial04.txt:28
+msgid ""
+"The above template displays a radio button for each poll choice. The "
+"``value`` of each radio button is the associated poll choice's ID. The "
+"``name`` of each radio button is ``\"choice\"``. That means, when somebody "
+"selects one of the radio buttons and submits the form, it'll send the POST "
+"data ``choice=3``. This is HTML Forms 101."
+msgstr ""
+
+# 88dbfe9d74354f97989ef9ce76db7205
+#: ../../tutorial04.txt:34
+msgid ""
+"We set the form's ``action`` to ``/polls/{{ poll.id }}/vote/``, and we set "
+"``method=\"post\"``. Using ``method=\"post\"`` (as opposed to ``method=\"get"
+"\"``) is very important, because the act of submitting this form will alter "
+"data server-side. Whenever you create a form that alters data server-side, "
+"use ``method=\"post\"``. This tip isn't specific to Django; it's just good "
+"Web development practice."
+msgstr ""
+
+# fe5d3229493d4d0f8e1539fdc322649c
+#: ../../tutorial04.txt:41
+msgid ""
+"Now, let's create a Django view that handles the submitted data and does "
+"something with it. Remember, in :doc:`Tutorial3 <tutorial03>`, we created a "
+"URLconf for the polls application that includes this line::"
+msgstr ""
+
+# 5e416c69ece64fb0897fa76139a01e4e
+#: ../../tutorial04.txt:47
+msgid "So let's create a ``vote()`` function in ``mysite/polls/views.py``::"
+msgstr ""
+
+# 5afa3cf5c93e4dbf831fa9bf86188535
+#: ../../tutorial04.txt:71
+msgid ""
+"This code includes a few things we haven't covered yet in this tutorial:"
+msgstr ""
+
+# c4b4c6837f204e2f916703fcb8e5079f
+#: ../../tutorial04.txt:73
+msgid ""
+"``request.POST`` is a dictionary-like object that lets you access submitted "
+"data by key name. In this case, ``request.POST['choice']`` returns the ID of "
+"the selected choice, as a string. ``request.POST`` values are always strings."
+msgstr ""
+
+# a1824222008a4afb800cb0de1327743b
+#: ../../tutorial04.txt:78
+msgid ""
+"Note that Django also provides ``request.GET`` for accessing GET data in the "
+"same way -- but we're explicitly using ``request.POST`` in our code, to "
+"ensure that data is only altered via a POST call."
+msgstr ""
+
+# e6be9f5f1d2b4bd39e9955dd5a79cf18
+#: ../../tutorial04.txt:82
+msgid ""
+"``request.POST['choice']`` will raise ``KeyError`` if ``choice`` wasn't "
+"provided in POST data. The above code checks for ``KeyError`` and redisplays "
+"the poll form with an error message if ``choice`` isn't given."
+msgstr ""
+
+# 142312b8db324fb28a70b56b274cbf40
+#: ../../tutorial04.txt:86
+msgid ""
+"After incrementing the choice count, the code returns an "
+"``HttpResponseRedirect`` rather than a normal ``HttpResponse``. "
+"``HttpResponseRedirect`` takes a single argument: the URL to which the user "
+"will be redirected. You should leave off the \"http://\" and domain name if "
+"you can. That helps your app become portable across domains."
+msgstr ""
+
+# 1fb74c6825544b70b43a6849d7911014
+#: ../../tutorial04.txt:92
+msgid ""
+"As the Python comment above points out, you should always return an "
+"``HttpResponseRedirect`` after successfully dealing with POST data. This tip "
+"isn't specific to Django; it's just good Web development practice."
+msgstr ""
+
+# dc601458c65845f5ad6da25eb139978e
+#: ../../tutorial04.txt:96
+msgid ""
+"As mentioned in Tutorial 3, ``request`` is a ``HTTPRequest`` object. For "
+"more on ``HTTPRequest`` objects, see the :doc:`request and response "
+"documentation <request_response>`."
+msgstr ""
+
+# c5fef772695c42e89be92087e7fd4ec0
+#: ../../tutorial04.txt:99
+msgid ""
+"After somebody votes in a poll, the ``vote()`` view redirects to the results "
+"page for the poll. Let's write that view::"
+msgstr ""
+
+# 071cf0c974f64956846e6bba13d7da1c
+#: ../../tutorial04.txt:106
+msgid ""
+"This is almost exactly the same as the ``detail()`` view from :doc:"
+"`Tutorial3 <tutorial03>`. The only difference is the template name. We'll "
+"fix this redundancy later."
+msgstr ""
+
+# df77d95afdf942d6a8b5d03a1c73ed15
+#: ../../tutorial04.txt:109
+msgid "Now, create a ``results.html`` template::"
+msgstr ""
+
+# 7d2e85e1e2f540cd9f7c5cf035fb8bc4
+#: ../../tutorial04.txt:119
+msgid ""
+"Now, go to ``/polls/1/`` in your browser and vote in the poll. You should "
+"see a results page that gets updated each time you vote. If you submit the "
+"form without having chosen a choice, you should see the error message."
+msgstr ""
+
+# 61b9106a87b34aefb0af7e217a05fa38
+#: ../../tutorial04.txt:124
+msgid "Use generic views: Less code is better"
+msgstr ""
+
+# 961305e2604044afb6199bdfdd5a0468
+#: ../../tutorial04.txt:126
+msgid ""
+"The ``detail()`` (from :doc:`Tutorial3 <tutorial03>`) and ``results()`` "
+"views are stupidly simple -- and, as mentioned above, redundant. The ``index"
+"()`` view (also from Tutorial 3), which displays a list of polls, is similar."
+msgstr ""
+
+# 0c8d487e9b2547909b33a145366da840
+#: ../../tutorial04.txt:130
+msgid ""
+"These views represent a common case of basic Web development: getting data "
+"from the database according to a parameter passed in the URL, loading a "
+"template and returning the rendered template. Because this is so common, "
+"Django provides a shortcut, called the \"generic views\" system."
+msgstr ""
+
+# 01e91d2fc8724a99b121551514190e12
+#: ../../tutorial04.txt:135
+msgid ""
+"Generic views abstract common patterns to the point where you don't even "
+"need to write Python code to write an app."
+msgstr ""
+
+# 86c4160389a241aa93efdd5c389ed0e3
+#: ../../tutorial04.txt:138
+msgid ""
+"Let's convert our poll app to use the generic views system, so we can delete "
+"a bunch of our own code. We'll just have to take a few steps to make the "
+"conversion."
+msgstr ""
+
+# 4805e84b291d49468da9829606e684d8
+#: ../../tutorial04.txt:144
+msgid ""
+"Generally, when writing a Django app, you'll evaluate whether generic views "
+"are a good fit for your problem, and you'll use them from the beginning, "
+"rather than refactoring your code halfway through. But this tutorial "
+"intentionally has focused on writing the views \"the hard way\" until now, "
+"to focus on core concepts."
+msgstr ""
+
+# 9aee1cb55b0047f7938de40867221e13
+#: ../../tutorial04.txt:150
+msgid "You should know basic math before you start using a calculator."
+msgstr ""
+
+# 3af20dc74b4447b2ba98b7851d2b35b4
+#: ../../tutorial04.txt:152
+msgid ""
+"First, open the polls/urls.py URLconf. It looks like this, according to the "
+"tutorial so far::"
+msgstr ""
+
+# 1fb40affe47e44efa617f6e2da48d184
+#: ../../tutorial04.txt:164
+msgid "Change it like so::"
+msgstr ""
+
+# a334872f136a45379dc2d5165101a22a
+#: ../../tutorial04.txt:180
+msgid ""
+"We're using two generic views here: ``object_list`` and ``object_detail``. "
+"Respectively, those two views abstract the concepts of \"display a list of "
+"objects\" and \"display a detail page for a particular type of object.\""
+msgstr ""
+
+# 6dd59cb31a194433aa3af80d3380167f
+#: ../../tutorial04.txt:184
+msgid ""
+"Each generic view needs to know what data it will be acting upon. This data "
+"is provided in a dictionary. The ``queryset`` key in this dictionary points "
+"to the list of objects to be manipulated by the generic view."
+msgstr ""
+
+# c79332583b5f481e8f4948ae4cf74e84
+#: ../../tutorial04.txt:188
+msgid ""
+"The ``object_detail`` generic view expects the ID value captured from the "
+"URL to be called ``\"object_id\"``, so we've changed ``poll_id`` to "
+"``object_id`` for the generic views."
+msgstr ""
+
+# e7ea01e848c240aa854d75d60e7339b1
+#: ../../tutorial04.txt:192
+msgid ""
+"By default, the ``object_detail`` generic view uses a template called ``<app "
+"name>/<module name>_detail.html``. In our case, it'll use the template ``"
+"\"polls/poll_detail.html\"``. Thus, rename your ``polls/detail.html`` "
+"template to ``polls/poll_detail.html``, and change the ``render_to_response()"
+"`` line in ``vote()``."
+msgstr ""
+
+# 433f33e13074447a9031d4b9e860de72
+#: ../../tutorial04.txt:198
+msgid ""
+"Similarly, the ``object_list`` generic view uses a template called ``<app "
+"name>/<module name>_list.html``. Thus, rename ``polls/index.html`` to "
+"``polls/poll_list.html``."
+msgstr ""
+
+# 9456661bbac044cba863334869a3d77c
+#: ../../tutorial04.txt:202
+msgid ""
+"Because we have more than one entry in the URLconf that uses "
+"``object_detail`` for the polls app, we manually specify a template name for "
+"the results view: ``template_name='polls/results.html'``. Otherwise, both "
+"views would use the same template. Note that we use ``dict()`` to return an "
+"altered dictionary in place."
+msgstr ""
+
+# b9b70441614540c6bff085133aa8c26d
+#: ../../tutorial04.txt:207
+msgid ""
+"In previous parts of the tutorial, the templates have been provided with a "
+"context that contains the ``poll` and ``latest_poll_list`` context "
+"variables. However, the generic views provide the variables ``object`` and "
+"``object_list`` as context. Therefore, you need to change your templates to "
+"match the new context variables. Go through your templates, and modify any "
+"reference to ``latest_poll_list`` to ``object_list``, and change any "
+"reference to ``poll`` to ``object``."
+msgstr ""
+
+# d80301a293994043a91c1b859cb396b5
+#: ../../tutorial04.txt:214
+msgid ""
+"You can now delete the ``index()``, ``detail()`` and ``results()`` views "
+"from ``polls/views.py``. We don't need them anymore -- they have been "
+"replaced by generic views."
+msgstr ""
+
+# 72ed8cf8fb9842c29a9b50c78e241c55
+#: ../../tutorial04.txt:218
+msgid ""
+"The ``vote()`` view is still required. However, it must be modified to match "
+"the new templates and context variables. Change the template call from "
+"``polls/detail.html`` to ``polls/poll_detail.html``, and pass ``object`` in "
+"the context instead of ``poll``."
+msgstr ""
+
+# 5a43eaf80cd44cc28922ed7d294d951d
+#: ../../tutorial04.txt:223
+msgid "Run the server, and use your new polling app based on generic views."
+msgstr ""
+
+# 112da24c79964abe93c3ecae16050fff
+#: ../../tutorial04.txt:225
+msgid ""
+"For full details on generic views, see the :doc:`generic views documentation "
+"<generic_views>`."
+msgstr ""
+
+# 8afe05c7794d4020a7f34944428aa1bc
+#: ../../tutorial04.txt:228
+msgid "Coming soon"
+msgstr ""
+
+# beb539b6ddd34a1b97c8a55ffae13244
+#: ../../tutorial04.txt:230
+msgid ""
+"The tutorial ends here for the time being. But check back soon for the next "
+"installments:"
+msgstr ""
+
+# 344012e66244436ab54ad4363221dbe5
+#: ../../tutorial04.txt:233
+msgid "Advanced form processing"
+msgstr ""
+
+# daacb04e20284665a748b82278786ef2
+#: ../../tutorial04.txt:234
+msgid "Using the RSS framework"
+msgstr ""
+
+# 4c426c052c934a8e85b96a3462133a4d
+#: ../../tutorial04.txt:235
+msgid "Using the cache framework"
+msgstr ""
+
+# 0db8b57fd4684bbe900d40579d990f3d
+#: ../../tutorial04.txt:236
+msgid "Using the comments framework"
+msgstr ""
+
+# 710d94278a26456a9380bedf89ad054d
+#: ../../tutorial04.txt:237
+msgid "Advanced admin features: Permissions"
+msgstr ""
+
+# 057b376e45fd49debeeb1abfe2051bb1
+#: ../../tutorial04.txt:238
+msgid "Advanced admin features: Custom JavaScript"
+msgstr ""

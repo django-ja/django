@@ -1,0 +1,667 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:11+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 08ba65962a7e458f844e01236b2f9718
+#: ../../tutorial02.txt:3
+msgid "Writing your first Django app, part 2"
+msgstr ""
+
+# cb653bdea43f43b5a30e415d71a84580
+#: ../../tutorial02.txt:5
+msgid ""
+"This tutorial begins where :doc:`Tutorial 1 <tutorial01>` left off. We're "
+"continuing the Web-poll application and will focus on Django's automatically-"
+"generated admin site."
+msgstr ""
+
+# e3574cad3a634fab94522fa99ceb9a21
+#: ../../tutorial02.txt:10
+msgid ""
+"Generating admin sites for your staff or clients to add, change and delete "
+"content is tedious work that doesn't require much creativity. For that "
+"reason, Django entirely automates creation of admin interfaces for models."
+msgstr ""
+
+# 6b02257d92e1465887baf93e1c626e78
+#: ../../tutorial02.txt:14
+msgid ""
+"Django was written in a newsroom environment, with a very clear separation "
+"between \"content publishers\" and the \"public\" site. Site managers use "
+"the system to add news stories, events, sports scores, etc., and that "
+"content is displayed on the public site. Django solves the problem of "
+"creating a unified interface for site administrators to edit content."
+msgstr ""
+
+# 168b52dfdd7340b091120574578b637f
+#: ../../tutorial02.txt:20
+msgid ""
+"The admin isn't necessarily intended to be used by site visitors; it's for "
+"site managers."
+msgstr ""
+
+# 5c92e3c44d0642539ec89e01077d2b03
+#: ../../tutorial02.txt:24
+msgid "Activate the admin site"
+msgstr ""
+
+# d7098cdbf7324cb781bb7f5dc81fd7cb
+#: ../../tutorial02.txt:26
+msgid ""
+"The Django admin site is not activated by default -- it's an opt-in thing. "
+"To activate the admin site for your installation, do these three things:"
+msgstr ""
+
+# 1242161b64ba4d7b829ad8f21e808f97
+#: ../../tutorial02.txt:29
+msgid "Add ``\"django.contrib.admin\"`` to your ``INSTALLED_APPS`` setting."
+msgstr ""
+
+# 5c0ba771e18f4eceaa290c7a53cc6c7a
+#: ../../tutorial02.txt:30
+msgid ""
+"Run ``python manage.py syncdb``. Since you have added a new application to "
+"``INSTALLED_APPS``, the database tables need to be updated."
+msgstr ""
+
+# 4b92fc3fbb26478b978cad58d63b2613
+#: ../../tutorial02.txt:32
+msgid ""
+"Edit your ``mysite/urls.py`` file and uncomment the line below \"Uncomment "
+"this for admin:\". This file is a URLconf; we'll dig into URLconfs in the "
+"next tutorial. For now, all you need to know is that it maps URL roots to "
+"applications."
+msgstr ""
+
+# d643cdda361d46c788ed01faa44b6ccb
+#: ../../tutorial02.txt:38
+msgid "Start the development server"
+msgstr ""
+
+# bccfc602a0b9446fb84a7083c6b39dc8
+#: ../../tutorial02.txt:40
+msgid "Let's start the development server and explore the admin site."
+msgstr ""
+
+# 373977ca87894870a7c9be6bfdba1a37
+#: ../../tutorial02.txt:42
+msgid "Recall from Tutorial 1 that you start the development server like so::"
+msgstr ""
+
+# 7d6d417d03b04b36b793e71da987811d
+#: ../../tutorial02.txt:46
+msgid ""
+"Now, open a Web browser and go to \"/admin/\" on your local domain -- e.g., "
+"http://127.0.0.1:8000/admin/. You should see the admin's login screen:"
+msgstr ""
+
+# 6d79ff063993470db764d0bead250932
+#: ../../tutorial02.txt:53
+msgid "Enter the admin site"
+msgstr ""
+
+# cda2e684e6174f9b87d1b9b897958eb5
+#: ../../tutorial02.txt:55
+msgid ""
+"Now, try logging in. (You created a superuser account in the first part of "
+"this tutorial, remember?) You should see the Django admin index page:"
+msgstr ""
+
+# c9c5ab15a58844e38425719d54d4a23f
+#: ../../tutorial02.txt:62
+msgid ""
+"By default, you should see two types of editable content: groups and users. "
+"These are core features Django ships with by default."
+msgstr ""
+
+# 0ef8b6db5f1140a0beb10242b045e1be
+#: ../../tutorial02.txt:66
+msgid "Make the poll app modifiable in the admin"
+msgstr ""
+
+# 3b76f36dcf53476b9c56f9b3753e5be8
+#: ../../tutorial02.txt:68
+msgid "But where's our poll app? It's not displayed on the admin index page."
+msgstr ""
+
+# c09c15d3e2354c31bfdfc4e41c3a3c0f
+#: ../../tutorial02.txt:70
+msgid ""
+"Just one thing to do: We need to specify in the ``Poll`` model that ``Poll`` "
+"objects have an admin interface. Edit the ``mysite/polls/models.py`` file "
+"and make the following change to add an inner ``Admin`` class::"
+msgstr ""
+
+# c51e43e7380a4bc39381d2e1fa7ba443
+#: ../../tutorial02.txt:79
+msgid ""
+"The ``class Admin`` will contain all the settings that control how this "
+"model appears in the Django admin.  All the settings are optional, however, "
+"so creating an empty class means \"give this object an admin interface using "
+"all the default options.\""
+msgstr ""
+
+# 7ff17ea1f5374fff810f9732570d0649
+#: ../../tutorial02.txt:84
+msgid ""
+"Now reload the Django admin page to see your changes. Note that you don't "
+"have to restart the development server -- the server will auto-reload your "
+"project, so any modifications code will be seen immediately in your browser."
+msgstr ""
+
+# 49a19ba26c26454f9e5a96207052fc2c
+#: ../../tutorial02.txt:89
+msgid "Explore the free admin functionality"
+msgstr ""
+
+# 911376203de842e3ba2beb88e847b6cc
+#: ../../tutorial02.txt:91
+msgid ""
+"Now that ``Poll`` has the inner ``Admin`` class, Django knows that it should "
+"be displayed on the admin index page:"
+msgstr ""
+
+# 6b74fabd6c6c440ea89c1b6132223332
+#: ../../tutorial02.txt:98
+msgid ""
+"Click \"Polls.\" Now you're at the \"change list\" page for polls. This page "
+"displays all the polls in the database and lets you choose one to change it. "
+"There's the \"What's up?\" poll we created in the first tutorial:"
+msgstr ""
+
+# 9964d0f1754744639eb2b57e35e1f4ea
+#: ../../tutorial02.txt:106
+msgid "Click the \"What's up?\" poll to edit it:"
+msgstr ""
+
+# 9bc26ee34d4942d9ae6c2ff94f5ee6d8
+#: ../../tutorial02.txt:112
+msgid "Things to note here:"
+msgstr ""
+
+# 5205f27663e749688b0d39255d77f808
+#: ../../tutorial02.txt:114
+msgid "The form is automatically generated from the Poll model."
+msgstr ""
+
+# 4ac0d31b3a304cedaecbf536d1b438d2
+#: ../../tutorial02.txt:115
+msgid ""
+"The different model field types (``models.DateTimeField``, ``models."
+"CharField``) correspond to the appropriate HTML input widget. Each type of "
+"field knows how to display itself in the Django admin."
+msgstr ""
+
+# 3381940380b9408abc8e0e21cce645b2
+#: ../../tutorial02.txt:118
+msgid ""
+"Each ``DateTimeField`` gets free JavaScript shortcuts. Dates get a \"Today\" "
+"shortcut and calendar popup, and times get a \"Now\" shortcut and a "
+"convenient popup that lists commonly entered times."
+msgstr ""
+
+# 3f2b6fd4f379421492c0f57ef1fd4acf
+#: ../../tutorial02.txt:122
+msgid "The bottom part of the page gives you a couple of options:"
+msgstr ""
+
+# 13a92c8235184af7a4f7668b3a212255
+#: ../../tutorial02.txt:124
+msgid ""
+"Save -- Saves changes and returns to the change-list page for this type of "
+"object."
+msgstr ""
+
+# 69c3a3a383d44e9eb64895702238f58b
+#: ../../tutorial02.txt:126
+msgid ""
+"Save and continue editing -- Saves changes and reloads the admin page for "
+"this object."
+msgstr ""
+
+# 254d322c53f5460fa9f5e9555dc872b9
+#: ../../tutorial02.txt:128
+msgid ""
+"Save and add another -- Saves changes and loads a new, blank form for this "
+"type of object."
+msgstr ""
+
+# 12a14c3c73bd41a588a559504d841145
+#: ../../tutorial02.txt:130
+msgid "Delete -- Displays a delete confirmation page."
+msgstr ""
+
+# c6120a4c8961494a8e45d311d908b45c
+#: ../../tutorial02.txt:132
+msgid ""
+"Change the \"Date published\" by clicking the \"Today\" and \"Now\" "
+"shortcuts. Then click \"Save and continue editing.\" Then click \"History\" "
+"in the upper right. You'll see a page listing all changes made to this "
+"object via the Django admin, with the timestamp and username of the person "
+"who made the change:"
+msgstr ""
+
+# 2f590d153a9943ee938b4eb3258c813a
+#: ../../tutorial02.txt:142
+msgid "Customize the admin form"
+msgstr ""
+
+# 4a38554fe0674570bd5816bc2cb94c21
+#: ../../tutorial02.txt:144
+msgid "Take a few minutes to marvel at all the code you didn't have to write."
+msgstr ""
+
+# fc7a11fe0bf1429b88d6a4362b3453f8
+#: ../../tutorial02.txt:146
+msgid ""
+"Let's customize this a bit. We can reorder the fields by explicitly adding a "
+"``fields`` parameter to ``Admin``::"
+msgstr ""
+
+# b51e4e402d40481f8fed2001a381e78e
+#: ../../tutorial02.txt:154
+msgid "That made the \"Publication date\" show up first instead of second:"
+msgstr ""
+
+# 282c7a2ee7cf4fd1811889cffca204bc
+#: ../../tutorial02.txt:159
+msgid ""
+"This isn't impressive with only two fields, but for admin forms with dozens "
+"of fields, choosing an intuitive order is an important usability detail."
+msgstr ""
+
+# d5ae5e9932174c35b4642d7753904741
+#: ../../tutorial02.txt:162
+msgid ""
+"And speaking of forms with dozens of fields, you might want to split the "
+"form up into fieldsets::"
+msgstr ""
+
+# a21f6411d294476ab3d9ccf61e4e1c1a
+#: ../../tutorial02.txt:171
+msgid ""
+"The first element of each tuple in ``fields`` is the title of the fieldset. "
+"Here's what our form looks like now:"
+msgstr ""
+
+# 9e1d6f92a3b645d0a29967f18580953b
+#: ../../tutorial02.txt:178
+msgid ""
+"You can assign arbitrary HTML classes to each fieldset. Django provides a ``"
+"\"collapse\"`` class that displays a particular fieldset initially "
+"collapsed. This is useful when you have a long form that contains a number "
+"of fields that aren't commonly used::"
+msgstr ""
+
+# ad3c9d9e2d8e41a69229422d876ef415
+#: ../../tutorial02.txt:193
+msgid "Adding related objects"
+msgstr ""
+
+# 6eb6d05434504cf1967c2a8bd6cd428a
+#: ../../tutorial02.txt:195
+msgid ""
+"OK, we have our Poll admin page. But a ``Poll`` has multiple ``Choices``, "
+"and the admin page doesn't display choices."
+msgstr ""
+
+# 3e52136cf042436bab18c0c1d8f1421e
+#: ../../tutorial02.txt:198
+msgid "Yet."
+msgstr ""
+
+# 235359bf1e074c9194b689b1257c293a
+#: ../../tutorial02.txt:200
+msgid ""
+"There are two ways to solve this problem. The first is to give the "
+"``Choice`` model its own inner ``Admin`` class, just as we did with "
+"``Poll``. Here's what that would look like::"
+msgstr ""
+
+# 4ff19886843c4759b9713951d82d6ed5
+#: ../../tutorial02.txt:209
+msgid ""
+"Now \"Choices\" is an available option in the Django admin. The \"Add choice"
+"\" form looks like this:"
+msgstr ""
+
+# 0a41b0b90b9741f1a4c8544ad5eb2d3e
+#: ../../tutorial02.txt:215
+msgid ""
+"In that form, the \"Poll\" field is a select box containing every poll in "
+"the database. Django knows that a ``ForeignKey`` should be represented in "
+"the admin as a ``<select>`` box. In our case, only one poll exists at this "
+"point."
+msgstr ""
+
+# 1a00f03ae7774a2fb627b8078afd1daa
+#: ../../tutorial02.txt:219
+msgid ""
+"Also note the \"Add Another\" link next to \"Poll.\" Every object with a "
+"ForeignKey relationship to another gets this for free. When you click \"Add "
+"Another,\" you'll get a popup window with the \"Add poll\" form. If you add "
+"a poll in that window and click \"Save,\" Django will save the poll to the "
+"database and dynamically add it as the selected choice on the \"Add choice\" "
+"form you're looking at."
+msgstr ""
+
+# 85a156aaf67245f2b2493c92d6b506e7
+#: ../../tutorial02.txt:225
+msgid ""
+"But, really, this is an inefficient way of adding Choice objects to the "
+"system. It'd be better if you could add a bunch of Choices directly when you "
+"create the Poll object. Let's make that happen."
+msgstr ""
+
+# 64f6b2c617ef4d3e9664f78fa072f2d5
+#: ../../tutorial02.txt:229
+msgid ""
+"Remove the ``Admin`` for the Choice model. Then, edit the ``ForeignKey(Poll)"
+"`` field like so::"
+msgstr ""
+
+# 2826856208e9408189c098427b9faf99
+#: ../../tutorial02.txt:234
+msgid ""
+"This tells Django: \"Choice objects are edited on the Poll admin page. By "
+"default, provide enough fields for 3 Choices.\""
+msgstr ""
+
+# ae2e06e2ffdd486bb8d11ebda12ac265
+#: ../../tutorial02.txt:237
+msgid "Then change the other fields in ``Choice`` to give them ``core=True``::"
+msgstr ""
+
+# 020fb7380bf846a08a3df210d30d558b
+#: ../../tutorial02.txt:242
+msgid ""
+"This tells Django: \"When you edit a Choice on the Poll admin page, the "
+"'choice' and 'votes' fields are required. The presence of at least one of "
+"them signifies the addition of a new Choice object, and clearing both of "
+"them signifies the deletion of that existing Choice object.\""
+msgstr ""
+
+# 2dc4f0a34b724266aac9ffe25162d6ca
+#: ../../tutorial02.txt:247
+msgid "Load the \"Add poll\" page to see how that looks:"
+msgstr ""
+
+# 0be117748e7b4dea90e5c8b02be74717
+#: ../../tutorial02.txt:253
+msgid ""
+"It works like this: There are three slots for related Choices -- as "
+"specified by ``num_in_admin`` -- but each time you come back to the \"Change"
+"\" page for an already-created object, you get one extra slot. (This means "
+"there's no hard-coded limit on how many related objects can be added.) If "
+"you wanted space for three extra Choices each time you changed the poll, "
+"you'd use ``num_extra_on_change=3``."
+msgstr ""
+
+# 3c41cbc3a04d47ce89a69016a0b2af49
+#: ../../tutorial02.txt:260
+msgid ""
+"One small problem, though. It takes a lot of screen space to display all the "
+"fields for entering related Choice objects. For that reason, Django offers "
+"an alternate way of displaying inline related objects::"
+msgstr ""
+
+# a7f1ac01eb5f427abb0cbc7cbf2bb871
+#: ../../tutorial02.txt:266
+msgid ""
+"With that ``edit_inline=models.TABULAR`` (instead of ``models.STACKED``), "
+"the related objects are displayed in a more compact, table-based format:"
+msgstr ""
+
+# 25f461dab7d842388e1246b9737faa49
+#: ../../tutorial02.txt:273
+msgid "Customize the admin change list"
+msgstr ""
+
+# 9a9684cc579546029c98302ecb1b1bb8
+#: ../../tutorial02.txt:275
+msgid ""
+"Now that the Poll admin page is looking good, let's make some tweaks to the "
+"\"change list\" page -- the one that displays all the polls in the system."
+msgstr ""
+
+# d0800d808b3e4a778e4b7bfbd42625bb
+#: ../../tutorial02.txt:278
+msgid "Here's what it looks like at this point:"
+msgstr ""
+
+# 9a5599a622e04fa99ee1af75757d8c1c
+#: ../../tutorial02.txt:284
+msgid ""
+"By default, Django displays the ``str()`` of each object. But sometimes it'd "
+"be more helpful if we could display individual fields. To do that, use the "
+"``list_display`` option, which is a tuple of field names to display, as "
+"columns, on the change list page for the object::"
+msgstr ""
+
+# 275f9bfab48f438594b1133de49ac438
+#: ../../tutorial02.txt:295
+msgid ""
+"Just for good measure, let's also include the ``was_published_today`` custom "
+"method from Tutorial 1::"
+msgstr ""
+
+# f51f4d9ecdff440a824ba666e2fb09cc
+#: ../../tutorial02.txt:300
+msgid "Now the poll change list page looks like this:"
+msgstr ""
+
+# 6e007dd62d8b4fa2891e86c3578a7bbf
+#: ../../tutorial02.txt:306
+msgid ""
+"You can click on the column headers to sort by those values -- except in the "
+"case of the ``was_published_today`` header, because sorting by the output of "
+"an arbitrary method is not supported. Also note that the column header for "
+"``was_published_today`` is, by default, the name of the method (with "
+"underscores replaced with spaces). But you can change that by giving that "
+"method a ``short_description`` attribute::"
+msgstr ""
+
+# 16988e693f9948eaa005c0ecf0d260eb
+#: ../../tutorial02.txt:318
+msgid ""
+"Let's add another improvement to the Poll change list page: Filters. Add the "
+"following line to ``Poll.admin``::"
+msgstr ""
+
+# 4a0a265559c4430c88c641b6250c7be2
+#: ../../tutorial02.txt:323
+msgid ""
+"That adds a \"Filter\" sidebar that lets people filter the change list by "
+"the ``pub_date`` field:"
+msgstr ""
+
+# 0ab2a313aee14ee1955c3e5f1abec052
+#: ../../tutorial02.txt:330
+msgid ""
+"The type of filter displayed depends on the type of field you're filtering "
+"on. Because ``pub_date`` is a DateTimeField, Django knows to give the "
+"default filter options for DateTimeFields: \"Any date,\" \"Today,\" \"Past 7 "
+"days,\" \"This month,\" \"This year.\""
+msgstr ""
+
+# f96d342065574fd495440f5718989570
+#: ../../tutorial02.txt:335
+msgid "This is shaping up well. Let's add some search capability::"
+msgstr ""
+
+# 6c1dbaab339c4e948f3764e8b75b3cca
+#: ../../tutorial02.txt:339
+msgid ""
+"That adds a search box at the top of the change list. When somebody enters "
+"search terms, Django will search the ``question`` field. You can use as many "
+"fields as you'd like -- although because it uses a ``LIKE`` query behind the "
+"scenes, keep it reasonable, to keep your database happy."
+msgstr ""
+
+# 62eea0c49aa044d7883ecc9c1ab7fdd1
+#: ../../tutorial02.txt:344
+msgid ""
+"Finally, because Poll objects have dates, it'd be convenient to be able to "
+"drill down by date. Add this line::"
+msgstr ""
+
+# 689f2fb2d387428a8e3549d875bc20eb
+#: ../../tutorial02.txt:349
+msgid ""
+"That adds hierarchical navigation, by date, to the top of the change list "
+"page. At top level, it displays all available years. Then it drills down to "
+"months and, ultimately, days."
+msgstr ""
+
+# 0b9d539e8ccf4f5891f9b51f9686a5aa
+#: ../../tutorial02.txt:353
+msgid ""
+"Now's also a good time to note that change lists give you free pagination. "
+"The default is to display 50 items per page. Change-list pagination, search "
+"boxes, filters, date-hierarchies and column-header-ordering all work "
+"together like you think they should."
+msgstr ""
+
+# 4c1707fd22c341328c32f7c35cfe55c1
+#: ../../tutorial02.txt:359
+msgid "Customize the admin look and feel"
+msgstr ""
+
+# d909030070754ffbb8ec64b848d49e7d
+#: ../../tutorial02.txt:361
+msgid ""
+"Clearly, having \"Django administration\" and \"example.com\" at the top of "
+"each admin page is ridiculous. It's just placeholder text."
+msgstr ""
+
+# 9e3d136f492444a39bdbeb1e2fae72a9
+#: ../../tutorial02.txt:364
+msgid ""
+"That's easy to change, though, using Django's template system. The Django "
+"admin is powered by Django itself, and its interfaces use Django's own "
+"template system. (How meta!)"
+msgstr ""
+
+# ee654f1dac7048db947f661fca359b26
+#: ../../tutorial02.txt:368
+msgid ""
+"Open your settings file (``mysite/settings.py``, remember) and look at the "
+"``TEMPLATE_DIRS`` setting. ``TEMPLATE_DIRS`` is a tuple of filesystem "
+"directories to check when loading Django templates. It's a search path."
+msgstr ""
+
+# 317f917f49b34204a4b5a84a5690e0a4
+#: ../../tutorial02.txt:372
+msgid ""
+"By default, ``TEMPLATE_DIRS`` is empty. So, let's add a line to it, to tell "
+"Django where our templates live::"
+msgstr ""
+
+# 54c766d5e2c448a9a94e6f2883488f36
+#: ../../tutorial02.txt:379
+msgid ""
+"Now copy the template ``admin/base_site.html`` from within the default "
+"Django admin template directory (``django/contrib/admin/templates``) into an "
+"``admin`` subdirectory of whichever directory you're using in "
+"``TEMPLATE_DIRS``. For example, if your ``TEMPLATE_DIRS`` includes ``\"/home/"
+"mytemplates\"``, as above, then copy ``django/contrib/admin/templates/admin/"
+"base_site.html`` to ``/home/mytemplates/admin/base_site.html``. Don't forget "
+"that ``admin`` subdirectory."
+msgstr ""
+
+# 5f028a44d1684e4e8fc15b8777151252
+#: ../../tutorial02.txt:387
+msgid ""
+"Then, just edit the file and replace the generic Django text with your own "
+"site's name and URL as you see fit."
+msgstr ""
+
+# 93d8d115958d46a0927752289986132d
+#: ../../tutorial02.txt:390
+msgid ""
+"Note that any of Django's default admin templates can be overridden. To "
+"override a template, just do the same thing you did with ``base_site.html`` "
+"-- copy it from the default directory into your custom directory, and make "
+"changes."
+msgstr ""
+
+# 2029e4d4243946b09637ae0238fd01f7
+#: ../../tutorial02.txt:395
+msgid ""
+"Astute readers will ask: But if ``TEMPLATE_DIRS`` was empty by default, how "
+"was Django finding the default admin templates? The answer is that, by "
+"default, Django automatically looks for a ``templates/`` subdirectory within "
+"each app package, for use as a fallback. See the :doc:`loader types "
+"documentation <templates_python>` for full information."
+msgstr ""
+
+# e7bbe39b6df44259a368f78649060f50
+#: ../../tutorial02.txt:402
+msgid "Customize the admin index page"
+msgstr ""
+
+# a083e2335e7147878def6f753a230e64
+#: ../../tutorial02.txt:404
+msgid ""
+"On a similar note, you might want to customize the look and feel of the "
+"Django admin index page."
+msgstr ""
+
+# 05e091d2dcc1406aa8262c74a2ba59ac
+#: ../../tutorial02.txt:407
+msgid ""
+"By default, it displays all available apps, according to your "
+"``INSTALLED_APPS`` setting. But the order in which it displays things is "
+"random, and you may want to make significant changes to the layout. After "
+"all, the index is probably the most important page of the admin, and it "
+"should be easy to use."
+msgstr ""
+
+# 7a53e804d4e048af91c26ef0696e138d
+#: ../../tutorial02.txt:412
+msgid ""
+"The template to customize is ``admin/index.html``. (Do the same as with "
+"``admin/base_site.html`` in the previous section -- copy it from the default "
+"directory to your custom template directory.) Edit the file, and you'll see "
+"it uses a template tag called ``{% get_admin_app_list as app_list %}``. "
+"That's the magic that retrieves every installed Django app. Instead of using "
+"that, you can hard-code links to object-specific admin pages in whatever way "
+"you think is best."
+msgstr ""
+
+# d1a364261dfc41039e80c02c60f0acd1
+#: ../../tutorial02.txt:420
+msgid ""
+"Django offers another shortcut in this department. Run the command ``python "
+"manage.py adminindex polls`` to get a chunk of template code for inclusion "
+"in the admin index template. It's a useful starting point."
+msgstr ""
+
+# 55460b81ff1e4337806395bb158d2394
+#: ../../tutorial02.txt:424
+msgid ""
+"For full details on customizing the look and feel of the Django admin site "
+"in general, see the :doc:`Django admin CSS guide <admin_css>`."
+msgstr ""
+
+# 4a140758140a42f7a8268779b07d5c23
+#: ../../tutorial02.txt:427
+msgid ""
+"When you're comfortable with the admin site, read :doc:`part 3 of this "
+"tutorial <tutorial03>` to start working on public poll views."
+msgstr ""

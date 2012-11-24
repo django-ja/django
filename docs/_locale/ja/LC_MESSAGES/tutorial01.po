@@ -1,0 +1,772 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 6168748df7d5461f9941978e1807611d
+#: ../../tutorial01.txt:3
+msgid "Writing your first Django app, part 1"
+msgstr ""
+
+# bd1eeb17b7944177bd617bd9ff646e7c
+#: ../../tutorial01.txt:5
+msgid "Let's learn by example."
+msgstr ""
+
+# 97a2b85fd0fe4fdfa53c51df76204d21
+#: ../../tutorial01.txt:7
+msgid ""
+"Throughout this tutorial, we'll walk you through the creation of a basic "
+"poll application."
+msgstr ""
+
+# 7eeefd48bb0a4e8a8259a5b8bc5d5e02
+#: ../../tutorial01.txt:10
+msgid "It'll consist of two parts:"
+msgstr ""
+
+# abd9b2851b364a88a004889b7cfdc5ca
+#: ../../tutorial01.txt:12
+msgid "A public site that lets people view polls and vote in them."
+msgstr ""
+
+# 656094e0e6bd44e09daaf169c007676b
+#: ../../tutorial01.txt:13
+msgid "An admin site that lets you add, change and delete poll."
+msgstr ""
+
+# 697a27188ecd459a8c5fe3f8b3f898cb
+#: ../../tutorial01.txt:15
+msgid ""
+"We'll assume you have :doc:`Django installed <install>` already. You can "
+"tell Django is installed by running the Python interactive interpreter and "
+"typing ``import django``. If that command runs successfully, with no errors, "
+"Django is installed."
+msgstr ""
+
+# 6d5eaffdcbbd4c199313068f2635980e
+#: ../../tutorial01.txt:21
+msgid "Creating a project"
+msgstr ""
+
+# 557699dfbcbe4b8f8541c1aa104f7fb6
+#: ../../tutorial01.txt:23
+msgid ""
+"If this is your first time using Django, you'll have to take care of some "
+"initial setup. Namely, you'll need to auto-generate some code that "
+"establishes a Django *project* -- a collection of settings for an instance "
+"of Django, including database configuration, Django-specific options and "
+"application-specific settings."
+msgstr ""
+
+# 54d4a8fb12cc44a3a170ff46733e079f
+#: ../../tutorial01.txt:29
+msgid ""
+"From the command line, ``cd`` into a directory where you'd like to store "
+"your code, then run the command ``django-admin.py startproject mysite``. "
+"This will create a ``mysite`` directory in your current directory."
+msgstr ""
+
+# ca11620c0728457a9fff5d761618119e
+#: ../../tutorial01.txt:33
+msgid ""
+"(``django-admin.py`` should be on your system path if you installed Django "
+"via ``python setup.py``. If it's not on your path, you can find it in ``site-"
+"packages/django/bin``, where ``site-packages`` is a directory within your "
+"Python installation. Consider symlinking to ``django-admin.py`` from some "
+"place on your path, such as ``/usr/local/bin``.)"
+msgstr ""
+
+# eadb0d5986554eb18079c4d26695d8ff
+#: ../../tutorial01.txt:41
+msgid ""
+"If your background is in PHP, you're probably used to putting code under the "
+"Web server's document root (in a place such as ``/var/www``). With Django, "
+"you don't do that. It's not a good idea to put any of this Python code "
+"within your Web server's document root, because it risks the possibility "
+"that people may be able to view your code over the Web. That's not good for "
+"security."
+msgstr ""
+
+# 217934725d4d4ea1ba00287b6eaf2ce2
+#: ../../tutorial01.txt:48
+msgid ""
+"Put your code in some directory **outside** of the document root, such as ``/"
+"home/mycode``."
+msgstr ""
+
+# 169214fc5bab474a967bd4985a77d397
+#: ../../tutorial01.txt:51
+msgid "Let's look at what ``startproject`` created::"
+msgstr ""
+
+# 7d79d39907d548339f85c411eae79dd0
+#: ../../tutorial01.txt:59
+msgid "These files are:"
+msgstr ""
+
+# c1684ae1cc6347fc92c89e1a35fbd152
+#: ../../tutorial01.txt:61
+msgid ""
+"``__init__.py``: An empty file that tells Python that this directory should "
+"be considered a Python package. (Read `more about packages`_ in the official "
+"Python docs if you're a Python beginner.)"
+msgstr ""
+
+# c5adbfdc70ab49808b74e0da198609b1
+#: ../../tutorial01.txt:64
+msgid ""
+"``manage.py``: A command-line utility that lets you interact with this "
+"Django project in various ways."
+msgstr ""
+
+# 76a3171d0b514bc6a9e4da94872ee238
+#: ../../tutorial01.txt:66
+msgid "``settings.py``: Settings/configuration for this Django project."
+msgstr ""
+
+# d417172f652342118a4c21017205fca3
+#: ../../tutorial01.txt:67
+msgid ""
+"``urls.py``: The URL declarations for this Django project; a \"table of "
+"contents\" of your Django-powered site."
+msgstr ""
+
+# b4c10a14124f41fdb0d5a2f3e24db1a5
+#: ../../tutorial01.txt:73
+msgid "The development server"
+msgstr ""
+
+# 2ffc0acafc4a4f0db8b27b9fb2873f59
+#: ../../tutorial01.txt:75
+msgid ""
+"Let's verify this worked. Change into the ``mysite`` directory, if you "
+"haven't already, and run the command ``python manage.py runserver``. You'll "
+"see the following output on the command line::"
+msgstr ""
+
+# 749c33cf3aad4ddfb79c438e5f3be759
+#: ../../tutorial01.txt:86
+msgid ""
+"You've started the Django development server, a lightweight Web server "
+"written purely in Python. We've included this with Django so you can develop "
+"things rapidly, without having to deal with configuring a production server "
+"-- such as Apache -- until you're ready for production."
+msgstr ""
+
+# 29aece6b4ee64ea590ad61676fd7ccf2
+#: ../../tutorial01.txt:91
+msgid ""
+"Now's a good time to note: DON'T use this server in anything resembling a "
+"production environment. It's intended only for use while developing. (We're "
+"in the business of making Web frameworks, not Web servers.)"
+msgstr ""
+
+# 30a5b0e540b54be1a9a29266ba180e85
+#: ../../tutorial01.txt:95
+msgid ""
+"Now that the server's running, visit http://127.0.0.1:8000/ with your Web "
+"browser. You'll see a \"Welcome to Django\" page, in pleasant, light-blue "
+"pastel. It worked!"
+msgstr ""
+
+# 33619995342b47c09780c936c3876954
+#: ../../tutorial01.txt:101
+msgid ""
+"By default, the ``runserver`` command starts the development server on port "
+"8000. If you want to change the server's port, pass it as a command-line "
+"argument. For instance, this command starts the server on port 8080::"
+msgstr ""
+
+# 39366358c51e43989eba9d759e178858
+#: ../../tutorial01.txt:107
+msgid ""
+"Full docs for the development server are at :doc:`django-admin documentation "
+"<django-admin>`."
+msgstr ""
+
+# d92e87cc1c55468ea8f7d1dcaac862ae
+#: ../../tutorial01.txt:110
+msgid "Database setup"
+msgstr ""
+
+# e4a5de8de05c4e37a70bd250972187c7
+#: ../../tutorial01.txt:112
+msgid ""
+"Now, edit ``settings.py``. It's a normal Python module with module-level "
+"variables representing Django settings. Change these settings to match your "
+"database's connection parameters:"
+msgstr ""
+
+# c31e6520d3ac4e73be069e3a43628898
+#: ../../tutorial01.txt:116
+msgid ""
+"``DATABASE_ENGINE`` -- Either 'postgresql', 'mysql' or 'sqlite3'. More "
+"coming soon."
+msgstr ""
+
+# e82108d4fbbb40d4ab4ced35594792bc
+#: ../../tutorial01.txt:118
+msgid ""
+"``DATABASE_NAME`` -- The name of your database, or the full (absolute) path "
+"to the database file if you're using SQLite."
+msgstr ""
+
+# 3824873213ae4df68214ad1ca2bf3d5e
+#: ../../tutorial01.txt:120
+msgid "``DATABASE_USER`` -- Your database username (not used for SQLite)."
+msgstr ""
+
+# 46935953fbb542db8fe37f8b20c3909b
+#: ../../tutorial01.txt:121
+msgid "``DATABASE_PASSWORD`` -- Your database password (not used for SQLite)."
+msgstr ""
+
+# 0f0227bc4d8049bdabdf60aaaa6fcf2d
+#: ../../tutorial01.txt:122
+msgid ""
+"``DATABASE_HOST`` -- The host your database is on. Leave this as an empty "
+"string if your database server is on the same physical machine (not used for "
+"SQLite)."
+msgstr ""
+
+# 4e8ef6792c4447a1a06ab660accdc0c3
+#: ../../tutorial01.txt:128
+msgid ""
+"If you're using PostgreSQL or MySQL, make sure you've created a database by "
+"this point. Do that with \"``CREATE DATABASE database_name;``\" within your "
+"database's interactive prompt."
+msgstr ""
+
+# 7b1bb0d8307f4c67b864fc4b4afa3a94
+#: ../../tutorial01.txt:132
+msgid ""
+"While you're editing ``settings.py``, take note of the ``INSTALLED_APPS`` "
+"setting towards the bottom of the file. That variable holds the names of all "
+"Django applications that are activated in this Django instance. Apps can be "
+"used in multiple projects, and you can package and distribute them for use "
+"by others in their projects."
+msgstr ""
+
+# 32f78d1fed4140098ead550f13cb5f52
+#: ../../tutorial01.txt:138
+msgid ""
+"By default, ``INSTALLED_APPS`` contains the following apps, all of which "
+"come with Django:"
+msgstr ""
+
+# 4aaa190606d04aefb2028ce4d2be1633
+#: ../../tutorial01.txt:141
+msgid "``django.contrib.auth`` -- An authentication system."
+msgstr ""
+
+# 87fc2eb8090d4fa48e1da6dde2ab959d
+#: ../../tutorial01.txt:142
+msgid "``django.contrib.contenttypes`` -- A framework for content types."
+msgstr ""
+
+# 0224a920751849828c0a6cad6944c644
+#: ../../tutorial01.txt:143
+msgid "``django.contrib.sessions`` -- A session framework."
+msgstr ""
+
+# aed19d3d48724fb1bef45eb8a0974b4b
+#: ../../tutorial01.txt:144
+msgid ""
+"``django.contrib.sites`` -- A framework for managing multiple sites with one "
+"Django installation."
+msgstr ""
+
+# c7fded74c87f4b0c99938ea1185d3502
+#: ../../tutorial01.txt:147
+msgid ""
+"These applications are included by default as a convenience for the common "
+"case."
+msgstr ""
+
+# b9b3e714b2ae4719a3d9f94dc604ddde
+#: ../../tutorial01.txt:150
+msgid ""
+"Each of these applications makes use of at least one database table, though, "
+"so we need to create the tables in the database before we can use them. To "
+"do that, run the following command::"
+msgstr ""
+
+# d6623c2edc18494daf99f6bc418f42c3
+#: ../../tutorial01.txt:156
+msgid ""
+"The ``syncdb`` command looks at the ``INSTALLED_APPS`` setting and creates "
+"any necessary database tables according to the database settings in your "
+"``settings.py`` file. You'll see a message for each database table it "
+"creates, and you'll get a prompt asking you if you'd like to create a "
+"superuser account for the authentication system. Go ahead and do that."
+msgstr ""
+
+# 2b98c7806be34ff69692bcac3a946108
+#: ../../tutorial01.txt:162
+msgid ""
+"If you're interested, run the command-line client for your database and type "
+"``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL), or ``.schema`` (SQLite) to "
+"display the tables Django created."
+msgstr ""
+
+# 94d98b55d3044ea69395c2d2b7be5948
+#: ../../tutorial01.txt:168
+msgid ""
+"Like we said above, the default applications are included for the common "
+"case, but not everybody needs them. If you don't need any or all of them, "
+"feel free to comment-out or delete the appropriate line(s) from "
+"``INSTALLED_APPS`` before running ``syncdb``. The ``syncdb`` command will "
+"only create tables for apps in ``INSTALLED_APPS``."
+msgstr ""
+
+# f3aafe28107247a39387bb3b5acc0480
+#: ../../tutorial01.txt:175
+msgid "Creating models"
+msgstr ""
+
+# 06b268d9a1e149abbf4bd92e15791099
+#: ../../tutorial01.txt:177
+msgid ""
+"Now that your environment -- a \"project\" -- is set up, you're set to start "
+"doing work."
+msgstr ""
+
+# 3dcc0fb6a70a4db2a29ce56f442de54a
+#: ../../tutorial01.txt:180
+msgid ""
+"Each application you write in Django consists of a Python package, somewhere "
+"on your `Python path`_, that follows a certain convention. Django comes with "
+"a utility that automatically generates the basic directory structure of an "
+"app, so you can focus on writing code rather than creating directories."
+msgstr ""
+
+# 467dfde97ea9403790aa88ecbd0be186
+#: ../../tutorial01.txt:187
+msgid ""
+"What's the difference between a project and an app? An app is a Web "
+"application that does something -- e.g., a weblog system, a database of "
+"public records or a simple poll app. A project is a collection of "
+"configuration and apps for a particular Web site. A project can contain "
+"multiple apps. An app can be in multiple projects."
+msgstr ""
+
+# f680f17f573348dfba7791ae7bd06045
+#: ../../tutorial01.txt:193
+msgid ""
+"In this tutorial, we'll create our poll app in the ``mysite`` directory, for "
+"simplicity. As a consequence, the app will be coupled to the project -- that "
+"is, Python code within the poll app will refer to ``mysite.polls``. Later in "
+"this tutorial, we'll discuss decoupling your apps for distribution."
+msgstr ""
+
+# 1cab1d99df1a4c89b4865c866324685a
+#: ../../tutorial01.txt:198
+msgid ""
+"To create your app, make sure you're in the ``mysite`` directory and type "
+"this command::"
+msgstr ""
+
+# 700ff85c2cc1476bb77a2b9054f99eac
+#: ../../tutorial01.txt:203
+msgid "That'll create a directory ``polls``, which is laid out like this::"
+msgstr ""
+
+# 8ef688288a81489d9299236dabe4c83a
+#: ../../tutorial01.txt:210
+msgid "This directory structure will house the poll application."
+msgstr ""
+
+# a9e8f3db6a2f45adbf9a2bc5b6a4a773
+#: ../../tutorial01.txt:212
+msgid ""
+"The first step in writing a database Web app in Django is to define your "
+"models -- essentially, your database layout, with additional metadata."
+msgstr ""
+
+# 063e60b2fb274709b0e30dedaa5eb979
+#: ../../tutorial01.txt:217
+msgid ""
+"A model is the single, definitive source of data about your data. It "
+"contains the essential fields and behaviors of the data you're storing. "
+"Django follows the `DRY Principle`_. The goal is to define your data model "
+"in one place and automatically derive things from it."
+msgstr ""
+
+# c8e9f43039484d9f9395bce56823d62e
+#: ../../tutorial01.txt:222
+msgid ""
+"In our simple poll app, we'll create two models: polls and choices. A poll "
+"has a question and a publication date. A choice has two fields: the text of "
+"the choice and a vote tally. Each choice is associated with a poll."
+msgstr ""
+
+# 943ec6f2273e4359ad97bf304fde2eff
+#: ../../tutorial01.txt:226
+msgid ""
+"These concepts are represented by simple Python classes. Edit the ``polls/"
+"models.py`` file so it looks like this::"
+msgstr ""
+
+# db833a96d05a41e4b63c0fabe2c6bd1f
+#: ../../tutorial01.txt:240
+msgid ""
+"The code is straightforward. Each model is represented by a class that "
+"subclasses ``django.db.models.Model``. Each model has a number of class "
+"variables, each of which represents a database field in the model."
+msgstr ""
+
+# 85e05eb30c0f46548d646004efd05700
+#: ../../tutorial01.txt:244
+msgid ""
+"Each field is represented by an instance of a ``models.*Field`` class -- e."
+"g., ``models.CharField`` for character fields and ``models.DateTimeField`` "
+"for datetimes. This tells Django what type of data each field holds."
+msgstr ""
+
+# 81f94653dce94679ab03878326096bc3
+#: ../../tutorial01.txt:248
+msgid ""
+"The name of each ``models.*Field`` instance (e.g. ``question`` or "
+"``pub_date`` ) is the field's name, in machine-friendly format. You'll use "
+"this value in your Python code, and your database will use it as the column "
+"name."
+msgstr ""
+
+# aeee521d5e114559a7667e60d6a9b47c
+#: ../../tutorial01.txt:252
+msgid ""
+"You can use an optional first positional argument to a ``Field`` to "
+"designate a human-readable name. That's used in a couple of introspective "
+"parts of Django, and it doubles as documentation. If this field isn't "
+"provided, Django will use the machine-readable name. In this example, we've "
+"only defined a human-readable name for ``Poll.pub_date``. For all other "
+"fields in this model, the field's machine-readable name will suffice as its "
+"human-readable name."
+msgstr ""
+
+# 16a45d8208bb49bd97ab9e3e81d8985c
+#: ../../tutorial01.txt:259
+msgid ""
+"Some ``Field`` classes have required elements. ``CharField``, for example, "
+"requires that you give it a ``maxlength``. That's used not only in the "
+"database schema, but in validation, as we'll soon see."
+msgstr ""
+
+# 49faee355caa49de9ccd237ad77703e2
+#: ../../tutorial01.txt:263
+msgid ""
+"Finally, note a relationship is defined, using ``models.ForeignKey``. That "
+"tells Django each Choice is related to a single Poll. Django supports all "
+"the common database relationships: many-to-ones, many-to-manys and one-to-"
+"ones."
+msgstr ""
+
+# 66eec640e024442a8666c68a6b5be500
+#: ../../tutorial01.txt:271
+msgid "Activating models"
+msgstr ""
+
+# 96c57bb5d44d42909aa86d1f821eaaf6
+#: ../../tutorial01.txt:273
+msgid ""
+"That small bit of model code gives Django a lot of information. With it, "
+"Django is able to:"
+msgstr ""
+
+# 2f03f79c23344ba7b70fd7b50ab98b4c
+#: ../../tutorial01.txt:276
+msgid "Create a database schema (``CREATE TABLE`` statements) for this app."
+msgstr ""
+
+# 97c232e8588745618293264ca531278d
+#: ../../tutorial01.txt:277
+msgid ""
+"Create a Python database-access API for accessing Poll and Choice objects."
+msgstr ""
+
+# e2f38daa460f40ae9051ad17dc32a6d4
+#: ../../tutorial01.txt:279
+msgid ""
+"But first we need to tell our project that the ``polls`` app is installed."
+msgstr ""
+
+# 83baa498ffc340818ea9912d7ad9f1ae
+#: ../../tutorial01.txt:283
+msgid ""
+"Django apps are \"pluggable\": You can use an app in multiple projects, and "
+"you can distribute apps, because they don't have to be tied to a given "
+"Django installation."
+msgstr ""
+
+# 8bdaedeefefb4644bdeff9e0c2a24c06
+#: ../../tutorial01.txt:287
+msgid ""
+"Edit the ``settings.py`` file again, and change the ``INSTALLED_APPS`` "
+"setting to include the string ``'mysite.polls'``. So it'll look like this::"
+msgstr ""
+
+# dc7a754c30d04f0faa0be27dc6c09275
+#: ../../tutorial01.txt:298
+msgid ""
+"Now Django knows ``mysite`` includes the ``polls`` app. Let's run another "
+"command::"
+msgstr ""
+
+# 4b92f32ef9a84264b125ebceb921b169
+#: ../../tutorial01.txt:302
+msgid ""
+"You should see the following (the CREATE TABLE SQL statements for the polls "
+"app)::"
+msgstr ""
+
+# dafc326dc24a4cd9b63b172f27f31e5f
+#: ../../tutorial01.txt:318
+msgid "Note the following:"
+msgstr ""
+
+# e5f6cc71b837464b8af92eeac2ddc198
+#: ../../tutorial01.txt:320
+msgid ""
+"Table names are automatically generated by combining the name of the app "
+"(``polls``) and the lowercase name of the model -- ``poll`` and ``choice``. "
+"(You can override this behavior.)"
+msgstr ""
+
+# f697b2f088df4325b5f0a58217130366
+#: ../../tutorial01.txt:324
+msgid ""
+"Primary keys (IDs) are added automatically. (You can override this, too.)"
+msgstr ""
+
+# 6a9b7a4ed5af4e6695be9e8d7cefd639
+#: ../../tutorial01.txt:326
+msgid ""
+"By convention, Django appends ``\"_id\"`` to the foreign key field name. "
+"Yes, you can override this, as well."
+msgstr ""
+
+# 9964f6db58224e5d9fd1007842aa45e5
+#: ../../tutorial01.txt:329
+msgid ""
+"The foreign key relationship is made explicit by a ``REFERENCES`` statement."
+msgstr ""
+
+# dae16d4128ee4dbc94432be30f230fb1
+#: ../../tutorial01.txt:331
+msgid ""
+"It's tailored to the database you're using, so database-specific field types "
+"such as ``auto_increment`` (MySQL), ``serial`` (PostgreSQL), or ``integer "
+"primary key`` (SQLite) are handled for you automatically. Same goes for "
+"quoting of field names -- e.g., using double quotes or single quotes. The "
+"author of this tutorial runs PostgreSQL, so the example output is in "
+"PostgreSQL syntax."
+msgstr ""
+
+# a8ef8ca3149147639aebb0c8160a98b8
+#: ../../tutorial01.txt:338
+msgid ""
+"The `sql` command doesn't actually run the SQL in your database - it just "
+"prints it to the screen so that you can see what SQL Django thinks is "
+"required. If you wanted to, you could copy and paste this SQL into your "
+"database prompt. However, as we will see shortly, Django provides an easier "
+"way of committing the SQL to the database."
+msgstr ""
+
+# 26a890c7f1a14d70833d8ec79abfe32a
+#: ../../tutorial01.txt:345
+msgid ""
+"``python manage.py validate polls`` -- Checks for any errors in the "
+"construction of your models."
+msgstr ""
+
+# 837a22b93ac9448296b1a321284280b8
+#: ../../tutorial01.txt:348
+msgid ""
+"``python manage.py sqlinitialdata polls`` -- Outputs any initial data "
+"required for Django's admin framework and your models."
+msgstr ""
+
+# 7736cf2ad10345d1b147d12bd5d1a70b
+#: ../../tutorial01.txt:351
+msgid ""
+"``python manage.py sqlclear polls`` -- Outputs the necessary ``DROP TABLE`` "
+"statements for this app, according to which tables already exist in your "
+"database (if any)."
+msgstr ""
+
+# ba26e9bc4f4a4a46bdf1a96021bb899c
+#: ../../tutorial01.txt:355
+msgid ""
+"``python manage.py sqlindexes polls`` -- Outputs the ``CREATE INDEX`` "
+"statements for this app."
+msgstr ""
+
+# e8e3d334347f4db4af85ea07d7581390
+#: ../../tutorial01.txt:358
+msgid ""
+"``python manage.py sqlall polls`` -- A combination of all the SQL from the "
+"'sql', 'sqlinitialdata', and 'sqlindexes' commands."
+msgstr ""
+
+# 4dad7716c3d64bf2af60080e53854faa
+#: ../../tutorial01.txt:361
+msgid ""
+"Looking at the output of those commands can help you understand what's "
+"actually happening under the hood."
+msgstr ""
+
+# b3e1638ad6db405b8d830970ef6af849
+#: ../../tutorial01.txt:364
+msgid ""
+"Now, run ``syncdb`` again to create those model tables in your database::"
+msgstr ""
+
+# b3f7cb65cc85469f9723d216847b27e6
+#: ../../tutorial01.txt:368
+msgid ""
+"The ``syncdb`` command runs the sql from 'sqlall' on your database for all "
+"apps in ``INSTALLED_APPS`` that don't already exist in your database. This "
+"creates all the tables, initial data and indexes for any apps you have added "
+"to your project since the last time you ran syncdb. ``syncdb`` can be called "
+"as often as you like, and it will only ever create the tables that don't "
+"exist."
+msgstr ""
+
+# 59e0aa6a5ce5469cbe9b7a35fbe1d1fe
+#: ../../tutorial01.txt:374
+msgid ""
+"Read the :doc:`django-admin.py documentation <django-admin>` for full "
+"information on what the ``manage.py`` utility can do."
+msgstr ""
+
+# 848271c6ff514a26878968a92d7d0126
+#: ../../tutorial01.txt:378
+msgid "Playing with the API"
+msgstr ""
+
+# b9f64403ced04d2aa4c09da9daa089e6
+#: ../../tutorial01.txt:380
+msgid ""
+"Now, let's hop into the interactive Python shell and play around with the "
+"free API Django gives you. To invoke the Python shell, use this command::"
+msgstr ""
+
+# 208ce08ebc3946a5abfe7d6eae4779a0
+#: ../../tutorial01.txt:385
+msgid ""
+"We're using this instead of simply typing \"python\", because ``manage.py`` "
+"sets up the project's environment for you. \"Setting up the environment\" "
+"involves two things:"
+msgstr ""
+
+# 80606a4d7e214d5abf318f480eb76684
+#: ../../tutorial01.txt:389
+msgid ""
+"Putting ``mysite`` on ``sys.path``. For flexibility, several pieces of "
+"Django refer to projects in Python dotted-path notation (e.g. ``'mysite."
+"polls.models'``). In order for this to work, the ``mysite`` package has to "
+"be on ``sys.path``."
+msgstr ""
+
+# a1b26d57576343b7a0fa7019cbc4aadf
+#: ../../tutorial01.txt:394
+msgid ""
+"We've already seen one example of this: the ``INSTALLED_APPS`` setting is a "
+"list of packages in dotted-path notation."
+msgstr ""
+
+# 4e8ade8fb15a46518bf961d56476b29b
+#: ../../tutorial01.txt:397
+msgid ""
+"Setting the ``DJANGO_SETTINGS_MODULE`` environment variable, which gives "
+"Django the path to your ``settings.py`` file."
+msgstr ""
+
+# 08bb801c8f2f489787c08a88c7f4104f
+#: ../../tutorial01.txt:402
+msgid ""
+"If you'd rather not use ``manage.py``, no problem. Just make sure ``mysite`` "
+"is at the root level on the Python path (i.e., ``import mysite`` works) and "
+"set the ``DJANGO_SETTINGS_MODULE`` environment variable to ``mysite."
+"settings``."
+msgstr ""
+
+# c759aea6a8d141af8a337c5b6ae86f5b
+#: ../../tutorial01.txt:407
+msgid ""
+"For more information on all of this, see the :doc:`django-admin.py "
+"documentation <django-admin>`. hlsearch"
+msgstr ""
+
+# 8dd48f1cca42488082cbc545af3c08cb
+#: ../../tutorial01.txt:411
+msgid "Once you're in the shell, explore the database API::"
+msgstr ""
+
+# 72ffcf72c92e4420abf58eb3692ebad7
+#: ../../tutorial01.txt:449
+msgid ""
+"Wait a minute. ``<Poll: Poll object>`` is, utterly, an unhelpful "
+"representation of this object. Let's fix that by editing the polls model (in "
+"the ``polls/models.py`` file) and adding a ``__str__()`` method to both "
+"``Poll`` and ``Choice``::"
+msgstr ""
+
+# db77d8db4d74430887cbca22a483925a
+#: ../../tutorial01.txt:464
+msgid ""
+"It's important to add ``__str__()`` methods to your models, not only for "
+"your own sanity when dealing with the interactive prompt, but also because "
+"objects' representations are used throughout Django's automatically-"
+"generated admin."
+msgstr ""
+
+# a7c6e7a442d945a9892f12ace9088200
+#: ../../tutorial01.txt:468
+msgid ""
+"Note these are normal Python methods. Let's add a custom method, just for "
+"demonstration::"
+msgstr ""
+
+# a69fd9efae1c4611afe15ac0f31cb46c
+#: ../../tutorial01.txt:478
+msgid ""
+"Note the addition of ``import datetime`` to reference Python's standard "
+"``datetime`` module."
+msgstr ""
+
+# 51b7b4188422428fa9e50042f053b917
+#: ../../tutorial01.txt:481
+msgid ""
+"Let's jump back into the Python interactive shell by running ``python manage."
+"py shell`` again::"
+msgstr ""
+
+# 1d284abe7f814c81948370c9addddf7a
+#: ../../tutorial01.txt:549
+msgid ""
+"For full details on the database API, see our :doc:`Database API reference "
+"<db-api>`."
+msgstr ""
+
+# 4a7a3a3835a341f9811c673b390bf5a9
+#: ../../tutorial01.txt:551
+msgid ""
+"When you're comfortable with the API, read :doc:`part 2 of this tutorial "
+"<tutorial02>` to get Django's automatic admin working."
+msgstr ""

@@ -1,0 +1,250 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:10+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 3a74565f42534540afbd0ab9972fa6ac
+#: ../../transactions.txt:3
+msgid "Managing database transactions"
+msgstr ""
+
+# 1d638bbd46c541a3af585e5a776578d7
+#: ../../transactions.txt:5
+msgid ""
+"Django gives you a few ways to control how database transactions are "
+"managed, if you're using a database that supports transactions."
+msgstr ""
+
+# a55d0eb827b14f38b1fb95a8063a6fe9
+#: ../../transactions.txt:9
+msgid "Django's default transaction behavior"
+msgstr ""
+
+# 84d27cef72bc4bc29c4d74e182e4ba65
+#: ../../transactions.txt:11
+msgid ""
+"Django's default behavior is to commit automatically when any built-in, data-"
+"altering model function is called. For example, if you call ``model.save()`` "
+"or ``model.delete()``, the change will be committed immediately."
+msgstr ""
+
+# 4f335a6630ab4b659f245e252c3b4fa0
+#: ../../transactions.txt:16
+msgid ""
+"This is much like the auto-commit setting for most databases. As soon as you "
+"perform an action that needs to write to the database, Django produces the "
+"``INSERT``/``UPDATE``/``DELETE`` statements and then does the ``COMMIT``. "
+"There's no implicit ``ROLLBACK``."
+msgstr ""
+
+# f4499b1979f0402591e38cc467ce4246
+#: ../../transactions.txt:22
+msgid "Tying transactions to HTTP requests"
+msgstr ""
+
+# ba44e3d74c41440aa7aa42fe9a795b99
+#: ../../transactions.txt:24
+msgid ""
+"The recommended way to handle transactions in Web requests is to tie them to "
+"the request and response phases via Django's ``TransactionMiddleware``."
+msgstr ""
+
+# 2d6db04b7a214a8b9802678dcabb1f41
+#: ../../transactions.txt:27
+msgid ""
+"It works like this: When a request starts, Django starts a transaction. If "
+"the response is produced without problems, Django commits any pending "
+"transactions. If the view function produces an exception, Django rolls back "
+"any pending transactions."
+msgstr ""
+
+# a589b228bdd84727a7a4cc1948c1d752
+#: ../../transactions.txt:32
+msgid ""
+"To activate this feature, just add the ``TransactionMiddleware`` middleware "
+"to your ``MIDDLEWARE_CLASSES`` setting::"
+msgstr ""
+
+# c616c4f9c7e248c8a8d92b9b7cbb5b14
+#: ../../transactions.txt:42
+msgid ""
+"The order is quite important. The transaction middleware applies not only to "
+"view functions, but also for all middleware modules that come after it. So "
+"if you use the session middleware after the transaction middleware, session "
+"creation will be part of the transaction."
+msgstr ""
+
+# bc12900a3d594a39bea3da3b98174756
+#: ../../transactions.txt:47
+msgid ""
+"An exception is ``CacheMiddleware``, which is never affected. The cache "
+"middleware uses its own database cursor (which is mapped to its own database "
+"connection internally)."
+msgstr ""
+
+# e93ff1f771e548c98866621b72cebe2c
+#: ../../transactions.txt:52
+msgid "Controlling transaction management in views"
+msgstr ""
+
+# 841f5305e5284672a4b21f80f05ec01c
+#: ../../transactions.txt:54
+msgid ""
+"For most people, implicit request-based transactions work wonderfully. "
+"However, if you need more fine-grained control over how transactions are "
+"managed, you can use Python decorators to change the way transactions are "
+"handled by a particular view function."
+msgstr ""
+
+# ca70f99ee2ee43c68e8b0f2a2a2060e3
+#: ../../transactions.txt:61
+msgid ""
+"Although the examples below use view functions as examples, these decorators "
+"can be applied to non-view functions as well."
+msgstr ""
+
+# 0f42f59fe5f144979274d34c92c66ffd
+#: ../../transactions.txt:65
+msgid "``django.db.transaction.autocommit``"
+msgstr ""
+
+# 1f18f1a1b1914b13acb69aa11b45ead3
+#: ../../transactions.txt:67
+msgid ""
+"Use the ``autocommit`` decorator to switch a view function to Django's "
+"default commit behavior, regardless of the global transaction setting."
+msgstr ""
+
+# 05f1f43bc62a48b59d5c83a17285a283
+#: ../../transactions.txt:70
+msgid "Example::"
+msgstr ""
+
+# 2bf8460a9504431cb5b6fa48d3442149
+#: ../../transactions.txt:78
+msgid ""
+"Within ``viewfunc()``, transactions will be committed as soon as you call "
+"``model.save()``, ``model.delete()``, or any other function that writes to "
+"the database."
+msgstr ""
+
+# c1d199c756634192a86ba5f11636cae8
+#: ../../transactions.txt:83
+msgid "``django.db.transaction.commit_on_success``"
+msgstr ""
+
+# 0a85b8fa2dd04353ad1da87fd7174f91
+#: ../../transactions.txt:85
+msgid ""
+"Use the ``commit_on_success`` decorator to use a single transaction for all "
+"the work done in a function::"
+msgstr ""
+
+# 9ec00180c7834f85a96cc558f5a57dfd
+#: ../../transactions.txt:94
+msgid ""
+"If the function returns successfully, then Django will commit all work done "
+"within the function at that point. If the function raises an exception, "
+"though, Django will roll back the transaction."
+msgstr ""
+
+# 1bdd315417154345b2529d2e23b29dd2
+#: ../../transactions.txt:99
+msgid "``django.db.transaction.commit_manually``"
+msgstr ""
+
+# d4732ba4debd4d9d86f1d07d6c90686c
+#: ../../transactions.txt:101
+msgid ""
+"Use the ``commit_manually`` decorator if you need full control over "
+"transactions. It tells Django you'll be managing the transaction on your own."
+msgstr ""
+
+# ee60558d066c4396a21a24ac151e572d
+#: ../../transactions.txt:104
+msgid ""
+"If your view changes data and doesn't ``commit()`` or ``rollback()``, Django "
+"will raise a ``TransactionManagementError`` exception."
+msgstr ""
+
+# 12d85d059ff04364bf3d877bd975366a
+#: ../../transactions.txt:107
+msgid "Manual transaction management looks like this::"
+msgstr ""
+
+# 44d70b3e0ff0447d879cb1148e28c74e
+#: ../../transactions.txt:128
+msgid ""
+"The database ``connection.commit()`` and ``connection.rollback()`` methods "
+"(called ``db.commit()`` and ``db.rollback()`` in 0.91 and earlier) no longer "
+"exist. They've been replaced by ``transaction.commit()`` and ``transaction."
+"rollback()``."
+msgstr ""
+
+# a2399becdd8e4d76bc7c3572890a8a54
+#: ../../transactions.txt:134
+msgid "How to globally deactivate transaction management"
+msgstr ""
+
+# 14161337c27d4392a781caf64a911dae
+#: ../../transactions.txt:136
+msgid ""
+"Control freaks can totally disable all transaction management by setting "
+"``DISABLE_TRANSACTION_MANAGEMENT`` to ``True`` in the Django settings file."
+msgstr ""
+
+# 4c4dadc3051245a28e8344414eb94429
+#: ../../transactions.txt:139
+msgid ""
+"If you do this, Django won't provide any automatic transaction management "
+"whatsoever. Middleware will no longer implicitly commit transactions, and "
+"you'll need to roll management yourself. This even requires you to commit "
+"changes done by middleware somewhere else."
+msgstr ""
+
+# 4c57449789e44f769144dbefd6661e29
+#: ../../transactions.txt:144
+msgid ""
+"Thus, this is best used in situations where you want to run your own "
+"transaction-controlling middleware or do something really strange. In almost "
+"all situations, you'll be better off using the default behavior, or the "
+"transaction middleware, and only modify selected functions as needed."
+msgstr ""
+
+# dea4fd8e700c478bb563c23d1d03f2ee
+#: ../../transactions.txt:150
+msgid "Transactions in MySQL"
+msgstr ""
+
+# a46d2a81d8d44626ad3973c220d998b1
+#: ../../transactions.txt:152
+msgid ""
+"If you're using MySQL, your tables may or may not support transactions; it "
+"depends on your MySQL version and the table types you're using. (By \"table "
+"types,\" we mean something like \"InnoDB\" or \"MyISAM\".) MySQL transaction "
+"peculiarities are outside the scope of this article, but the MySQL site has "
+"`information on MySQL transactions`_."
+msgstr ""
+
+# d6b37f5f6d0047d9a18caee7c4e71f9a
+#: ../../transactions.txt:158
+msgid ""
+"If your MySQL setup does *not* support transactions, then Django will "
+"function in auto-commit mode: Statements will be executed and committed as "
+"soon as they're called. If your MySQL setup *does* support transactions, "
+"Django will handle transactions as explained in this document."
+msgstr ""

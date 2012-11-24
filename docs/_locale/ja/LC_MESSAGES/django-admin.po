@@ -1,0 +1,713 @@
+# Japanese translations for Django package.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# Kosei <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 0.95\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 14:05\n"
+"PO-Revision-Date: 2012-11-24 14:09+0900\n"
+"Last-Translator: Kosei <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 895ea961107942a09ca94cf7ac9ca10f
+#: ../../django-admin.txt:3
+msgid "django-admin.py and manage.py"
+msgstr ""
+
+# 2cff95d603214c4c98a9f3de96b72905
+#: ../../django-admin.txt:5
+msgid ""
+"``django-admin.py`` is Django's command-line utility for administrative "
+"tasks. This document outlines all it can do."
+msgstr ""
+
+# ba970fda5de64ba19b4cb2ce9e10b834
+#: ../../django-admin.txt:8
+msgid ""
+"In addition, ``manage.py`` is automatically created in each Django project. "
+"``manage.py`` is a thin wrapper around ``django-admin.py`` that takes care "
+"of two things for you before delegating to ``django-admin.py``:"
+msgstr ""
+
+# 117b5503a76e4c148d43516bd07c35f5
+#: ../../django-admin.txt:12
+msgid "It puts your project's package on ``sys.path``."
+msgstr ""
+
+# 1162e0ecef20408f82d9180d4e003702
+#: ../../django-admin.txt:14
+msgid ""
+"It sets the ``DJANGO_SETTINGS_MODULE`` environment variable so that it "
+"points to your project's ``settings.py`` file."
+msgstr ""
+
+# 3e88f487c8414ad7b66e7d01ac03e65f
+#: ../../django-admin.txt:17
+msgid ""
+"The ``django-admin.py`` script should be on your system path if you "
+"installed Django via its ``setup.py`` utility. If it's not on your path, you "
+"can find it in ``site-packages/django/bin`` within your Python installation. "
+"Consider symlinking to it from some place on your path, such as ``/usr/local/"
+"bin``."
+msgstr ""
+
+# 98f58b31050e4e899731ba5d9b950696
+#: ../../django-admin.txt:22
+msgid ""
+"Generally, when working on a single Django project, it's easier to use "
+"``manage.py``. Use ``django-admin.py`` with ``DJANGO_SETTINGS_MODULE``, or "
+"the ``--settings`` command line option, if you need to switch between "
+"multiple Django settings files."
+msgstr ""
+
+# 4af740d0222740b9b8e0a8937b524a4f
+#: ../../django-admin.txt:28
+msgid "Usage"
+msgstr ""
+
+# 6667fe6531aa46558fa4765f999a897c
+#: ../../django-admin.txt:30
+msgid "``django-admin.py action [options]``"
+msgstr ""
+
+# 1c892054e5ee4a48ba1166fe2287d798
+#: ../../django-admin.txt:32
+msgid "``manage.py action [options]``"
+msgstr ""
+
+# 365ab52eb6b14fe39b6584413cdd0409
+#: ../../django-admin.txt:34
+msgid ""
+"``action`` should be one of the actions listed in this document. "
+"``options``, which is optional, should be zero or more of the options listed "
+"in this document."
+msgstr ""
+
+# 6fcad1d556ca4d9491a7de30418606dc
+#: ../../django-admin.txt:38
+msgid ""
+"Run ``django-admin.py --help`` to display a help message that includes a "
+"terse list of all available actions and options."
+msgstr ""
+
+# 15bcf526a4034ecd9a0b6dc21b6a7ceb
+#: ../../django-admin.txt:41
+msgid ""
+"Most actions take a list of ``appname``s. An ``appname`` is the basename of "
+"the package containing your models. For example, if your ``INSTALLED_APPS`` "
+"contains the string ``'mysite.blog'``, the ``appname`` is ``blog``."
+msgstr ""
+
+# c8b4d9725043465b9eff4de00254b47b
+#: ../../django-admin.txt:46
+msgid "Available actions"
+msgstr ""
+
+# 2a97c1ca0ff44c62b66ae28db7b646fc
+#: ../../django-admin.txt:49
+msgid "adminindex [appname appname ...]"
+msgstr ""
+
+# 807d2f8faacd4aa68afd1d9dc74c3ebd
+#: ../../django-admin.txt:51
+msgid "Prints the admin-index template snippet for the given appnames."
+msgstr ""
+
+# dcd55dff8f19474abccb7472c86ab761
+#: ../../django-admin.txt:53
+msgid ""
+"Use admin-index template snippets if you want to customize the look and feel "
+"of your admin's index page. See :doc:`Tutorial 2 <tutorial02>` for more "
+"information."
+msgstr ""
+
+# 0bb0bd6d36ab4c7d9bacbb4cc882ae83
+#: ../../django-admin.txt:57
+msgid "createcachetable [tablename]"
+msgstr ""
+
+# fcd9e64377464d15b7a20458b162d235
+#: ../../django-admin.txt:59
+msgid ""
+"Creates a cache table named ``tablename`` for use with the database cache "
+"backend.  See the :doc:`cache documentation <cache>` for more information."
+msgstr ""
+
+# 37a11ee2efb8489280fc0febcda33019
+#: ../../django-admin.txt:63
+msgid "dbshell"
+msgstr ""
+
+# 5cc71696d58c442faf0baa31bc1826a1
+#: ../../django-admin.txt:65
+msgid ""
+"Runs the command-line client for the database engine specified in your "
+"``DATABASE_ENGINE`` setting, with the connection parameters specified in "
+"your ``DATABASE_USER``, ``DATABASE_PASSWORD``, etc., settings."
+msgstr ""
+
+# ca9164b0b13a43d29e8035a1ec56ba47
+#: ../../django-admin.txt:69
+msgid "For PostgreSQL, this runs the ``psql`` command-line client."
+msgstr ""
+
+# c90956e3e44d414393eb8d72cb8fe81f
+#: ../../django-admin.txt:70
+msgid "For MySQL, this runs the ``mysql`` command-line client."
+msgstr ""
+
+# b86ad26ecd8840898d73c0b5733bcf9d
+#: ../../django-admin.txt:71
+msgid "For SQLite, this runs the ``sqlite3`` command-line client."
+msgstr ""
+
+# bea14da02c8f459796975d20b0e20388
+#: ../../django-admin.txt:73
+msgid ""
+"This command assumes the programs are on your ``PATH`` so that a simple call "
+"to the program name (``psql``, ``mysql``, ``sqlite3``) will find the program "
+"in the right place. There's no way to specify the location of the program "
+"manually."
+msgstr ""
+
+# 449b7511e32240fbb85754527f88abc4
+#: ../../django-admin.txt:79
+msgid "diffsettings"
+msgstr ""
+
+# 102ba1085be44475b65ed136ce4f8e73
+#: ../../django-admin.txt:81
+msgid ""
+"Displays differences between the current settings file and Django's default "
+"settings."
+msgstr ""
+
+# 505808ffbdbe4dd1a2eb169f9f2525c5
+#: ../../django-admin.txt:84
+msgid ""
+"Settings that don't appear in the defaults are followed by ``\"###\"``. For "
+"example, the default settings don't define ``ROOT_URLCONF``, so "
+"``ROOT_URLCONF`` is followed by ``\"###\"`` in the output of "
+"``diffsettings``."
+msgstr ""
+
+# 56aed5226c1b4d40b9d5c9660f804b12
+#: ../../django-admin.txt:88
+msgid ""
+"Note that Django's default settings live in ``django/conf/global_settings."
+"py``, if you're ever curious to see the full list of defaults."
+msgstr ""
+
+# ec7a12d2f6f24dab856ff7d8c6de6e16
+#: ../../django-admin.txt:92
+msgid "inspectdb"
+msgstr ""
+
+# 6c483355d2fc427d85f0d1e7156e5f09
+#: ../../django-admin.txt:94
+msgid ""
+"Introspects the database tables in the database pointed-to by the "
+"``DATABASE_NAME`` setting and outputs a Django model module (a ``models.py`` "
+"file) to standard output."
+msgstr ""
+
+# 030eb881d94349a1921506eeebd280ed
+#: ../../django-admin.txt:98
+msgid ""
+"Use this if you have a legacy database with which you'd like to use Django. "
+"The script will inspect the database and create a model for each table "
+"within it."
+msgstr ""
+
+# c8a52ba38e134380928edd929a28a7d0
+#: ../../django-admin.txt:102
+msgid ""
+"As you might expect, the created models will have an attribute for every "
+"field in the table. Note that ``inspectdb`` has a few special cases in its "
+"field-name output:"
+msgstr ""
+
+# f4f3b464d7f64c2aa9985cfd32f0d268
+#: ../../django-admin.txt:106
+msgid ""
+"If ``inspectdb`` cannot map a column's type to a model field type, it'll use "
+"``TextField`` and will insert the Python comment ``'This field type is a "
+"guess.'`` next to the field in the generated model."
+msgstr ""
+
+# b8d82a5be8314776b137c4fe9693aee4
+#: ../../django-admin.txt:111
+msgid ""
+"If the database column name is a Python reserved word (such as ``'pass'``, "
+"``'class'`` or ``'for'``), ``inspectdb`` will append ``'_field'`` to the "
+"attribute name. For example, if a table has a column ``'for'``, the "
+"generated model will have a field ``'for_field'``, with the ``db_column`` "
+"attribute set to ``'for'``. ``inspectdb`` will insert the Python comment "
+"``'Field renamed because it was a Python reserved word.'`` next to the field."
+msgstr ""
+
+# f9aaff152f4e4d2b85aa210dbd8c83a7
+#: ../../django-admin.txt:120
+msgid ""
+"This feature is meant as a shortcut, not as definitive model generation. "
+"After you run it, you'll want to look over the generated models yourself to "
+"make customizations. In particular, you'll need to rearrange models' order, "
+"so that models that refer to other models are ordered properly."
+msgstr ""
+
+# 77ff98220f774098a61352dad355fda0
+#: ../../django-admin.txt:125
+msgid ""
+"Primary keys are automatically introspected for PostgreSQL, MySQL and "
+"SQLite, in which case Django puts in the ``primary_key=True`` where needed."
+msgstr ""
+
+# a6c38932bad64ecb8b5a8dc77820be87
+#: ../../django-admin.txt:129
+msgid ""
+"``inspectdb`` works with PostgreSQL, MySQL and SQLite. Foreign-key detection "
+"only works in PostgreSQL and with certain types of MySQL tables."
+msgstr ""
+
+# 6f01c729b02c49bb9199a7836b7f1da6
+#: ../../django-admin.txt:133
+msgid "install [appname appname ...]"
+msgstr ""
+
+# dde52a3adea94fab964ff55cc8d8ae45
+#: ../../django-admin.txt:135
+msgid "Executes the equivalent of ``sqlall`` for the given appnames."
+msgstr ""
+
+# 8ca2249c13214b7fb4205270cd92c0c1
+#: ../../django-admin.txt:138
+msgid "runserver [optional port number, or ipaddr:port]"
+msgstr ""
+
+# a55b71b0deef4fc899b2cf90848dbb7f
+#: ../../django-admin.txt:140
+msgid ""
+"Starts a lightweight development Web server on the local machine. By "
+"default, the server runs on port 8000 on the IP address 127.0.0.1. You can "
+"pass in an IP address and port number explicitly."
+msgstr ""
+
+# ef55c3dca70d42568541122fdcb0b5f8
+#: ../../django-admin.txt:144
+msgid ""
+"If you run this script as a user with normal privileges (recommended), you "
+"might not have access to start a port on a low port number. Low port numbers "
+"are reserved for the superuser (root)."
+msgstr ""
+
+# 2a12e88e1c6f495d8cc7eabda196e0a3
+#: ../../django-admin.txt:148
+msgid ""
+"DO NOT USE THIS SERVER IN A PRODUCTION SETTING. It has not gone through "
+"security audits or performance tests. (And that's how it's gonna stay. We're "
+"in the business of making Web frameworks, not Web servers, so improving this "
+"server to be able to handle a production environment is outside the scope of "
+"Django.)"
+msgstr ""
+
+# b61af23336b744308288561ef3673818
+#: ../../django-admin.txt:154
+msgid ""
+"The development server automatically reloads Python code for each request, "
+"as needed. You don't need to restart the server for code changes to take "
+"effect."
+msgstr ""
+
+# 194825378ae44bac9a8154eabbd465ba
+#: ../../django-admin.txt:157
+msgid ""
+"When you start the server, and each time you change Python code while the "
+"server is running, the server will validate all of your installed models. "
+"(See the ``validate`` command below.) If the validator finds errors, it will "
+"print them to standard output, but it won't stop the server."
+msgstr ""
+
+# d6b4854cf7564016aa4fb4103fc91764
+#: ../../django-admin.txt:162
+msgid ""
+"You can run as many servers as you want, as long as they're on separate "
+"ports. Just execute ``django-admin.py runserver`` more than once."
+msgstr ""
+
+# 3a63b176f09c4980a09b1687f9417039
+#: ../../django-admin.txt:165
+msgid ""
+"Note that the default IP address, 127.0.0.1, is not accessible from other "
+"machines on your network. To make your development server viewable to other "
+"machines on the network, use its own IP address (e.g. ``192.168.2.1``) or "
+"``0.0.0.0``."
+msgstr ""
+
+# 1eb7311955624ffe8b301ab54bc01db6
+#: ../../django-admin.txt:171
+msgid "Examples:"
+msgstr ""
+
+# c4836ad635ff4647ab0eb2de6ae7298d
+#: ../../django-admin.txt:173
+msgid "Port 7000 on IP address 127.0.0.1::"
+msgstr ""
+
+# 8431db818d8b47eebaf5668cd10c7103
+#: ../../django-admin.txt:177
+msgid "Port 7000 on IP address 1.2.3.4::"
+msgstr ""
+
+# 40f97d9b74c34faca310519e29b2c2f3
+#: ../../django-admin.txt:182
+msgid "Serving static files with the development server"
+msgstr ""
+
+# b4f73b8555284f02a9250c3f444f78ab
+#: ../../django-admin.txt:184
+msgid ""
+"By default, the development server doesn't serve any static files for your "
+"site (such as CSS files, images, things under ``MEDIA_ROOT_URL`` and so "
+"forth). If you want to configure Django to serve static media, read the :doc:"
+"`serving static files <static_files>` documentation."
+msgstr ""
+
+# c75424d3946f4dbba2047f4e69635ac7
+#: ../../django-admin.txt:190
+msgid "Turning off auto-reload"
+msgstr ""
+
+# 9539f52c0ba447b893edb6234d57681e
+#: ../../django-admin.txt:192
+msgid ""
+"To disable auto-reloading of code while the development server is running, "
+"use the ``--noreload`` option, like so::"
+msgstr ""
+
+# ba7cc623a7ca4f91b7c5b7197f3654d7
+#: ../../django-admin.txt:198
+msgid "shell"
+msgstr ""
+
+# 9400edb4397e4917bae87f4f92604151
+#: ../../django-admin.txt:200
+msgid "Starts the Python interactive interpreter."
+msgstr ""
+
+# c0c9f27a9b874f2cba8453aa306d43a9
+#: ../../django-admin.txt:202
+msgid ""
+"Django will use IPython_, if it's installed. If you have IPython installed "
+"and want to force use of the \"plain\" Python interpreter, use the ``--"
+"plain`` option, like so::"
+msgstr ""
+
+# 3be906606937436b9f3e55fd0db4f5e5
+#: ../../django-admin.txt:211
+msgid "sql [appname appname ...]"
+msgstr ""
+
+# 8ca43ef823454481858f9f15ac7e18ae
+#: ../../django-admin.txt:213
+msgid "Prints the CREATE TABLE SQL statements for the given appnames."
+msgstr ""
+
+# 3f6d5954ef574434b27760e299787456
+#: ../../django-admin.txt:216
+msgid "sqlall [appname appname ...]"
+msgstr ""
+
+# 37722f3e56d649d8b88d6832ca5dbf29
+#: ../../django-admin.txt:218
+msgid ""
+"Prints the CREATE TABLE and initial-data SQL statements for the given "
+"appnames."
+msgstr ""
+
+# ab0b180afc4e48709e09c757131f077a
+#: ../../django-admin.txt:220
+msgid ""
+"Refer to the description of ``sqlinitialdata`` for an explanation of how to "
+"specify initial data."
+msgstr ""
+
+# ca12fbd534e24d2cb78d4e25c2e6f039
+#: ../../django-admin.txt:224
+msgid "sqlclear [appname appname ...]"
+msgstr ""
+
+# 5b9589bdec0a4042bb34069742bbe454
+#: ../../django-admin.txt:226
+msgid "Prints the DROP TABLE SQL statements for the given appnames."
+msgstr ""
+
+# b89362bdd7c044d499dd1c026d7cf26f
+#: ../../django-admin.txt:229
+msgid "sqlindexes [appname appname ...]"
+msgstr ""
+
+# f1e57b1fc2d6407ebf0e8bf12136ce4f
+#: ../../django-admin.txt:231
+msgid "Prints the CREATE INDEX SQL statements for the given appnames."
+msgstr ""
+
+# bd897441d4fc412bb5785561146db32f
+#: ../../django-admin.txt:234
+msgid "sqlinitialdata [appname appname ...]"
+msgstr ""
+
+# 880fde938bd4483e9118c1814cd7a789
+#: ../../django-admin.txt:236
+msgid "Prints the initial INSERT SQL statements for the given appnames."
+msgstr ""
+
+# 9252fceaa91a4ea5978e814fe388321a
+#: ../../django-admin.txt:238
+msgid ""
+"For each model in each specified app, this command looks for the file "
+"``<appname>/sql/<modelname>.sql``, where ``<appname>`` is the given appname "
+"and ``<modelname>`` is the model's name in lowercase. For example, if you "
+"have an app ``news`` that includes a ``Story`` model, ``sqlinitialdata`` "
+"will attempt to read a file ``news/sql/story.sql`` and append it to the "
+"output of this command."
+msgstr ""
+
+# 4b870744a10a48f0bc9acb653233fab5
+#: ../../django-admin.txt:245
+msgid ""
+"Each of the SQL files, if given, is expected to contain valid SQL. The SQL "
+"files are piped directly into the database after all of the models' table-"
+"creation statements have been executed. Use this SQL hook to populate tables "
+"with any necessary initial records, SQL functions or test data."
+msgstr ""
+
+# 8c94426227b140bf94d907656bf7fe1b
+#: ../../django-admin.txt:251
+msgid "sqlreset [appname appname ...]"
+msgstr ""
+
+# 08bda13cefa84a76af4abed6bd24f8bf
+#: ../../django-admin.txt:253
+msgid ""
+"Prints the DROP TABLE SQL, then the CREATE TABLE SQL, for the given appnames."
+msgstr ""
+
+# 8cf5f09e5fb24b0490e4a84fd366db21
+#: ../../django-admin.txt:256
+msgid "sqlsequencereset [appname appname ...]"
+msgstr ""
+
+# d4478766141647f192d59dbd730df451
+#: ../../django-admin.txt:258
+msgid ""
+"Prints the SQL statements for resetting PostgreSQL sequences for the given "
+"appnames."
+msgstr ""
+
+# b454cd9fcf204172847ec3f4d1ac2606
+#: ../../django-admin.txt:261
+msgid ""
+"See http://simon.incutio.com/archive/2004/04/21/postgres for more "
+"information."
+msgstr ""
+
+# 225566dc07a7461d9caa78adbc8737bb
+#: ../../django-admin.txt:264
+msgid "startapp [appname]"
+msgstr ""
+
+# 5bf94b1ff51848b8b9e13884a2d2bab9
+#: ../../django-admin.txt:266
+msgid ""
+"Creates a Django app directory structure for the given app name in the "
+"current directory."
+msgstr ""
+
+# 5071b68d32e24948bbefaa7f9985ca0f
+#: ../../django-admin.txt:270
+msgid "startproject [projectname]"
+msgstr ""
+
+# 47bfed4ac3dd4f29901e2a0c95d3221c
+#: ../../django-admin.txt:272
+msgid ""
+"Creates a Django project directory structure for the given project name in "
+"the current directory."
+msgstr ""
+
+# c473263a415247d6a02a3af0367c946e
+#: ../../django-admin.txt:276
+msgid "syncdb"
+msgstr ""
+
+# 791b7f66d4724a20a74bf9b3a0d4b8e3
+#: ../../django-admin.txt:278
+msgid ""
+"Creates the database tables for all apps in ``INSTALLED_APPS`` whose tables "
+"have not already been created."
+msgstr ""
+
+# 1a402b051b9f4b6ba899d194115efa5f
+#: ../../django-admin.txt:281
+msgid ""
+"Use this command when you've added new applications to your project and want "
+"to install them in the database. This includes any apps shipped with Django "
+"that might be in ``INSTALLED_APPS`` by default. When you start a new "
+"project, run this command to install the default apps."
+msgstr ""
+
+# 03af969bbaad44e0afeb3c74af77348d
+#: ../../django-admin.txt:286
+msgid ""
+"If you're installing the ``django.contrib.auth`` application, ``syncdb`` "
+"will give you the option of creating a superuser immediately."
+msgstr ""
+
+# e4c0b698615a4a769e8472281d569694
+#: ../../django-admin.txt:290
+msgid "validate"
+msgstr ""
+
+# 969afca8b75e49499205974795a2b412
+#: ../../django-admin.txt:292
+msgid ""
+"Validates all installed models (according to the ``INSTALLED_APPS`` setting) "
+"and prints validation errors to standard output."
+msgstr ""
+
+# 670f8c1da9fc431a9f85f779b4dab943
+#: ../../django-admin.txt:296
+msgid "Available options"
+msgstr ""
+
+# 5fef2bd73308492c9be5ae83af1b0c27
+#: ../../django-admin.txt:299
+msgid "--settings"
+msgstr ""
+
+# 7876c3e147824f51bf02541ff5819e25
+# 7876c3e147824f51bf02541ff5819e25
+#: ../../django-admin.txt:301 ../../django-admin.txt:316
+msgid "Example usage::"
+msgstr ""
+
+# d5af71ec562d45a1a153cb5dfe194b60
+#: ../../django-admin.txt:305
+msgid ""
+"Explicitly specifies the settings module to use. The settings module should "
+"be in Python package syntax, e.g. ``mysite.settings``. If this isn't "
+"provided, ``django-admin.py`` will use the ``DJANGO_SETTINGS_MODULE`` "
+"environment variable."
+msgstr ""
+
+# f0d7e61bb5334c01b2a5a5eec160ecca
+#: ../../django-admin.txt:310
+msgid ""
+"Note that this option is unnecessary in ``manage.py``, because it takes care "
+"of setting ``DJANGO_SETTINGS_MODULE`` for you."
+msgstr ""
+
+# 83e5373e491e48ceb1d7bc7bb101dac1
+#: ../../django-admin.txt:314
+msgid "--pythonpath"
+msgstr ""
+
+# ad1699a77ea94b71b5d42f3029fab18f
+#: ../../django-admin.txt:320
+msgid ""
+"Adds the given filesystem path to the Python `import search path`_. If this "
+"isn't provided, ``django-admin.py`` will use the ``PYTHONPATH`` environment "
+"variable."
+msgstr ""
+
+# 554db5a51da244c18c8d7d9fecf31f35
+#: ../../django-admin.txt:324
+msgid ""
+"Note that this option is unnecessary in ``manage.py``, because it takes care "
+"of setting the Python path for you."
+msgstr ""
+
+# 1621323e4ee44e3bbdd276dbafcc7aa1
+#: ../../django-admin.txt:330
+msgid "--help"
+msgstr ""
+
+# 649be3fcf5bd4eef84c0790d4701ffb6
+#: ../../django-admin.txt:332
+msgid ""
+"Displays a help message that includes a terse list of all available actions "
+"and options."
+msgstr ""
+
+# e31df75d2c6d4d6f99d8ce8cd764da8f
+#: ../../django-admin.txt:336
+msgid "--version"
+msgstr ""
+
+# b9d76e822f304c3ba3fe98efa1189a50
+#: ../../django-admin.txt:338
+msgid "Displays the current Django version."
+msgstr ""
+
+# c9c4b374f8564877b4e27f7005b4a9aa
+#: ../../django-admin.txt:340
+msgid "Example output::"
+msgstr ""
+
+# 93be29e5ca07480eba601681a8d49b85
+#: ../../django-admin.txt:346
+msgid "Extra niceties"
+msgstr ""
+
+# aae1e5be743b44868e790e14ddd5f6b6
+#: ../../django-admin.txt:349
+msgid "Syntax coloring"
+msgstr ""
+
+# 1bc583781b9b45619c86fca4c0341cae
+#: ../../django-admin.txt:351
+msgid ""
+"The ``django-admin.py`` / ``manage.py`` commands that output SQL to standard "
+"output will use pretty color-coded output if your terminal supports ANSI-"
+"colored output. It won't use the color codes if you're piping the command's "
+"output to another program."
+msgstr ""
+
+# 05a92055fba4419083b4b6157cfb5f12
+#: ../../django-admin.txt:357
+msgid "Bash completion"
+msgstr ""
+
+# 06c3f67921774559a2ed10901dfa3ba4
+#: ../../django-admin.txt:359
+msgid ""
+"If you use the Bash shell, consider installing the Django bash completion "
+"script, which lives in ``extras/django_bash_completion`` in the Django "
+"distribution. It enables tab-completion of ``django-admin.py`` and ``manage."
+"py`` commands, so you can, for instance..."
+msgstr ""
+
+# cc59f9d30ea8464583ffc8f5b76e8386
+#: ../../django-admin.txt:364
+msgid "Type ``django-admin.py``."
+msgstr ""
+
+# 919c84c877c0407982ef0ab74d66a3e4
+#: ../../django-admin.txt:365
+msgid "Press [TAB] to see all available options."
+msgstr ""
+
+# 55f017bb5d204bf1a721138c1f88a7a2
+#: ../../django-admin.txt:366
+msgid ""
+"Type ``sql``, then [TAB], to see all available options whose names start "
+"with ``sql``."
+msgstr ""
