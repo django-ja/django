@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Django 0.95\n"
-"Report-Msgid-Bugs-To: django-ja@googlegroups.com\n"
-"POT-Creation-Date: 2012-11-24 14:15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 20:36\n"
 "PO-Revision-Date: 2012-11-24 14:10+0900\n"
 "Last-Translator:  Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -20,7 +20,7 @@ msgstr ""
 # af04a475474b40bfb0d2a9fe5fc65d17
 #: ../../overview.txt:3
 msgid "Django at a glance"
-msgstr ""
+msgstr "Django の概要"
 
 # 2f0fb357b61e4169ad8017cfab7eedb8
 #: ../../overview.txt:5
@@ -29,6 +29,9 @@ msgid ""
 "designed to make common Web-development tasks fast and easy. Here's an "
 "informal overview of how to write a database-driven Web app with Django."
 msgstr ""
+"Django は変転の激しいニュースルーム環境で開発された経緯から、ある Web 開発タ"
+"スクを迅速かつ簡単化するように設計されました。ここでは Django に よるデータ"
+"ベース中心の Web アプリケーション開発をざっと見てみましょう。"
 
 # 503b2f8ea0234150b3918f49da8eb68f
 #: ../../overview.txt:9
@@ -38,11 +41,15 @@ msgid ""
 "reference. Please see our more-detailed Django :doc:`documentation <index>` "
 "when you're ready to start a project."
 msgstr ""
+"このドキュメントの目的は、Django の技術的な仕様について述べ、どのように動作す"
+"るかを理解してもらうことにあり、チュートリアルやリファレンス用ではありませ"
+"ん。Django のプロジェクトを作成する準備ができているなら、詳しく書かれた :doc:"
+"`ドキュメント <index>` を参照してください。"
 
 # c929b71c9a8d46bfb80c7767ad0adc7a
 #: ../../overview.txt:15
 msgid "Design your model"
-msgstr ""
+msgstr "モデルの設計"
 
 # e2cdbcfa550b40d3856a9620c9adc880
 #: ../../overview.txt:17
@@ -50,6 +57,9 @@ msgid ""
 "Although you can use Django without a database, it comes with an object-"
 "relational mapper in which you describe your database layout in Python code."
 msgstr ""
+"Django はデータベースなしでも使えます。とはいえ、Django にはオブジェクト-リ"
+"レーショナルマッパが付属していて、Python コードでデータベースのレイアウト記述"
+"できるようになっています。"
 
 # 6b563312071e49fab1969888f518a5a5
 #: ../../overview.txt:21
@@ -58,11 +68,14 @@ msgid ""
 "so far, it's been solving two years' worth of database-schema problems. "
 "Here's a quick example::"
 msgstr ""
+"Django のデータ-モデルシンタクスはモデルを表現するための色々な方法を提供して"
+"います -- この API には、この 2 年データベーススキーマ問題を解決してきた実績"
+"があります。簡単な例を示しましょう::"
 
 # e7903798c607454d92296fed520d9f83
 #: ../../overview.txt:41
 msgid "Install it"
-msgstr ""
+msgstr "モデルのインストール"
 
 # d0cda3cc396d49c8abadcffed387b2b2
 #: ../../overview.txt:43
@@ -70,6 +83,8 @@ msgid ""
 "Next, run the Django command-line utility to create the database tables "
 "automatically::"
 msgstr ""
+"次に、Django コマンドラインユーティリティを実行し、データベース上にテーブルを"
+"自動的に生成します。"
 
 # cdd316d980174d19b5d3c9d09a3990f8
 #: ../../overview.txt:48
@@ -77,11 +92,13 @@ msgid ""
 "The ``syncdb`` command looks at all your available models and creates tables "
 "in your database for whichever tables don't already exist."
 msgstr ""
+"``syncdb`` コマンドは利用可能な全てのモデルを探し、まだ作成されていないテーブ"
+"ルがあれば作成します。"
 
 # fe61e7d62585410fb4331e282d98e744
 #: ../../overview.txt:52
 msgid "Enjoy the free API"
-msgstr ""
+msgstr "自動生成される API で楽しむ"
 
 # c87023b832064fb39e3406d08a51bd5b
 #: ../../overview.txt:54
@@ -89,12 +106,16 @@ msgid ""
 "With that, you've got a free, and rich, Python API to access your data. The "
 "API is created on the fly: No code generation necessary::"
 msgstr ""
+"インストールだけで、制約のない充実した Python API を使って自分のデータにアク"
+"セスできるようになります。API はオンザフライで生成され、コードを作成する必要"
+"はありません::"
 
 # 5e05d46462b241a3bd778a7e9fdd2a0e
 #: ../../overview.txt:126
 msgid ""
 "A dynamic admin interface: It's not just scaffolding -- it's the whole house"
 msgstr ""
+"動的な admin インタフェース: 足場 (scaffold) ではなく完成品 (whole house)"
 
 # dfa0c6947a60472e8e98dfa8bb5f31b7
 #: ../../overview.txt:128
@@ -104,6 +125,10 @@ msgid ""
 "lets authenticated users add, change and delete objects. It's as easy as "
 "adding a line of code to your model classes::"
 msgstr ""
+"モデルを定義したら、 Django は玄人向きの実運用に耐える管理インタフェース "
+"(admin interface) を自動的に生成します。admin インタフェースとは、認証をパス"
+"したユーザがオブジェクトを追加、変更、削除できる Web サイトです。admin インタ"
+"フェースの作成は簡単で、モデルクラスに一行書き加えるだけです::"
 
 # 62099d210b5746d0a95e2043a4836ef5
 #: ../../overview.txt:140
@@ -112,6 +137,9 @@ msgid ""
 "maybe just you -- and you don't want to have to deal with creating backend "
 "interfaces just to manage content."
 msgstr ""
+"サイトの編集はスタッフ、顧客、もしくはあなた自身の手で行われるものであり、コ"
+"ンテンツの管理だけのためにバックエンドインタフェースを作りたくはない、という"
+"思想がここにはあります。"
 
 # b6989603c9344594b0a9fe2f119c3d7f
 #: ../../overview.txt:144
@@ -121,11 +149,15 @@ msgid ""
 "can start populating data. Then, develop the way data is presented to the "
 "public."
 msgstr ""
+"作者たちが Django アプリケーションを作成するときの典型的なワークフローは、モ"
+"デルを作成し、admin サイトを組み上げてできるだけ早期に立ち上げ、スタッフ (や"
+"顧客) がデータを投入できるようにしておいてから、データを公開するための方法を"
+"開発してゆくというものです。"
 
 # 1797f3460c5e488995b6cea7f01a4b29
 #: ../../overview.txt:149
 msgid "Design your URLs"
-msgstr ""
+msgstr "自由な URL 設計"
 
 # 7d7f237b2dfb4b27aeda436d49099da8
 #: ../../overview.txt:151
@@ -134,6 +166,9 @@ msgid ""
 "application. Django encourages beautiful URL design and doesn't put any "
 "cruft in URLs, like ``.php`` or ``.asp``."
 msgstr ""
+"すっきりとして洗練された URL スキームは、高品質な Web アプリケーションを実現"
+"する上で重要な要素です。Django は美しい URL の設計を助け、 .php や .asp のよ"
+"うなお粗末な制約を URL に課しません。"
 
 # 48907af62c0048e6aecb4ac0c2f7bd5e
 #: ../../overview.txt:155
@@ -143,13 +178,17 @@ msgid ""
 "patterns and Python callback functions. URLconfs also serve to decouple URLs "
 "from Python code."
 msgstr ""
+"特定のアプリケーション用の URL を設計するには、URLconf と呼ばれる Python モ"
+"ジュールを一つ作成します。URLconf はいわばアプリケーションの目次にあたり、"
+"URL のパターンを Python のコールバック関数に対応づけています。URLconf はま"
+"た、URL を Python コードと脱カップリングする働きを持っています。"
 
 # 5872de7f004e49d189268366a2029483
 #: ../../overview.txt:160
 msgid ""
 "Here's what a URLconf might look like for the above ``Reporter``/``Article`` "
 "example above::"
-msgstr ""
+msgstr "Reporter/Article の例では、URLconf は以下のようになります::"
 
 # b2fc2c067ad64ca6b5285e0306803445
 #: ../../overview.txt:171
@@ -162,6 +201,12 @@ msgid ""
 "special-case 404 view.) This is blazingly fast, because the regular "
 "expressions are compiled at load time."
 msgstr ""
+"上のコードは簡単な正規表現で書かれた URL を Python コールバック関数 (ビュー: "
+"view) に対応づけています。正規表現の中で丸括弧を使い、 URL から値を \"取り込"
+"み\" ます。ユーザがあるページをリクエストすると、Django は全ての正規表現にわ"
+"たって順に調べてゆき、最初に URL にマッチするパターンで止まります。(マッチす"
+"る正規表現がなければ Django は独自の 404 ビューを呼び出しします)。正規表現を"
+"ロード時にコンパイルしておくので、この処理は極めて高速です。"
 
 # 7cf70e8fbbf34fbdb69b5bd60eb50aad
 #: ../../overview.txt:179
@@ -170,6 +215,10 @@ msgid ""
 "which is a simple Python function. Each view gets passed a request object -- "
 "which contains request metadata -- and the values captured in the regex."
 msgstr ""
+"正規表現が URL にマッチすると、Django は指定されているビューを import して呼"
+"び出します。ビューは単純な Python の関数です。各ビューにはリクエストオブジェ"
+"クトが渡されます。リクエストオブジェクトにはリクエストのメタデータと、正規表"
+"現で取り込んだ値が渡されます。"
 
 # 1559bd1c4188408991398b71e470345a
 #: ../../overview.txt:183
@@ -178,11 +227,14 @@ msgid ""
 "Django would call the function ``mysite.views.article_detail(request, "
 "'2005', '05', '39323')``."
 msgstr ""
+"例えば、ユーザが \"/articles/2005/05/39323/\" という URL をリクエストすると、"
+"Django は ``mysite.news.views.article_detail(request, '2005', '05', '39323')"
+"`` のような関数呼び出しを行います。"
 
 # 217a4dae7c43498984c8d58a256bfc92
 #: ../../overview.txt:188
 msgid "Write your views"
-msgstr ""
+msgstr "ビューの自作"
 
 # 91880a92fc354878978b14ec6033a5da
 #: ../../overview.txt:190
@@ -191,6 +243,9 @@ msgid ""
 "``HttpResponse`` object containing the content for the requested page, or "
 "raising an exception such as ``Http404``. The rest is up to you."
 msgstr ""
+"各ビュー (view) には二つの役割があります: 一つはリクエストされたページのコン"
+"テンツを含む ``HttpResponse`` オブジェクトを返すこと、もう一つは ``Http404`` "
+"のような例外の送出です。それ以外の処理はユーザ次第です。"
 
 # efc36e78482b4430b1c3b02486aef0bd
 #: ../../overview.txt:194
@@ -199,6 +254,9 @@ msgid ""
 "template and renders the template with the retrieved data. Here's an example "
 "view for ``year_archive`` from above::"
 msgstr ""
+"一般的に、ビューはパラメタに従ってデータベースからデータを取り出し、テンプ"
+"レートをロードして、取り出したデータでテンプレートをレンダリングします。上の "
+"year_archive のビューを例に示しましょう:"
 
 # 2117b52088fc45e6b51372af05d8313b
 #: ../../overview.txt:202
@@ -206,16 +264,20 @@ msgid ""
 "This example uses Django's template system, which has several powerful "
 "features but strives to stay simple enough for non-programmers to use."
 msgstr ""
+"この例ではいくつかの強力な機能を備えながらも、非プログラマが使いこなせる程度"
+"に十分単純な、 Django のテンプレートシステムを使っています。"
 
 # e49da2413c974c059010330d7eb9c4ce
 #: ../../overview.txt:206
 msgid "Design your templates"
-msgstr ""
+msgstr "テンプレートの設計"
 
 # 6a37328a64844ed09d60d197930f613e
 #: ../../overview.txt:208
 msgid "The code above loads the ``news/year_archive.html`` template."
 msgstr ""
+"上のコードでは ``news/article_detail.html`` という名前のテンプレートをロード"
+"しています。"
 
 # 65c0e6971c564e3cb14402439c588b04
 #: ../../overview.txt:210
@@ -225,6 +287,10 @@ msgid ""
 "to check for templates. If a template doesn't exist in the first directory, "
 "it checks the second, and so on."
 msgstr ""
+"Django にはテンプレート検索パスという概念があり、テンプレートが冗長になるのを"
+"防いでいます。Django の設定で、テンプレートを探すディレクトリのリストを設定し"
+"ておきます。あるディレクトリにテンプレートが見つからなければ、Django は次の"
+"ディレクトリ、また次のディレクトリとテンプレートを探します。"
 
 # daf59f62ee9c427dad4f71b421baeb96
 #: ../../overview.txt:215
@@ -232,6 +298,8 @@ msgid ""
 "Let's say the ``news/article_detail.html`` template was found. Here's what "
 "that might look like::"
 msgstr ""
+"さて、 ``news/article_detail.html`` が見つかったとしましょう。テンプレート は"
+"以下のように書かれています::"
 
 # 6063716cc32648318291e035940bf7a2
 #: ../../overview.txt:232
@@ -241,6 +309,10 @@ msgid ""
 "aren't used only for attribute lookup: They also can do dictionary-key "
 "lookup, index lookup and function calls."
 msgstr ""
+"変数は二重の波括弧で囲まれています。 ``{{ article.headline }}`` は、 "
+"\"article の headline という属性の出力\" を表しています。とはいえ、ドット表記"
+"は属性の検索に使われるだけではありません。辞書の検索や、インデクス指定、関数"
+"呼び出しも行えます。"
 
 # 44c8c3c3d8694329852c1d017ab19f03
 #: ../../overview.txt:237
@@ -251,6 +323,11 @@ msgid ""
 "Python datetime object in the given format (as found in PHP's date function; "
 "yes, there is one good idea in PHP)."
 msgstr ""
+"``{{ article.pub_date|date:\"F j, Y\" }}`` で、 Unix スタイルの \"パイプ"
+"\" (文字 \"|\") を使っていることに注意して下さい. これはテンプレートフィルタ"
+"と呼ばれ、変数の値にフィルタをかけるためのものです。この例では、フィルタに"
+"よって Python の datetime オブジェクトを指定の形式にフォーマットしています "
+"(PHP の date 関数に似ていますね。そう、これは PHP の便利なところです)"
 
 # 017e688e4d6441fd96dc6d3902b11dca
 #: ../../overview.txt:243
@@ -259,6 +336,8 @@ msgid ""
 "filters. You can write custom template tags, which run custom Python code "
 "behind the scenes."
 msgstr ""
+"フィルタは好きなだけ連鎖させられます。カスタムのフィルタも実装できます。カス"
+"タムのテンプレートタグを設計でき、背後で自作の Python コードを実行できます。"
 
 # 510ff3556372422ba945631a8362935e
 #: ../../overview.txt:247
@@ -270,11 +349,17 @@ msgid ""
 "redundancy in templates: Each template has to define only what's unique to "
 "that template."
 msgstr ""
+"最後に、Django には \"テンプレートの継承\" という概念があります: 継承を宣言し"
+"ているのは ``{% extends \"base.html\" %}`` の部分です。このタグは \"まず "
+"'base.html' というテンプレートをロードせよ。このテンプレートにはいくつかのブ"
+"ロックが定義されているが、それらのブロックの中身を以下のブロック定義で埋めよ"
+"\" という命令です。要するに、テンプレートを継承すると、各テンプレートごとに固"
+"有の定義だけを記述すればよくなり、テンプレート間の冗長性が劇的に減るのです。"
 
 # cd88384319414fd380bde39320f2843f
 #: ../../overview.txt:253
 msgid "Here's what the \"base.html\" template might look like::"
-msgstr ""
+msgstr "\"base.html\" テンプレートは以下のようになります::"
 
 # ca6e62896975435b9704f3dd86446c83
 #: ../../overview.txt:265
@@ -283,6 +368,10 @@ msgid ""
 "logo), and provides \"holes\" for child templates to fill. This makes a site "
 "redesign as easy as changing a single file -- the base template."
 msgstr ""
+"このテンプレートはサイトのルック & フィール (とサイトのロゴ) を定義するだけの"
+"極度に単純化されています。また、子テンプレートで埋めるための \"穴\" を提供し"
+"ています。これによって、ベーステンプレート一つを変更するだけでサイト全体のデ"
+"ザインを簡単に変更できるようになります。"
 
 # 62a9ca883b134246bd3c75ac37b05caa
 #: ../../overview.txt:269
@@ -292,6 +381,10 @@ msgid ""
 "technique to create strikingly different cell-phone editions of sites -- "
 "simply by creating a new base template."
 msgstr ""
+"また、子テンプレートを変えずにベーステンプレートだけを変えた複数バージョンの"
+"サイトも作成できます。Django の作者たちはこのテクニックを使い、新しいテンプ"
+"レートを作成するだけで携帯電話向けのまったく見栄えの違うサイトを作成してきま"
+"した。"
 
 # 1e447f20a7414c89b99a3bb56d3d463b
 #: ../../overview.txt:274
@@ -304,11 +397,19 @@ msgid ""
 "files off disk, or anything you want. Each piece of Django -- models, views, "
 "templates -- is decoupled from the next."
 msgstr ""
+"他のシステムを使いたければ、必ずしも Django のテンプレートシステムを使う必要"
+"はないということに注意してください。Django のテンプレートシステムは Django の"
+"モデルレイヤと部分的にしっかり組み合わさっていますが、絶対に使わねばならない"
+"ということではありません。さらに言えば、Django のデータベース API を使う必然"
+"性もありません。別のデータベース抽象化レイヤを使っても構いませんし、XML ファ"
+"イルやディスク上のファイルを読み込んでも構いません。何でもやりたいことをでき"
+"るのです。Django の構成要素 -- モデル、ビュー、テンプレート -- は、互いに切り"
+"離して利用できるのです。"
 
 # 5fae346b256a46b898ed06e042b23a71
 #: ../../overview.txt:283
 msgid "This is just the surface"
-msgstr ""
+msgstr "これらはほんの一部にすぎません"
 
 # 3196c78e09114c34a1d6653ab6818780
 #: ../../overview.txt:285
@@ -316,11 +417,13 @@ msgid ""
 "This has been only a quick overview of Django's functionality. Some more "
 "useful features:"
 msgstr ""
+"以上、Django の機能についてざっと紹介してきました。Django は他にもまだまだ便"
+"利な機能を備えています:"
 
 # 7d5ce68b8f2d40a083a0329e499e2879
 #: ../../overview.txt:288
 msgid "A caching framework that integrates with memcached or other backends."
-msgstr ""
+msgstr "memcached などのバックエンドを組み込んだキャッシュフレームワーク。"
 
 # 33175da92f2c4d1b9af884dbac07152a
 #: ../../overview.txt:289
@@ -328,6 +431,8 @@ msgid ""
 "A syndication framework that makes creating RSS and Atom feeds as easy as "
 "writing a small Python class."
 msgstr ""
+"小さな Python クラスを書くだけで簡単に RSS や Atom フィードを生成できる配信フ"
+"レームワーク。"
 
 # c4d132986f9d45658f641c55f0d5616f
 #: ../../overview.txt:291
@@ -335,6 +440,8 @@ msgid ""
 "More sexy automatically-generated admin features -- this overview barely "
 "scratched the surface."
 msgstr ""
+"自動生成される admin のセクシーな機能の数々。ここで紹介したのはほんの表層の一"
+"部でしかありません。"
 
 # 51e0ca7436c14f9cb2e57b27315fe89a
 #: ../../overview.txt:294
@@ -342,3 +449,7 @@ msgid ""
 "The next obvious steps are for you to `download Django`_, read :doc:`the "
 "tutorial <tutorial01>` and join `the community`_. Thanks for your interest!"
 msgstr ""
+"次は、あなたが `Django をダウンロード <http://www.djangoproject.com/download/>`_ して、 "
+":doc:`チュートリアル <tutorial01>` 読み、"
+"`コミュニティ <http://www.djangoproject.com/community/>`_ に参加する番です。"
+"ご精読ありがとうございました!"
