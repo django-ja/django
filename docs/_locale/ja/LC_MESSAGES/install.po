@@ -73,12 +73,12 @@ msgid ""
 "significant performance gains over other server arrangements. Make sure you "
 "have Apache installed, with the mod_python module activated. Django requires "
 "Apache 2.x and mod_python 3.x."
-msgstr "Django を実運用のサイトで使いたい場合、 `Apache`_ と `mod_python`_ を"
-"使って下さい。mod_python は mod_perl のようなもので、Python を Apache の中に埋め"
-"込み、サーバの起動時に Python コードをメモリにロードします。コードは Apache "
-"プロセスが生きている間ずっとメモリ上に存在するので、他のサーバ構成よりも明らか"
-"に高いパフォーマンスを実現します。Django の動作には Apache 2.x および "
-"mod_python 3.x が必要です。"
+msgstr "Django を実運用のサイトで使いたい場合、 `Apache <http://httpd.apache.org/>`_ "
+"と `mod_python <http://www.modpython.org/>`_ を使って下さい。mod_python は "
+"mod_perl のようなもので、Python を Apache の中に埋め込み、サーバの起動時に "
+"Python コードをメモリにロードします。コードは Apache プロセスが生きている間"
+"ずっとメモリ上に存在するので、他のサーバ構成よりも明らかに高いパフォーマンス"
+"を実現します。Django の動作には Apache 2.x および mod_python 3.x が必要です。"
 
 # b8d103e9d83b4ba186942f92741c985d
 #: ../../install.txt:30
@@ -96,10 +96,10 @@ msgid ""
 "`server-arrangements wiki page`_ for specific installation instructions for "
 "each platform."
 msgstr "何らかの理由で mod_python を使えない場合でも心配はいりません: Django は "
-"WSGI_ 仕様に従っているので、様々なサーバプラットフォームで動作させられます。"
-"個々のプラットフォームにおけるインストール方法の説明は `サーバ構成に関する "
-"wiki ページ <http://code.djangoproject.com/wiki/ServerArrangements>`_ を参照"
-"してください。"
+"`WSGI <http://www.python.org/peps/pep-0333.html>`_ 仕様に従っているので、"
+"様々なサーバプラットフォームで動作させられます。個々のプラットフォームにおける"
+"インストール方法の説明は `サーバ構成に関する wiki ページ "
+"<http://code.djangoproject.com/wiki/ServerArrangements>`_ を参照してください。"
 
 # 30045637c8914fa4bdd2a9f104a4fa01
 #: ../../install.txt:44
@@ -113,8 +113,9 @@ msgid ""
 "sure a database server is running. Django works with PostgreSQL_ "
 "(recommended), MySQL_ and SQLite_."
 msgstr "Django のデータベース API 機能を使うのなら、データベースサーバを動かす"
-"必要があります。Django は PostgreSQL_ (推奨)、 MySQL_ 、 および SQLite_ で動作"
-"します。"
+"必要があります。Django は `PostgreSQL <http://www.postgresql.org/>`_ (推奨)、 "
+"`MySQL <http://www.mysql.com/>`_ 、 および `SQLite <http://www.sqlite.org/>`_ "
+"で動作します。"
 
 # 27e2db7301554fef97b7bff16d85c0fe
 #: ../../install.txt:50
@@ -130,22 +131,24 @@ msgid ""
 "If you're using PostgreSQL, you'll need the psycopg_ package (version 1.1 -- "
 "not version 1.0 or version 2, which is still in beta). If you're on Windows, "
 "check out the unofficial `compiled Windows version`_."
-msgstr "PostgreSQL を使う場合、 psycopg_ パッケージ (1.0 やベータ版のバージョン 2 "
-"ではなく、バージョン 1.1 を使って下さい) が必要です。"
-"Windows 環境なら、非公式の `Windows むけコンパイル済みパッケージ "
-"<http://stickpeople.com/projects/python/win-psycopg/>`_ を使って下さい。"
+msgstr "PostgreSQL を使う場合、 `psycopg <http://initd.org/projects/psycopg1>`_ "
+"パッケージ (1.0 やベータ版のバージョン 2 ではなく、バージョン 1.1 を使って"
+"下さい) が必要です。Windows 環境なら、非公式の `Windows むけコンパイル済み"
+"パッケージ <http://stickpeople.com/projects/python/win-psycopg/>`_ を使って"
+"下さい。"
 
 # ff2e646eb78940e8a531c9f6886a023c
 #: ../../install.txt:56
 msgid "If you're using MySQL, you'll need MySQLdb_."
-msgstr "MySQL を使う場合は MySQLdb_ が必要です。"
+msgstr "MySQL を使う場合は `MySQLdb <http://sourceforge.net/projects/mysql-python>`_ "
+"が必要です。"
 
 # 132bda7d01804b0292a5b6876136fdd2
 #: ../../install.txt:57
 msgid ""
 "If you're using SQLite, you'll need pysqlite_. Use version 2.0.3 or higher."
-msgstr "SQLite を使う場合は pysqlite_ が必要です。バージョン 2.0.3 以上を使って"
-"下さい。"
+msgstr "SQLite を使う場合は `pysqlite <http://initd.org/tracker/pysqlite>`_ "
+"が必要です。バージョン 2.0.3 以上を使って下さい。"
 
 # e66d9da1cacc46f1a30b33ba6a226927
 #: ../../install.txt:69
@@ -198,11 +201,11 @@ msgid ""
 "setuptools_ if you don't already have it installed. This requires a working "
 "Internet connection."
 msgstr "setuptools がインストールされていない場合、最後のコマンドを実行すると "
-"setuptools_ を自動的にダウンロードしてインストールします。この作業には"
-"インターネットへの接続が必要です。また、Python 2.5 を使っている場合にはうまく"
-"動作しないでしょう。その場合には、後で説明する方法に従って開発版をインストール"
-"してください。開発版は setuptools を使っておらず、インストール時にインターネット"
-"に接続しません。"
+"`setuptools <http://peak.telecommunity.com/DevCenter/setuptools>`_ を自動的に"
+"ダウンロードしてインストールします。この作業にはインターネットへの接続が必要"
+"です。また、Python 2.5 を使っている場合にはうまく動作しないでしょう。その場合"
+"には、後で説明する方法に従って開発版をインストールしてください。開発版は "
+"setuptools を使っておらず、インストール時にインターネットに接続しません。"
 
 # 8e1a9818806b43059b77e279cc7bf418
 #: ../../install.txt:88
@@ -220,7 +223,7 @@ msgstr "開発バージョンのインストール"
 # 61bf54d98de942718fd039a5d6be6798
 #: ../../install.txt:96
 msgid "Make sure you have Subversion_ installed."
-msgstr "Subversion_ がインストールされていることを確認してください。"
+msgstr "`Subversion <http://subversion.tigris.org/>`_ がインストールされていることを確認してください。"
 
 # 14041539fc154098a0c96df6bc2f8b01
 #: ../../install.txt:97
@@ -239,7 +242,7 @@ msgstr "Python の ``site-packages`` ディレクトリ内に ``django_src/djang
 #: ../../install.txt:101
 msgid ""
 "``ln -s `pwd`/django_src/django /usr/lib/python2.3/site-packages/django``"
-msgstr ""
+msgstr "``ln -s `pwd`/django_src/django /usr/lib/python2.3/site-packages/django``"
 
 # 417aaaa5254b42398f719437bc51b12d
 #: ../../install.txt:103
